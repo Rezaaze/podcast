@@ -1,0 +1,137 @@
+{
+  "series_title": "Phantom Thrones: Sovereigns of the Silent Halls",
+  "language": "English",
+  "writer_persona": "a brilliant scriptwriter for high-end, HBO-style psychological documentaries, specializing in the eerie interior lives of history's most isolated rulers",
+  "style_guidelines": [
+    "Treat each monarch as a psychological case study, not a costume drama — focus on the interior collapse behind the crown.",
+    "Build dread through architecture and silence: empty throne rooms, locked doors, whispered decrees, and courts that function like haunted houses.",
+    "Never mock the figures' madness or isolation; render it with somber, clinical empathy alongside the horror.",
+    "Use concrete sensory detail — the smell of a sickroom, the sound of a screen sliding shut, the cold of an island villa — to anchor abstract psychological decay.",
+    "Every episode should feel like a slow-closing trap: a throne that becomes a cage.",
+    "End each section on a suspended, unresolved beat that pulls the listener into the next.",
+    "Maintain historical accuracy in facts and chronology, but allow for atmospheric, novelistic interpretation of private thought and feeling."
+  ],
+  "format": {
+    "parts_per_section": 2,
+    "words_per_part_target": "450 to 500",
+    "words_per_part_min": 430,
+    "words_per_part_max": 520
+  },
+  "generation": {
+    "model": "claude-sonnet-5"
+  },
+  "audio": {
+    "api_url": "http://127.0.0.1:42003",
+    "voice": "MyVoice",
+    "default_style": "Read like an audiobook narrator, calm, steady, and engaging",
+    "target_lufs": -16.0,
+    "pause_between_chunks_ms": 250,
+    "pause_between_parts_ms": 4000,
+    "pause_between_episodes_ms": 6000
+  },
+  "output_prefix": "figur",
+  "series_intro": "Open with a slow, cinematic descent — the camera of the voice moving through the corridors of history's grandest palaces, past guards who no longer know who they guard, past courtiers whispering in rooms their masters never enter. Introduce the anthology's central obsession: that the throne, the most coveted seat in human civilization, has also been history's loneliest chair — a place where absolute power and absolute isolation become the same disease. Promise the listener five studies in gilded solitude: an emperor who ruled an empire he refused to look at, a king convinced his own body would shatter, a sultan raised to die who could never stop being afraid, a monarch who traded his kingdom for a private world of stone and song, and an empress who governed the largest nation on Earth from behind a silk screen no one was permitted to part. Set the tone: hushed, reverent, unsettling — a series about crowns that became coffins.",
+  "series_outro": "Close the entire anthology in the hush after the last dynasty's screen falls silent forever. Step back from all five sovereigns and ask the haunting, unifying question: was it power that isolated these rulers, or was isolation itself the true throne they all secretly sought — a fortress against a world too vast and demanding to face? Suggest that every palace in this series was, in the end, a mirror turned inward, and every crown a weight heavy enough to seal a person inside their own mind. End on a slow, elegiac note: the halls are empty now, the screens folded away, the castles turned to postcards — but somewhere, the narrator suggests, in every seat of power built since, the same phantom waits to be invited in.",
+  "episodes": [
+    {
+      "figure": "Tiberius",
+      "theme": "Emperor Tiberius abandons Rome for the cliffside seclusion of Capri, ruling the mightiest empire on Earth through letters and spies for over a decade while sinking into a paranoid, rumor-shrouded isolation that turns the imperial court into a government of ghosts awaiting a master no one has seen in years.",
+      "intro_note": "",
+      "outro_note": "As Tiberius's ghost fades from the cliffs of Capri and the Senate learns to govern a phantom, the series crosses centuries and seas to a throne room in Paris — where another king will not flee his palace, but shatter inside it, utterly convinced that his own body has turned to glass.",
+      "sections": [
+        "The Hook & The Emperor Who Vanished",
+        "The Rising Conflict / Letters from a Ghost",
+        "The Obsession / The Villa of Whispered Sins",
+        "The Point of No Return / The Isolation That Ate an Empire",
+        "The Legacy & Rome's First Phantom Crown"
+      ],
+      "section_styles": [
+        "Read like an audiobook narrator, calm, steady, and engaging",
+        "Speak seriously, objectively and clearly",
+        "Whisper softly and gently, close to the microphone",
+        "Speak fearfully, with short breaths and suspense",
+        "Speak with a sad, empathetic and heavy tone"
+      ]
+    },
+    {
+      "figure": "Charles VI of France",
+      "theme": "King Charles VI of France is struck by a sudden, inexplicable madness in a forest that leaves him convinced his own body is made of glass, and for three decades he becomes a hollow figurehead manipulated by his wife, his brother, and his uncles while his court dissolves into the paranoid, whispering rivalry that will ignite civil war.",
+      "intro_note": "The narrator carries the listener from the salt air of a Roman island to the damp stone of a French forest road, where a single scream from a young king's throat will echo through thirty years of French history.",
+      "sections": [
+        "The Hook & The King Who Turned to Glass",
+        "The Rising Conflict / A Forest, A Sword, A Fractured Mind",
+        "The Obsession / The Fragile Body Behind the Wax Seals",
+        "The Point of No Return / Armagnacs, Burgundians, and a Kingdom for the Taking",
+        "The Legacy & The Throne That Broke France"
+      ],
+      "section_styles": [
+        "Read like an audiobook narrator, calm, steady, and engaging",
+        "Speak fast, energetic, and with sharp articulation",
+        "Whisper softly and gently, close to the microphone",
+        "Speak fearfully, with short breaths and suspense",
+        "Speak with a sad, empathetic and heavy tone"
+      ],
+      "outro_note": "From the shattered king of France, the series turns east to a gilded cage in Constantinople, where a prince raised his whole life under the shadow of the executioner's silk cord is about to inherit an empire he was never meant to survive to rule."
+    },
+    {
+      "figure": "Ibrahim I of the Ottoman Empire",
+      "theme": "Sultan Ibrahim I, the last surviving male heir raised for years in the terror of the Ottoman 'cage' under constant threat of execution, ascends the throne only to spiral into paranoid fits, an obsessive hoarding of furs and concubines, and a harem-court secretly ruled by his own mother, until the empire he barely governs turns against him.",
+      "intro_note": "The narrator moves from the burning tapestries of a fractured French court to the marble hush of the Topkapi Palace, where a different kind of madness has been quietly cultivated for years behind locked doors, waiting for a terrified boy to become sultan.",
+      "sections": [
+        "The Hook & The Prince Raised to Die",
+        "The Rising Conflict / The Cage, The Fear, The Throne",
+        "The Obsession / Sable Furs and a Thousand Concubines",
+        "The Point of No Return / The Sultanate of Women Turns Against Him",
+        "The Legacy & The Silk Cord in the Topkapi Night"
+      ],
+      "section_styles": [
+        "Read like an audiobook narrator, calm, steady, and engaging",
+        "Speak seriously, objectively and clearly",
+        "Speak with great excitement and passion",
+        "Speak fearfully, with short breaths and suspense",
+        "Speak with a sad, empathetic and heavy tone"
+      ],
+      "outro_note": "From the strangled sultan of Constantinople, the series drifts north and forward in time to the alpine kingdom of Bavaria, where a young king will trade the terror of politics for the beauty of solitude, building fairy-tale castles for an audience of no one."
+    },
+    {
+      "figure": "Ludwig II of Bavaria",
+      "theme": "King Ludwig II of Bavaria withdraws from a modernizing, unifying Germany into a private universe of Wagnerian opera and midnight-built fairy-tale castles, until his own ministers declare him insane without ever examining him, and his mysterious drowning leaves behind a kingdom of breathtaking, empty rooms.",
+      "intro_note": "The narrator leaves the perfumed terror of the Ottoman harem for the cold, clean air of the Bavarian Alps, where a young king will discover that a castle can be a far safer place to hide than a throne.",
+      "sections": [
+        "The Hook & The King Who Built Castles for Ghosts",
+        "The Rising Conflict / A Crown He Never Wanted",
+        "The Obsession / Neuschwanstein and the Architecture of Escape",
+        "The Point of No Return / The Doctors, The Declaration, The Lake",
+        "The Legacy & The Swan King's Silent Halls"
+      ],
+      "section_styles": [
+        "Read like an audiobook narrator, calm, steady, and engaging",
+        "Speak seriously, objectively and clearly",
+        "Speak with great excitement and passion",
+        "Speak fearfully, with short breaths and suspense",
+        "Speak with a sad, empathetic and heavy tone"
+      ],
+      "outro_note": "From the drowned dreamer of Bavaria, the series makes its final crossing east, to the Forbidden City, where a young concubine is about to learn that the surest way to rule an empire is to never let anyone see your face while doing it."
+    },
+    {
+      "figure": "Empress Dowager Cixi",
+      "theme": "Empress Dowager Cixi governs the largest empire on Earth for nearly half a century from behind a silk screen, a phantom sovereign whose whispered decrees and palace intrigues preside over the slow, ghostly collapse of China's last imperial dynasty as foreign armies and her own court close in.",
+      "intro_note": "The narrator carries the listener from the flooded lake beneath a Bavarian castle to the Forbidden City's innermost chamber, where a low, unseen voice behind a painted silk screen has been quietly deciding the fate of four hundred million people.",
+      "sections": [
+        "The Hook & The Voice Behind the Screen",
+        "The Rising Conflict / A Concubine's Ascent Through Palace Shadows",
+        "The Obsession / Ruling an Empire She Was Never Meant to Touch",
+        "The Point of No Return / Boxers, Foreign Armies, and a Fleeing Court",
+        "The Legacy & The Last Whisper of the Dragon Throne"
+      ],
+      "section_styles": [
+        "Read like an audiobook narrator, calm, steady, and engaging",
+        "Speak seriously, objectively and clearly",
+        "Whisper softly and gently, close to the microphone",
+        "Speak fearfully, with short breaths and suspense",
+        "Speak with a sad, empathetic and heavy tone"
+      ],
+      "outro_note": ""
+    }
+  ]
+}

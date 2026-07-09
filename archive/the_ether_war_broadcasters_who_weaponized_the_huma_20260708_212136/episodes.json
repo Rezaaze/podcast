@@ -1,0 +1,97 @@
+{
+  "series_title": "The Ether War: Broadcasters Who Weaponized the Human Mind",
+  "language": "English",
+  "writer_persona": "a brilliant scriptwriter for high-end, HBO-style documentaries, specializing in psychological warfare, propaganda, and the dark history of mass media",
+  "style_guidelines": [
+    "Write in vivid, cinematic prose that treats radio itself as a character — a living, humming presence in every scene",
+    "Balance historical rigor with dramatic tension; never invent facts, but let atmosphere and pacing carry the emotional weight",
+    "Show the irony at the heart of each figure: the broadcaster who claims mastery over other minds while losing grip on their own",
+    "Use sound-based imagery — static, silence, the click of a microphone switch — as recurring motifs across the series",
+    "Avoid glorifying propaganda or violence; frame each figure critically, examining consequences on real victims and societies",
+    "End each section on a hook or unresolved tension that pulls the listener into the next",
+    "Keep language accessible for an educated general audience — no academic jargon, no melodrama for its own sake"
+  ],
+  "format": {
+    "parts_per_section": 2,
+    "words_per_part_target": "450 to 500",
+    "words_per_part_min": 430,
+    "words_per_part_max": 520
+  },
+  "generation": {
+    "model": "claude-sonnet-5"
+  },
+  "audio": {
+    "api_url": "http://127.0.0.1:42003",
+    "voice": "MyVoice",
+    "default_style": "Read like an audiobook narrator, calm, steady, and engaging",
+    "target_lufs": -16.0,
+    "pause_between_chunks_ms": 250,
+    "pause_between_parts_ms": 4000,
+    "pause_between_episodes_ms": 6000
+  },
+  "output_prefix": "figur",
+  "series_intro": "Open on the crackle of static resolving into a human voice — intimate, warm, trustworthy, and utterly false. Across the twentieth century's darkest hours, a new kind of weapon emerged: not built of steel, but of sound. It traveled invisibly through the air, slipped into kitchens and trenches and bomb shelters, and rearranged the minds of millions without ever firing a shot. This is the story of the men and women who mastered that weapon — propagandists, radio voices, self-styled psychologists of the ether — who believed they could control the human mind from behind a microphone. Some sought to seduce entire nations into surrender. Some were scapegoats for fears too large to name. And some turned ordinary broadcasts into blueprints for slaughter. But the ether is a two-way current, and every one of them discovered, too late, that the madness they broadcast outward eventually turned back inward. This is the story of the studio as battlefield, and of minds that shattered while trying to shatter the minds of others.",
+  "series_outro": "Close the series in near silence — the hum of a dead frequency, the last echo of a voice that once commanded millions now fading into nothing. What remains, when the war ends and the broadcasts stop, is not the propaganda itself but the question it leaves behind: how thin is the line between the voice that manipulates and the mind that is manipulated? Each of these broadcasters believed they stood outside the hysteria they created — architects, not victims, of the madness in the air. Yet each was consumed by it, in courtrooms, in exile, in the long silence of conscience that followed the static. Somewhere, on some forgotten frequency, a voice is still trying to convince someone of something. The ether does not forget. It only waits for the next voice foolish enough to believe it can be mastered.",
+  "episodes": [
+    {
+      "figure": "William Joyce (Lord Haw-Haw)",
+      "theme": "A British fascist sympathizer broadcasting Nazi propaganda into wartime Britain under a stolen, aristocratic drawl builds a nightly cult of dread and fascination among millions of listeners, only to watch his own unshakable certainty curdle into paranoid delusion as the Reich he serves collapses around him.",
+      "intro_note": "",
+      "outro_note": "As Joyce's voice is silenced by the hangman's rope, another myth is already forming across the ocean — not of a traitor caught, but of a seductress never proven to exist, born from the fears of an entire nation staring into the Pacific dark.",
+      "sections": [
+        "The Hook & The Voice from Nowhere",
+        "The Rising Conflict / Seducing an Empire Through the Wireless",
+        "The Obsession / Building the Cult of Germany Calling",
+        "The Point of No Return / The Reich Crumbles, The Voice Cracks",
+        "The Legacy & The Rope and the Myth of Haw-Haw"
+      ],
+      "section_styles": [
+        "Read like an audiobook narrator, calm, steady, and engaging",
+        "Speak seriously, objectively and clearly",
+        "Speak with great excitement and passion",
+        "Speak fearfully, with short breaths and suspense",
+        "Speak with a sad, empathetic and heavy tone"
+      ]
+    },
+    {
+      "figure": "Iva Toguri D'Aquino (Tokyo Rose)",
+      "theme": "Stranded in Tokyo as an enemy alien and coerced into broadcasting under threat, a young Japanese-American woman becomes the scapegoat for a fictional seductress named Tokyo Rose, a psychological ghost manufactured as much by American fear as by any actual radio program, exposing how an audience's own hysteria can invent the very madness it claims to dread.",
+      "intro_note": "From the gallows of a convicted traitor in England, the story crosses an ocean to a courtroom where the accused may never have committed the crime at all — where the true weapon of madness was not a broadcast, but the myth an anxious public built around it.",
+      "outro_note": "As Toguri's pardon finally arrives decades too late, the story turns from courtroom myth to something far more real — a foreign voice in Central Africa who did not need to be invented, because the hatred he broadcast was entirely his own.",
+      "sections": [
+        "The Hook & The Woman Who Never Existed",
+        "The Rising Conflict / Trapped Behind Enemy Lines",
+        "The Obsession / America's Hunger for a Villain",
+        "The Point of No Return / Trial by Myth, Not Evidence",
+        "The Legacy & The Pardon That Came Too Late"
+      ],
+      "section_styles": [
+        "Read like an audiobook narrator, calm, steady, and engaging",
+        "Speak seriously, objectively and clearly",
+        "Speak with great excitement and passion",
+        "Speak fearfully, with short breaths and suspense",
+        "Speak with a sad, empathetic and heavy tone"
+      ]
+    },
+    {
+      "figure": "Georges Ruggiu",
+      "theme": "A failed Belgian radio host reinvents himself in Kigali as the fanatical foreign voice of Radio Télévision Libre des Mille Collines, transforming call-in banter and pop music into a live broadcast map for genocide, until his own mind fractures under the weight of the killing he helped orchestrate.",
+      "intro_note": "From the courtroom myth of a seductress who was never real, the story turns to a broadcaster whose hatred needed no invention at all — a drifter from Belgium who found, in the hills of Rwanda, a microphone powerful enough to end lives.",
+      "outro_note": "",
+      "sections": [
+        "The Hook & The Foreigner Who Found His Voice in Hate",
+        "The Rising Conflict / Radio Mille Collines Goes Live",
+        "The Obsession / Naming Names, Marking Death",
+        "The Point of No Return / One Hundred Days of Static and Slaughter",
+        "The Legacy & The Confession No Apology Could Undo"
+      ],
+      "section_styles": [
+        "Read like an audiobook narrator, calm, steady, and engaging",
+        "Speak seriously, objectively and clearly",
+        "Speak fast, energetic, and with sharp articulation",
+        "Speak fearfully, with short breaths and suspense",
+        "Speak with a sad, empathetic and heavy tone"
+      ]
+    }
+  ]
+}

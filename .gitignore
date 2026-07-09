@@ -1,0 +1,7 @@
+.venv/
+webui/.venv/
+__pycache__/
+*.pyc
+.DS_Store
+podcast_output/
+.claude/settings.local.json
