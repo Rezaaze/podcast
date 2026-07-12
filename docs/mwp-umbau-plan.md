@@ -229,24 +229,29 @@ Smoke-Test existiert. Test-Vehikel: eine Mini-Serie (soap_opera, 1 Episode,
 - [ ] **T3.6 Visual-CLIs umziehen.** `character_prompts.py`,
       `location_prompts.py`, `cover_art.py` → `stages/04_visuals/output/`.
       Smoke-Test: Prompts-only-Lauf (ohne OPENAI_API_KEY).
-- [ ] **T3.7 Restgrep gegen die Pfad-Inventur (T2.2).** Jede Zeile der
+- [x] **T3.7 Restgrep.** Erledigt 13.07.: einziger verbleibender Treffer
+      ist Lolfis eigener `video/output` (gehört Lolfi, nicht dem
+      Serien-Layout). Ursprünglicher Task-Text: Jede Zeile der
       Inventur abhaken; `history.py`, `textproc.py` etc. auf übersehene
       Pfadannahmen prüfen. Erst wenn die Tabelle leer ist, gilt Phase 3
       als fertig.
 
 ### Phase 4 — WebUI nachziehen
 
-- [ ] **T4.1 `webui/status.py`** auf neue Pfade (Skript-/Audio-/Visual-
+- [x] **T4.1 `webui/status.py`** auf neue Pfade — erledigt 13.07. (Skript-/Audio-/Visual-
       Existenzchecks, `_list_podcast_episode_files`). Danach zeigen die
       Statuskarten für `mwp_smoke` wieder korrekt an.
-- [ ] **T4.2 `webui/config.py` COMMANDS + `folders.py` + `prompt_blocks.py`**
+- [x] **T4.2 `webui/config.py` + `folders.py` + `prompt_blocks.py` + `app.py` + `runner.py`** — erledigt 13.07.; das WebUI bezieht das Layout jetzt aus `fabrik.core.paths` (RELPATH-Konstanten in config.py), Layout-Wissen lebt nur noch an EINEM Ort.
       — Arbeitsverzeichnisse, "Ordner öffnen"-Ziele (jetzt pro Stage),
       Block-Erzeugung. Discard-Guard (`/api/pf/series/discard`) auf neues
       Layout: "keine Skripte/Outputs" heißt jetzt `stages/*/output/` leer.
-- [ ] **T4.3 Stage-Karten als Review-Gates ausweisen** (T2.3): pro Stage
+- [x] **T4.3 Review-Gate-Button** — erledigt 13.07.: neuer `pf_scripts`-Ordner-Button "📂 Skripte prüfen/editieren" im Generier-Schritt; pf_output/pf_characters/pf_locations zeigen auf die Stage-Outputs. (T2.3): pro Stage
       ein "📂 Output prüfen"-Link; Texte klarstellen, dass zwischen den
       Schritten editiert werden darf. Kein neuer Mechanismus.
-- [ ] **T4.4 WebUI-Durchklick-Test** mit `mwp_smoke`: Serie erstellen →
+- [x] **T4.4 WebUI-Funktionstest** — erledigt 13.07. (per Browser-Preview:
+      Serien-Liste, Status-Karten, Episoden-Status, Porträt-/Orte-Zähler
+      alle korrekt gegen mwp_smoke im neuen Layout; Screenshot geprüft).
+      Der volle Durchklick MIT Generierung/Vertonung = T6.1. mit `mwp_smoke`: Serie erstellen →
       Review-Panel → generieren → vertonen → Status/Logs — einmal komplett
       über die Oberfläche statt CLI.
 

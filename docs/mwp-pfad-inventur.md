@@ -51,21 +51,21 @@ Bereits sauber (folgen paths.py automatisch, nur nachtesten):
 
 ## 3. webui/ (T4.1/T4.2) — baut Pfade selbst aus series_dir
 
-- [ ] `webui/config.py:27` — Serien-Listing via `<dir>/episodes.json`
-- [ ] `webui/config.py:70` — `episodes_json_path()`
-- [ ] `webui/status.py:48–53` — scripts_dir / episodes.json / output_dir /
+- [x] `webui/config.py:27` — Serien-Listing via `<dir>/episodes.json`
+- [x] `webui/config.py:70` — `episodes_json_path()`
+- [x] `webui/status.py:48–53` — scripts_dir / episodes.json / output_dir /
       checkpoints_dir
-- [ ] `webui/status.py:92` — characters_dir
-- [ ] `webui/status.py:108` — locations_dir
-- [ ] `webui/status.py:139–140` — ANTHOLOGY_META.txt / UPLOAD_INDEX.md
-- [ ] `webui/status.py:161, 214` — Episoden-MP3-Listing (`output/`)
-- [ ] `webui/prompt_blocks.py:105–180` — characters/, locations/,
+- [x] `webui/status.py:92` — characters_dir
+- [x] `webui/status.py:108` — locations_dir
+- [x] `webui/status.py:139–140` — ANTHOLOGY_META.txt / UPLOAD_INDEX.md
+- [x] `webui/status.py:161, 214` — Episoden-MP3-Listing (`output/`)
+- [x] `webui/prompt_blocks.py:105–180` — characters/, locations/,
       scripts/ANTHOLOGY_META.txt, output/UPLOAD_INDEX.md
-- [ ] `webui/runner.py:279` — `output/.checkpoints`-Polling
-- [ ] `webui/app.py:43, 77` — episodes.json-Zugriffe
-- [ ] `webui/app.py:102–105` — Discard-Guard (scripts/*.txt + output/)
+- [x] `webui/runner.py:279` — `output/.checkpoints`-Polling
+- [x] `webui/app.py:43, 77` — episodes.json-Zugriffe
+- [x] `webui/app.py:102–105` — Discard-Guard (scripts/*.txt + output/)
       → muss `stages/*/output/` prüfen
-- [ ] `webui/folders.py:41–42` — "Ordner öffnen"-Subdir-Map
+- [x] `webui/folders.py:41–42` — "Ordner öffnen"-Subdir-Map
       (pf_output/pf_characters/pf_locations) → neue Stage-Pfade, ggf. pro
       Stage ein Eintrag (Review-Gate-Links, T4.3)
 
@@ -89,13 +89,13 @@ kennen — dann kann es nicht wieder divergieren.
 
 ## 5. Sonstiges
 
-- [ ] `.gitignore` — neue Muster: `data/series/*/stages/*/output/*`
+- [x] `.gitignore` — neue Muster: `data/series/*/stages/*/output/*`
       ignorieren, ABER `!data/series/*/stages/01_concept/output/episodes.json`
       (Negativ-Pattern, sonst verschwinden Serien-Definitionen aus Git).
       Provisorisch direkt nach T3.2 setzen, final in T6.3.
 - [ ] `README.md` + Root-`CLAUDE.md` + Bereichs-CLAUDE.md — Pfadangaben
       aktualisieren (T6.3)
-- [ ] `webui/prompt_blocks.py::build_series_prompt_block` — erwähnt
+- [x] `webui/prompt_blocks.py::build_series_prompt_block` — erwähnt
       Zielpfade im manuellen Copy-Block? Prüfen.
 - Nicht betroffen: `cloud/` (spricht nur mit dem TTS-Server, keine
   Serien-Pfade), `data/voices/`, `data/figure_history.json`,

@@ -12,6 +12,20 @@ WEBUI_DIR = os.path.dirname(os.path.abspath(__file__))
 PF_DIR = os.path.dirname(WEBUI_DIR)
 LOLFI_DIR = os.path.join(os.path.expanduser("~"), "Downloads", "Lolfi")
 
+# Das Serien-Layout (MWP-Workspace: stages/NN_*/output/) lebt in
+# fabrik/core/paths.py — stdlib-only, daher auch aus dem WebUI-venv
+# importierbar. Die Relativpfade hier sind die EINZIGE Layout-Kenntnis
+# des WebUI; nie wieder Ordnernamen hart verdrahten.
+sys.path.insert(0, PF_DIR)
+from fabrik.core import paths as pf_paths  # noqa: E402
+
+EPISODES_RELPATH = pf_paths.EPISODES_RELPATH
+SCRIPTS_RELPATH = os.path.join(pf_paths.STAGE_SCRIPTS, "output")
+OUTPUT_RELPATH = os.path.join(pf_paths.STAGE_AUDIO, "output")
+VISUALS_RELPATH = os.path.join(pf_paths.STAGE_VISUALS, "output")
+CHARACTERS_RELPATH = os.path.join(VISUALS_RELPATH, "characters")
+LOCATIONS_RELPATH = os.path.join(VISUALS_RELPATH, "locations")
+
 
 def series_root_dir():
     return os.path.join(PF_DIR, "data", "series")
@@ -24,7 +38,7 @@ def list_series_slugs() -> list:
         return []
     return sorted(
         d for d in os.listdir(root)
-        if os.path.exists(os.path.join(root, d, "episodes.json"))
+        if os.path.exists(os.path.join(root, d, EPISODES_RELPATH))
     )
 
 
@@ -67,7 +81,7 @@ def current_series_dir():
 
 def current_episodes_json():
     d = current_series_dir()
-    return os.path.join(d, "episodes.json") if d else None
+    return os.path.join(d, EPISODES_RELPATH) if d else None
 
 
 def venv_python(project_dir: str) -> str:

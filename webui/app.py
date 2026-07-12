@@ -11,6 +11,7 @@ import folders
 import prompt_blocks
 import status
 import tts_control
+import config
 from config import COMMANDS, PF_DIR, list_series_slugs, read_latest_slug, write_latest_slug, series_dir_for
 from runner import JobRegistry, ValidationError
 
@@ -40,7 +41,7 @@ def api_pf_series_list():
     slugs = list_series_slugs()
     series = []
     for slug in slugs:
-        data = status._read_json(os.path.join(series_dir_for(slug) or "", "episodes.json")) or {}
+        data = status._read_json(os.path.join(series_dir_for(slug) or "", config.EPISODES_RELPATH)) or {}
         series.append({
             "slug": slug,
             "title": data.get("series_title", slug),
@@ -74,7 +75,7 @@ def api_pf_series_settings():
     series_dir = series_dir_for(slug)
     if not series_dir:
         return jsonify(error=f"Unbekannte Serie: {slug}"), 400
-    episodes_path = os.path.join(series_dir, "episodes.json")
+    episodes_path = os.path.join(series_dir, config.EPISODES_RELPATH)
     with open(episodes_path, "r", encoding="utf-8") as f:
         data = json.load(f)
     if "merge_anthology" in body:
@@ -99,10 +100,10 @@ def api_pf_series_discard():
     if not series_dir:
         return jsonify(error=f"Unbekannte Serie: {slug}"), 400
 
-    has_scripts = bool(glob.glob(os.path.join(series_dir, "scripts", "*.txt")))
+    has_scripts = bool(glob.glob(os.path.join(series_dir, config.SCRIPTS_RELPATH, "*.txt")))
     has_output = any(
         not f.startswith(".") for f in
-        (os.listdir(os.path.join(series_dir, "output")) if os.path.isdir(os.path.join(series_dir, "output")) else [])
+        (os.listdir(os.path.join(series_dir, config.OUTPUT_RELPATH)) if os.path.isdir(os.path.join(series_dir, config.OUTPUT_RELPATH)) else [])
     )
     if has_scripts or has_output:
         return jsonify(error="Serie hat bereits Skripte oder Audio — Verwerfen nur für "

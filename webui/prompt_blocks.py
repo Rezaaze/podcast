@@ -99,11 +99,11 @@ def read_character_prompts(series_slug=None) -> dict:
     """Liest series/<slug>/characters/PROMPTS.txt (character_prompts.py) und
     zerlegt sie in einen Copy-Paste-Block pro Rolle. Meldet zusätzlich, für
     welche Rollen bereits ein Bild im characters/-Ordner liegt."""
-    from config import current_series_dir, series_dir_for
+    from config import current_series_dir, series_dir_for, CHARACTERS_RELPATH
     series_dir = series_dir_for(series_slug) or current_series_dir()
     if not series_dir:
         return {"prompts_ready": False, "characters": []}
-    characters_dir = os.path.join(series_dir, "characters")
+    characters_dir = os.path.join(series_dir, CHARACTERS_RELPATH)
     prompts_path = os.path.join(characters_dir, "PROMPTS.txt")
 
     existing_images = {}
@@ -138,11 +138,11 @@ def read_location_prompts(series_slug=None) -> dict:
     """Liest series/<slug>/locations/PROMPTS.txt (location_prompts.py) und
     zerlegt sie in einen Copy-Paste-Block pro Ort. Meldet zusätzlich, für
     welche Orte bereits ein Bild im locations/-Ordner liegt."""
-    from config import current_series_dir, series_dir_for
+    from config import current_series_dir, series_dir_for, LOCATIONS_RELPATH
     series_dir = series_dir_for(series_slug) or current_series_dir()
     if not series_dir:
         return {"prompts_ready": False, "locations": []}
-    locations_dir = os.path.join(series_dir, "locations")
+    locations_dir = os.path.join(series_dir, LOCATIONS_RELPATH)
     prompts_path = os.path.join(locations_dir, "PROMPTS.txt")
 
     existing_images = {}
@@ -174,10 +174,10 @@ def read_location_prompts(series_slug=None) -> dict:
 
 
 def read_anthology_meta() -> dict:
-    from config import current_series_dir
+    from config import current_series_dir, SCRIPTS_RELPATH, OUTPUT_RELPATH
     series_dir = current_series_dir()
-    anthology_meta_path = os.path.join(series_dir, "scripts", "ANTHOLOGY_META.txt") if series_dir else ""
-    upload_index_path = os.path.join(series_dir, "output", "UPLOAD_INDEX.md") if series_dir else ""
+    anthology_meta_path = os.path.join(series_dir, SCRIPTS_RELPATH, "ANTHOLOGY_META.txt") if series_dir else ""
+    upload_index_path = os.path.join(series_dir, OUTPUT_RELPATH, "UPLOAD_INDEX.md") if series_dir else ""
 
     def _read(path):
         if not os.path.exists(path):

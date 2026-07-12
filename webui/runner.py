@@ -17,7 +17,7 @@ import threading
 import time
 import uuid
 
-from config import AUTO_TTS_COMMANDS, COMMANDS, current_series_dir, series_dir_for
+from config import AUTO_TTS_COMMANDS, COMMANDS, current_series_dir, series_dir_for, OUTPUT_RELPATH
 
 STEP_RE = re.compile(r"^\s*▶\s*Schritt\s+(\d+)\s*:\s*(.+)$")
 # batch.py: "[2/5] Starte: figur2.txt → Figur2_FULL_EPISODE.mp3" bzw.
@@ -276,7 +276,7 @@ class JobRegistry:
         if COMMANDS[command_id].get("poll_checkpoints"):
             series_dir = series_dir_for((params or {}).get("series")) or current_series_dir()
             if series_dir:
-                checkpoints_dir = os.path.join(series_dir, "output", ".checkpoints")
+                checkpoints_dir = os.path.join(series_dir, OUTPUT_RELPATH, ".checkpoints")
         job = Job(job_id, command_id, argv, cwd, kind, checkpoints_dir=checkpoints_dir)
         with self._lock:
             self._jobs[job_id] = job

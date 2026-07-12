@@ -6,7 +6,9 @@ import json
 import os
 import re
 
-from config import LOLFI_DIR, PF_DIR, current_series_dir, series_dir_for
+from config import (LOLFI_DIR, PF_DIR, current_series_dir, series_dir_for,
+                    EPISODES_RELPATH, SCRIPTS_RELPATH, OUTPUT_RELPATH,
+                    CHARACTERS_RELPATH, LOCATIONS_RELPATH, VISUALS_RELPATH)
 
 
 def _read_json(path):
@@ -45,11 +47,11 @@ def pf_status(jobs=None, series_slug=None) -> dict:
     zurück. series_dir_for() validiert den Slug gegen die echte Ordnerliste,
     ein Query-Parameter vom Client kann also nie außerhalb von series/ lesen."""
     series_dir = series_dir_for(series_slug) or current_series_dir()
-    scripts_dir = os.path.join(series_dir, "scripts") if series_dir else PF_DIR
-    episodes_json = (_read_json(os.path.join(series_dir, "episodes.json")) if series_dir else None) or {}
+    scripts_dir = os.path.join(series_dir, SCRIPTS_RELPATH) if series_dir else PF_DIR
+    episodes_json = (_read_json(os.path.join(series_dir, EPISODES_RELPATH)) if series_dir else None) or {}
     prefix = episodes_json.get("output_prefix", "figur")
     episodes = episodes_json.get("episodes", [])
-    output_dir = os.path.join(series_dir, "output") if series_dir else os.path.join(PF_DIR, "data", "series")
+    output_dir = os.path.join(series_dir, OUTPUT_RELPATH) if series_dir else os.path.join(PF_DIR, "data", "series")
     checkpoints_dir = os.path.join(output_dir, ".checkpoints")
 
     running_commands = jobs.snapshot() if jobs else {}
@@ -89,7 +91,7 @@ def pf_status(jobs=None, series_slug=None) -> dict:
     # Charakter-Porträts (nur Drama-Serien): wie viele Rollen haben schon ein
     # Bild in characters/? Treibt den Video-Vorbereitungs-Schritt der WebUI.
     roles = [r for r in episodes_json.get("voices", {}) if r != "NARRATOR"]
-    characters_dir = os.path.join(series_dir, "characters") if series_dir else None
+    characters_dir = os.path.join(series_dir, CHARACTERS_RELPATH) if series_dir else None
     image_stems = set()
     if characters_dir and os.path.isdir(characters_dir):
         image_stems = {
@@ -105,7 +107,7 @@ def pf_status(jobs=None, series_slug=None) -> dict:
     # Szenen-Orte (nur Serien mit "locations" in episodes.json, z.B. soap_opera):
     # wie viele Orte haben schon ein Hintergrundbild in locations/?
     location_keys = list(episodes_json.get("locations", {}))
-    locations_dir = os.path.join(series_dir, "locations") if series_dir else None
+    locations_dir = os.path.join(series_dir, LOCATIONS_RELPATH) if series_dir else None
     location_image_stems = set()
     if locations_dir and os.path.isdir(locations_dir):
         location_image_stems = {
@@ -119,7 +121,7 @@ def pf_status(jobs=None, series_slug=None) -> dict:
     }
 
     # Cover-Bild: ein einziges Bild pro Serie, kein Rollen-/Orte-Zähler nötig.
-    cover_exists = bool(series_dir) and os.path.exists(os.path.join(series_dir, "cover.png"))
+    cover_exists = bool(series_dir) and os.path.exists(os.path.join(series_dir, VISUALS_RELPATH, "cover.png"))
 
     return {
         "series_slug": os.path.basename(series_dir) if series_dir else None,
@@ -158,7 +160,7 @@ def _list_podcast_episode_files() -> list:
     pf_series_dir = current_series_dir()
     dirs = [
         os.path.join(LOLFI_DIR, "podcast"),
-        os.path.join(pf_series_dir, "output") if pf_series_dir else None,
+        os.path.join(pf_series_dir, OUTPUT_RELPATH) if pf_series_dir else None,
     ]
     files = []
     for d in dirs:
@@ -211,7 +213,7 @@ def lolfi_status(jobs=None) -> dict:
     running_commands = jobs.snapshot() if jobs else {}
 
     pf_series_dir = current_series_dir()
-    pf_output_dir = os.path.join(pf_series_dir, "output") if pf_series_dir else None
+    pf_output_dir = os.path.join(pf_series_dir, OUTPUT_RELPATH) if pf_series_dir else None
     local_podcast_dir = os.path.join(LOLFI_DIR, "podcast")
     podcast_sources = {
         "local (podcast/)": len([f for f in os.listdir(local_podcast_dir) if f.lower().endswith((".mp3", ".wav"))])
