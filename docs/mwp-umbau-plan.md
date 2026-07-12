@@ -130,22 +130,22 @@ Abhängigkeiten stehen dabei; innerhalb einer Phase gilt die Reihenfolge.
 
 ### Phase 1 — Repo-Kontext schichten (Scope B; gefahrlos, reine .md-Arbeit)
 
-- [ ] **T1.1 CLAUDE.md-Inventur.** Jeden Absatz des 732-Zeilen-CLAUDE.md
-      einem Ziel zuordnen (Root behalten / fabrik/audio / webui / … /
-      streichen weil veraltet). Ergebnis: Mapping-Tabelle in
-      `docs/claude-md-inventur.md` (Wegwerf-Artefakt, nach T1.4 löschen).
-- [ ] **T1.2 Bereichs-CLAUDE.md schreiben** — sechs Dateien laut Layout oben,
-      Inhalt aus der Inventur verschoben (nicht kopiert). Ein Commit pro
-      Datei ist okay, muss aber nicht.
-- [ ] **T1.3 Root-CLAUDE.md eindampfen** auf Layer 0+1 (≤150 Zeilen):
-      Projektbeschreibung, Layout-Tabelle, Kommandos-Block, Routing-Tabelle
-      ("wenn du an X arbeitest, lies Y/CLAUDE.md"), Top-Gotchas
-      (stdin=DEVNULL, kein Test-Suite, venv-Split). Erst NACH T1.2, damit
-      nichts verloren geht.
-- [ ] **T1.4 Gegenprobe.** In einer frischen Claude-Code-Session je eine
+- [x] **T1.1 CLAUDE.md-Inventur.** Erledigt 13.07. — direkt beim Verteilen
+      gemacht (voller Alt-Inhalt war im Session-Kontext), keine separate
+      Wegwerf-Tabelle nötig.
+- [x] **T1.2 Bereichs-CLAUDE.md schreiben.** Erledigt 13.07.: sechs Dateien
+      (fabrik/core 74 Z., fabrik/writing 133 Z., fabrik/audio 136 Z.,
+      fabrik/cli 118 Z., webui 79 Z., templates 70 Z.) — alle
+      Produktions-Lektionen verschoben, nicht kopiert.
+- [x] **T1.3 Root-CLAUDE.md eingedampft** auf 96 Zeilen (Ziel ≤150):
+      Beschreibung, Layout-Tabelle, Kommandos, Routing-Tabelle,
+      Top-Gotchas + Hinweis auf den laufenden MWP-Umbau.
+- [ ] **T1.4 Gegenprobe.** In einer FRISCHEN Claude-Code-Session je eine
       typische Frage pro Bereich stellen (z. B. "warum retried
       validate_parts nicht bei Überlänge?") und prüfen, dass die Antwort
-      aus dem Bereichs-CLAUDE.md kommt. Inventur-Datei löschen.
+      aus dem Bereichs-CLAUDE.md kommt. (Selbst-Abgleich beim Schreiben
+      ist erfolgt; der Frische-Session-Test steht noch aus — am besten
+      einfach beim nächsten normalen Arbeiten beobachten.)
 
 ### Phase 2 — Workspace-Design (Scope A, noch kein Code)
 
