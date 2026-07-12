@@ -1,0 +1,674 @@
+--- PART 1 ---
+
+[NARRATOR | style: terse, neutral]
+Previously on Chain of Custody: the interrogation room's sign-in sheet vanished under Captain Sun's own hand, leaving no proof Mei Lin ever locked herself in alone with Voss. Hours of his quiet pressure have worn her down — she's one exhausted admission away from handing him something far more dangerous than a file.
+
+[NARRATOR | style: quiet, watchful]
+Precinct basement, past midnight. The interrogation room sits dark behind glass. Mei Lin stands alone at the records terminal outside it, scrolling a log that shouldn't be empty.
+
+[DET_MEI_LIN | style: flat, disbelieving | speed: 0.95]
+No entry. No exit. Nothing.
+
+[SFX: keyboard keys clicking rapidly]
+
+[DET_MEI_LIN | style: low, to herself]
+I signed that room out. I know I did.
+
+[NARRATOR | style: terse, neutral]
+She scrolls back further — an hour, then two. The gap holds.
+
+[SFX: chair creaking, distant hallway echo]
+
+[DET_MEI_LIN | style: barely controlled | speed: 1.1]
+Forty-eight hours. Gone. Like I was never in there.
+
+[DET_MEI_LIN | style: quiet realization]
+Which means it's just me. My word. Nobody logged him. Nobody logged me.
+
+[NARRATOR | style: neutral]
+She sits back from the terminal, staring at the blank rows on the screen.
+
+[DET_MEI_LIN | style: steadier, testing the thought | speed: 0.9]
+No paper trail means no one can prove what happened in that room. Not Sun. Not IA. Only what I choose to say.
+
+[SFX: distant door closing somewhere above]
+
+[DET_MEI_LIN | style: almost convincing herself]
+That's not a liability. That's leverage. I decide when this comes out. I decide how.
+
+[NARRATOR | style: terse, neutral]
+She closes the log window. The reflection in the dark monitor doesn't blink back with the same certainty her voice carried.
+
+[DET_MEI_LIN | style: hardening | speed: 1.0]
+I held the room. I can hold this too.
+
+[SFX: fluorescent light humming, faint buzz]
+
+[NARRATOR | style: quiet]
+She doesn't ask herself the other question yet — the one about who gets blamed when the only witness is also the only one who broke the rules.
+
+--- PART 2 ---
+
+[NARRATOR | style: terse, neutral]
+Same interrogation room, minutes later. Mei Lin remains alone with Voss, the suspect she has held past every legal boundary.
+
+[JONAS_VOSS | style: measured, almost gentle]
+You've been staring at that door for two minutes now. Waiting for someone to walk through it?
+
+[DET_MEI_LIN | style: guarded, flat]
+I'm thinking about the next question. Don't flatter yourself.
+
+[JONAS_VOSS | style: unhurried, conversational]
+Fair enough. Then let me offer one of my own. Does the name Lily Okafor mean anything to you?
+
+[SFX: a chair creaks slightly, a small shift in weight]
+
+[DET_MEI_LIN | style: controlled, but a beat too slow]
+That case is closed. It was reviewed. There's nothing there for you.
+
+[JONAS_VOSS | style: calm, precise]
+Closed. Reviewed. Interesting choice of words. I heard it a little differently — a girl, sixteen, missing six weeks before anyone found her. And a detective who was supposedly overextended that month. Funny thing, precincts. Everybody talks eventually.
+
+[DET_MEI_LIN | style: sharper, defensive]
+People talk about a lot of things they don't understand. You weren't there.
+
+[JONAS_VOSS | style: soft, deliberate]
+No. I wasn't. And where I heard it, how, from whom — that's a door I'm not opening today. But you didn't ask me who told me. You asked what I know. That's not the same thing, is it, Detective.
+
+[SFX: a long silence, then the faint hum of the room's fluorescent light]
+
+[DET_MEI_LIN | style: quieter, trying to hold the line]
+The review board signed off. That's the record. That's what happened.
+
+[JONAS_VOSS | style: gentle, almost kind]
+"Reviewed." You keep landing on that word like it's a wall. I'm not accusing you of anything, Mei Lin. I'm only noticing how carefully you're choosing your sentences. A woman with nothing to protect doesn't measure her words this closely.
+
+[DET_MEI_LIN | style: barely holding it together, voice tightening]
+You don't get to use her name. You don't get to use her name like you knew her.
+
+[JONAS_VOSS | style: quiet, watching]
+I don't need to have known her. I just need to know you did.
+
+[SFX: her breath catches, audible, then stops]
+
+[NARRATOR | style: terse, neutral]
+For a moment, neither of them speaks. Somewhere beyond the two-way glass, the precinct keeps moving — unaware of how close the room behind that door has just come to breaking open.
+
+--- PART 3 ---
+
+[NARRATOR | style: terse, neutral]
+Same room, same night. The Okafor case still hangs in the air between them.
+
+[DET_MEI_LIN | style: hollow, spent]
+There was a tip. Weeks before we found her. Anonymous, a woman's voice, said Lily'd been seen near the old canning warehouse.
+
+[JONAS_VOSS | style: quiet, unhurried]
+Go on.
+
+[DET_MEI_LIN | style: fighting to keep it level]
+I had four cases open that month. I told myself it wasn't specific enough to chase. I never logged it as credible.
+
+[SFX: chair creaks, a long exhale]
+
+[DET_MEI_LIN | style: voice cracking, barely holding it together]
+When the internal review started, I asked to sign off early. Before the board saw the file. So no one would ask why that tip never made it into the report.
+
+[JONAS_VOSS | style: still, gentle — no judgment in his voice]
+That's not the same as hiding a body, Detective.
+
+[DET_MEI_LIN | style: raw, almost a whisper]
+She was six weeks from being found. Six weeks. If I'd chased it—
+
+[DET_MEI_LIN | style: breaking slightly]
+I don't know. Maybe it changes nothing. Maybe it changes everything.
+
+[NARRATOR | style: terse, neutral]
+Voss says nothing. He lets the silence do the work.
+
+[DET_MEI_LIN | style: quieter now, almost relieved]
+No one else knows that. Not Kai. Not Sun. Just you.
+
+[SFX: distant hum of the building's ventilation, otherwise silence]
+
+[JONAS_VOSS | style: measured, warm on the surface]
+Then it's safe with me.
+
+--- PART 4 ---
+
+[NARRATOR]
+Late night, a back corner of the precinct bullpen. Kai Yang works alone at a terminal, the rest of the floor dark and quiet.
+
+[DET_KAI_YANG | style: focused, low voice]
+Come on. There has to be an older copy somewhere.
+
+[SFX: keyboard clicking, distant hum of server fans]
+
+[DET_KAI_YANG | style: muttering to himself]
+Sun cleaned the last three weeks. But nobody backs up nightly. Somebody has to have a mirror.
+
+[SFX: soft chime, folder opening]
+
+[DET_KAI_YANG | style: sharp intake of breath]
+There you are.
+
+[NARRATOR]
+He pulls up a secondary archive, one the department's IT contractor set up years ago and everyone forgot existed.
+
+[DET_KAI_YANG | style: quiet, urgent]
+Timestamp on the interrogation room feed — eleven forty-six. Then a gap. Then it picks back up at four minutes past midnight like nothing happened.
+
+[SFX: mouse click, soft beep]
+
+[DET_KAI_YANG | style: cold realization]
+That's not a glitch. That's a cut. Somebody walked in and pulled the plug on purpose.
+
+[NARRATOR]
+He sits back, staring at the screen, the weight of what he's looking at settling over him.
+
+[DET_KAI_YANG | style: to himself, tense]
+Mei Lin was in that room. Alone with Voss. And somebody made sure there'd be no record of it.
+
+[SFX: chair creaking as he leans forward again]
+
+[DET_KAI_YANG | style: measured, thinking out loud]
+I could walk this straight to Sun right now.
+
+[NARRATOR]
+He hesitates, hand hovering over the keyboard, remembering how fast his captain waved off his last concern.
+
+[DET_KAI_YANG | style: bitter, quiet]
+Last time I brought him something that didn't fit the story, he told me to focus on my caseload. Like I imagined it.
+
+[SFX: a slow exhale]
+
+[DET_KAI_YANG | style: resolved, careful]
+Not this time. Not until I've got more than one fragment and a bad feeling. I copy this, I build the timeline first, and then I decide who's actually safe to show.
+
+[NARRATOR]
+He starts a new file, saves the timestamp data, and keeps digging — one deliberate step ahead of whoever thought this was buried for good.
+
+--- PART 5 ---
+
+[NARRATOR | style: terse, neutral]
+The Blue Lantern, early evening. Anna Wu, Daniel Wu's older sister, takes a seat at the bar, following the one name her brother scrawled in his notes before he vanished.
+
+[SFX: bar chatter, glasses clinking, a jukebox playing low]
+
+[ANNA_WU | style: forcing calm]
+Whatever's cheapest on tap. Thanks.
+
+[SFX: bottle cap hissing, liquid pouring]
+
+[NARRATOR | style: terse, neutral]
+She studies the room without seeming to — the regulars at the pool table, the men in the corner booth who don't look like they came for the drinks.
+
+[ANNA_WU | style: casual, testing]
+Been coming here a while myself. Feels like the kind of place where everyone knows everyone.
+
+[SFX: bartender setting down glass]
+
+[ZOE_HAN | style: guarded, noncommittal]
+Something like that.
+
+[ANNA_WU | style: careful, offhand]
+I'm actually trying to track someone down. A friend of my brother's, maybe. Guy who might come through here — goes by a name I heard once. You ever hear it mentioned?
+
+[SFX: a chair scraping somewhere behind her]
+
+[ZOE_HAN | style: flat, closing off]
+Lot of names come through this place. Can't keep track.
+
+[ANNA_WU | style: pressing gently]
+Sure. It's just — my brother went quiet a while back, and I'm trying to piece together who he was talking to before that happened.
+
+[SFX: brief silence, glass wiped]
+
+[NARRATOR | style: terse, neutral]
+The bartender's eyes flick, just once, toward the corner booth before returning to the counter. Anna catches it.
+
+[ANNA_WU | style: internal, quiet resolve]
+That's not nothing.
+
+[SFX: low murmur of conversation resuming nearby]
+
+[NARRATOR | style: terse, neutral]
+She gets nothing more — no name spoken aloud, no confirmation — but the glance was answer enough. She settles back onto the stool, in no hurry to leave.
+
+[ANNA_WU | style: quiet determination]
+I'll finish this first.
+
+--- PART 6 ---
+
+[NARRATOR | style: quiet, direct]
+Still the Blue Lantern. Anna Wu hasn't moved from her stool in twenty minutes, her drink gone warm, when the table behind her gets loud enough to hear.
+
+[SFX: low murmur of bar conversation, glass set down hard]
+
+[ANNA_WU | style: barely audible, holding still]
+(under her breath) Don't turn around. Just listen.
+
+[SFX: two men's voices rising slightly at a nearby table, then dropping again]
+
+[ANNA_WU | style: whispering, straining to catch it]
+...something about a shipment. Short again. That's twice now, he said.
+
+[SFX: low laugh, chair creaking]
+
+[ANNA_WU | style: whispering, urgent]
+Say it again. Say the name again —
+
+[SFX: glass clinking, muffled reply]
+
+[ANNA_WU | style: whispering, adrenaline rising]
+Reyes. He said Reyes handles the docks paperwork when it doesn't add up. Voss's man.
+
+[NARRATOR | style: quiet, measured]
+She keeps her eyes on the bar mirror, memorizing the shape of the two men behind her without turning.
+
+[ANNA_WU | style: low, controlled, heart pounding]
+Reyes. Falsified counts. That's — that's exactly what Daniel photographed. Manifests that didn't match what came off the boats.
+
+[SFX: chair scraping back, footsteps receding toward the door]
+
+[ANNA_WU | style: whispering to herself, shaken]
+He wasn't imagining it. He wasn't wrong. There's a name now. A real one.
+
+[NARRATOR | style: quiet, neutral]
+The two men settle their tab and leave without looking her way. Anna doesn't move for a long moment.
+
+[ANNA_WU | style: low, resolute, voice tightening]
+I can't just leave this on a tip line again. Nobody acts on a tip line. I need someone who'll actually do something with a name like Reyes.
+
+[ANNA_WU | style: determined, pulling out her phone]
+Zoe's been asking the right questions for weeks. Maybe it's time I tell her what I actually know.
+
+[NARRATOR | style: quiet, final]
+She pays for her untouched drink, already dialing, already moving toward the door.
+
+--- PART 7 ---
+
+[NARRATOR | style: terse, neutral]
+A quiet café a few blocks from the precinct. Zoe Han — the journalist chasing the corruption story — waits at a corner table. Anna Wu, Daniel's sister, arrives minutes later, still shaken from the Blue Lantern.
+
+[ZOE_HAN | style: guarded, watchful]
+You said it was urgent. Sit.
+
+[ANNA_WU | style: breathless, urgent]
+I heard a name last night. At the Blue Lantern. Two men talking about a shipment problem — one of them said "Voss's people wouldn't like this getting out."
+
+[ZOE_HAN | style: carefully neutral, masking recognition]
+Which name.
+
+[ANNA_WU | style: insistent]
+Marcus Reyes. He handles something at the docks — I don't know what exactly. But it's tied to whatever Daniel found.
+
+[ZOE_HAN | style: measured, giving nothing away]
+Okay. Slow down. What did Daniel actually find?
+
+[ANNA_WU | style: pleading, frustrated]
+Nobody at the precinct will tell me anything. You're the only person who's asked me a real question in three weeks.
+
+[ZOE_HAN | style: gentle but probing]
+Then answer it. What did he find.
+
+[ANNA_WU | style: quiet, remembering]
+Manifests. Shipping records. He said the numbers didn't match — cargo weight going in, weight coming out. He was photographing pages of it. He told me three days before he disappeared. "I found something wrong."
+
+[SFX: ceramic cup set down carefully]
+
+[ZOE_HAN | style: still controlled, but something sharpening underneath]
+Wrong how. Did he say wrong how.
+
+[ANNA_WU | style: shaking her head, desperate]
+No. Just that it wasn't a mistake. That someone was doing it on purpose.
+
+[NARRATOR | style: terse, neutral]
+Zoe's expression doesn't change. But her grip on her own cup does.
+
+[ZOE_HAN | style: deliberately calm]
+I've been looking at discretionary fund transfers out of the precinct. Deposits that don't have a clean explanation. I'm not going to say more than that yet.
+
+[ANNA_WU | style: leaning in, urgent]
+Why not? Zoe, this is my brother.
+
+[ZOE_HAN | style: firm, protective]
+Because if I'm wrong, or if this gets back to the wrong person before I can prove it, it disappears. And so does any chance of using it for something that actually helps him.
+
+[ANNA_WU | style: voice cracking slightly]
+Everyone keeps telling me to wait. To trust the process. The process lost my brother.
+
+[ZOE_HAN | style: softer, but still deliberate]
+I know. I'm not telling you to wait. I'm telling you what I say next has to be right, or it's worthless. Give me the name again. Exactly how you heard it.
+
+[ANNA_WU | style: quiet, resolved]
+Marcus Reyes. Blue Lantern, back table, last night, close to eleven.
+
+[NARRATOR | style: terse, neutral]
+Zoe writes nothing down. She doesn't need to.
+
+[ZOE_HAN | style: guarded, deliberately withholding]
+That name is already part of what I've been tracing. I'm not going to pretend otherwise.
+
+[ANNA_WU | style: sharp, hopeful]
+So you knew? Then tell me what it means.
+
+[ZOE_HAN | style: closing the subject, careful]
+Knowing a name and proving what it means are two different things. Let me finish confirming it before I say more. I promise you — if this is what I think it is, you'll be the first person I call.
+
+[NARRATOR | style: terse, neutral]
+Anna doesn't get the answer she wants. But for the first time in weeks, she leaves the table believing someone else sees what she sees.
+
+--- PART 8 ---
+
+[NARRATOR | style: terse, neutral]
+The interrogation room, later that same night. Voss and Detective Mei Lin remain alone — the recording system still dark, no clock but the one on the wall.
+
+[JONAS_VOSS | style: quiet, measured]
+You look tired, Detective.
+
+[DET_MEI_LIN | style: guarded, flat]
+It's been a long shift.
+
+[JONAS_VOSS | style: gentle, almost warm]
+Longer than most. Forty-some hours, if anyone were counting. But nobody's counting, are they.
+
+[DET_MEI_LIN | style: defensive]
+Say what you mean, Voss.
+
+[JONAS_VOSS | style: unhurried]
+I mean I know what a missed tip costs a person. What it costs to sit on a review and sign it early so nobody else has to read it too closely.
+
+[DET_MEI_LIN | style: sharp intake, controlled]
+That's not — we're not talking about that.
+
+[JONAS_VOSS | style: calm, almost kind]
+We don't have to talk about it. I already know it. That's the part that's changed.
+
+[SFX: chair leg scraping softly against tile]
+
+[DET_MEI_LIN | style: tight, wary]
+Nothing's changed. You're still the man in this chair.
+
+[JONAS_VOSS | style: mild, reasonable]
+Of course I am. I'm not going anywhere, Detective. I only meant that now you've said it out loud, instead of just carrying it.
+
+[DET_MEI_LIN | style: quiet, defensive]
+You agreed to talk. Nobody forced —
+
+[JONAS_VOSS | style: smooth, interrupting gently]
+I'm not building a complaint, Detective. I'm making an observation. That's all this has ever been between us — you asking, I answer.
+
+[DET_MEI_LIN | style: low, careful]
+And what is it you think you've heard tonight.
+
+[JONAS_VOSS | style: soft, deliberate]
+Nothing I'll repeat. Nothing that changes what happens when that door opens. You have my word on that.
+
+[SFX: distant hum of the precinct hallway, muffled]
+
+[DET_MEI_LIN | style: uneasy, trying to sound steady]
+You're talking about Daniel. About what you'll give me.
+
+[JONAS_VOSS | style: patient, unreadable]
+I'm talking about what we give each other. You've been generous tonight. I intend to remember that.
+
+[DET_MEI_LIN | style: barely masking unease]
+That's not an answer.
+
+[JONAS_VOSS | style: almost gentle, final]
+No. It's a start.
+
+[NARRATOR | style: terse, neutral]
+He says nothing more. The silence that follows feels different than the silence before it — and Mei Lin can't yet say why.
+
+--- PART 9 ---
+
+[NARRATOR | style: neutral, measured]
+The precinct's third floor, mid-afternoon. Captain Sun's office door stands half open — a colleague has just leaned in with a quiet word.
+
+[CAPTAIN_DAVID_SUN | style: neutral, controlled]
+Say that again.
+
+[NARRATOR | style: neutral, measured]
+The colleague lowers her voice further.
+
+[CAPTAIN_DAVID_SUN | style: flat, unreadable]
+Backups. From when?
+
+[SFX: office door clicking shut]
+
+[CAPTAIN_DAVID_SUN | style: forcing calm]
+Thank you, Officer Delgado. That'll be all.
+
+[NARRATOR | style: neutral, measured]
+Alone, Sun sets down his pen. His hand isn't quite steady.
+
+[CAPTAIN_DAVID_SUN | style: barely audible, to himself]
+Old backups. I never even thought—
+
+[SFX: chair creaking as he stands]
+
+[NARRATOR | style: neutral, measured]
+He crosses to the window overlooking the bullpen, where Kai Yang sits at his desk, headphones on, eyes fixed on his monitor.
+
+[CAPTAIN_DAVID_SUN | style: quiet, tight]
+He's not supposed to have clearance for that server anymore.
+
+[NARRATOR | style: neutral, measured]
+Sun straightens his jacket and steps out into the bullpen. His voice, when it comes, is easy — practiced.
+
+[CAPTAIN_DAVID_SUN | style: warm, performative]
+Delgado tells me the Castellan file's stalling. Kai, you've got the sharpest eye on financials — mind picking that up this afternoon?
+
+[DET_KAI_YANG | style: caught off guard, careful]
+I'm in the middle of something for Mei Lin's case.
+
+[CAPTAIN_DAVID_SUN | style: still warm, but firmer underneath]
+It can wait a few hours. Castellan can't — DA's asking.
+
+[NARRATOR | style: neutral, measured]
+Kai Yang holds his gaze a beat too long before nodding.
+
+[DET_KAI_YANG | style: even, unreadable]
+Sure, Captain.
+
+[NARRATOR | style: neutral, measured]
+Sun walks on, pausing at the IT desk on his way back.
+
+[CAPTAIN_DAVID_SUN | style: casual, testing]
+Any read requests flagged on the archive server this week? Just doing a routine sweep.
+
+[NARRATOR | style: neutral, measured]
+The tech shrugs, only half-listening, and Sun forces a small, satisfied nod before continuing toward his office, passing close enough to Kai Yang's monitor to glimpse a folder window closing a half-second too fast.
+
+[CAPTAIN_DAVID_SUN | style: to himself, low]
+Careful. Just be careful.
+
+[NARRATOR | style: neutral, measured]
+Behind his closed door, he presses both palms flat against the desk, breathing slow, telling himself this is still containable — unaware that what Kai Yang already has is no longer a hunch, but proof.
+
+--- PART 10 ---
+
+[NARRATOR | style: terse, neutral]
+A corridor outside the interrogation room, minutes later. Mei Lin, alone, replaying what she just gave away.
+
+[DET_MEI_LIN | style: quiet, unraveling]
+Early sign-off. That's all it took. I asked for it myself.
+
+[DET_MEI_LIN | style: barely audible]
+Nobody logged the tip. Nobody logged it because I made sure of that.
+
+[DET_MEI_LIN | style: hollow]
+Six weeks later she was in a drainage culvert off the interstate.
+
+[DET_MEI_LIN | style: shaking, dawning]
+And I just said it. Out loud. To him.
+
+[DET_MEI_LIN | style: bitter self-recognition]
+He didn't even push at the end. He just — waited. Let me fill the silence myself.
+
+[DET_MEI_LIN | style: cold realization]
+That wasn't kindness. That was patience. He knew exactly what he was waiting for.
+
+[DET_MEI_LIN | style: whispered, afraid]
+There's no taking it back now. It's his. It's just — his.
+
+[DET_MEI_LIN | style: hardening, frightened]
+I don't know what he's going to do with it. I only know that he can.
+
+[SFX: distant precinct hallway ambience, a door closing far off]
+
+[DET_MEI_LIN | style: steadying herself, failing]
+Get up. Walk back in there like nothing happened. Like you didn't just hand him your whole life.
+
+[NARRATOR | style: terse, neutral]
+She straightens, wipes her face, and starts back toward the door.
+
+--- PART 11 ---
+
+[NARRATOR]
+The Captain's Ledger, away from the harbor now. Past midnight, a parking structure two blocks from the precinct — a place Captain David Sun has never once been photographed. A car is already waiting, engine idling, headlights dark.
+
+[SFX: rain on concrete, a car door easing shut, footsteps echoing]
+
+[CAPTAIN_DAVID_SUN | style: guarded, quiet | speed: 0.9]
+You said this couldn't wait until morning. So talk to me.
+
+[SFX: lighter flicking, a long exhale]
+
+[CAPTAIN_DAVID_SUN | style: listening, jaw tightening]
+The sister. Anna Wu. She's been sitting at the Blue Lantern asking about names she has no business knowing.
+
+[CAPTAIN_DAVID_SUN | style: sharper, controlled anger]
+Specific how. Give me specific, not a feeling.
+
+[CAPTAIN_DAVID_SUN | style: low, processing]
+The manifests. She used that word to a bartender who's paid good money to forget he ever heard it.
+
+[CAPTAIN_DAVID_SUN | style: exhaling, tense]
+That's not a guess she's making. That's her brother's word, not mine, which means he told her more before he vanished than any of us accounted for.
+
+[SFX: a second car passing slowly, headlights sweeping the wall]
+
+[CAPTAIN_DAVID_SUN | style: measured, reassuring on the surface]
+I'll handle her. Quietly. She gets redirected somewhere else, she gets tired, she stops. That's how this always goes.
+
+[SFX: car window rolling up partway]
+
+[CAPTAIN_DAVID_SUN | style: firmer, warning]
+No. Nobody touches her directly, not yet, not like that. That's not containment, that's an accelerant, and I am not cleaning up a second disappearance on top of the first.
+
+[CAPTAIN_DAVID_SUN | style: cold, final]
+Give me the week. I move people, not muscle. Now get out of here before someone clocks this car twice in one month.
+
+[SFX: footsteps retreating, engine revving low, tires pulling away]
+
+[CAPTAIN_DAVID_SUN | style: alone now, hard exhale, muttering]
+Redirected. Right. As if I have the first idea how you redirect a woman who's already buried her brother once in her head.
+
+[CAPTAIN_DAVID_SUN | style: quiet, resolve hardening | speed: 0.9]
+Yang's the fire I've been watching. Old backups, questions he shouldn't still be asking. I know exactly where that one's burning, and I know how to starve it.
+
+[CAPTAIN_DAVID_SUN | style: bitter realization creeping in, slower]
+The sister was supposed to be background noise. A grieving woman knocking on doors nobody opens. Not this. Not a name from the docks landing in her hands before it ever reached mine.
+
+[CAPTAIN_DAVID_SUN | style: cold, deciding]
+Nobody at the precinct hears about tonight. Not Yang, not the Lieutenant, not Mei Lin. This stays in this lot, with me, until I know exactly how far she's already gotten.
+
+--- END PART 11 ---
+
+--- PART 12 ---
+
+[NARRATOR | style: terse, neutral]
+The interrogation room. Later the same night. Voss and Mei Lin remain alone, hours now unaccounted for by any record.
+
+[JONAS_VOSS | style: quiet, almost gentle]
+You look like a woman who hasn't slept in three days.
+
+[DET_MEI_LIN | style: flat, guarded]
+I don't need commentary on my appearance, Voss.
+
+[JONAS_VOSS | style: measured]
+Fair. Then let's talk about something useful instead.
+
+[SFX: chair legs shifting against tile]
+
+[JONAS_VOSS | style: calm, deliberate]
+There's a building. East side, past the old freight yards. Corrugated roof, blue door, no signage. If you check permit records from eighteen months ago, you'll find it was leased under a shell — the same shell that leases three other properties tied to men your department has never once looked at.
+
+[DET_MEI_LIN | style: sharp, wary]
+That's a location. That's not nothing, and it's also not enough. Why give it to me now.
+
+[JONAS_VOSS | style: soft, disarming]
+Because I'm tired of you thinking I'm lying to you.
+
+[DET_MEI_LIN | style: quiet, testing]
+Is he there. Right now.
+
+[JONAS_VOSS | style: even, unreadable]
+I didn't say that.
+
+[SFX: long pause, faint hum of overhead light]
+
+[DET_MEI_LIN | style: barely controlled, urgent]
+Jonas. Is he there.
+
+[JONAS_VOSS | style: gentle, firm]
+I said check the permits. That's the gift. What you do with it is yours.
+
+[NARRATOR | style: terse, neutral]
+Mei Lin writes the address down herself this time — no recorder, no witness, nothing but her own handwriting.
+
+[DET_MEI_LIN | style: low, half to herself]
+This is real. This isn't like the last three things you gave me.
+
+[JONAS_VOSS | style: warm, careful]
+No. It isn't. I told you — good faith goes both ways eventually.
+
+[DET_MEI_LIN | style: cautious relief, guard dropping]
+If this checks out—
+
+[JONAS_VOSS | style: calm, cutting in smoothly]
+Then you'll know I could have told you more, and didn't have to, and gave it to you anyway. Sit with that.
+
+[SFX: pen tapping against a folder]
+
+[DET_MEI_LIN | style: quiet, resolved]
+I'm going to verify this tonight.
+
+[JONAS_VOSS | style: soft, almost tender]
+Of course you are. I wouldn't expect anything less of you.
+
+[NARRATOR | style: terse, neutral]
+She doesn't see him watching her fold the paper into her pocket like something precious — doesn't see how carefully he's measured exactly how much to give, and exactly how much to keep.
+
+--- PART 13 ---
+
+[NARRATOR | style: terse, closing]
+Later that night. Anna Wu's apartment. Alone with the name Zoe confirmed.
+
+[ANNA_WU | style: quiet, resolved]
+Blue Lantern. A name Daniel wrote down three days before he vanished. Now Zoe's numbers line up with it too.
+
+[ANNA_WU | style: low, gathering steel]
+Three years of phone calls. Voicemails nobody returns. A folder of nothing.
+
+[ANNA_WU | style: harder]
+Not anymore.
+
+[SFX: a chair scraping back]
+
+[ANNA_WU | style: steady, deliberate]
+Tomorrow I don't ask the front desk. I don't leave a message for someone who'll lose it in a drawer.
+
+[ANNA_WU | style: quieter, honest with herself]
+I go to whoever's actually running that precinct. I put the name on the table. And I watch their face when I say it.
+
+[SFX: a folder closing, papers tapped square]
+
+[ANNA_WU | style: barely audible, almost a vow]
+Daniel. I'm not knocking anymore.
+
+[NARRATOR | style: measured, ominous]
+She doesn't know yet whose desk that name will land on tomorrow, or how many hands it will pass through before anyone with real power even looks at it. Across the city, in a room with no windows, Jonas Voss watches Mei Lin fold a fragment of paper into her pocket like a lifeline — and closes the door behind her, patient, certain the harder truth is still his to give. Zoe Han checks her sources one final time. She is closer to printing than Captain Sun can afford to believe.
+

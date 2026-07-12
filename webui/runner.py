@@ -11,14 +11,20 @@ import json
 import os
 import queue
 import re
+import signal
 import subprocess
 import threading
 import time
 import uuid
 
-from config import AUTO_TTS_COMMANDS, COMMANDS
+from config import AUTO_TTS_COMMANDS, COMMANDS, current_series_dir, series_dir_for
 
 STEP_RE = re.compile(r"^\s*▶\s*Schritt\s+(\d+)\s*:\s*(.+)$")
+# batch.py: "[2/5] Starte: figur2.txt → Figur2_FULL_EPISODE.mp3" bzw.
+# "[2/5] Übersprungen (existiert): ..." — Episoden-Fortschritt fürs Log-Panel.
+# Bewusst NUR diese beiden Formen: podcast_maker.py druckt ähnliche
+# "[i/n] ..."-Zeilen, die aber Parts zählen, keine Episoden.
+EPISODE_RE = re.compile(r"^\[(\d+)/(\d+)\]\s+(?:Starte|Übersprungen \(existiert\)):\s*(.+)$")
 MAX_BUFFER_LINES = 2000
 
 
@@ -52,7 +58,10 @@ def build_argv(command_id: str, params: dict) -> tuple[list[str] | None, str | N
     # puffert Python bei Pipe-Redirection (statt TTY) blockweise statt
     # zeilenweise -> print()-Ausgaben landen erst nach Prozessende oder
     # vollem Puffer bei uns, das SSE-Log wirkt "tot" obwohl der Job läuft.
-    argv = [cmd["interpreter"](), "-u", cmd["script"], *cmd.get("fixed_args", [])]
+    if "module" in cmd:
+        argv = [cmd["interpreter"](), "-u", "-m", cmd["module"], *cmd.get("fixed_args", [])]
+    else:
+        argv = [cmd["interpreter"](), "-u", cmd["script"], *cmd.get("fixed_args", [])]
 
     for entry in schema:
         kind = entry[0]
@@ -76,12 +85,18 @@ def build_argv(command_id: str, params: dict) -> tuple[list[str] | None, str | N
 
 
 class Job:
-    def __init__(self, job_id: str, command_id: str, argv: list[str] | None, cwd: str | None, kind: str):
+    def __init__(self, job_id: str, command_id: str, argv: list[str] | None, cwd: str | None, kind: str,
+                 checkpoints_dir: str | None = None):
         self.job_id = job_id
         self.command_id = command_id
         self.argv = argv
         self.cwd = cwd
         self.kind = kind
+        # series/<slug>/output/.checkpoints — vorab aufgelöst (statt im
+        # Polling-Thread zu raten), da mehrere Serien parallel existieren
+        # können und "podcast_output/" seit der Serien-Migration nicht mehr
+        # der feste Pfad ist.
+        self.checkpoints_dir = checkpoints_dir
         self.state = "running"  # running | done | error
         self.returncode = None
         self.started_at = time.time()
@@ -155,6 +170,10 @@ class Job:
                 self.argv, cwd=self.cwd,
                 stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
                 bufsize=1, text=True,
+                # Eigene Prozessgruppe: batch.py/generate_episode.py starten
+                # selbst wieder Subprozesse — kill() muss die ganze Gruppe
+                # beenden, sonst laufen die Enkel nach "Abbrechen" weiter.
+                start_new_session=(os.name != "nt"),
                 # PYTHONUNBUFFERED (statt nur "-u") vererbt sich auch an
                 # Python-Subprozesse, die dieses Skript selbst wieder startet
                 # (z.B. batch.py -> podcast_maker.py) — "-u" allein wirkt nur
@@ -168,7 +187,7 @@ class Job:
             return
 
         checkpoint_thread = None
-        if self.kind == "progress_cr":
+        if self.checkpoints_dir:
             checkpoint_thread = threading.Thread(target=self._poll_checkpoints, daemon=True)
             checkpoint_thread.start()
 
@@ -203,17 +222,21 @@ class Job:
             m = STEP_RE.match(line)
             if m:
                 self._emit("step", {"step": int(m.group(1)), "label": m.group(2).strip()})
+        m = EPISODE_RE.match(line)
+        if m:
+            self._emit("episode", {"current": int(m.group(1)), "total": int(m.group(2)),
+                                   "name": m.group(3).strip()})
 
     def _poll_checkpoints(self):
-        """Für podcast_maker.py: pollt podcast_output/.checkpoints/ und meldet
-        die Anzahl vorhandener Chunk-Dateien als groben Live-Fortschritt,
+        """Für podcast_maker.py: pollt series/<slug>/output/.checkpoints/ und
+        meldet die Anzahl vorhandener Chunk-Dateien als groben Live-Fortschritt,
         statt eine erfundene Prozentzahl aus \\r-Text zu parsen."""
-        checkpoints_dir = os.path.join(self.cwd, "podcast_output", ".checkpoints")
+        checkpoints_dir = self.checkpoints_dir
         last_count = -1
         while not self._stop_polling:
             count = 0
             active_part = None
-            if os.path.isdir(checkpoints_dir):
+            if checkpoints_dir and os.path.isdir(checkpoints_dir):
                 try:
                     parts = sorted(os.listdir(checkpoints_dir))
                     if parts:
@@ -249,7 +272,12 @@ class JobRegistry:
 
         job_id = uuid.uuid4().hex[:12]
         kind = COMMANDS[command_id]["kind"]
-        job = Job(job_id, command_id, argv, cwd, kind)
+        checkpoints_dir = None
+        if COMMANDS[command_id].get("poll_checkpoints"):
+            series_dir = series_dir_for((params or {}).get("series")) or current_series_dir()
+            if series_dir:
+                checkpoints_dir = os.path.join(series_dir, "output", ".checkpoints")
+        job = Job(job_id, command_id, argv, cwd, kind, checkpoints_dir=checkpoints_dir)
         with self._lock:
             self._jobs[job_id] = job
             self._running_by_command[command_id] = job_id
@@ -265,7 +293,16 @@ class JobRegistry:
         job = self._jobs.get(job_id)
         if not job or not job.process:
             return False
-        job.process.terminate()
+        # Ganze Prozessgruppe beenden (siehe start_new_session in
+        # _run_subprocess) — terminate() allein ließe von batch.py/
+        # generate_episode.py gestartete Kindprozesse weiterlaufen.
+        try:
+            if os.name != "nt":
+                os.killpg(os.getpgid(job.process.pid), signal.SIGTERM)
+            else:
+                job.process.terminate()
+        except (ProcessLookupError, PermissionError, OSError):
+            job.process.terminate()
         return True
 
     def snapshot(self) -> dict:

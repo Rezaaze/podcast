@@ -1,0 +1,660 @@
+--- PART 1 ---
+
+[NARRATOR | style: measured, grave]
+Previously on Chain of Custody: Detective Mei Lin sealed herself inside Interrogation Room 3 with suspect Jonas Voss, using her own override codes to kill the camera feed and the door lock. Zoe Han's exposé on Captain Sun's ledger tore the precinct apart from the inside. And when the door finally opened, no one noticed that Voss was still, somehow, exactly where he wanted to be.
+
+[NARRATOR | style: tense, clipped]
+Minutes after the breach. Interrogation corridor, Precinct Twelve. The door to Room 3 stands open. Detective Kai Yang — Mei Lin's partner — has her by the arm.
+
+[SFX: metal door swinging, echoing footsteps]
+
+[DET_KAI_YANG | style: urgent, low]
+Mei. Mei, look at me. We're leaving. Now.
+
+[DET_MEI_LIN | style: dazed, resisting]
+I'm fine. Kai, I'm fine, let go—
+
+[DET_KAI_YANG | style: firm, no room for argument]
+You're not fine. Six hours, no camera, no backup, nobody watching that door. Walk.
+
+[SFX: hurried footsteps on tile]
+
+[NARRATOR | style: neutral]
+Captain David Sun — the precinct's captain — arrives from the far end of the corridor, flanked by two uniformed officers.
+
+[CAPTAIN_DAVID_SUN | style: controlled, authoritative]
+Seal this room. Nobody touches that panel until Tech pulls it apart. Voss goes to Holding Two, full escort, no exceptions.
+
+[JONAS_VOSS | style: calm, unreadable]
+Happy to cooperate, Captain.
+
+[CAPTAIN_DAVID_SUN | style: clipped, dismissive]
+Nobody asked you.
+
+[SFX: cell door latch, distant radio chatter]
+
+[NARRATOR | style: neutral]
+Sun watches the officers lead Voss away, then turns to a waiting sergeant.
+
+[CAPTAIN_DAVID_SUN | style: low, private]
+Standard protocol review. Nothing more. Get me the maintenance log on that door circuit before anyone else does.
+
+[DET_KAI_YANG | style: quieter now, worried]
+What did he say to you in there?
+
+[DET_MEI_LIN | style: guarded, still catching her breath]
+Nothing I can use yet.
+
+[DET_KAI_YANG | style: searching her face]
+That's not an answer, Mei.
+
+[DET_MEI_LIN | style: deflecting, tired]
+It's the only one I've got. I need five minutes. I need to think.
+
+[SFX: stairwell door opening]
+
+[NARRATOR | style: quiet, observational]
+Kai Yang lets her go, watching her disappear toward the stairwell. He says nothing about the falsified access logs still sitting unopened on his desk.
+
+[SFX: stairwell door closing]
+
+[NARRATOR | style: flat, closing]
+Down the corridor, Sun studies the dead camera feed on a handheld monitor — the one blank hour nobody can account for — and files it away as the single containable piece of an otherwise uncontainable day. To Kai Yang, pulling her out of that room feels like the danger has passed. He has no way of knowing it was never the room at all.
+
+--- PART 2 ---
+
+[NARRATOR | style: measured, neutral]
+Central Booking, one floor below Interrogation Room 3. Minutes after the breach, before the ledger story has even reached this level of the building. Fluorescent light, the hum of an old vent, a night shift moving at half speed. Jonas Voss stands at the intake counter, calm, waiting his turn like anyone else.
+
+[SFX: metal clipboard set down on counter]
+[SFX: distant cell door buzzing open]
+
+[JONAS_VOSS | style: even, unhurried]
+Property inventory. You'll want my belt, my watch, the pen from my jacket pocket. I assume you already have the rest logged from earlier tonight.
+
+[NARRATOR | style: measured, neutral]
+He offers his wrists without being asked. No hesitation, no protest — the posture of a man who has done this before, or rehearsed it enough times that the difference no longer matters.
+
+[SFX: handcuffs unlocking, chain settling]
+
+[JONAS_VOSS | style: quiet, almost courteous]
+No call. No lawyer request tonight. I'll wait until morning, when someone's actually available to take it seriously.
+
+[SFX: fingerprint scanner beep]
+
+[NARRATOR | style: measured, neutral]
+CAPTAIN_DAVID_SUN appears briefly at the booking room's far door — the precinct's captain, drawn here by his own order to move Voss under heavier guard — watching just long enough to confirm it's being carried out.
+
+[CAPTAIN_DAVID_SUN | style: clipped, checking a box]
+Two officers on this cell tonight, not one. I don't care what the roster says.
+
+[JONAS_VOSS | style: mild, almost grateful]
+Sensible. I'd hate for anyone to feel underprepared on my account.
+
+[CAPTAIN_DAVID_SUN | style: flat, already moving on]
+That's not concern, Mr. Voss. It's arithmetic.
+
+[NARRATOR | style: measured, neutral]
+Sun doesn't wait for a response. He turns and leaves the way he came, already reaching for his radio before the door swings shut behind him.
+
+[SFX: heavy cell door sliding, latch engaging]
+
+[NARRATOR | style: measured, neutral]
+Alone in the cell, Voss sits on the narrow bunk, back straight, hands loose in his lap. Somewhere down the corridor a drunk tank argument rises and dies. He does not pace. He does not check the door. He looks, if anything, like a man who has finally arrived somewhere he intended to be all along.
+
+[JONAS_VOSS | style: barely above a whisper]
+Compliant. For now.
+
+--- PART 3 ---
+
+[NARRATOR]
+Mid-morning, third floor bullpen. Zoe Han's story broke two hours ago, and it is already the only thing anyone here is discussing.
+[NARRATOR]
+Captain David Sun has not read a line of it himself — he is hearing it in pieces, the way everything reaches him today.
+
+[SFX: bullpen chatter, overlapping voices, phones ringing]
+
+[CAPTAIN_DAVID_SUN | style: catching fragments, alert]
+Say that again — which raid?
+
+[SFX: chatter drops briefly, then resumes at a distance]
+
+[CAPTAIN_DAVID_SUN | style: reading over someone's shoulder, tight]
+Harbor Docks. Case number matches one of the three we shelved in the spring.
+
+[NARRATOR]
+No memo has crossed his desk. No one has briefed him directly. He finds out standing in a doorway, the way a man finds out his own house is on fire from a neighbor.
+
+[CAPTAIN_DAVID_SUN | style: quiet, calculating]
+Reopened. Not requested — reopened. Somebody above me made that call this morning.
+
+[SFX: a phone rings twice nearby, cuts off]
+
+[CAPTAIN_DAVID_SUN | style: to himself, grim]
+Ledger story lands, and by lunch they're pulling the raid file back out. That's not a coincidence, that's a queue.
+
+[NARRATOR]
+He thinks of Interrogation Room 3, sealed since last night, its camera feed still dead on record.
+
+[CAPTAIN_DAVID_SUN | style: flat, bracing]
+Two fires. Same oversight board is going to walk into both of them by the end of the week.
+
+[NARRATOR]
+He does not move yet. For a long moment he simply stands there, doing the arithmetic of how much longer he has before someone asks him to explain either one.
+
+[CAPTAIN_DAVID_SUN | style: barely audible]
+Not yet. Not both at once.
+
+[SFX: Sun's footsteps resume, receding down the corridor]
+
+--- PART 4 ---
+
+[NARRATOR]
+We move to an equipment bay near the Harbor Docks, mid-morning. A raid team once stood down without ever deploying now assembles for the first time in months.
+
+[NARRATOR]
+Anna Wu — Daniel's older sister, who has pushed the department for this exact search since the night he vanished — has come to make sure her brother's name goes into the file before they leave.
+
+[SFX: metal lockers opening, gear duffels dropped onto a steel table]
+
+[CAPTAIN_DAVID_SUN | style: brisk, procedural]
+Vests, radios, dive gear if the tide's low enough by then. I want us moving by fourteen hundred.
+
+[CAPTAIN_DAVID_SUN | style: scanning a worn folder]
+We're working off the original file — the one they shelved eight months ago. Same access points, same yard schematics. Nothing's changed at that fence line since.
+
+[ANNA_WU | style: urgent, carefully controlled]
+Captain. Before that goes final — there's a traffic camera still on record from the night he disappeared. It puts him walking toward the yard. Not away from it.
+
+[CAPTAIN_DAVID_SUN | style: measured, half-listening]
+That's already in the original report, Ms. Wu.
+
+[ANNA_WU | style: pressing, precise]
+Noted and buried. I want it in the briefing packet. Something the team actually reads walking in — not a line item nobody opens.
+
+[SFX: a radio crackles, dispatch chatter under the words]
+
+[CAPTAIN_DAVID_SUN | style: weighing it, pragmatic]
+...Fine. It's supporting context. Doesn't move the entry points, doesn't change the search grid. But it goes in.
+
+[ANNA_WU | style: quiet relief, guarded]
+Thank you.
+
+[CAPTAIN_DAVID_SUN | style: already turning to his team, brisk]
+Equipment check in twenty. Let's move.
+
+[SFX: boots on concrete, a duffel zipper, a door swinging shut]
+
+[NARRATOR]
+The bay empties around her. For a moment, Anna Wu is alone with the folder that now, finally, carries her brother's name where someone might actually see it.
+
+[ANNA_WU | style: barely above a whisper]
+Please let this be the one.
+
+--- PART 5 ---
+
+[NARRATOR | style: terse, neutral]
+Late morning, a corridor outside the holding area. Kai Yang, Mei Lin's partner, has been keeping close to her since pulling her from Room 3.
+
+[SFX: distant phone ringing, muffled precinct noise]
+
+[DET_MEI_LIN | style: low, controlled urgency]
+One question. That's all I need relayed. Not a conversation, not contact — one clarifying question.
+
+[DET_KAI_YANG | style: flat, firm]
+No.
+
+[DET_MEI_LIN | style: pressing, quiet]
+Kai —
+
+[DET_KAI_YANG | style: firm, unmoving]
+You don't have standing to ask Voss anything. Not officially, not unofficially, not through me. That door's closed, Mei.
+
+[DET_MEI_LIN | style: tight, restrained]
+He said "past the second gate, near the water." That's not a location, that's a shape of one. If he just clarifies —
+
+[DET_KAI_YANG | style: steady, unyielding]
+If he clarifies, it's because he wants to. Have you thought about that? Every single thing you got out of him, he chose to give you. That's not information, that's him handing you scraps and watching what you do with them.
+
+[SFX: door closing down the hall]
+
+[DET_MEI_LIN | style: quieter, defensive]
+I know how it looks.
+
+[DET_KAI_YANG | style: softer, but final]
+I'm not asking him anything for you. Not today.
+
+[NARRATOR | style: terse, neutral]
+He walks off toward the raid staging area. Mei Lin stays where she is.
+
+[SFX: footsteps receding]
+
+[DET_MEI_LIN | style: barely audible, to herself]
+Past the second gate. Near the water.
+
+[NARRATOR | style: terse, neutral]
+Alone now, she runs the sentence again, the way she's run it a dozen times since the room.
+
+[DET_MEI_LIN | style: slow, unsettled]
+He didn't stumble on that. He doesn't stumble on anything.
+
+[SFX: long pause, ambient hum]
+
+[DET_MEI_LIN | style: quiet, dawning]
+Second gate. Near the water. Vague enough to chase. Specific enough to believe.
+
+[NARRATOR | style: terse, neutral]
+For the first time, the shape of the answer stops feeling like a clue and starts feeling like a decision — his decision, measured to the inch.
+
+[DET_MEI_LIN | style: hollow, almost a whisper]
+He gave me exactly enough to keep going. Never enough to arrive.
+
+[SFX: distant phone ringing again, unanswered]
+
+[NARRATOR | style: terse, neutral]
+She doesn't say the word for it yet. But something in her certainty has already started to give.
+
+--- PART 6 ---
+
+[NARRATOR]
+Late morning, records division, a windowless room of file drawers and a single desk lamp. Kai Yang finds Captain Sun already bent over the transfer file the internal review flagged an hour earlier.
+
+[DET_KAI_YANG | style: careful, testing the ground]
+"You've seen it, then. Voss requested Interrogation Three. By name. Four months before any of this happened."
+
+[CAPTAIN_DAVID_SUN | style: flat, controlled]
+"I've seen it."
+
+[DET_KAI_YANG | style: pressing gently]
+"Panic disorder, the file says. Around open rooms. Nobody on record ever verified that."
+
+[CAPTAIN_DAVID_SUN | style: even, unreadable]
+"Panic disorder doesn't need a hearing, Yang. It needs a doctor's note and a signature. He had both."
+
+[DET_KAI_YANG | style: quiet, doubt creeping in]
+"Whose signature, Captain?"
+
+[SFX: a folder closing, papers settling]
+
+[CAPTAIN_DAVID_SUN | style: measured, closing the subject]
+"Mine. Same as forty other transfers that month. It's a stamp, not a verdict."
+
+[DET_KAI_YANG | style: unconvinced, not backing off]
+"I know how it reads on paper. I'm asking how it reads to you. Right now. Standing here."
+
+[CAPTAIN_DAVID_SUN | style: tight, a beat too fast]
+"It reads like a footnote the review closes out by Friday, and then everyone goes back to the ledger and the harbor and the hundred other fires already burning."
+
+[DET_KAI_YANG | style: careful, not accusing yet]
+"And if it doesn't close by Friday."
+
+[CAPTAIN_DAVID_SUN | style: sharper, a warning]
+"Then we deal with that when it happens. Not before. Not on a hallway guess."
+
+[NARRATOR]
+A pause. Yang doesn't move to leave.
+
+[DET_KAI_YANG | style: low, almost to himself]
+"Four months out, he asks for that specific room, cites something nobody checks. Two days ago he ends up alone in it with Mei Lin, no camera, no lock. That's not a coincidence I can just file away, Captain."
+
+[CAPTAIN_DAVID_SUN | style: quiet, final, controlled]
+"File it anyway. For now. We don't hand the oversight board a theory before we hand them a fact."
+
+[DET_KAI_YANG | style: reluctant]
+"Understood."
+
+[SFX: footsteps receding down a corridor]
+
+[NARRATOR]
+Sun watches him go, then looks back down at the transfer request, at the approval line, at the name signed at the bottom of it — his own.
+
+--- PART 7 ---
+
+[NARRATOR | style: terse, procedural]
+Harbor Docks, late morning. The container yard's outer fence, three days after Daniel Wu's disappearance revisited — evidence technicians dust the padlock recovered here for the reopened raid file.
+
+[SFX: metal fence rattling in wind]
+
+[NARRATOR | style: terse, procedural]
+No dialogue is exchanged in the lab beyond routine confirmation; the match comes back clean.
+
+[SFX: paper folder closing, latch click]
+
+[NARRATOR | style: neutral, transitional]
+Hours later, a precinct hallway. Detective Kai Yang finds Anna Wu waiting near the raid briefing room, a manila folder in his hand.
+
+[DET_KAI_YANG | style: careful, procedural]
+The padlock they pulled off the fence. Forensics ran it against the yard's private stock.
+
+[ANNA_WU | style: sharp, expectant]
+And?
+
+[DET_KAI_YANG | style: measured]
+It's theirs. Not a hardware-store brand, not something anyone could've bought and clipped on. It came out of their own supply.
+
+[SFX: folder papers shuffling]
+
+[ANNA_WU | style: quiet intensity, barely controlled]
+So whoever cut that fence had access. Real access. Not some stranger who wandered onto the property.
+
+[DET_KAI_YANG | style: cautious, not confirming more than the facts allow]
+That's as far as the lab will go on the record. It's supporting detail for the file. Nothing that names anyone yet.
+
+[ANNA_WU | style: low, fierce]
+It doesn't have to name anyone. It tells me my brother wasn't taken by some opportunist off the street. Someone with keys to that yard did this. Someone who works for whoever runs it.
+
+[DET_KAI_YANG | style: gentle but firm]
+Anna. Don't build a case in your head faster than we can build one on paper. I need you patient a little longer.
+
+[ANNA_WU | style: trembling restraint]
+I have been patient for months, Detective. This is the first thing that's felt like more than a rumor or a photograph. Don't ask me to treat it like nothing.
+
+[SFX: distant precinct phone ringing, unanswered]
+
+[NARRATOR | style: terse, closing]
+Kai Yang says nothing further, only closes the folder — unaware how precisely that padlock traces back to the operation Jonas Voss has spent months protecting from exactly this kind of scrutiny.
+
+--- PART 8 ---
+
+[NARRATOR | style: terse, neutral]
+Mid-afternoon, a cramped analysis room off the main bullpen. Kai Yang, Mei Lin's partner, spreads two sets of notes across a table — his own harbor fragments and the traffic-camera file Anna Wu has been pushing for weeks.
+
+[DET_KAI_YANG | style: low, focused, talking to himself as much as anyone]
+Container row... northeast corner... away from the main gate.
+
+[SFX: papers shuffling, a chair scraping back]
+
+[DET_KAI_YANG | style: sitting up straighter, sharper now]
+That's not close to Daniel's sighting. That's the same block.
+
+[NARRATOR | style: terse, neutral]
+He pulls Anna's traffic-camera stills closer, lining a printed still against Mei Lin's scrawled dock reference.
+
+[DET_KAI_YANG | style: quiet, weighing something]
+Same fence line. Same access road. Two different people, two different weeks, saying the same three hundred feet of dock.
+
+[SFX: a door opens down the hall, muffled voices passing]
+
+[NARRATOR | style: terse, neutral]
+The raid lead, a senior officer coordinating the reopened harbor case, leans into the doorway.
+
+[DET_KAI_YANG | style: measured, controlled, already deciding what to leave out]
+I've got a location. Solid enough to move on. Northeast container row, off the old access road — matches a witness sighting and a separate source I've been developing.
+
+[NARRATOR | style: terse, neutral]
+He does not name Mei Lin. He does not mention Voss, or the room, or how a detective barred from contact came to have a location fragment at all.
+
+[DET_KAI_YANG | style: firm, closing the subject]
+Source stays confidential. The overlap is what matters.
+
+[SFX: a pen clicking, papers being gathered]
+
+[NARRATOR | style: terse, neutral]
+The raid lead studies the two documents side by side, unaware of the weeks of interrogation-room silence buried underneath them.
+
+[DET_KAI_YANG | style: to himself, once the door closes again, quieter]
+This protects her. That's all this is.
+
+[NARRATOR | style: terse, neutral]
+He does not say it protects anyone else. He does not yet let himself wonder whether it does.
+
+[SFX: a folder closing, footsteps receding down the corridor]
+
+--- PART 9 ---
+
+[NARRATOR]
+Mid-morning, the precinct's east wing. Three unfamiliar faces now sit at desks that were empty an hour ago — oversight staff, badges freshly printed.
+
+[SFX: unfamiliar footsteps, murmured introductions, a badge scanner beeping]
+
+[DET_KAI_YANG | style: low, urgent]
+You see that? Three of them. Came in through the east doors twenty minutes ago.
+
+[CAPTAIN_DAVID_SUN | style: flat, watching]
+Regional oversight. Zoe's story bought them a reason to finally show up.
+
+[DET_KAI_YANG | style: pressing]
+Twenty minutes ago there was nobody at those desks. Now there's a full audit team reading everything that crosses that floor.
+
+[CAPTAIN_DAVID_SUN | style: guarded]
+I'm aware, Detective.
+
+[DET_KAI_YANG | style: quieter, more urgent]
+Then you're aware the raid can't wait for the usual sign-off chain anymore. Every hour we lose, more of them get read into every file we touch.
+
+[CAPTAIN_DAVID_SUN | style: measured, weighing it]
+You want to move the timeline.
+
+[DET_KAI_YANG]
+I want to move it before somebody up there decides they need three days to approve moving it at all.
+
+[SFX: a phone buzzing on a desk, ignored]
+
+[NARRATOR]
+Sun looks past Kai Yang, toward the new arrivals settling in — toward the narrowing space that used to be his to work in quietly.
+
+[CAPTAIN_DAVID_SUN | style: private, almost to no one]
+A week ago this floor ran on nobody looking too closely. That's over now.
+
+[DET_KAI_YANG | style: sharp, focused]
+Captain.
+
+[CAPTAIN_DAVID_SUN | style: recovering, brisk]
+Get the raid lead. Tell him we move at first light tomorrow, not end of week. I'll sign whatever needs signing before anyone upstairs has coffee.
+
+[DET_KAI_YANG | style: relieved, still tense]
+I'll tell him now.
+
+[NARRATOR]
+Kai Yang starts across the floor. Sun stays a moment longer, eyes on the new desks, on the badges, on how quickly a distracted room stops being distracted.
+
+[CAPTAIN_DAVID_SUN | style: to himself, barely audible]
+Whatever's left to bury, it's tonight or never.
+
+[SFX: a chair rolling back, a door swinging shut down the hall]
+
+[NARRATOR]
+Neither of them says it aloud, but both feel the same clock ticking now — though only one of them yet understands whose plan the closing window truly serves.
+
+--- PART 10 ---
+
+[NARRATOR | style: terse, neutral]
+Late morning. Zoe Han's apartment, over the phone with her finance-office source. Anna Wu is present, close enough to overhear.
+
+[ZOE_HAN | style: calm, reassuring]
+Take a breath. Tell me exactly what they said.
+
+[ZOE_HAN | style: guarded, listening]
+Names. Which names.
+
+[ZOE_HAN | style: measured, careful]
+Okay. Okay, that's — that's not nothing, but it doesn't mean they've traced it to you specifically.
+
+[ZOE_HAN | style: quieter, bracing]
+If it lands on me instead, would that help you?
+
+[ZOE_HAN | style: steady but tight]
+I understand. If it comes to that, I need you to do what keeps you safe. I mean that.
+
+[ZOE_HAN | style: firm, protective]
+I'm not going to let this fall on you alone. I promise you that.
+
+[NARRATOR | style: terse, neutral]
+The call ends. Zoe sets the phone down slowly.
+
+[ANNA_WU | style: careful, urgent]
+Zoe. How much of that did I just hear.
+
+[ZOE_HAN | style: guarded, tired]
+Enough.
+
+[ANNA_WU | style: rising alarm]
+If she recants — if she goes quiet — everything you published, everything connected to it —
+
+[ZOE_HAN | style: quiet, honest]
+I know what it's connected to, Anna.
+
+[ANNA_WU | style: barely controlled]
+Daniel's case is riding on that raid. That raid is riding on your story holding together.
+
+[ZOE_HAN | style: low, resolved]
+Then we'd both better hope she holds a little longer than she thinks she can.
+
+[SFX: phone call disconnect tone]
+[SFX: apartment ambient hum]
+[SFX: chair creak]
+[SFX: distant traffic through window]
+
+--- PART 11 ---
+
+[NARRATOR | style: quiet, urgent]
+The Harbor Docks, the same hour. Not the interrogation room, not the newsroom — the container yard itself, rows of rusted steel boxes stacked three high under sodium lights, where the story has been pointing all along.
+
+[SFX: distant harbor crane, low engine idle]
+
+[NARRATOR | style: quiet, urgent]
+A man who works the yard, loyal to Voss though he has never met him, takes a call from someone outside the fence line.
+
+[SFX: phone vibrating on metal]
+
+[NARRATOR | style: flat, watchful]
+He says nothing into the phone. He listens, ends the call, pockets it, and starts walking — past the idle forklifts, past the shipping manifests clipped to a chain-link gate no one bothers to lock at night.
+
+[SFX: boots on gravel, chain-link rattling]
+
+[NARRATOR | style: flat, watchful]
+He doesn't radio the yard office. He doesn't log a reason. This isn't a new order — it's a standing one, waiting for exactly this word: searched.
+
+[SFX: heavy padlock unlatching, metal door groaning]
+
+[NARRATOR | style: tense, hushed]
+He disappears between two stacked containers at the yard's far edge, the ones with faded paint and no manifest number anyone would think to check. What happens next happens quickly, without a single word spoken aloud, and without a single witness close enough to see it.
+
+[SFX: muffled movement, something heavy shifted]
+
+[NARRATOR | style: tense, hushed]
+Minutes later, a van idles onto the yard's unlisted access road, headlights off. By the time it pulls away, whatever needed to leave that stretch of containers behind has left it — and there is nothing left there for a search warrant to find.
+
+[SFX: engine turning over, tires on gravel fading]
+
+[NARRATOR | style: brisk, official]
+Across the city, in the precinct garage, the raid team finishes staging — vests, radios, the reopened case file spread across a hood under a bare work light, the smell of coffee gone cold in paper cups nobody remembers ordering.
+
+[SFX: radio static, gear clipping into place]
+
+[DET_KAI_YANG | style: focused, quietly relieved]
+Everyone's briefed on the overlap — Mei's fragments, the sighting, the padlock match. It all lines up. We move in twenty.
+
+[DET_KAI_YANG | style: low, half to himself]
+Twenty minutes. That's not nothing. That's enough time.
+
+[SFX: van doors slamming shut, engine starting]
+
+[NARRATOR | style: even, final]
+He believes the delay worked in their favor. He has no way of knowing it gave someone else exactly the time they needed first.
+
+--- PART 12 ---
+
+[NARRATOR]
+Dawn at the Harbor Docks. The raid team reaches the container yard Mei Lin's fragments and Anna Wu's traffic-camera sighting both pointed to.
+
+[SFX: bolt cutters snapping metal, heavy chain dropping]
+
+[SFX: container door rolling open, rusted hinges]
+
+[ANNA_WU | style: breath catching, disbelief]
+No. No, this is — this is the one. This has to be the one.
+
+[DET_KAI_YANG | style: flat, controlled dread]
+Cots. A bucket. Someone was here.
+
+[ANNA_WU | style: voice cracking, refusing to break yet]
+Was. You said was.
+
+[DET_KAI_YANG | style: gentle but final]
+Anna —
+
+[ANNA_WU | style: breaking, raw]
+Don't. Don't say it like that. He was supposed to be — I ran, I didn't sleep, I told everyone speed was all that mattered —
+
+[SFX: flashlight clatters against container floor]
+
+[DET_KAI_YANG | style: quiet, working it out in real time]
+Fresh dust lines here. Recent. Hours, not days. This place was still warm while we were staging in that garage.
+
+[ANNA_WU | style: hollow]
+Hours.
+
+[DET_KAI_YANG | style: grim realization, almost to himself]
+The raid got scheduled, reviewed, staffed — every step of it on paper, every step of it visible to somebody —
+
+[ANNA_WU | style: sharp, accusing without meaning to]
+Visible.
+
+[DET_KAI_YANG | style: steady, absorbing the blow]
+Someone had exactly enough warning to clear this place before we ever set foot on the dock. Not days of warning. Hours. Somebody knew the moment this raid was real.
+
+[NARRATOR]
+Across the city, in a precinct hallway thinned by the morning's chaos, a call reaches Mei Lin.
+
+[SFX: phone vibrating against a metal desk]
+
+[DET_MEI_LIN | style: bracing]
+Tell me.
+
+[DET_KAI_YANG | style: heavy, over the line]
+Empty. Cleared out hours before we hit the door.
+
+[DET_MEI_LIN | style: silence, then quiet unraveling]
+Hours.
+
+[DET_KAI_YANG | style: careful]
+Mei Lin —
+
+[DET_MEI_LIN | style: distant, arriving at something she can't unknow]
+He never gave me a location to find. He gave me a location to be looking at while it emptied out from under me.
+
+[DET_KAI_YANG | style: uncertain]
+You couldn't have known that.
+
+[DET_MEI_LIN | style: flat, final]
+That's not what I'm afraid of anymore, Kai. I spent this whole time scared I'd lose him as a source. I never once asked what I was buying him time to do.
+
+[NARRATOR]
+On the dock, Anna Wu stands in the space her brother was held in, the certainty that carried her this far finally giving way.
+
+--- PART 13 ---
+
+[NARRATOR | style: quiet, closing]
+Precinct bullpen, night. Word from the harbor raid reaches Captain Sun's desk before the team has even finished the drive back.
+
+[CAPTAIN_DAVID_SUN | style: flat, absorbing a loss]
+Empty. Say that again for me.
+
+[DET_KAI_YANG | style: still catching his breath]
+Empty, Captain. Recently cleared. Whatever cover this bought us — it's gone with the container.
+
+[CAPTAIN_DAVID_SUN | style: quiet, private calculation]
+Then so is the story I was going to tell the oversight board tomorrow.
+
+[DET_KAI_YANG | style: uneasy, not yet connecting the dots]
+There's one more thing. Review flagged Voss's old transfer request again — that panic-disorder claim never sat right with me. Probably nothing. Paperwork.
+
+[NARRATOR | style: quiet, shifting rooms]
+Down the hall, alone at her desk, Mei Lin sits with everything she risked.
+
+[DET_MEI_LIN | style: hollow, arriving at the truth]
+Every fragment he gave me. Every hour I spent piecing them together. It wasn't leading me to Daniel.
+
+[DET_MEI_LIN | style: barely audible]
+It was leading him away.
+
+[NARRATOR | style: quiet, one more cut]
+Outside, in the parking lot, Anna Wu takes the same news standing up.
+
+[ANNA_WU | style: shaking, refusing to break]
+An empty room isn't an answer. I'm not stopping. I don't care where I have to look next.
+
+[NARRATOR | style: somber, closing the episode]
+No one in that building yet understands how far the trail has already moved — or what it will cost to find it again. Next time, on Chain of Custody: What the Room Cost.
+

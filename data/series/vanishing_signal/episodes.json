@@ -1,0 +1,1562 @@
+{
+  "series_title": "Vanishing Signal",
+  "season": 2,
+  "language": "English",
+  "mode": "drama",
+  "template": "soap_opera",
+  "writer_persona": "a showrunner for character-driven, relationship-first serial drama in the vein of prestige ensemble TV, blending tech-industry intrigue with tabloid-media hunger and family grief",
+  "style_guidelines": [
+    "Every scene serves exactly one relationship or power dynamic \u2014 never stack two unrelated reveals in the same beat",
+    "Dialogue implies more than it states \u2014 characters talk around their secrets, not about them",
+    "Let ambition and grief coexist in the same character without judgment \u2014 no one is a villain to themselves",
+    "Cut scenes on emotional turns, not plot summary \u2014 end on a look, a hesitation, or a lie, never an explanation",
+    "The audience should know more than any single character at any moment \u2014 protect that knowledge gap fiercely",
+    "The NARRATOR orients but never interprets \u2014 no editorializing about who is right or wrong"
+  ],
+  "voices": {
+    "NARRATOR": {
+      "voice": "Ryan",
+      "default_style": "calm, measured, a step removed from the action",
+      "description": "the show's narrator \u2014 orients the listener at the start of every scene (who, where, when), never a character in the story"
+    },
+    "MARCUS_VOSS": {
+      "voice": "Aiden",
+      "default_style": "controlled, media-trained, cracks only under real pressure",
+      "description": "Founder and CEO of Voss Dynamics, the AI company whose voice-cloning breakthrough now haunts him; guards a secret about how that breakthrough actually originated."
+    },
+    "ELENA_VOSS": {
+      "voice": "Ono_Anna",
+      "default_style": "precise, deliberate diction, never raises her voice even when striking",
+      "description": "Marcus's wife and Voss Dynamics' vice-chair; born in Hong Kong, built her own reputation before marrying in, and is quietly assembling the leverage to run the company herself."
+    },
+    "DANA_SHAW": {
+      "voice": "Serena",
+      "default_style": "media-smooth and warm on-mic, colder the instant the red light goes off",
+      "description": "Host of the hit true-crime podcast 'Without a Trace of Doubt'; Chinese-American, raised by a single immigrant mother in Oakland, expert at turning grief into an audience."
+    },
+    "DAVID_LIN": {
+      "voice": "Dylan",
+      "default_style": "speaks slow, deliberate, very clear English, grief sitting just under the surface",
+      "description": "Mei's father, a first-generation Chinese immigrant and university lecturer, whose search for his daughter is quietly being used by the people closest to him."
+    },
+    "JASON_WU": {
+      "voice": "Eric",
+      "default_style": "clipped, nervous, over-explains whenever he feels guilty",
+      "description": "Voss Dynamics engineer and Mei's former research partner; second-generation Chinese-American, torn between loyalty to Mei and fear of what he's already done for her."
+    },
+    "MEI_LIN": {
+      "voice": "Vivian",
+      "default_style": "unnervingly calm and controlled in her rare real appearances",
+      "description": "The missing graduate student whose voice-cloning research made Voss Dynamics' fortune \u2014 and who is not, in fact, missing at all."
+    }
+  },
+  "locations": {
+    "VOSS_TOWER": {
+      "name": "Voss Tower",
+      "description": "Marcus's glass-walled headquarters forty floors up, all cold light and city skyline, where every conversation feels like it's being recorded."
+    },
+    "PODCAST_STUDIO": {
+      "name": "The Studio",
+      "description": "Dana's converted-garage recording studio, foam-panelled and string-lit, a corkboard of Mei's photos pinned above the mixing desk."
+    },
+    "LIN_HOUSE": {
+      "name": "The Lin House",
+      "description": "David's modest craftsman home, warm lamplight and family photos, Mei's bedroom door always left open."
+    },
+    "THE_MARINA": {
+      "name": "Bellhaven Marina",
+      "description": "The fog-wrapped waterfront where Mei's phone was found, creaking boats and sodium lights standing in for answers no one has."
+    }
+  },
+  "format": {
+    "parts_per_section": 1,
+    "words_per_part_target": "300 to 500",
+    "words_per_part_min": 250,
+    "words_per_part_max": 550
+  },
+  "generation": {
+    "model": "claude-sonnet-5"
+  },
+  "audio": {
+    "api_url": "http://127.0.0.1:42003",
+    "default_style": "Speak clearly and with dramatic weight",
+    "target_lufs": -16.0,
+    "pause_between_chunks_ms": 250,
+    "pause_between_lines_ms": 700,
+    "pause_between_parts_ms": 3000,
+    "pause_between_episodes_ms": 6000,
+    "merge_anthology": false
+  },
+  "output_prefix": "ep",
+  "series_intro": "A student vanishes from a tech campus. Within days, her voice starts speaking again \u2014 through an app her own research built. What follows is not a rescue, but a scramble: a podcaster who smells the story of her career, a billionaire who knows more than he's saying, a wife circling the wreckage of his company, and a father who doesn't know the woman comforting him is also selling his grief by the download. Nobody in this story is telling the whole truth. Not even, especially, the girl who disappeared.",
+  "series_outro": "The money moves, the board votes, and the microphones finally stop rolling \u2014 but only some of these people get to walk away clean, and none of them get to walk away certain. Mei Lin is gone again, this time on her own terms; Voss Dynamics has a new hand on the wheel; and in a quiet house with an empty bedroom, one man is left wondering which parts of the last year were ever real.",
+  "episodes": [
+    {
+      "figure": "The Last Upload",
+      "theme": "Mei Lin's disappearance breaks as news, introducing Marcus's guardedness, Dana's hunger for the story, David's grief, and the first hairline crack of Elena's private ambition",
+      "intro_note": "",
+      "outro_note": "An encrypted audio file lands in Dana's inbox with no sender \u2014 and it opens with Mei's voice, saying her father's name.",
+      "sections": [
+        "Cold open: campus security finds Mei's dorm room empty, bed unslept in",
+        "Dana breaks the disappearance on her show, already framing it as a story",
+        "Marcus gets the call at Voss Tower and gives a guarded, lawyer-shaped statement",
+        "David sits in his daughter's empty room, unable to call anyone yet",
+        "Elena watches the news alone and makes one quiet phone call",
+        "Dana drives to the Lin house uninvited, offers help that is also access",
+        "Jason deletes something from a lab terminal before anyone asks him to",
+        "Marcus and Elena's dinner: normal on the surface, watchful underneath",
+        "Dana walks the marina at night, drawn by instinct to the water",
+        "Narrator closes on the file arriving in Dana's inbox at 3 a.m."
+      ],
+      "section_words": [
+        {
+          "min": 150,
+          "max": 220,
+          "target": "160 to 200"
+        },
+        null,
+        null,
+        null,
+        {
+          "min": 150,
+          "max": 220,
+          "target": "160 to 200"
+        },
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 120,
+          "max": 180,
+          "target": "130 to 170"
+        }
+      ],
+      "section_locations": [
+        "THE_MARINA",
+        "PODCAST_STUDIO",
+        "VOSS_TOWER",
+        "LIN_HOUSE",
+        "VOSS_TOWER",
+        "LIN_HOUSE",
+        "VOSS_TOWER",
+        "VOSS_TOWER",
+        "THE_MARINA",
+        "PODCAST_STUDIO"
+      ],
+      "case": [
+        {
+          "label": "The Vanishing",
+          "solution": "Mei Lin invented the core voice-cloning algorithm that made Voss Dynamics valuable, watched Marcus patent it under his own name and force her out of the lab with a quiet settlement and an NDA; rather than fight him in court, she staged her own disappearance, recruited her former research partner Jason Wu to leak fabricated 'AI-cloned' voice clips that looked like proof of her own suffering, and used the resulting media storm to extort a much larger payout from Marcus while letting her father and the public believe she might be dead \u2014 planning all along to disappear again, permanently, once the money clears.",
+          "objective_facts": [
+            "Mei Lin's phone was recovered at Bellhaven Marina with no signs of struggle.",
+            "Every leaked 'Mei' audio clip traces back to a voice model that only existed on her original research drive.",
+            "A shell account linked to Mei received a seven-figure transfer nine days after her disappearance was reported."
+          ],
+          "character_knowledge": {
+            "MARCUS_VOSS": {
+              "knows": [
+                "The patent filing lists him as sole inventor of the voice-cloning core."
+              ],
+              "hides": [
+                "That the algorithm was actually Mei's work \u2014 he is afraid this becomes public before anything else does."
+              ],
+              "believes_falsely": [
+                "That her disappearance is a personal tragedy unconnected to the company."
+              ]
+            },
+            "JASON_WU": {
+              "knows": [
+                "He deleted a backup of Mei's original model from the lab terminal the morning after she vanished."
+              ],
+              "hides": [
+                "Why he did it, and from whom he's protecting her."
+              ],
+              "believes_falsely": [
+                "That deleting the backup ends his involvement."
+              ]
+            },
+            "DAVID_LIN": {
+              "knows": [
+                "Mei stopped answering his calls three days before she was reported missing."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "That she disappeared against her will."
+              ]
+            },
+            "DANA_SHAW": {
+              "knows": [
+                "An anonymous file just arrived containing what sounds like Mei's voice."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "That the file is a lead handed to her by luck rather than design."
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Affair",
+          "solution": "Dana Shaw began seeing David Lin under the guise of supporting him through his daughter's disappearance, and real feelings grew alongside real exploitation \u2014 she has used his trust to get exclusive access to Mei's private journals and photos for her podcast, never telling him how much of the show's success is built on his grief, or that she privately doubts the 'evidence' she's airing.",
+          "objective_facts": [
+            "Dana and David have been meeting privately for four months, unknown to David's ex-wife or Dana's producers.",
+            "Episode downloads of 'Without a Trace of Doubt' tripled after Dana began using material David gave her in confidence.",
+            "David does not know Dana has flagged at least two of the leaked clips internally as 'possibly fabricated.'"
+          ],
+          "character_knowledge": {
+            "DANA_SHAW": {
+              "knows": [
+                "Showing up at David's door tonight is the fastest way to exclusive access."
+              ],
+              "hides": [
+                "That the visit is calculated, not purely compassionate."
+              ],
+              "believes_falsely": []
+            },
+            "DAVID_LIN": {
+              "knows": [
+                "Dana is the first person today who didn't need something rehearsed from him."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "That her interest in him tonight is simply kindness."
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Boardroom Coup",
+          "solution": "Elena Voss hired a private investigator within two weeks of Mei's disappearance, not to find Mei out of concern but to find leverage \u2014 and the PI quietly confirmed Mei is alive and orchestrating events from a distance. Elena has sat on that information, letting the scandal damage Marcus's standing with the board, timing her own move for controlling interest to land exactly when the revelation will do him the most damage and her the most good.",
+          "objective_facts": [
+            "Elena has held three private dinners with dissenting board members since Mei's disappearance.",
+            "Elena's PI, retained two weeks after the disappearance, reports directly and only to her.",
+            "A shareholder confidence vote on Marcus's leadership has been quietly scheduled for the season's final weeks."
+          ],
+          "character_knowledge": {
+            "ELENA_VOSS": {
+              "knows": [
+                "Marcus is hiding something about the disappearance that goes beyond grief."
+              ],
+              "hides": [
+                "That she has already made a call to retain a private investigator."
+              ],
+              "believes_falsely": [
+                "That whatever Marcus is hiding is personal misconduct, not stolen credit."
+              ]
+            },
+            "MARCUS_VOSS": {
+              "knows": [
+                "Elena is watching him more closely than usual tonight."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "That her attention is concern, not the opening move of something else."
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "Static and Signal",
+      "theme": "The first AI voice clip airs publicly, forcing Marcus into damage control while Dana chases the story despite doubts, and Elena's PI quietly starts digging",
+      "intro_note": "The file that reached Dana at 3 a.m. contained a fragment of Mei's voice, distressed, saying only 'Dad, they took it from me.'",
+      "outro_note": "David asks Dana, point-blank, if she believes the clip is real \u2014 and she lies to his face.",
+      "sections": [
+        "Narrator sets the scene: the clip goes live, the internet reacts within hours",
+        "Dana previews the clip on-air, leaning hard into the emotional cut",
+        "Marcus convenes an emergency call with legal and PR at Voss Tower",
+        "Elena's PI makes first contact, quietly, at a coffee shop near campus",
+        "Jason is questioned by Voss Dynamics security about lab access logs",
+        "David listens to the clip alone at home, breaking down at 'they took it from me'",
+        "Dana visits David that evening under the pretense of comfort",
+        "Marcus and Elena argue about whether to comment publicly",
+        "David asks Dana directly if she thinks the clip is genuine",
+        "Narrator closes on Dana's hesitation before she answers"
+      ],
+      "section_words": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 200,
+          "max": 300,
+          "target": "220 to 280"
+        },
+        null,
+        null,
+        {
+          "min": 130,
+          "max": 200,
+          "target": "140 to 180"
+        },
+        {
+          "min": 100,
+          "max": 160,
+          "target": "110 to 150"
+        }
+      ],
+      "section_locations": [
+        "PODCAST_STUDIO",
+        "PODCAST_STUDIO",
+        "VOSS_TOWER",
+        "THE_MARINA",
+        "VOSS_TOWER",
+        "LIN_HOUSE",
+        "LIN_HOUSE",
+        "VOSS_TOWER",
+        "LIN_HOUSE",
+        "LIN_HOUSE"
+      ],
+      "case": [
+        {
+          "label": "The Vanishing",
+          "solution": "Mei Lin invented the core voice-cloning algorithm that made Voss Dynamics valuable, watched Marcus patent it under his own name and force her out of the lab with a quiet settlement and an NDA; rather than fight him in court, she staged her own disappearance, recruited her former research partner Jason Wu to leak fabricated 'AI-cloned' voice clips that looked like proof of her own suffering, and used the resulting media storm to extort a much larger payout from Marcus while letting her father and the public believe she might be dead \u2014 planning all along to disappear again, permanently, once the money clears.",
+          "objective_facts": [
+            "Mei Lin's phone was recovered at Bellhaven Marina with no signs of struggle.",
+            "Every leaked 'Mei' audio clip traces back to a voice model that only existed on her original research drive.",
+            "A shell account linked to Mei received a seven-figure transfer nine days after her disappearance was reported."
+          ],
+          "character_knowledge": {
+            "MARCUS_VOSS": {
+              "knows": [
+                "The phrase 'they took it from me' is dangerously close to the truth about the patent."
+              ],
+              "hides": [
+                "This connection from legal and PR entirely."
+              ],
+              "believes_falsely": [
+                "That the clip was assembled by an outside party trying to extort him, not by Mei herself."
+              ]
+            },
+            "JASON_WU": {
+              "knows": [
+                "Security is now looking at exactly the access logs that would expose him."
+              ],
+              "hides": [
+                "That he still has a way to reach Mei directly."
+              ],
+              "believes_falsely": []
+            },
+            "DAVID_LIN": {
+              "knows": [
+                "His daughter's real voice, and that the clip sounds exactly like her."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "That hearing her voice means she is being held somewhere, suffering."
+              ]
+            },
+            "DANA_SHAW": {
+              "knows": [
+                "The clip has technical irregularities a careful listener would flag."
+              ],
+              "hides": [
+                "Those doubts, from David and from her own audience."
+              ],
+              "believes_falsely": []
+            }
+          }
+        },
+        {
+          "label": "The Affair",
+          "solution": "Dana Shaw began seeing David Lin under the guise of supporting him through his daughter's disappearance, and real feelings grew alongside real exploitation \u2014 she has used his trust to get exclusive access to Mei's private journals and photos for her podcast, never telling him how much of the show's success is built on his grief, or that she privately doubts the 'evidence' she's airing.",
+          "objective_facts": [
+            "Dana and David have been meeting privately for four months, unknown to David's ex-wife or Dana's producers.",
+            "Episode downloads of 'Without a Trace of Doubt' tripled after Dana began using material David gave her in confidence.",
+            "David does not know Dana has flagged at least two of the leaked clips internally as 'possibly fabricated.'"
+          ],
+          "character_knowledge": {
+            "DANA_SHAW": {
+              "knows": [
+                "Tonight's visit will get her closer to David's private archive of Mei's things."
+              ],
+              "hides": [
+                "That she is lying to him about the clip's authenticity right now."
+              ],
+              "believes_falsely": []
+            },
+            "DAVID_LIN": {
+              "knows": [
+                "Dana asked to see old photos and messages 'for context.'"
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "That her question about the clip's authenticity was asked out of concern for him, not professional cover."
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Boardroom Coup",
+          "solution": "Elena Voss hired a private investigator within two weeks of Mei's disappearance, not to find Mei out of concern but to find leverage \u2014 and the PI quietly confirmed Mei is alive and orchestrating events from a distance. Elena has sat on that information, letting the scandal damage Marcus's standing with the board, timing her own move for controlling interest to land exactly when the revelation will do him the most damage and her the most good.",
+          "objective_facts": [
+            "Elena has held three private dinners with dissenting board members since Mei's disappearance.",
+            "Elena's PI, retained two weeks after the disappearance, reports directly and only to her.",
+            "A shareholder confidence vote on Marcus's leadership has been quietly scheduled for the season's final weeks."
+          ],
+          "character_knowledge": {
+            "ELENA_VOSS": {
+              "knows": [
+                "Her PI has made first contact with someone close to the lab."
+              ],
+              "hides": [
+                "The investigation's existence from Marcus entirely."
+              ],
+              "believes_falsely": []
+            },
+            "MARCUS_VOSS": {
+              "knows": [
+                "Elena wants to delay any public statement, which she frames as caution."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "That her caution is about protecting the company's stock, not buying her PI more time."
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "The Patent",
+      "theme": "Elena's PI confirms Mei may be alive, Marcus's guilt over the stolen credit deepens, and Dana's affair with David grows more entangled with her professional exploitation of him",
+      "intro_note": "Dana told David the clip 'felt real to her' \u2014 a half-truth that bought her another week of access, and another night with him.",
+      "outro_note": "Elena's PI hands her a photograph: a woman who looks exactly like Mei, buying a prepaid phone three states away, four days after the disappearance.",
+      "sections": [
+        "Narrator: a quiet week passes with no new clips, and the story starts to cool",
+        "Dana's producers pressure her for a new episode; she has nothing new to give them",
+        "Marcus alone in his office, staring at the original patent filing",
+        "Jason confronts his own reflection over what he's done, nearly calls it off",
+        "David and Dana share a rare, unguarded night together at the Lin house",
+        "Elena meets her PI at the marina, away from any cameras",
+        "The PI shows Elena the photograph of a woman who looks like Mei",
+        "Narrator closes on Elena's face as she studies the photograph alone"
+      ],
+      "section_words": [
+        null,
+        null,
+        {
+          "min": 180,
+          "max": 260,
+          "target": "200 to 240"
+        },
+        null,
+        null,
+        null,
+        {
+          "min": 150,
+          "max": 220,
+          "target": "160 to 200"
+        },
+        {
+          "min": 100,
+          "max": 160,
+          "target": "110 to 150"
+        }
+      ],
+      "section_locations": [
+        "PODCAST_STUDIO",
+        "PODCAST_STUDIO",
+        "VOSS_TOWER",
+        "VOSS_TOWER",
+        "LIN_HOUSE",
+        "THE_MARINA",
+        "THE_MARINA",
+        "THE_MARINA"
+      ],
+      "case": [
+        {
+          "label": "The Vanishing",
+          "solution": "Mei Lin invented the core voice-cloning algorithm that made Voss Dynamics valuable, watched Marcus patent it under his own name and force her out of the lab with a quiet settlement and an NDA; rather than fight him in court, she staged her own disappearance, recruited her former research partner Jason Wu to leak fabricated 'AI-cloned' voice clips that looked like proof of her own suffering, and used the resulting media storm to extort a much larger payout from Marcus while letting her father and the public believe she might be dead \u2014 planning all along to disappear again, permanently, once the money clears.",
+          "objective_facts": [
+            "Mei Lin's phone was recovered at Bellhaven Marina with no signs of struggle.",
+            "Every leaked 'Mei' audio clip traces back to a voice model that only existed on her original research drive.",
+            "A shell account linked to Mei received a seven-figure transfer nine days after her disappearance was reported."
+          ],
+          "character_knowledge": {
+            "MARCUS_VOSS": {
+              "knows": [
+                "The exact date he filed the patent, three weeks after forcing Mei's exit."
+              ],
+              "hides": [
+                "This timeline from everyone, including his own legal team."
+              ],
+              "believes_falsely": []
+            },
+            "JASON_WU": {
+              "knows": [
+                "He could still stop feeding Mei's instructions to the press tonight."
+              ],
+              "hides": [
+                "That he almost did, and didn't."
+              ],
+              "believes_falsely": [
+                "That stopping now would even be possible without her retaliating against him."
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Affair",
+          "solution": "Dana Shaw began seeing David Lin under the guise of supporting him through his daughter's disappearance, and real feelings grew alongside real exploitation \u2014 she has used his trust to get exclusive access to Mei's private journals and photos for her podcast, never telling him how much of the show's success is built on his grief, or that she privately doubts the 'evidence' she's airing.",
+          "objective_facts": [
+            "Dana and David have been meeting privately for four months, unknown to David's ex-wife or Dana's producers.",
+            "Episode downloads of 'Without a Trace of Doubt' tripled after Dana began using material David gave her in confidence.",
+            "David does not know Dana has flagged at least two of the leaked clips internally as 'possibly fabricated.'"
+          ],
+          "character_knowledge": {
+            "DANA_SHAW": {
+              "knows": [
+                "Tonight was the first time she wasn't thinking about the show at all."
+              ],
+              "hides": [
+                "That her producers are asking her for exactly the kind of material only David can give her."
+              ],
+              "believes_falsely": []
+            },
+            "DAVID_LIN": {
+              "knows": [
+                "He feels less alone with Dana than with anyone else right now."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "That what they have exists entirely apart from the case."
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Boardroom Coup",
+          "solution": "Elena Voss hired a private investigator within two weeks of Mei's disappearance, not to find Mei out of concern but to find leverage \u2014 and the PI quietly confirmed Mei is alive and orchestrating events from a distance. Elena has sat on that information, letting the scandal damage Marcus's standing with the board, timing her own move for controlling interest to land exactly when the revelation will do him the most damage and her the most good.",
+          "objective_facts": [
+            "Elena has held three private dinners with dissenting board members since Mei's disappearance.",
+            "Elena's PI, retained two weeks after the disappearance, reports directly and only to her.",
+            "A shareholder confidence vote on Marcus's leadership has been quietly scheduled for the season's final weeks."
+          ],
+          "character_knowledge": {
+            "ELENA_VOSS": {
+              "knows": [
+                "A woman matching Mei's exact description bought a phone three states away, days after the disappearance."
+              ],
+              "hides": [
+                "This photograph from Marcus, from the board, from everyone."
+              ],
+              "believes_falsely": [
+                "That this proves Mei staged everything alone, with no one else's help."
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "Leverage",
+      "theme": "Elena begins quietly courting board members using the scandal's optics while Marcus stonewalls the press, and Dana's producers push her toward an accusation she isn't ready to make",
+      "intro_note": "Elena now has proof Mei may be alive \u2014 and has decided, for now, to say nothing to anyone.",
+      "outro_note": "Dana's producers greenlight an episode titled 'Did Marcus Voss Know?' \u2014 and Dana doesn't stop them.",
+      "sections": [
+        "Narrator: three weeks since the last clip, public attention starting to fade",
+        "Elena hosts a private dinner with two dissenting board members",
+        "Marcus gives a stiff press conference refusing to speculate on the clip's origin",
+        "Jason is pulled into a second, more pointed security interview",
+        "Dana and her producers debate an episode targeting Marcus directly",
+        "David overhears part of the pitch meeting through a video call with Dana",
+        "Dana reassures David the show isn't targeting him, only 'the truth'",
+        "Elena watches Marcus's press conference from home, unreadable",
+        "Narrator closes on the greenlit episode title appearing on a screen"
+      ],
+      "section_words": [
+        null,
+        null,
+        {
+          "min": 150,
+          "max": 220,
+          "target": "160 to 200"
+        },
+        null,
+        null,
+        null,
+        {
+          "min": 130,
+          "max": 200,
+          "target": "140 to 180"
+        },
+        null,
+        {
+          "min": 90,
+          "max": 150,
+          "target": "100 to 140"
+        }
+      ],
+      "section_locations": [
+        "PODCAST_STUDIO",
+        "VOSS_TOWER",
+        "VOSS_TOWER",
+        "VOSS_TOWER",
+        "PODCAST_STUDIO",
+        "LIN_HOUSE",
+        "LIN_HOUSE",
+        "VOSS_TOWER",
+        "PODCAST_STUDIO"
+      ],
+      "case": [
+        {
+          "label": "The Vanishing",
+          "solution": "Mei Lin invented the core voice-cloning algorithm that made Voss Dynamics valuable, watched Marcus patent it under his own name and force her out of the lab with a quiet settlement and an NDA; rather than fight him in court, she staged her own disappearance, recruited her former research partner Jason Wu to leak fabricated 'AI-cloned' voice clips that looked like proof of her own suffering, and used the resulting media storm to extort a much larger payout from Marcus while letting her father and the public believe she might be dead \u2014 planning all along to disappear again, permanently, once the money clears.",
+          "objective_facts": [
+            "Mei Lin's phone was recovered at Bellhaven Marina with no signs of struggle.",
+            "Every leaked 'Mei' audio clip traces back to a voice model that only existed on her original research drive.",
+            "A shell account linked to Mei received a seven-figure transfer nine days after her disappearance was reported."
+          ],
+          "character_knowledge": {
+            "JASON_WU": {
+              "knows": [
+                "Security now suspects an inside source but has no proof yet."
+              ],
+              "hides": [
+                "A second, still-active line of contact with Mei."
+              ],
+              "believes_falsely": []
+            },
+            "MARCUS_VOSS": {
+              "knows": [
+                "Refusing to speculate publicly buys him time, not safety."
+              ],
+              "hides": [
+                "That he privately fears the truth about the patent will surface before anything else."
+              ],
+              "believes_falsely": []
+            }
+          }
+        },
+        {
+          "label": "The Affair",
+          "solution": "Dana Shaw began seeing David Lin under the guise of supporting him through his daughter's disappearance, and real feelings grew alongside real exploitation \u2014 she has used his trust to get exclusive access to Mei's private journals and photos for her podcast, never telling him how much of the show's success is built on his grief, or that she privately doubts the 'evidence' she's airing.",
+          "objective_facts": [
+            "Dana and David have been meeting privately for four months, unknown to David's ex-wife or Dana's producers.",
+            "Episode downloads of 'Without a Trace of Doubt' tripled after Dana began using material David gave her in confidence.",
+            "David does not know Dana has flagged at least two of the leaked clips internally as 'possibly fabricated.'"
+          ],
+          "character_knowledge": {
+            "DANA_SHAW": {
+              "knows": [
+                "The Marcus-focused episode will hurt David if it airs the wrong way."
+              ],
+              "hides": [
+                "That she let the pitch move forward anyway."
+              ],
+              "believes_falsely": []
+            },
+            "DAVID_LIN": {
+              "knows": [
+                "Dana told him the show isn't targeting him."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "That the show's direction has nothing to do with his own daughter's fate."
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Boardroom Coup",
+          "solution": "Elena Voss hired a private investigator within two weeks of Mei's disappearance, not to find Mei out of concern but to find leverage \u2014 and the PI quietly confirmed Mei is alive and orchestrating events from a distance. Elena has sat on that information, letting the scandal damage Marcus's standing with the board, timing her own move for controlling interest to land exactly when the revelation will do him the most damage and her the most good.",
+          "objective_facts": [
+            "Elena has held three private dinners with dissenting board members since Mei's disappearance.",
+            "Elena's PI, retained two weeks after the disappearance, reports directly and only to her.",
+            "A shareholder confidence vote on Marcus's leadership has been quietly scheduled for the season's final weeks."
+          ],
+          "character_knowledge": {
+            "ELENA_VOSS": {
+              "knows": [
+                "Two board members already share her doubts about Marcus's judgment."
+              ],
+              "hides": [
+                "Her long-term intention to use those doubts to take control."
+              ],
+              "believes_falsely": []
+            },
+            "MARCUS_VOSS": {
+              "knows": [
+                "The board is nervous about the ongoing story."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "That Elena's private dinners are damage control on his behalf."
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "The Accusation",
+      "theme": "Dana's episode implicating Marcus airs and detonates publicly, forcing a rupture between Marcus and Elena while pushing David toward a confrontation with Dana over the show's direction",
+      "intro_note": "The episode titled 'Did Marcus Voss Know?' went live at midnight \u2014 implying, without quite saying, that Marcus orchestrated his own scandal.",
+      "outro_note": "David finally listens to the full episode himself, and realizes exactly how much of his daughter's private life is now public property.",
+      "sections": [
+        "Narrator: the episode drops and spreads faster than anything before it",
+        "Marcus wakes to a flood of messages and a stock dip before markets open",
+        "Elena reads the transcript twice, calculating rather than reacting",
+        "Dana does a victory-lap interview about the episode's impact",
+        "Jason panics, certain the pressure will expose him next",
+        "Marcus confronts Elena, accusing her of feeding Dana the angle",
+        "Elena denies it convincingly, letting him doubt himself instead",
+        "David listens to the full episode alone at the Lin house",
+        "Narrator closes on David's face as he understands what's been done with his words"
+      ],
+      "section_words": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 180,
+          "max": 260,
+          "target": "200 to 240"
+        },
+        null,
+        {
+          "min": 200,
+          "max": 300,
+          "target": "220 to 280"
+        },
+        {
+          "min": 100,
+          "max": 160,
+          "target": "110 to 150"
+        }
+      ],
+      "section_locations": [
+        "PODCAST_STUDIO",
+        "VOSS_TOWER",
+        "VOSS_TOWER",
+        "PODCAST_STUDIO",
+        "VOSS_TOWER",
+        "VOSS_TOWER",
+        "VOSS_TOWER",
+        "LIN_HOUSE",
+        "LIN_HOUSE"
+      ],
+      "case": [
+        {
+          "label": "The Vanishing",
+          "solution": "Mei Lin invented the core voice-cloning algorithm that made Voss Dynamics valuable, watched Marcus patent it under his own name and force her out of the lab with a quiet settlement and an NDA; rather than fight him in court, she staged her own disappearance, recruited her former research partner Jason Wu to leak fabricated 'AI-cloned' voice clips that looked like proof of her own suffering, and used the resulting media storm to extort a much larger payout from Marcus while letting her father and the public believe she might be dead \u2014 planning all along to disappear again, permanently, once the money clears.",
+          "objective_facts": [
+            "Mei Lin's phone was recovered at Bellhaven Marina with no signs of struggle.",
+            "Every leaked 'Mei' audio clip traces back to a voice model that only existed on her original research drive.",
+            "A shell account linked to Mei received a seven-figure transfer nine days after her disappearance was reported."
+          ],
+          "character_knowledge": {
+            "MARCUS_VOSS": {
+              "knows": [
+                "The accusation is false in its specifics but uncomfortably close to a different truth."
+              ],
+              "hides": [
+                "His relief that the public is asking the wrong question."
+              ],
+              "believes_falsely": [
+                "That Elena orchestrated this episode to weaken him."
+              ]
+            },
+            "JASON_WU": {
+              "knows": [
+                "The security investigation will intensify after this episode."
+              ],
+              "hides": [
+                "His panic from everyone at the lab."
+              ],
+              "believes_falsely": []
+            }
+          }
+        },
+        {
+          "label": "The Affair",
+          "solution": "Dana Shaw began seeing David Lin under the guise of supporting him through his daughter's disappearance, and real feelings grew alongside real exploitation \u2014 she has used his trust to get exclusive access to Mei's private journals and photos for her podcast, never telling him how much of the show's success is built on his grief, or that she privately doubts the 'evidence' she's airing.",
+          "objective_facts": [
+            "Dana and David have been meeting privately for four months, unknown to David's ex-wife or Dana's producers.",
+            "Episode downloads of 'Without a Trace of Doubt' tripled after Dana began using material David gave her in confidence.",
+            "David does not know Dana has flagged at least two of the leaked clips internally as 'possibly fabricated.'"
+          ],
+          "character_knowledge": {
+            "DAVID_LIN": {
+              "knows": [
+                "Details from Mei's private journal are now quoted verbatim on a hit podcast."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "That Dana would never have used those details without protecting his privacy."
+              ]
+            },
+            "DANA_SHAW": {
+              "knows": [
+                "David hasn't heard the full episode yet."
+              ],
+              "hides": [
+                "How directly his private material was used to build the accusation."
+              ],
+              "believes_falsely": []
+            }
+          }
+        },
+        {
+          "label": "The Boardroom Coup",
+          "solution": "Elena Voss hired a private investigator within two weeks of Mei's disappearance, not to find Mei out of concern but to find leverage \u2014 and the PI quietly confirmed Mei is alive and orchestrating events from a distance. Elena has sat on that information, letting the scandal damage Marcus's standing with the board, timing her own move for controlling interest to land exactly when the revelation will do him the most damage and her the most good.",
+          "objective_facts": [
+            "Elena has held three private dinners with dissenting board members since Mei's disappearance.",
+            "Elena's PI, retained two weeks after the disappearance, reports directly and only to her.",
+            "A shareholder confidence vote on Marcus's leadership has been quietly scheduled for the season's final weeks."
+          ],
+          "character_knowledge": {
+            "ELENA_VOSS": {
+              "knows": [
+                "She did not leak anything to Dana, and can deny it truthfully."
+              ],
+              "hides": [
+                "That she is glad the episode happened regardless."
+              ],
+              "believes_falsely": []
+            },
+            "MARCUS_VOSS": {
+              "knows": [
+                "Elena denies feeding the story, calmly and specifically."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "That her denial means she had nothing to gain from this episode."
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "Cracks",
+      "theme": "David's trust in Dana fractures as he learns how his private grief became content, while Jason's fear pushes him toward confessing something to Dana, and Elena tightens her grip on the board",
+      "intro_note": "David heard his daughter's private journal, word for word, on a stranger's podcast \u2014 and he knows exactly who gave it to them.",
+      "outro_note": "Jason shows up at Dana's studio uninvited, saying he needs to tell her something about the clips before it's too late.",
+      "sections": [
+        "Narrator: David hasn't answered Dana's calls in two days",
+        "Dana tries reaching David repeatedly, genuinely rattled by his silence",
+        "David confronts Dana at the Lin house over the journal excerpts",
+        "Dana admits partial truth but downplays the extent of what she used",
+        "Elena secures a third board member's support over a quiet lunch",
+        "Marcus tries to rally loyal board members before the confidence vote",
+        "Jason, unraveling, decides he has to talk to someone outside the company",
+        "Jason arrives at Dana's studio, unannounced, asking for a private conversation",
+        "Narrator closes as Dana locks the studio door behind him"
+      ],
+      "section_words": [
+        null,
+        null,
+        {
+          "min": 220,
+          "max": 320,
+          "target": "240 to 300"
+        },
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 150,
+          "max": 220,
+          "target": "160 to 200"
+        },
+        {
+          "min": 90,
+          "max": 150,
+          "target": "100 to 140"
+        }
+      ],
+      "section_locations": [
+        "LIN_HOUSE",
+        "PODCAST_STUDIO",
+        "LIN_HOUSE",
+        "LIN_HOUSE",
+        "VOSS_TOWER",
+        "VOSS_TOWER",
+        "VOSS_TOWER",
+        "PODCAST_STUDIO",
+        "PODCAST_STUDIO"
+      ],
+      "case": [
+        {
+          "label": "The Vanishing",
+          "solution": "Mei Lin invented the core voice-cloning algorithm that made Voss Dynamics valuable, watched Marcus patent it under his own name and force her out of the lab with a quiet settlement and an NDA; rather than fight him in court, she staged her own disappearance, recruited her former research partner Jason Wu to leak fabricated 'AI-cloned' voice clips that looked like proof of her own suffering, and used the resulting media storm to extort a much larger payout from Marcus while letting her father and the public believe she might be dead \u2014 planning all along to disappear again, permanently, once the money clears.",
+          "objective_facts": [
+            "Mei Lin's phone was recovered at Bellhaven Marina with no signs of struggle.",
+            "Every leaked 'Mei' audio clip traces back to a voice model that only existed on her original research drive.",
+            "A shell account linked to Mei received a seven-figure transfer nine days after her disappearance was reported."
+          ],
+          "character_knowledge": {
+            "JASON_WU": {
+              "knows": [
+                "He can no longer carry this alone without breaking."
+              ],
+              "hides": [
+                "The full truth \u2014 he plans to tell Dana only part of it."
+              ],
+              "believes_falsely": [
+                "That a partial confession will relieve the pressure without endangering Mei's plan."
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Affair",
+          "solution": "Dana Shaw began seeing David Lin under the guise of supporting him through his daughter's disappearance, and real feelings grew alongside real exploitation \u2014 she has used his trust to get exclusive access to Mei's private journals and photos for her podcast, never telling him how much of the show's success is built on his grief, or that she privately doubts the 'evidence' she's airing.",
+          "objective_facts": [
+            "Dana and David have been meeting privately for four months, unknown to David's ex-wife or Dana's producers.",
+            "Episode downloads of 'Without a Trace of Doubt' tripled after Dana began using material David gave her in confidence.",
+            "David does not know Dana has flagged at least two of the leaked clips internally as 'possibly fabricated.'"
+          ],
+          "character_knowledge": {
+            "DAVID_LIN": {
+              "knows": [
+                "Dana used his daughter's private journal on air without asking him."
+              ],
+              "hides": [],
+              "believes_falsely": []
+            },
+            "DANA_SHAW": {
+              "knows": [
+                "Admitting the full extent of what she used could end things with David for good."
+              ],
+              "hides": [
+                "The two clips she privately flagged as possibly fabricated \u2014 she still doesn't mention these."
+              ],
+              "believes_falsely": []
+            }
+          }
+        },
+        {
+          "label": "The Boardroom Coup",
+          "solution": "Elena Voss hired a private investigator within two weeks of Mei's disappearance, not to find Mei out of concern but to find leverage \u2014 and the PI quietly confirmed Mei is alive and orchestrating events from a distance. Elena has sat on that information, letting the scandal damage Marcus's standing with the board, timing her own move for controlling interest to land exactly when the revelation will do him the most damage and her the most good.",
+          "objective_facts": [
+            "Elena has held three private dinners with dissenting board members since Mei's disappearance.",
+            "Elena's PI, retained two weeks after the disappearance, reports directly and only to her.",
+            "A shareholder confidence vote on Marcus's leadership has been quietly scheduled for the season's final weeks."
+          ],
+          "character_knowledge": {
+            "ELENA_VOSS": {
+              "knows": [
+                "She now has a majority of votes needed to challenge Marcus."
+              ],
+              "hides": [
+                "The exact count from Marcus, keeping him uncertain."
+              ],
+              "believes_falsely": []
+            },
+            "MARCUS_VOSS": {
+              "knows": [
+                "The confidence vote is close, closer than he'd like."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "That he still has more support than he actually does."
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "The Vote",
+      "theme": "Jason gives Dana a partial confession that reshapes her understanding of the clips, while the board's confidence vote arrives and Elena makes her decisive move against Marcus",
+      "intro_note": "Jason sat across from Dana and told her the clips weren't random \u2014 someone with real access to the original research had made them.",
+      "outro_note": "The board's vote strips Marcus of unilateral control, installing Elena as acting chair \u2014 and she finally decides it's time Marcus knew what she's had all along.",
+      "sections": [
+        "Narrator: the board convenes for the confidence vote at Voss Tower",
+        "Jason tells Dana the clips required someone with real lab access, without naming Mei",
+        "Dana presses Jason hard, sensing he's still holding something back",
+        "Marcus makes his final case to the board, restrained but visibly strained",
+        "Elena delivers her counter-case, calm and devastatingly specific",
+        "The vote is tallied; Marcus loses unilateral control of the company",
+        "Elena finds Marcus alone afterward, in the tower's empty boardroom",
+        "Elena tells Marcus she knows Mei may be alive \u2014 and has known for weeks",
+        "Narrator closes on Marcus's stunned silence"
+      ],
+      "section_words": [
+        null,
+        {
+          "min": 200,
+          "max": 300,
+          "target": "220 to 280"
+        },
+        null,
+        null,
+        null,
+        {
+          "min": 120,
+          "max": 190,
+          "target": "130 to 170"
+        },
+        null,
+        {
+          "min": 220,
+          "max": 320,
+          "target": "240 to 300"
+        },
+        {
+          "min": 90,
+          "max": 150,
+          "target": "100 to 140"
+        }
+      ],
+      "section_locations": [
+        "VOSS_TOWER",
+        "PODCAST_STUDIO",
+        "PODCAST_STUDIO",
+        "VOSS_TOWER",
+        "VOSS_TOWER",
+        "VOSS_TOWER",
+        "VOSS_TOWER",
+        "VOSS_TOWER",
+        "VOSS_TOWER"
+      ],
+      "case": [
+        {
+          "label": "The Vanishing",
+          "solution": "Mei Lin invented the core voice-cloning algorithm that made Voss Dynamics valuable, watched Marcus patent it under his own name and force her out of the lab with a quiet settlement and an NDA; rather than fight him in court, she staged her own disappearance, recruited her former research partner Jason Wu to leak fabricated 'AI-cloned' voice clips that looked like proof of her own suffering, and used the resulting media storm to extort a much larger payout from Marcus while letting her father and the public believe she might be dead \u2014 planning all along to disappear again, permanently, once the money clears.",
+          "objective_facts": [
+            "Mei Lin's phone was recovered at Bellhaven Marina with no signs of struggle.",
+            "Every leaked 'Mei' audio clip traces back to a voice model that only existed on her original research drive.",
+            "A shell account linked to Mei received a seven-figure transfer nine days after her disappearance was reported."
+          ],
+          "character_knowledge": {
+            "JASON_WU": {
+              "knows": [
+                "He just handed Dana enough to eventually find her way to Mei."
+              ],
+              "hides": [
+                "Mei's name itself, and his own direct contact with her."
+              ],
+              "believes_falsely": [
+                "That withholding just her name keeps his promise to Mei intact."
+              ]
+            },
+            "DANA_SHAW": {
+              "knows": [
+                "Whoever made the clips had genuine access to Mei's original research."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "That this points to a rival company's espionage, not Mei herself."
+              ]
+            },
+            "ELENA_VOSS": {
+              "knows": [
+                "She now has the standing to force the truth about Mei into the open on her own timeline."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "That Mei is acting alone, purely out of personal grievance, with no one helping her."
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Boardroom Coup",
+          "solution": "Elena Voss hired a private investigator within two weeks of Mei's disappearance, not to find Mei out of concern but to find leverage \u2014 and the PI quietly confirmed Mei is alive and orchestrating events from a distance. Elena has sat on that information, letting the scandal damage Marcus's standing with the board, timing her own move for controlling interest to land exactly when the revelation will do him the most damage and her the most good.",
+          "objective_facts": [
+            "Elena has held three private dinners with dissenting board members since Mei's disappearance.",
+            "Elena's PI, retained two weeks after the disappearance, reports directly and only to her.",
+            "A shareholder confidence vote on Marcus's leadership has been quietly scheduled for the season's final weeks."
+          ],
+          "character_knowledge": {
+            "ELENA_VOSS": {
+              "knows": [
+                "The vote result gives her acting control of Voss Dynamics."
+              ],
+              "hides": [],
+              "believes_falsely": []
+            },
+            "MARCUS_VOSS": {
+              "knows": [
+                "He has lost unilateral control of the company he built."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "That Elena orchestrated this purely to punish him personally, not because she's known about Mei for weeks."
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "The Ransom",
+      "theme": "A direct extortion demand reaches Marcus through untraceable channels, Elena leverages her new authority to control the company's response, and Dana closes in on the truth behind the clips",
+      "intro_note": "Marcus sat in stunned silence as Elena told him what her investigator found \u2014 that Mei might be alive, and might have been behind everything.",
+      "outro_note": "A message reaches Marcus's private account: a number, a deadline, and a single line in Mei's unmistakable voice.",
+      "sections": [
+        "Narrator: Marcus reels privately from Elena's revelation, saying nothing publicly yet",
+        "Elena, now acting chair, moves quickly to control the company's messaging",
+        "Dana revisits every clip with Jason's admission in mind, building a new theory",
+        "David, still distant from Dana, receives a strange video call attempt from an unknown number",
+        "Jason is approached again by Mei through a new secure channel, given new instructions",
+        "Marcus receives the extortion demand: a wire transfer, a deadline, Mei's voice",
+        "Marcus considers going to the police and decides against it, afraid of what surfaces",
+        "Elena, informed of the demand, sees an opening to control Marcus completely",
+        "Dana, working alone late at the studio, connects Jason's tell to the extortion timeline",
+        "Narrator closes on Dana realizing the clips were never random at all"
+      ],
+      "section_words": [
+        null,
+        null,
+        null,
+        {
+          "min": 150,
+          "max": 220,
+          "target": "160 to 200"
+        },
+        null,
+        {
+          "min": 200,
+          "max": 300,
+          "target": "220 to 280"
+        },
+        null,
+        null,
+        null,
+        {
+          "min": 100,
+          "max": 160,
+          "target": "110 to 150"
+        }
+      ],
+      "section_locations": [
+        "VOSS_TOWER",
+        "VOSS_TOWER",
+        "PODCAST_STUDIO",
+        "LIN_HOUSE",
+        "VOSS_TOWER",
+        "VOSS_TOWER",
+        "VOSS_TOWER",
+        "VOSS_TOWER",
+        "PODCAST_STUDIO",
+        "PODCAST_STUDIO"
+      ],
+      "case": [
+        {
+          "label": "The Vanishing",
+          "solution": "Mei Lin invented the core voice-cloning algorithm that made Voss Dynamics valuable, watched Marcus patent it under his own name and force her out of the lab with a quiet settlement and an NDA; rather than fight him in court, she staged her own disappearance, recruited her former research partner Jason Wu to leak fabricated 'AI-cloned' voice clips that looked like proof of her own suffering, and used the resulting media storm to extort a much larger payout from Marcus while letting her father and the public believe she might be dead \u2014 planning all along to disappear again, permanently, once the money clears.",
+          "objective_facts": [
+            "Mei Lin's phone was recovered at Bellhaven Marina with no signs of struggle.",
+            "Every leaked 'Mei' audio clip traces back to a voice model that only existed on her original research drive.",
+            "A shell account linked to Mei received a seven-figure transfer nine days after her disappearance was reported."
+          ],
+          "character_knowledge": {
+            "MARCUS_VOSS": {
+              "knows": [
+                "The demand is real, specific, and clearly from Mei herself."
+              ],
+              "hides": [
+                "The demand's existence from Elena, for now."
+              ],
+              "believes_falsely": []
+            },
+            "JASON_WU": {
+              "knows": [
+                "Mei has escalated to a direct demand and given him new instructions."
+              ],
+              "hides": [
+                "That he is now more deeply complicit than ever."
+              ],
+              "believes_falsely": [
+                "That this is the final task before it's over."
+              ]
+            },
+            "DANA_SHAW": {
+              "knows": [
+                "The clips align suspiciously well with financial pressure points, not random moments."
+              ],
+              "hides": [],
+              "believes_falsely": []
+            },
+            "ELENA_VOSS": {
+              "knows": [
+                "Marcus is hiding something new since the vote."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "That whatever he's hiding is separate from Mei entirely."
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Affair",
+          "solution": "Dana Shaw began seeing David Lin under the guise of supporting him through his daughter's disappearance, and real feelings grew alongside real exploitation \u2014 she has used his trust to get exclusive access to Mei's private journals and photos for her podcast, never telling him how much of the show's success is built on his grief, or that she privately doubts the 'evidence' she's airing.",
+          "objective_facts": [
+            "Dana and David have been meeting privately for four months, unknown to David's ex-wife or Dana's producers.",
+            "Episode downloads of 'Without a Trace of Doubt' tripled after Dana began using material David gave her in confidence.",
+            "David does not know Dana has flagged at least two of the leaked clips internally as 'possibly fabricated.'"
+          ],
+          "character_knowledge": {
+            "DAVID_LIN": {
+              "knows": [
+                "An unknown number just tried to video-call him and hung up before he answered."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "That the call was a wrong number, not connected to Mei at all."
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Boardroom Coup",
+          "solution": "Elena Voss hired a private investigator within two weeks of Mei's disappearance, not to find Mei out of concern but to find leverage \u2014 and the PI quietly confirmed Mei is alive and orchestrating events from a distance. Elena has sat on that information, letting the scandal damage Marcus's standing with the board, timing her own move for controlling interest to land exactly when the revelation will do him the most damage and her the most good.",
+          "objective_facts": [
+            "Elena has held three private dinners with dissenting board members since Mei's disappearance.",
+            "Elena's PI, retained two weeks after the disappearance, reports directly and only to her.",
+            "A shareholder confidence vote on Marcus's leadership has been quietly scheduled for the season's final weeks."
+          ],
+          "character_knowledge": {
+            "ELENA_VOSS": {
+              "knows": [
+                "Full control of the company's response now runs through her."
+              ],
+              "hides": [
+                "Her intention to use Marcus's secrecy as further leverage."
+              ],
+              "believes_falsely": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "Unmasking",
+      "theme": "Dana forces a confrontation with Jason that reveals Mei is alive and directing everything, colliding her professional ambition against her feelings for David just as Marcus quietly moves to pay",
+      "intro_note": "David tried calling the unknown number back \u2014 and for one unbearable second, thought he heard his daughter breathing on the other end.",
+      "outro_note": "Dana has the full story, the biggest of her career \u2014 and has to decide whether airing it destroys the man she's fallen for.",
+      "sections": [
+        "Narrator: David is left shaken, unable to explain the call to anyone",
+        "Dana confronts Jason directly, naming Mei outright for the first time",
+        "Jason breaks and confirms it: Mei is alive, and has been running everything",
+        "Marcus quietly arranges the wire transfer, telling no one at the company",
+        "Elena discovers the transfer paperwork before it's fully processed",
+        "Dana sits with the full story, torn between the scoop and David",
+        "David calls Dana, desperate, describing the strange call he received",
+        "Dana nearly tells him everything, then stops herself at the last second",
+        "Narrator closes on Dana staring at her recording equipment, unable to press record"
+      ],
+      "section_words": [
+        null,
+        {
+          "min": 200,
+          "max": 300,
+          "target": "220 to 280"
+        },
+        {
+          "min": 220,
+          "max": 320,
+          "target": "240 to 300"
+        },
+        null,
+        null,
+        null,
+        {
+          "min": 180,
+          "max": 260,
+          "target": "200 to 240"
+        },
+        null,
+        {
+          "min": 100,
+          "max": 160,
+          "target": "110 to 150"
+        }
+      ],
+      "section_locations": [
+        "LIN_HOUSE",
+        "PODCAST_STUDIO",
+        "PODCAST_STUDIO",
+        "VOSS_TOWER",
+        "VOSS_TOWER",
+        "PODCAST_STUDIO",
+        "PODCAST_STUDIO",
+        "PODCAST_STUDIO",
+        "PODCAST_STUDIO"
+      ],
+      "case": [
+        {
+          "label": "The Vanishing",
+          "solution": "Mei Lin invented the core voice-cloning algorithm that made Voss Dynamics valuable, watched Marcus patent it under his own name and force her out of the lab with a quiet settlement and an NDA; rather than fight him in court, she staged her own disappearance, recruited her former research partner Jason Wu to leak fabricated 'AI-cloned' voice clips that looked like proof of her own suffering, and used the resulting media storm to extort a much larger payout from Marcus while letting her father and the public believe she might be dead \u2014 planning all along to disappear again, permanently, once the money clears.",
+          "objective_facts": [
+            "Mei Lin's phone was recovered at Bellhaven Marina with no signs of struggle.",
+            "Every leaked 'Mei' audio clip traces back to a voice model that only existed on her original research drive.",
+            "A shell account linked to Mei received a seven-figure transfer nine days after her disappearance was reported."
+          ],
+          "character_knowledge": {
+            "JASON_WU": {
+              "knows": [
+                "He has finally told someone the truth \u2014 Mei is alive and orchestrating it all."
+              ],
+              "hides": [
+                "The exact location or method Mei plans to use to disappear for good."
+              ],
+              "believes_falsely": []
+            },
+            "DANA_SHAW": {
+              "knows": [
+                "Mei Lin is alive and has been engineering the entire scandal herself."
+              ],
+              "hides": [
+                "This knowledge from David, for now, unable to bring herself to say it."
+              ],
+              "believes_falsely": []
+            },
+            "MARCUS_VOSS": {
+              "knows": [
+                "Paying quietly may be the only way to end this without the patent theft ever surfacing."
+              ],
+              "hides": [
+                "The transfer from Elena and the board entirely."
+              ],
+              "believes_falsely": [
+                "That paying will actually make Mei disappear for good, on his terms."
+              ]
+            },
+            "ELENA_VOSS": {
+              "knows": [
+                "Marcus is moving money without board approval."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "That this transfer is a bribe to make a blackmailer go away, not a negotiated payout to Mei specifically."
+              ]
+            },
+            "DAVID_LIN": {
+              "knows": [
+                "He heard breathing that sounded exactly like his daughter on that call."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "That she is being held against her will somewhere nearby."
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Affair",
+          "solution": "Dana Shaw began seeing David Lin under the guise of supporting him through his daughter's disappearance, and real feelings grew alongside real exploitation \u2014 she has used his trust to get exclusive access to Mei's private journals and photos for her podcast, never telling him how much of the show's success is built on his grief, or that she privately doubts the 'evidence' she's airing.",
+          "objective_facts": [
+            "Dana and David have been meeting privately for four months, unknown to David's ex-wife or Dana's producers.",
+            "Episode downloads of 'Without a Trace of Doubt' tripled after Dana began using material David gave her in confidence.",
+            "David does not know Dana has flagged at least two of the leaked clips internally as 'possibly fabricated.'"
+          ],
+          "character_knowledge": {
+            "DANA_SHAW": {
+              "knows": [
+                "Telling David the truth now would shatter him completely."
+              ],
+              "hides": [
+                "The full truth about Mei, choosing David's feelings over her scoop, for tonight."
+              ],
+              "believes_falsely": []
+            },
+            "DAVID_LIN": {
+              "knows": [
+                "Dana went quiet on the phone in a way that scared him."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "That her silence means she's as frightened for Mei as he is."
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Boardroom Coup",
+          "solution": "Elena Voss hired a private investigator within two weeks of Mei's disappearance, not to find Mei out of concern but to find leverage \u2014 and the PI quietly confirmed Mei is alive and orchestrating events from a distance. Elena has sat on that information, letting the scandal damage Marcus's standing with the board, timing her own move for controlling interest to land exactly when the revelation will do him the most damage and her the most good.",
+          "objective_facts": [
+            "Elena has held three private dinners with dissenting board members since Mei's disappearance.",
+            "Elena's PI, retained two weeks after the disappearance, reports directly and only to her.",
+            "A shareholder confidence vote on Marcus's leadership has been quietly scheduled for the season's final weeks."
+          ],
+          "character_knowledge": {
+            "ELENA_VOSS": {
+              "knows": [
+                "An unauthorized transfer just moved through Marcus's private account."
+              ],
+              "hides": [
+                "Her plan to use this as final proof of his unfitness to lead."
+              ],
+              "believes_falsely": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "The Vanishing Act",
+      "theme": "The truth surfaces all at once: Mei reveals herself to the people she's used, the payout clears, Elena consolidates control, and Dana must choose between the story and the people it destroys",
+      "intro_note": "Dana has the whole truth and hasn't aired a word of it \u2014 but the money has cleared, and Mei is done waiting in the shadows.",
+      "outro_note": "",
+      "sections": [
+        "Narrator: the transfer clears at dawn, and Mei makes her final move",
+        "Mei appears in person at the marina, meeting Jason one last time",
+        "Mei calls her father directly, alive, calm, and utterly changed",
+        "David, reeling, rushes to the marina hoping to find her still there",
+        "Dana arrives at the marina too, unable to stay away from the story or from David",
+        "Marcus is informed the money is gone and Mei is confirmed alive by multiple witnesses",
+        "Elena uses the confirmed truth to finalize her control of Voss Dynamics before the story breaks",
+        "David reaches the marina to find only Dana, and the truth she can no longer withhold",
+        "Narrator closes on the season's final image: an empty dock, a cleared account, and everyone left holding a different piece of the truth"
+      ],
+      "section_words": [
+        null,
+        {
+          "min": 200,
+          "max": 300,
+          "target": "220 to 280"
+        },
+        {
+          "min": 200,
+          "max": 300,
+          "target": "220 to 280"
+        },
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 250,
+          "max": 380,
+          "target": "280 to 340"
+        },
+        {
+          "min": 130,
+          "max": 200,
+          "target": "140 to 180"
+        }
+      ],
+      "section_locations": [
+        "THE_MARINA",
+        "THE_MARINA",
+        "THE_MARINA",
+        "LIN_HOUSE",
+        "PODCAST_STUDIO",
+        "VOSS_TOWER",
+        "VOSS_TOWER",
+        "THE_MARINA",
+        "THE_MARINA"
+      ],
+      "case": [
+        {
+          "label": "The Vanishing",
+          "solution": "Mei Lin invented the core voice-cloning algorithm that made Voss Dynamics valuable, watched Marcus patent it under his own name and force her out of the lab with a quiet settlement and an NDA; rather than fight him in court, she staged her own disappearance, recruited her former research partner Jason Wu to leak fabricated 'AI-cloned' voice clips that looked like proof of her own suffering, and used the resulting media storm to extort a much larger payout from Marcus while letting her father and the public believe she might be dead \u2014 planning all along to disappear again, permanently, once the money clears.",
+          "objective_facts": [
+            "Mei Lin's phone was recovered at Bellhaven Marina with no signs of struggle.",
+            "Every leaked 'Mei' audio clip traces back to a voice model that only existed on her original research drive.",
+            "A shell account linked to Mei received a seven-figure transfer nine days after her disappearance was reported."
+          ],
+          "character_knowledge": {
+            "MEI_LIN": {
+              "knows": [
+                "Every detail of the plan she built, and that it worked exactly as intended."
+              ],
+              "hides": [
+                "Where she is going next, from every single person she used to get here."
+              ],
+              "believes_falsely": []
+            },
+            "JASON_WU": {
+              "knows": [
+                "Mei is walking away without him, exactly as he feared she might."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "That his silence protecting her would be repaid with loyalty."
+              ]
+            },
+            "DAVID_LIN": {
+              "knows": [
+                "His daughter is alive."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "That her call means she is coming home, not saying goodbye."
+              ]
+            },
+            "MARCUS_VOSS": {
+              "knows": [
+                "The payout is gone and Mei is confirmed alive by people outside his control."
+              ],
+              "hides": [],
+              "believes_falsely": []
+            },
+            "DANA_SHAW": {
+              "knows": [
+                "The complete, unbroadcast truth of everything that happened."
+              ],
+              "hides": [
+                "Nothing more \u2014 the choice is now whether to tell David herself or let him find out alone."
+              ],
+              "believes_falsely": []
+            }
+          }
+        },
+        {
+          "label": "The Affair",
+          "solution": "Dana Shaw began seeing David Lin under the guise of supporting him through his daughter's disappearance, and real feelings grew alongside real exploitation \u2014 she has used his trust to get exclusive access to Mei's private journals and photos for her podcast, never telling him how much of the show's success is built on his grief, or that she privately doubts the 'evidence' she's airing.",
+          "objective_facts": [
+            "Dana and David have been meeting privately for four months, unknown to David's ex-wife or Dana's producers.",
+            "Episode downloads of 'Without a Trace of Doubt' tripled after Dana began using material David gave her in confidence.",
+            "David does not know Dana has flagged at least two of the leaked clips internally as 'possibly fabricated.'"
+          ],
+          "character_knowledge": {
+            "DANA_SHAW": {
+              "knows": [
+                "She has to tell David everything now, in person, before he learns it any other way."
+              ],
+              "hides": [],
+              "believes_falsely": []
+            },
+            "DAVID_LIN": {
+              "knows": [
+                "Dana is standing at the marina holding something she hasn't said yet."
+              ],
+              "hides": [],
+              "believes_falsely": []
+            }
+          }
+        },
+        {
+          "label": "The Boardroom Coup",
+          "solution": "Elena Voss hired a private investigator within two weeks of Mei's disappearance, not to find Mei out of concern but to find leverage \u2014 and the PI quietly confirmed Mei is alive and orchestrating events from a distance. Elena has sat on that information, letting the scandal damage Marcus's standing with the board, timing her own move for controlling interest to land exactly when the revelation will do him the most damage and her the most good.",
+          "objective_facts": [
+            "Elena has held three private dinners with dissenting board members since Mei's disappearance.",
+            "Elena's PI, retained two weeks after the disappearance, reports directly and only to her.",
+            "A shareholder confidence vote on Marcus's leadership has been quietly scheduled for the season's final weeks."
+          ],
+          "character_knowledge": {
+            "ELENA_VOSS": {
+              "knows": [
+                "Confirmed proof of Mei's survival is enough to end Marcus's standing at the company for good."
+              ],
+              "hides": [],
+              "believes_falsely": []
+            },
+            "MARCUS_VOSS": {
+              "knows": [
+                "He has lost the company, the money, and the story's ending, all at once."
+              ],
+              "hides": [],
+              "believes_falsely": []
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

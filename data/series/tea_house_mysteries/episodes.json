@@ -1,0 +1,93 @@
+{
+  "series_title": "The Rainy Night Tea House — Mandarin Mysteries (HSK 3-4)",
+  "language": "English",
+  "mode": "drama",
+  "template": "language_course",
+  "writer_persona": "a masterful audio-drama screenwriter and Mandarin teaching expert who makes learners forget they are studying — every scene is a real radio drama first and a lesson second",
+  "style_guidelines": [
+    "Ground every scene in the sensory world of a Chengdu tea house: rain on the windows, the gurgle of poured tea, mahjong tiles clacking in the back room",
+    "Every Chinese line must be decodable from context, repetition, or the vocabulary preview — comprehension before completeness",
+    "Characters lie in different ways: too smooth, too fast, too quiet — let the listener FEEL the deception through vocal styles, not just words",
+    "The HOST is a warm, curious guide, never a lecturer: he reacts to the drama like the listener's friend, not like a textbook",
+    "Key sentences appear three times per episode: in the drama, slowed down in the analysis, and once more in the recap",
+    "Emotional acting is the product: give the TTS concrete style directions (suspicious, trembling, forced cheerfulness) whenever the emotion shifts",
+    "Use SFX cues deliberately and sparingly — rain, doors, teacups, a ticking clock — so the sound design carries the noir atmosphere"
+  ],
+  "course": {
+    "level": "HSK 3-4 (intermediate)",
+    "target_language_share": "roughly 60% Mandarin Chinese, 40% English explanation",
+    "speech_tempo": "drama lines at moderate native pace; learner repetitions in the analysis at speed 0.8",
+    "pedagogy_notes": "focus on 了/过 past-tense contrast, indirect speech (他说..., 她告诉我...), emotion and suspicion vocabulary; recycle the episode's key verbs across drama, analysis and recap"
+  },
+  "voices": {
+    "HOST": {
+      "voice": "Ryan",
+      "default_style": "Speak slowly, warmly and clearly, like a patient, enthusiastic teacher telling a story to a friend",
+      "description": "The English-speaking guide of the show: introduces the scene, explains vocabulary and grammar, reacts to the drama with genuine curiosity"
+    },
+    "LIN_QIU": {
+      "voice": "Chelsie",
+      "default_style": "Calm, observant, measured — a middle-aged woman who listens more than she speaks",
+      "description": "Lin Qiu (林秋), a retired police detective in her fifties who now runs a small tea house in Chengdu; sharp mind behind a gentle hospitality"
+    },
+    "XIAO_WEN": {
+      "voice": "Serena",
+      "default_style": "Young female voice, quick and emotional, often on the edge of tears or anger",
+      "description": "Wen Jing (文静), called Xiao Wen, the watchmaker's daughter in her twenties: desperate, impulsive, and possibly hiding something about the night her father vanished"
+    },
+    "LAO_SHEN": {
+      "voice": "Ethan",
+      "default_style": "Smooth, confident male voice, friendly on the surface with something rehearsed underneath",
+      "description": "Old Shen (老沈), the missing watchmaker's long-time business partner: too polished, too helpful, answers questions nobody asked"
+    }
+  },
+  "format": {
+    "parts_per_section": 1,
+    "words_per_part_target": "380 to 580",
+    "words_per_part_min": 300,
+    "words_per_part_max": 620
+  },
+  "generation": {
+    "model": "claude-sonnet-5"
+  },
+  "audio": {
+    "api_url": "http://127.0.0.1:42003",
+    "default_style": "Speak clearly and engagingly",
+    "target_lufs": -16.0,
+    "pause_between_chunks_ms": 250,
+    "pause_between_lines_ms": 700,
+    "pause_between_parts_ms": 3000,
+    "pause_between_episodes_ms": 6000
+  },
+  "output_prefix": "ep",
+  "series_intro": "the HOST welcoming new listeners to the show: this is a Mandarin course disguised as a detective radio drama — you will solve a real mystery in Chinese, one rainy evening at a time; briefly explain how each episode works (scene setup, the drama in Chinese, the analysis, the recap) and promise that by the end of the season the listener will have overheard, understood and second-guessed every suspect in the tea house",
+  "series_outro": "a partial resolution of the watchmaker case that recontextualizes the backwards-running clock, immediately followed by a new, darker question that sets up the next season — plus the HOST thanking the listener and pointing to the episode script PDF",
+  "episodes": [
+    {
+      "figure": "The Clock That Runs Backwards",
+      "theme": "On the third rainy evening in a row, the old watchmaker Master Wen fails to appear at Lin Qiu's tea house — until his daughter Xiao Wen bursts in, soaked and shaking, with an impossible object: her father's workshop was left spotless and on the table lay a clock ticking backwards; language focus: describing past events with 了, telling time, and the vocabulary of worry (担心, 出事, 不见了).",
+      "intro_note": "",
+      "outro_note": "the HOST teasing episode 2: tomorrow, Lin Qiu will pour tea for the one man who claims to know nothing — the business partner Old Shen — and learners will hear how politeness can be a mask in Chinese (客气话), ending on Xiao Wen's whispered warning: 别相信他 — don't trust him",
+      "sections": [
+        "Intro & Scene Setup (English) — the tea house, the missing watchmaker, vocabulary preview: 不见了, 担心, 钟, 倒着走",
+        "The Audio Drama, Act 1 (Mandarin) — rain, the empty table by the window, Xiao Wen bursts in and stumbles through what she found",
+        "The Audio Drama, Act 2 (Mandarin) — Lin Qiu calms Xiao Wen, asks precise ex-detective questions, and learns about the backwards-running clock",
+        "The Analysis (English/Mandarin) — key sentences repeated slowly: 我爸爸不见了 / 桌子上有一个钟 / 它倒着走; grammar spotlight on 了 for completed events",
+        "Recap & Outro (English) — the three key sentences once more, the open questions of the case, cliffhanger toward Old Shen"
+      ]
+    },
+    {
+      "figure": "The Polite Man Who Talked Too Much",
+      "theme": "Old Shen arrives uninvited at the tea house, offering condolences nobody asked for and an alibi nobody questioned — and Lin Qiu notices that his story about the night of the disappearance mentions the rain stopping at exactly the wrong time; language focus: indirect speech (他说..., 他告诉我...), polite phrases as social armor (客气话), and expressing doubt (我不相信, 好像, 骗人).",
+      "intro_note": "the HOST recapping episode 1 in thirty seconds — the empty table, the spotless workshop, the clock ticking backwards — and re-activating the three key sentences before the new scene begins",
+      "outro_note": "",
+      "sections": [
+        "Intro & Scene Setup (English) — recap, who is Old Shen, vocabulary preview: 客气, 他说, 撒谎, 那天晚上",
+        "The Audio Drama, Act 1 (Mandarin) — Old Shen's rehearsed sympathy over tea, his unprompted alibi, Xiao Wen barely containing herself",
+        "The Audio Drama, Act 2 (Mandarin) — Lin Qiu's quiet trap: one innocent question about the rain that catches Old Shen contradicting himself",
+        "The Analysis (English/Mandarin) — indirect speech drills from the scene: 他说他在家 / 他告诉我他没去过 workshop-sentences at speed 0.8; how 客气话 sounds when it hides something",
+        "Recap & Outro (English) — the contradiction laid bare, key sentences once more, partial resolution and the darker question that ends the season"
+      ]
+    }
+  ]
+}

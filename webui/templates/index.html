@@ -18,6 +18,11 @@
 <main>
 <section id="tab-pf" class="tab-panel active">
 
+  <div class="action-row" id="pf-series-switcher">
+    <label for="pf-series-select">Aktive Serie:</label>
+    <select id="pf-series-select" title="(lädt ...)"><option value="">(lädt ...)</option></select>
+  </div>
+
   <div class="card-row" id="pf-status-cards"></div>
 
   <div class="step" id="pf-step-1" data-step="1">
@@ -25,11 +30,27 @@
       <span class="step-badge" id="pf-step-1-badge">1</span>
       <h2>Serie erstellen</h2>
     </div>
-    <p class="hint">Legt eine neue episodes.json an — Titel, Sprache, Figuren, Sektionen. Alles Weitere baut darauf auf.</p>
+    <p class="hint">Legt eine neue episodes.json in einem eigenen series/&lt;slug&gt;/-Ordner an — bestehende Serien bleiben unberührt und weiter über die Auswahl oben erreichbar.</p>
     <div class="action-row">
       <input type="text" id="pf-topic" placeholder="Thema/Konzept der neuen Serie">
-      <input type="number" id="pf-episodes" value="3" min="1" max="10" style="width:5em">
-      <button class="run-btn primary" data-command="pf_create_series" data-param-topic="pf-topic" data-param-episodes="pf-episodes">Serie erstellen</button>
+      <input type="number" id="pf-episodes" value="3" min="1" max="10" style="width:5em" title="Anzahl Episoden">
+      <input type="number" id="pf-minutes" value="35" min="5" max="120" step="5" style="width:5.5em" title="Ziel-Länge pro Episode in Minuten">
+      <input type="number" id="pf-locations" value="4" min="1" max="10" style="width:5em" title="Anzahl wiederverwendbarer Szenen-Orte (nur bei Templates mit Location-Unterstützung, z.B. soap_opera)">
+      <select id="pf-template">
+        <option value="narration" selected>narration — Ein-Sprecher-Anthologie</option>
+        <option value="language_course">language_course — Sprachkurs-Hörspiel</option>
+        <option value="crime_drama">crime_drama — Multi-Voice-Krimi mit Fallakten</option>
+        <option value="soap_opera">soap_opera — Ensemble-Seifenoper mit parallelen Strängen</option>
+      </select>
+      <button class="run-btn primary" data-command="pf_create_series" data-param-topic="pf-topic" data-param-episodes="pf-episodes" data-param-template="pf-template" data-param-minutes="pf-minutes" data-param-locations="pf-locations">Serie erstellen</button>
+    </div>
+    <div class="copy-block" id="pf-series-review" hidden>
+      <label>Neue Serie prüfen — behalten oder verwerfen?</label>
+      <pre id="pf-series-review-content"></pre>
+      <div class="action-row">
+        <button id="pf-series-keep-btn">✓ Behalten</button>
+        <button id="pf-series-discard-btn">✗ Verwerfen &amp; neu versuchen</button>
+      </div>
     </div>
     <details class="substep">
       <summary>Alternative: manuell bei Claude einfügen</summary>
@@ -37,6 +58,18 @@
       <div class="copy-block" data-target="pf-series-block">
         <pre id="pf-series-block"></pre>
         <button class="copy-btn" data-target="pf-series-block">Kopieren</button>
+      </div>
+    </details>
+    <details class="substep">
+      <summary>Alternative: aus vorhandenem Text importieren (kein Erfinden, Inhalt bleibt Original)</summary>
+      <p class="hint">Ordner mit einer Datei pro Episode, oder eine einzelne lange Textdatei (wird automatisch in Episoden zerlegt) — liegt auf diesem Rechner. Claude fasst nur Titel/Thema zusammen, der Skripttext wird 1:1 übernommen.</p>
+      <div class="action-row">
+        <input type="text" id="pf-import-source" placeholder="Pfad zu Ordner oder Datei">
+        <input type="text" id="pf-import-title" placeholder="Titel der neuen Serie">
+        <select id="pf-import-template">
+          <option value="narration" selected>narration</option>
+        </select>
+        <button class="run-btn primary" data-command="pf_import_story" data-param-source="pf-import-source" data-param-series_title="pf-import-title" data-param-template="pf-import-template">Importieren</button>
       </div>
     </details>
     <div class="action-row folder-row">
@@ -52,14 +85,26 @@
     </div>
     <p class="hint">Empfohlen: ein Klick für alles — generiert alle Episoden-Skripte, vertont sie automatisch und merged zur Anthologie.</p>
     <div class="action-row">
-      <button class="run-btn primary" data-command="pf_generate_episode_all">▶ Alles generieren + vertonen + Anthologie</button>
+      <button class="run-btn primary" data-command="pf_generate_episode_all" data-param-fix="pf-fix-review">▶ Alles generieren + vertonen + Anthologie</button>
     </div>
+    <div class="action-row">
+      <label><input type="checkbox" id="pf-merge-anthology" checked> Episoden am Ende zu einer Anthologie zusammenfügen</label>
+    </div>
+    <p class="hint">Ausschalten, wenn die Episoden eigenständig bleiben sollen (z.B. Serien-Formate wie soap_opera) — dann bleibt es bei den einzelnen Episoden-MP3s ohne <code>ANTHOLOGY_COMPLETE.mp3</code>.</p>
+    <div class="action-row">
+      <label><input type="checkbox" id="pf-use-beats"> Beat-Schicht: vor dem Dialog erst Szenen-Beats planen (<code>generation.use_beats</code>)</label>
+    </div>
+    <p class="hint">Nur bei case-basierten Templates (crime_drama/soap_opera) wirksam: plant pro Folge in einem Klartext-Durchgang, was in jeder Szene passiert (inkl. Wissens-Verstoß-Prüfung auf den Beats), bevor der eigentliche Dialog geschrieben wird — schließt die Kontinuitätslücke zwischen Sections. Siehe <code>docs/beat-layer-design.md</code>.</p>
+    <div class="action-row">
+      <label><input type="checkbox" id="pf-fix-review"> Wissens-Verstöße/Spoiler-Leaks nach dem Schreiben prüfen und automatisch reparieren (<code>--fix</code>)</label>
+    </div>
+    <p class="hint">Nur bei case-basierten Templates (crime_drama/soap_opera) wirksam: prüft jede fertige Episode gegen ihr eigenes case-File und schreibt betroffene Parts gezielt neu. Ergebnis pro Episode in <code>&lt;prefix&gt;N_REVIEW.txt</code>.</p>
     <details class="substep">
       <summary>Einzelschritte (für gezieltes Nachgenerieren)</summary>
       <div class="action-row">
         <button class="run-btn" data-command="pf_generate_episode_check">episodes.json validieren</button>
         <input type="text" id="pf-episode-n" placeholder="Episode Nr." style="width:8em">
-        <button class="run-btn" data-command="pf_generate_episode" data-param-episode="pf-episode-n">Nur diese Episode generieren</button>
+        <button class="run-btn" data-command="pf_generate_episode" data-param-episode="pf-episode-n" data-param-fix="pf-fix-review">Nur diese Episode generieren</button>
       </div>
       <div class="action-row">
         <input type="text" id="pf-script-file" placeholder="figur1.txt">
@@ -74,6 +119,46 @@
         <button class="run-btn" data-command="pf_tts_stop">TTS manuell stoppen</button>
       </div>
     </details>
+  </div>
+
+  <div class="step" id="pf-step-characters" hidden>
+    <div class="step-head">
+      <span class="step-badge" id="pf-step-characters-badge">★</span>
+      <h2>Charakter-Porträts (für den Video-Podcast)</h2>
+    </div>
+    <p class="hint">Nur für Drama-Serien: ein Porträt pro Charakter, das Lolfi beim Video-Rendern automatisch einblendet, wenn die Figur spricht (Sprecher-Timeline entsteht bei der Vertonung). Ablauf: Prompts generieren → Bilder extern erzeugen → als <code>ROLLE.png</code> in den characters-Ordner legen.</p>
+    <div class="action-row">
+      <button class="run-btn primary" data-command="pf_character_prompts">Porträt-Prompts generieren</button>
+      <button id="pf-characters-load-btn">Prompts laden</button>
+      <button class="folder-btn" data-key="pf_characters">📁 characters (Bilder hier ablegen)</button>
+    </div>
+    <div class="copy-block-group" id="pf-character-blocks"></div>
+  </div>
+
+  <div class="step" id="pf-step-locations" hidden>
+    <div class="step-head">
+      <span class="step-badge" id="pf-step-locations-badge">★</span>
+      <h2>Szenen-Orte (für den Video-Podcast)</h2>
+    </div>
+    <p class="hint">Nur für Serien mit <code>locations</code> in episodes.json (z.B. soap_opera): ein Hintergrundbild pro wiederverwendbarem Ort, das Lolfi beim Video-Rendern automatisch zeigt, wenn die Handlung dort spielt. Ablauf: Prompts generieren → Bilder extern erzeugen → als <code>ORT_KEY.png</code> in den locations-Ordner legen.</p>
+    <div class="action-row">
+      <button class="run-btn primary" data-command="pf_location_prompts">Location-Prompts generieren</button>
+      <button id="pf-locations-load-btn">Prompts laden</button>
+      <button class="folder-btn" data-key="pf_locations">📁 locations (Bilder hier ablegen)</button>
+    </div>
+    <div class="copy-block-group" id="pf-location-blocks"></div>
+  </div>
+
+  <div class="step" id="pf-step-cover">
+    <div class="step-head">
+      <span class="step-badge" id="pf-step-cover-badge">★</span>
+      <h2>Cover-Bild</h2>
+    </div>
+    <p class="hint">Ein Cover pro Serie (1024×1024, unter Apple/Spotify-Minimum 1400×1400, aber ohne weitere Bildbearbeitung die maximale Größe von gpt-image-1-mini). Wird zusätzlich automatisch auf die externe Platte kopiert (<code>/Volumes/NO NAME/&lt;Serientitel&gt;.png</code>) — falls die Platte beim Lauf nicht eingesteckt ist, einfach den Button danach erneut klicken, das vorhandene Cover wird dann nur kopiert, nicht neu erzeugt.</p>
+    <div class="action-row">
+      <button class="run-btn primary" data-command="pf_cover_art">Cover-Bild generieren</button>
+      <button class="folder-btn" data-key="pf_series_root">📁 Serienordner (cover.png)</button>
+    </div>
   </div>
 
   <div class="step" id="pf-step-3" data-step="3">
@@ -121,7 +206,9 @@
       <span class="step-badge" id="lolfi-step-2-badge">2</span>
       <h2>Prompts generieren</h2>
     </div>
-    <p class="hint">Baut aus der Szene die fertigen Bild-/Kling-/Suno-Prompts.</p>
+    <p class="hint">Baut aus der Szene den Bild-Prompt (Hintergrund), den Suno-Musik-Prompt und die Muster-Konfig.
+      Ist <code>OPENAI_API_KEY</code> gesetzt, wird das Hintergrundbild automatisch erzeugt und als
+      Loop-Clip in <code>video/baseline_normal/</code> abgelegt — Schritt 3 ist dann nur noch für die Musik nötig.</p>
     <div class="action-row">
       <select id="lolfi-style">
         <option value="lofi" selected>lofi</option>
@@ -136,38 +223,29 @@
   <div class="step" id="lolfi-step-3" data-step="3">
     <div class="step-head">
       <span class="step-badge" id="lolfi-step-3-badge">3</span>
-      <h2>Manuell: Bild, Video-Loop &amp; Musik erzeugen</h2>
+      <h2>Manuell: Bild &amp; Musik erzeugen</h2>
     </div>
-    <p class="hint">Diese drei Prompts extern generieren und die Ergebnisse in die jeweiligen Ordner legen.</p>
+    <p class="hint">Musik (Suno) ist immer manuell; das Bild nur, wenn kein <code>OPENAI_API_KEY</code> gesetzt ist.
+      Ergebnisse in die jeweiligen Ordner legen.</p>
     <p class="hint" id="lolfi-prompt-source"></p>
     <button id="lolfi-prompt-load-btn">Neuestes Prompt-Set laden</button>
     <div class="copy-block-group">
+      <div class="copy-block" data-target="lolfi-suno-prompt">
+        <label>1. Suno Musik-Prompt → Musik erzeugen, dann hierher legen:</label>
+        <pre id="lolfi-suno-prompt"></pre>
+        <button class="copy-btn" data-target="lolfi-suno-prompt">Kopieren</button>
+        <button class="folder-btn" data-key="lolfi_music">📁 music</button>
+      </div>
       <div class="copy-block" data-target="lolfi-image-prompt">
-        <label>1. Bild-Prompt (Grundlagebild) → bei einem Bildmodell erzeugen</label>
+        <label>2. Bild-Prompt (nur ohne API-Key) → bei einem Bildmodell erzeugen, als Clip hierher legen:</label>
         <pre id="lolfi-image-prompt"></pre>
         <button class="copy-btn" data-target="lolfi-image-prompt">Kopieren</button>
+        <button class="folder-btn" data-key="lolfi_video_baseline">📁 video/baseline_normal</button>
       </div>
       <div class="copy-block" data-target="lolfi-image-negative">
         <label>Bild Negativ-Prompt</label>
         <pre id="lolfi-image-negative"></pre>
         <button class="copy-btn" data-target="lolfi-image-negative">Kopieren</button>
-      </div>
-      <div class="copy-block" data-target="lolfi-kling-prompt">
-        <label>2. Kling Loop-Prompt → Clip erzeugen, dann hierher legen:</label>
-        <pre id="lolfi-kling-prompt"></pre>
-        <button class="copy-btn" data-target="lolfi-kling-prompt">Kopieren</button>
-        <button class="folder-btn" data-key="lolfi_video_baseline">📁 video/baseline</button>
-      </div>
-      <div class="copy-block" data-target="lolfi-kling-negative">
-        <label>Kling Negativ-Prompt</label>
-        <pre id="lolfi-kling-negative"></pre>
-        <button class="copy-btn" data-target="lolfi-kling-negative">Kopieren</button>
-      </div>
-      <div class="copy-block" data-target="lolfi-suno-prompt">
-        <label>3. Suno Musik-Prompt → Musik erzeugen, dann hierher legen:</label>
-        <pre id="lolfi-suno-prompt"></pre>
-        <button class="copy-btn" data-target="lolfi-suno-prompt">Kopieren</button>
-        <button class="folder-btn" data-key="lolfi_music">📁 music</button>
       </div>
     </div>
     <p class="hint" style="margin-top:0.8rem">Optional, kein Prompt dafür — eigene Dateien direkt ablegen:</p>
@@ -178,14 +256,32 @@
     </div>
   </div>
 
+  <div class="step">
+    <div class="step-head">
+      <h2>🏛 Facades-Hintergrundbilder</h2>
+    </div>
+    <p class="hint">Erzeugt die 4 festen Standard-Szenen der Serie "Facades" (Arbeitszimmer, Bootssteg,
+      Wintergarten, Bibliothek — siehe <code>prompts/FACADES_STANDARD_SCENES.md</code>) aus den bereits
+      vorhandenen Bild-Prompts neu. Überschreibt <code>images/facades_*.png</code>, ohne die Szenen-Konzepte
+      selbst zu verändern.</p>
+    <div class="action-row">
+      <button class="run-btn" data-command="lolfi_regenerate_facades">Facades-Bilder neu erzeugen</button>
+    </div>
+  </div>
+
   <div class="step" id="lolfi-step-4" data-step="4">
     <div class="step-head">
       <span class="step-badge" id="lolfi-step-4-badge">4</span>
       <h2>Video rendern</h2>
     </div>
-    <p class="hint">Nimmt die fertige Podcast-Anthologie als Tonspur, loopt den Clip, mischt Musik/SFX und rendert das fertige Video.</p>
+    <p class="hint">Nimmt die fertige Podcast-Anthologie als Tonspur, loopt den Clip, mischt Musik/SFX und rendert das fertige Video. Gibt es keine Anthologie (z.B. soap_opera mit <code>merge_anthology: false</code>), wird sonst nur EINE beliebige Einzel-Episode gerendert — entweder unten gezielt eine Episode wählen oder "Alle Episoden einzeln rendern" nutzen.</p>
     <div class="action-row">
-      <button class="run-btn primary" data-command="lolfi_render">▶ Video rendern</button>
+      <label for="lolfi-episode-select" class="hint" style="margin:0">Episode:</label>
+      <select id="lolfi-episode-select">
+        <option value="">Automatisch (Anthologie bevorzugt)</option>
+      </select>
+      <button class="run-btn primary" data-command="lolfi_render" data-param-episode="lolfi-episode-select">▶ Video rendern</button>
+      <button class="run-btn" data-command="lolfi_render_all">▶ Alle Episoden einzeln rendern</button>
       <button class="folder-btn" data-key="lolfi_video_output">📁 video/output</button>
     </div>
     <ul id="lolfi-renders-list"></ul>
@@ -194,10 +290,13 @@
 </section>
 </main>
 
-<div class="log-panel">
-  <div class="log-header">
+<div class="log-panel collapsed" id="log-panel">
+  <div class="log-header" id="log-toggle" role="button" tabindex="0">
+    <span class="log-dot" id="log-dot"></span>
     <span id="log-title">Log</span>
     <span id="log-step"></span>
+    <button class="log-kill" id="log-kill" type="button" hidden>⏹ Abbrechen</button>
+    <span class="log-caret" id="log-caret">▲</span>
   </div>
   <pre id="log-output"></pre>
 </div>

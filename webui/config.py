@@ -13,6 +13,63 @@ PF_DIR = os.path.dirname(WEBUI_DIR)
 LOLFI_DIR = os.path.join(os.path.expanduser("~"), "Downloads", "Lolfi")
 
 
+def series_root_dir():
+    return os.path.join(PF_DIR, "data", "series")
+
+
+def list_series_slugs() -> list:
+    """Alle Serien-Slugs mit vorhandener episodes.json, alphabetisch."""
+    root = series_root_dir()
+    if not os.path.isdir(root):
+        return []
+    return sorted(
+        d for d in os.listdir(root)
+        if os.path.exists(os.path.join(root, d, "episodes.json"))
+    )
+
+
+def read_latest_slug():
+    try:
+        with open(os.path.join(series_root_dir(), "LATEST"), "r", encoding="utf-8") as f:
+            return f.read().strip() or None
+    except OSError:
+        return None
+
+
+def write_latest_slug(slug: str):
+    root = series_root_dir()
+    os.makedirs(root, exist_ok=True)
+    with open(os.path.join(root, "LATEST"), "w", encoding="utf-8") as f:
+        f.write(slug + "\n")
+
+
+def series_dir_for(slug):
+    """Pfad zu series/<slug>/, NUR wenn slug tatsächlich existiert (Schutz
+    gegen Path-Traversal über einen vom Client kommenden Query-Parameter)."""
+    if slug and slug in list_series_slugs():
+        return os.path.join(series_root_dir(), slug)
+    return None
+
+
+def current_series_dir():
+    """series/<slug>/ der aktuellen Serie (series/LATEST bzw. die einzige
+    vorhandene Serie) — jede Serie hat dort episodes.json, scripts/ und
+    output/. Gibt None zurück, wenn (noch) keine Serie existiert."""
+    latest = read_latest_slug()
+    d = series_dir_for(latest)
+    if d:
+        return d
+    candidates = list_series_slugs()
+    if len(candidates) == 1:
+        return os.path.join(series_root_dir(), candidates[0])
+    return None
+
+
+def current_episodes_json():
+    d = current_series_dir()
+    return os.path.join(d, "episodes.json") if d else None
+
+
 def venv_python(project_dir: str) -> str:
     """.venv/.../python des jeweiligen Projekts, falls vorhanden, sonst der
     Python-Interpreter, mit dem die WebUI selbst läuft."""
@@ -21,6 +78,10 @@ def venv_python(project_dir: str) -> str:
     return venv_py if os.path.exists(venv_py) else sys.executable
 
 
+# Pro Kommando entweder "script" (Datei relativ zu cwd) oder "module"
+# (python -m <module>, für die fabrik.cli-Entry-Points — cwd muss dann
+# PF_DIR sein, damit das fabrik-Package auf sys.path liegt).
+#
 # args_schema beschreibt erlaubte Parameter pro Kommando:
 #   ("positional", name)              -> wird als einzelnes Argv-Element angehängt
 #   ("flag", name, cli_flag)          -> optional, wird als "<cli_flag> <value>" angehängt wenn value gesetzt
@@ -30,10 +91,26 @@ COMMANDS = {
         "label": "Serie erstellen",
         "cwd": PF_DIR,
         "interpreter": lambda: sys.executable,
-        "script": "create_series.py",
+        "module": "fabrik.cli.create_series",
         "args_schema": [
             ("positional_required", "topic"),
             ("flag", "episodes", "--episodes"),
+            ("flag", "template", "--template"),
+            ("flag", "minutes", "--minutes"),
+            ("flag", "locations", "--locations"),
+        ],
+        "kind": "line",
+    },
+    "pf_import_story": {
+        "label": "Aus vorhandenem Text importieren",
+        "cwd": PF_DIR,
+        "interpreter": lambda: sys.executable,
+        "module": "fabrik.cli.import_story",
+        "args_schema": [
+            ("positional_required", "source"),
+            ("positional_required", "series_title"),
+            ("flag", "template", "--template"),
+            ("boolflag", "no_summary", "--no-summary"),
         ],
         "kind": "line",
     },
@@ -41,11 +118,13 @@ COMMANDS = {
         "label": "Episode generieren",
         "cwd": PF_DIR,
         "interpreter": lambda: sys.executable,
-        "script": "generate_episode.py",
+        "module": "fabrik.cli.generate_episode",
         "args_schema": [
             ("positional_required", "episode"),
             ("boolflag", "force", "--force"),
+            ("boolflag", "fix", "--fix"),
             ("flag", "jobs", "--jobs"),
+            ("flag", "series", "--series"),
         ],
         "kind": "line",
     },
@@ -53,42 +132,52 @@ COMMANDS = {
         "label": "Alle Episoden generieren (+ vertonen + Anthologie)",
         "cwd": PF_DIR,
         "interpreter": lambda: sys.executable,
-        "script": "generate_episode.py",
+        "module": "fabrik.cli.generate_episode",
         "fixed_args": ["all"],
         "args_schema": [
             ("boolflag", "force", "--force"),
+            ("boolflag", "fix", "--fix"),
             ("flag", "jobs", "--jobs"),
+            ("flag", "series", "--series"),
         ],
         "kind": "line",
+        "poll_checkpoints": True,
     },
     "pf_generate_episode_check": {
         "label": "episodes.json validieren",
         "cwd": PF_DIR,
         "interpreter": lambda: sys.executable,
-        "script": "generate_episode.py",
+        "module": "fabrik.cli.generate_episode",
         "fixed_args": ["check"],
-        "args_schema": [],
+        "args_schema": [
+            ("flag", "series", "--series"),
+        ],
         "kind": "line",
     },
     "pf_podcast_maker": {
         "label": "Episode vertonen",
         "cwd": PF_DIR,
         "interpreter": lambda: venv_python(PF_DIR),
-        "script": "podcast_maker.py",
+        "module": "fabrik.cli.podcast_maker",
         "args_schema": [
             ("positional_required", "input_file"),
             ("flag", "name", "--name"),
+            ("flag", "series", "--series"),
         ],
         "kind": "progress_cr",
+        "poll_checkpoints": True,
     },
     "pf_batch": {
         "label": "Alle vertonen + Anthologie mergen",
         "cwd": PF_DIR,
         "interpreter": lambda: venv_python(PF_DIR),
-        "script": "batch.py",
+        "module": "fabrik.cli.batch",
         "fixed_args": [],
-        "args_schema": [],
+        "args_schema": [
+            ("flag", "series", "--series"),
+        ],
         "kind": "line",
+        "poll_checkpoints": True,
     },
     "lolfi_generate_scene": {
         "label": "Neue Szene generieren",
@@ -110,6 +199,48 @@ COMMANDS = {
         ],
         "kind": "line",
     },
+    "lolfi_regenerate_facades": {
+        "label": "Facades-Hintergrundbilder neu erzeugen",
+        "cwd": LOLFI_DIR,
+        "interpreter": lambda: sys.executable,
+        "script": "regenerate_facades.py",
+        "fixed_args": [],
+        "args_schema": [],
+        "kind": "line",
+    },
+    "pf_character_prompts": {
+        "label": "Charakter-Porträt-Prompts generieren",
+        "cwd": PF_DIR,
+        "interpreter": lambda: sys.executable,
+        "module": "fabrik.cli.character_prompts",
+        "args_schema": [
+            ("boolflag", "force", "--force"),
+            ("flag", "series", "--series"),
+        ],
+        "kind": "line",
+    },
+    "pf_location_prompts": {
+        "label": "Location-Bild-Prompts generieren",
+        "cwd": PF_DIR,
+        "interpreter": lambda: sys.executable,
+        "module": "fabrik.cli.location_prompts",
+        "args_schema": [
+            ("boolflag", "force", "--force"),
+            ("flag", "series", "--series"),
+        ],
+        "kind": "line",
+    },
+    "pf_cover_art": {
+        "label": "Cover-Bild generieren",
+        "cwd": PF_DIR,
+        "interpreter": lambda: sys.executable,
+        "module": "fabrik.cli.cover_art",
+        "args_schema": [
+            ("boolflag", "force", "--force"),
+            ("flag", "series", "--series"),
+        ],
+        "kind": "line",
+    },
     "pf_tts_start": {
         "label": "TTS starten (Pinokio/Qwen3)",
         "kind": "pyfunc",
@@ -128,6 +259,17 @@ COMMANDS = {
         "interpreter": lambda: venv_python(LOLFI_DIR),
         "script": "lofi_system.py",
         "fixed_args": [],
+        "args_schema": [
+            ("flag", "episode", "--episode"),
+        ],
+        "kind": "cr_steps",
+    },
+    "lolfi_render_all": {
+        "label": "Alle Episoden einzeln rendern (lofi_system.py --all)",
+        "cwd": LOLFI_DIR,
+        "interpreter": lambda: venv_python(LOLFI_DIR),
+        "script": "lofi_system.py",
+        "fixed_args": ["--all"],
         "args_schema": [],
         "kind": "cr_steps",
     },

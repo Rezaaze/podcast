@@ -1,0 +1,356 @@
+--- PART 1 ---
+
+[NARRATOR]
+Previously on Facades: Konrad Vanderburg quietly forged a second withdrawal from the Whitmore Family Trust, still refusing to say what the money paid for. At the estate's boathouse, Marcus Chen finally told Chloe what he saw the night Elena Marsh disappeared. And in a locked drawer of her private study, Victoria Vanderburg keeps returning to a single page she cannot stop reading.
+
+[NARRATOR]
+Victoria's study, mid-morning, ten days after Elena's body was recovered. Isabelle Liu arrives with a leather folio under her arm.
+
+[ISABELLE_LIU | style: warm, unfailingly professional]
+Victoria. Thank you for making time. I know this week's been impossible — the funeral arrangements, the foundation asking whether the gala should even go ahead this quarter, the reporters at the gate photographing the mail truck like it's evidence of something.
+
+[VICTORIA_VANDERBURG | style: commanding, deliberate]
+You said Thursday couldn't wait. I have the Whitmore Foundation board on a call at noon and I have not slept properly in ten days, Isabelle, so say what you came to say.
+
+[ISABELLE_LIU | style: measured, careful]
+I've been thinking about exposure — legal exposure, not the papers. With Elena's case active, with the county subpoenaing every record that has this family's name attached to it, I want the trust itself to be beyond question before anyone else goes looking for a reason to ask about it.
+
+[VICTORIA_VANDERBURG | style: guarded]
+The trust has been managed by this office for forty years. My husband built half of it himself.
+
+[ISABELLE_LIU | style: gentle but firm]
+I don't doubt a page of it. But "has been managed well" and "will survive a hostile subpoena" are two different sentences, and I would rather you hear that from me over coffee than from opposing counsel in a deposition room. I'd like your permission to run a full internal audit. Quietly. Myself, and one forensic accountant I trust, bound by the same confidentiality agreement I've signed every year since Harold hired me.
+
+[SFX: a clock ticking softly on the mantel]
+
+[VICTORIA_VANDERBURG | style: wary, testing]
+And if you find something.
+
+[ISABELLE_LIU | style: steady, reassuring]
+Then it stays with me until you and I decide together what to do with it. Fifteen years, Victoria. I've buried worse than a bookkeeping irregularity for this family, and I have never once handed anyone the shovel to dig it back up.
+
+[VICTORIA_VANDERBURG | style: quiet, weighing]
+You understand what you're asking for. Access to every ledger, every wire transfer, every signature card back to before Harold died. Distribution requests, trustee minutes, the accounts Konrad handles out of Macau.
+
+[ISABELLE_LIU | style: careful, watching her]
+I understand exactly what I'm asking for, which is why I'm asking you directly instead of simply doing it and telling you afterward. If there's anything untidy in forty years of paperwork, Victoria, I would much rather be the one holding it than a stranger this family is paying by the hour.
+
+[SFX: paper sliding across a desk]
+
+[VICTORIA_VANDERBURG | style: distracted, somewhere else]
+Marcus found her wedged under the old dock pilings, under six feet of water this whole time, ten yards from where we host the engagement parties. Do you know what a year of not knowing does to a person, and then a single phone call ends it. I have spent that year making certain this family did not come apart in public. I don't have much left over to spend making certain it doesn't come apart in private.
+
+[ISABELLE_LIU | style: soft, exact]
+Then let me carry this piece of it. That's what I'm for, Victoria. Let someone else hold the ledger so you can hold everything else.
+
+[VICTORIA_VANDERBURG | style: guarded, almost to herself]
+Everyone who has ever said a version of that sentence to me wanted something in return, eventually.
+
+[ISABELLE_LIU | style: unhurried, sincere]
+I've never once asked you for anything in fifteen years that wasn't for this family's protection, and I'm not about to start now, with Elena barely in the ground.
+
+--- PART 2 ---
+
+[NARRATOR]
+The same study, several minutes later. Victoria has still not given her answer.
+
+[VICTORIA_VANDERBURG | style: sharp, sudden]
+Why the old cabinet specifically. Why not simply pull what's already been scanned and start there.
+
+[ISABELLE_LIU | style: unbothered, professional]
+Because a subpoena doesn't care what's convenient to produce, and half of what predates the digital records was never scanned at all — Harold's original trust instrument, the early distribution schedules, the signature cards from before this office even had a copier. If there's a gap anywhere in that paper trail, I would much rather find it before opposing counsel does. That's the entire exercise, Victoria. I find it first, quietly, and you hear about it from me over this desk instead of from a judge.
+
+[SFX: a drawer opening somewhere down the hall, faint]
+
+[VICTORIA_VANDERBURG | style: still, controlled]
+And you'd tell me. Before anyone. Before the board, before outside counsel, before Julian or Chloe or anyone else in this house — if something in that cabinet didn't look right to you.
+
+[ISABELLE_LIU | style: warm, deliberate]
+Always you first. That is the entire point of doing this myself, quietly, instead of handing it to a white-shoe firm that owes this family nothing and would put every finding in a memo circulated to six associates.
+
+[VICTORIA_VANDERBURG | style: pressing, careful]
+How long would this take.
+
+[ISABELLE_LIU | style: measured]
+Three weeks, perhaps four, to be thorough. I'll want a room I can lock, and I'll want it understood by the staff that nothing in it is to be touched, moved, or discussed. I'd also like your signature on an engagement letter today rather than tomorrow, if you're inclined — the sooner it's dated, the more defensible the whole exercise looks if anyone ever asks why we did it.
+
+[VICTORIA_VANDERBURG | style: distant, careful]
+Konrad manages the Macau accounts. He's mismanaged them badly enough that I've stopped asking for details, which was its own kind of mistake. If your audit touches those accounts and finds him careless—
+
+[ISABELLE_LIU | style: even, unreadable]
+It touches everything, or it protects nothing. You know that. I can't tell a judge I audited the trust except for the one set of accounts your son happens to run.
+
+[SFX: silence, held a beat too long]
+
+[VICTORIA_VANDERBURG | style: resolved, final]
+Then it touches everything. I would rather know exactly what I'm standing on than spend another year guessing at it.
+
+[ISABELLE_LIU | style: gracious, warm]
+That's the right decision, and I don't say that lightly. I'll have the engagement letter drafted by tomorrow morning, and I'll want the archive room key by end of day today, along with whatever's left of Harold's old files that never made it into storage downtown.
+
+[VICTORIA_VANDERBURG | style: quiet, precise]
+And the accountant you're bringing in. I want a name before I sign anything, Isabelle, not a title.
+
+[ISABELLE_LIU | style: reassuring, prepared]
+Priya Nadarajah. She's done confidential work for two other families on the foundation board, always under seal, never a leak in either case. I'll send you her retainer agreement alongside mine.
+
+[VICTORIA_VANDERBURG | style: guarded, still testing]
+No one connected to Richard's office. If Chloe's husband so much as hears the word "audit" attached to this family right now, it becomes a press conference by morning.
+
+[ISABELLE_LIU | style: firm, certain]
+No one connected to Richard's office. You have my word on that, the same as everything else.
+
+[SFX: a chair scraping back, footsteps toward the door]
+
+[ISABELLE_LIU | style: light, almost casual]
+For what it's worth — I know exactly how much this costs you, handing anyone that kind of access right now. I don't take it lightly, and I won't make you regret it.
+
+[VICTORIA_VANDERBURG | style: quiet, unreadable]
+You're the only person left in this house I haven't had to watch, Isabelle. Don't make me start.
+
+[SFX: the study door closing]
+
+[NARRATOR]
+Alone, Victoria returns to her desk. She does not open the bottom drawer. Not yet.
+
+--- PART 3 ---
+
+[NARRATOR]
+Victoria's study, that same night. The house has gone quiet. She unlocks the bottom drawer of her desk herself, without calling for anyone.
+
+[SFX: a key turning in an old lock]
+
+[VICTORIA_VANDERBURG | style: low, to herself]
+Forty years of signatures have passed through this house, and I could pick Harold's out of a thousand pages blind. Chloe's, before the cameras taught her to slow it down and make it look practiced. Julian's, always pressing too hard on the loop of the J, the way he's pressed too hard at everything since he was a boy.
+
+[SFX: papers being laid side by side on a desk]
+
+[VICTORIA_VANDERBURG | style: quieter, unwilling]
+This one on the withdrawal slip isn't a stranger's hand. I told myself for two months it might be — some clerk, some forger hired off a street corner, someone who had never once sat at this table and watched me sign my own name.
+
+[VICTORIA_VANDERBURG | style: barely audible, cracking at the edges]
+The K drags left before it climbs. It always has, since he was nine years old and I made him practice his own name at this same desk until his hand cramped and he cried and I told him a Vanderburg does not cry over penmanship.
+
+[SFX: a long, unsteady breath]
+
+[VICTORIA_VANDERBURG | style: hardening, deliberate]
+Konrad. My own son's hand, on a signature that was never his to sign.
+
+[SFX: a page settling back onto the desk]
+
+[VICTORIA_VANDERBURG | style: cold, controlled]
+Money. It's money, that's all this is, that's all this has ever been with him. He's done this in smaller ways before — the Macau numbers never balanced and I chose, every single time, not to ask why. I will not let it become more than that in my own head simply because I am frightened and it is midnight.
+
+--- PART 4 ---
+
+[NARRATOR]
+The study, moments later, lit only by moonlight through the window now. Victoria hasn't moved from the desk.
+
+[VICTORIA_VANDERBURG | style: quiet, almost pleading with herself]
+He wouldn't. Whatever hole he's dug for himself, whatever he's done with the money — that boy would not have laid a hand on her. I raised him with a temper, I know that better than anyone alive, but I did not raise a man capable of that.
+
+[SFX: a clock somewhere in the house striking the hour]
+
+[VICTORIA_VANDERBURG | style: low, remembering]
+He was the last one to see her that night. He told the detectives he walked her as far as the terrace and turned back for a drink. A small detail, barely worth writing down. It only sits wrong now because everything sits wrong now.
+
+[VICTORIA_VANDERBURG | style: firmer, rebuilding the wall]
+I will handle the money the way I handle everything in this house — quietly, and alone. He pays the trust back before Isabelle's audit ever reaches that cabinet, the ledger closes clean, and no one outside this room ever needs to know whose hand held that pen.
+
+[VICTORIA_VANDERBURG | style: steel returning to her voice]
+And Isabelle finds nothing in that archive that I have not already found first and dealt with myself.
+
+[SFX: the drawer's lock catching]
+
+[VICTORIA_VANDERBURG | style: exhausted, almost a whisper]
+Whatever you did, Konrad, whatever this money paid for — come to me before someone else finds it first. Before Isabelle, before the police, before your brother. Come to me.
+
+[SFX: footsteps crossing the study, a door easing shut]
+
+--- PART 5 ---
+
+[NARRATOR]
+The estate's service gate, late afternoon the next day. Konrad is walking back from the garages when he notices a car he doesn't recognize, parked just outside the property line.
+
+[SFX: gravel crunching underfoot, a car engine idling at a distance]
+
+[NARRATOR]
+A man sits behind the wheel, watching the house, saying nothing.
+
+[KONRAD_VANDERBURG | style: forced casual, masking panic]
+Can I help you with something? This is private property past the gate, in case you took a wrong turn.
+
+[SFX: a car window lowering partway]
+
+[KONRAD_VANDERBURG | style: low, urgent, to himself]
+No answer. Just that look, like he's already counted every exit on this property. Not here, not at the house, he wouldn't dare send someone right up to the gate—
+
+[SFX: the car window rising, then the sedan pulling away slowly, gravel shifting under its tires]
+
+[SFX: footsteps approaching across the gravel]
+
+[MARCUS_CHEN | style: quiet, careful]
+Everything all right, Mr. Vanderburg? Security mentioned a car's been parked out here on and off since this morning, and asked whether they should call it in themselves.
+
+[KONRAD_VANDERBURG | style: too quick, brittle]
+It's nothing, Marcus. Probably a reporter, or one of the detectives being careless about where they're allowed to sit. You know how it's been since they found her.
+
+[MARCUS_CHEN | style: even, watchful]
+Didn't look like a reporter's car to me. Reporters don't usually roll their window down and then leave the second somebody walks toward them.
+
+[KONRAD_VANDERBURG | style: sharp, cutting the conversation off]
+I said it's nothing. Tell security I'll handle it myself, and that they don't need to log every car that slows down near this gate.
+
+[MARCUS_CHEN | style: careful, backing off]
+Understood. I'll let them know, Mr. Vanderburg.
+
+--- PART 6 ---
+
+[NARRATOR]
+Minutes later, the kitchen entrance near the service gate. Konrad has gone inside, hands still unsteady.
+
+[SFX: a door closing harder than intended]
+
+[KONRAD_VANDERBURG | style: whispering, ragged, alone]
+That's not how a detective sits in a car. That's how a man sits when he's counting the days you have left to make good, and deciding how many more he's willing to give you.
+
+[SFX: a phone buzzing once against a countertop, then silence as it's turned face-down]
+
+[KONRAD_VANDERBURG | style: quiet, bitter]
+Two point four million. Fong doesn't send a man to sit outside a house like this one for anything less than that, and everybody who works for him knows it, right down to the driver.
+
+[SFX: footsteps entering the kitchen]
+
+[CHLOE_VANDERBURG | style: polished, faintly concerned]
+You look like you've seen a ghost, Konrad. Was that the police back at the gate again? Mother said they'd want another statement from you eventually, given how close you were to Elena that last night.
+
+[KONRAD_VANDERBURG | style: recovering fast, performing calm]
+Something like that. You know how it is now — every stranger who parks near this property becomes a suspect in somebody's mind, mine included apparently.
+
+[CHLOE_VANDERBURG | style: measured, unconvinced]
+Mm. You should still tell Mother if it's serious. She'd want to know exactly who's watching this house right now, of all times.
+
+[KONRAD_VANDERBURG | style: light, deflecting]
+It's not serious, Chloe. I'll handle it myself, the way I handle everything.
+
+[SFX: footsteps receding down the hallway]
+
+[NARRATOR]
+Chloe watches him go, unconvinced, before turning back toward the stairs.
+
+--- PART 7 ---
+
+[NARRATOR]
+Chloe's private sitting room, late that night. Richard is asleep down the hall. She sits with her phone in her lap, Julian's contact already open on the screen.
+
+[SFX: a phone screen dimming, then lighting again]
+
+[CHLOE_VANDERBURG | style: low, rehearsing]
+Julian, there's something Marcus told me — about the night Elena went missing, about what happened down at the boathouse before any of us knew to be worried—
+
+[CHLOE_VANDERBURG | style: frustrated, quiet]
+And then what. Then he asks how I know. Then he asks who told me, and when, and exactly where I was standing when he told me, and there is no answer to that question that doesn't end with Marcus's name in it, and no way to say it once and take it back afterward.
+
+[SFX: the phone being set face-down on a side table]
+
+[SFX: a soft knock at the door, then it easing open]
+
+[MARCUS_CHEN | style: quiet, careful]
+You've been sitting with that phone for twenty minutes. I could see the light under your door from the hallway, on and off, on and off.
+
+[CHLOE_VANDERBURG | style: unguarded, tired]
+I keep starting the message and deleting it before I finish the first sentence. Julian deserves to know what you told me, Marcus. He's planning a funeral for a woman he was going to marry.
+
+[MARCUS_CHEN | style: gentle, steady]
+He does deserve to know. I'm not going to sit here and pretend he doesn't, or that I regret telling you.
+
+[CHLOE_VANDERBURG | style: quiet, almost pleading]
+Then why does it feel like I'd be handing him a knife with my own name carved into the handle.
+
+[MARCUS_CHEN | style: careful, watching her]
+Because it is one, if you're honest about it. The moment he asks how you came to know what happened at that dock, there is no version of the answer that doesn't lead straight back to us, and to how long this has been going on.
+
+[SFX: rain starting softly against the window]
+
+[CHLOE_VANDERBURG | style: firm, convincing herself]
+This isn't about us, Marcus. Konrad was the last person to see her alive, and now there's a man circling the estate that nobody can explain, and Julian is entitled to every piece of information that might matter. He has a right to know what you saw that night.
+
+[MARCUS_CHEN | style: soft, not quite believing her]
+Does he. Or does it just feel cleaner to say that out loud than to say the real reason you've been sitting here for twenty minutes instead of typing the message.
+
+[CHLOE_VANDERBURG | style: sharp, defensive]
+Don't do that. Don't turn this into something about you and me when it's about Julian burying the woman he loved.
+
+[MARCUS_CHEN | style: quiet, unflinching]
+I'm not turning it into anything, Chloe. I'm asking you to look at the reason honestly, because I don't think you have yet, not really.
+
+[SFX: rain heavier now, a gust against the glass]
+
+[CHLOE_VANDERBURG | style: quiet, deflating]
+You think I haven't lain awake every night since you told me, running the version where I say it plainly and none of it touches us. There isn't one, Marcus. I've tried building it a dozen different ways.
+
+[MARCUS_CHEN | style: careful, tender]
+I know. I've built the same dozen versions myself, driving her to the foundation lunches and back like nothing's changed.
+
+[CHLOE_VANDERBURG | style: low, guarded]
+And in every one of them, Richard finds out how I know before Julian even finishes processing what I've told him. That's the part you're not saying out loud. That's the part I can't afford, whatever this costs Julian in the meantime.
+
+--- PART 8 ---
+
+[NARRATOR]
+The same room, minutes later. Neither of them has moved from where they're standing.
+
+[MARCUS_CHEN | style: quiet, no accusation in it]
+I'm not blaming you for wanting to wait. I'd want to wait too, if it were me standing where you're standing tonight, with everything I have to lose sitting right there in that phone.
+
+[CHLOE_VANDERBURG | style: steadier now, quieter]
+It's not the right moment, that part is true whether or not it's the only reason. Not with the police still combing through every inch of this property, not with reporters camped at the end of our drive photographing the mail. If I say this now, it becomes a headline before it ever becomes the truth Julian needs to hear.
+
+[SFX: rain picking up against the glass]
+
+[MARCUS_CHEN | style: careful, testing the ground]
+And when exactly would the moment be right, Chloe. Genuinely, I'd like to know, because I don't think either of us actually believes there's a version of this where the timing feels safe.
+
+[CHLOE_VANDERBURG | style: low, honest despite herself]
+I don't know, honestly. I tell myself I'm protecting this family from one more disaster in a year that's already buried us in more than enough of them. I tell myself that, and most nights I even manage to believe it by the time I fall asleep.
+
+[MARCUS_CHEN | style: soft, close]
+And the nights you don't manage to believe it.
+
+[CHLOE_VANDERBURG | style: barely audible]
+The nights I don't, I know exactly whose name comes up first the second I open my mouth to Julian. And it isn't Konrad's, and it isn't mine either, if I'm honest. It's yours.
+
+[SFX: a long silence, only the rain against the window]
+
+[MARCUS_CHEN | style: quiet, steady]
+Then say that part to yourself plainly, at least. Don't dress it up as protecting the family when what you're protecting is the two of us and this room.
+
+[CHLOE_VANDERBURG | style: tired, honest]
+Is that so wrong. I have spent eight months being careful in every hallway of this house, timing myself against Richard's schedule, against the staff rotations, against my own mother's instinct for finding exactly what people are hiding. I don't know how to stop being careful just because Julian's grief makes the timing feel urgent.
+
+[MARCUS_CHEN | style: gentle]
+It's not wrong. I just don't want you carrying it alone, calling it something cleaner than what it is.
+
+[CHLOE_VANDERBURG | style: quiet, grateful despite herself]
+I know. Give me a little longer. When there's less of a spotlight on this house, when the audit's done and the funeral's behind us, I'll find the way to tell him that doesn't lead straight back to your name.
+
+[MARCUS_CHEN | style: soft]
+And if that day doesn't come.
+
+[CHLOE_VANDERBURG | style: after a pause]
+Then I'll have to decide which of them I'm more afraid of losing. But not tonight.
+
+[SFX: a phone screen lighting once more, then locking with a soft click]
+
+[CHLOE_VANDERBURG | style: quiet, resolved for now]
+Not tonight. Not like this, half-rehearsed at midnight with Richard asleep down the hall, with Julian's name still sitting unanswered on the screen.
+
+[MARCUS_CHEN | style: gentle, no judgment]
+Okay. Not tonight.
+
+[SFX: the phone sliding into a drawer]
+
+[NARRATOR]
+Elsewhere in the house, Victoria sits alone in her study, the audit engagement letter signed and waiting on the blotter in front of her. Isabelle Liu had offered, only that morning, to personally review every record in the Whitmore Family Trust for anything that might expose the family to legal risk. Victoria said yes before Isabelle had even finished asking the question.
+
+[SFX: rain against the study window, steady, unhurried]

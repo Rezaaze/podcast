@@ -1,0 +1,2115 @@
+{
+  "series_title": "Chain of Custody",
+  "language": "English",
+  "mode": "drama",
+  "template": "soap_opera",
+  "writer_persona": "a showrunner for character-driven, relationship-first serial drama in the vein of prestige ensemble TV, specializing in slow-burn psychological power reversals",
+  "style_guidelines": [
+    "Every scene serves exactly one or two threads at a time — never rush all four storylines into a single scene.",
+    "Dialogue reveals only what that character's own knowledge slice allows — no accidental exposition outside a character's true awareness.",
+    "Build tension through withheld information, subtext, and pauses, not exposition dumps or on-the-nose confessions.",
+    "Cliffhangers should land on emotional stakes (a secret nearly spoken, a door about to open) rather than pure plot mechanics.",
+    "The power balance between the detective and the suspect must shift gradually and believably, scene by scene — never let either side fully control the room until the finale."
+  ],
+  "voices": {
+    "NARRATOR": {
+      "voice": "Aiden",
+      "default_style": "calm, measured, a step removed from the action",
+      "description": "the show's narrator — orients the listener at the start of every scene (who, where, when), never a character in the story"
+    },
+    "DET_MEI_LIN": {
+      "voice": "Serena",
+      "default_style": "urgent, tightly controlled tension under a professional calm, speaks fast and clipped when cornered; speaks otherwise slow, deliberate, very clear English",
+      "description": "a Major Crimes detective who came to the city as a teenager from Guangzhou; obsessive and guilt-ridden about a case she let slip years ago, and willing to break protocol the moment she believes the system already has"
+    },
+    "JONAS_VOSS": {
+      "voice": "Ryan",
+      "default_style": "quiet, unhurried, chillingly reasonable — never raises his voice even when threatening",
+      "description": "the suspect locked in the room with Mei Lin; a composed, patient manipulator who has been several moves ahead of everyone in this precinct for months"
+    },
+    "CAPTAIN_DAVID_SUN": {
+      "voice": "Eric",
+      "default_style": "authoritative but clipped, speaks clear, deliberate English with the weight of rank behind every pause",
+      "description": "the precinct's captain, who immigrated as a young officer decades ago and rose through the ranks; now quietly protecting a network of favors and payoffs he can't afford to have surface"
+    },
+    "DET_KAI_YANG": {
+      "voice": "Dylan",
+      "default_style": "loyal, increasingly frantic under a procedural surface, tries to keep it by-the-book even as he panics",
+      "description": "Mei Lin's partner, born in Beijing and moved to the city in his twenties for police work; the one person who notices she's gone dark and won't stop looking for her"
+    },
+    "ZOE_HAN": {
+      "voice": "Sohee",
+      "default_style": "sharp, relentless, quietly triumphant whenever she lands a fact",
+      "description": "a first-generation Chinese-American investigative journalist chasing the story that could finally prove corruption inside the department"
+    },
+    "ANNA_WU": {
+      "voice": "Vivian",
+      "default_style": "raw and exhausted, alternating between polite persistence and barely contained fury",
+      "description": "older sister of Daniel Wu, the missing man at the center of the interrogation; immigrated as a child with her family and has spent every day since his disappearance pushing the department for answers"
+    }
+  },
+  "locations": {
+    "THE_INTERROGATION_ROOM": {
+      "name": "The Interrogation Room",
+      "description": "a windowless basement room with a scarred metal table, a single flickering fluorescent tube, and a one-way mirror reflecting nothing back but the two people locked inside"
+    },
+    "PRECINCT_BULLPEN": {
+      "name": "The Bullpen",
+      "description": "an open-plan detective floor of mismatched desks and corkboards thick with case flyers, harsh overhead light that never quite reaches the corners where quiet conversations happen"
+    },
+    "HARBOR_DOCKS": {
+      "name": "The Harbor Docks",
+      "description": "a working shipping harbor at dusk, containers stacked into a rusted maze, gull cries and creaking cranes over dark water"
+    },
+    "WU_FAMILY_APARTMENT": {
+      "name": "The Wu Family Apartment",
+      "description": "a modest, warmly lit apartment cluttered with photos of a smiling young man, the kind of home that has been waiting too long for someone to come back to it"
+    },
+    "THE_BLUE_LANTERN": {
+      "name": "The Blue Lantern",
+      "description": "a dim corner bar with a flickering blue neon sign, sticky booths, and a bartender who has learned not to ask questions about the deals made in the back corner"
+    }
+  },
+  "format": {
+    "parts_per_section": 1,
+    "words_per_part_target": "300 to 500",
+    "words_per_part_min": 250,
+    "words_per_part_max": 550
+  },
+  "generation": {
+    "model": "claude-sonnet-5",
+    "use_beats": false
+  },
+  "audio": {
+    "api_url": "http://127.0.0.1:42003",
+    "default_style": "Speak clearly and with dramatic weight",
+    "target_lufs": -16.0,
+    "pause_between_chunks_ms": 250,
+    "pause_between_lines_ms": 700,
+    "pause_between_parts_ms": 3000,
+    "pause_between_episodes_ms": 6000,
+    "merge_anthology": false
+  },
+  "output_prefix": "ep",
+  "series_intro": "A serialized drama that opens on a city where the badge and the lie sit closer together than anyone wants to admit; over ten episodes it follows one detective's desperate, illegal gambit to save a missing man — and the prisoner across the table who has been waiting his whole life for exactly this room, this silence, this mistake.",
+  "series_outro": "By the finale, the interrogation meant to save Daniel Wu becomes the very door that lets his captor walk free — Mei Lin is left to answer for what she did off the books, Captain Sun's ledger of favors is dragged into the light, and Anna Wu finally learns the truth about her brother, even as some debts in this precinct are left conspicuously, deliberately unpaid.",
+  "episodes": [
+    {
+      "figure": "Forty-Eight Hours",
+      "theme": "Detective Mei Lin pulls suspect Jonas Voss into an off-book interrogation over the disappearance of Daniel Wu, while Anna Wu's public pressure and Captain Sun's quiet unease set the season's traps (The Missing Man, The Lock-In).",
+      "intro_note": "",
+      "outro_note": "The door clicks shut behind her, the watch log blank where her signature should be — Mei Lin is alone with Jonas Voss, off the books, off the clock, and utterly unwitnessed.",
+      "sections": [
+        "Forty-Eight Hours and Counting — Anna Wu paces the apartment where Daniel should be, marking the clock since he vanished (The Missing Man)",
+        "A Name From the Docks — Mei Lin and Kai Yang review a tip placing Jonas Voss near Daniel's last known location (The Missing Man)",
+        "Picked Up in the Rain — patrol brings Voss in from the harbor, unbothered, giving nothing away (The Missing Man)",
+        "A Name That Lands Wrong — Captain Sun's composure slips for one unguarded second when he hears who's in custody (The Lock-In)",
+        "Nothing on the Record — Mei Lin's first formal interview with Voss yields no answers and no leverage (The Missing Man)",
+        "How Long Until You Find Him — Anna Wu confronts Mei Lin in the bullpen, demanding real answers (The Missing Man)",
+        "What He Left Behind — alone in Daniel's apartment, Anna finds a sign her brother had been frightened before he disappeared (The Missing Man)",
+        "The Clock on the Wall — Mei Lin realizes the forty-eight-hour window to charge Voss is about to close with nothing to show for it (The Lock-In)",
+        "A Date That Doesn't Match — Kai Yang notices an inconsistency in Voss's priors file that shouldn't be there (The Missing Man)",
+        "A Story Worth Chasing — journalist Zoe Han hears a whisper about the missing man's sister going to the press (The Missing Man)",
+        "A Call Behind a Closed Door — Captain Sun makes a private call about the Voss case that he doesn't want overheard (The Lock-In)",
+        "One Way to Keep Him — with the clock nearly out, Mei Lin quietly arranges to be left alone with Voss (The Lock-In)",
+        "The Door Clicks Shut — Mei Lin dismisses the watch officer and locks herself in the room with Voss alone (The Lock-In)"
+      ],
+      "section_words": [
+        null,
+        null,
+        {
+          "min": 150,
+          "max": 220,
+          "target": "160 to 190"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 140,
+          "max": 210,
+          "target": "150 to 180"
+        }
+      ],
+      "section_locations": [
+        "WU_FAMILY_APARTMENT",
+        "PRECINCT_BULLPEN",
+        "HARBOR_DOCKS",
+        "PRECINCT_BULLPEN",
+        "THE_INTERROGATION_ROOM",
+        "PRECINCT_BULLPEN",
+        "WU_FAMILY_APARTMENT",
+        "THE_INTERROGATION_ROOM",
+        "PRECINCT_BULLPEN",
+        "THE_BLUE_LANTERN",
+        "PRECINCT_BULLPEN",
+        "THE_INTERROGATION_ROOM",
+        null
+      ],
+      "case": [
+        {
+          "label": "The Missing Man",
+          "solution": "Daniel Wu witnessed an unmanifested container changing hands at the harbor docks late one night — a shipment belonging to Jonas Voss's smuggling network. Voss was present and personally decided Daniel was more valuable alive as insurance than as a loose end, and had him quietly seized and held at a location tied to the network. Daniel is still alive, and his location is the one piece of leverage Voss has been holding since before he was ever arrested.",
+          "objective_facts": [
+            "Daniel Wu was last placed by phone tower data near the harbor docks on the night an unmanifested container was moved through the yard.",
+            "Jonas Voss was identified at the same docks that night by a security camera partially obscured by rain.",
+            "Daniel Wu has not used his phone, bank cards, or any known contact method since that night.",
+            "No body, blood, or evidence of a struggle has been found at any location searched so far."
+          ],
+          "character_knowledge": {
+            "DET_MEI_LIN": {
+              "knows": [
+                "Daniel Wu was last placed at the harbor docks by phone tower data",
+                "Voss was picked up near the same docks and has no verifiable alibi for that night"
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "believes Voss will crack quickly under formal procedure, underestimating how prepared he is"
+              ]
+            },
+            "JONAS_VOSS": {
+              "knows": [
+                "exactly where Daniel Wu is being held and that he is alive",
+                "that the docks camera only caught him partially, not clearly enough to charge him yet"
+              ],
+              "hides": [
+                "the precise location and condition of Daniel Wu, treating it as his only real leverage — something to trade off in pieces, not reveal"
+              ],
+              "believes_falsely": [
+                "doesn't yet know Anna Wu has escalated to a public plea to the press, which will shorten the clock further than he'd planned for"
+              ]
+            },
+            "ANNA_WU": {
+              "knows": [
+                "Daniel had seemed anxious and secretive in the weeks before he vanished",
+                "the department has a person of interest in custody but won't confirm any details to her"
+              ],
+              "hides": [
+                "how frightened she is that the police will quietly let this go cold, admitting only anger when she's in the room with Mei Lin"
+              ],
+              "believes_falsely": [
+                "believes the police are deliberately slow-walking the case out of indifference, not realizing Mei Lin is already risking her career to push it"
+              ]
+            },
+            "DET_KAI_YANG": {
+              "knows": [
+                "something in Voss's priors paperwork doesn't add up — inconsistent dates that suggest a record was altered"
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "assumes the discrepancy in Voss's file is a clerical error, not realizing it could point to something inside the department itself"
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Lock-In",
+          "solution": "Believing the forty-eight-hour window to charge Voss is about to expire with nothing solid enough to hold him, and convinced Captain Sun will quietly let the case slide to protect favors he can't afford to have examined, Mei Lin isolates herself alone with Voss — disabling the room's recording and dismissing the assigned watch officer — to extract Daniel Wu's location before Voss can walk. She believes this is her own desperate gamble. In truth, an unsupervised room with no witnesses and no paper trail is the exact condition Jonas Voss has spent months positioning himself to receive, so that whatever happens in it can never be traced back to anyone but her.",
+          "objective_facts": [
+            "Department protocol requires two officers present and active recording for any interrogation exceeding two hours.",
+            "The legal window to formally charge or release a suspect without booking is forty-eight hours.",
+            "No incident report or supervisor authorization exists for Mei Lin's extended one-on-one session with Voss."
+          ],
+          "character_knowledge": {
+            "DET_MEI_LIN": {
+              "knows": [
+                "the forty-eight-hour clock is about to expire with nothing solid enough to charge Voss",
+                "if she follows procedure now, he walks and Daniel's trail goes cold"
+              ],
+              "hides": [
+                "her intention to dismiss the watch officer and go off-record, telling herself it's temporary and justified"
+              ],
+              "believes_falsely": [
+                "believes she alone is choosing this risk, with no idea Voss has been quietly hoping for exactly this kind of isolated opportunity"
+              ]
+            },
+            "JONAS_VOSS": {
+              "knows": [
+                "that an unsupervised, unrecorded room is the one condition he needs and has been waiting for"
+              ],
+              "hides": [
+                "how deliberately he is provoking the situation — every calm non-answer is designed to make procedure look useless and push her toward exactly this"
+              ],
+              "believes_falsely": []
+            },
+            "DET_KAI_YANG": {
+              "knows": [
+                "Mei Lin has been alone with Voss far longer than protocol allows, and isn't answering her radio"
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "assumes she's just pushed the boundaries of procedure again like she has before, not realizing how far she's already gone"
+              ]
+            },
+            "CAPTAIN_DAVID_SUN": {
+              "knows": [
+                "Voss's name is connected, through channels he doesn't want examined, to people he owes favors to"
+              ],
+              "hides": [
+                "his own unease and the reason for it — he doesn't yet act to stop Mei Lin because scrutiny on this case could just as easily expose him"
+              ],
+              "believes_falsely": [
+                "believes that keeping his distance and staying uninvolved will protect him, not realizing his inaction is about to let the situation spiral out of his control"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "The Door Locks",
+      "theme": "Mei Lin seals herself in with Voss and begins her illegal extraction attempt as Kai Yang notices her sudden silence and Voss lands his first quiet jab about a secret only she should know (The Lock-In, The Detective's Secret).",
+      "intro_note": "Forty-eight hours after Daniel Wu vanished, Detective Mei Lin closed herself alone in the interrogation room with Jonas Voss — no recording, no witness, no way back to procedure.",
+      "outro_note": "For one unguarded second, Mei Lin's face gives her away — and Jonas Voss, watching, finally has a name to work with: Grace Ito.",
+      "sections": [
+        "Alone in the Room — Mei Lin locks the door and lays out exactly what she wants from Voss: Daniel Wu's location (The Lock-In)",
+        "No Answer on the Radio — Kai Yang tries to reach Mei Lin for her routine check-in and gets nothing back (The Lock-In)",
+        "Patience Is a Weapon — Voss deflects every question with maddening calm, testing how long she'll hold out (The Lock-In)",
+        "An Hour Too Long — Kai Yang checks the interrogation log and finds no updates since the session began (The Lock-In)",
+        "A Lie Through the Door — Kai Yang knocks; Mei Lin sends him away with a story that doesn't quite sit right (The Lock-In)",
+        "Something's Off — unconvinced, Kai Yang decides to quietly start asking his own questions (The Lock-In)",
+        "One Name — Voss drops the name Grace into the silence like a stone into water (The Detective's Secret)",
+        "I Don't Know What You Mean — Mei Lin denies it too quickly, and Voss simply lets the silence answer for her (The Detective's Secret)",
+        "Not Yet — Captain Sun learns the session has run long and chooses, for now, to do nothing (The Lock-In)",
+        "Records — Voss hints he doesn't just remember the name, he has something written down (The Detective's Secret)",
+        "An Old File Reopened — Kai Yang, still digging, quietly pulls a case from eight years back with Mei Lin's name on it (The Detective's Secret)",
+        "Grace Ito — Voss finally says the full name aloud, and for the first time, Mei Lin's composure breaks (The Detective's Secret)"
+      ],
+      "section_words": [
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 150,
+          "max": 220,
+          "target": "160 to 190"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 140,
+          "max": 210,
+          "target": "150 to 180"
+        }
+      ],
+      "section_locations": [
+        "THE_INTERROGATION_ROOM",
+        "PRECINCT_BULLPEN",
+        "THE_INTERROGATION_ROOM",
+        "PRECINCT_BULLPEN",
+        "THE_INTERROGATION_ROOM",
+        "PRECINCT_BULLPEN",
+        "THE_INTERROGATION_ROOM",
+        null,
+        "PRECINCT_BULLPEN",
+        "THE_INTERROGATION_ROOM",
+        "PRECINCT_BULLPEN",
+        "THE_INTERROGATION_ROOM"
+      ],
+      "case": [
+        {
+          "label": "The Lock-In",
+          "solution": "Believing the forty-eight-hour window to charge Voss is about to expire with nothing solid enough to hold him, and convinced Captain Sun will quietly let the case slide to protect favors he can't afford to have examined, Mei Lin isolates herself alone with Voss — disabling the room's recording and dismissing the assigned watch officer — to extract Daniel Wu's location before Voss can walk. She believes this is her own desperate gamble. In truth, an unsupervised room with no witnesses and no paper trail is the exact condition Jonas Voss has spent months positioning himself to receive, so that whatever happens in it can never be traced back to anyone but her.",
+          "objective_facts": [
+            "Department protocol requires two officers present and active recording for any interrogation exceeding two hours.",
+            "The legal window to formally charge or release a suspect without booking is forty-eight hours.",
+            "No incident report or supervisor authorization exists for Mei Lin's extended one-on-one session with Voss."
+          ],
+          "character_knowledge": {
+            "DET_MEI_LIN": {
+              "knows": [
+                "she has disabled the room's recording and turned off her radio to keep this session completely off the books",
+                "the longer this goes without a break, the harder it will be to explain if discovered"
+              ],
+              "hides": [
+                "how deliberately she planned this isolation, letting anyone who asks assume it's just a delayed check-in"
+              ],
+              "believes_falsely": [
+                "believes she can control the pace of this conversation and walk away the moment it stops working for her"
+              ]
+            },
+            "JONAS_VOSS": {
+              "knows": [
+                "that the recording is off and no one is watching, exactly as he needs"
+              ],
+              "hides": [
+                "how carefully he is pacing his revelations about her past to keep her locked in the room rather than walking out"
+              ],
+              "believes_falsely": []
+            },
+            "DET_KAI_YANG": {
+              "knows": [
+                "Mei Lin has missed two radio check-ins and isn't answering her phone",
+                "the interrogation room log shows no activity updates for over an hour"
+              ],
+              "hides": [
+                "his growing suspicion from the rest of the bullpen, not wanting to trigger an official inquiry before he's sure something's actually wrong"
+              ],
+              "believes_falsely": [
+                "assumes she's simply pushed the boundaries of procedure again like she has before, not realizing this time she's crossed a line she can't walk back"
+              ]
+            },
+            "CAPTAIN_DAVID_SUN": {
+              "knows": [
+                "Mei Lin's session with Voss has gone on well past any authorized window"
+              ],
+              "hides": [
+                "his choice not to intervene yet, quietly hoping the situation resolves before it draws outside attention to the room, or to him"
+              ],
+              "believes_falsely": [
+                "believes he still has time to control how this looks on paper if it comes out, underestimating how fast Kai Yang is already moving"
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Detective's Secret",
+          "solution": "Eight years ago, Mei Lin was lead detective on the disappearance of sixteen-year-old Grace Ito. Distracted by an off-the-books relationship with a superior officer at the time, she personally saw and dismissed an anonymous tip naming a location, missing the critical window to act on it; Grace was found dead two weeks later. Mei Lin quietly rewrote her own case notes afterward to blame a dispatch communication failure instead of her own decision. A now-defunct dispatch operator kept private records naming her as having seen and dismissed the tip — records Jonas Voss later acquired through an associate, giving him detailed, provable leverage over her that predates his own arrest.",
+          "objective_facts": [
+            "Eight years ago, Detective Mei Lin was lead on the disappearance of sixteen-year-old Grace Ito, who was found dead two weeks after going missing.",
+            "An anonymous tip naming a location was logged by dispatch twenty-six hours before Grace's body was found and was never acted upon within the case's critical window.",
+            "Mei Lin's official case notes attribute the missed tip to a dispatch communication failure.",
+            "A now-defunct dispatch operator's private records naming Mei Lin as having personally seen and dismissed the tip were never entered into any official department file."
+          ],
+          "character_knowledge": {
+            "DET_MEI_LIN": {
+              "knows": [
+                "she personally saw and dismissed the anonymous tip on Grace Ito's case eight years ago, believing it not credible enough to act on immediately",
+                "she altered the record afterward to shift blame onto a dispatch failure"
+              ],
+              "hides": [
+                "the full truth of what she did from everyone at the precinct, including Kai Yang, out of shame and fear of losing her career"
+              ],
+              "believes_falsely": [
+                "believes this secret is buried completely, with no surviving proof beyond her own memory"
+              ]
+            },
+            "JONAS_VOSS": {
+              "knows": [
+                "that Mei Lin personally dismissed a tip that could have saved Grace Ito, and that she covered it up in her own case file"
+              ],
+              "hides": [
+                "the source and extent of what he actually has on paper, letting her believe he might have more — or less — than he does, to keep her guessing"
+              ],
+              "believes_falsely": [
+                "assumes she'll fold the moment he mentions Grace Ito's name, not accounting for how far her guilt might push her to overcorrect instead of comply"
+              ]
+            },
+            "CAPTAIN_DAVID_SUN": {
+              "knows": [
+                "there were irregularities in the Grace Ito case file years ago that he chose not to formally investigate at the time"
+              ],
+              "hides": [
+                "that he quietly buried his own suspicions about the file to avoid a scandal on his watch, a decision that now leaves him unable to protect Mei Lin without exposing himself too"
+              ],
+              "believes_falsely": [
+                "believes Mei Lin doesn't know that he once suspected something was off in that file, when in fact her fear of exactly that recognition has shaped how she's guarded herself around him ever since"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "Old Files",
+      "theme": "Voss dangles fragments of Mei Lin's covered-up past case while journalist Zoe Han's digging into precinct finances starts brushing against Captain Sun's ledger (The Detective's Secret, The Captain's Ledger).",
+      "intro_note": "Jonas Voss has said only one name — Grace Ito — but it was enough to crack the composure Mei Lin has spent eight years building.",
+      "outro_note": "Voss doesn't ask for his freedom. He asks for something smaller, stranger — and far more dangerous: he wants to know exactly who else knows she's still in this room.",
+      "sections": [
+        "A Detail Too Specific — Voss references something from Grace Ito's file that no rumor could explain (The Detective's Secret)",
+        "A Name in an Old File — Kai Yang, tracing Voss's altered records, stumbles onto a case that predates any of this (The Detective's Secret)",
+        "A Source at the Bar — Zoe Han meets a retired dispatcher who mentions strange patrol patterns near the docks (The Captain's Ledger)",
+        "What Do You Actually Have — Mei Lin tries to call Voss's bluff, and he simply lets her wonder (The Detective's Secret)",
+        "Redirected — Captain Sun quietly intercepts a records request tied to Zoe Han's paper (The Captain's Ledger)",
+        "A Reminder — Voss pivots back to Daniel Wu just long enough to remind Mei Lin what she's really trading for (The Detective's Secret)",
+        "Watching Her Differently — Kai Yang decides not to raise what he's found yet, but can't stop noticing Mei Lin (The Detective's Secret)",
+        "Empty Water — Zoe Han photographs the docks at dusk, confirming the patrol gap for herself (The Captain's Ledger)",
+        "A Warning Call — Captain Sun makes a tense private call about a reporter asking too many questions (The Captain's Ledger)",
+        "The Detail That Confirms It — Voss recites something from the case file only real documentation could contain (The Detective's Secret)",
+        "Two Paths Crossing — Zoe Han and Kai Yang pass each other at the bar, each one closer than they realize (The Captain's Ledger)",
+        "Name Your Price — cornered, Mei Lin finally asks Voss outright what he wants for his silence (The Detective's Secret)",
+        "Not What She Expected — Voss's answer isn't money or freedom, and it changes everything about what he wants (The Detective's Secret)"
+      ],
+      "section_words": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 150,
+          "max": 220,
+          "target": "160 to 190"
+        },
+        null,
+        null,
+        null,
+        {
+          "min": 140,
+          "max": 210,
+          "target": "150 to 180"
+        }
+      ],
+      "section_locations": [
+        "THE_INTERROGATION_ROOM",
+        "PRECINCT_BULLPEN",
+        "THE_BLUE_LANTERN",
+        "THE_INTERROGATION_ROOM",
+        "PRECINCT_BULLPEN",
+        "THE_INTERROGATION_ROOM",
+        "PRECINCT_BULLPEN",
+        "HARBOR_DOCKS",
+        "PRECINCT_BULLPEN",
+        "THE_INTERROGATION_ROOM",
+        "THE_BLUE_LANTERN",
+        "THE_INTERROGATION_ROOM",
+        null
+      ],
+      "case": [
+        {
+          "label": "The Detective's Secret",
+          "solution": "Eight years ago, Mei Lin was lead detective on the disappearance of sixteen-year-old Grace Ito. Distracted by an off-the-books relationship with a superior officer at the time, she personally saw and dismissed an anonymous tip naming a location, missing the critical window to act on it; Grace was found dead two weeks later. Mei Lin quietly rewrote her own case notes afterward to blame a dispatch communication failure instead of her own decision. A now-defunct dispatch operator kept private records naming her as having seen and dismissed the tip — records Jonas Voss later acquired through an associate, giving him detailed, provable leverage over her that predates his own arrest.",
+          "objective_facts": [
+            "Eight years ago, Detective Mei Lin was lead on the disappearance of sixteen-year-old Grace Ito, who was found dead two weeks after going missing.",
+            "An anonymous tip naming a location was logged by dispatch twenty-six hours before Grace's body was found and was never acted upon within the case's critical window.",
+            "Mei Lin's official case notes attribute the missed tip to a dispatch communication failure.",
+            "A now-defunct dispatch operator's private records naming Mei Lin as having personally seen and dismissed the tip were never entered into any official department file."
+          ],
+          "character_knowledge": {
+            "DET_MEI_LIN": {
+              "knows": [
+                "Voss has more than just Grace Ito's name — he's referenced details specific enough that he must have real documentation"
+              ],
+              "hides": [
+                "how badly this has rattled her from Kai Yang, doubling down on the isolation instead of asking for help"
+              ],
+              "believes_falsely": [
+                "believes that if she can just find out what Voss actually has on paper, she can control the damage before anyone else sees it"
+              ]
+            },
+            "JONAS_VOSS": {
+              "knows": [
+                "precisely how much proof he holds versus how much he's implying, and exactly how to space out each fragment for maximum effect"
+              ],
+              "hides": [
+                "that he has no intention of ever fully revealing what he has — the uncertainty itself is the real leverage"
+              ],
+              "believes_falsely": []
+            },
+            "CAPTAIN_DAVID_SUN": {
+              "knows": [
+                "Mei Lin's continued isolation with Voss is now a bigger risk to him than the original case ever was"
+              ],
+              "hides": [
+                "his own suspicion that Voss might know more about the docks than a simple person of interest should, avoiding the question because answering it honestly would implicate himself"
+              ],
+              "believes_falsely": [
+                "believes he can quietly redirect Zoe Han's inquiries away from the ledger without her noticing the deflection"
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Captain's Ledger",
+          "solution": "For six years, Captain David Sun has taken regular payoffs from a harbor smuggling network — the same network tied to Jonas Voss — in exchange for redirecting patrol schedules and burying incident reports tied to specific shipping containers. He keeps a private ledger disguised as old case-budget records, tracking what he's owed and owes. Voss's arrest unsettles him precisely because any real investigation into Daniel Wu risks surfacing a pattern that leads straight back to him.",
+          "objective_facts": [
+            "Over the past six years, multiple harbor-related incident reports were closed without follow-up despite unresolved discrepancies in cargo manifests.",
+            "Captain Sun has personally approved reduced patrol coverage of a specific dock section on a recurring schedule for years.",
+            "A set of handwritten records disguised as old case-budget notes exists in Sun's personal files, cross-referencing dates and dollar figures with no departmental explanation.",
+            "The smuggling network benefiting from this pattern is connected, through at least two intermediaries, to Jonas Voss."
+          ],
+          "character_knowledge": {
+            "CAPTAIN_DAVID_SUN": {
+              "knows": [
+                "exactly what the ledger records and what he has done to earn every entry in it"
+              ],
+              "hides": [
+                "the ledger's existence from everyone in the department, disguising it among ordinary budget paperwork"
+              ],
+              "believes_falsely": [
+                "believes the arrangement has been careful enough to survive any routine audit, not accounting for a journalist working outside departmental channels"
+              ]
+            },
+            "ZOE_HAN": {
+              "knows": [
+                "several harbor incident reports were closed with no follow-up despite clear irregularities in the paperwork",
+                "patrol schedules near the docks show an unusual, recurring pattern of reduced coverage"
+              ],
+              "hides": [
+                "how close she believes she is to naming Sun specifically, not yet ready to publish without more direct proof"
+              ],
+              "believes_falsely": [
+                "believes she's the first person inside or outside the department to notice the pattern, unaware Kai Yang's quiet digging into Voss's altered priors record is converging on the same territory from another angle"
+              ]
+            },
+            "JONAS_VOSS": {
+              "knows": [
+                "that his associates have paid Captain Sun for years to keep this exact stretch of the docks unwatched"
+              ],
+              "hides": [
+                "how directly he could implicate Sun if it ever served his purposes — for now it's simply useful reassurance that the department's own house isn't clean enough to move fast against him"
+              ],
+              "believes_falsely": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "Favors Owed",
+      "theme": "Captain Sun moves to bury all evidence that Mei Lin is in that room, and Voss uses what he knows about department corruption to convince her the whole system is already rotten around her (The Captain's Ledger, The Lock-In).",
+      "intro_note": "Voss has already shown Mei Lin how much he knows about the case she buried years ago, and dropped his first name-tied hints of corruption inside her own precinct — as Zoe Han's search through discretionary funding starts brushing dangerously close to Captain Sun's ledger, the walls in that basement room are closing in from more directions than one.",
+      "outro_note": "With the sign-in sheet gone and Sun ready to erase every trace that Voss was ever held illegally, Mei Lin is now more exposed than she knows — and the deal Voss just offered her sounds less like manipulation and more, dangerously, like the truth.",
+      "sections": [
+        "Cold Coffee, Colder Silence — Kai Yang notices Mei Lin hasn't checked in for over a day and Sun brushes off his concern (The Lock-In).",
+        "The Missing Sign-In Sheet — Sun quietly alters the interrogation room's log before anyone else can look at it (The Lock-In, The Captain's Ledger).",
+        "Names in the Dark — Voss begins naming precinct figures tied to corruption, testing what Mei Lin already suspects (The Captain's Ledger).",
+        "Stonewalled — Kai Yang tries to get Sun to authorize a welfare check on Mei Lin; Sun deflects (The Lock-In).",
+        "The Waiting Room — Anna Wu calls the precinct for an update on Daniel, unaware of what's happening in the basement (The Missing Man).",
+        "The System Is Already Broken — Voss argues the whole department is rotten and urges Mei Lin to trust only herself; she begins to waver (The Lock-In, The Captain's Ledger).",
+        "Numbers That Don't Add Up — Zoe Han meets a nervous source at the Blue Lantern about a discretionary fund (The Captain's Ledger).",
+        "A Word at the Docks — Sun meets a Voss associate at the harbor to keep the smuggling operation from surfacing (The Captain's Ledger).",
+        "How Do You Know That — Mei Lin confronts Voss on how he knows about Sun's corruption; he reveals just enough to seem credible (The Captain's Ledger, The Lock-In).",
+        "A Discrepancy in the Log — Kai Yang finds a gap in the interrogation room's digital log and starts piecing it together (The Lock-In).",
+        "An Offer, Quietly Made — Voss shifts tactics, offering Mei Lin a 'deal' that feels less like a threat and more like partnership (The Lock-In).",
+        "Two Women, One Question — Zoe Han reaches out to Anna Wu, sensing their two stories might be connected (The Missing Man, The Captain's Ledger).",
+        "Erase It — Sun decides to permanently wipe every record that the lock-in ever happened (The Lock-In, The Captain's Ledger)."
+      ],
+      "section_words": [
+        null,
+        {
+          "min": 130,
+          "max": 220,
+          "target": "150 to 190"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 120,
+          "max": 200,
+          "target": "130 to 170"
+        }
+      ],
+      "section_locations": [
+        "PRECINCT_BULLPEN",
+        "PRECINCT_BULLPEN",
+        "THE_INTERROGATION_ROOM",
+        "PRECINCT_BULLPEN",
+        "WU_FAMILY_APARTMENT",
+        "THE_INTERROGATION_ROOM",
+        "THE_BLUE_LANTERN",
+        "HARBOR_DOCKS",
+        "THE_INTERROGATION_ROOM",
+        "PRECINCT_BULLPEN",
+        "THE_INTERROGATION_ROOM",
+        "WU_FAMILY_APARTMENT",
+        "PRECINCT_BULLPEN"
+      ],
+      "case": [
+        {
+          "label": "The Missing Man",
+          "solution": "Daniel Wu stumbled onto a smuggling operation Voss ran through falsified harbor manifests at the Harbor Docks, protected by payoffs to Captain Sun; when Daniel began documenting the discrepancies to go to Internal Affairs, Voss had him seized and hidden alive in a rotating series of safehouses tied to the Blue Lantern's back-room network, intending to make the disappearance permanent once attention faded — Voss's own arrest was not an accident but a calculated risk to gauge what police already knew and to manipulate the one detective vulnerable enough to break protocol for him.",
+          "objective_facts": [
+            "Daniel Wu told his sister Anna he'd 'found something wrong' at the docks three days before he vanished.",
+            "Daniel Wu's phone last pinged near the Harbor Docks the night of his disappearance.",
+            "Daniel Wu had been quietly photographing shipping manifests for weeks before he disappeared.",
+            "Daniel Wu is alive, held in a location controlled by Voss's associates and moved periodically."
+          ],
+          "character_knowledge": {
+            "DET_MEI_LIN": {
+              "knows": [
+                "Voss has implied Daniel's disappearance is tied to the docks, though he won't confirm details."
+              ],
+              "hides": [
+                "How close she believes she is to a location, because admitting it would mean admitting how far she's already gone off the books."
+              ],
+              "believes_falsely": [
+                "She believes Voss is one hard push away from giving up Daniel's exact location, when he is deliberately pacing every fragment he offers."
+              ]
+            },
+            "JONAS_VOSS": {
+              "knows": [
+                "The complete truth: Daniel is alive, hidden, and moved on his orders."
+              ],
+              "hides": [
+                "The current safehouse and the identities of the associates holding Daniel."
+              ],
+              "believes_falsely": [
+                "He believes he still has several more days before anyone outside Mei Lin realizes he's been held illegally, giving him room to maneuver."
+              ]
+            },
+            "ANNA_WU": {
+              "knows": [
+                "Daniel mentioned finding 'something wrong' at the docks before he disappeared."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "She believes the department is actively, properly searching for Daniel, unaware the one detective pursuing him has gone completely off the record."
+              ]
+            },
+            "DET_KAI_YANG": {
+              "knows": [
+                "Daniel's last known movements point to the Harbor Docks."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "He believes if he can just get Mei Lin alone to talk, she'll come back into procedure — not realizing how deep she's already committed to breaking it."
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Lock-In",
+          "solution": "Mei Lin disabled the interrogation room's recording system and left no sign-in record to illegally hold Voss alone for over forty-eight hours without formal charge, believing she could extract Daniel's location before it was too late — the very absence of oversight and broken chain of custody she created is the exact procedural loophole Voss has been engineering toward, since it will let him challenge any confession or evidence gathered in that room as fatally tainted.",
+          "objective_facts": [
+            "The interrogation room's recording system was manually disabled at 11:47pm the night Mei Lin locked herself in with Voss.",
+            "No sign-in or sign-out record exists for Voss's holding beyond the legal 24-hour window.",
+            "Kai Yang was the only detective to notice Mei Lin had gone dark before Captain Sun learned of it."
+          ],
+          "character_knowledge": {
+            "DET_MEI_LIN": {
+              "knows": [
+                "She has broken protocol and time is running out before someone above her notices."
+              ],
+              "hides": [
+                "The true length of time she's been in the room, even from her own sense of how far she's gone."
+              ],
+              "believes_falsely": [
+                "She believes she can undo the illegality once Daniel is found, that results will excuse the method in any review."
+              ]
+            },
+            "JONAS_VOSS": {
+              "knows": [
+                "Every detail of what Mei Lin has broken — no recording, no log, no oversight — and is cataloguing it as leverage."
+              ],
+              "hides": [
+                "That he intends to use this exact illegality as his own eventual exit, not just as a bargaining chip."
+              ],
+              "believes_falsely": []
+            },
+            "CAPTAIN_DAVID_SUN": {
+              "knows": [
+                "Mei Lin is illegally holding Voss alone, off the books."
+              ],
+              "hides": [
+                "This fact from the rest of the precinct, actively altering the interrogation room's log to erase it."
+              ],
+              "believes_falsely": [
+                "He believes he can fully control the fallout by controlling the paperwork alone, without anyone questioning the gap."
+              ]
+            },
+            "DET_KAI_YANG": {
+              "knows": [
+                "Mei Lin has gone dark and he suspects she's alone with Voss."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "He believes Sun will back him up in raising the alarm, not realizing his captain is actively burying it."
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Detective's Secret",
+          "solution": "Years ago, Mei Lin was lead detective on the disappearance of a teenage girl, Lily Okafor, and missed a credible tip pointing to Lily's location because she was overextended and exhausted; Lily was found dead six weeks later, and Mei Lin buried the internal review's finding of her own negligence rather than face it — Voss knows the story because one of his own harbor associates was a patrol officer on that case and mentioned it to him years later as idle precinct gossip, not because Voss has any deeper connection to it.",
+          "objective_facts": [
+            "An internal review of the Lily Okafor case found a missed tip that was never formally logged.",
+            "Mei Lin requested and was granted early sign-off on the internal review before it went to the review board.",
+            "The officer who first mentioned the Okafor case to Voss has since left the department and cannot corroborate anything directly to Internal Affairs."
+          ],
+          "character_knowledge": {
+            "DET_MEI_LIN": {
+              "knows": [
+                "Voss has fragments of the Okafor case — details only someone with inside knowledge would have."
+              ],
+              "hides": [
+                "The full truth of what she buried in the internal review, from everyone, including herself most days."
+              ],
+              "believes_falsely": [
+                "She believes Voss's knowledge is limited to secondhand gossip and can't actually be corroborated by anyone."
+              ]
+            },
+            "JONAS_VOSS": {
+              "knows": [
+                "A patrol officer's secondhand account of a missed tip in an old missing-persons case tied to Mei Lin's name."
+              ],
+              "hides": [
+                "That his source is thin, secondhand, and years removed — letting Mei Lin believe he knows far more than he does."
+              ],
+              "believes_falsely": []
+            }
+          }
+        },
+        {
+          "label": "The Captain's Ledger",
+          "solution": "Captain David Sun has spent years accepting payoffs from Voss's smuggling network to keep harbor patrol schedules predictable and certain shipments unexamined, funneled through an account structure hidden in precinct discretionary funds Zoe Han is now tracing; his cover-up of Daniel Wu's disappearance is really a cover-up of his own exposure, and he is willing to erase Mei Lin's illegal lock-in from the record entirely rather than let an internal investigation start pulling threads that lead back to him.",
+          "objective_facts": [
+            "Captain Sun has met with a Voss associate at the Blue Lantern on the same dates harbor patrol schedules were altered.",
+            "A discretionary precinct fund line has received unexplained deposits matching gaps in Zoe Han's financial records.",
+            "Captain Sun personally authorized the extended, unlogged detention of Voss shortly after learning Mei Lin was in the room alone."
+          ],
+          "character_knowledge": {
+            "CAPTAIN_DAVID_SUN": {
+              "knows": [
+                "The full extent of his own payoffs and exactly why he can't afford an internal investigation."
+              ],
+              "hides": [
+                "The entire arrangement from Zoe Han, Internal Affairs, and his own detectives."
+              ],
+              "believes_falsely": [
+                "He believes his relationship with Voss's network is still fully contained and undetectable."
+              ]
+            },
+            "JONAS_VOSS": {
+              "knows": [
+                "The precise nature and depth of Sun's corruption, since he's the one paying him."
+              ],
+              "hides": [
+                "The full extent of his leverage over Sun, letting Mei Lin see only enough to believe the system is rotten."
+              ],
+              "believes_falsely": []
+            },
+            "ZOE_HAN": {
+              "knows": [
+                "A discretionary precinct fund shows irregular deposits she can't yet explain."
+              ],
+              "hides": [
+                "Her source's identity, to protect them from retaliation."
+              ],
+              "believes_falsely": [
+                "She believes the irregularities point to a single low-level clerk skimming funds, not to Captain Sun directly."
+              ]
+            },
+            "DET_MEI_LIN": {
+              "knows": [
+                "Sun is stalling on something, though she doesn't yet know what."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "She believes Sun's silence is about protecting his own career from her illegality, not about hiding his own corruption."
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "The Confession That Wasn't",
+      "theme": "Cornered, Mei Lin lets slip enough of her own truth to hand Voss real leverage, while Anna Wu finds a lead connecting her brother to Voss's old associates (The Detective's Secret, The Missing Man).",
+      "intro_note": "The sign-in sheet is gone, scrubbed by Sun's own hand, leaving Mei Lin as the only remaining proof the lock-in ever happened — and in the room, worn down by hours of Voss's quiet, patient pressure, she is one exhausted admission away from handing him something far more dangerous than a case file.",
+      "outro_note": "Anna Wu is no longer just knocking on doors — she has a name now, one that ties her brother directly to the man locked in that basement room, and Zoe Han is close enough to publishing that Captain Sun can no longer pretend the walls aren't closing in.",
+      "sections": [
+        "The Only Proof Left — Mei Lin realizes with the sign-in sheet gone, she is now the sole evidence the lock-in ever happened (The Lock-In).",
+        "Lily's Name — Voss presses on the specifics of the Okafor case, cornering Mei Lin emotionally (The Detective's Secret).",
+        "What I Buried — Exhausted, Mei Lin confesses the real truth of what she hid in the internal review (The Detective's Secret).",
+        "The Backup Sun Forgot — Kai Yang digs through digital backups Sun didn't think to erase and finds a fragment of the missing log (The Lock-In).",
+        "A Name From the Docks — Anna Wu visits the Blue Lantern following a name Daniel mentioned before he vanished (The Missing Man).",
+        "The Ledger Behind the Bar — Anna overhears something tying Daniel directly to one of Voss's associates (The Missing Man).",
+        "Two Threads, One Table — Zoe Han and Anna Wu finally compare what each of them knows (The Missing Man, The Captain's Ledger).",
+        "New Terms — Now holding real leverage, Voss subtly shifts the terms of their exchange (The Detective's Secret, The Lock-In).",
+        "Contain It — Sun, rattled by Kai Yang's digging, tries to control the narrative inside the precinct (The Lock-In, The Captain's Ledger).",
+        "More Than I Meant To Give — Mei Lin realizes, with dawning dread, how much she's actually handed Voss (The Detective's Secret).",
+        "A Call From the Harbor — Sun meets a Voss associate worried about Anna Wu's digging (The Captain's Ledger, The Missing Man).",
+        "A Gift, He Calls It — Voss offers Mei Lin a genuine fragment of Daniel's location, deepening her dependence on him (The Lock-In, The Missing Man).",
+        "The Door I'm Going to Knock On — Anna Wu, closer to the truth than anyone, decides to confront the precinct directly (The Missing Man)."
+      ],
+      "section_words": [
+        null,
+        null,
+        {
+          "min": 140,
+          "max": 220,
+          "target": "150 to 190"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 130,
+          "max": 210,
+          "target": "140 to 170"
+        },
+        null,
+        null,
+        {
+          "min": 130,
+          "max": 210,
+          "target": "140 to 170"
+        }
+      ],
+      "section_locations": [
+        "THE_INTERROGATION_ROOM",
+        "THE_INTERROGATION_ROOM",
+        "THE_INTERROGATION_ROOM",
+        "PRECINCT_BULLPEN",
+        "THE_BLUE_LANTERN",
+        "THE_BLUE_LANTERN",
+        "WU_FAMILY_APARTMENT",
+        "THE_INTERROGATION_ROOM",
+        "PRECINCT_BULLPEN",
+        "THE_INTERROGATION_ROOM",
+        "HARBOR_DOCKS",
+        "THE_INTERROGATION_ROOM",
+        "WU_FAMILY_APARTMENT"
+      ],
+      "case": [
+        {
+          "label": "The Missing Man",
+          "solution": "Daniel Wu stumbled onto a smuggling operation Voss ran through falsified harbor manifests at the Harbor Docks, protected by payoffs to Captain Sun; when Daniel began documenting the discrepancies to go to Internal Affairs, Voss had him seized and hidden alive in a rotating series of safehouses tied to the Blue Lantern's back-room network, intending to make the disappearance permanent once attention faded — Voss's own arrest was not an accident but a calculated risk to gauge what police already knew and to manipulate the one detective vulnerable enough to break protocol for him.",
+          "objective_facts": [
+            "Daniel Wu told his sister Anna he'd 'found something wrong' at the docks three days before he vanished.",
+            "Daniel Wu's phone last pinged near the Harbor Docks the night of his disappearance.",
+            "Daniel Wu had been quietly photographing shipping manifests for weeks before he disappeared.",
+            "Daniel Wu is alive, held in a location controlled by Voss's associates and moved periodically."
+          ],
+          "character_knowledge": {
+            "DET_MEI_LIN": {
+              "knows": [
+                "Voss has just offered her a genuine fragment pointing toward Daniel's location, not another stalling tactic."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "She believes accepting this 'gift' brings her closer to Daniel without cost, not realizing it's deepening her dependence on Voss."
+              ]
+            },
+            "JONAS_VOSS": {
+              "knows": [
+                "The complete truth of where Daniel is and who is holding him."
+              ],
+              "hides": [
+                "The exact current safehouse, offering only enough of a fragment to keep Mei Lin compliant."
+              ],
+              "believes_falsely": []
+            },
+            "ANNA_WU": {
+              "knows": [
+                "A name overheard at the Blue Lantern ties Daniel directly to one of Voss's known associates."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "She believes the precinct will act immediately once she brings them this name, unaware of how compromised the investigation already is."
+              ]
+            },
+            "DET_KAI_YANG": {
+              "knows": [
+                "A recovered log fragment proves the interrogation room was tampered with the same night Daniel's case went cold on official channels."
+              ],
+              "hides": [],
+              "believes_falsely": []
+            },
+            "ZOE_HAN": {
+              "knows": [
+                "Anna Wu's brother's disappearance may be connected to the same financial irregularities she's been tracing."
+              ],
+              "hides": [],
+              "believes_falsely": []
+            }
+          }
+        },
+        {
+          "label": "The Lock-In",
+          "solution": "Mei Lin disabled the interrogation room's recording system and left no sign-in record to illegally hold Voss alone for over forty-eight hours without formal charge, believing she could extract Daniel's location before it was too late — the very absence of oversight and broken chain of custody she created is the exact procedural loophole Voss has been engineering toward, since it will let him challenge any confession or evidence gathered in that room as fatally tainted.",
+          "objective_facts": [
+            "The interrogation room's recording system was manually disabled at 11:47pm the night Mei Lin locked herself in with Voss.",
+            "No sign-in or sign-out record exists for Voss's holding beyond the legal 24-hour window.",
+            "Kai Yang was the only detective to notice Mei Lin had gone dark before Captain Sun learned of it."
+          ],
+          "character_knowledge": {
+            "DET_MEI_LIN": {
+              "knows": [
+                "With the sign-in sheet erased, she alone is now the only proof the lock-in ever happened."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "She believes being the sole witness gives her control over how this ends, not realizing it makes her more exposed, not less."
+              ]
+            },
+            "JONAS_VOSS": {
+              "knows": [
+                "Mei Lin has just confessed real, personal leverage to him — a far more valuable asset than anything about Daniel."
+              ],
+              "hides": [
+                "That he now intends to use her confession, and the illegality itself, as the mechanism of his own eventual release."
+              ],
+              "believes_falsely": []
+            },
+            "CAPTAIN_DAVID_SUN": {
+              "knows": [
+                "Kai Yang is digging through digital backups he didn't think to erase."
+              ],
+              "hides": [
+                "His panic from the rest of the precinct, trying to contain the narrative internally before it spreads."
+              ],
+              "believes_falsely": [
+                "He believes he can still control this quietly, without realizing Kai Yang already has a fragment of proof."
+              ]
+            },
+            "DET_KAI_YANG": {
+              "knows": [
+                "A digital backup fragment proves the interrogation room log was tampered with."
+              ],
+              "hides": [],
+              "believes_falsely": []
+            }
+          }
+        },
+        {
+          "label": "The Detective's Secret",
+          "solution": "Years ago, Mei Lin was lead detective on the disappearance of a teenage girl, Lily Okafor, and missed a credible tip pointing to Lily's location because she was overextended and exhausted; Lily was found dead six weeks later, and Mei Lin buried the internal review's finding of her own negligence rather than face it — Voss knows the story because one of his own harbor associates was a patrol officer on that case and mentioned it to him years later as idle precinct gossip, not because Voss has any deeper connection to it.",
+          "objective_facts": [
+            "An internal review of the Lily Okafor case found a missed tip that was never formally logged.",
+            "Mei Lin requested and was granted early sign-off on the internal review before it went to the review board.",
+            "The officer who first mentioned the Okafor case to Voss has since left the department and cannot corroborate anything directly to Internal Affairs."
+          ],
+          "character_knowledge": {
+            "DET_MEI_LIN": {
+              "knows": [
+                "She has now confessed the true, unredacted story of the missed tip and her own buried negligence to Voss directly."
+              ],
+              "hides": [
+                "This confession from the precinct entirely — no one else knows what she just admitted."
+              ],
+              "believes_falsely": [
+                "She believes confessing bought her Voss's genuine trust and cooperation, mistaking his calm for compassion."
+              ]
+            },
+            "JONAS_VOSS": {
+              "knows": [
+                "The full, real story now, straight from Mei Lin herself — no longer secondhand gossip."
+              ],
+              "hides": [
+                "How he intends to use this new leverage, letting her believe the confession changed nothing between them."
+              ],
+              "believes_falsely": []
+            }
+          }
+        },
+        {
+          "label": "The Captain's Ledger",
+          "solution": "Captain David Sun has spent years accepting payoffs from Voss's smuggling network to keep harbor patrol schedules predictable and certain shipments unexamined, funneled through an account structure hidden in precinct discretionary funds Zoe Han is now tracing; his cover-up of Daniel Wu's disappearance is really a cover-up of his own exposure, and he is willing to erase Mei Lin's illegal lock-in from the record entirely rather than let an internal investigation start pulling threads that lead back to him.",
+          "objective_facts": [
+            "Captain Sun has met with a Voss associate at the Blue Lantern on the same dates harbor patrol schedules were altered.",
+            "A discretionary precinct fund line has received unexplained deposits matching gaps in Zoe Han's financial records.",
+            "Captain Sun personally authorized the extended, unlogged detention of Voss shortly after learning Mei Lin was in the room alone."
+          ],
+          "character_knowledge": {
+            "CAPTAIN_DAVID_SUN": {
+              "knows": [
+                "Voss's associate at the harbor is worried about Anna Wu's digging drawing attention to the operation."
+              ],
+              "hides": [
+                "This meeting and its subject from everyone at the precinct."
+              ],
+              "believes_falsely": [
+                "He believes containing Kai Yang's suspicions internally is still possible, not realizing Anna and Zoe are now comparing notes."
+              ]
+            },
+            "JONAS_VOSS": {
+              "knows": [
+                "Sun's network is growing nervous as outside pressure builds."
+              ],
+              "hides": [],
+              "believes_falsely": []
+            },
+            "ZOE_HAN": {
+              "knows": [
+                "Anna Wu's information about Daniel and the Blue Lantern may connect directly to the fund irregularities she's tracing."
+              ],
+              "hides": [
+                "Her working theory from Sun's office, to avoid tipping him off before she can confirm it."
+              ],
+              "believes_falsely": []
+            },
+            "DET_MEI_LIN": {
+              "knows": [],
+              "hides": [],
+              "believes_falsely": [
+                "She still believes Sun's stonewalling is about her own illegality, not about a corruption network he's desperate to protect."
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "Off the Record",
+      "theme": "Zoe Han publishes the first piece of her corruption story, forcing Captain Sun into damage control, while Voss keeps trading fragments of Daniel Wu's location for pieces of Mei Lin's compliance (The Captain's Ledger, The Lock-In).",
+      "intro_note": "Zoe Han's story is hours from going live, Anna Wu has a name from Daniel's own notes staring back at her from the article draft, and in the interrogation room, Voss has just handed Mei Lin her first real fragment of her brother's location — the exact kind of gift that makes a desperate detective trust exactly the wrong person.",
+      "outro_note": "With her guard down and her hope up, Mei Lin has no idea how much Voss has already built the trap around her using her own trust as its final wall — and Kai Yang, closer than ever to the truth about her disappearance, has just found the one piece of evidence that will finally break the silence wide open.",
+      "sections": [
+        "The Story Goes Live — Zoe Han's first article on precinct financial irregularities publishes, and the bullpen goes quiet then loud (The Captain's Ledger).",
+        "Damage Control — Sun works the phones, denying everything to anyone who will listen (The Captain's Ledger).",
+        "He Heard — Voss learns of the article through Mei Lin and recalibrates exactly how to use it against her (The Captain's Ledger, The Lock-In).",
+        "Connecting Dots — Kai Yang, watching Sun's panic, starts wondering if his captain is the story Zoe Han is chasing (The Captain's Ledger, The Lock-In).",
+        "A Name in Print — Anna Wu reads the article and recognizes a name from Daniel's own notes (The Missing Man, The Captain's Ledger).",
+        "The First Real Fragment — Voss trades a genuine piece of Daniel's location for a concession from Mei Lin (The Lock-In, The Missing Man).",
+        "The Operation at Risk — Sun meets his harbor contact urgently as the smuggling network feels the article's heat (The Captain's Ledger).",
+        "An Alliance, Off the Record — Zoe Han and Anna Wu meet properly, formally combining what they each know (The Missing Man, The Captain's Ledger).",
+        "Too Much Trust — Hopeful over the new lead, Mei Lin begins trusting Voss more than she should (The Lock-In, The Detective's Secret).",
+        "Following the Fragment — Kai Yang chases the lead on his own and gets close to the interrogation room's secret (The Lock-In).",
+        "Two Women Working Together — Sun realizes Zoe and Anna are now collaborating and panics (The Captain's Ledger, The Missing Man).",
+        "The Next, Bigger Ask — Sensing Mei Lin's compliance deepening, Voss pushes for something far more dangerous than information (The Lock-In).",
+        "A Drastic Decision — Cornered from every side, Sun decides to act before the walls close in completely (The Captain's Ledger, The Lock-In)."
+      ],
+      "section_words": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 130,
+          "max": 210,
+          "target": "140 to 170"
+        }
+      ],
+      "section_locations": [
+        "PRECINCT_BULLPEN",
+        "PRECINCT_BULLPEN",
+        "THE_INTERROGATION_ROOM",
+        "PRECINCT_BULLPEN",
+        "WU_FAMILY_APARTMENT",
+        "THE_INTERROGATION_ROOM",
+        "HARBOR_DOCKS",
+        "THE_BLUE_LANTERN",
+        "THE_INTERROGATION_ROOM",
+        "PRECINCT_BULLPEN",
+        "PRECINCT_BULLPEN",
+        "THE_INTERROGATION_ROOM",
+        "PRECINCT_BULLPEN"
+      ],
+      "case": [
+        {
+          "label": "The Missing Man",
+          "solution": "Daniel Wu stumbled onto a smuggling operation Voss ran through falsified harbor manifests at the Harbor Docks, protected by payoffs to Captain Sun; when Daniel began documenting the discrepancies to go to Internal Affairs, Voss had him seized and hidden alive in a rotating series of safehouses tied to the Blue Lantern's back-room network, intending to make the disappearance permanent once attention faded — Voss's own arrest was not an accident but a calculated risk to gauge what police already knew and to manipulate the one detective vulnerable enough to break protocol for him.",
+          "objective_facts": [
+            "Daniel Wu told his sister Anna he'd 'found something wrong' at the docks three days before he vanished.",
+            "Daniel Wu's phone last pinged near the Harbor Docks the night of his disappearance.",
+            "Daniel Wu had been quietly photographing shipping manifests for weeks before he disappeared.",
+            "Daniel Wu is alive, held in a location controlled by Voss's associates and moved periodically."
+          ],
+          "character_knowledge": {
+            "DET_MEI_LIN": {
+              "knows": [
+                "Voss has now given her a genuine fragment of Daniel's location in exchange for a real concession."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "She believes this exchange proves Voss is finally cooperating in good faith, not realizing it's the next stage of his leverage."
+              ]
+            },
+            "JONAS_VOSS": {
+              "knows": [
+                "The complete truth of where Daniel is and who is holding him."
+              ],
+              "hides": [
+                "The full location, offering only a real but incomplete fragment to deepen Mei Lin's trust."
+              ],
+              "believes_falsely": []
+            },
+            "ANNA_WU": {
+              "knows": [
+                "A name in Zoe Han's published article matches a name from Daniel's own notes."
+              ],
+              "hides": [],
+              "believes_falsely": []
+            },
+            "ZOE_HAN": {
+              "knows": [
+                "Daniel Wu's disappearance connects directly to the same network she's exposing in her financial story."
+              ],
+              "hides": [],
+              "believes_falsely": []
+            },
+            "CAPTAIN_DAVID_SUN": {
+              "knows": [
+                "Anna Wu and Zoe Han are now working together, connecting Daniel's case to his own corruption."
+              ],
+              "hides": [
+                "His panic over this alliance from everyone at the precinct."
+              ],
+              "believes_falsely": []
+            }
+          }
+        },
+        {
+          "label": "The Lock-In",
+          "solution": "Mei Lin disabled the interrogation room's recording system and left no sign-in record to illegally hold Voss alone for over forty-eight hours without formal charge, believing she could extract Daniel's location before it was too late — the very absence of oversight and broken chain of custody she created is the exact procedural loophole Voss has been engineering toward, since it will let him challenge any confession or evidence gathered in that room as fatally tainted.",
+          "objective_facts": [
+            "The interrogation room's recording system was manually disabled at 11:47pm the night Mei Lin locked herself in with Voss.",
+            "No sign-in or sign-out record exists for Voss's holding beyond the legal 24-hour window.",
+            "Kai Yang was the only detective to notice Mei Lin had gone dark before Captain Sun learned of it."
+          ],
+          "character_knowledge": {
+            "DET_MEI_LIN": {
+              "knows": [
+                "Voss is now asking for something far bigger than information — a concession that would deepen her exposure."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "She believes her growing trust in Voss is earned and rational, not realizing how deliberately he has engineered it."
+              ]
+            },
+            "JONAS_VOSS": {
+              "knows": [
+                "Mei Lin's compliance is deepening exactly as he planned, and the moment is close to ask for the one thing he actually needs."
+              ],
+              "hides": [
+                "That his next request is the final piece of his own escape plan, not just another test of her loyalty."
+              ],
+              "believes_falsely": []
+            },
+            "CAPTAIN_DAVID_SUN": {
+              "knows": [
+                "Kai Yang is actively chasing a lead that could expose the entire lock-in."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "He believes a drastic move now can still contain the situation, not realizing how close Kai Yang already is."
+              ]
+            },
+            "DET_KAI_YANG": {
+              "knows": [
+                "A fragment he's been chasing has led him to the edge of discovering the interrogation room's secret."
+              ],
+              "hides": [],
+              "believes_falsely": []
+            }
+          }
+        },
+        {
+          "label": "The Detective's Secret",
+          "solution": "Years ago, Mei Lin was lead detective on the disappearance of a teenage girl, Lily Okafor, and missed a credible tip pointing to Lily's location because she was overextended and exhausted; Lily was found dead six weeks later, and Mei Lin buried the internal review's finding of her own negligence rather than face it — Voss knows the story because one of his own harbor associates was a patrol officer on that case and mentioned it to him years later as idle precinct gossip, not because Voss has any deeper connection to it.",
+          "objective_facts": [
+            "An internal review of the Lily Okafor case found a missed tip that was never formally logged.",
+            "Mei Lin requested and was granted early sign-off on the internal review before it went to the review board.",
+            "The officer who first mentioned the Okafor case to Voss has since left the department and cannot corroborate anything directly to Internal Affairs."
+          ],
+          "character_knowledge": {
+            "DET_MEI_LIN": {
+              "knows": [
+                "Voss has not used her confession against her yet, and she reads his patience as mercy."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "She believes her secret is safe with Voss because he hasn't spent it yet, not realizing he's simply waiting for the moment it's worth the most."
+              ]
+            },
+            "JONAS_VOSS": {
+              "knows": [
+                "Mei Lin's confession remains his most personal, most powerful piece of leverage over her."
+              ],
+              "hides": [
+                "That he is deliberately holding it in reserve for the exact moment he needs maximum control."
+              ],
+              "believes_falsely": []
+            }
+          }
+        },
+        {
+          "label": "The Captain's Ledger",
+          "solution": "Captain David Sun has spent years accepting payoffs from Voss's smuggling network to keep harbor patrol schedules predictable and certain shipments unexamined, funneled through an account structure hidden in precinct discretionary funds Zoe Han is now tracing; his cover-up of Daniel Wu's disappearance is really a cover-up of his own exposure, and he is willing to erase Mei Lin's illegal lock-in from the record entirely rather than let an internal investigation start pulling threads that lead back to him.",
+          "objective_facts": [
+            "Captain Sun has met with a Voss associate at the Blue Lantern on the same dates harbor patrol schedules were altered.",
+            "A discretionary precinct fund line has received unexplained deposits matching gaps in Zoe Han's financial records.",
+            "Captain Sun personally authorized the extended, unlogged detention of Voss shortly after learning Mei Lin was in the room alone."
+          ],
+          "character_knowledge": {
+            "CAPTAIN_DAVID_SUN": {
+              "knows": [
+                "Zoe Han's published story has put his entire operation and cover-up at serious risk."
+              ],
+              "hides": [
+                "His panic and his network's exposure from everyone at the precinct, working the phones to deny everything."
+              ],
+              "believes_falsely": [
+                "He believes denial and pressure on his contacts can still hold the line, underestimating how much Zoe and Anna already have."
+              ]
+            },
+            "JONAS_VOSS": {
+              "knows": [
+                "Sun's network is destabilizing under the article's exposure."
+              ],
+              "hides": [],
+              "believes_falsely": []
+            },
+            "ZOE_HAN": {
+              "knows": [
+                "Her published story has confirmed enough irregularities to draw Sun into visible damage control."
+              ],
+              "hides": [
+                "Her next round of sourcing, to avoid tipping off Sun before she can confirm his direct involvement."
+              ],
+              "believes_falsely": []
+            },
+            "DET_MEI_LIN": {
+              "knows": [
+                "The article's fallout is rattling Sun in a way that goes beyond simple embarrassment."
+              ],
+              "hides": [],
+              "believes_falsely": []
+            },
+            "DET_KAI_YANG": {
+              "knows": [
+                "Sun's panicked reaction to the article suggests he may be the very story Zoe Han is chasing."
+              ],
+              "hides": [],
+              "believes_falsely": []
+            },
+            "ANNA_WU": {
+              "knows": [
+                "The corruption Zoe Han is exposing connects directly to the department handling her brother's case."
+              ],
+              "hides": [],
+              "believes_falsely": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "The Long Game",
+      "theme": "Believing she's finally winning, Mei Lin fails to notice Voss quietly assembling the exact conditions he needs, as Kai Yang closes in on proof of where she's been hiding (The Lock-In, The Detective's Secret).",
+      "intro_note": "Zoe Han's exposé has Captain Sun scrambling to bury cancelled raids and reassign blame, and in the room below, Jonas Voss has just traded Mei Lin a sliver of Daniel Wu's location for something that cost her far more than she meant to give.",
+      "outro_note": "As Mei Lin lets herself believe she's finally winning, Kai Yang finds the one log entry proving she's been altering her own check-ins for days — and starts walking toward Interrogation Room 3.",
+      "sections": [
+        "Cold Coffee, Warm Logs",
+        "Winning Position",
+        "A Name From the Water",
+        "The Weight of Rank",
+        "Half a Mile of Silence",
+        "Old Case Number",
+        "What He Doesn't Say",
+        "Bargaining Chip",
+        "Return to the Register",
+        "The Log Kai Yang Finds",
+        "Sun's Quiet Panic",
+        "The Last Calm Exchange",
+        "Walking Toward the Door"
+      ],
+      "section_words": [
+        null,
+        null,
+        {
+          "min": 130,
+          "max": 220,
+          "target": "140 to 180"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 130,
+          "max": 220,
+          "target": "140 to 180"
+        }
+      ],
+      "section_locations": [
+        "PRECINCT_BULLPEN",
+        "THE_INTERROGATION_ROOM",
+        null,
+        "PRECINCT_BULLPEN",
+        "THE_INTERROGATION_ROOM",
+        "PRECINCT_BULLPEN",
+        "THE_BLUE_LANTERN",
+        "THE_INTERROGATION_ROOM",
+        null,
+        "PRECINCT_BULLPEN",
+        null,
+        "THE_INTERROGATION_ROOM",
+        "PRECINCT_BULLPEN"
+      ],
+      "case": [
+        {
+          "label": "The Lock-In",
+          "solution": "Mei Lin used her own supervisor override codes to disable Interrogation Room 3's camera feed and magnetic door lock, sealing herself inside with Voss without a warrant, a lawyer, or backup — an act she framed to herself as buying time to save Daniel Wu, but which is in fact the exact condition of total privacy and unsupervised control Jonas Voss spent months maneuvering her into, because that same override, once triggered, also silently unlocks the corridor's rear emergency exit protocol from the inside.",
+          "objective_facts": [
+            "Interrogation Room 3's camera feed and door lock are tied to the same supervisor override circuit, installed after a budget-cut consolidation two years ago.",
+            "Mei Lin entered her personal override code into the room's control panel at 11:47 PM on the first night of the lock-in.",
+            "The override code, once active, also silently disables the corridor's rear emergency exit alarm for as long as the room stays locked from the inside.",
+            "Voss requested transfer to Interrogation Room 3 specifically, citing a claimed panic disorder around open rooms, four months before his arrest."
+          ],
+          "character_knowledge": {
+            "DET_MEI_LIN": {
+              "knows": [
+                "She alone has full control of the room's access and has been quietly extending the lock-in past its original justification.",
+                "She is getting real, verifiable fragments of Daniel Wu's location out of Voss, piece by piece."
+              ],
+              "hides": [
+                "That she has falsified her own check-in logs for several consecutive shifts to keep the lock-in from being noticed."
+              ],
+              "believes_falsely": [
+                "She believes she controls the pace of this exchange and that Voss needs her cooperation as much as she needs his — a read of him that is exactly backwards."
+              ]
+            },
+            "JONAS_VOSS": {
+              "knows": [
+                "The override circuit's dual function is the precise mechanism his eventual exit depends on.",
+                "Kai Yang is getting closer to the truth, but not close enough yet to matter."
+              ],
+              "hides": [
+                "The real reason he requested this specific room months before his arrest."
+              ],
+              "believes_falsely": []
+            },
+            "DET_KAI_YANG": {
+              "knows": [
+                "Mei Lin has gone quiet and missed check-ins, and something about her recent logs doesn't add up."
+              ],
+              "hides": [
+                "From Captain Sun, how far he suspects Mei Lin has actually gone off-protocol, wanting to protect her until he's sure."
+              ],
+              "believes_falsely": [
+                "He assumes she's running an authorized off-book angle within some boundary, with no idea how far past it she's already gone or that Voss engineered the whole arrangement."
+              ]
+            },
+            "CAPTAIN_DAVID_SUN": {
+              "knows": [
+                "The lock-in is happening and has been quietly keeping it off official paperwork."
+              ],
+              "hides": [
+                "From the wider precinct that he's suppressing evidence of Mei Lin's presence in that room."
+              ],
+              "believes_falsely": [
+                "He believes he can contain the situation a little longer, not realizing Zoe Han's story is about to make containment impossible."
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Detective's Secret",
+          "solution": "Eight years ago, as a young detective, Mei Lin led the search for a missing teenage witness to a harbor smuggling handoff; under pressure from her then-lieutenant, David Sun, she suppressed a forensic lead that could have reopened the case and exposed the network, and the witness, Marcus Delgado, was never found — a guilt she has never spoken aloud, and the exact leverage Jonas Voss has held over her since the first night of the lock-in, because his own network was the one that made Delgado disappear.",
+          "objective_facts": [
+            "The suppressed forensic report from Mei Lin's old case remains sealed in evidence storage under a case number she has not looked at in eight years.",
+            "The teenage witness in that old case, Marcus Delgado, has never been found, alive or dead.",
+            "Jonas Voss's network handled Marcus Delgado's original disappearance, using the same operational pattern later used against Daniel Wu.",
+            "Mei Lin requested and was denied a transfer off the missing-persons unit exactly one week after the Delgado case went cold."
+          ],
+          "character_knowledge": {
+            "DET_MEI_LIN": {
+              "knows": [
+                "The full truth of the Delgado case, her own suppression of the forensic lead, and — now, from Voss — that his network was behind Delgado's disappearance."
+              ],
+              "hides": [
+                "This entire history from Kai Yang, from Captain Sun, from everyone at the precinct."
+              ],
+              "believes_falsely": [
+                "She believes solving Daniel Wu's case can quietly atone for what she failed to do for Marcus Delgado."
+              ]
+            },
+            "JONAS_VOSS": {
+              "knows": [
+                "Everything about his network's role in Delgado's disappearance, and has now told Mei Lin just enough of it to destabilize her."
+              ],
+              "hides": [
+                "How deliberately he built tonight's entire dynamic around this specific piece of leverage, months in advance."
+              ],
+              "believes_falsely": []
+            },
+            "DET_KAI_YANG": {
+              "knows": [
+                "Evidence that Mei Lin has been altering or ignoring her check-in logs, confirming she's somewhere off-grid, almost certainly with Voss."
+              ],
+              "hides": [
+                "From Captain Sun exactly how much he's pieced together, wanting to find her himself before anyone else does."
+              ],
+              "believes_falsely": [
+                "He assumes she's chasing an unauthorized lead on Daniel Wu alone, with no idea Voss has turned the room into a trap built around her own past."
+              ]
+            },
+            "CAPTAIN_DAVID_SUN": {
+              "knows": [
+                "That Mei Lin worked the Delgado case, and that he personally ordered the forensic lead buried back then."
+              ],
+              "hides": [
+                "This history from Kai Yang and the rest of the department, terrified it will surface alongside his own ledger."
+              ],
+              "believes_falsely": [
+                "He believes Mei Lin has never connected her old case to his arrangement with the network, not realizing Voss has already told her."
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "Breach",
+      "theme": "Kai Yang and the precinct discover the illegal lock-in just as Mei Lin makes a desperate move that plays directly into Voss's hands, while Zoe Han's story blows Captain Sun's cover wide open (The Lock-In, The Captain's Ledger).",
+      "intro_note": "Kai Yang is walking toward Interrogation Room 3 with proof in hand that Mei Lin has been altering her own logs for days — and he isn't the only one about to find out what's really happening in that basement.",
+      "outro_note": "The door is finally forced, the story is already unraveling Captain Sun in public, and in the wreckage of both, Jonas Voss has never once looked less like a man losing control of the room.",
+      "sections": [
+        "Locked Out",
+        "Stillness Behind the Glass",
+        "The Story Goes Live",
+        "Damage Control Fails",
+        "A Desperate Question",
+        "The Source Gets Cold Feet",
+        "Forcing the Override",
+        "Turning It Around",
+        "Two Fires at Once",
+        "The Flicker Before the Door",
+        "The Door Breaks Open",
+        "What They Find",
+        "The Raid That Wasn't"
+      ],
+      "section_words": [
+        null,
+        null,
+        null,
+        {
+          "min": 130,
+          "max": 220,
+          "target": "140 to 180"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 130,
+          "max": 220,
+          "target": "140 to 180"
+        },
+        null,
+        null,
+        null
+      ],
+      "section_locations": [
+        "PRECINCT_BULLPEN",
+        "THE_INTERROGATION_ROOM",
+        "PRECINCT_BULLPEN",
+        null,
+        "THE_INTERROGATION_ROOM",
+        "THE_BLUE_LANTERN",
+        "PRECINCT_BULLPEN",
+        "THE_INTERROGATION_ROOM",
+        "PRECINCT_BULLPEN",
+        "THE_INTERROGATION_ROOM",
+        null,
+        null,
+        "HARBOR_DOCKS"
+      ],
+      "case": [
+        {
+          "label": "The Lock-In",
+          "solution": "Mei Lin used her own supervisor override codes to disable Interrogation Room 3's camera feed and magnetic door lock, sealing herself inside with Voss without a warrant, a lawyer, or backup — an act she framed to herself as buying time to save Daniel Wu, but which is in fact the exact condition of total privacy and unsupervised control Jonas Voss spent months maneuvering her into, because that same override, once triggered, also silently unlocks the corridor's rear emergency exit protocol from the inside.",
+          "objective_facts": [
+            "Interrogation Room 3's camera feed and door lock are tied to the same supervisor override circuit, installed after a budget-cut consolidation two years ago.",
+            "Mei Lin entered her personal override code into the room's control panel at 11:47 PM on the first night of the lock-in.",
+            "The override code, once active, also silently disables the corridor's rear emergency exit alarm for as long as the room stays locked from the inside.",
+            "Voss requested transfer to Interrogation Room 3 specifically, citing a claimed panic disorder around open rooms, four months before his arrest."
+          ],
+          "character_knowledge": {
+            "DET_MEI_LIN": {
+              "knows": [
+                "The precinct is closing in and she has only minutes before the room is opened by someone other than her."
+              ],
+              "hides": [
+                "How much of what she's about to do — pushing Voss hard for a final, concrete answer — breaks even her own already-broken rules."
+              ],
+              "believes_falsely": [
+                "She believes one last desperate push will finally force Voss's hand, not realizing he has been waiting for exactly this kind of pressure."
+              ]
+            },
+            "JONAS_VOSS": {
+              "knows": [
+                "The breach is imminent, and the chaos it creates will pull every eye in the precinct away from the fine details of this room."
+              ],
+              "hides": [
+                "That Mei Lin's desperate move is, to him, simply the next expected beat in a plan he's already three steps past."
+              ],
+              "believes_falsely": []
+            },
+            "DET_KAI_YANG": {
+              "knows": [
+                "Enough now to force the override himself and get that door open, whatever it costs Mei Lin professionally."
+              ],
+              "hides": [
+                "From the officers backing him up, that his primary goal is reaching her before anyone else does, not making an arrest."
+              ],
+              "believes_falsely": [
+                "He believes finding her in time will mean the situation is still salvageable."
+              ]
+            },
+            "CAPTAIN_DAVID_SUN": {
+              "knows": [
+                "The lock-in and the corruption story are about to collide publicly, at the worst possible moment for him."
+              ],
+              "hides": [
+                "From Internal Affairs that he knew about the lock-in far earlier than his official timeline will claim."
+              ],
+              "believes_falsely": [
+                "He believes he can still separate his own exposure from Mei Lin's, when both are about to break at once."
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Captain's Ledger",
+          "solution": "For nearly fifteen years, Captain David Sun has accepted cash and favors from the same harbor smuggling operation Jonas Voss works logistics for, in exchange for warning the network ahead of raids and steering resource-strapped investigations away from their containers — an arrangement that, years ago, also led him to pressure a young Mei Lin into burying evidence in an unrelated missing-persons case that threatened to expose the network, the same buried case Voss now holds over her.",
+          "objective_facts": [
+            "A ledger of cash deposits inconsistent with Captain Sun's declared income spans at least eleven years, portions of which Zoe Han has already obtained from a source inside the precinct's finance office.",
+            "Three separate raids on harbor-area warehouses over the past six years were cancelled or rescheduled on Captain Sun's direct order within 24 hours of being scheduled.",
+            "The precinct's internal file on Mei Lin's old missing-persons case bears an approval signature from then-Lieutenant David Sun overriding a request to reopen it.",
+            "Zoe Han's source has agreed to go on record only if her identity is protected past publication."
+          ],
+          "character_knowledge": {
+            "CAPTAIN_DAVID_SUN": {
+              "knows": [
+                "The full truth of his arrangement with the network, and that Zoe Han's source is real and about to go public."
+              ],
+              "hides": [
+                "From the precinct that he personally ordered raids cancelled, and that he buried Mei Lin's old case to protect himself as much as her."
+              ],
+              "believes_falsely": [
+                "He believes the fallout can still be framed as isolated financial impropriety, not realizing how directly it will connect back to Daniel Wu's disappearance."
+              ]
+            },
+            "ZOE_HAN": {
+              "knows": [
+                "Enough of the ledger and the raid-cancellation pattern to publish, with corroboration from a source inside the finance office."
+              ],
+              "hides": [
+                "Her source's identity, under mounting pressure from her editor to name a name."
+              ],
+              "believes_falsely": [
+                "She believes this is purely a financial-corruption story, not yet realizing its direct line to Daniel Wu's disappearance and Voss's own network."
+              ]
+            },
+            "JONAS_VOSS": {
+              "knows": [
+                "That Sun's exposure is coming, and that the resulting chaos will work entirely in his favor."
+              ],
+              "hides": [
+                "From Mei Lin exactly how much he knows about Sun's network, revealing only enough to keep her destabilized."
+              ],
+              "believes_falsely": []
+            },
+            "DET_MEI_LIN": {
+              "knows": [
+                "Fragments Voss has fed her about Sun's ledger and the cancelled raids."
+              ],
+              "hides": [
+                "That she has used those fragments to justify her own illegal actions, telling herself the system was already dirty."
+              ],
+              "believes_falsely": [
+                "She believes exposing Sun will vindicate her own choices, not understanding it will only compound the case against her."
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "The Turn",
+      "theme": "The isolation and lack of oversight Mei Lin engineered reveal themselves as the precise loophole Voss spent months planning, flipping the power in the room completely as Anna Wu closes in on the truth about her brother (The Lock-In, The Missing Man).",
+      "intro_note": "The door is open, the ledger story has torn Captain Sun's precinct apart from the inside, and in the wreckage nobody has noticed that Jonas Voss is still, somehow, exactly where he wants to be.",
+      "outro_note": "",
+      "sections": [
+        "After the Breach",
+        "Compliant, For Now",
+        "What the Papers Started",
+        "Back to the Water",
+        "One More Question",
+        "The Gap in the Schedule",
+        "The Padlock",
+        "Two Leads Become One",
+        "The Window Closes",
+        "The Call",
+        "Every Eye Elsewhere",
+        "The Turn",
+        "Gone"
+      ],
+      "section_words": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 130,
+          "max": 220,
+          "target": "140 to 180"
+        },
+        null,
+        null,
+        {
+          "min": 130,
+          "max": 220,
+          "target": "140 to 180"
+        }
+      ],
+      "section_locations": [
+        "PRECINCT_BULLPEN",
+        "THE_INTERROGATION_ROOM",
+        "WU_FAMILY_APARTMENT",
+        "HARBOR_DOCKS",
+        "PRECINCT_BULLPEN",
+        "THE_INTERROGATION_ROOM",
+        "HARBOR_DOCKS",
+        "PRECINCT_BULLPEN",
+        "THE_INTERROGATION_ROOM",
+        "WU_FAMILY_APARTMENT",
+        "HARBOR_DOCKS",
+        null,
+        null
+      ],
+      "case": [
+        {
+          "label": "The Lock-In",
+          "solution": "Mei Lin used her own supervisor override codes to disable Interrogation Room 3's camera feed and magnetic door lock, sealing herself inside with Voss without a warrant, a lawyer, or backup — an act she framed to herself as buying time to save Daniel Wu, but which is in fact the exact condition of total privacy and unsupervised control Jonas Voss spent months maneuvering her into, because that same override, once triggered, also silently unlocks the corridor's rear emergency exit protocol from the inside.",
+          "objective_facts": [
+            "Interrogation Room 3's camera feed and door lock are tied to the same supervisor override circuit, installed after a budget-cut consolidation two years ago.",
+            "Mei Lin entered her personal override code into the room's control panel at 11:47 PM on the first night of the lock-in.",
+            "The override code, once active, also silently disables the corridor's rear emergency exit alarm for as long as the room stays locked from the inside.",
+            "Voss requested transfer to Interrogation Room 3 specifically, citing a claimed panic disorder around open rooms, four months before his arrest."
+          ],
+          "character_knowledge": {
+            "DET_MEI_LIN": {
+              "knows": [
+                "Now stripped of any control over the room, that every scrap of information Voss ever gave her was calibrated, never generous."
+              ],
+              "hides": [
+                "Nothing left to hide — her superiors already know what she did; what she's still processing is why it happened exactly the way it did."
+              ],
+              "believes_falsely": [
+                "Until the very end of this episode, she still believes the danger was ever about losing Voss's cooperation, rather than about what her own actions had already unlocked."
+              ]
+            },
+            "JONAS_VOSS": {
+              "knows": [
+                "That the precinct's chaos — the corruption story, the search for Daniel Wu, the fallout from the breach — has created exactly the thinly staffed, distracted window his plan required."
+              ],
+              "hides": [
+                "The precise moment he intends to act, giving no outward sign of urgency."
+              ],
+              "believes_falsely": []
+            },
+            "DET_KAI_YANG": {
+              "knows": [
+                "That Voss is being moved with reduced oversight while the precinct is consumed by the ledger scandal and the harbor search."
+              ],
+              "hides": [
+                "From his superiors how uneasy this reduced oversight makes him, not wanting to add one more crisis to an already collapsing day."
+              ],
+              "believes_falsely": [
+                "He believes the situation is contained now that the room itself has been breached, not realizing the true danger was never the room but the moment."
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Missing Man",
+          "solution": "Daniel Wu is alive, held for months in a converted shipping container at a remote corner of the Harbor Docks controlled by the smuggling operation Jonas Voss runs logistics for; he was taken not for anything he did, but because he witnessed a nighttime container handoff and was recognized by dockworkers loyal to Voss, who chose to disappear him rather than risk him talking — with Voss personally deciding to keep him alive as a bargaining chip he suspected might one day be useful.",
+          "objective_facts": [
+            "Daniel Wu was last captured on a traffic camera near the Harbor Docks the night he disappeared, walking toward the container yard, not away from it.",
+            "A dockworker named in an anonymous tip to Zoe Han recognizes Daniel's photo but has since stopped returning calls.",
+            "Jonas Voss has never once denied knowing where Daniel Wu is; he has only ever declined to confirm it.",
+            "A padlock matching the container yard's private stock was found discarded near the outer fence three days after Daniel's disappearance."
+          ],
+          "character_knowledge": {
+            "JONAS_VOSS": {
+              "knows": [
+                "The full truth: Daniel is alive, unharmed, and held exactly where Voss's people put him."
+              ],
+              "hides": [
+                "The precise container location and the fact that Daniel is unharmed, feeding out only calibrated fragments to keep leverage alive."
+              ],
+              "believes_falsely": []
+            },
+            "DET_MEI_LIN": {
+              "knows": [
+                "A handful of location fragments extracted from Voss over the past weeks — a dock reference, a rough timeframe, nothing precise."
+              ],
+              "hides": [
+                "How much of this fragmentary information she obtained through means she can never officially disclose."
+              ],
+              "believes_falsely": [
+                "She believed each new fragment brought her closer to an exact location, not realizing Voss was calibrating them to never quite resolve into a rescue in time."
+              ]
+            },
+            "ANNA_WU": {
+              "knows": [
+                "An independent lead from a dockworker's tip and a traffic-camera sighting placing Daniel at the container yard the night he vanished."
+              ],
+              "hides": [
+                "Nothing — she has been loudly, publicly relentless from the start."
+              ],
+              "believes_falsely": [
+                "She believes getting official search resources to the harbor immediately will save Daniel, not realizing that noise and urgency might spook the very people keeping him hidden."
+              ]
+            },
+            "DET_KAI_YANG": {
+              "knows": [
+                "That Mei Lin's fragments and Anna Wu's independent lead are describing the same stretch of the harbor."
+              ],
+              "hides": [
+                "The full extent of what Mei Lin obtained illegally, still trying to shield her from the worst of the consequences."
+              ],
+              "believes_falsely": [
+                "He believes a fast rescue of Daniel will retroactively justify what Mei Lin did, not accounting for how far Voss's own plan has already progressed."
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "What the Room Cost",
+      "theme": "Voss's escape is completed through the very illegality Mei Lin created, and the season closes on the fallout for her career and secret, Captain Sun's corruption, and Anna Wu's reckoning with what actually happened to Daniel (The Lock-In, The Detective's Secret, The Captain's Ledger, The Missing Man).",
+      "intro_note": "The turn has happened: the isolation Mei Lin built to save Daniel Wu is revealed as the exact loophole Jonas Voss spent months engineering, and the power in the interrogation room has flipped entirely to him. Anna Wu is one step from the truth about her brother, and the precinct is about to discover exactly what Mei Lin did behind that locked door.",
+      "outro_note": "",
+      "sections": [
+        "Bullpen, Sirens and Silence (The Lock-In) — word spreads through the precinct that Detective Lin has been off the grid for over a day; Captain Sun scrambles to control the story before anyone above him hears it first.",
+        "The Room, Undone (The Lock-In / The Detective's Secret) — Voss, utterly calm, tells Mei Lin exactly what happens next, and reminds her precisely what he knows about the file she buried eight years ago.",
+        "The Container Number (The Missing Man) — Kai Yang, working from the fragment Mei Lin finally hands over, assembles a raid team for a specific berth at the harbor.",
+        "Waiting Room (The Missing Man) — Anna Wu gets a call telling her nothing except to come to the precinct now; she sits in the too-bright lobby bracing for the worst.",
+        "Internal Affairs Arrives (The Captain's Ledger) — an IA liaison walks into Sun's office unannounced, holding a folder built from Zoe Han's published evidence.",
+        "The Last Trade (The Lock-In / The Detective's Secret) — Voss offers Mei Lin one final exchange: her silence about how she obtained the container number, for his continued cooperation until processing.",
+        "Breach at Dock 14 (The Missing Man) — Kai Yang's team cuts into a rusted container and finds Daniel Wu alive, blinking in the light for the first time in weeks.",
+        "A Drink for the Road (The Lock-In / The Captain's Ledger) — at the Blue Lantern, a transport officer receives a quiet instruction and a folded envelope from a face he answers to, not Sun himself.",
+        "What She Signed (The Lock-In / The Detective's Secret) — Mei Lin fills out the paperwork that will finally, officially end the lock-in, and understands too late what filing it now actually protects.",
+        "The Transfer (The Lock-In) — Voss is walked out of holding for official transfer; in the gap between two doors and two signatures, he is simply gone.",
+        "Daniel (The Missing Man) — Anna Wu is brought into a hospital room to find her brother alive, and begins, in fragments, to hear what he saw at the docks before he vanished.",
+        "The Captain's Office (The Captain's Ledger) — confronted with Zoe Han's full documentation and the transport officer's name, Sun is suspended pending an internal investigation, his network's higher contact never named.",
+        "What's Left of the Badge (The Detective's Secret) — Mei Lin sits across from Kai Yang, not Voss, and tells him the truth about the file from eight years ago before Internal Affairs can tell him first.",
+        "Low Tide (all threads) — at the harbor at dawn, with Voss's trail already cold, the narrator closes the season on what each of them is left holding: a found brother, a broken badge, an unraveling network, and a debt that no one above Sun will ever have to pay."
+      ],
+      "section_words": [
+        null,
+        null,
+        null,
+        {
+          "min": 140,
+          "max": 230,
+          "target": "150 to 190"
+        },
+        null,
+        null,
+        null,
+        {
+          "min": 140,
+          "max": 230,
+          "target": "150 to 190"
+        },
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 140,
+          "max": 230,
+          "target": "150 to 190"
+        },
+        null
+      ],
+      "section_locations": [
+        "PRECINCT_BULLPEN",
+        "THE_INTERROGATION_ROOM",
+        "PRECINCT_BULLPEN",
+        "WU_FAMILY_APARTMENT",
+        "PRECINCT_BULLPEN",
+        "THE_INTERROGATION_ROOM",
+        "HARBOR_DOCKS",
+        "THE_BLUE_LANTERN",
+        "THE_INTERROGATION_ROOM",
+        "PRECINCT_BULLPEN",
+        "WU_FAMILY_APARTMENT",
+        "PRECINCT_BULLPEN",
+        "PRECINCT_BULLPEN",
+        "HARBOR_DOCKS"
+      ],
+      "case": [
+        {
+          "label": "The Missing Man",
+          "solution": "Daniel Wu, a dock worker, witnessed an off-the-books cash handoff between harbor crew and a uniformed officer weeks before he vanished. Jonas Voss personally ordered his abduction — not out of loyalty to the network, but as future leverage he could trade if he was ever caught. Daniel was held alive in a disused shipping container at the harbor for the length of the season, with standing orders to be released unharmed once Voss judged himself clear of real jeopardy; the container number Voss finally leaks becomes the key to finding him.",
+          "objective_facts": [
+            "Daniel Wu was held for the entire season in a shipping container at a harbor berth controlled by Voss's associates.",
+            "Daniel personally witnessed an unlogged cash transaction between dock crew and a uniformed officer shortly before his disappearance.",
+            "Voss ordered Daniel's abduction himself, as leverage, independent of any instruction from Captain Sun.",
+            "Daniel is found alive in this episode, malnourished but not seriously harmed."
+          ],
+          "character_knowledge": {
+            "DET_MEI_LIN": {
+              "knows": [
+                "Voss gave her a partial container identifier in exchange for her continued compliance, and she has unofficially confirmed Daniel is likely still alive at the harbor."
+              ],
+              "hides": [
+                "That she never logged the tip through proper channels, because doing so would have exposed the illegal interrogation before she was ready to end it."
+              ],
+              "believes_falsely": [
+                "That she would have time to verify the location herself before anyone else moved on it — she does not anticipate the raid and the transfer happening within the same hour."
+              ]
+            },
+            "JONAS_VOSS": {
+              "knows": [
+                "The exact berth and condition of Daniel Wu, and that his crew has standing orders to leave Daniel unharmed once he himself is clear."
+              ],
+              "hides": [
+                "That he orchestrated Daniel's abduction himself rather than merely having dock connections — he has let everyone assume he's a well-informed bystander."
+              ],
+              "believes_falsely": [
+                "That he has more time before Daniel is found — he underestimates how fast Kai Yang's team moves once the container number surfaces."
+              ]
+            },
+            "DET_KAI_YANG": {
+              "knows": [
+                "The container number passed through Mei Lin, and he personally leads the team that breaches it."
+              ],
+              "hides": [
+                "His fear that Mei Lin is too compromised to be trusted with anything else this case touches."
+              ],
+              "believes_falsely": [
+                "That finding Daniel alive will vindicate Mei Lin's methods — he doesn't yet grasp how completely Voss orchestrated the exchange that got them here."
+              ]
+            },
+            "CAPTAIN_DAVID_SUN": {
+              "knows": [
+                "That Daniel's disappearance is tied to the same dock network he has taken payoffs from, though he never ordered or wanted Daniel harmed."
+              ],
+              "hides": [
+                "That he has suspected his own protected network for weeks and quietly delayed authorizing a harbor search to avoid exposing the connection."
+              ],
+              "believes_falsely": [
+                "That the network would never actually hurt a bystander — he told himself the situation would resolve itself quietly."
+              ]
+            },
+            "ANNA_WU": {
+              "knows": [
+                "Nothing concrete until this episode; she has spent months pushing the department publicly for answers."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "That the department has been covering up her brother's death rather than his continued captivity — she does not learn he's alive until the rescue."
+              ]
+            },
+            "ZOE_HAN": {
+              "knows": [
+                "From her sources, that the harbor network was tied to at least one unresolved missing-persons case, though she couldn't confirm which one until now."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "That Daniel's disappearance and the corruption story were only loosely connected — not directly caused by the same network."
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Lock-In",
+          "solution": "The entire illegal, undocumented detention was exactly what Voss needed: no warrant, no active recording, no notified chain of command for over thirty hours. He spent months quietly steering Mei Lin toward exactly this off-book method, knowing that any custody with no official record would collapse the moment he was formally processed — and that Sun's compromised favor network could exploit the same gap physically, during transfer. When the breach finally happens, the chaos of an undocumented, hours-long detention makes continuous legal custody impossible to prove, and a transport officer inside Sun's old network completes what Mei Lin's lock-in began.",
+          "objective_facts": [
+            "Mei Lin detained Voss without a warrant, without active recording, and without notifying command or filing custody paperwork for over thirty hours.",
+            "No official record of continuous custody exists for that period once the detention becomes known.",
+            "A transport officer connected to Captain Sun's favor network is assigned to Voss's transfer under the guise of tightened security.",
+            "Voss escapes during the gap between processing and transfer, exploiting both the missing custody record and the compromised officer."
+          ],
+          "character_knowledge": {
+            "DET_MEI_LIN": {
+              "knows": [
+                "That she has been holding Voss illegally for days, with no paperwork, no cameras, and no backup notified."
+              ],
+              "hides": [
+                "The full length and illegality of the detention, from Kai Yang and the department, until the breach forces it into the open."
+              ],
+              "believes_falsely": [
+                "That she still controls the terms of the room — that she can end the lock-in on her own timeline, right up until she signs the paperwork that ends it for her."
+              ]
+            },
+            "JONAS_VOSS": {
+              "knows": [
+                "That the absence of any official custody record is the single thing that guarantees his release the moment he's formally processed, and has been counting the hours since the door first locked."
+              ],
+              "hides": [
+                "That his calm cooperation throughout has been calculated to keep Mei Lin from ending the lock-in prematurely, and that an outside contact is standing by to move the moment he's transferred."
+              ],
+              "believes_falsely": []
+            },
+            "DET_KAI_YANG": {
+              "knows": [
+                "Once he finds the unlogged room and the disabled cameras, that Mei Lin acted alone and completely outside protocol."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "That exposing the lock-in will help secure Voss's prosecution — he doesn't realize revealing it destroys the chain of custody entirely."
+              ]
+            },
+            "CAPTAIN_DAVID_SUN": {
+              "knows": [
+                "The full legal and political danger an undocumented detention represents to the department, and to himself personally."
+              ],
+              "hides": [
+                "That he quietly assigns a 'trusted' officer — actually part of his old favor network — to Voss's transfer, under the guise of tightening security."
+              ],
+              "believes_falsely": [
+                "That he can manage the fallout of the lock-in through paperwork and optics — not realizing he is the one handing Voss his exit."
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Detective's Secret",
+          "solution": "Eight years ago, a rookie Mei Lin destroyed a witness statement that would have implicated her younger brother in a minor smuggling case, letting the actual courier — later folded into what became Voss's network — walk free. Voss learned the details through an old contact from that same courier's circle and has held it over her the entire season without ever revealing his source. In the finale, cornered by both the transfer and Kai Yang's questions, Mei Lin chooses to confess it herself before Internal Affairs can use it against her.",
+          "objective_facts": [
+            "Eight years ago, Mei Lin withheld a witness statement implicating her younger brother in a minor smuggling case.",
+            "The withheld statement let a courier connected to that same ring evade prosecution — a ring that later fed into Voss's operation.",
+            "Voss obtained proof of the suppression through an old contact from that courier's circle, never revealing the source to anyone.",
+            "Mei Lin's suppression becomes known to the department in this episode, through her own confession."
+          ],
+          "character_knowledge": {
+            "DET_MEI_LIN": {
+              "knows": [
+                "The full truth of what she did eight years ago, and exactly how it connects to the network that eventually took Daniel Wu."
+              ],
+              "hides": [
+                "Has hidden this from everyone at the department for eight years, and now chooses to surrender it herself rather than let Voss or Internal Affairs control how it comes out."
+              ],
+              "believes_falsely": [
+                "Believed for years that the suppression caused no lasting harm — the season has shown her a direct line from that choice to Daniel's captivity."
+              ]
+            },
+            "JONAS_VOSS": {
+              "knows": [
+                "Full details of the suppressed statement, obtained through an old contact from the same courier's circle."
+              ],
+              "hides": [
+                "Exactly how he obtained it, protecting his source even as he uses the leverage."
+              ],
+              "believes_falsely": []
+            },
+            "DET_KAI_YANG": {
+              "knows": [
+                "Learns the truth for the first time in this episode, directly from Mei Lin."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "Had assumed her recent secrecy was only about the lock-in — the revelation reframes everything he thought he understood about his partner."
+              ]
+            },
+            "CAPTAIN_DAVID_SUN": {
+              "knows": [
+                "Heard rumors years ago about irregularities in that old case file, but never investigated, since digging risked exposing his own arrangements from the same period."
+              ],
+              "hides": [
+                "His willful blindness to it at the time."
+              ],
+              "believes_falsely": [
+                "Believed it was long buried and irrelevant to anything happening now."
+              ]
+            },
+            "ZOE_HAN": {
+              "knows": [
+                "Gets wind of the suppressed-evidence story in the finale's fallout and recognizes it as the next piece of her investigation."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "Initially assumes Mei Lin's secret is departmental corruption like Sun's, not an individual, personal cover-up."
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Captain's Ledger",
+          "solution": "Captain Sun has accepted payoffs from Voss's dock network for six years in exchange for redirecting investigations away from certain shipments, using part of the money to protect his own family from an old, unrelated legal threat tied to his early immigration years. Zoe Han's published evidence, combined with the fallout from Voss's escape, forces a formal Internal Affairs investigation in this episode. Sun is suspended, but the identity of the higher-level contact who originally recruited him into the network is never revealed — a debt left deliberately unpaid.",
+          "objective_facts": [
+            "Captain Sun accepted payments from Voss's dock network for over six years in exchange for redirecting investigations away from certain shipments.",
+            "Sun used part of the funds to protect his family from an old, unrelated legal threat dating to his early years in the department.",
+            "Zoe Han's published evidence, combined with the fallout from Voss's escape, triggers a formal Internal Affairs investigation into Sun in this episode.",
+            "Sun is suspended pending investigation, but the network's original higher-level contact is never identified in this episode."
+          ],
+          "character_knowledge": {
+            "CAPTAIN_DAVID_SUN": {
+              "knows": [
+                "The full extent of six years of payoffs from the dock network, and exactly which favors bought his silence."
+              ],
+              "hides": [
+                "Has hidden the network from Internal Affairs and his own detectives throughout, until Zoe Han's evidence makes denial impossible."
+              ],
+              "believes_falsely": [
+                "Believed his rank and the department's reluctance to indict its own leadership would protect him indefinitely."
+              ]
+            },
+            "JONAS_VOSS": {
+              "knows": [
+                "That he personally paid into Sun's network for years, and exactly which levers keep Sun compromised and useless as an obstacle."
+              ],
+              "hides": [
+                "The identity of the network's original recruiter above Sun, protecting whoever set the arrangement up in the first place."
+              ],
+              "believes_falsely": []
+            },
+            "ZOE_HAN": {
+              "knows": [
+                "Has documentary evidence connecting Sun's payoffs to the dock network, and now, to Daniel Wu's disappearance."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "Had assumed her published story alone would be enough to force a full purge — this episode shows the network's higher-level contact still escaping unnamed."
+              ]
+            },
+            "DET_KAI_YANG": {
+              "knows": [
+                "The extent of Sun's corruption becomes clear once it's tied to the transport officer who let Voss escape."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "Had trusted Sun's authority throughout the season, assuming departmental leadership was above suspicion."
+              ]
+            },
+            "DET_MEI_LIN": {
+              "knows": [
+                "That Sun's network extends to the very transfer team handling Voss."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "Had assumed Sun's corruption was limited to old, closed matters — not something active enough to free the man sitting across from her."
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

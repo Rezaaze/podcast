@@ -5,7 +5,8 @@
       "name": "webui",
       "runtimeExecutable": "webui/.venv/bin/python",
       "runtimeArgs": ["webui/app.py"],
-      "port": 5151
+      "port": 5151,
+      "autoPort": true
     }
   ]
 }

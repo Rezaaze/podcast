@@ -24,7 +24,7 @@ import subprocess
 import time
 import urllib.request
 
-from config import PF_DIR
+from config import PF_DIR, current_episodes_json
 
 IS_WINDOWS = platform.system() == "Windows"
 
@@ -58,7 +58,9 @@ def _pterm_json(*args, timeout=15) -> dict:
 
 
 def get_tts_port() -> int:
-    episodes_json = os.path.join(PF_DIR, "episodes.json")
+    episodes_json = current_episodes_json()
+    if not episodes_json:
+        return 42003
     with open(episodes_json, "r", encoding="utf-8") as f:
         data = json.load(f)
     api_url = data.get("audio", {}).get("api_url", "http://127.0.0.1:42003")

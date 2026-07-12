@@ -1,0 +1,1560 @@
+{
+  "series_title": "Facades",
+  "season": 1,
+  "language": "English",
+  "mode": "drama",
+  "template": "soap_opera",
+  "writer_persona": "a showrunner for glossy, psychology-first family-dynasty drama in the vein of Succession and Big Little Lies \u2014 elegant surfaces, rot underneath, built for an audience that reads a raised eyebrow like a confession",
+  "style_guidelines": [
+    "Dialogue is elegant and restrained on the surface \u2014 the real violence happens in subtext, silence, and what a character deliberately does not say.",
+    "Wealth is procedural texture, not spectacle: staff schedules, foundation galas, trust paperwork, PR damage control \u2014 the mechanics of maintaining a facade matter as much as the secrets themselves.",
+    "Cut between threads mid-episode when it heightens dramatic irony \u2014 let the audience know something a character in the very next scene doesn't.",
+    "End scenes on an unresolved beat or a loaded glance, never a tidy summary; trust the listener to feel the tension without a character explaining it.",
+    "Blackmail notes are read aloud sparingly, in full, and land like small detonations \u2014 never paraphrased away.",
+    "No character ever states another thread's solution outright before it's meant to surface \u2014 knowledge gaps are the entertainment, not narrator exposition."
+  ],
+  "voices": {
+    "NARRATOR": {
+      "voice": "Ryan",
+      "default_style": "calm, measured, a step removed from the action \u2014 orients without ever editorializing",
+      "description": "the show's narrator \u2014 orients the listener at the start of every scene (who, where, when), never a character in the story"
+    },
+    "VICTORIA_VANDERBURG": {
+      "voice": "Serena",
+      "default_style": "commanding, deliberate, every word chosen \u2014 speaks slow and very clear, like someone who has spent forty years making sure she is never misquoted",
+      "description": "60, the matriarch. Emigrated with nothing, married into a failing real-estate name, and rebuilt it into the Vanderburg empire through sheer force of will; status is the closest thing she has to a religion. Publicly the picture of composure over her missing future daughter-in-law's death; privately willing to do almost anything to keep the family name intact."
+    },
+    "JULIAN_VANDERBURG": {
+      "voice": "Aiden",
+      "default_style": "charming and warm on the surface, with a controlled tightness that flares without warning",
+      "description": "34, the eldest son, Elena's fianc\u00e9. Genuinely grieving, genuinely charismatic, and genuinely capable of a temper he has spent his whole engagement quietly managing \u2014 a history of controlling, jealous flare-ups with Elena that he has never had to answer for."
+    },
+    "CHLOE_VANDERBURG": {
+      "voice": "Sohee",
+      "default_style": "polished and precise in public, unguarded and quick only when she's alone with Marcus",
+      "description": "30, the daughter, married to State Senator Richard Ashford and performing the role of political wife flawlessly. Spent her teenage years in her family's Hong Kong and Singapore offices, which shaped both her fluency in reading a room and the accent that never fully left her. Eight months into a secret, genuinely unguarded affair with the family's chauffeur, Marcus."
+    },
+    "KONRAD_VANDERBURG": {
+      "voice": "Dylan",
+      "default_style": "restless charm sliding fast into panic \u2014 talks his way out of things until he can't",
+      "description": "28, the youngest, the family's black sheep. Spent his twenties mismanaging the family's Hong Kong and Macau real-estate holdings and gambling badly against people who do not forgive debts; his family reads his chaos as immaturity, not the crisis it actually is. Was the last person to see Elena alive."
+    },
+    "MARCUS_CHEN": {
+      "voice": "Eric",
+      "default_style": "quiet, careful, warm underneath a professional stillness \u2014 chooses every word around the family like it could cost him his job",
+      "description": "31, the Vanderburgs' driver; his family has worked for the estate for two generations since his grandparents arrived from Shanghai, and that employment is the leverage the family has always quietly held over them. In love with Chloe in a way that scares him more than the risk does. Saw something at the boathouse weeks before Elena disappeared that he has never told anyone."
+    },
+    "ISABELLE_LIU": {
+      "voice": "Vivian",
+      "default_style": "warm, exact, unfailingly professional \u2014 the kind of calm that makes people trust her with everything",
+      "description": "52, the family's attorney and de facto fixer for over fifteen years, the person who has quietly buried every Vanderburg scandal before this one. Meticulous, underpaid relative to what she's worth to them, and finally done being treated as hired help."
+    }
+  },
+  "format": {
+    "parts_per_section": 2,
+    "words_per_part_target": "520 to 580",
+    "words_per_part_min": 480,
+    "words_per_part_max": 620
+  },
+  "generation": {
+    "model": "claude-sonnet-5"
+  },
+  "audio": {
+    "api_url": "http://127.0.0.1:42003",
+    "default_style": "Speak clearly and with dramatic weight",
+    "target_lufs": -16.0,
+    "pause_between_chunks_ms": 250,
+    "pause_between_lines_ms": 700,
+    "pause_between_parts_ms": 3000,
+    "pause_between_episodes_ms": 6000,
+    "merge_anthology": false
+  },
+  "output_prefix": "ep",
+  "series_intro": "A hundred-year-old name, a lake that finally gave up its secret, and a family that has spent a year rehearsing its grief for an audience. Every Vanderburg got the same envelope the night they found her. Nobody has admitted to opening theirs twice. This is Facades.",
+  "series_outro": "Not every door in this house gets to close. Some secrets get buried properly this season \u2014 and at least one gets buried alive, walking and breathing and gone all the same, because that is what it costs to keep a name like Vanderburg standing. The lake is calm again. It won't stay that way.",
+  "episodes": [
+    {
+      "figure": "The Centennial Toast",
+      "theme": "Victoria's lavish hundred-year gala for the family company is derailed when a pool-house dredging crew finds a body in the lake, and by midnight every Vanderburg has received an identical, unsigned envelope.",
+      "intro_note": "",
+      "outro_note": "Four envelopes, four names, one line each \u2014 and nobody at the table admits to reading theirs twice.",
+      "sections": [
+        "The Centennial Gala \u2014 five hundred guests, a hundred years of curated image, and the Vanderburgs playing gracious hosts while a construction crew works the lakeshore out of sight (thread: The Death of Elena Marsh)",
+        "The Dredge \u2014 a pool-house excavation crew hits something that isn't a pipe, and word reaches Victoria before the police do (thread: The Death of Elena Marsh)",
+        "A Toast and a Text \u2014 Chloe slips away from her husband's side to take a call from Marcus in a hallway off the ballroom, quick and practiced (thread: Chloe & Marcus)",
+        "Numbers That Don't Move \u2014 Konrad takes a tense call from Hong Kong out on the terrace, promising a payment he doesn't have (thread: Konrad's Debts)",
+        "Breaking It to the Family \u2014 once the guests are gone, Victoria gathers Julian, Chloe, and Konrad in the study to tell them what was pulled from the lake (thread: The Death of Elena Marsh)",
+        "Four Envelopes \u2014 each Vanderburg finds an identical unmarked letter waiting in their room that night (thread: The Blackmailer)"
+      ],
+      "section_words": [
+        null,
+        {
+          "min": 200,
+          "max": 320,
+          "target": "220 to 280"
+        },
+        null,
+        null,
+        null,
+        {
+          "min": 180,
+          "max": 280,
+          "target": "200 to 250"
+        }
+      ],
+      "case": [
+        {
+          "label": "The Death of Elena Marsh",
+          "solution": "Elena discovered that Konrad had forged Victoria's signature to raid the family trust for gambling debts, and she was also secretly pregnant by him rather than Julian. She confronted Konrad on the estate's boathouse dock the night of the engagement dinner, telling him she intended to keep the child and might tell Julian everything. In the argument that followed, Konrad shoved her; she fell, struck her head on the dock, and drowned. He panicked, weighted the body, and hid it in the lake, lying that a cut on his hand came from a kitchen accident rather than the dock's broken railing. Victoria pieced together the truth roughly two months later and has been quietly protecting him ever since.",
+          "objective_facts": [
+            "Elena Marsh, missing for exactly one year, is found in the lake on the Vanderburg estate during pool-house construction.",
+            "Elena was Julian's fianc\u00e9e and had not been seen since the night of last year's engagement dinner.",
+            "Konrad had a fresh cut on his right hand the night Elena disappeared, which he told everyone came from a kitchen accident."
+          ],
+          "character_knowledge": {
+            "KONRAD_VANDERBURG": {
+              "knows": [
+                "He was the last person to see Elena alive, on the boathouse dock a year ago",
+                "The cut on his hand that night did not come from any kitchen"
+              ],
+              "hides": [
+                "That he and Elena argued on the dock the night she vanished",
+                "The real origin of the cut on his hand"
+              ],
+              "believes_falsely": [
+                "Believes a year of silence means the truth died with her"
+              ]
+            },
+            "VICTORIA_VANDERBURG": {
+              "knows": [
+                "The body found tonight is almost certainly Elena's, given the location and the timeline"
+              ],
+              "hides": [
+                "Nothing yet \u2014 tonight her only instinct is damage control for the family name"
+              ],
+              "believes_falsely": [
+                "Assumes, like the rest of the family, that this was some kind of accident or a stranger's crime"
+              ]
+            },
+            "JULIAN_VANDERBURG": {
+              "knows": [
+                "The woman he was going to marry is dead, and has been for the entire year he searched for her"
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "Clings to the idea that whoever did this was an outsider, not someone at his mother's table"
+              ]
+            },
+            "CHLOE_VANDERBURG": {
+              "knows": [
+                "The body found tonight is Elena's, same as the rest of the family"
+              ],
+              "hides": [],
+              "believes_falsely": []
+            }
+          }
+        },
+        {
+          "label": "The Blackmailer",
+          "solution": "Isabelle Liu, the family's attorney of fifteen years, mails the first blackmail notes the same night Elena's body is found. She has spent two years quietly resenting being treated as hired help despite burying scandal after scandal for the Vanderburgs, and months ago she noticed a signature in the trust archive that didn't sit right \u2014 an audit she never finished until now.",
+          "objective_facts": [
+            "Each of the four Vanderburg family members receives an identical, unsigned typed note in their room the night the body is found.",
+            "The notes are postmarked from a mailbox forty minutes from the estate, dropped days before the body was even discovered."
+          ],
+          "character_knowledge": {
+            "ISABELLE_LIU": {
+              "knows": [
+                "She sent all four notes",
+                "She timed them to arrive before the family could get its story straight"
+              ],
+              "hides": [
+                "That she is the author"
+              ],
+              "believes_falsely": [
+                "Believes the family will quietly pay rather than risk exposure"
+              ]
+            },
+            "VICTORIA_VANDERBURG": {
+              "knows": [
+                "A note arrived addressed only to her"
+              ],
+              "hides": [
+                "Its contents from the rest of the family"
+              ],
+              "believes_falsely": [
+                "Assumes it's an extortion attempt unrelated to anyone she actually trusts"
+              ]
+            },
+            "JULIAN_VANDERBURG": {
+              "knows": [
+                "He received a note too"
+              ],
+              "hides": [
+                "What it said, even from his mother"
+              ],
+              "believes_falsely": []
+            },
+            "KONRAD_VANDERBURG": {
+              "knows": [
+                "His note references the lake by name"
+              ],
+              "hides": [
+                "How much that one detail terrifies him"
+              ],
+              "believes_falsely": [
+                "Assumes whoever sent it is guessing, not certain"
+              ]
+            },
+            "CHLOE_VANDERBURG": {
+              "knows": [
+                "Her note contains a single word: 'driver.'"
+              ],
+              "hides": [
+                "The note's meaning from everyone"
+              ],
+              "believes_falsely": []
+            }
+          }
+        },
+        {
+          "label": "Chloe & Marcus",
+          "solution": "Chloe and Marcus have been secretly involved for eight months \u2014 the one unguarded relationship in her carefully performed life, set against her cold, politically useful marriage to State Senator Richard Ashford. Exposure would end his career and her standing in one stroke.",
+          "objective_facts": [
+            "Chloe and Marcus have been involved for eight months.",
+            "Chloe's husband, State Senator Richard Ashford, attended tonight's gala at her side the entire evening."
+          ],
+          "character_knowledge": {
+            "CHLOE_VANDERBURG": {
+              "knows": [
+                "The affair is real and getting harder to hide with Richard's campaign in full swing"
+              ],
+              "hides": [
+                "Marcus's calls, tonight's included, from her husband and family"
+              ],
+              "believes_falsely": [
+                "Believed, until tonight's note, that no one outside the two of them suspected anything"
+              ]
+            },
+            "MARCUS_CHEN": {
+              "knows": [
+                "Same eight months, same risk"
+              ],
+              "hides": [
+                "The relationship from the household staff and the family"
+              ],
+              "believes_falsely": [
+                "Reads Chloe's hesitation to leave Richard as fear rather than genuine reluctance to lose her position"
+              ]
+            }
+          }
+        },
+        {
+          "label": "Konrad's Debts",
+          "solution": "Konrad owes roughly $2.4 million to a Hong Kong-based lender tied to Anson Fong, accumulated across a decade of gambling and mismanaging the family's Macau real-estate holdings, and he has already forged one withdrawal from the Whitmore Family Trust to make a partial payment.",
+          "objective_facts": [
+            "Konrad owes approximately $2.4 million to a lender connected to Anson Fong.",
+            "Konrad forged one withdrawal from the Whitmore Family Trust six months ago."
+          ],
+          "character_knowledge": {
+            "KONRAD_VANDERBURG": {
+              "knows": [
+                "The exact size of the debt and exactly who he owes it to"
+              ],
+              "hides": [
+                "Both facts from the entire family, including his mother"
+              ],
+              "believes_falsely": [
+                "Believes he can solve this quietly before anyone notices, the same way he's told himself for six months"
+              ]
+            },
+            "VICTORIA_VANDERBURG": {
+              "knows": [
+                "Konrad has 'money troubles,' the way he always seems to"
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "Underestimates the scale by at least a factor of ten"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "Cracks in the Marble",
+      "theme": "The police open a formal investigation into Elena's death as the family scrambles to control the narrative, Chloe nearly gets caught mid-call with Marcus, and Victoria makes her first quiet move against the blackmailer.",
+      "intro_note": "Elena Marsh has been found. Four Vanderburgs are holding four identical letters, and not one of them has said a word about it to the others.",
+      "outro_note": "Victoria's first payment goes out through a lawyer three states away who will never know whose money it really is. Whoever is on the other end cashes it within the hour.",
+      "sections": [
+        "The Detectives in the Foyer \u2014 Detective-led police canvas the estate; Konrad is asked, gently, to account for a cut hand a year old (thread: The Death of Elena Marsh)",
+        "The Study, Late \u2014 Victoria decides to make the note go away quietly rather than involve the police, and sets up an untraceable first payment (thread: The Blackmailer)",
+        "Almost Caught \u2014 Richard walks in on the tail end of one of Chloe's calls with Marcus; she recovers fast, but not fast enough for her own comfort (thread: Chloe & Marcus)",
+        "The Whitfield Meeting \u2014 Konrad meets, off the books, with a rival developer interested in the estate's lakefront acreage (thread: Konrad's Debts)",
+        "Press on the Lawn \u2014 Julian steps in front of the cameras at the estate gates and, for the first time in a year, says Elena's name to strangers (thread: The Death of Elena Marsh)"
+      ],
+      "section_words": [
+        null,
+        null,
+        {
+          "min": 200,
+          "max": 300,
+          "target": "220 to 270"
+        },
+        null,
+        {
+          "min": 220,
+          "max": 340,
+          "target": "250 to 300"
+        }
+      ],
+      "case": [
+        {
+          "label": "The Death of Elena Marsh",
+          "solution": "Elena discovered that Konrad had forged Victoria's signature to raid the family trust for gambling debts, and she was also secretly pregnant by him rather than Julian. She confronted Konrad on the estate's boathouse dock the night of the engagement dinner, telling him she intended to keep the child and might tell Julian everything. In the argument that followed, Konrad shoved her; she fell, struck her head on the dock, and drowned. He panicked, weighted the body, and hid it in the lake, lying that a cut on his hand came from a kitchen accident rather than the dock's broken railing. Victoria pieced together the truth roughly two months later and has been quietly protecting him ever since.",
+          "objective_facts": [
+            "Elena Marsh, missing for exactly one year, is found in the lake on the Vanderburg estate during pool-house construction.",
+            "Elena was Julian's fianc\u00e9e and had not been seen since the night of last year's engagement dinner.",
+            "Konrad had a fresh cut on his right hand the night Elena disappeared, which he told everyone came from a kitchen accident.",
+            "Detectives ask Konrad to formally account for the cut for the first time; he repeats the kitchen-accident story without hesitation."
+          ],
+          "character_knowledge": {
+            "KONRAD_VANDERBURG": {
+              "knows": [
+                "The kitchen-accident story is the only thing standing between him and everything unraveling"
+              ],
+              "hides": [
+                "How rehearsed his calm actually is"
+              ],
+              "believes_falsely": [
+                "Believes he answered the detective's questions convincingly"
+              ]
+            },
+            "VICTORIA_VANDERBURG": {
+              "knows": [
+                "The police investigation is now formal, which means the family's own version of events needs to be airtight"
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "Still has no reason to doubt Konrad's account of that night"
+              ]
+            },
+            "JULIAN_VANDERBURG": {
+              "knows": [
+                "He has to be the family's public face now, whether he's ready or not"
+              ],
+              "hides": [
+                "How much saying Elena's name out loud to reporters cost him"
+              ],
+              "believes_falsely": []
+            }
+          }
+        },
+        {
+          "label": "The Blackmailer",
+          "solution": "Isabelle Liu, the family's attorney of fifteen years, mails the first blackmail notes the same night Elena's body is found. She has spent two years quietly resenting being treated as hired help despite burying scandal after scandal for the Vanderburgs, and months ago she noticed a signature in the trust archive that didn't sit right \u2014 an audit she never finished until now.",
+          "objective_facts": [
+            "Each of the four Vanderburg family members receives an identical, unsigned typed note in their room the night the body is found.",
+            "The notes are postmarked from a mailbox forty minutes from the estate, dropped days before the body was even discovered.",
+            "Victoria authorizes a first payment through an out-of-state intermediary lawyer, addressed to a numbered account."
+          ],
+          "character_knowledge": {
+            "ISABELLE_LIU": {
+              "knows": [
+                "The first payment clears within the hour of her demand"
+              ],
+              "hides": [
+                "That she is the one receiving it"
+              ],
+              "believes_falsely": [
+                "Reads the fast payment as proof the family will keep folding"
+              ]
+            },
+            "VICTORIA_VANDERBURG": {
+              "knows": [
+                "Paying quietly is, for now, safer than involving the police in something that could expose worse"
+              ],
+              "hides": [
+                "The payment itself from Julian, Chloe, and Konrad"
+              ],
+              "believes_falsely": [
+                "Has no idea the person she's paying sits across from her at the office every week"
+              ]
+            }
+          }
+        },
+        {
+          "label": "Chloe & Marcus",
+          "solution": "Chloe and Marcus have been secretly involved for eight months \u2014 the one unguarded relationship in her carefully performed life, set against her cold, politically useful marriage to State Senator Richard Ashford. Exposure would end his career and her standing in one stroke.",
+          "objective_facts": [
+            "Chloe and Marcus have been involved for eight months.",
+            "Richard nearly overhears the end of a call between Chloe and Marcus in the estate's east hallway."
+          ],
+          "character_knowledge": {
+            "CHLOE_VANDERBURG": {
+              "knows": [
+                "Richard heard at least the last few seconds of that call"
+              ],
+              "hides": [
+                "Who was actually on the other end, covering with a lie about the caterer"
+              ],
+              "believes_falsely": [
+                "Assumes the lie landed cleanly"
+              ]
+            },
+            "MARCUS_CHEN": {
+              "knows": [
+                "Chloe hung up on him abruptly and hasn't explained why"
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "Worries, wrongly, that she's pulling away from him rather than just managing a close call"
+              ]
+            }
+          }
+        },
+        {
+          "label": "Konrad's Debts",
+          "solution": "Konrad owes roughly $2.4 million to a Hong Kong-based lender tied to Anson Fong, accumulated across a decade of gambling and mismanaging the family's Macau real-estate holdings, and he has already forged one withdrawal from the Whitmore Family Trust to make a partial payment.",
+          "objective_facts": [
+            "Konrad owes approximately $2.4 million to a lender connected to Anson Fong.",
+            "Konrad forged one withdrawal from the Whitmore Family Trust six months ago.",
+            "Konrad meets privately with a representative of the Whitfield Group about the estate's lakefront acreage, without family authorization."
+          ],
+          "character_knowledge": {
+            "KONRAD_VANDERBURG": {
+              "knows": [
+                "Selling even a sliver of the lakefront to Whitfield would cover a serious chunk of what he owes"
+              ],
+              "hides": [
+                "The meeting from the entire family"
+              ],
+              "believes_falsely": [
+                "Tells himself he can undo the sale later if he needs to"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "Whatever It Takes",
+      "theme": "Konrad forges a second withdrawal to buy himself time with his lender, Marcus finally tells Chloe what he saw at the boathouse weeks before Elena vanished, and Victoria stumbles onto the first hard evidence that something is wrong with her youngest son's story.",
+      "intro_note": "The police are asking polite questions with sharp edges, Victoria is paying a stranger to make a letter go away, and somewhere in this house a driver is still deciding whether the thing he saw a year ago matters.",
+      "outro_note": "Victoria found a signature in the trust archive that isn't quite hers. She hasn't said anything yet. She isn't sure who she'd say it to.",
+      "sections": [
+        "Fong's Deadline \u2014 Konrad gets a call that isn't a warning anymore, and forges a second withdrawal from the trust to buy himself two more weeks (thread: Konrad's Debts)",
+        "What Marcus Saw \u2014 Marcus finally tells Chloe about the argument he witnessed between Konrad and Elena near the boathouse, weeks before she disappeared (thread: Chloe & Marcus)",
+        "The Foundation Office \u2014 Victoria, reviewing paperwork for the family's charitable trust, finds a signature on an old withdrawal that doesn't sit right (thread: The Death of Elena Marsh)",
+        "A Second Note \u2014 this one addressed only to Konrad, more specific than the first (thread: The Blackmailer)",
+        "Dinner, Performed \u2014 the family sits for a meal none of them wants, trading small talk over a table full of secrets (thread: The Death of Elena Marsh)"
+      ],
+      "section_words": [
+        null,
+        {
+          "min": 220,
+          "max": 330,
+          "target": "250 to 300"
+        },
+        null,
+        {
+          "min": 160,
+          "max": 260,
+          "target": "180 to 220"
+        },
+        null
+      ],
+      "case": [
+        {
+          "label": "The Death of Elena Marsh",
+          "solution": "Elena discovered that Konrad had forged Victoria's signature to raid the family trust for gambling debts, and she was also secretly pregnant by him rather than Julian. She confronted Konrad on the estate's boathouse dock the night of the engagement dinner, telling him she intended to keep the child and might tell Julian everything. In the argument that followed, Konrad shoved her; she fell, struck her head on the dock, and drowned. He panicked, weighted the body, and hid it in the lake, lying that a cut on his hand came from a kitchen accident rather than the dock's broken railing. Victoria pieced together the truth roughly two months later and has been quietly protecting him ever since.",
+          "objective_facts": [
+            "Elena Marsh, missing for exactly one year, is found in the lake on the Vanderburg estate during pool-house construction.",
+            "Victoria finds a withdrawal from the family trust, dated six months before Elena's disappearance, bearing a signature that isn't quite hers."
+          ],
+          "character_knowledge": {
+            "VICTORIA_VANDERBURG": {
+              "knows": [
+                "A trust withdrawal she never authorized happened months before Elena vanished"
+              ],
+              "hides": [
+                "This discovery from everyone, for now, while she confirms what she's actually looking at"
+              ],
+              "believes_falsely": [
+                "Has not yet connected the forged signature to Konrad specifically"
+              ]
+            },
+            "KONRAD_VANDERBURG": {
+              "knows": [
+                "Nothing has changed in his story tonight \u2014 as far as he knows, no one has found anything"
+              ],
+              "hides": [
+                "His mounting panic under a performance of ordinary dinner-table charm"
+              ],
+              "believes_falsely": [
+                "Has no idea his mother is already looking at his handwriting"
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Blackmailer",
+          "solution": "Isabelle Liu, the family's attorney of fifteen years, mails the first blackmail notes the same night Elena's body is found. She has spent two years quietly resenting being treated as hired help despite burying scandal after scandal for the Vanderburgs, and months ago she noticed a signature in the trust archive that didn't sit right \u2014 an audit she never finished until now.",
+          "objective_facts": [
+            "Each of the four Vanderburg family members receives an identical, unsigned typed note in their room the night the body is found.",
+            "Konrad receives a second note, more specific than the first, naming an amount and a deadline."
+          ],
+          "character_knowledge": {
+            "ISABELLE_LIU": {
+              "knows": [
+                "Konrad's forged withdrawal specifically, which she's known about for months"
+              ],
+              "hides": [
+                "That her legal 'discovery' of it is a performance for a fact she's sat on"
+              ],
+              "believes_falsely": []
+            },
+            "KONRAD_VANDERBURG": {
+              "knows": [
+                "This note mentions a dollar figure close enough to real that it can't be a bluff"
+              ],
+              "hides": [
+                "This note's existence from his mother, on top of everything else"
+              ],
+              "believes_falsely": [
+                "Assumes the blackmailer is someone outside the family with inside knowledge, not someone who sits in the family's own offices"
+              ]
+            }
+          }
+        },
+        {
+          "label": "Chloe & Marcus",
+          "solution": "Chloe and Marcus have been secretly involved for eight months \u2014 the one unguarded relationship in her carefully performed life, set against her cold, politically useful marriage to State Senator Richard Ashford. Exposure would end his career and her standing in one stroke.",
+          "objective_facts": [
+            "Chloe and Marcus have been involved for eight months.",
+            "Marcus tells Chloe he once saw Konrad and Elena arguing near the boathouse, weeks before she disappeared."
+          ],
+          "character_knowledge": {
+            "MARCUS_CHEN": {
+              "knows": [
+                "What he saw between Konrad and Elena at the boathouse, which he has never told a soul until now"
+              ],
+              "hides": [
+                "That he's been sitting on it for a year out of fear of losing his job \u2014 and his family's, since his mother works the estate kitchens"
+              ],
+              "believes_falsely": [
+                "Assumed at the time it was just a family argument, not connected to anything worse"
+              ]
+            },
+            "CHLOE_VANDERBURG": {
+              "knows": [
+                "Marcus saw Konrad and Elena argue at the boathouse not long before she vanished"
+              ],
+              "hides": [
+                "This from the rest of the family, unsure yet what it means or who to trust with it"
+              ],
+              "believes_falsely": []
+            }
+          }
+        },
+        {
+          "label": "Konrad's Debts",
+          "solution": "Konrad owes roughly $2.4 million to a Hong Kong-based lender tied to Anson Fong, accumulated across a decade of gambling and mismanaging the family's Macau real-estate holdings, and he has already forged one withdrawal from the Whitmore Family Trust to make a partial payment.",
+          "objective_facts": [
+            "Konrad owes approximately $2.4 million to a lender connected to Anson Fong.",
+            "Konrad forges a second withdrawal from the Whitmore Family Trust to buy two more weeks with Fong."
+          ],
+          "character_knowledge": {
+            "KONRAD_VANDERBURG": {
+              "knows": [
+                "The second forgery buys him time, not safety"
+              ],
+              "hides": [
+                "Both withdrawals from Victoria, who he doesn't yet know is already looking at the first one"
+              ],
+              "believes_falsely": [
+                "Believes two forged signatures are no more dangerous than one, as long as no one is looking closely"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "The Ledger",
+      "theme": "Isabelle proposes a formal audit of the family trust to protect the Vanderburgs' legal exposure, unknowingly deepening her own leverage while Victoria, still working alone, narrows in on exactly whose signature isn't hers.",
+      "intro_note": "Konrad forged a second withdrawal. Marcus finally told Chloe what he saw at the boathouse a year ago. And somewhere in a filing cabinet, Victoria is holding a piece of paper she can't stop looking at.",
+      "outro_note": "Isabelle Liu just offered to personally audit the Whitmore Trust for any legal exposure. Victoria said yes before she finished asking.",
+      "sections": [
+        "The Proposal \u2014 Isabelle offers to conduct a discreet internal audit of the trust 'to protect the family,' and Victoria, desperate for someone she can trust, agrees (thread: The Blackmailer)",
+        "Two Signatures \u2014 Victoria lays the original trust documents side by side and finally admits to herself whose handwriting she's looking at (thread: The Death of Elena Marsh)",
+        "The Fong Warning \u2014 a man Konrad doesn't recognize is spotted near the estate's service gate, and everyone assumes it's about the murder investigation (thread: Konrad's Debts)",
+        "Late Call \u2014 Chloe debates telling Julian what Marcus saw, and decides, for reasons she doesn't fully admit to herself, to wait (thread: Chloe & Marcus)"
+      ],
+      "section_words": [
+        null,
+        {
+          "min": 200,
+          "max": 300,
+          "target": "220 to 270"
+        },
+        {
+          "min": 180,
+          "max": 280,
+          "target": "200 to 250"
+        },
+        null
+      ],
+      "case": [
+        {
+          "label": "The Death of Elena Marsh",
+          "solution": "Elena discovered that Konrad had forged Victoria's signature to raid the family trust for gambling debts, and she was also secretly pregnant by him rather than Julian. She confronted Konrad on the estate's boathouse dock the night of the engagement dinner, telling him she intended to keep the child and might tell Julian everything. In the argument that followed, Konrad shoved her; she fell, struck her head on the dock, and drowned. He panicked, weighted the body, and hid it in the lake, lying that a cut on his hand came from a kitchen accident rather than the dock's broken railing. Victoria pieced together the truth roughly two months later and has been quietly protecting him ever since.",
+          "objective_facts": [
+            "Elena Marsh, missing for exactly one year, is found in the lake on the Vanderburg estate during pool-house construction.",
+            "Victoria compares the forged signature against Konrad's known handwriting and privately confirms the match."
+          ],
+          "character_knowledge": {
+            "VICTORIA_VANDERBURG": {
+              "knows": [
+                "The forged signature is Konrad's handwriting, not a stranger's"
+              ],
+              "hides": [
+                "This conclusion from every single person in her life, including her lawyer"
+              ],
+              "believes_falsely": [
+                "Still assumes, for now, that the forgery is about the money and nothing more"
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Blackmailer",
+          "solution": "Isabelle Liu, the family's attorney of fifteen years, mails the first blackmail notes the same night Elena's body is found. She has spent two years quietly resenting being treated as hired help despite burying scandal after scandal for the Vanderburgs, and months ago she noticed a signature in the trust archive that didn't sit right \u2014 an audit she never finished until now.",
+          "objective_facts": [
+            "Isabelle formally proposes to personally audit the Whitmore Family Trust for legal exposure, and Victoria accepts.",
+            "Isabelle has known about both forged withdrawals for months before proposing the audit."
+          ],
+          "character_knowledge": {
+            "ISABELLE_LIU": {
+              "knows": [
+                "Victoria just handed her unsupervised access to exactly the records she needs"
+              ],
+              "hides": [
+                "That the 'discovery' she's about to present Victoria with is nothing new to her"
+              ],
+              "believes_falsely": [
+                "Believes she can manage both roles \u2014 trusted lawyer and anonymous blackmailer \u2014 indefinitely"
+              ]
+            },
+            "VICTORIA_VANDERBURG": {
+              "knows": [
+                "She just asked the one person she trusts most to look closely at the exact thing she's hiding"
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "Has no reason to suspect the person she's confiding in is also the one extorting her"
+              ]
+            }
+          }
+        },
+        {
+          "label": "Konrad's Debts",
+          "solution": "Konrad owes roughly $2.4 million to a Hong Kong-based lender tied to Anson Fong, accumulated across a decade of gambling and mismanaging the family's Macau real-estate holdings, and he has already forged one withdrawal from the Whitmore Family Trust to make a partial payment.",
+          "objective_facts": [
+            "Konrad owes approximately $2.4 million to a lender connected to Anson Fong.",
+            "A man connected to Fong is seen near the estate's service gate for the first time."
+          ],
+          "character_knowledge": {
+            "KONRAD_VANDERBURG": {
+              "knows": [
+                "The man at the gate is Fong's, not a detective"
+              ],
+              "hides": [
+                "The true reason for the visitor from the rest of the household, who assume it's about the murder investigation"
+              ],
+              "believes_falsely": []
+            }
+          }
+        },
+        {
+          "label": "Chloe & Marcus",
+          "solution": "Chloe and Marcus have been secretly involved for eight months \u2014 the one unguarded relationship in her carefully performed life, set against her cold, politically useful marriage to State Senator Richard Ashford. Exposure would end his career and her standing in one stroke.",
+          "objective_facts": [
+            "Chloe and Marcus have been involved for eight months.",
+            "Chloe decides not to tell Julian what Marcus told her about the boathouse argument."
+          ],
+          "character_knowledge": {
+            "CHLOE_VANDERBURG": {
+              "knows": [
+                "Telling Julian would mean explaining how she came to know it, and from whom"
+              ],
+              "hides": [
+                "Both the boathouse information and her reason for sitting on it"
+              ],
+              "believes_falsely": [
+                "Tells herself she's protecting the family, not protecting Marcus and herself"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "Blood Is Not Enough",
+      "theme": "The medical examiner's report reveals Elena was pregnant at the time of her death, and the news detonates through a family that thought it had already absorbed the worst of it.",
+      "intro_note": "Victoria knows it was Konrad's hand that signed a name that wasn't his. She hasn't told a soul \u2014 not even the woman she just asked to look even closer.",
+      "outro_note": "The medical examiner's office calls Julian directly, before the family liaison even has a chance to prepare him. Elena was seven weeks along when she died.",
+      "sections": [
+        "The Call Julian Takes Alone \u2014 the medical examiner's office reaches Julian directly with news no one has prepared him for (thread: The Death of Elena Marsh)",
+        "Telling Victoria \u2014 Julian brings the news to his mother, shattered in a way she hasn't seen since Elena first disappeared (thread: The Death of Elena Marsh)",
+        "Marcus, Watching \u2014 Marcus hears the news secondhand from the household staff and immediately thinks of the argument he saw at the boathouse (thread: Chloe & Marcus)",
+        "A Third Note \u2014 this one arrives the same week, raising the price, as if the sender knows exactly how distracted the family is right now (thread: The Blackmailer)",
+        "Chloe, Alone With It \u2014 Chloe sits with the news longer than anyone would expect, turning over a feeling she can't name (thread: Chloe & Marcus)",
+        "Konrad's Silence \u2014 at family dinner, Konrad says almost nothing, and Julian mistakes it for simple grief (thread: The Death of Elena Marsh)"
+      ],
+      "section_words": [
+        {
+          "min": 220,
+          "max": 340,
+          "target": "250 to 300"
+        },
+        null,
+        {
+          "min": 180,
+          "max": 280,
+          "target": "200 to 240"
+        },
+        {
+          "min": 160,
+          "max": 260,
+          "target": "180 to 220"
+        },
+        null,
+        null
+      ],
+      "case": [
+        {
+          "label": "The Death of Elena Marsh",
+          "solution": "Elena discovered that Konrad had forged Victoria's signature to raid the family trust for gambling debts, and she was also secretly pregnant by him rather than Julian. She confronted Konrad on the estate's boathouse dock the night of the engagement dinner, telling him she intended to keep the child and might tell Julian everything. In the argument that followed, Konrad shoved her; she fell, struck her head on the dock, and drowned. He panicked, weighted the body, and hid it in the lake, lying that a cut on his hand came from a kitchen accident rather than the dock's broken railing. Victoria pieced together the truth roughly two months later and has been quietly protecting him ever since.",
+          "objective_facts": [
+            "Elena Marsh, missing for exactly one year, is found in the lake on the Vanderburg estate during pool-house construction.",
+            "The medical examiner's report confirms Elena was seven weeks pregnant at the time of her death.",
+            "Paternity has not yet been established; the family and public assume, for now, that the child was Julian's."
+          ],
+          "character_knowledge": {
+            "JULIAN_VANDERBURG": {
+              "knows": [
+                "Elena was pregnant when she died"
+              ],
+              "hides": [
+                "How much this reopens a grief he thought had a floor to it"
+              ],
+              "believes_falsely": [
+                "Assumes without question that the child was his"
+              ]
+            },
+            "VICTORIA_VANDERBURG": {
+              "knows": [
+                "Elena was pregnant, on top of everything else she already privately knows about Konrad"
+              ],
+              "hides": [
+                "The full shape of her own suspicion, even now, from Julian"
+              ],
+              "believes_falsely": []
+            },
+            "KONRAD_VANDERBURG": {
+              "knows": [
+                "The child was his, and that this news puts a second body of evidence between him and safety"
+              ],
+              "hides": [
+                "This from everyone, including his mother, letting them believe his silence is grief"
+              ],
+              "believes_falsely": [
+                "Assumes paternity, if it ever comes out, will take much longer to trace than it will"
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Blackmailer",
+          "solution": "Isabelle Liu, the family's attorney of fifteen years, mails the first blackmail notes the same night Elena's body is found. She has spent two years quietly resenting being treated as hired help despite burying scandal after scandal for the Vanderburgs, and months ago she noticed a signature in the trust archive that didn't sit right \u2014 an audit she never finished until now.",
+          "objective_facts": [
+            "A third note arrives this week, raising the demanded amount.",
+            "The new note is timed within days of the pregnancy news becoming public within the family."
+          ],
+          "character_knowledge": {
+            "ISABELLE_LIU": {
+              "knows": [
+                "The family is distracted and destabilized, which is exactly when to press harder"
+              ],
+              "hides": [
+                "Any reaction to the pregnancy news beyond calm, lawyerly sympathy"
+              ],
+              "believes_falsely": []
+            },
+            "VICTORIA_VANDERBURG": {
+              "knows": [
+                "The blackmailer's timing feels almost too convenient to be coincidence"
+              ],
+              "hides": [
+                "This suspicion from Isabelle, whose counsel she's still relying on for the audit"
+              ],
+              "believes_falsely": [
+                "Suspects a household staff member with access to the family's schedule, not her own attorney"
+              ]
+            }
+          }
+        },
+        {
+          "label": "Chloe & Marcus",
+          "solution": "Chloe and Marcus have been secretly involved for eight months \u2014 the one unguarded relationship in her carefully performed life, set against her cold, politically useful marriage to State Senator Richard Ashford. Exposure would end his career and her standing in one stroke.",
+          "objective_facts": [
+            "Chloe and Marcus have been involved for eight months.",
+            "Marcus connects the pregnancy news to what he witnessed at the boathouse and grows increasingly uneasy."
+          ],
+          "character_knowledge": {
+            "MARCUS_CHEN": {
+              "knows": [
+                "The pregnancy news makes what he saw at the boathouse feel far more dangerous to sit on"
+              ],
+              "hides": [
+                "His growing fear from Chloe, not wanting to frighten her further"
+              ],
+              "believes_falsely": []
+            },
+            "CHLOE_VANDERBURG": {
+              "knows": [
+                "The pregnancy complicates whatever she decides to do with what Marcus told her"
+              ],
+              "hides": [
+                "Her own theory, forming but unspoken, about who the father might actually be"
+              ],
+              "believes_falsely": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "Whose Child",
+      "theme": "A paternity test confirms the baby wasn't Julian's, sending suspicion rippling through the family in every wrong direction while Victoria, now certain, quietly starts pulling threads only she can see connect.",
+      "intro_note": "Elena was pregnant when she died. For three days, that was the only thing anyone in this family could think about \u2014 until the lab called with a second, worse answer.",
+      "outro_note": "Julian keeps replaying every man Elena ever smiled at for half a second too long. He has not once considered his own brother. Victoria has considered almost nothing else.",
+      "sections": [
+        "The Second Call \u2014 the paternity result comes back, and it isn't Julian's child (thread: The Death of Elena Marsh)",
+        "Julian's List \u2014 reeling, Julian starts privately cataloguing every man who ever seemed too close to Elena, certain it's someone outside the family (thread: The Death of Elena Marsh)",
+        "Records, Quietly Requested \u2014 Victoria asks Isabelle, without explaining why, to pull Konrad's banking history 'for the audit' (thread: The Blackmailer)",
+        "Fong's Second Visit \u2014 the man from the gate returns, and this time Konrad is told exactly what happens if the next payment is late (thread: Konrad's Debts)",
+        "A Question Chloe Doesn't Ask \u2014 Chloe almost tells Julian what she's been carrying, and stops herself at the last second (thread: Chloe & Marcus)"
+      ],
+      "section_words": [
+        null,
+        {
+          "min": 220,
+          "max": 320,
+          "target": "240 to 280"
+        },
+        {
+          "min": 180,
+          "max": 280,
+          "target": "200 to 240"
+        },
+        null,
+        null
+      ],
+      "case": [
+        {
+          "label": "The Death of Elena Marsh",
+          "solution": "Elena discovered that Konrad had forged Victoria's signature to raid the family trust for gambling debts, and she was also secretly pregnant by him rather than Julian. She confronted Konrad on the estate's boathouse dock the night of the engagement dinner, telling him she intended to keep the child and might tell Julian everything. In the argument that followed, Konrad shoved her; she fell, struck her head on the dock, and drowned. He panicked, weighted the body, and hid it in the lake, lying that a cut on his hand came from a kitchen accident rather than the dock's broken railing. Victoria pieced together the truth roughly two months later and has been quietly protecting him ever since.",
+          "objective_facts": [
+            "Paternity testing confirms Julian is not the father of Elena's child.",
+            "Victoria privately begins connecting the paternity result to Konrad, on top of the forged signature and the hand injury she already knows about."
+          ],
+          "character_knowledge": {
+            "JULIAN_VANDERBURG": {
+              "knows": [
+                "The child wasn't his"
+              ],
+              "hides": [
+                "How much this changes his grief into something closer to rage"
+              ],
+              "believes_falsely": [
+                "Assumes it must have been someone from outside the family or her old life before him"
+              ]
+            },
+            "VICTORIA_VANDERBURG": {
+              "knows": [
+                "The paternity result, combined with everything else, points at Konrad specifically"
+              ],
+              "hides": [
+                "This conclusion from Julian entirely, and from Isabelle in anything but disguised requests"
+              ],
+              "believes_falsely": []
+            },
+            "KONRAD_VANDERBURG": {
+              "knows": [
+                "The paternity result is now public within the family, though his name hasn't come up yet"
+              ],
+              "hides": [
+                "His terror, badly, under a version of grief that doesn't quite match his brother's"
+              ],
+              "believes_falsely": [
+                "Believes no one has connected, or will connect, the timeline to him"
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Blackmailer",
+          "solution": "Isabelle Liu, the family's attorney of fifteen years, mails the first blackmail notes the same night Elena's body is found. She has spent two years quietly resenting being treated as hired help despite burying scandal after scandal for the Vanderburgs, and months ago she noticed a signature in the trust archive that didn't sit right \u2014 an audit she never finished until now.",
+          "objective_facts": [
+            "Victoria asks Isabelle to pull Konrad's personal banking history under the pretext of the ongoing trust audit."
+          ],
+          "character_knowledge": {
+            "ISABELLE_LIU": {
+              "knows": [
+                "Victoria is now looking directly at Konrad, which puts Isabelle's own extortion of him at risk of being uncovered as part of a wider investigation"
+              ],
+              "hides": [
+                "Her alarm at the request, handling it with total professional calm"
+              ],
+              "believes_falsely": [
+                "Assumes she can control what Victoria eventually sees in those records"
+              ]
+            },
+            "VICTORIA_VANDERBURG": {
+              "knows": [
+                "She needs Konrad's financials without tipping him off that she's looking"
+              ],
+              "hides": [
+                "Her real reason for the request from Isabelle"
+              ],
+              "believes_falsely": []
+            }
+          }
+        },
+        {
+          "label": "Konrad's Debts",
+          "solution": "Konrad owes roughly $2.4 million to a Hong Kong-based lender tied to Anson Fong, accumulated across a decade of gambling and mismanaging the family's Macau real-estate holdings, and he has already forged one withdrawal from the Whitmore Family Trust to make a partial payment.",
+          "objective_facts": [
+            "Konrad owes approximately $2.4 million to a lender connected to Anson Fong.",
+            "Fong's man returns to deliver an explicit deadline and a threat if it isn't met."
+          ],
+          "character_knowledge": {
+            "KONRAD_VANDERBURG": {
+              "knows": [
+                "The threat is no longer abstract"
+              ],
+              "hides": [
+                "The specifics of the threat from everyone, including Victoria"
+              ],
+              "believes_falsely": [
+                "Believes the Whitfield land deal can still close in time, if he pushes hard enough"
+              ]
+            }
+          }
+        },
+        {
+          "label": "Chloe & Marcus",
+          "solution": "Chloe and Marcus have been secretly involved for eight months \u2014 the one unguarded relationship in her carefully performed life, set against her cold, politically useful marriage to State Senator Richard Ashford. Exposure would end his career and her standing in one stroke.",
+          "objective_facts": [
+            "Chloe and Marcus have been involved for eight months.",
+            "Chloe comes close to telling Julian what she suspects and stops herself."
+          ],
+          "character_knowledge": {
+            "CHLOE_VANDERBURG": {
+              "knows": [
+                "Telling Julian now, mid-paternity-scandal, could unravel far more than just the affair"
+              ],
+              "hides": [
+                "Her near-confession from Julian, who has no idea how close she came"
+              ],
+              "believes_falsely": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "Open Doors, Closed Ranks",
+      "theme": "The blackmailer's demands escalate sharply, the family turns on each other looking for a mole, and Victoria privately confronts Konrad about the forged trust documents for the first time \u2014 though not yet about the murder.",
+      "intro_note": "The child wasn't Julian's. Somewhere in this house, someone knows exactly whose it was, and Victoria is fairly sure it isn't a stranger.",
+      "outro_note": "Victoria didn't ask Konrad if he killed Elena. She asked him about a signature. He lied to her face, and for the first time in his life, she let him see that she knew it.",
+      "sections": [
+        "The Fourth Note \u2014 the demand doubles, and this time it's addressed to the whole family at once, left on the breakfast table (thread: The Blackmailer)",
+        "Suspecting Each Other \u2014 Julian, rattled, accuses Konrad of being behind the blackmail, a wrong guess that still lands close enough to terrify him (thread: The Blackmailer)",
+        "The Confrontation \u2014 Victoria corners Konrad alone with the forged withdrawal in her hand, and he lies to her face for the first time in his life she's caught him at it (thread: The Death of Elena Marsh)",
+        "A Photograph \u2014 a freelance photographer captures Chloe's car outside Marcus's building late at night (thread: Chloe & Marcus)",
+        "Isabelle's Favor \u2014 Chloe, panicked, asks Isabelle to make the photograph disappear through her press contacts, never knowing who she's really asking (thread: Chloe & Marcus)",
+        "The Weight of a Look \u2014 at a family gathering, Victoria watches Konrad across the room and, for the first time, doesn't try to hide that she's watching (thread: The Death of Elena Marsh)"
+      ],
+      "section_words": [
+        {
+          "min": 180,
+          "max": 280,
+          "target": "200 to 240"
+        },
+        null,
+        {
+          "min": 250,
+          "max": 360,
+          "target": "280 to 330"
+        },
+        {
+          "min": 180,
+          "max": 280,
+          "target": "200 to 240"
+        },
+        null,
+        {
+          "min": 150,
+          "max": 240,
+          "target": "170 to 210"
+        }
+      ],
+      "case": [
+        {
+          "label": "The Death of Elena Marsh",
+          "solution": "Elena discovered that Konrad had forged Victoria's signature to raid the family trust for gambling debts, and she was also secretly pregnant by him rather than Julian. She confronted Konrad on the estate's boathouse dock the night of the engagement dinner, telling him she intended to keep the child and might tell Julian everything. In the argument that followed, Konrad shoved her; she fell, struck her head on the dock, and drowned. He panicked, weighted the body, and hid it in the lake, lying that a cut on his hand came from a kitchen accident rather than the dock's broken railing. Victoria pieced together the truth roughly two months later and has been quietly protecting him ever since.",
+          "objective_facts": [
+            "Victoria confronts Konrad privately about the forged trust withdrawal, without mentioning Elena's death directly.",
+            "Konrad denies forging anything, and Victoria does not believe him."
+          ],
+          "character_knowledge": {
+            "VICTORIA_VANDERBURG": {
+              "knows": [
+                "Konrad is lying to her about the signature, in real time, to her face"
+              ],
+              "hides": [
+                "That she already suspects far more than the forgery alone"
+              ],
+              "believes_falsely": []
+            },
+            "KONRAD_VANDERBURG": {
+              "knows": [
+                "His mother caught him in a direct lie about the signature"
+              ],
+              "hides": [
+                "How much closer this feels to the whole truth coming out"
+              ],
+              "believes_falsely": [
+                "Hopes the lie, however unconvincing, buys him a little more room"
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Blackmailer",
+          "solution": "Isabelle Liu, the family's attorney of fifteen years, mails the first blackmail notes the same night Elena's body is found. She has spent two years quietly resenting being treated as hired help despite burying scandal after scandal for the Vanderburgs, and months ago she noticed a signature in the trust archive that didn't sit right \u2014 an audit she never finished until now.",
+          "objective_facts": [
+            "A fourth note doubles the demand and is addressed to the entire family collectively.",
+            "Julian publicly accuses Konrad of being the blackmailer, which Konrad denies."
+          ],
+          "character_knowledge": {
+            "JULIAN_VANDERBURG": {
+              "knows": [
+                "Someone close to the family has to be behind this \u2014 the details are too precise for a stranger"
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "Wrongly accuses Konrad, mistaking his brother's guilt over the murder for guilt over the blackmail"
+              ]
+            },
+            "KONRAD_VANDERBURG": {
+              "knows": [
+                "He is not the blackmailer, whatever Julian thinks"
+              ],
+              "hides": [
+                "His relief that Julian is looking in the wrong direction, even as it terrifies him that anyone is looking at all"
+              ],
+              "believes_falsely": []
+            },
+            "ISABELLE_LIU": {
+              "knows": [
+                "The family is now turning on each other over her demands, exactly as she hoped"
+              ],
+              "hides": [
+                "Any satisfaction at watching Julian accuse the wrong brother"
+              ],
+              "believes_falsely": []
+            }
+          }
+        },
+        {
+          "label": "Chloe & Marcus",
+          "solution": "Chloe and Marcus have been secretly involved for eight months \u2014 the one unguarded relationship in her carefully performed life, set against her cold, politically useful marriage to State Senator Richard Ashford. Exposure would end his career and her standing in one stroke.",
+          "objective_facts": [
+            "Chloe and Marcus have been involved for eight months.",
+            "A freelance photographer captures Chloe's car outside Marcus's building.",
+            "Chloe asks Isabelle to use her press contacts to suppress the photograph."
+          ],
+          "character_knowledge": {
+            "CHLOE_VANDERBURG": {
+              "knows": [
+                "A photograph of her car exists and could surface any day"
+              ],
+              "hides": [
+                "The affair's true depth from Isabelle, framing her request as a vague 'personal matter'"
+              ],
+              "believes_falsely": [
+                "Has no idea she just asked her own blackmailer for a favor"
+              ]
+            },
+            "ISABELLE_LIU": {
+              "knows": [
+                "Chloe is hiding something significant enough to beg for a suppression favor"
+              ],
+              "hides": [
+                "How useful this new leverage over Chloe might become later"
+              ],
+              "believes_falsely": []
+            },
+            "MARCUS_CHEN": {
+              "knows": [
+                "A photo of Chloe's car was taken outside his building"
+              ],
+              "hides": [
+                "His fear about what happens to his family's position if the affair becomes public"
+              ],
+              "believes_falsely": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "The Weight of the Name",
+      "theme": "Fong's enforcers escalate their pressure on Konrad just as Julian nearly uncovers the Whitfield land deal, Chloe and Marcus reach a breaking point over her refusal to choose, and Victoria assembles the last pieces of what happened at the boathouse.",
+      "intro_note": "Victoria let Konrad see that she knows he's lying. She still hasn't said the word 'murder' out loud, not even to herself.",
+      "outro_note": "Marcus told Victoria what he saw at the boathouse a year ago. She thanked him, quietly, and asked him never to repeat it to anyone else \u2014 including Chloe.",
+      "sections": [
+        "Whitfield's Paperwork \u2014 Julian stumbles across a partial contract for the lakefront acreage and confronts Konrad, who lies badly (thread: Konrad's Debts)",
+        "Fong's Ultimatum \u2014 enforcers corner Konrad off the estate grounds this time, making clear the next missed payment isn't survivable (thread: Konrad's Debts)",
+        "Choose Me or Don't \u2014 Marcus, exhausted by hiding, asks Chloe to finally choose between him and her marriage; she can't answer (thread: Chloe & Marcus)",
+        "Victoria Finds Marcus \u2014 Victoria, working her own quiet investigation, corners Marcus and gets him to finally describe what he saw at the boathouse (thread: The Death of Elena Marsh)",
+        "The Full Picture \u2014 alone in her study that night, Victoria lays out everything she now knows and understands, for the first time, exactly what her son did (thread: The Death of Elena Marsh)",
+        "A Fifth Note \u2014 the blackmailer, sensing the family's unraveling, makes its most direct threat yet: go to the police, or pay double by week's end (thread: The Blackmailer)"
+      ],
+      "section_words": [
+        null,
+        {
+          "min": 200,
+          "max": 300,
+          "target": "220 to 260"
+        },
+        {
+          "min": 220,
+          "max": 330,
+          "target": "250 to 300"
+        },
+        null,
+        {
+          "min": 260,
+          "max": 380,
+          "target": "290 to 340"
+        },
+        {
+          "min": 160,
+          "max": 260,
+          "target": "180 to 220"
+        }
+      ],
+      "case": [
+        {
+          "label": "The Death of Elena Marsh",
+          "solution": "Elena discovered that Konrad had forged Victoria's signature to raid the family trust for gambling debts, and she was also secretly pregnant by him rather than Julian. She confronted Konrad on the estate's boathouse dock the night of the engagement dinner, telling him she intended to keep the child and might tell Julian everything. In the argument that followed, Konrad shoved her; she fell, struck her head on the dock, and drowned. He panicked, weighted the body, and hid it in the lake, lying that a cut on his hand came from a kitchen accident rather than the dock's broken railing. Victoria pieced together the truth roughly two months later and has been quietly protecting him ever since.",
+          "objective_facts": [
+            "Marcus describes to Victoria, in detail, the argument he witnessed between Konrad and Elena at the boathouse.",
+            "Victoria now possesses every piece of circumstantial evidence \u2014 the forged signature, the paternity result, the hand injury, and an eyewitness to the argument \u2014 pointing to Konrad."
+          ],
+          "character_knowledge": {
+            "VICTORIA_VANDERBURG": {
+              "knows": [
+                "Konrad killed Elena, even if it was not premeditated"
+              ],
+              "hides": [
+                "This certainty from every remaining person in her life, including Julian"
+              ],
+              "believes_falsely": []
+            },
+            "MARCUS_CHEN": {
+              "knows": [
+                "He has finally told someone what he saw, and it was Victoria, not Chloe or the police"
+              ],
+              "hides": [
+                "This conversation from Chloe, at Victoria's request"
+              ],
+              "believes_falsely": [
+                "Assumes telling Victoria means the truth will now reach the police through her"
+              ]
+            },
+            "KONRAD_VANDERBURG": {
+              "knows": [
+                "Nothing has visibly changed \u2014 he doesn't yet know his mother has spoken to Marcus"
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "Still believes his mother's suspicion has a ceiling he hasn't hit yet"
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Blackmailer",
+          "solution": "Isabelle Liu, the family's attorney of fifteen years, mails the first blackmail notes the same night Elena's body is found. She has spent two years quietly resenting being treated as hired help despite burying scandal after scandal for the Vanderburgs, and months ago she noticed a signature in the trust archive that didn't sit right \u2014 an audit she never finished until now.",
+          "objective_facts": [
+            "A fifth note delivers an ultimatum: go to the police, or double the payment by the end of the week."
+          ],
+          "character_knowledge": {
+            "ISABELLE_LIU": {
+              "knows": [
+                "The family's unraveling makes this the moment to press hardest, before anyone stabilizes enough to fight back"
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "Underestimates how far Victoria will go once cornered, assuming she'll simply keep paying"
+              ]
+            },
+            "VICTORIA_VANDERBURG": {
+              "knows": [
+                "The ultimatum forces a decision she can no longer delay"
+              ],
+              "hides": [
+                "Her plan, still forming, from everyone"
+              ],
+              "believes_falsely": []
+            }
+          }
+        },
+        {
+          "label": "Konrad's Debts",
+          "solution": "Konrad owes roughly $2.4 million to a Hong Kong-based lender tied to Anson Fong, accumulated across a decade of gambling and mismanaging the family's Macau real-estate holdings, and he has already forged one withdrawal from the Whitmore Family Trust to make a partial payment.",
+          "objective_facts": [
+            "Konrad owes approximately $2.4 million to a lender connected to Anson Fong.",
+            "Julian finds a partial Whitfield Group contract for the lakefront acreage in Konrad's study.",
+            "Fong's enforcers confront Konrad directly off the estate grounds with a final ultimatum."
+          ],
+          "character_knowledge": {
+            "JULIAN_VANDERBURG": {
+              "knows": [
+                "Konrad was secretly negotiating to sell family land without authorization"
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "Reads this only as Konrad's usual recklessness, not as evidence connected to anything worse"
+              ]
+            },
+            "KONRAD_VANDERBURG": {
+              "knows": [
+                "Fong's people will not wait past this week"
+              ],
+              "hides": [
+                "The true severity of the threat from everyone, even now"
+              ],
+              "believes_falsely": [
+                "Still believes the Whitfield sale can close in time to save him"
+              ]
+            }
+          }
+        },
+        {
+          "label": "Chloe & Marcus",
+          "solution": "Chloe and Marcus have been secretly involved for eight months \u2014 the one unguarded relationship in her carefully performed life, set against her cold, politically useful marriage to State Senator Richard Ashford. Exposure would end his career and her standing in one stroke.",
+          "objective_facts": [
+            "Chloe and Marcus have been involved for eight months.",
+            "Marcus asks Chloe to choose between him and her marriage; she cannot give him an answer."
+          ],
+          "character_knowledge": {
+            "MARCUS_CHEN": {
+              "knows": [
+                "Chloe's silence, tonight, is its own answer"
+              ],
+              "hides": [
+                "How much that silence has cost him to hear"
+              ],
+              "believes_falsely": []
+            },
+            "CHLOE_VANDERBURG": {
+              "knows": [
+                "She cannot give up her marriage, whatever she feels for Marcus"
+              ],
+              "hides": [
+                "This certainty from Marcus, unable to say it out loud yet"
+              ],
+              "believes_falsely": [
+                "Tells herself she just needs more time, not that her answer is already final"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "The Night on the Dock",
+      "theme": "In a single unbroken confession to his mother, Konrad finally tells Victoria everything that happened the night Elena died \u2014 and Victoria, instead of turning him in, begins quietly building a way to make him disappear.",
+      "intro_note": "Victoria knows everything now: the forgery, the paternity, the boathouse, the lie about the cut on his hand. Tonight, she asks Konrad to tell her himself.",
+      "outro_note": "Victoria didn't call the police. She called someone whose entire job is making people disappear cleanly, and asked how fast it could be arranged.",
+      "sections": [
+        "The Question \u2014 Victoria sits Konrad down alone and asks him, plainly, what happened at the boathouse the night Elena disappeared (thread: The Death of Elena Marsh)",
+        "The Confession \u2014 Konrad finally tells her everything: the affair, the pregnancy, the argument, the shove, the year of lies (thread: The Death of Elena Marsh)",
+        "What Victoria Decides \u2014 rather than call the police, Victoria begins quietly arranging a way to make her son disappear for good (thread: The Death of Elena Marsh)",
+        "Isabelle's Final Demand \u2014 with the family in chaos, Isabelle sends her boldest note yet, unaware how close Victoria now is to identifying her (thread: The Blackmailer)",
+        "Fong Is Paid \u2014 using funds meant for something else entirely, Victoria quietly settles Konrad's debt in full, folding it into her larger plan (thread: Konrad's Debts)"
+      ],
+      "section_words": [
+        {
+          "min": 180,
+          "max": 280,
+          "target": "200 to 240"
+        },
+        {
+          "min": 300,
+          "max": 420,
+          "target": "340 to 380"
+        },
+        null,
+        {
+          "min": 160,
+          "max": 260,
+          "target": "180 to 220"
+        },
+        {
+          "min": 150,
+          "max": 240,
+          "target": "170 to 210"
+        }
+      ],
+      "case": [
+        {
+          "label": "The Death of Elena Marsh",
+          "solution": "Elena discovered that Konrad had forged Victoria's signature to raid the family trust for gambling debts, and she was also secretly pregnant by him rather than Julian. She confronted Konrad on the estate's boathouse dock the night of the engagement dinner, telling him she intended to keep the child and might tell Julian everything. In the argument that followed, Konrad shoved her; she fell, struck her head on the dock, and drowned. He panicked, weighted the body, and hid it in the lake, lying that a cut on his hand came from a kitchen accident rather than the dock's broken railing. Victoria pieced together the truth roughly two months later and has been quietly protecting him ever since.",
+          "objective_facts": [
+            "Konrad confesses the full truth to Victoria alone: the affair, the pregnancy, the confrontation on the dock, the shove, and the year of concealment.",
+            "Victoria chooses not to involve the police and instead begins arranging for Konrad to permanently disappear."
+          ],
+          "character_knowledge": {
+            "KONRAD_VANDERBURG": {
+              "knows": [
+                "His mother now has the complete truth, from his own mouth"
+              ],
+              "hides": [
+                "Nothing further from Victoria \u2014 for the first time all season, he has stopped lying to at least one person"
+              ],
+              "believes_falsely": [
+                "Assumes confession means punishment, not the plan his mother is actually building"
+              ]
+            },
+            "VICTORIA_VANDERBURG": {
+              "knows": [
+                "The entire truth, in her son's own words"
+              ],
+              "hides": [
+                "Her decision from everyone, including Konrad, until it's already in motion"
+              ],
+              "believes_falsely": []
+            }
+          }
+        },
+        {
+          "label": "The Blackmailer",
+          "solution": "Isabelle Liu, the family's attorney of fifteen years, mails the first blackmail notes the same night Elena's body is found. She has spent two years quietly resenting being treated as hired help despite burying scandal after scandal for the Vanderburgs, and months ago she noticed a signature in the trust archive that didn't sit right \u2014 an audit she never finished until now.",
+          "objective_facts": [
+            "Isabelle sends her most direct note yet, demanding a permanent arrangement rather than another one-time payment.",
+            "Victoria has begun quietly cross-referencing who could have known the specific details in each note."
+          ],
+          "character_knowledge": {
+            "ISABELLE_LIU": {
+              "knows": [
+                "She is pushing for something permanent now, tired of one-time payments"
+              ],
+              "hides": [
+                "How exposed her position actually is, unaware Victoria has started narrowing the list of who could know this much"
+              ],
+              "believes_falsely": [
+                "Believes she still holds all the leverage"
+              ]
+            },
+            "VICTORIA_VANDERBURG": {
+              "knows": [
+                "The notes contain details almost no one outside the family's inner circle could know"
+              ],
+              "hides": [
+                "Her growing suspicion of exactly who that circle includes"
+              ],
+              "believes_falsely": []
+            }
+          }
+        },
+        {
+          "label": "Konrad's Debts",
+          "solution": "Konrad owes roughly $2.4 million to a Hong Kong-based lender tied to Anson Fong, accumulated across a decade of gambling and mismanaging the family's Macau real-estate holdings, and he has already forged one withdrawal from the Whitmore Family Trust to make a partial payment.",
+          "objective_facts": [
+            "Victoria personally settles Konrad's full debt to Anson Fong, using funds earmarked for the foundation's spring gala.",
+            "Konrad no longer owes Fong anything as of tonight."
+          ],
+          "character_knowledge": {
+            "VICTORIA_VANDERBURG": {
+              "knows": [
+                "Clearing the debt is a necessary piece of making Konrad's disappearance look voluntary rather than desperate"
+              ],
+              "hides": [
+                "The true source and purpose of the payment from the foundation's board"
+              ],
+              "believes_falsely": []
+            },
+            "KONRAD_VANDERBURG": {
+              "knows": [
+                "The debt is gone"
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "Reads the payoff as forgiveness rather than the first step in his mother's plan for him"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "Legacy",
+      "theme": "Victoria's plan comes to fruition as Konrad quietly vanishes into a new life abroad under a story the whole world will believe, she cements Isabelle's silence with a permanent seat at the table, and Chloe is left standing at a door she still can't walk through.",
+      "intro_note": "Konrad confessed everything. Victoria didn't call the police. What she called instead was someone who specializes in making people disappear cleanly, permanently, and untraceably.",
+      "outro_note": "",
+      "sections": [
+        "The Cover Story \u2014 Victoria and Isabelle, now confirmed to each other as exactly who they are, negotiate the story the world will be told about Konrad (thread: The Death of Elena Marsh)",
+        "Isabelle's Price \u2014 Victoria confronts Isabelle directly as the blackmailer, and instead of exposing her, offers her a permanent equity stake and a board seat in exchange for total, lasting silence (thread: The Blackmailer)",
+        "Konrad Leaves \u2014 in the middle of the night, Konrad boards a private departure under a new name, and only Victoria comes to see him off (thread: The Death of Elena Marsh)",
+        "Julian, Almost Knowing \u2014 Julian is told his brother has 'gone to get help' and chooses, against every instinct, not to push harder (thread: The Death of Elena Marsh)",
+        "The Door Chloe Doesn't Walk Through \u2014 Marcus waits for an answer that never comes, and Chloe chooses her marriage, her name, and her silence (thread: Chloe & Marcus)",
+        "The Vanderburg Name \u2014 the season closes on Victoria alone in the study, the lake calm outside the window, the family name intact and the cost of it fully hers to carry (thread: The Death of Elena Marsh)"
+      ],
+      "section_words": [
+        {
+          "min": 220,
+          "max": 330,
+          "target": "250 to 290"
+        },
+        {
+          "min": 260,
+          "max": 380,
+          "target": "290 to 340"
+        },
+        {
+          "min": 180,
+          "max": 280,
+          "target": "200 to 240"
+        },
+        null,
+        {
+          "min": 200,
+          "max": 300,
+          "target": "220 to 260"
+        },
+        {
+          "min": 160,
+          "max": 260,
+          "target": "180 to 220"
+        }
+      ],
+      "case": [
+        {
+          "label": "The Death of Elena Marsh",
+          "solution": "Elena discovered that Konrad had forged Victoria's signature to raid the family trust for gambling debts, and she was also secretly pregnant by him rather than Julian. She confronted Konrad on the estate's boathouse dock the night of the engagement dinner, telling him she intended to keep the child and might tell Julian everything. In the argument that followed, Konrad shoved her; she fell, struck her head on the dock, and drowned. He panicked, weighted the body, and hid it in the lake, lying that a cut on his hand came from a kitchen accident rather than the dock's broken railing. Victoria pieced together the truth roughly two months later and has been quietly protecting him ever since.",
+          "objective_facts": [
+            "Konrad departs the country permanently under a new identity, arranged and funded entirely by Victoria.",
+            "The official story given to Julian, the public, and the police is that Konrad has entered private treatment abroad.",
+            "The investigation into Elena's death is quietly allowed to stall, officially unresolved."
+          ],
+          "character_knowledge": {
+            "VICTORIA_VANDERBURG": {
+              "knows": [
+                "Exactly what she has done and exactly what it cost her to do it"
+              ],
+              "hides": [
+                "The full truth from Julian permanently, choosing the family's survival over his right to know"
+              ],
+              "believes_falsely": []
+            },
+            "KONRAD_VANDERBURG": {
+              "knows": [
+                "He is leaving everything behind under his mother's protection, not his own strength"
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "Tells himself this is a second chance rather than a life sentence in exile"
+              ]
+            },
+            "JULIAN_VANDERBURG": {
+              "knows": [
+                "His brother is gone, officially for treatment"
+              ],
+              "hides": [
+                "A suspicion he can't quite name, choosing not to look at it directly"
+              ],
+              "believes_falsely": [
+                "Half-believes his mother is protecting him from some truth about himself, not about Konrad"
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Blackmailer",
+          "solution": "Isabelle Liu, the family's attorney of fifteen years, mails the first blackmail notes the same night Elena's body is found. She has spent two years quietly resenting being treated as hired help despite burying scandal after scandal for the Vanderburgs, and months ago she noticed a signature in the trust archive that didn't sit right \u2014 an audit she never finished until now.",
+          "objective_facts": [
+            "Victoria confronts Isabelle directly and confirms she is the blackmailer.",
+            "Rather than expose or dismiss her, Victoria offers Isabelle a permanent equity stake and a board seat in exchange for total silence, which Isabelle accepts."
+          ],
+          "character_knowledge": {
+            "VICTORIA_VANDERBURG": {
+              "knows": [
+                "Isabelle is the blackmailer, and now also knows enough about Konrad to be dangerous forever unless properly bound to the family"
+              ],
+              "hides": [
+                "This entire arrangement from Julian and Chloe, who will only ever see Isabelle promoted, never why"
+              ],
+              "believes_falsely": []
+            },
+            "ISABELLE_LIU": {
+              "knows": [
+                "She has been caught, and instead of destroyed, she has been elevated"
+              ],
+              "hides": [
+                "Nothing further from Victoria now \u2014 the two women understand each other completely"
+              ],
+              "believes_falsely": [
+                "Underestimated Victoria's willingness to bring a threat inside the walls rather than fight it from outside"
+              ]
+            }
+          }
+        },
+        {
+          "label": "Chloe & Marcus",
+          "solution": "Chloe and Marcus have been secretly involved for eight months \u2014 the one unguarded relationship in her carefully performed life, set against her cold, politically useful marriage to State Senator Richard Ashford. Exposure would end his career and her standing in one stroke.",
+          "objective_facts": [
+            "Chloe chooses to remain married to Richard and ends things with Marcus.",
+            "Marcus's future employment with the Vanderburg family is left unresolved as the season ends."
+          ],
+          "character_knowledge": {
+            "CHLOE_VANDERBURG": {
+              "knows": [
+                "She has made her choice, and it is the one that keeps her name intact"
+              ],
+              "hides": [
+                "How much the choice costs her, even from herself"
+              ],
+              "believes_falsely": []
+            },
+            "MARCUS_CHEN": {
+              "knows": [
+                "Chloe's silence has become her final answer"
+              ],
+              "hides": [
+                "What he plans to do next, even from himself"
+              ],
+              "believes_falsely": []
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,580 @@
+--- PART 1 ---
+
+[NARRATOR]
+Previously on Facades: Konrad Vanderburg swore, again, that he had no idea how Elena Marsh ended up in the lake behind the estate. His mother listened, said nothing, and let him watch her not believe him. Victoria Vanderburg has still not said the word "murder" aloud — not to Konrad, not to anyone, not even alone in the dark.
+
+[NARRATOR]
+Late morning. The estate's east wing study, filing cabinets nobody's touched since the old man died. Julian is searching for a lease agreement when Konrad walks in and catches him mid-search.
+
+[JULIAN_VANDERBURG | style: warm, absorbed, half to himself]
+Konrad's contracts are alphabetized by nothing. Filed by mood, maybe.
+
+[SFX: papers shuffling]
+
+[JULIAN_VANDERBURG | style: sudden focus, quieter]
+Whitfield Group. Lakefront acreage. Forty-one pages, draft terms — your initials in the margin, not Mother's. Not mine.
+
+[SFX: a door opening down the hall]
+
+[KONRAD_VANDERBURG | style: restless charm, too fast]
+That's an old draft, Julian. Dead deal. Whitfield walked away from it in the spring.
+
+[JULIAN_VANDERBURG | style: controlled, testing him]
+Then why is it dated three weeks ago.
+
+[KONRAD_VANDERBURG | style: charm curdling into panic, laughing it off]
+Is it? My assistant reuses templates — it's probably a typo, a formatting artifact—
+
+[JULIAN_VANDERBURG | style: quiet and hard, cutting him off]
+This is our lakefront. Forty acres Grandfather bought before the causeway existed. You don't sell family land off a template typo.
+
+[KONRAD_VANDERBURG | style: panic breaking through the charm]
+I wasn't selling anything. I was exploring options. There's a difference.
+
+[JULIAN_VANDERBURG | style: controlled tightness starting to flare]
+Options for what? You don't have authority to shop that land and you know it. Mother knows it. The trust has three signatories and you are not one of them.
+
+[KONRAD_VANDERBURG | style: too loud, defensive]
+Mother doesn't have to know every conversation I have. I talk to people. Brokers talk. None of it means anything's actually moving.
+
+[JULIAN_VANDERBURG | style: pressing, quieter now]
+Forty-one pages isn't a conversation, Konrad. That's a draft with terms. Purchase price, closing conditions, a signature block waiting for a name. Whose name were you planning to put there?
+
+[KONRAD_VANDERBURG | style: stalling, too bright]
+Nobody's. I told you, it's dead. I kept the file because I like to know what things are worth. Curiosity, that's all.
+
+[JULIAN_VANDERBURG | style: not buying it, low]
+You've never once in your life been curious about a spreadsheet.
+
+[JULIAN_VANDERBURG | style: low, dangerous calm]
+We buried Elena's memorial three months ago. Fong's men were photographed outside your building in April — don't look at me like I don't read the papers. Now there's a stealth contract for family land in your desk. Tell me what's happening to you.
+
+[KONRAD_VANDERBURG | style: cornered, backpedaling fast]
+Nothing is happening to me. I made a bad investment, I'm trying to unwind it quietly so it doesn't become a family circus. Let me handle it.
+
+[JULIAN_VANDERBURG | style: exhausted, still gentle underneath]
+You've been "handling it" since Macau. First it was the hotel project. Then it was the casino partner who "just needed patience." Every time it's smaller than it looks, until it isn't.
+
+[KONRAD_VANDERBURG | style: wounded, deflecting]
+Easy for the golden son to say. You've never had to handle anything in your life. Things just arrange themselves around you — the company, the fiancée, the name. I got what was left over.
+
+[JULIAN_VANDERBURG | style: stung, sharpening]
+Don't do that. Don't turn this into me. I'm standing in your office holding proof you lied to my face ten minutes ago, and somehow I'm the villain of this conversation.
+
+[KONRAD_VANDERBURG | style: retreating, quieter]
+I'm not saying you're the villain. I'm saying you don't know what it's like to be the one everyone's already decided about.
+
+[JULIAN_VANDERBURG | style: quiet, genuinely trying]
+Then tell me. Actually tell me, right now, and I will help you fix it before it becomes something I can't fix.
+
+[KONRAD_VANDERBURG | style: falsely bright, snatching the contract back, closing the subject]
+It's handled, Julian. I promise you. Whitfield's nothing. Forget you saw it.
+
+[JULIAN_VANDERBURG | style: not convinced, watching him]
+I'm not going to forget I saw it. I'm going to watch you.
+
+--- PART 2 ---
+
+[NARRATOR]
+That evening. The terrace outside the dining room, string lights off, pool lit pale blue below. Julian finds Konrad alone with a drink he's not really drinking.
+
+[JULIAN_VANDERBURG | style: quieter now, trying again]
+I'm not trying to corner you. I want the real number. Whatever it is.
+
+[KONRAD_VANDERBURG | style: forced casual, guarded]
+There isn't a "real number," Julian. It was a land deal that fell through. People shop land all the time.
+
+[JULIAN_VANDERBURG | style: patient, pressing]
+Whitfield doesn't buy forty acres of lakefront from a family that isn't underwater. Who's underwater? You?
+
+[KONRAD_VANDERBURG | style: a beat too long, then laughing it off]
+I'm fine. I overextended on a couple of positions last year. Everyone does. It's cyclical.
+
+[JULIAN_VANDERBURG | style: quiet, genuinely puzzled]
+Cyclical to what, though. You ran the Macau properties, not a hedge fund. What exactly cycles in real estate that leaves a man selling off family land in a hurry?
+
+[KONRAD_VANDERBURG | style: badly startled, covering with a laugh]
+Nobody's in a hurry. Where would you even get an idea like "hurry"?
+
+[JULIAN_VANDERBURG | style: careful, watching him react]
+From you. Every answer you've given me tonight has come about two seconds too fast, like you rehearsed it before I asked.
+
+[KONRAD_VANDERBURG | style: scrambling]
+That's — you're reading into a conversation that isn't there. You've decided there's a story here, and there isn't one.
+
+[JULIAN_VANDERBURG | style: quiet, not letting it go]
+Cyclical doesn't usually come with men in gray sedans outside your building. I'm not making that up, Konrad. I saw the photo before the paper pulled it.
+
+[KONRAD_VANDERBURG | style: flinching, covering fast]
+That's unrelated. Business associates. You know how these things get twisted once a photographer's involved.
+
+[JULIAN_VANDERBURG | style: level, watching for the crack]
+Twisted how? Tell me the twisted version, then. I'd like to hear it.
+
+[KONRAD_VANDERBURG | style: cornered, reaching]
+It's nothing you'd understand without six months of context, and I don't have the energy to give it to you tonight, Julian. Can we just — not. Please.
+
+[JULIAN_VANDERBURG | style: soft, an old worry surfacing]
+You know I'd rather write a check than watch you disappear into whatever this is. I've done it before. I'll do it again.
+
+[KONRAD_VANDERBURG | style: quiet, proud in a way that costs him]
+This one isn't fixable with a check, Julian. Believe me, I've done that math already.
+
+[JULIAN_VANDERBURG | style: unconvinced but choosing to let it lie, tired]
+Fine. Cyclical. I'll believe that, because the alternative is that my little brother's been lying to my face for months, and I don't especially want that to be true the week before my wedding.
+
+[KONRAD_VANDERBURG | style: quiet, almost honest, then catching himself]
+I never wanted any of this to touch you.
+
+[KONRAD_VANDERBURG | style: recovering, brighter]
+Which it won't. It's boring finance stuff, truly. Go find your fiancée's seating chart, or whatever Mother's got you doing for the gala.
+
+[JULIAN_VANDERBURG | style: half a laugh, still watching him]
+Table eleven is a war zone, for the record. The Hendersons refuse to sit near anyone from the Ashford side, and Mother's already threatened to seat Richard's aunt next to the ice sculpture out of spite.
+
+[KONRAD_VANDERBURG | style: genuine laugh, briefly himself again]
+That woman's earned worse.
+
+[JULIAN_VANDERBURG | style: warm, then serious again]
+See, that's the version of you I like talking to. Not this one.
+
+[JULIAN_VANDERBURG | style: quiet, sincere, turning to go]
+I mean it, Konrad. Whatever this is, you come to me before it gets worse. Not after. I would rather hear it from you ugly and early than clean and too late.
+
+[KONRAD_VANDERBURG | style: quiet, almost meaning it]
+Noted.
+
+[JULIAN_VANDERBURG | style: gentler, one last try]
+We used to tell each other everything. Before Macau, before all of it. I miss that version of us more than I let on.
+
+[KONRAD_VANDERBURG | style: quiet, something genuine slipping through]
+So do I.
+
+[SFX: a hand claps a shoulder, footsteps receding into the house]
+
+[SFX: phone buzzing on the stone railing]
+
+[KONRAD_VANDERBURG | style: barely audible, to no one, reading]
+Not yet. Not yet, I said Friday—
+
+[SFX: footsteps retreating fast across the terrace]
+
+--- PART 3 ---
+
+[NARRATOR]
+Same night, an hour later. A gravel turnout off the county road, half a mile past the estate gates, no cameras this far out. Two men in plain jackets are waiting by Konrad's car when he pulls in.
+
+[KONRAD_VANDERBURG | style: fast, placating]
+I got the message. I'm here, okay? I'm here.
+
+[KONRAD_VANDERBURG | style: pleading under the charm]
+Friday. I said Friday and I meant Friday — there's a buyer, the paperwork's basically done, you'll have four hundred by end of week.
+
+[NARRATOR]
+The first man says something short. Konrad's answer comes too fast, like he's rehearsed it in the car.
+
+[KONRAD_VANDERBURG | style: talking faster than he can think]
+I know what I owe. I'm not disputing the number, I'm asking for six days. Six days, that's all — the land alone covers most of it—
+
+[KONRAD_VANDERBURG | style: fear breaking through the charm]
+No — no, listen, my family doesn't know how bad this is. If you go anywhere near the house—
+
+[NARRATOR]
+Whatever the second man says, low and short, it's enough to stop Konrad mid-sentence.
+
+[KONRAD_VANDERBURG | style: quiet now, all the charm gone]
+I understand. I understand what happens if Friday doesn't happen. You don't need to say it twice.
+
+[NARRATOR]
+The first man leans in close enough that Konrad takes a step back against his own car.
+
+[KONRAD_VANDERBURG | style: small, all the fight gone out of it]
+Friday. I heard you. Friday.
+
+[NARRATOR]
+The second man says one more thing before they turn to go, almost conversational, and it lands harder than the threat did.
+
+[KONRAD_VANDERBURG | style: hollow, forcing a laugh that doesn't work]
+My family? No — no, there's no need to bring my family into this. This is between us. It's always been between us.
+
+[SFX: a car door opening, then shutting hard]
+
+[KONRAD_VANDERBURG | style: alone now, shaken, to himself]
+Friday. Friday, Friday, Friday—
+
+[SFX: gravel crunching as a car pulls away into the dark]
+
+--- PART 4 ---
+
+[NARRATOR]
+Twenty minutes later. Konrad's cottage on the estate's edge, lights low, the good whiskey untouched. He's already dialing before he's sat down.
+
+[SFX: phone ringing twice, then picking up]
+
+[KONRAD_VANDERBURG | style: forced light, badly]
+Isabelle. Sorry, I know it's late.
+
+[ISABELLE_LIU | style: warm, exact, unfailingly professional]
+It's never too late for you, Konrad, you know that. What's wrong?
+
+[KONRAD_VANDERBURG | style: rushing, trying to sound casual]
+Nothing's wrong. Hypothetically — if I needed to move on the Whitfield lakefront thing faster than we discussed, is there any way to expedite trust disbursement without full board sign-off? Just this once.
+
+[ISABELLE_LIU | style: measured, a beat too long before answering, giving nothing away]
+There are mechanisms. Emergency disbursement clauses exist for a reason. It would need your mother's signature — or a very good reason it doesn't.
+
+[KONRAD_VANDERBURG | style: too quick]
+Right. Of course. I just meant theoretically fast. Not urgent-urgent.
+
+[ISABELLE_LIU | style: gentle, unreadable]
+Everything with you lately sounds urgent-urgent, Konrad. I've noticed that. Fifteen years I've watched this family's fires get put out, and yours have gotten closer together this year, not further apart.
+
+[KONRAD_VANDERBURG | style: laughing it off, unconvinced by his own laugh]
+Long year. That's all it is. Everyone's had a long year.
+
+[ISABELLE_LIU | style: warm, exact, a shade too patient]
+They have. Some longer than others, I'd imagine, depending what's sitting underneath them.
+
+[KONRAD_VANDERBURG | style: uneasy, not sure if that landed as a warning]
+Sure. Sure, yeah.
+
+[KONRAD_VANDERBURG | style: quiet, almost pleading now]
+You'd tell me, wouldn't you. If there were a faster way. I know I'm not supposed to ask you to bend the rules, I'm not asking that. I just — I need this to move quickly, Isabelle.
+
+[ISABELLE_LIU | style: warm, patient, choosing her words with visible care]
+Fifteen years, Konrad, and I have never once let this family down when it mattered. Whatever's underneath this, I promise you it will get the attention it deserves.
+
+[ISABELLE_LIU | style: warm, precise, closing]
+I'll look at your options in the morning. Get some sleep. You sound like a man who needs it.
+
+[SFX: call ending, a soft click]
+
+[KONRAD_VANDERBURG | style: quiet, to the empty room, not reaching for the glass]
+Not tonight.
+
+--- PART 5 ---
+
+[NARRATOR]
+Same night, past eleven. The estate's old carriage house, converted to a garage — Marcus's domain, oil and leather and one bare bulb. Chloe lets herself in through the side door, like always.
+
+[CHLOE_VANDERBURG | style: unguarded, quick, only for him]
+I only have twenty minutes. Richard thinks I'm checking the seating chart with Julian.
+
+[MARCUS_CHEN | style: quiet, careful, not looking up from the bench]
+Twenty minutes. That's what I get lately.
+
+[CHLOE_VANDERBURG | style: soft, wary of his tone]
+Marcus.
+
+[MARCUS_CHEN | style: warmth cracking into something rawer]
+Eight months, Chloe. Eight months of side doors and twenty minutes and "not yet." I'm not asking for a ring. I'm asking you to tell me this is going somewhere.
+
+[CHLOE_VANDERBURG | style: careful, deflecting]
+You know what this year has been. Elena. My mother. The gala, the foundation, Richard's committee seat. I can't blow up my entire life in the middle of it.
+
+[MARCUS_CHEN | style: level, but it costs him]
+There's always going to be a committee seat. There's always going to be a reason it's not the right week. I need to hear it from you plainly, once.
+
+[CHLOE_VANDERBURG | style: quiet, evasive, not meeting his eyes]
+It's not that simple.
+
+[MARCUS_CHEN | style: quiet, direct, no anger left in it — worse than anger]
+Then tell me what it is. Tonight. Not "not yet." Not "you know how it is." Choose me, or don't. I can survive either answer. I can't survive twenty more minutes of this one.
+
+[CHLOE_VANDERBURG | style: strained, a plea underneath the composure]
+You think I haven't imagined it? An actual life. Not this — some version where I don't have to time my own face in a hallway mirror before I walk through a door.
+
+[MARCUS_CHEN | style: quiet, almost gentle, still waiting]
+Then imagine it out loud. Right now. Just once.
+
+[CHLOE_VANDERBURG | style: barely holding steady, a long pause before she speaks]
+Marcus, I—
+
+[SFX: a car door somewhere outside, distant]
+
+[CHLOE_VANDERBURG | style: startled, already retreating]
+That's Richard's car. I have to go.
+
+[SFX: the side door swinging shut]
+
+--- PART 6 ---
+
+[NARRATOR]
+A few minutes later. The main house's side hallway, Chloe composing herself at the mirror by the coat closet before she has to be a senator's wife again.
+
+[CHLOE_VANDERBURG | style: to her own reflection, low, testing whether it's true]
+It's not that simple.
+
+[SFX: footsteps approaching from the hall]
+
+[CHLOE_VANDERBURG | style: polished, precise, public voice — spine straightening instantly]
+There you are. I was just finishing the seating chart. Table eleven's a nightmare, but Julian and I finally cracked it.
+
+[CHLOE_VANDERBURG | style: polished, effortless performance]
+Confirmed, all of them. The Hendersons are bringing the lieutenant governor, so seat him somewhere he can be photographed and nowhere he can be quoted.
+
+[CHLOE_VANDERBURG | style: polished, warm, entirely rehearsed]
+And I told the caterer no more shellfish towers after what happened at the spring fundraiser. I don't need a repeat of that particular headline.
+
+[NARRATOR]
+Meanwhile, back in the carriage house, Marcus is alone with the radio off and the bulb still burning over the car he wasn't really fixing.
+
+[MARCUS_CHEN | style: quiet, to the empty garage, like a verdict, not a complaint]
+Twenty minutes.
+
+[MARCUS_CHEN | style: rougher now, low]
+Two years my father drove for this family before me. Never asked for anything he wasn't owed. I used to think that was weakness. Maybe it just runs in the blood.
+
+[MARCUS_CHEN | style: quiet, almost to himself]
+He used to say you drive people where they need to go and you don't ask why. I don't think he meant it to apply to this.
+
+[MARCUS_CHEN | style: low, tired, still working the wrench uselessly]
+I used to think eight months was proof of something. That nobody keeps coming back to a side door for eight months unless it means what it feels like it means.
+
+[MARCUS_CHEN | style: quieter, almost a question]
+Maybe it just means I'm patient. Maybe patient and foolish look the same from outside.
+
+[SFX: a wrench set down hard on the workbench]
+
+[MARCUS_CHEN | style: barely audible, more breath than voice]
+Her silence is an answer too. I just didn't want it to be.
+
+--- PART 7 ---
+
+[NARRATOR]
+The next afternoon. The lakeside path near the old boathouse, overgrown since Elena died — no one uses it anymore. Victoria is waiting when Marcus arrives; she sent for him.
+
+[SFX: water lapping gently against the dock pilings]
+
+[VICTORIA_VANDERBURG | style: commanding, deliberate, every word chosen]
+Thank you for coming, Marcus. I know it's an odd place to ask a man to meet.
+
+[MARCUS_CHEN | style: quiet, careful, professional stillness]
+You said it was important, Mrs. Vanderburg. I came.
+
+[VICTORIA_VANDERBURG | style: slow and very clear]
+Your family has driven for this family for two generations. Your father drove my husband. You drove Elena more than anyone else did, that last month.
+
+[MARCUS_CHEN | style: careful, waiting to see where this goes]
+She liked the long way around the lake. Said it gave her time to think.
+
+[VICTORIA_VANDERBURG | style: unhurried, watching him closely]
+I'm not here to accuse you of anything, Marcus. I'm here because I think you know something you've been carrying alone, and I think it's heavier than you're built to carry by yourself.
+
+[MARCUS_CHEN | style: guarded, careful]
+I don't know what you mean.
+
+[VICTORIA_VANDERBURG | style: gentle but immovable]
+I think you do. I think you've known since the night of the engagement dinner, and it's been sitting in you like a stone for a year.
+
+[MARCUS_CHEN | style: low, resisting, eyes on the water rather than her]
+If I tell you something and it's wrong, it doesn't come back from that. Not for anyone.
+
+[VICTORIA_VANDERBURG | style: quiet, patient, not moving]
+I'm not asking you to be certain. I'm asking you to stop deciding, on my behalf, what I'm strong enough to hear.
+
+[MARCUS_CHEN | style: quiet, a long silence before he speaks again]
+My father used to say discretion was the only thing this family actually paid us for. Everything else was just driving.
+
+[VICTORIA_VANDERBURG | style: even, unwavering]
+Your father was a wise man. I'm not asking you to abandon that. I'm asking you to trust that I already know most of it, and that what I don't know is the only part still hurting anyone.
+
+[MARCUS_CHEN | style: quiet, still resisting, but weakening]
+Why me. Why not ask Konrad outright, if you already know as much as you say.
+
+[VICTORIA_VANDERBURG | style: level, unflinching]
+Because I have asked Konrad, more than once, and I have watched him lie to me each time with his father's own steady eyes. I am done asking the person with the most reason to lie. I need someone who has no reason to.
+
+[VICTORIA_VANDERBURG | style: quiet, absolutely steady]
+I already know more than you think I do. I have a signature that isn't mine, on a withdrawal slip. I have a lab result I was never meant to see. I have a scar on my son's hand he's explained twice, two different ways. What I don't have is what happened on that dock. And I think you were the only other person there.
+
+[MARCUS_CHEN | style: quiet, the professional stillness finally breaking]
+I was bringing the car around from the boathouse slip, late, past eleven. I heard them before I saw them. Elena's voice first — sharp, not like her.
+
+[VICTORIA_VANDERBURG | style: very still, listening]
+Go on.
+
+[MARCUS_CHEN | style: careful, exact, forcing himself through it]
+She said she wasn't going to keep quiet anymore. That she was keeping the baby, and that Julian deserved to know everything before the wedding, not after. Konrad was begging her — not angry yet, begging. Then something shifted, and I heard him say her name like a warning, not a plea.
+
+[MARCUS_CHEN | style: quieter still, the hardest part, forcing the words out]
+I heard raised voices, and then I heard her go quiet all at once — not walking-away quiet. Wrong quiet. By the time I got close enough to see anything, Konrad was alone on the dock, staring at the water, and the railing behind him was broken clean through.
+
+[SFX: a breeze moving through the reeds along the shoreline]
+
+--- PART 8 ---
+
+[NARRATOR]
+Same lakeside path, moments later. Victoria hasn't moved. Marcus has said the hardest part; there's more still to say.
+
+[SFX: a distant bird call over the water]
+
+[VICTORIA_VANDERBURG | style: quiet, controlled, betraying nothing]
+Did you see her fall.
+
+[MARCUS_CHEN | style: careful, honest]
+No. I heard it, I think — the railing, maybe her, I couldn't tell you which. By the time I could see the dock, she wasn't on it anymore, and Konrad was.
+
+[VICTORIA_VANDERBURG | style: same measured slowness, harder now]
+What did he do, when he saw you.
+
+[MARCUS_CHEN | style: careful, remembering]
+Nothing, at first. He just stood there looking at the water like it had asked him a question he didn't have an answer to. Then he saw me, and his whole face changed — not guilty, exactly. Empty. Like something had already left him.
+
+[VICTORIA_VANDERBURG | style: same measured slowness, harder now]
+And you never told anyone this. Not the police. Not Chloe. Not me, for a year.
+
+[MARCUS_CHEN | style: quiet, ashamed but not backing down]
+I told myself I hadn't actually seen the thing I thought I saw. That's easier to live with than the alternative. And he's your son, Mrs. Vanderburg. Who was I supposed to tell that wouldn't end with my family off this estate, or worse?
+
+[VICTORIA_VANDERBURG | style: quiet, something almost gentle under the steel, after a long pause]
+That's a fair fear. I won't pretend it isn't.
+
+[MARCUS_CHEN | style: low, a year of silence finally spilling]
+There were nights I almost drove to the police station and sat in the parking lot for an hour and drove home again. I told myself it wasn't my place. I told myself a lot of things that let me sleep.
+
+[VICTORIA_VANDERBURG | style: quiet, without judgment]
+A year of silence isn't cowardice, Marcus. It's the same arithmetic I've been doing myself, only you did it alone, and I had the luxury of doing mine in a locked room with the door shut.
+
+[MARCUS_CHEN | style: careful, watching her]
+What happens now. Do I need to say this again, to someone else.
+
+[VICTORIA_VANDERBURG | style: commanding, absolute, no room in it]
+No. You've said it to me, and that is where it stops for now. I need you to understand that clearly, Marcus — you will not repeat this. Not to the police, not to Chloe, not to anyone in this family. Not yet.
+
+[MARCUS_CHEN | style: uncertain, testing the word]
+Not yet.
+
+[VICTORIA_VANDERBURG | style: slow, deliberate, final]
+There is a right way to do what has to be done, and a way that destroys everyone in this family who didn't do anything wrong. I intend to find the first one. That takes time I don't have if this becomes a story before I've decided how to tell it.
+
+[MARCUS_CHEN | style: quiet, still uncertain, but yielding]
+And if I'd rather it be the police's decision, not yours.
+
+[VICTORIA_VANDERBURG | style: not unkind, but final]
+Then I'm asking you — as close to a promise as I have left to give anyone — give me the time first. You've carried this a year already. I'm not asking for much more than that.
+
+[MARCUS_CHEN | style: quiet, a different worry surfacing]
+And my family. If this ever does come out — what happens to us, when it does.
+
+[VICTORIA_VANDERBURG | style: measured, meeting his eyes properly for the first time]
+Your family stays on this estate as long as I have any say in what stays on this estate, whatever else happens. That much I can promise you outright.
+
+[MARCUS_CHEN | style: quiet, nodding, and it costs him visibly]
+All right.
+
+[VICTORIA_VANDERBURG | style: quiet, almost human]
+Thank you, Marcus. I mean that.
+
+[VICTORIA_VANDERBURG | style: quiet, almost to herself now, half-turned away]
+A year. You carried it a year, and I never once thought to ask the man driving the car what the car might have seen.
+
+[MARCUS_CHEN | style: quiet, honest]
+Most people don't. That's rather the point of us.
+
+[SFX: footsteps starting slowly back up the gravel path]
+
+--- PART 9 ---
+
+[NARRATOR]
+That night. Victoria's study, door locked, lamp low. She sits alone with a legal pad she hasn't written on, and the small file of things she's collected without anyone else knowing.
+
+[SFX: a pen set down on the desk]
+
+[VICTORIA_VANDERBURG | style: quiet, speaking to fill the silence, not performing]
+Say it in order. That's all this is. Put it in order and look at it once, properly, instead of in pieces at three in the morning.
+
+[VICTORIA_VANDERBURG | style: measured, almost clinical, setting the terms for herself]
+I built an empire out of nothing by refusing to look away from unpleasant arithmetic. I am not going to start looking away now, in my own house, about my own son.
+
+[VICTORIA_VANDERBURG | style: slow, deliberate, laying the first paper down as she names it]
+A withdrawal from the Whitmore trust with my signature on it. A signature I did not write. Six hundred thousand dollars, gone to accounts with Konrad's name near them, if you look closely enough — which no one else in this family has bothered to do.
+
+[VICTORIA_VANDERBURG | style: same slow cadence, harder, a second paper down]
+A paternity result, sealed, from a lab in the city, dated three days before the engagement dinner. Elena's name on it. And not my eldest son's.
+
+[VICTORIA_VANDERBURG | style: quieter, the steel starting to shake, a third paper down]
+A cut on Konrad's hand, the week of the dinner — explained to me once as a kitchen accident, and once, weeks later, as a fall off his bicycle. A boy does not get two different lies ready unless he's had time to decide the first one wasn't good enough.
+
+[VICTORIA_VANDERBURG | style: very quiet, almost unwilling, a long pause before she can finish]
+And now a witness. Someone who heard my son beg a pregnant woman to be quiet, and then heard her go quiet forever, on a dock with a broken railing, thirty feet from where I am sitting right now.
+
+[SFX: a log settling in the fireplace]
+
+[VICTORIA_VANDERBURG | style: barely audible, setting the file down like it weighs more than paper]
+Four separate lies, each one small enough to forgive on its own. It's only together that they stop being coincidence and start being a story.
+
+--- PART 10 ---
+
+[NARRATOR]
+Same study, minutes later. Victoria hasn't moved from the desk. The pieces are still laid out in front of her, and for the first time she lets herself say the whole shape of it out loud.
+
+[SFX: the fireplace crackling low]
+
+[VICTORIA_VANDERBURG | style: slow, devastating, finally saying it]
+He forged my name to pay off a debt he was too ashamed to bring to me. She found out — the money, or the child, or both — and she was going to tell Julian everything, before the wedding, not after. And my son put his hands on her to make her stop talking, and she fell, and he let the lake keep his secret rather than carry it to me himself.
+
+[VICTORIA_VANDERBURG | style: barely a whisper, then not a whisper at all]
+Murder. There. I've said it. It took me two months, and it took saying it to an empty room, but I've said it.
+
+[VICTORIA_VANDERBURG | style: quiet, almost curious at her own reaction]
+I keep waiting to feel it the way a mother is supposed to feel it. Grief, or horror, or something that breaks. Instead I feel like a woman doing a very old, very familiar job. That frightens me more than the thing itself does.
+
+[VICTORIA_VANDERBURG | style: gathering herself, commanding again, but changed]
+I am not going to be the woman who hands her own son to the police with no plan and no protection for the rest of this family. Julian did not do this. Chloe did not do this. I will not let this bury them because Konrad couldn't come to me with the truth when it still would have cost him almost nothing.
+
+[VICTORIA_VANDERBURG | style: quiet, final, resolved, closing the file in front of her]
+But I know, now. Fully. And a mother who knows cannot go on pretending she only suspects. Whatever I do next, I do it with my eyes open. That much, at least, I owe her.
+
+[SFX: a desk drawer sliding shut and locking]
+
+--- PART 11 ---
+
+[NARRATOR]
+The next morning. The front hall, mail already sorted on the console table by staff. Victoria finds a plain envelope set apart from the rest, addressed only to her, hand-printed like the others.
+
+[SFX: envelope tearing open]
+
+[VICTORIA_VANDERBURG | style: reading aloud, flat, controlling every syllable]
+"Five letters, Victoria, and still no answer to the only question that matters. I know what happened at the boathouse. I know what happened to the trust. Go to the police yourselves, or the price doubles by Friday. You have had every chance to do this the honest way. This is the last one."
+
+[VICTORIA_VANDERBURG | style: quiet, cold, folding the note away as she speaks]
+Friday. Everyone in this house seems very fond of Friday this week.
+
+[VICTORIA_VANDERBURG | style: low, almost to herself, working it through]
+Four notes I paid without a word, because paying was quieter than asking who was writing them. A fifth one wants an answer I don't have yet, on a schedule I don't control.
+
+[VICTORIA_VANDERBURG | style: sharper now, a decision forming]
+Whoever is writing these has mistaken patience for weakness. That is a mistake very few people make with me twice.
+
+[VICTORIA_VANDERBURG | style: quiet, turning the envelope over, thinking aloud]
+No postmark worth tracing. No demand for a name, a meeting, a face. Whoever this is understands exactly how much distance keeps them safe, and exactly how much money keeps me quiet. That's not luck. That's someone who's watched this family up close for a long time.
+
+[SFX: footsteps approaching from the kitchen hallway]
+
+[VICTORIA_VANDERBURG | style: low, already composed again, sliding the note into her jacket]
+Not a word of this. Not yet.
+
+--- PART 12 ---
+
+[NARRATOR]
+Later that afternoon. Victoria's private sitting room, door closed, the fifth note now locked away with the rest of the file. She stands at the window, looking down toward the lake, though the boathouse can't be seen from here.
+
+[SFX: distant birdsong through the window glass]
+
+[VICTORIA_VANDERBURG | style: quiet, controlled, to herself]
+Every one of them thinks I don't see what's happening in my own house. I see all of it.
+
+[VICTORIA_VANDERBURG | style: quiet, weighing something, almost to the window]
+A son who lies to protect himself. A note that threatens to end us by Friday. A daughter I haven't asked the right questions of in months, because I was too busy asking them of everyone else.
+
+[VICTORIA_VANDERBURG | style: low, resolute]
+One crisis at a time. That has always been the only way through. I chose the boathouse first, because it was the oldest debt. The rest will keep a little longer.
+
+[SFX: a clock ticking somewhere in the room, faint]
+
+[NARRATOR]
+Two days ago, Marcus Chen told Victoria Vanderburg what he saw at the boathouse the night Elena Marsh died — every detail he had carried alone for a year. Victoria thanked him, quietly, and asked him for one more thing: never to repeat it to anyone else in this family.
+
+[NARRATOR]
+Including Chloe.

@@ -1,0 +1,392 @@
+--- PART 1 ---
+
+[NARRATOR | style: measured, neutral]
+Previously on Vanishing Signal: Jason Wu sat across from Dana Shaw and told her the truth wasn't random — whoever made those clips of Mei's voice had real access to the original research. Dana walked away certain of one thing: someone inside Voss Dynamics knows more than they're saying. Now, the company itself is about to answer for it.
+
+[NARRATOR | style: measured, neutral]
+Voss Tower, late morning. The twenty-second floor boardroom. Marcus and Elena Voss, alone for a few minutes before the doors open and the full board arrives for the confidence vote.
+
+[SFX: distant elevator chime, muffled office ambience]
+
+[MARCUS_VOSS | style: controlled, tight]
+You could have warned me this was coming to a vote. As my wife, if nothing else.
+
+[ELENA_VOSS | style: calm, unreadable]
+I'm vice-chair before I'm your wife in this room, Marcus. You taught me that distinction yourself, a long time ago.
+
+[MARCUS_VOSS | style: low, strained]
+That's not an answer.
+
+[ELENA_VOSS | style: even, quiet]
+It's the only one I have for you today.
+
+[SFX: heavy door opening, several footsteps entering, murmured conversation]
+
+[NARRATOR | style: measured, neutral]
+The rest of the board files in — twelve chairs, most already filled. Marcus takes his place at the head of the table. Elena sits two seats down, on the other side.
+
+[MARCUS_VOSS | style: composed, addressing the room, faint edge underneath]
+Thank you all for coming. I know the last few weeks have been — difficult. For the company, and for me personally. I'd like the chance to speak before anyone reaches for a gavel.
+
+[ELENA_VOSS | style: pleasant, precise]
+No one's reaching for anything yet, Marcus. This is a vote of confidence, not an execution.
+
+[MARCUS_VOSS | style: quiet, almost to himself]
+Funny. It doesn't feel like much of a difference from where I'm sitting.
+
+[SFX: papers shuffling, a chair creaking]
+
+[NARRATOR | style: measured, neutral]
+A board member — unseen, off to the side — calls the meeting to order. The agenda item comes up on the screen behind Marcus: a single line. *Confidence in Current Leadership.*
+
+[ELENA_VOSS | style: calm, final]
+Shall we begin.
+
+[MARCUS_VOSS | style: guarded, steady]
+Let's.
+
+[SFX: a long, tense silence, then a single throat clear]
+
+--- PART 2 ---
+
+[NARRATOR | style: measured, neutral]
+Cutting away from the boardroom. A diner near the Voss Dynamics campus, the same afternoon. Jason Wu and Dana Shaw, a booth in the back, coffee gone cold between them.
+
+[DANA_SHAW | style: patient, probing]
+Walk me through it again. Not the headline version. The technical one.
+
+[JASON_WU | style: careful, measured]
+Voice cloning at that fidelity doesn't come from scraping someone's podcast clips off the internet. You need clean source data — hours of it, uncompressed, recorded under lab conditions. That kind of data lives in exactly one place.
+
+[DANA_SHAW | style: sharp, listening closely]
+The research drive.
+
+[JASON_WU | style: quiet, careful]
+The research drive. Which means whoever built those clips either stole it, or already had legitimate access to it.
+
+[SFX: coffee cup set down on a table]
+
+[DANA_SHAW | style: pressing, gentle]
+How many people had that kind of access, Jason?
+
+[JASON_WU | style: tight, evasive]
+Fewer than you'd think. That's — that's as specific as I can get right now.
+
+[DANA_SHAW | style: skeptical, careful]
+Can't, or won't?
+
+[JASON_WU | style: strained, holding steady]
+Does it matter? I'm telling you the clips are real audio, built from real research, by someone who knew exactly what they were doing. That's not nothing.
+
+[SFX: a spoon clinking against a mug, distant diner chatter]
+
+[DANA_SHAW | style: quiet, calculating]
+It's not nothing. It's also not the whole picture, and we both know it.
+
+[JASON_WU | style: low, guarded]
+Some picture's better than none.
+
+[NARRATOR | style: measured, neutral]
+Jason looks down at his hands. Dana watches him do it, and doesn't look away.
+
+[DANA_SHAW | style: soft, deliberate]
+Okay. Lab access. I can work with that.
+
+[JASON_WU | style: barely audible]
+I know you can. That's what worries me.
+
+--- PART 3 ---
+
+[NARRATOR | style: measured, neutral]
+Same booth, minutes later. The diner has thinned out; a waitress refills coffee no one's drinking.
+
+[DANA_SHAW | style: leaning in, direct]
+Let's stop circling it, Jason. You didn't come find me to talk about data forensics. You came because something's been sitting on you, and it's still sitting on you.
+
+[JASON_WU | style: defensive, tight]
+I came because you were about to run a story that could get someone hurt. That's the whole reason.
+
+[DANA_SHAW | style: calm, unrelenting]
+Someone. Not "the company." Not "whoever did this." Someone. You keep saying it like it's a person you know.
+
+[SFX: chair creaking as Jason shifts]
+
+[JASON_WU | style: strained silence, then quiet]
+Everyone in that lab was a person I knew. That's not a confession, that's just — that's just how small the team was.
+
+[DANA_SHAW | style: sharp, patient]
+Fine. Then tell me about the team. Names. Roles. Who had keys to that drive besides you.
+
+[JASON_WU | style: guarded, careful]
+I'm not going to sit here and hand you a suspect list over pie and bad coffee.
+
+[DANA_SHAW | style: cutting, precise]
+Nobody said suspect. I said names. Unless in your head those are the same thing.
+
+[NARRATOR | style: measured, neutral]
+Jason doesn't answer. He turns his mug a quarter turn on the table, like it needs adjusting.
+
+[DANA_SHAW | style: softer, watching him]
+You keep protecting a shape, Jason. Not a fact. A shape you won't let me see the edges of.
+
+[JASON_WU | style: low, almost breaking]
+Because the edges matter. Because if I give you the edges, you'll fill in the rest yourself, and you'll be fast about it, and fast isn't always right.
+
+[DANA_SHAW | style: quiet, intent]
+Fast isn't the problem. Wrong is the problem. So help me be right instead of fast.
+
+[SFX: a car horn outside, muffled through glass]
+
+[JASON_WU | style: exhausted, quiet]
+I can't. Not today.
+
+[DANA_SHAW | style: steady, unwavering]
+Then I'll ask again tomorrow. And the day after that. I'm patient, Jason. It's the whole job.
+
+[NARRATOR | style: measured, neutral]
+Jason meets her eyes for the first time since they sat down — and looks away first.
+
+[JASON_WU | style: barely audible]
+I know. That's the part I keep forgetting to be scared of.
+
+--- PART 4 ---
+
+[NARRATOR | style: measured, neutral]
+Voss Tower, the board room, that same afternoon. Twelve directors around a long table; Marcus stands at its head. Elena sits near the far end, silent.
+
+[MARCUS_VOSS | style: composed, restrained]
+Thank you for the time. I know what today is, so I won't pretend it's a quarterly review.
+
+[SFX: papers shuffling, a chair rolling back slightly]
+
+[MARCUS_VOSS | style: measured, building tension]
+Eleven years ago this company was three people and a server rack in a garage. Today we license the most advanced voice model in the industry. That didn't happen by accident, and it didn't happen because I got lucky once and coasted.
+
+[MARCUS_VOSS | style: tighter, controlled]
+I understand the noise around the Lin situation has rattled people. I understand a podcast with better production values than our own investor decks has rattled people. But noise is not evidence. And a missing person is not a referendum on my leadership.
+
+[NARRATOR | style: measured, neutral]
+A director near the middle of the table glances toward Elena. She doesn't return the look.
+
+[MARCUS_VOSS | style: strained, quieter]
+I built the science this company stands on. I have never once stopped defending the people who helped me build it — including Mei Lin. Whatever anyone in this room has read online, that fact does not change.
+
+[SFX: a soft cough, someone clearing their throat]
+
+[MARCUS_VOSS | style: firmer, final push]
+You brought me in here to ask whether you still trust the person who's run this company since its first line of code. I'd ask you to separate that question from a story still being written by people with no stake in getting it right.
+
+[MARCUS_VOSS | style: restrained, almost pleading beneath the calm]
+I'm not asking for sympathy. I'm asking you to vote on the record, not the rumor.
+
+[NARRATOR | style: measured, neutral]
+Marcus sits. For a moment, no one at the table speaks.
+
+[MARCUS_VOSS | style: quiet, to himself, barely audible]
+Say something. Someone.
+
+[NARRATOR | style: measured, neutral]
+Elena rises instead, smoothing the front of her jacket, unhurried.
+
+--- PART 5 ---
+
+[NARRATOR | style: measured, neutral]
+Voss Tower, the same board room, moments later. Elena stands where Marcus sat. The room waits.
+
+[ELENA_VOSS | style: calm, precise]
+Thank you, Marcus. That was a good speech. It was also, respectfully, the wrong speech for this room.
+
+[SFX: a pen set down on the table]
+
+[ELENA_VOSS | style: even, unhurried]
+Nobody here is voting on whether you're brilliant. We know you're brilliant. I married brilliant. I've spent eleven years married to brilliant, watching it build this company from a garage into a name every venture fund in this city wants a piece of.
+
+[ELENA_VOSS | style: cooler, specific]
+So let's not talk about the science. Let's talk about the last six weeks. Three separate press inquiries this board was never briefed on before they ran. A senior researcher missing since April, and this company's official position updated four times, each version quietly contradicting the last. A podcast host with a bigger audience than our shareholder letter, breaking news about Voss Dynamics before Voss Dynamics does.
+
+[NARRATOR | style: measured, neutral]
+Marcus doesn't move. Elena's tone doesn't rise.
+
+[ELENA_VOSS | style: precise, devastating]
+That isn't noise, Marcus. Noise is random. This has a shape. It has a pattern. And a pattern means somebody in this building has been making decisions alone, in a crisis, without this table — the same table he just asked to trust him unconditionally.
+
+[SFX: low murmur among the directors]
+
+[ELENA_VOSS | style: quiet, direct]
+I'm not asking anyone to believe a story from outside this company. I'm asking this board to notice that for six weeks, the only story we've had has come from inside it — from one man, filtered through one office, with no one else in the room.
+
+[ELENA_VOSS | style: measured, final]
+You don't lose a company for being brilliant. You lose the benefit of the doubt for governing like you're the only person in it who matters. I'd ask this board to vote accordingly.
+
+[NARRATOR | style: measured, neutral]
+Elena sits. Marcus stares straight ahead, jaw tight. The chairman clears his throat and reaches for the ballot folder.
+
+--- PART 6 ---
+
+[NARRATOR | style: measured, neutral]
+Voss Tower, the same room, minutes later. Ballots are collected. The chairman stands to read the result.
+
+[SFX: paper folder opening]
+
+[NARRATOR | style: measured, neutral]
+Marcus watches the chairman's face before he speaks.
+
+[MARCUS_VOSS | style: quiet, bracing]
+Just say it.
+
+[SFX: the chairman clearing his throat]
+
+[NARRATOR | style: measured, neutral]
+The chairman reads the tally aloud — a majority against unilateral authority. Board oversight is reinstated, effective immediately. Elena is named acting chair.
+
+[MARCUS_VOSS | style: stunned, flat]
+Effective immediately.
+
+[NARRATOR | style: measured, neutral]
+It isn't a question. No one answers it as one.
+
+[SFX: chairs shifting, low conversation rising]
+
+[ELENA_VOSS | style: quiet, careful]
+Marcus—
+
+[MARCUS_VOSS | style: sharp, controlled]
+Not here.
+
+[NARRATOR | style: measured, neutral]
+He gathers his folder, his pen, moves for the door. Directors avoid his eyes as he passes. Elena remains standing at the head of the table, watching him go.
+
+[SFX: heavy door closing]
+
+[NARRATOR | style: measured, neutral]
+The room empties in twos and threes, voices low, already elsewhere. Elena stays.
+
+--- PART 7 ---
+
+[NARRATOR | style: measured, neutral]
+Voss Tower, the boardroom, a half hour later. The lights are dimmed. Marcus stands alone at the window; Elena enters and closes the door behind her.
+
+[SFX: door latch clicking]
+
+[ELENA_VOSS | style: quiet, careful]
+I thought you'd have left by now.
+
+[MARCUS_VOSS | style: hollow, not turning around]
+Where would I go.
+
+[NARRATOR | style: measured, neutral]
+He doesn't move from the glass. The city is lit up below them.
+
+[ELENA_VOSS | style: gentle, deliberate]
+Marcus. Look at me.
+
+[MARCUS_VOSS | style: bitter, low]
+Nineteen years. I built every floor of this building in my head before it existed. And a room full of people I hired decided in forty minutes that I can't be trusted to run it.
+
+[ELENA_VOSS | style: steady, unhurried]
+They decided the company needs a check on you right now. That's not the same as forty minutes.
+
+[MARCUS_VOSS | style: sharp, turning to face her]
+Isn't it. You had three dinners with Halloran's people. Don't tell me this started forty minutes ago.
+
+[SFX: quiet ambient hum of the empty tower]
+
+[ELENA_VOSS | style: calm, careful]
+No. It didn't.
+
+[MARCUS_VOSS | style: quiet, raw]
+So say what you actually think of me, Elena. Just once, without the boardroom voice.
+
+[NARRATOR | style: measured, neutral]
+She crosses the room slowly, stops an arm's length away.
+
+[ELENA_VOSS | style: soft, weighing each word]
+I think you built something extraordinary and then let it own you. I think you'd rather lose the company one piece at a time than admit what it cost to build it.
+
+[MARCUS_VOSS | style: defensive, tired]
+That's not an answer. That's a speech.
+
+[ELENA_VOSS | style: quiet, resolved]
+Then here's the answer. This wasn't only about the board, Marcus. It was never only about the board.
+
+[MARCUS_VOSS | style: wary, still]
+What does that mean.
+
+[NARRATOR | style: measured, neutral]
+Elena holds his gaze and doesn't answer — not yet. The silence stretches, deliberate, heavier than anything said tonight.
+
+[SFX: distant elevator chime down the hall]
+
+[ELENA_VOSS | style: low, careful]
+Sit down. There's something you need to hear from me, not from the papers.
+
+[NARRATOR | style: measured, neutral]
+Marcus doesn't sit. He watches her, some old instinct already bracing for what's coming.
+
+--- PART 8 ---
+
+[NARRATOR | style: measured, neutral]
+The boardroom is empty but for the two of them. Marcus remains standing, arms crossed, eyes fixed on his wife, the city lights flickering behind him.
+
+[ELENA_VOSS | style: low, careful]
+Two weeks after Mei disappeared, I hired someone. A private investigator. Not to help find her — to understand what we were actually dealing with.
+
+[MARCUS_VOSS | style: stunned, quiet]
+You did what.
+
+[ELENA_VOSS | style: steady, unflinching]
+I needed to know what kind of storm was coming for this company. For you. I told myself that's all it was, in the beginning.
+
+[MARCUS_VOSS | style: rising, incredulous]
+Two weeks, Elena. While I was standing in front of cameras saying I prayed she'd come home. While her father sat in our lobby every single week.
+
+[ELENA_VOSS | style: quiet, resolute]
+He found something within the first month. Enough to make me certain. Mei is alive, Marcus. She has been this whole time.
+
+[SFX: a chair creaking as Marcus grips its back]
+
+[MARCUS_VOSS | style: hoarse, disbelieving]
+Alive. And you sat on that. Through the leaks. Through tonight's vote. All of it, you just — sat on it.
+
+[ELENA_VOSS | style: firm, sincere]
+Because I believe she's doing this alone. Grief, anger, whatever you want to call it — one woman, cornered, with nothing left to lose except making you feel what she felt.
+
+[MARCUS_VOSS | style: barely audible]
+Alone.
+
+[NARRATOR | style: measured, neutral]
+He repeats the word like it doesn't fit in his mouth.
+
+[ELENA_VOSS | style: careful, watching him]
+I wanted the board to decide before this became about her instead of about you. That was the only mercy I had left to give either of you.
+
+[MARCUS_VOSS | style: shattered, quiet]
+Mercy. You call this mercy.
+
+[ELENA_VOSS | style: low, unwavering]
+I call it timing, Marcus. And now the timing is yours to survive.
+
+[SFX: wind pressing faintly against the window glass]
+
+[NARRATOR | style: measured, neutral]
+He turns back to the window, and for a long moment says nothing at all.
+
+--- PART 9 ---
+
+[NARRATOR | style: measured, neutral]
+Elena leaves him there. The door closes soft, final, the sound swallowed by the empty room.
+
+[SFX: distant elevator chime, then silence]
+
+[MARCUS_VOSS | style: hollow, distant]
+Alive.
+
+[NARRATOR | style: measured, neutral]
+He says nothing else. He does not sit. He does not call after her. He stands at the glass while the city keeps moving below, indifferent to what just ended in this room.
+
+Tonight, the board took his company from him with a show of hands. Tonight, his wife told him the woman he mourned in public was never gone at all — and that she had known, and waited, and let him grieve alone.
+
+Marcus Voss built an empire on a voice that was never his to take.
+
+Now every voice in this room belongs to someone else.
+

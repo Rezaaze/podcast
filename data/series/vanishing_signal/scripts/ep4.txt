@@ -1,0 +1,435 @@
+--- PART 1 ---
+
+[NARRATOR]
+Previously on Vanishing Signal: a leaked voice clip promising proof that Mei Lin was still alive tore through the headlines, and Voss Dynamics has not recovered since. Marcus Voss refused every camera that came near him. Elena Voss quietly retained a private investigator — and got an answer no one else has heard.
+
+[NARRATOR]
+Three weeks later, the story has slipped from the front page to the scroll. The kitchen of the Voss residence, early morning.
+
+[MARCUS_VOSS | style: tired but relieved]
+No calls before nine today. First morning in three weeks nobody's screaming at me before I've had coffee.
+
+[ELENA_VOSS | style: light, watchful]
+Careful. Quiet is just a different kind of noise, if you're the one it's coming from.
+
+[SFX: coffee cup set down on marble counter]
+
+[MARCUS_VOSS | style: dry]
+Is that a fortune cookie or a warning?
+
+[ELENA_VOSS | style: composed, unreadable]
+It's an observation. The story's cooling. That doesn't mean it's over. It means people are waiting to see who moves first.
+
+[MARCUS_VOSS | style: flat]
+Nobody's moving. There's nothing to move on. A clip, a rumor, no body, no note. It'll die on its own if everyone just — stops feeding it.
+
+[ELENA_VOSS | style: gentle, probing]
+You really believe that.
+
+[MARCUS_VOSS | style: firm, a little too fast]
+I believe if I say nothing long enough, there's nothing left to say anything about.
+
+[SFX: distant kitchen radio, low murmur of a morning news segment]
+
+[ELENA_VOSS | style: measured]
+Funny. Silence has never once made a board member feel safe. It usually does the opposite.
+
+[MARCUS_VOSS | style: sharp glance, guarded]
+Is that about me, or about the two you've been having dinner with?
+
+[ELENA_VOSS | style: unbothered, smooth]
+It's about all of us, Marcus. We're all just — managing appearances right now. You in front of the cameras. Me at the table. Everyone doing their part.
+
+[NARRATOR]
+Marcus studies her a moment too long before he looks away.
+
+[MARCUS_VOSS | style: quiet, almost to himself]
+Yeah. Everyone doing their part.
+
+[SFX: chair scraping back, footsteps leaving the kitchen]
+
+[NARRATOR]
+Elena watches him go, coffee untouched, her expression giving nothing away at all.
+
+--- PART 2 ---
+
+[NARRATOR]
+The Boardroom Coup thread resumes. A private dining room at the Wintour Club, that same evening. Elena Voss hosts two members of the Voss Dynamics board — unnamed here, their voices folded into the room's murmur.
+
+[SFX: soft clink of wine glasses, low murmur of conversation, distant string quartet]
+
+[ELENA_VOSS | style: warm, hostess-perfect]
+I promised no agenda tonight. Just dinner, and honesty, which I realize is a stranger thing to ask for in this industry than dinner is.
+
+[SFX: polite laughter, chair creaking]
+
+[ELENA_VOSS | style: light, testing the water]
+Though I'll admit — when two people ask me, separately, in the same week, how Marcus is "really" holding up, I start to wonder if honesty's already found its way to this table without my help.
+
+[SFX: uncomfortable pause, a fork set down]
+
+[ELENA_VOSS | style: gentle, drawing them out]
+No, please. I'm not fishing. I live with the man. I know exactly how he's holding up. I'm asking what the two of you are hearing, out there, from people who don't.
+
+[NARRATOR]
+A silence stretches long enough to answer on its own.
+
+[ELENA_VOSS | style: soft, almost sympathetic]
+That bad.
+
+[SFX: glass refilled, liquid pouring]
+
+[ELENA_VOSS | style: measured, careful now]
+I won't defend the silence strategy. I've told him myself — silence reads as confidence to Marcus and as concealment to everyone else. But I also won't sit here and pretend I don't understand why he's chosen it. There's very little a man can say about a story with no ending yet.
+
+[NARRATOR]
+One of the board members speaks; her reply cuts across whatever he says without acknowledging it.
+
+[ELENA_VOSS | style: composed, planting the seed]
+What I can tell you is this — the company doesn't end with one man's instincts, whatever the papers imply. It never has. There are structures in place for exactly this kind of moment. I'd just want you both to remember that, when the vote comes.
+
+[SFX: quiet clink of a glass raised, low agreement]
+
+[ELENA_VOSS | style: charming, closing the subject]
+Now. Dessert. I hear the pastry chef here trained under someone terrifying in Lyon, and I intend to make both of you suffer through every course of it.
+
+[SFX: laughter rising, cutlery, glasses]
+
+[NARRATOR]
+Elena laughs with them, easy and unbothered — and beneath the table, her free hand stays perfectly still.
+
+--- PART 3 ---
+
+[NARRATOR]
+The Vanishing thread resumes. A conference room at Voss Dynamics headquarters, the next morning. Marcus Voss stands before a bank of microphones, company counsel just out of frame.
+
+[SFX: camera shutters clicking, murmur of assembled press, microphone feedback squeal]
+
+[MARCUS_VOSS | style: rehearsed, controlled]
+Thank you for coming. I'll keep this brief, and I'll say now what I've said before — Voss Dynamics is cooperating fully with law enforcement, and our thoughts remain with Mei Lin's family.
+
+[SFX: rapid overlapping shouted questions]
+
+[MARCUS_VOSS | style: flat, deflecting]
+I'm not going to speculate on the origin of any audio clip. I'm not an investigator, and frankly, neither is anyone in this room.
+
+[NARRATOR]
+A reporter presses him on the patent filing bearing his name alone.
+
+[MARCUS_VOSS | style: tight, a beat too fast]
+That question has been asked and answered. Our IP filings are a matter of public record and I won't relitigate them for a headline.
+
+[SFX: a single loud question cutting through the noise]
+
+[MARCUS_VOSS | style: guarded, jaw tightening]
+No. I have no personal contact with Mei. I've said that from the beginning and nothing has changed it.
+
+[SFX: chairs scraping, more shouted questions]
+
+[MARCUS_VOSS | style: clipped, ending it]
+That's all I have for today. Thank you.
+
+[NARRATOR]
+He steps back from the microphones before the last question finishes leaving someone's mouth, counsel already moving to shield him from the rest.
+
+--- PART 4 ---
+
+[NARRATOR]
+The Vanishing thread continues. A windowless interview room in the Voss Dynamics security office, that same afternoon. Jason Wu sits across from the head of internal security; this is his second interview in a week.
+
+[SFX: door latch clicking shut, fluorescent light humming]
+
+[JASON_WU | style: careful, controlled]
+I already went through the access logs with you on Tuesday. I don't know what's changed since then.
+
+[NARRATOR]
+The investigator slides a printed timestamp sheet across the table.
+
+[SFX: paper sliding across a table]
+
+[JASON_WU | style: measured, guarded]
+That's a login from my credentials, sure. It's also a login from a shared lab terminal that six other people used that week.
+
+[SFX: pen clicking]
+
+[JASON_WU | style: even, a little too even]
+I understand it looks strange. I don't have a better explanation for the timestamp than the one I just gave you.
+
+[NARRATOR]
+The investigator asks, directly, whether Jason has had any contact with Mei Lin since she was reported missing.
+
+[JASON_WU | style: steady, betraying nothing]
+No. I haven't heard from Mei since before any of this started. I think about that a lot, actually — that I don't know where she is either.
+
+[SFX: chair creaking as someone shifts weight]
+
+[JASON_WU | style: quiet, choosing words with visible care]
+She was the best researcher I ever worked with. If I knew something that would help find her, I'd have said it already.
+
+[NARRATOR]
+The investigator lets the silence sit for a long moment before closing the folder.
+
+[SFX: folder closing, papers being squared against the table]
+
+[JASON_WU | style: flat, relieved but hiding it]
+Is that everything, or do you need me to stay?
+
+[NARRATOR]
+He's told he's free to go, for now. Jason gathers his badge from the table and doesn't look back as he reaches the door.
+
+[SFX: door opening, hallway ambience swelling briefly, door closing]
+
+[NARRATOR]
+Alone in the stairwell, Jason takes out a second phone — one that has never touched the company network — and stares at it without unlocking it.
+
+[JASON_WU | style: barely audible, to himself]
+Not yet. Not like this.
+
+[SFX: phone screen powering off, footsteps descending stairs]
+
+--- PART 5 ---
+
+[NARRATOR]
+The Affair thread returns. A glass-walled conference room at the studio offices of Without a Trace of Doubt, later that same afternoon. Dana Shaw sits at the head of the table as her producers project slides for the next episode onto the far wall.
+
+[SFX: laptop keys clicking, projector fan humming]
+
+[DANA_SHAW | style: measured, professional]
+Walk me through the title again. "Did Marcus Voss Know?" That's a hell of a headline to put on something we can't fully stand behind yet.
+
+[SFX: papers shuffling]
+
+[DANA_SHAW | style: pushing back, controlled]
+I hear the numbers. I do. Tripled downloads since the last clip aired — I'm not blind to what that means for the show. But numbers aren't sourcing.
+
+[NARRATOR]
+Her producers respond that legal has already cleared the outline, and that the timing — right as the board vote draws closer — has never been better.
+
+[DANA_SHAW | style: sharper, testing them]
+Cleared for what, exactly? Cleared to imply he ordered the clip made? Because that's not what the evidence shows. That's not what any of it shows.
+
+[SFX: chair rolling back slightly]
+
+[DANA_SHAW | style: quieter, something flickering behind the professionalism]
+Two of those clips flagged internally as possibly fabricated. I flagged them myself. That doesn't stop being true because the release date is convenient.
+
+[NARRATOR]
+Someone across the table reminds her that flagged isn't the same as confirmed, and that the audience doesn't need certainty — they need a question mark and a good hook.
+
+[DANA_SHAW | style: low, weighing something she won't say out loud]
+And the people this touches outside the studio? The ones who didn't sign up to be part of a hook?
+
+[NARRATOR]
+No one at the table has an answer for that, so no one offers one. The silence is treated as agreement.
+
+[DANA_SHAW | style: measured again, though the beat before she answers runs too long]
+Fine. Greenlight the outline. But nothing airs until I've signed off on every line myself.
+
+[SFX: pen tapping against a legal pad]
+
+[NARRATOR]
+Around the table, the mood shifts instantly from tension to momentum — pitch decks close, someone already typing a release date into a calendar.
+
+[SFX: laptop lids closing in quick succession, chairs scraping back as people rise]
+
+[DANA_SHAW | style: alone now, to herself, barely a whisper]
+He isn't ready for this. Neither am I.
+
+[SFX: door closing, office ambience fading to quiet]
+
+--- PART 6 ---
+
+[NARRATOR]
+The Affair thread continues. Dana's office, minutes later. Her laptop is still open on the desk when a video call comes in — David Lin, calling from his apartment across town.
+
+[SFX: video call connecting chime]
+
+[DANA_SHAW | style: warm, tired, guard dropping]
+Hey. I was going to call you tonight. Long day.
+
+[DAVID_LIN | style: gentle, glad to see her]
+You look it. Are you eating?
+
+[DANA_SHAW | style: soft laugh, deflecting]
+Somebody's been telling on me.
+
+[NARRATOR]
+Behind her, the conference room door opens without a knock. A producer leans in, still mid-sentence to someone off camera.
+
+[SFX: door opening, muffled voices]
+
+[DANA_SHAW | style: alarmed, half-turning]
+Not now —
+
+[NARRATOR]
+Too late. A few words carry clearly through the open laptop mic before the door swings shut again.
+
+[SFX: door closing]
+
+[DAVID_LIN | style: puzzled, trying to place what he just heard]
+Did he just say Marcus Voss?
+
+[DANA_SHAW | style: careful, recovering fast]
+It's nothing. Scheduling stuff. You know how the office gets.
+
+[DAVID_LIN | style: quiet, not quite letting it go]
+He said a title. "Did Marcus Voss Know." That's not scheduling, Dana.
+
+[NARRATOR]
+Dana closes the laptop lid another inch, as if that might undo what's already been heard.
+
+[SFX: laptop lid creaking]
+
+[DANA_SHAW | style: measured, choosing words like stepping stones]
+It's one idea out of a dozen we kick around every week. Most of them never make it anywhere.
+
+[DAVID_LIN | style: searching her face through the screen]
+You'd tell me. If it was about Mei. If it came near her.
+
+[NARRATOR]
+There is the smallest pause before Dana answers — not long enough for David to name it, long enough for the listener to hear it.
+
+[DANA_SHAW | style: sincere, and that's what makes it land]
+David. Nothing I do is going to hurt her chances of coming home. You know that.
+
+[DAVID_LIN | style: relieved, wanting to believe it]
+I know. I just — every headline lately has his name near hers. I don't like what that does to people's imaginations.
+
+[DANA_SHAW | style: gentle, redirecting]
+Let's not give it more room tonight than it deserves. Tell me about your day instead.
+
+[NARRATOR]
+David lets it go, the way he has let smaller things go for four months. On her end of the call, Dana's eyes stay fixed on the closed laptop beside her, not on the screen in front of her.
+
+[SFX: video call ambience, quiet]
+
+--- PART 7 ---
+
+[NARRATOR]
+The Affair thread continues. Same call, a few minutes later. David has let the subject go once — but not entirely.
+
+[DAVID_LIN | style: trying to sound casual, not quite managing it]
+Can I ask you something, and you just answer straight?
+
+[DANA_SHAW | style: steady, bracing slightly]
+Always.
+
+[DAVID_LIN | style: careful, watching her face]
+Is the show going after Marcus? Not the company. Him.
+
+[NARRATOR]
+Dana holds his gaze through the screen a beat longer than the question needs.
+
+[DANA_SHAW | style: calm, deliberate]
+The show goes after the truth, David. Wherever it leads. If that's near him, it's because the facts put him there, not because I chose him.
+
+[DAVID_LIN | style: quiet, wanting the reassurance whole]
+And Mei. Wherever the truth leads — it leads back to her coming home.
+
+[DANA_SHAW | style: gentle, unwavering on the surface]
+That's the only ending I'm working toward. I promise you that.
+
+[NARRATOR]
+David exhales, some of the tension leaving his shoulders. He believes her completely.
+
+[DAVID_LIN | style: soft, grateful]
+Sorry. I know you'd never use any of this against him just to — I don't know. Sell more episodes.
+
+[DANA_SHAW | style: warm, a fraction too quick]
+Never crossed my mind.
+
+[SFX: laptop fan hum]
+
+[NARRATOR]
+On her screen, an email notification slides into view for half a second — a subject line about tomorrow's recording schedule — before Dana clicks it away without looking down.
+
+[SFX: notification chime, soft click]
+
+--- PART 8 ---
+
+[NARRATOR]
+The Boardroom Coup thread continues. Elena's study, that same evening. The press conference replays on the wall screen. She is alone.
+
+[SFX: television audio, muffled crowd noise]
+
+[MARCUS_VOSS | style: recorded, clipped, television audio]
+I won't speculate on the origin of the clip. What I can tell you is that Voss Dynamics takes the security of our research seriously, and we are cooperating fully with the appropriate authorities.
+
+[NARRATOR]
+Elena sits with a glass of wine untouched on the table beside her, watching her husband's face fill the screen.
+
+[ELENA_VOSS | style: flat, unreadable]
+Cooperating fully.
+
+[NARRATOR]
+She says it to no one. The phone in her lap lights up — a text, then another, in quick succession.
+
+[SFX: phone vibrating twice]
+
+[NARRATOR]
+She reads without picking it up. Her expression doesn't change.
+
+[ELENA_VOSS | style: quiet, almost amused]
+They're already asking if he rehearsed that.
+
+[NARRATOR]
+On screen, a reporter's voice cuts through the din, asking whether Elena Voss has any comment of her own. The camera finds Marcus's face tightening before he answers for her.
+
+[MARCUS_VOSS | style: recorded, controlled but strained, television audio]
+My wife stands fully behind this company, and behind me. There is no pattern here — only a family going through something painful, trying to protect its people while it does.
+
+[NARRATOR]
+Outside, rain has begun against the window, steady and indifferent to what unfolds inside. Elena's gaze doesn't move from the screen.
+
+[NARRATOR]
+She sets her wine glass down without drinking from it, the motion precise, unhurried.
+
+[ELENA_VOSS | style: to herself, barely audible]
+Stands behind him.
+
+[NARRATOR]
+She finally reaches for the remote and mutes the sound. The room goes quiet except for the hum of the television light flickering across her face and the rain ticking against the glass.
+
+[NARRATOR]
+Her thumb hovers over the unread texts. Somewhere in that thread, unopened, sits a report she has not yet decided what to do with.
+
+[ELENA_VOSS | style: measured, giving nothing away]
+Not yet.
+
+[NARRATOR]
+She doesn't say what "not yet" refers to. On the muted screen, Marcus keeps talking, his mouth moving without sound, and Elena watches him the way one watches a stranger — carefully, and without warmth.
+
+[SFX: television static hiss as the broadcast cuts to commercial]
+
+--- PART 9 ---
+
+[NARRATOR]
+The Affair thread closes the episode. A production office, later that night. Dana sits across from her producers, a monitor glowing between them.
+
+[SFX: keyboard clicking, monitor fan hum]
+
+[NARRATOR]
+Her producers walk her through the pitch again — timeline, clips, the angle they want. They wait for her to object. She doesn't.
+
+[DANA_SHAW | style: measured, giving nothing away]
+Send it up.
+
+[NARRATOR]
+One producer types. The document title appears on the shared screen, stark against the dark interface.
+
+[SFX: soft notification chime]
+
+[NARRATOR]
+Three words, glowing white: DID MARCUS VOSS KNOW.
+
+[DANA_SHAW | style: quiet, unreadable]
+That's the one.
+
+[NARRATOR]
+No one in the room can see the second thought crossing her face — or the name she doesn't say out loud. The cursor blinks over the greenlight button.
+
+[SFX: mouse click]
+
+[NARRATOR]
+Somewhere across the city, David Lin has no idea his name just left the room.
+

@@ -1,0 +1,715 @@
+--- PART 1 ---
+
+[NARRATOR]
+Previously on Chain of Custody: Kai Yang uncovered proof that his partner, Detective Mei Lin, has been quietly altering her own case logs for days. Tonight he's carrying that printout down to the basement — to Interrogation Room 3, where Mei Lin has been alone with the suspect, Jonas Voss, far longer than protocol allows.
+
+[NARRATOR]
+The basement corridor outside Interrogation Room 3, late at night. Mei Lin stands at the room's control panel, printout of her own falsified logs still unknown to her, about to be found.
+
+[SFX: quiet electronic beeping, keypad tones]
+
+[DET_MEI_LIN | style: low, resolved, almost private]
+Override. Authorization: Lin, M. Badge four-four-one-nine.
+
+[SFX: heavy magnetic clunk, door seal engaging]
+
+[NARRATOR]
+The door seals behind her with a soft mechanical finality. In the bullpen upstairs, no one is watching the corridor monitor — so no one sees its feed die to static in that same instant.
+
+[SFX: monitor static hiss, brief, then silence]
+
+[NARRATOR]
+Seconds later, Kai Yang reaches the corridor, printout in hand.
+
+[DET_KAI_YANG | style: clipped, already uneasy]
+Mei. It's me. Open up.
+
+[SFX: footsteps stopping abruptly]
+
+[NARRATOR]
+He finds the panel's display reads locked — not the standard exterior lock, but an internal supervisor override.
+
+[DET_KAI_YANG | style: tight, controlled frustration]
+That's not — that's a hard lock. Internal.
+
+He tries his own credentials.
+
+[SFX: keypad tones, then a flat electronic buzz]
+
+[DET_KAI_YANG | style: quiet disbelief, low]
+Access denied. Denied for me.
+
+[NARRATOR]
+He doesn't yet know the same code has silently disabled the corridor's rear emergency exit alarm. He only registers what's in front of him.
+
+[DET_KAI_YANG | style: barely holding it together, speed: 1.05]
+You shut me out. You shut everyone out.
+
+He presses his palm flat against the cold door, listening for anything.
+
+[SFX: faint, muffled voices behind steel, indistinct]
+
+[DET_KAI_YANG | style: low, almost to himself]
+Whatever you're doing in there, Mei — I hope to God you know what it costs.
+
+[NARRATOR]
+He is one hallway, one door, and now one override code away from everything he came down here to confirm — and further from it than he has ever been.
+
+[SFX: single heavy heartbeat of silence, corridor hum resumes]
+
+--- PART 2 ---
+
+[NARRATOR | style: terse, neutral]
+Interrogation Room 3, seconds after the door seals. No camera, no witnesses. Mei Lin and Jonas Voss, alone.
+
+[JONAS_VOSS | style: quiet, contained]
+There it is.
+
+[JONAS_VOSS | style: quiet, contained]
+That sound. Final, isn't it.
+
+[DET_MEI_LIN | style: steadying herself]
+Don't read into it.
+
+[JONAS_VOSS | style: mild, almost gentle]
+I'm not reading anything, Detective. I'm just listening. It's a good room for listening, this one. No hum from the vents. No one shuffling papers on the other side of the glass.
+
+[SFX: faint electrical click, then silence]
+
+[DET_MEI_LIN | style: flat, controlling her breath]
+The glass doesn't matter anymore.
+
+[JONAS_VOSS | style: patient, almost amused]
+No. I suppose it doesn't.
+
+[NARRATOR | style: terse, neutral]
+He watches her the way a man watches weather change — unhurried, already certain which direction it's headed.
+
+[DET_MEI_LIN | style: forcing calm]
+You've been waiting for this.
+
+[JONAS_VOSS | style: soft, disarming]
+I've been waiting for a lot of things, Detective Lin. Patience is mostly what they left me with, sitting in rooms like this one for months. Yours. Someone else's before you.
+
+[SFX: chair legs shifting slightly on tile]
+
+[DET_MEI_LIN | style: quiet, guarded]
+This isn't about me.
+
+[JONAS_VOSS | style: gentle, unhurried]
+Isn't it.
+
+[NARRATOR | style: terse, neutral]
+He lets the question sit, unanswered, and says nothing further for a long moment.
+
+[DET_MEI_LIN | style: steeling herself]
+I have maybe twenty minutes before someone else has the codes to get in here. I'm not going to waste them.
+
+[JONAS_VOSS | style: calm, almost kind]
+Then don't. Sit. Breathe once. You came here to ask me something — ask it like you mean it, not like you're already bracing for the answer.
+
+[SFX: soft scrape of a chair being pulled out]
+
+[NARRATOR | style: terse, neutral]
+She sits. For a moment neither speaks, the silence settling over the room like something earned rather than built.
+
+[DET_MEI_LIN | style: low, resolved]
+All right.
+
+[JONAS_VOSS | style: warm, measured]
+All right.
+
+[NARRATOR | style: terse, neutral]
+He folds his hands on the table, unhurried, and waits — the same stillness he has offered her before, deployed now at exactly the moment it was made for.
+
+--- PART 3 ---
+
+[NARRATOR | style: terse, neutral]
+Across the city, in Zoe Han's cramped apartment office, the investigative journalist chasing the department's corruption watches her own byline go live. Beside her sits Anna Wu, the older sister of the still-missing Daniel Wu, who has spent months pushing the department for answers.
+[NARRATOR | style: terse, neutral]
+Morning light through the blinds. Two laptops open. The story is public now.
+
+[SFX: laptop notification chime, rapid succession]
+
+[ZOE_HAN | style: quiet, watching the numbers climb]
+It's up. Eleven minutes and it's already past four thousand shares.
+
+[ANNA_WU | style: breath catching]
+That's — those are his numbers. The ones from the note. The harbor company, the dates, all of it.
+
+[ZOE_HAN | style: careful, professional]
+Anna, I kept Daniel's name out of it. Every version. It's about the deposits, the raids getting pulled at the last minute. It has to stand on its own facts, or it gets torn apart in an hour.
+
+[ANNA_WU | style: torn between gratitude and fear]
+I know. I know why. I just — I've been carrying that scrap of paper for months and no one believed it meant anything, and now strangers are reading it and it's real.
+
+[SFX: phone buzzing on a hard surface, insistent]
+
+[ZOE_HAN | style: not looking at the phone yet, still steady]
+It's real because eleven years of numbers don't lie, not because of who's asking.
+
+[ANNA_WU | style: pressing, gentle but direct]
+Zoe. Whoever gave you those numbers — do they know where he is? Is that even the same thing?
+
+[ZOE_HAN | style: a beat too quick, deflecting]
+It's a financial story. Cancelled raids, cash that doesn't match a salary. That's what I can prove. I'm not going to promise you it connects to Daniel until I actually know that it does.
+
+[ANNA_WU | style: quiet, not quite convinced]
+You don't say his name once in there. But anyone who reads it is going to ask who signed off on those raids.
+
+[ZOE_HAN | style: level, almost to herself]
+That's their question to ask. Not mine to answer yet.
+
+[SFX: phone buzzing again, longer this time]
+
+[ZOE_HAN | style: finally glancing down, tension entering her voice]
+That's my editor. Third time in six minutes.
+
+[NARRATOR | style: terse, neutral]
+The byline spreads. Neither woman says the captain's name aloud. The numbers do it for them.
+
+[SFX: notification chimes overlapping, building]
+
+--- PART 4 ---
+
+[NARRATOR]
+Captain Sun's office, minutes after the story broke. Blinds drawn, phone in hand.
+
+[CAPTAIN_DAVID_SUN | style: controlled panic rising underneath]
+Come on. Pick up.
+
+[SFX: phone ringing, unanswered, cutting to voicemail tone]
+
+[CAPTAIN_DAVID_SUN | style: tight, low, urgent]
+It's Sun. Call me back the second you see this. We need to control the message before the beat reporters start calling the precinct line.
+
+[NARRATOR]
+He tries a second number. It goes straight to voicemail.
+
+[CAPTAIN_DAVID_SUN | style: barely masking dread]
+Nobody's picking up. Nobody.
+
+[SFX: office chair creaking, papers shuffling in frustration]
+
+[CAPTAIN_DAVID_SUN | style: quiet, to himself, rationalizing]
+This is a finance story. Numbers. Deposits. It doesn't touch her. It doesn't touch what happened years ago. Two separate things.
+
+[NARRATOR]
+His eyes drift toward the corridor leading to Interrogation Room 3, then back to the phone screen.
+
+[CAPTAIN_DAVID_SUN | style: strained, torn between two urgencies]
+I can't be in two places. I can't put out a fire in the press room and pull her out of that room at the same time.
+
+[SFX: distant precinct chatter rising, phones ringing elsewhere in the building]
+
+[CAPTAIN_DAVID_SUN | style: resolve hardening, but shaky underneath]
+The story first. Contain the story first.
+
+--- PART 5 ---
+
+[NARRATOR]
+Inside Interrogation Room 3, the silence has a texture now — no hum of the corridor, no distant precinct noise, just the recycled air and the two of them.
+
+[DET_MEI_LIN | style: quiet, controlled, but fraying at the edges]
+We had a deal. You said if I got you this room, alone, no wire, no glass — you'd give me something real.
+
+[JONAS_VOSS | style: unhurried, almost gentle]
+I remember the deal differently. I remember you needing it more than I did.
+
+[DET_MEI_LIN | style: steady but tight]
+Where is he, Voss. Where is Daniel Wu.
+
+[SFX: the low electrical hum of the sealed room, faint and constant]
+
+[NARRATOR]
+She doesn't move. She doesn't blink. Somewhere behind her composure is every rule she's already broken to reach this exact question.
+
+[JONAS_VOSS | style: measured, watching her closely]
+That's a very direct question for someone who just locked herself in a room with no one watching.
+
+[DET_MEI_LIN | style: sharper, defensive]
+I'm not here to talk about the room.
+
+[JONAS_VOSS | style: soft, almost amused]
+No. You're here because you think this is the last chance you'll get. That's different.
+
+[NARRATOR]
+He lets the quiet stretch. Mei Lin's hand tightens against the edge of the table, the only visible crack in an otherwise still posture.
+
+[DET_MEI_LIN | style: barely holding it together, quieter now]
+I gave you privacy. I gave you time no one else even knows I'm spending. That has to count for something.
+
+[JONAS_VOSS | style: calm, patient]
+It counts. I'm just deciding how much.
+
+[SFX: a slow exhale, chair creaking faintly as he shifts]
+
+[NARRATOR]
+He studies her the way a man studies a held breath, waiting to see exactly how long before it breaks.
+
+[JONAS_VOSS | style: quiet, deliberate]
+Ask me again. Slower this time.
+
+[DET_MEI_LIN | style: trembling control, almost a whisper]
+Where. Is. Daniel.
+
+[NARRATOR]
+The room holds its silence a moment longer, Voss letting her question hang in the recycled air between them, unanswered.
+
+--- PART 6 ---
+
+[NARRATOR | style: terse, neutral]
+Zoe Han's apartment, that same afternoon. Anna Wu sits across from her, the published story open on a laptop between them.
+
+[SFX: phone vibrating against a wooden table]
+
+[ZOE_HAN | style: guarded, professional]
+It's her.
+
+[ZOE_HAN | style: calm, reassuring]
+Hey. I know. I know you're seeing the same numbers I am.
+
+[ZOE_HAN | style: measured, listening]
+No — nothing in the piece points at finance. I built the figures off the deposit pattern, not the access logs.
+
+[ZOE_HAN | style: patient but tightening]
+I hear you. But panicking now doesn't undo what's already published.
+
+[SFX: distant office chatter, muffled through the phone speaker]
+
+[ZOE_HAN | style: careful, choosing words]
+Nobody outside this call knows your name. That hasn't changed since this morning.
+
+[ZOE_HAN | style: firmer, reassuring]
+If IA starts pulling logs, they'll be looking for a pattern, not a person. You weren't the only one with that access tier.
+
+[ANNA_WU | style: quiet, watching Zoe's face]
+She's scared.
+
+[ZOE_HAN | style: hand over the phone, low]
+She's more than scared.
+
+[ZOE_HAN | style: back to the call, steady]
+Talk to me. What did they actually say to you?
+
+[ZOE_HAN | style: stillness settling into her voice]
+Nobody's named you. Not yet. I promise you that much is true.
+
+[ZOE_HAN | style: careful pause, weighing the lie of omission]
+I can't promise you what happens if pressure keeps building. I won't pretend I can.
+
+[SFX: a long exhale crackling through the phone line]
+
+[ZOE_HAN | style: gentle but urgent]
+Don't go dark on me. If you disappear now, the next phase of this has nothing to stand on.
+
+[ZOE_HAN | style: listening, jaw tightening]
+Okay. Okay — take the day. Just don't decide anything final without calling me first.
+
+[SFX: a call ending, a soft electronic click]
+
+[ZOE_HAN | style: exhaling, setting the phone down]
+She didn't say no. She also didn't say yes.
+
+[ANNA_WU | style: quiet, unsettled]
+If she pulls out —
+
+[ZOE_HAN | style: flat, honest]
+Then everything after today is just numbers with no one standing behind them.
+
+[ANNA_WU | style: voice dropping, realization dawning]
+I thought once it was printed, it was safe. Permanent.
+
+[ZOE_HAN | style: tired, level]
+Printed isn't the same as finished. There's a whole second half to this story, and right now it's standing on one person's nerve.
+
+[NARRATOR | style: terse, neutral]
+Anna looks back at the screen, at Daniel's name still nowhere in the piece, and understands for the first time how easily the whole chain could still come apart.
+
+--- PART 7 ---
+
+[NARRATOR]
+Corridor outside Interrogation Room 3, minutes later. Kai Yang stands at the control panel, two uniformed officers behind him, the log printout still folded in his jacket pocket.
+
+[DET_KAI_YANG | style: low, controlled urgency]
+There's a safety concern behind this door. I need it open, and I need it open now.
+
+[SFX: radio static, muffled precinct chatter in the background]
+
+[DET_KAI_YANG | style: terse, giving orders]
+Stand here. If anyone from upstairs asks, you tell them Detective Yang authorized an emergency entry. Nothing more than that.
+
+[NARRATOR]
+The officers exchange a glance but hold their position. Kai Yang turns back to the panel.
+
+[DET_KAI_YANG | style: muttering to himself, focused]
+Come on. Come on, work with me.
+
+[SFX: keypad beeps, a soft mechanical whir]
+
+[DET_KAI_YANG | style: tight, almost pleading]
+Manual override, sequence four. I know it's you in there, Mei. I know it.
+
+[NARRATOR]
+He keys in the first stage of the sequence. A red light on the panel blinks once, then holds steady.
+
+[DET_KAI_YANG | style: quiet, to himself]
+Two minutes. Maybe less if the relay cooperates.
+
+[SFX: panel hum deepening, a distant click somewhere in the wall]
+
+[DET_KAI_YANG | style: strained, still working]
+She printed a log for a shift she wasn't even on. She's been covering something for days. I'm not waiting for a committee to figure out what.
+
+[NARRATOR]
+One of the officers shifts his weight, glancing down the corridor toward the bullpen. Kai Yang doesn't look up from the panel.
+
+[DET_KAI_YANG | style: barely audible, almost to himself]
+Just stay in one piece till I get there. That's all I'm asking.
+
+[SFX: a second mechanical click, heavier than the first]
+
+[NARRATOR]
+The override sequence advances to its second stage. Nothing on the panel indicates what else the circuit is touching — not the door, not the camera, nothing that shows on this screen at all.
+
+[DET_KAI_YANG | style: focused, unaware]
+Almost there.
+
+[SFX: low electrical hum building, then settling]
+
+[NARRATOR]
+He keeps his eyes on the door. He does not see, and has no way of seeing, what else in the building just quietly changed.
+
+--- PART 8 ---
+
+[NARRATOR | style: terse, neutral]
+Interrogation Room 3, still sealed. Minutes have passed since the door closed. Mei Lin and Voss remain alone.
+
+[SFX: fluorescent hum, faint]
+
+[JONAS_VOSS | style: quiet, deliberate]
+There's a storage unit. Off Kestrel Street, near the old freight yard. Unit number I don't have memorized — I never went inside myself.
+
+[DET_MEI_LIN | style: sharp, controlled]
+Don't do that. Don't give me half of it.
+
+[JONAS_VOSS | style: calm, unhurried]
+That's what I have. You wanted a location, not a guided tour.
+
+[DET_MEI_LIN | style: tight, restrained]
+Kestrel Street runs six blocks. That's not an answer, that's a neighborhood.
+
+[SFX: chair creak]
+
+[JONAS_VOSS | style: mild, almost gentle]
+It's more than you had an hour ago.
+
+[NARRATOR | style: terse, neutral]
+A pause. Mei Lin's jaw tightens — a flicker of recognition crosses her face before she pushes past it.
+
+[DET_MEI_LIN | style: low, to herself]
+You're doing it again.
+
+[JONAS_VOSS | style: soft, curious]
+Doing what.
+
+[DET_MEI_LIN | style: quiet, guarded]
+Nothing.
+
+[NARRATOR | style: terse, neutral]
+She doesn't finish the thought out loud.
+
+[JONAS_VOSS | style: measured, patient]
+You asked where. I told you where I know. If you'd asked me which building, I'd have told you I don't know that either — I'm not lying to make you feel better.
+
+[DET_MEI_LIN | style: frustrated, quiet]
+I asked for something I could actually use.
+
+[JONAS_VOSS | style: gentle, needling]
+Maybe the question needed to be sharper. "Where" was never going to get you a street number from a man who was never inside the building.
+
+[SFX: distant footsteps, muffled through the wall]
+
+[DET_MEI_LIN | style: strained, uncertain]
+I don't have time to ask it three different ways.
+
+[JONAS_VOSS | style: warm, reasonable]
+Then ask it the right way the first time. I want to help you find him, Detective. I do. But you keep coming in here needing something faster than the truth actually moves.
+
+[NARRATOR | style: terse, neutral]
+Mei Lin looks down at the table, at her own hands, then back up.
+
+[DET_MEI_LIN | style: quiet, resigned]
+Kestrel Street. Freight yard side.
+
+[JONAS_VOSS | style: soft, approving]
+That's a start.
+
+[NARRATOR | style: terse, neutral]
+She nods once, slowly — the nod of someone agreeing to a deal she can no longer clearly see the shape of.
+
+[SFX: soft exhale]
+
+[JONAS_VOSS | style: quiet, satisfied — to himself]
+Good.
+
+[NARRATOR | style: terse, neutral]
+He says it too low for her to catch the weight in it.
+
+--- PART 9 ---
+
+[NARRATOR | style: terse, urgent]
+Elsewhere in the building, Captain David Sun moves fast toward the wing that houses Interrogation Room 3, his phone still buzzing with unanswered calls.
+
+[CAPTAIN_DAVID_SUN | style: clipped, controlled panic | speed: 1.1]
+Not now. Not now, not now—
+
+[SFX: footsteps on tile, urgent pace]
+
+[NARRATOR | style: terse]
+He rounds the corner and stops cold. Kai Yang and two uniformed officers are already at the door, working the manual override panel.
+
+[SFX: metallic clunk of an access panel being forced]
+
+[CAPTAIN_DAVID_SUN | style: barely audible, to himself]
+No. No, no—
+
+[NARRATOR | style: neutral]
+Sun steps back into the shadow of the corridor junction, out of their line of sight.
+
+[CAPTAIN_DAVID_SUN | style: low, strained, thinking aloud]
+If I walk in there now, I'm on record. Standing at that door when it opens. My name next to hers, next to whatever's inside that room.
+
+[CAPTAIN_DAVID_SUN | style: same, tighter]
+And if I don't — if I go deal with Zoe Han's story instead — that door opens without me, and I lose any say in how this gets told.
+
+[SFX: distant precinct radio chatter, muffled]
+
+[NARRATOR | style: terse]
+His phone buzzes again. A name flashes on the screen — someone from the department's press office, someone who cannot be ignored twice.
+
+[CAPTAIN_DAVID_SUN | style: quiet, almost pleading, to no one]
+One fire. I can only carry one fire.
+
+[NARRATOR | style: neutral]
+He doesn't answer the phone. He doesn't move toward the door either. For several long seconds, David Sun simply stands in the dark of the corridor junction, watching two futures he can't survive both of collide in front of him.
+
+[SFX: the override panel emits a rising electronic tone, faint down the hallway]
+
+[CAPTAIN_DAVID_SUN | style: barely a whisper]
+Whichever one I pick, I lose the other.
+
+[NARRATOR | style: terse, flat]
+He still hasn't chosen. And the door up ahead is running out of time to wait for him.
+
+--- PART 10 ---
+
+[NARRATOR | style: terse, procedural]
+Corridor, moments later. The override sequence Kai Yang triggered keeps grinding through its cycle.
+
+[SFX: electronic relay clicking repeatedly]
+
+[NARRATOR | style: terse, procedural]
+Overhead, the dead corridor camera stutters — a half-second of picture fighting through static.
+
+[SFX: video feed crackling then stabilizing briefly]
+
+[DET_KAI_YANG | style: focused, low, to himself]
+Come on. Come on.
+
+[NARRATOR | style: quiet, precise]
+In that flicker, unseen by anyone watching, a status light beside the rear emergency exit shifts. Disabled. Then active.
+
+[SFX: faint mechanical latch releasing somewhere distant]
+
+[NARRATOR | style: quiet, precise]
+No one is at that monitor to notice. But the system records the change anyway, timestamped, permanent, waiting.
+
+[DET_KAI_YANG | style: strained, gritted teeth]
+Almost there. Just — hold.
+
+[NARRATOR | style: terse]
+He doesn't look up. His whole focus stays on the panel in front of him, on the door, on her.
+
+[SFX: relay clicks once more, then silence]
+
+[NARRATOR | style: quiet]
+The camera feed dies again, back to static, as if it had never woken at all. Somewhere, a record now exists that will outlast tonight.
+
+--- PART 11 ---
+
+[NARRATOR]
+Corridor outside Interrogation Room 3. The override sequence Kai Yang triggered minutes ago finally completes.
+
+[SFX: heavy magnetic lock disengaging, mechanical thunk]
+
+[DET_KAI_YANG | style: adrenaline, no hesitation]
+That's it — that's the release. Go, go!
+
+[SFX: door scraping open, hinges under strain]
+
+[NARRATOR]
+The door gives with a heavy mechanical shudder. Kai Yang pushes through first, two uniformed officers close behind him.
+
+[DET_KAI_YANG | style: raw, urgent]
+Mei Lin!
+
+[NARRATOR]
+Down the corridor, Captain Sun — still trying to reach the room himself — hears the door break open before he can close the distance.
+
+[CAPTAIN_DAVID_SUN | style: quiet, cornered]
+No. No, not yet—
+
+[SFX: footsteps hurrying on tile, distant radio chatter]
+
+[NARRATOR]
+Inside the room, the sudden light and noise pull Mei Lin around. The vague location Voss gave her moments ago is still unconfirmed, unrecorded, useless in her hands.
+
+[DET_MEI_LIN | style: disoriented, defensive]
+Kai— what are you—
+
+[DET_KAI_YANG | style: fierce relief cut with fear]
+Don't. Don't say anything yet. Just — are you hurt? Did he touch you?
+
+[DET_MEI_LIN | style: shaken, trying to reassert control]
+I'm fine. I'm fine, I was handling it—
+
+[NARRATOR]
+Voss's expression shifts — just briefly — into something closer to satisfaction than alarm, gone before anyone but the audience could name it. A beat later his face catches up, arranging itself into practiced concern.
+
+[JONAS_VOSS | style: calm, almost gentle]
+Detective Yang. I was starting to worry no one was coming.
+
+[DET_KAI_YANG | style: sharp, controlled fury]
+Nobody asked you.
+
+[JONAS_VOSS | style: mild, unbothered]
+Of course. I only meant — she's been under a great deal of strain. Alone in here. For quite a while.
+
+[NARRATOR]
+One of the officers glances toward the doorway, where Captain Sun has just arrived, breathing hard, his presence beside the broken lock already drawing a second look.
+
+[SFX: radio static, muffled precinct noise from the hallway]
+
+[DET_KAI_YANG | style: low, urgent, only for Mei Lin]
+We're leaving. Now. Whatever this was — it's over.
+
+[DET_MEI_LIN | style: quiet, hollow]
+It's not. It's not over, Kai, he was about to—
+
+[DET_KAI_YANG | style: firm, cutting her off]
+Later. Not here.
+
+[NARRATOR]
+The room holds three separate reckonings in the same second — Kai Yang's fear finally given a face, Sun's last chance at quiet intervention gone, and Voss's private triumph settling in behind a mask of composure no one in the room is close enough yet to see through.
+
+--- PART 12 ---
+
+[NARRATOR]
+The door of Interrogation Room 3 hangs open, corridor light spilling across a floor that hasn't seen daylight in days.
+
+[DET_KAI_YANG | style: urgent, controlled]
+Mei. Mei, look at me. We're leaving. Right now.
+
+[DET_MEI_LIN | style: dazed, unraveling]
+Kai — I didn't — this isn't what it —
+
+[DET_KAI_YANG | style: low, firm]
+Not here. Not with him listening. Walk.
+
+[SFX: chair scraping, footsteps on tile]
+
+[NARRATOR]
+Voss remains seated, hands folded, watching the two detectives with an attention that never quite looks like alarm.
+
+[JONAS_VOSS | style: calm, almost gentle]
+Detective Lin was just leaving. Weren't you, Mei.
+
+[DET_KAI_YANG | style: sharp warning]
+You don't get to use her name.
+
+[JONAS_VOSS | style: unbothered]
+She used mine plenty, these last few nights. I only ever answered.
+
+[NARRATOR]
+Kai Yang doesn't take the bait. He keeps one hand near Mei Lin's shoulder, steering her toward the door without touching her.
+
+[DET_KAI_YANG | style: quiet, to Mei Lin only]
+Whatever he told you — we deal with it outside. Not in front of him.
+
+[SFX: radio static, distant voices in corridor]
+
+[NARRATOR]
+Captain Sun appears in the doorway, breathing hard, his presence beside the broken lock drawing immediate looks from the two uniformed officers behind Kai Yang.
+
+[CAPTAIN_DAVID_SUN | style: forcing composure]
+Stand down. All of you. I'll handle the report.
+
+[DET_KAI_YANG | style: guarded, surprised]
+Captain — how long have you been out here?
+
+[CAPTAIN_DAVID_SUN | style: too quick]
+Long enough to see the door go. That's all that matters right now.
+
+[NARRATOR]
+One of the officers exchanges a look with his partner — the question of how the captain arrived so precisely, so fast, sits unspoken in the air.
+
+[DET_MEI_LIN | style: hollow, quiet]
+Kai. Look at me. Whatever you found — whatever's in that printout — I know.
+
+[DET_KAI_YANG | style: pained, honest]
+Then you know I have to do something with it.
+
+[NARRATOR]
+Mei Lin says nothing. Her silence is answer enough — whatever ground she thought she still stood on has already given way beneath her.
+
+[JONAS_VOSS | style: soft, watching]
+It's a lot, isn't it. All this noise. All these people, suddenly so interested in one small room.
+
+[NARRATOR]
+No one answers him. He doesn't seem to need them to — his stillness in the middle of the chaos reads less like a man caught than a man simply waiting for the room to catch up to where he already is.
+
+--- PART 13 ---
+
+[NARRATOR]
+Still in the corridor outside Interrogation Room 3, radios crackling, officers moving in and out of the breached doorway. Word is spreading fast, in more than one direction at once.
+
+[SFX: radio static, overlapping voices, footsteps on tile]
+
+[CAPTAIN_DAVID_SUN | style: forcibly calm, listening past the noise]
+Somebody tell me why the rear exit alarm logged a status change tonight with nobody's name attached to it.
+
+[DET_KAI_YANG | style: distracted, half-turned toward Mei Lin]
+Not now, Captain. I've got a detective who just came out of an unmonitored room with a suspect and no backup on record. That's the fire.
+
+[CAPTAIN_DAVID_SUN | style: masking the drop in his stomach]
+It's a maintenance flag. Happens on old circuits. I'll have someone look at it in the morning.
+
+[NARRATOR]
+He says it evenly. Nothing in his voice admits that he already knows exactly which circuit, and exactly whose code opens it.
+
+[DET_MEI_LIN | style: hollowed out, still catching her breath]
+Kai. I need you to hear me out before —
+
+[DET_KAI_YANG | style: quiet, not unkind, but final]
+Not here. Not with him still standing ten feet from you.
+
+[SFX: a radio handset crackling louder, a dispatcher's voice bleeding through]
+
+[NARRATOR]
+Across the bullpen, a dispatcher's call cuts through — a warehouse detail, harbor district, one of the sites named in Zoe Han's story. Reopened for review, effective tonight.
+
+[CAPTAIN_DAVID_SUN | style: the mask finally slipping, just for a breath]
+Reopened. Already.
+
+[NARRATOR]
+He says it to no one. Three years he made sure that container never got a second look. Now it has one, on a clock he doesn't own anymore.
+
+[DET_KAI_YANG | style: still entirely fixed on Mei Lin, oblivious to what just passed the captain's face]
+Whatever's wrong with that door circuit, it's not the story tonight. You are.
+
+[NARRATOR]
+He doesn't hear the dispatcher. He doesn't see Sun's hand tighten on the doorframe. Two men standing three feet apart, each certain he understands the crisis in front of him — and neither one holding the whole shape of it.
+
+The door has finally been forced open. Outside these walls, the story already unraveling Captain Sun is running faster than he can chase it. And somewhere behind that closing door, Jonas Voss has never once looked less like a man losing control of the room.
+
