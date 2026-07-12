@@ -43,7 +43,8 @@ Skript-Generierung.
 ## Kommandos
 
 ```bash
-# 1. Serie erzeugen (schreibt data/series/<slug>/episodes.json via Claude CLI)
+# 1. Serie erzeugen (scaffoldet den MWP-Workspace data/series/<slug>/ und
+#    schreibt stages/01_concept/output/episodes.json via Claude CLI)
 python3 -m fabrik.cli.create_series "Topic" [--episodes N] [--minutes M] [--locations L] [--template T] [--no-review] [--fix]
 # 1b. Fertigen Text importieren statt erfinden (nur narration)
 python3 -m fabrik.cli.import_story <ordner-oder-datei> "Titel" [--no-summary]

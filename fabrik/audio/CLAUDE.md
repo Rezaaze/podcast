@@ -7,7 +7,8 @@ würde den No-venv-Pfad der Skript-Generierung brechen.
 
 podcast_maker.py/batch.py chunken jeden Skript-Part via
 fabrik/core/textproc.py, schicken Chunks ans TTS-Backend, checkpointen jeden
-gerenderten Chunk als WAV (`output/.checkpoints/`, resumierbar wie die
+gerenderten Chunk als WAV (`stages/03_audio/output/.checkpoints/`,
+resumierbar wie die
 Skript-Generierung), dann LUFS-Mastering und Merge zu finaler MP3 mit ID3.
 
 - Drei Backends (`audio.backend` in episodes.json): `rest` (Qwen3-TTS-MLX,

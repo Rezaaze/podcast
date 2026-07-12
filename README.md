@@ -92,19 +92,25 @@ templates/
   language_course/       Prompts für Sprachkurs-Hörspiele (HSK-Niveaus)
   crime_drama/           Prompts für Multi-Voice-Krimi mit Fallakten
   soap_opera/            Prompts für Ensemble-Seifenoper mit parallelen Strängen
-data/series/<slug>/           eine Serie = ein Ordner (beliebig viele parallel)
-  episodes.json          Single Source of Truth der Serie
-  scripts/               generierte Skripte (ep1.txt, ep1_META.txt, ...)
-  output/                MP3s, Checkpoints, SFX-Cue-Sheets, Sprecher-Timelines
-                         (*_SPEAKERS.json/.txt), Orte-Timeline (*_LOCATIONS.json),
-                         Untertitel (*.srt), Kapitel
-                         (ANTHOLOGY_COMPLETE_CHAPTERS.json), UPLOAD_INDEX.md
-  characters/            Charakter-Porträts (ROLLE.png, + ROLLE_<emotion>.png) + PROMPTS.txt
-  locations/             Orts-Hintergrundbilder (ORT_KEY.png) + PROMPTS.txt
-                         (nur bei Serien mit `locations`-Mapping, z.B. soap_opera)
-  intro.mp3 (optional)   Jingle am Episodenanfang, automatisch eingesetzt
-  outro.mp3 (optional)   Jingle am Episodenende
-  transition.mp3 (opt.)  Szenenwechsel-Sting statt purer Stille zwischen Parts
+data/series/<slug>/           eine Serie = ein MWP-Workspace (beliebig viele parallel;
+                         Ordnerstruktur = Pipeline, siehe docs/mwp-umbau-plan.md)
+  CLAUDE.md / CONTEXT.md Workspace-Identität + Stage-Routing
+  stages/01_concept/     CONTEXT.md (Vertrag) + output/episodes.json
+                         (Single Source of Truth der Serie)
+  stages/02_scripts/     CONTEXT.md + output/: generierte Skripte
+                         (ep1.txt, ep1_META.txt, BEATS/REVIEWs)
+  stages/03_audio/       CONTEXT.md + output/: MP3s, Checkpoints, SFX-Cue-Sheets,
+                         Sprecher-Timelines (*_SPEAKERS.json/.txt), Orte-Timeline
+                         (*_LOCATIONS.json), Untertitel (*.srt), Kapitel,
+                         UPLOAD_INDEX.md
+  stages/04_visuals/     CONTEXT.md + output/characters/ (ROLLE.png +
+                         ROLLE_<emotion>.png + PROMPTS.txt), output/locations/
+                         (ORT_KEY.png; nur bei Serien mit `locations`-Mapping)
+  references/            PROMPT_TEMPLATE.md — die pro Serie editierbare Kopie
+                         des Skript-Prompts (Master unter templates/ bleibt
+                         unberührt) + EPISODES_CREATOR_PROMPT.md (Doku)
+  assets/                intro.mp3 / outro.mp3 / transition.mp3 (optional:
+                         Jingles + Szenenwechsel-Sting, automatisch eingesetzt)
 data/series/LATEST            Slug der zuletzt angelegten Serie (Standard für alle CLIs)
 webui/                   lokale Steuer-Oberfläche
 cloud/                   vast.ai-GPU-Automation (siehe cloud/README.md)
@@ -116,9 +122,9 @@ Alle CLIs akzeptieren `--series <slug>`; ohne Flag gilt `data/series/LATEST`
 ## Workflow
 
 ```
-fabrik.cli.create_series "Thema" [--template language_course]  ──▶ data/series/<slug>/episodes.json
-fabrik.cli.generate_episode all        ──(Claude)──▶ scripts/ep1.txt, ep2.txt, ...
-fabrik.cli.podcast_maker ep1.txt       ──(Qwen3-TTS)──▶ output/Ep1_FULL_EPISODE.mp3 (+ Ep1_SFX_CUES.txt)
+fabrik.cli.create_series "Thema" [--template language_course]  ──▶ stages/01_concept/output/episodes.json
+fabrik.cli.generate_episode all        ──(Claude)──▶ stages/02_scripts/output/ep1.txt, ...
+fabrik.cli.podcast_maker ep1.txt       ──(Qwen3-TTS)──▶ stages/03_audio/output/Ep1_FULL_EPISODE.mp3
 fabrik.cli.batch                       ──▶ alle Episoden + ANTHOLOGY_COMPLETE.mp3
 ```
 
@@ -161,7 +167,7 @@ fabrik.cli.batch                       ──▶ alle Episoden + ANTHOLOGY_COMPL
 
    ```bash
    python3 -m fabrik.cli.generate_episode check    # nur episodes.json validieren
-   python3 -m fabrik.cli.generate_episode 1        # Episode 1 → scripts/<prefix>1.txt
+   python3 -m fabrik.cli.generate_episode 1        # Episode 1 → stages/02_scripts/output/<prefix>1.txt
    python3 -m fabrik.cli.generate_episode all      # alle Episoden (parallel, --jobs N),
                                         # startet danach automatisch batch.py
    ```

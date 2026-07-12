@@ -8,7 +8,7 @@ fehler werden wörtlich ins nächste Prompt zurückgefüttert;
 `ESCALATION_FROM_ATTEMPT=2` verschärft die Formulierung im letzten Versuch:
 "attempt N und IMMER NOCH falsch, füge einen konkreten Beat hinzu, schreib
 nicht nur längere Sätze"). Jede fertige Section wird sofort in
-`scripts/<prefix>N.txt` geschrieben — `--- PART k ---`-Marker machen
+`stages/02_scripts/output/<prefix>N.txt` geschrieben — `--- PART k ---`-Marker machen
 Teildateien resumierbar: ein Re-Run überspringt Sections, deren Parts schon
 existieren.
 
@@ -97,7 +97,7 @@ Volle Design-Begründung: `docs/beat-layer-design.md`.
   `case`-Block (`build_case_file_block()`, unverändert wiederverwendet) +
   Beats-Text der *vorherigen Episode*, liefert 3–6 Beats pro Szene in
   `--- SCENE N ---`-Blöcken → `parse_beats()` →
-  `scripts/<prefix>N_BEATS.txt`.
+  `stages/02_scripts/output/<prefix>N_BEATS.txt`.
 - Resume = einfacher Existenz-Check (kein inkrementelles Schema wie bei
   PART-Dateien — ein Call erzeugt die ganze Datei, nichts zu resumen).
 - Fehlgeschlagener/unparsebar Beat-Call ist NICHT fatal: `None`, keine
