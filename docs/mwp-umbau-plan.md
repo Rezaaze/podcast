@@ -116,16 +116,17 @@ Abhängigkeiten stehen dabei; innerhalb einer Phase gilt die Reihenfolge.
 
 ### Phase 0 — Absichern (sofort, gefahrlos bei laufendem Render)
 
-- [ ] **T0.1 Branch + Sicherung.** `git add -A && git commit` des aktuellen
-      Stands auf `main` (da sind ungetrackte Änderungen), dann Branch
-      `mwp-umbau` anlegen. Der gesamte Umbau passiert auf dem Branch.
-- [ ] **T0.2 Render-Wächter definieren.** Kriterium schriftlich festhalten,
-      wann Phase 3 starten darf: kein laufender `batch.py`/`podcast_maker`-
-      Prozess UND chain_of_custody-Output vollständig. Bis dahin: keine
-      Änderung an `fabrik/core/paths.py`, `fabrik/audio/`, `fabrik/cli/`.
-- [ ] **T0.3 Alt-Serien inventarisieren.** Liste aller `data/series/*`-Ordner
-      mit Status (fertig gerendert? Skripte vorhanden?) — Grundlage für die
-      Verschiebung nach `data/archive/pre_mwp/` in T6.3.
+- [x] **T0.1 Branch + Sicherung.** Erledigt 13.07.: Snapshot-Commit
+      `24221db` auf `main`, Branch `mwp-umbau` angelegt — der gesamte
+      Umbau passiert auf dem Branch.
+- [x] **T0.2 Render-Wächter definieren.** Erledigt 13.07.: Kriterium war
+      "kein laufender `batch.py`/`podcast_maker`-Prozess UND
+      chain_of_custody vollständig" — beides geprüft und ERFÜLLT (10/10
+      MP3s, keine offenen Checkpoints, kein Prozess). **Die Phase-3-Sperre
+      ist damit aufgehoben.**
+- [x] **T0.3 Alt-Serien inventarisieren.** Erledigt 13.07.:
+      `docs/pre-mwp-serien-inventur.md` — 3 fertige soap_opera-Serien,
+      2 unfertige, 1 leerer Test-Rest.
 
 ### Phase 1 — Repo-Kontext schichten (Scope B; gefahrlos, reine .md-Arbeit)
 
