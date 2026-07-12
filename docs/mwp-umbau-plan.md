@@ -149,7 +149,11 @@ Abhängigkeiten stehen dabei; innerhalb einer Phase gilt die Reihenfolge.
 
 ### Phase 2 — Workspace-Design (Scope A, noch kein Code)
 
-- [ ] **T2.1 Stage-Verträge schreiben.** Vier CONTEXT.md-Vorlagen (Inputs /
+- [x] **T2.1 Stage-Verträge schreiben.** Erledigt 13.07.:
+      `templates/_workspace/` mit CLAUDE.md, CONTEXT.md und vier
+      stage_NN_CONTEXT.md (Inputs/Process/Outputs + Review-Gate-Hinweis,
+      Platzhalter {{SLUG}}/{{TEMPLATE}}/{{MODE}}/{{SERIES_TITLE}}/
+      {{EPISODES_TOTAL}}/{{CREATED}}). Ursprünglicher Task-Text: Vier CONTEXT.md-Vorlagen (Inputs /
       Process / Outputs im Format des Papers, Abschnitt 3.3) + Layer-0/1-
       Vorlagen für den Workspace-Root. Ablage als neue Dateien
       `templates/_workspace/{CLAUDE.md,CONTEXT.md,stage_01…04_CONTEXT.md}`
@@ -157,14 +161,19 @@ Abhängigkeiten stehen dabei; innerhalb einer Phase gilt die Reihenfolge.
       Wichtig: die Verträge beschreiben auch die MECHANIK ehrlich ("dieser
       Output wird von `python3 -m fabrik.cli.generate_episode` erzeugt"),
       damit sie als Doku für Menschen taugen.
-- [ ] **T2.2 Pfad-Inventur (die eigentliche Umbau-Landkarte).** Grep über
+- [x] **T2.2 Pfad-Inventur.** Erledigt 13.07.: `docs/mwp-pfad-inventur.md`.
+      Zentraler Befund: fast alles läuft durch `paths.py::Series` — der
+      Umbau ist kleiner als befürchtet. Lolfi hat 3 relevante
+      Konsum-Stellen. Ursprünglicher Task-Text: Grep über
       `fabrik/`, `webui/`, `~/Downloads/Lolfi/` nach allen Vorkommen von
       `episodes.json`, `scripts/`, `output/`, `characters/`, `locations/`,
       `intro.mp3`, `.checkpoints`, `.voices_manifest` etc. Ergebnis: Tabelle
       Datei → Funktion → alter Pfad → neuer Pfad in
       `docs/mwp-pfad-inventur.md`. **Dieses Dokument ist die Checkliste für
       Phase 3–5**; nichts wird umgebaut, was hier nicht steht.
-- [ ] **T2.3 Review-Gate-Konzept festschreiben** (klein halten): Gates =
+- [x] **T2.3 Review-Gate-Konzept festschreiben.** Erledigt 13.07.: steht in
+      den Stage-Verträgen (Abschnitt "Review-Gate danach" je Stage) + in
+      `templates/_workspace/CONTEXT.md`. Ursprünglicher Task-Text: (klein halten): Gates =
       die vorhandenen WebUI-Schritt-Karten + "Ordner öffnen"-Links pro
       Stage-Output. Kein Approval-Mechanismus, kein Marker-File — der
       Mensch editiert Dateien in `stages/NN_*/output/`, die nächste Stage
