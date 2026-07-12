@@ -75,13 +75,13 @@ kennen — dann kann es nicht wieder divergieren.
 
 ## 4. Lolfi (`~/Downloads/Lolfi`, T5.1) — separates Repo!
 
-- [ ] `lofi_system.py:~58` — Auflösung "output/-Ordner der aktiven Serie"
+- [x] `lofi_system.py:~58` — Auflösung "output/-Ordner der aktiven Serie"
       (data/series/LATEST → `<slug>/output/`) → `stages/03_audio/output/`
-- [ ] `lofi_system.py:~101` — `characters/`-Ordner der Serie
+- [x] `lofi_system.py:~101` — `characters/`-Ordner der Serie
       → `stages/04_visuals/output/characters/`
-- [ ] `lofi_system.py:~294` — `series/<slug>/locations/<ORT_KEY>.png`
+- [x] `lofi_system.py:~294` — `series/<slug>/locations/<ORT_KEY>.png`
       → `stages/04_visuals/output/locations/`
-- [ ] `generate_prompts.py` — 4 Fundstellen prüfen (vermutlich nur
+- [x] `generate_prompts.py` — 4 Fundstellen prüfen (vermutlich nur
       Doku/Kommentare, sonst anpassen)
 - Dateinamens-Konventionen (`*_FULL_EPISODE.mp3`, `*_SPEAKERS.json`,
   `*_SUBS.json`, `*_LOCATIONS.json`, `*_CHAPTERS.json`) bleiben

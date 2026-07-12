@@ -257,7 +257,12 @@ Smoke-Test existiert. Test-Vehikel: eine Mini-Serie (soap_opera, 1 Episode,
 
 ### Phase 5 — Lolfi anbinden (separates Repo!)
 
-- [ ] **T5.1 Pfad-Inventur-Einträge für `~/Downloads/Lolfi/lofi_system.py`**
+- [x] **T5.1 Lolfi umgestellt.** Erledigt 13.07. (Lolfi-Commit f7c2b3f):
+      Serien-Output → stages/03_audio/output, Porträts/Orte →
+      stages/04_visuals/output/*; Alt-Layout bewusst als FALLBACK
+      behalten, damit pre-MWP-Serien (z. B. chain_of_custody) weiter
+      gerendert werden können. Video-Rendern eines mwp_smoke-Videos
+      steht noch aus (Teil von T6.1). Ursprünglicher Task-Text:
       umsetzen: `characters/<ROLE>.png`, `locations/`, SPEAKERS/LOCATIONS/
       SUBS/CHAPTERS-JSONs, Episoden-MP3s — alle auf `stages/03_audio/output/`
       bzw. `stages/04_visuals/output/`. Test: ein `mwp_smoke`-Video rendern.
