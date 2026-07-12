@@ -33,7 +33,7 @@ import subprocess
 import sys
 from typing import Optional
 
-from fabrik.core import config, history, paths
+from fabrik.core import config, history, paths, workspace
 from fabrik.core.claude_cli import describe_json_error, parse_json_response, run_claude_process
 
 TIMEOUT_SECONDS = 600
@@ -794,10 +794,14 @@ def main():
             print("✅  Inhalts-Review: keine Auffälligkeiten.")
 
     slug = unique_slug(data.get("series_title", "serie"))
-    series = paths.Series(slug).ensure_dirs()
+    series = paths.Series(slug)
+    scaffolded = workspace.scaffold_workspace(series, data, args.template)
     with open(series.episodes_file, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
     paths.write_latest(slug)
+    if scaffolded:
+        print(f"    Workspace-Struktur angelegt ({len(scaffolded)} Kontext-/Referenz-Dateien, "
+              f"Stage-Verträge unter stages/*/CONTEXT.md)")
 
     figures = ", ".join(ep["figure"] for ep in data["episodes"])
     print(f"\n✅  Neue Serie angelegt: data/series/{slug}/  (\"{data['series_title']}\")")

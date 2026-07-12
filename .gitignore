@@ -5,8 +5,15 @@ __pycache__/
 .DS_Store
 
 # data/ = alles, was die Pipeline erzeugt bzw. an großen Assets braucht.
-# Getrackt bleiben nur die kleinen Serien-Definitionen/Skripte — Audio,
-# Checkpoints, Archiv und Referenzaufnahmen nicht.
+# Getrackt bleiben nur die kleinen Serien-Definitionen/Skripte/Verträge —
+# Audio, Checkpoints, Bilder, Archiv und Referenzaufnahmen nicht.
+# MWP-Layout: Stage-Outputs sind ignoriert, AUSSER episodes.json (die
+# Serien-Definition, Output von Stage 01) und den Skript-Textdateien
+# (Output von Stage 02) — Negativ-Patterns, Reihenfolge zählt.
+data/series/*/stages/*/output/*
+!data/series/*/stages/01_concept/output/episodes.json
+!data/series/*/stages/02_scripts/output/*.txt
+# Alt-Layout (pre-MWP-Serien, bis sie nach data/archive/pre_mwp/ wandern)
 data/series/*/output/
 data/voices/*.wav
 data/voices/*.mp3

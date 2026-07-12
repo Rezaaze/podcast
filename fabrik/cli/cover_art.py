@@ -44,7 +44,7 @@ _ILLEGAL_FILENAME_CHARS = re.compile(r'[/\\:*?"<>|]')
 
 
 def cover_file(series):
-    return os.path.join(series.root, COVER_FILENAME)
+    return os.path.join(series.visuals_dir, COVER_FILENAME)
 
 
 def sanitize_filename(name):

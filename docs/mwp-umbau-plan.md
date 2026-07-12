@@ -187,24 +187,37 @@ Reihenfolge so gewählt, dass nach jedem Task ein lauffähiger Zustand mit
 Smoke-Test existiert. Test-Vehikel: eine Mini-Serie (soap_opera, 1 Episode,
 ~5 Minuten) namens `mwp_smoke`, nach jedem Task neu erzeugt/weitergeführt.
 
-- [ ] **T3.1 `fabrik/core/paths.py` auf neues Layout.** Neue Funktionen
+- [x] **T3.1 `fabrik/core/paths.py` auf neues Layout.** Erledigt 13.07.
+      (inkl. der 4 Vorbei-Join-Stellen aus Inventur §2: character_prompts,
+      location_prompts, find_audio_asset→assets/, cover_art→04_visuals).
+      Ursprünglicher Task-Text: Neue Funktionen
       (`stage_dir(slug, n)`, `concept_output()`, `scripts_dir()` →
       `stages/02_scripts/output/`, …), alte Pfad-Helfer ersetzen — Aufrufer
       kompilieren weiter, weil nur die Rückgabepfade wechseln. Hier NUR
       paths.py + `fabrik/core/config.py` (episodes.json-Fundort), noch
       keine Verhaltensänderung sonst.
-- [ ] **T3.2 `create_series.py` scaffoldet den Workspace.** Nach
+- [x] **T3.2 `create_series.py` scaffoldet den Workspace.** Erledigt 13.07.
+      via neuem stdlib-Modul `fabrik/core/workspace.py::scaffold_workspace`
+      (idempotent, überschreibt nie). Smoke-Test `mwp_smoke` ✓,
+      .gitignore-Negativ-Pattern provisorisch gesetzt und via
+      `git check-ignore` verifiziert. Ursprünglicher Task-Text: Nach
       erfolgreicher Generierung: `stages/`-Baum anlegen, CONTEXT.md-Dateien
       aus `templates/_workspace/` befüllen (T2.1), `PROMPT_TEMPLATE.md` +
       `EPISODES_CREATOR_PROMPT.md` nach `references/` kopieren,
       episodes.json nach `stages/01_concept/output/`. Smoke-Test:
       `mwp_smoke` erzeugen, Baum von Hand prüfen.
-- [ ] **T3.3 `script_writer.py` liest aus dem Workspace.** Prompt-Template
+- [x] **T3.3 `script_writer.py` liest aus dem Workspace.** Erledigt 13.07.:
+      `load_template(name, series=...)` bevorzugt references/-Kopie
+      (Fallback Master + Warnung); generate_episode übergibt die Serie.
+      Skript-Ablage folgt paths.py automatisch. Echte Generierung noch
+      ungetestet (braucht Claude-Call) — mit T3.5-Smoke zusammen testen.
+      Ursprünglicher Task-Text: Prompt-Template
       aus `references/PROMPT_TEMPLATE.md` statt `templates/<t>/`; Skripte,
       BEATS, REVIEWs nach `stages/02_scripts/output/`. Smoke-Test: Episode 1
       von `mwp_smoke` generieren, Resume-Verhalten prüfen (Datei anfassen,
       erneut laufen lassen).
-- [ ] **T3.4 `import_story.py` nachziehen** — gleiche Scaffold- und
+- [x] **T3.4 `import_story.py` nachziehen.** Erledigt 13.07.: gleiches
+      Scaffolding via workspace.scaffold_workspace. Ursprünglicher Task-Text: — gleiche Scaffold- und
       Ablage-Logik (kleiner Task, hängt nur an T3.2/T3.3).
 - [ ] **T3.5 Audio-Pipeline umziehen.** `podcast_maker.py`, `batch.py`,
       `fabrik/audio/pipeline.py`: Skript-Quelle = `stages/02_scripts/output/`,

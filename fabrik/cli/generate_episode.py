@@ -69,7 +69,7 @@ def main():
         return
 
     cfg = config.build_config(data)
-    template = script_writer.load_template(cfg["template"])
+    template = script_writer.load_template(cfg["template"], series=series)
     episodes = data["episodes"]
 
     print(f"Serie: \"{data.get('series_title', '?')}\" [{series.slug}] — {len(episodes)} Episoden")

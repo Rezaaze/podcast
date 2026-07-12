@@ -418,10 +418,10 @@ AUDIO_ASSET_EXTS = (".mp3", ".wav", ".m4a", ".flac")
 
 
 def find_audio_asset(series, stem):
-    """Optionales Audio-Asset der Serie: series/<slug>/<stem>.mp3|wav|...
+    """Optionales Audio-Asset der Serie: assets/<stem>.mp3|wav|...
     (intro, outro, transition) — None, wenn nicht vorhanden."""
     for ext in AUDIO_ASSET_EXTS:
-        candidate = os.path.join(series.root, f"{stem}{ext}")
+        candidate = os.path.join(series.assets_dir, f"{stem}{ext}")
         if os.path.exists(candidate):
             return candidate
     return None

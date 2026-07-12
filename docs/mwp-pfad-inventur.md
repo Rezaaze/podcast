@@ -17,31 +17,31 @@ eine Handvoll Join-Stellen.
 
 ## 1. Zentral: fabrik/core/paths.py (T3.1) — eine Änderung wirkt überall
 
-- [ ] `Series.__init__`: `episodes_file` → `stages/01_concept/output/episodes.json`
-- [ ] `Series.__init__`: `scripts_dir` → `stages/02_scripts/output`
-- [ ] `Series.__init__`: `output_dir` → `stages/03_audio/output`
+- [x] `Series.__init__`: `episodes_file` → `stages/01_concept/output/episodes.json`
+- [x] `Series.__init__`: `scripts_dir` → `stages/02_scripts/output`
+- [x] `Series.__init__`: `output_dir` → `stages/03_audio/output`
       (`checkpoint_dir`/`cues_dir` hängen daran und folgen automatisch)
-- [ ] `Series.__init__`: `anthology_meta_file` (liegt in scripts_dir, folgt)
-- [ ] NEU: `visuals_dir`, `characters_dir`, `locations_dir`,
+- [x] `Series.__init__`: `anthology_meta_file` (liegt in scripts_dir, folgt)
+- [x] NEU: `visuals_dir`, `characters_dir`, `locations_dir`,
       `references_dir`, `assets_dir`, `stage_context_file(n)`
-- [ ] `ensure_dirs()`: legt den ganzen `stages/`-Baum an
-- [ ] `list_series()`: prüft `episodes.json` am NEUEN Ort
-- [ ] `Series.root`-Konsumenten prüfen (grep `series.root`)
+- [x] `ensure_dirs()`: legt den ganzen `stages/`-Baum an
+- [x] `list_series()`: prüft `episodes.json` am NEUEN Ort
+- [x] `Series.root`-Konsumenten prüfen (grep `series.root`)
 
 ## 2. fabrik/ — Stellen, die an paths.py vorbei joinen
 
-- [ ] `fabrik/cli/character_prompts.py:144` — `join(series.root, "characters")`
+- [x] `fabrik/cli/character_prompts.py:144` — `join(series.root, "characters")`
       → `series.characters_dir`
-- [ ] `fabrik/cli/location_prompts.py:43` — `join(series.root, "locations")`
+- [x] `fabrik/cli/location_prompts.py:43` — `join(series.root, "locations")`
       → `series.locations_dir`
-- [ ] `fabrik/cli/podcast_maker.py:~901` — `find_audio_asset(series, ...)`
+- [x] `fabrik/cli/podcast_maker.py:~901` — `find_audio_asset(series, ...)`
       (sucht intro/outro/transition; Quelle prüfen) → `series.assets_dir`
-- [ ] `fabrik/cli/create_series.py` — Scaffolding NEU (T3.2): stages-Baum,
+- [x] `fabrik/cli/create_series.py` — Scaffolding NEU (T3.2): stages-Baum,
       CONTEXT.md-Befüllung, Template-Kopie nach `references/`
-- [ ] `fabrik/cli/import_story.py` — gleiches Scaffolding (T3.4)
-- [ ] `fabrik/writing/script_writer.py` — Prompt-Quelle: `template_dir(name)`
+- [x] `fabrik/cli/import_story.py` — gleiches Scaffolding (T3.4)
+- [x] `fabrik/writing/script_writer.py` — Prompt-Quelle: `template_dir(name)`
       → `series.references_dir/PROMPT_TEMPLATE.md` (T3.3)
-- [ ] `fabrik/cli/cover_art.py` — Ablageort prüfen → 04_visuals
+- [x] `fabrik/cli/cover_art.py` — Ablageort prüfen → 04_visuals
 
 Bereits sauber (folgen paths.py automatisch, nur nachtesten):
 `podcast_maker.py::voices_manifest_path` (output_dir), Cue-/Subs-Caches

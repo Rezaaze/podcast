@@ -22,22 +22,54 @@ FIGURE_HISTORY_FILE = os.path.join(DATA_DIR, "figure_history.json")
 LATEST_FILE = os.path.join(SERIES_ROOT, "LATEST")
 
 
+#  MWP-Workspace-Layout (siehe docs/mwp-umbau-plan.md): nummerierte Stages,
+#  jede mit CONTEXT.md-Vertrag und eigenem output/. Reihenfolge = Nummerierung.
+STAGE_CONCEPT = os.path.join("stages", "01_concept")
+STAGE_SCRIPTS = os.path.join("stages", "02_scripts")
+STAGE_AUDIO = os.path.join("stages", "03_audio")
+STAGE_VISUALS = os.path.join("stages", "04_visuals")
+ALL_STAGES = (STAGE_CONCEPT, STAGE_SCRIPTS, STAGE_AUDIO, STAGE_VISUALS)
+
+# Relativpfad der Serien-Definition innerhalb eines Workspace — auch von
+# list_series() und dem WebUI genutzt, damit das Layout nur hier lebt.
+EPISODES_RELPATH = os.path.join(STAGE_CONCEPT, "output", "episodes.json")
+
+
 class Series:
-    """Alle Pfade einer Serie an einem Ort."""
+    """Alle Pfade einer Serie an einem Ort (MWP-Workspace-Layout)."""
 
     def __init__(self, slug: str):
         self.slug = slug
         self.root = os.path.join(SERIES_ROOT, slug)
-        self.episodes_file = os.path.join(self.root, "episodes.json")
-        self.scripts_dir = os.path.join(self.root, "scripts")
-        self.output_dir = os.path.join(self.root, "output")
+        self.episodes_file = os.path.join(self.root, EPISODES_RELPATH)
+        self.scripts_dir = os.path.join(self.root, STAGE_SCRIPTS, "output")
+        self.output_dir = os.path.join(self.root, STAGE_AUDIO, "output")
+        self.visuals_dir = os.path.join(self.root, STAGE_VISUALS, "output")
+        self.characters_dir = os.path.join(self.visuals_dir, "characters")
+        self.locations_dir = os.path.join(self.visuals_dir, "locations")
+        self.references_dir = os.path.join(self.root, "references")
+        self.assets_dir = os.path.join(self.root, "assets")
         self.checkpoint_dir = os.path.join(self.output_dir, ".checkpoints")
         self.cues_dir = os.path.join(self.output_dir, ".cues")
         self.anthology_meta_file = os.path.join(self.scripts_dir, "ANTHOLOGY_META.txt")
 
+    def stage_dir(self, stage: str) -> str:
+        """z. B. stage_dir(STAGE_AUDIO) -> <root>/stages/03_audio"""
+        return os.path.join(self.root, stage)
+
+    def stage_context_file(self, stage: str) -> str:
+        return os.path.join(self.root, stage, "CONTEXT.md")
+
+    def prompt_template_file(self) -> str:
+        """Das Skript-Prompt DIESER Serie (bei Erstellung aus templates/<t>/
+        kopiert) — Stage 02 liest hier, nicht mehr aus templates/."""
+        return os.path.join(self.references_dir, "PROMPT_TEMPLATE.md")
+
     def ensure_dirs(self):
-        os.makedirs(self.scripts_dir, exist_ok=True)
-        os.makedirs(self.output_dir, exist_ok=True)
+        for stage in ALL_STAGES:
+            os.makedirs(os.path.join(self.root, stage, "output"), exist_ok=True)
+        os.makedirs(self.references_dir, exist_ok=True)
+        os.makedirs(self.assets_dir, exist_ok=True)
         return self
 
     def script_file(self, prefix: str, episode_num: int) -> str:
@@ -65,7 +97,7 @@ def list_series() -> list[str]:
         return []
     return sorted(
         d for d in os.listdir(SERIES_ROOT)
-        if os.path.exists(os.path.join(SERIES_ROOT, d, "episodes.json"))
+        if os.path.exists(os.path.join(SERIES_ROOT, d, EPISODES_RELPATH))
     )
 
 

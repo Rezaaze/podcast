@@ -141,7 +141,7 @@ def find_used_emotions(series, roles):
 
 
 def characters_dir(series):
-    return os.path.join(series.root, "characters")
+    return series.characters_dir
 
 
 def prompts_file(series):

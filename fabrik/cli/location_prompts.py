@@ -40,7 +40,7 @@ IMAGE_SIZE = "1536x1024"  # Querformat -- wird als Video-Hintergrund verwendet, 
 
 
 def locations_dir(series):
-    return os.path.join(series.root, "locations")
+    return series.locations_dir
 
 
 def prompts_file(series):

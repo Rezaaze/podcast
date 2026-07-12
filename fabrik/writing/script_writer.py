@@ -54,8 +54,19 @@ _NOTE_RE = re.compile(r'^\s*\[NOTE:\s*(.+)\]\s*$', re.MULTILINE | re.IGNORECASE)
 # den Match, siehe identische Begründung in fabrik/script_parser.py._TAG_RE.
 
 
-def load_template(template_name: str) -> str:
+def load_template(template_name: str, series=None) -> str:
+    """Skript-Prompt laden — bevorzugt die Serien-Kopie unter references/
+    (MWP: die Serie besitzt ihr eigenes, editierbares Prompt; Master-
+    Änderungen unter templates/ erreichen nur NEUE Serien). Fallback aufs
+    Master-Template mit Warnung, falls die Kopie fehlt."""
     template_file = os.path.join(template_dir(template_name), "PROMPT_TEMPLATE.md")
+    if series is not None:
+        series_copy = series.prompt_template_file()
+        if os.path.exists(series_copy):
+            template_file = series_copy
+        else:
+            print(f"⚠️  Kein references/PROMPT_TEMPLATE.md in Serie '{series.slug}' — "
+                  f"nutze Master-Template templates/{template_name}/ (Workspace unvollständig?)")
     try:
         with open(template_file, "r", encoding="utf-8") as f:
             content = f.read()
