@@ -219,14 +219,21 @@ Smoke-Test existiert. Test-Vehikel: eine Mini-Serie (soap_opera, 1 Episode,
 - [x] **T3.4 `import_story.py` nachziehen.** Erledigt 13.07.: gleiches
       Scaffolding via workspace.scaffold_workspace. Ursprünglicher Task-Text: — gleiche Scaffold- und
       Ablage-Logik (kleiner Task, hängt nur an T3.2/T3.3).
-- [ ] **T3.5 Audio-Pipeline umziehen.** `podcast_maker.py`, `batch.py`,
+- [x] **T3.5 Audio-Pipeline.** Kein Code nötig (folgte paths.py); Laufzeit-
+      verifiziert 13.07. mit the_wildrose_inheritance Ep1: MP3 + SRT +
+      SPEAKERS/LOCATIONS/SFX/PART_OFFSETS/.voices_manifest alle korrekt in
+      stages/03_audio/output/. Bonus: der Voice-Manifest-Guard bewährte
+      sich live (nicht auflösbare Stimme 'Chelsie' → Abbruch VOR Manifest-
+      Write, kein Phantom-Baseline). Ursprünglicher Task-Text: `podcast_maker.py`, `batch.py`,
       `fabrik/audio/pipeline.py`: Skript-Quelle = `stages/02_scripts/output/`,
       alles Gerenderte (MP3, SRT, SPEAKERS, LOCATIONS, CHAPTERS,
       UPLOAD_INDEX, `.checkpoints/`, `.cues/`, `.voices_manifest.json`,
       `_PART_OFFSETS.json`) nach `stages/03_audio/output/`; `intro.mp3`
       etc. aus `assets/`. Smoke-Test: `mwp_smoke` vertonen (lokaler TTS),
       Checkpoint-Resume prüfen (Prozess mittendrin killen, neu starten).
-- [ ] **T3.6 Visual-CLIs umziehen.** `character_prompts.py`,
+- [x] **T3.6 Visual-CLIs.** Pfade bereits in T3.1 umgestellt; prompts-only-
+      Lauf verifiziert 13.07. (PROMPTS.txt in stages/04_visuals/output/
+      characters/). Ursprünglicher Task-Text: `character_prompts.py`,
       `location_prompts.py`, `cover_art.py` → `stages/04_visuals/output/`.
       Smoke-Test: Prompts-only-Lauf (ohne OPENAI_API_KEY).
 - [x] **T3.7 Restgrep.** Erledigt 13.07.: einziger verbleibender Treffer
@@ -269,7 +276,17 @@ Smoke-Test existiert. Test-Vehikel: eine Mini-Serie (soap_opera, 1 Episode,
 
 ### Phase 6 — Abschluss
 
-- [ ] **T6.1 End-to-End:** neue echte Serie (soap_opera, normale Länge)
+- [x] **T6.1 End-to-End.** Erledigt 13.07. (per CLI statt WebUI-Durchklick):
+      Serie 'the_wildrose_inheritance' (soap_opera, 2 Ep. à ~6 Min.)
+      erstellt → Workspace korrekt gescaffoldet → Ep1-Skript generiert
+      (inkl. Episoden-Review, sauber) → vertont (7-Min-MP3 in 3m50s, TTS
+      via Pinokio-Autostart/-stopp) → Porträt-Prompts (Stage 04) → Lolfi-
+      Video gerendert (121 MB, Audio/Locations/Charaktere-Lookup über die
+      neuen Stage-Pfade). Dabei gefundene Fixes: Stimme 'Chelsie' existiert
+      nicht auf dem Server (separater Task-Chip) und Lolfis find_meta_file
+      kannte das Stage-Layout nicht (gefixt, Lolfi-Commit 8bb8bd3).
+      Ep2 wurde bewusst nicht generiert (Kosten) — Serie ist regulär
+      weiterverwendbar. Ursprünglicher Task-Text: neue echte Serie (soap_opera, normale Länge)
       komplett durchziehen: erstellen → Skripte (--fix) → vertonen →
       Visuals → Lolfi-Video. Alles über WebUI.
 - [ ] **T6.2 Alt-Serien wegräumen:** alle pre-MWP-Ordner (Inventur T0.3)

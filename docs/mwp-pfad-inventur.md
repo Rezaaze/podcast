@@ -93,7 +93,7 @@ kennen — dann kann es nicht wieder divergieren.
       ignorieren, ABER `!data/series/*/stages/01_concept/output/episodes.json`
       (Negativ-Pattern, sonst verschwinden Serien-Definitionen aus Git).
       Provisorisch direkt nach T3.2 setzen, final in T6.3.
-- [ ] `README.md` + Root-`CLAUDE.md` + Bereichs-CLAUDE.md — Pfadangaben
+- [x] `README.md` + Root-`CLAUDE.md` + Bereichs-CLAUDE.md — Pfadangaben
       aktualisieren (T6.3)
 - [x] `webui/prompt_blocks.py::build_series_prompt_block` — erwähnt
       Zielpfade im manuellen Copy-Block? Prüfen.
