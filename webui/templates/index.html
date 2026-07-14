@@ -303,6 +303,29 @@
     <ul id="lolfi-renders-list"></ul>
   </div>
 
+  <div class="step" id="lolfi-step-5" data-step="5">
+    <div class="step-head">
+      <span class="step-badge" id="lolfi-step-5-badge">5</span>
+      <h2>Teaser-Clips für TikTok/Instagram (9:16)</h2>
+    </div>
+    <p class="hint">Drei Schritte: <b>1.</b> Claude wählt pro Episode 1–3 Highlight-Momente
+      (30–90s) und schreibt sie als <code>&lt;Episode&gt;_HIGHLIGHTS.json</code> neben die MP3.
+      <b>2.</b> Optional die JSON von Hand prüfen/editieren (Zeiten, Hook-Text) — „📁 Audio-Output".
+      <b>3.</b> Lolfi rendert jedes Highlight als Hochkant-Clip (1080×1920, große Untertitel)
+      nach <code>video/output/</code>.</p>
+    <div class="action-row">
+      <label for="pf-highlight-episode" class="hint" style="margin:0">Episode-Nr.:</label>
+      <input type="number" id="pf-highlight-episode" min="1" placeholder="alle" style="width:70px">
+      <button class="run-btn" data-command="pf_highlight_clips" data-param-episode="pf-highlight-episode">Highlights auswählen (Claude)</button>
+      <button class="folder-btn" data-key="pf_output">📁 Audio-Output (HIGHLIGHTS.json)</button>
+    </div>
+    <div class="action-row">
+      <button class="run-btn primary" data-command="lolfi_clips" data-param-episode="lolfi-episode-select">▶ Teaser-Clips rendern</button>
+      <button class="folder-btn" data-key="lolfi_video_output">📁 video/output</button>
+      <span class="hint" style="margin:0">nutzt die Episoden-Auswahl aus Schritt 4</span>
+    </div>
+  </div>
+
 </section>
 </main>
 

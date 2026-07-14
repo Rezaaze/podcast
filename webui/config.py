@@ -283,6 +283,18 @@ COMMANDS = {
         ],
         "kind": "line",
     },
+    "pf_highlight_clips": {
+        "label": "Teaser-Highlights auswählen (Claude)",
+        "cwd": PF_DIR,
+        "interpreter": lambda: sys.executable,
+        "module": "fabrik.cli.highlight_clips",
+        "args_schema": [
+            ("flag", "episode", "--episode"),
+            ("boolflag", "force", "--force"),
+            ("flag", "series", "--series"),
+        ],
+        "kind": "line",
+    },
     "pf_tts_start": {
         "label": "TTS starten (Pinokio/Qwen3)",
         "kind": "pyfunc",
@@ -313,6 +325,17 @@ COMMANDS = {
         "script": "lofi_system.py",
         "fixed_args": ["--all"],
         "args_schema": [],
+        "kind": "cr_steps",
+    },
+    "lolfi_clips": {
+        "label": "Teaser-Clips 9:16 rendern (lofi_clips.py)",
+        "cwd": LOLFI_DIR,
+        "interpreter": lambda: venv_python(LOLFI_DIR),
+        "script": "lofi_clips.py",
+        "fixed_args": [],
+        "args_schema": [
+            ("flag", "episode", "--episode"),
+        ],
         "kind": "cr_steps",
     },
 }

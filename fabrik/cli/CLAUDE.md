@@ -12,6 +12,7 @@ ohne wird `data/series/LATEST` genutzt (oder die einzige Serie).
 | generate_episode | Skripte schreiben (`check`/`N`/`all`) | claude CLI |
 | podcast_maker / batch | vertonen (eine/alle Episoden) | .venv + ffmpeg + TTS-Server |
 | character_prompts / location_prompts / cover_art | Bild-Prompts (+ PNGs bei OPENAI_API_KEY) | claude CLI (Bilder: stdlib urllib, kein venv) |
+| highlight_clips | Teaser-Highlights (30–90s) für 9:16-Clips auswählen | claude CLI |
 
 ## create_series.py
 
@@ -116,3 +117,24 @@ Claude nichts erfinden darf. **Nur narration-Mode.**
   Rolle (1536x1024 Landscape — Video-Hintergrund, kein Porträt), gleiche
   Key-/`--no-images`-Logik. No-op mit Meldung, wenn episodes.json keine
   `locations` hat (nur soap_opera fragt danach).
+
+## highlight_clips.py
+
+Wählt per Claude 1–3 Teaser-Highlights (30–90s) pro VERTONTER Episode und
+schreibt `<Name>_FULL_EPISODE_HIGHLIGHTS.json` nach `stages/03_audio/output/`
+— das Review-Gate vor Lolfis 9:16-Teaser-Render (`lofi_clips.py`).
+
+- Input ist die `_SUBS.json` (satzweise Cues MIT Timing), nicht das Skript.
+  Claude antwortet mit **Cue-INDEX-Bereichen** (`start_cue`/`end_cue`), nie
+  mit rohen Zeiten — die Millisekunden rechnet das CLI aus den Cue-Grenzen
+  (kein Halluzinations-Risiko, Snapping an Satzgrenzen garantiert).
+- Validierung (1–3 Clips, Dauer 20–100s, Hook ≤90 Zeichen, keine
+  Überlappung) wird bei Verstoß wörtlich ins Retry-Prompt zurückgefüttert
+  (MAX_RETRIES aus script_writer); Timeout/API-Fehler retryable.
+- Läuft auf `generation.model` (kreativ — narratives Urteil + Hook-Zeile),
+  NICHT light_model; eigener 600s-Timeout (Prompt trägt hunderte Cues).
+- Idempotent: vorhandene Datei wird nur gelistet, `--force` regeneriert.
+  Lolfi liest NUR `clips[].start_ms/end_ms/hook` — Hand-Edits an den
+  Zeiten überleben (Vertrag: Kopplungstabelle in Lolfi/CLAUDE.md).
+- `parse_meta_file` ist lokal gespiegelt (Original in fabrik/audio/
+  pipeline.py — für dieses venv-freie CLI tabu, Import-Regel).

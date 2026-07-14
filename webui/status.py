@@ -128,6 +128,18 @@ def pf_status(jobs=None, series_slug=None) -> dict:
     # Cover-Bild: ein einziges Bild pro Serie, kein Rollen-/Orte-Zähler nötig.
     cover_exists = bool(series_dir) and os.path.exists(os.path.join(series_dir, VISUALS_RELPATH, "cover.png"))
 
+    # Teaser-Highlights (fabrik.cli.highlight_clips): wie viele der vertonten
+    # Episoden haben schon ein <Name>_FULL_EPISODE_HIGHLIGHTS.json? Muster
+    # wie characters/locations oben — reiner Existenz-Check.
+    highlights_audio = highlights_ready = 0
+    for i in range(1, len(episodes) + 1):
+        name = f"{prefix}{i}".capitalize()
+        if os.path.exists(os.path.join(output_dir, f"{name}_FULL_EPISODE.mp3")):
+            highlights_audio += 1
+            if os.path.exists(os.path.join(output_dir, f"{name}_FULL_EPISODE_HIGHLIGHTS.json")):
+                highlights_ready += 1
+    highlights = {"audio_ready": highlights_audio, "with_highlights": highlights_ready}
+
     return {
         "series_slug": os.path.basename(series_dir) if series_dir else None,
         "series_title": episodes_json.get("series_title"),
@@ -143,6 +155,7 @@ def pf_status(jobs=None, series_slug=None) -> dict:
         ),
         "characters": characters,
         "locations": locations,
+        "highlights": highlights,
         "cover_exists": cover_exists,
         "anthology_meta_exists": os.path.exists(os.path.join(scripts_dir, "ANTHOLOGY_META.txt")),
         "upload_index_exists": os.path.exists(os.path.join(output_dir, "UPLOAD_INDEX.md")),

@@ -60,6 +60,9 @@ python3 -m fabrik.cli.generate_episode check|N|all [--jobs N] [--force] [--fix] 
 python3 -m fabrik.cli.character_prompts [--force]
 python3 -m fabrik.cli.location_prompts [--force]
 
+# 4. Teaser-Highlights für TikTok/Reels (claude CLI; Rendern übernimmt Lolfi)
+python3 -m fabrik.cli.highlight_clips [--episode N] [--force]
+
 # Alle CLIs: --series <slug>, sonst data/series/LATEST.
 
 # WebUI (steuert dieses Projekt + Lolfi), Port 5151

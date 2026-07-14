@@ -79,6 +79,13 @@ diesem Repo); `webui/config.py` hardcodet `LOLFI_DIR` — nicht wundern über
   merge_anthology via `POST /api/pf/series/settings`; `GET /api/pf/series`
   liefert den Wert pro Serie, `updateUseBeatsCheckbox()` synct beim
   Serienwechsel).
+- **Teaser-Clips-Step (Lolfi-Tab, Schritt 5):** `pf_highlight_clips`
+  (Episoden-NUMMER via `#pf-highlight-episode`, leer = alle vertonten)
+  schreibt die HIGHLIGHTS.json, „📂 Audio-Output" ist das Review-Gate zum
+  Hand-Editieren, `lolfi_clips` (nutzt das Episoden-Dropdown aus Schritt 4,
+  Dateinamen-Fragment) rendert die 9:16-Clips nach `video/output/`.
+  `status.py` liefert dazu das `highlights`-Dict (vertonte Episoden vs.
+  Episoden mit HIGHLIGHTS.json).
 - Lolfi-Tab: Episoden-Dropdown (`#lolfi-episode-select`, gefüttert von
   `status.py::_list_podcast_episode_files`, wird `--episode <filename>`),
   "▶ Video rendern" (Dropdown leer = Automatik: Anthologie bevorzugt,
