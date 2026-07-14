@@ -84,6 +84,9 @@ diesem Repo); `webui/config.py` hardcodet `LOLFI_DIR` — nicht wundern über
   schreibt die HIGHLIGHTS.json, „📂 Audio-Output" ist das Review-Gate zum
   Hand-Editieren, `lolfi_clips` (nutzt das Episoden-Dropdown aus Schritt 4,
   Dateinamen-Fragment) rendert die 9:16-Clips nach `video/output/`.
+  Checkbox `#lolfi-clips-full` (`--full`) rendert stattdessen die GANZE
+  Episode als ein 9:16-Video — der Weg für nativ kurze Serien
+  (create_series mit 1–3 Minuten), keine Highlights-Auswahl nötig.
   `status.py` liefert dazu das `highlights`-Dict (vertonte Episoden vs.
   Episoden mit HIGHLIGHTS.json).
 - Lolfi-Tab: Episoden-Dropdown (`#lolfi-episode-select`, gefüttert von

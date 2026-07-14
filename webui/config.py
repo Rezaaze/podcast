@@ -335,6 +335,7 @@ COMMANDS = {
         "fixed_args": [],
         "args_schema": [
             ("flag", "episode", "--episode"),
+            ("boolflag", "full", "--full"),
         ],
         "kind": "cr_steps",
     },

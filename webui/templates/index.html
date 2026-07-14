@@ -320,7 +320,11 @@
       <button class="folder-btn" data-key="pf_output">📁 Audio-Output (HIGHLIGHTS.json)</button>
     </div>
     <div class="action-row">
-      <button class="run-btn primary" data-command="lolfi_clips" data-param-episode="lolfi-episode-select">▶ Teaser-Clips rendern</button>
+      <button class="run-btn primary" data-command="lolfi_clips" data-param-episode="lolfi-episode-select" data-param-full="lolfi-clips-full">▶ Teaser-Clips rendern</button>
+      <label style="display:flex;align-items:center;gap:4px">
+        <input type="checkbox" id="lolfi-clips-full">
+        <span class="hint" style="margin:0">ganze Episode als 9:16 (für kurze Serien, ohne Highlights-Auswahl)</span>
+      </label>
       <button class="folder-btn" data-key="lolfi_video_output">📁 video/output</button>
       <span class="hint" style="margin:0">nutzt die Episoden-Auswahl aus Schritt 4</span>
     </div>
