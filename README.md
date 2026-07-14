@@ -4,7 +4,7 @@ Automatisierte Pipeline für Podcast-Serien: Claude schreibt die Skripte,
 eine lokale Qwen3-TTS-API vertont sie, am Ende steht eine gemasterte MP3 pro
 Episode plus eine Gesamt-Anthologie.
 
-Zwei Modi (`episodes.json` → `mode`), fünf Templates (`episodes.json` →
+Zwei Modi (`episodes.json` → `mode`), sechs Templates (`episodes.json` →
 `template`, wählt Creator-Prompt + Schreib-Prompt):
 
 - **narration** (`mode: narration`, Template `narration`) — Ein Erzähler für
@@ -42,16 +42,22 @@ Zwei Modi (`episodes.json` → `mode`), fünf Templates (`episodes.json` →
     Wissens-Trennung wie crime_drama), und die Anzahl der Sections pro
     Episode ist NICHT fest (4–7, je nachdem wie viele Stränge in der
     Episode Raum brauchen). Siehe `templates/soap_opera/EPISODES_CREATOR_PROMPT.md`.
+  - **shorts** — Hook-first-Kurzform für vertikale Videos (TikTok/Reels):
+    1–3-Minuten-Episoden (Hook → Turn → Sting), kleine Besetzung (2–3
+    Rollen + NARRATOR), `case` als Liste mit meist einem Micro-Thread,
+    `locations` als Video-Hintergründe. Jede Episode wird mit
+    `lofi_clips.py --full` (Lolfi) als eigenes 9:16-Video gerendert.
+    Siehe `templates/shorts/EPISODES_CREATOR_PROMPT.md`.
 
-  Beide (`crime_drama`, `soap_opera`) verlangen zusätzlich eine feste
+  Beide langen Fall-Formate (`crime_drama`, `soap_opera`) verlangen zusätzlich eine feste
   `NARRATOR`-Rolle (built-in Stimme, kein Voice-Clone): pure Audio-Formate
   ohne Bildspur brauchen 1–2 gesprochene Orientierungszeilen pro Part (wo,
   wann, wer ist da), sonst wirkt reiner Ensemble-Dialog schnell
   orientierungslos — `NARRATOR` ist keine Figur und bekommt kein
   `character_knowledge`-Slice.
 
-Vier der fünf Templates (narration, language_course, crime_drama,
-soap_opera) sind in der WebUI beim "Serie erstellen"-Schritt als Dropdown
+Fünf der sechs Templates (narration, language_course, crime_drama,
+soap_opera, shorts) sind in der WebUI beim "Serie erstellen"-Schritt als Dropdown
 wählbar; `media_analysis` aktuell nur per CLI-Flag `--template
 media_analysis` (noch nicht im WebUI-Dropdown ergänzt). Das
 Status-Dashboard zeigt Titel + aktives Template pro Serie unabhängig davon

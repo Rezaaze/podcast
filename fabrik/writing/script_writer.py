@@ -110,6 +110,20 @@ def extract_vocab_notes(text: str) -> list[str]:
 
 def build_intro_spec(position, total, series_title, figure, prev_figure,
                      series_intro, intro_note, template="narration"):
+    # shorts VOR dem position==1-Zweig: das Hook-first-Format verbietet jeden
+    # Einstieg vor der ersten Konflikt-Zeile — ein "MUST start with <intro>"
+    # würde dem HOOK-FIRST-OPENING-Block des Templates direkt widersprechen.
+    # intro_note/series_intro werden als reiner Autoren-Kontext durchgereicht,
+    # nie als Sprech-Anweisung.
+    if template == "shorts":
+        context = intro_note if intro_note else series_intro
+        return (
+            f"--- PART 1 --- MUST open cold, mid-conflict, with the hook line "
+            f"as specified in HOOK-FIRST OPENING — no recap, no greeting, no "
+            f"lead-in of any kind. Writer-only continuity context (never "
+            f"spoken aloud, never referenced as a recap): {context}"
+        )
+
     if position == 1:
         detail = intro_note if intro_note else series_intro
         return f"--- PART 1 --- MUST start with {detail}, before diving into {figure}."
@@ -141,7 +155,20 @@ def build_intro_spec(position, total, series_title, figure, prev_figure,
 
 
 def build_outro_spec(position, total, next_figure, series_outro, outro_note,
-                     last_part):
+                     last_part, template="narration"):
+    # shorts: kein "powerful outro" — die letzte Zeile IST der Sting (harter
+    # Schnitt, nichts danach), siehe THE-STING-Block im shorts-Template.
+    if template == "shorts":
+        if position == total:
+            detail = outro_note if outro_note else series_outro
+            return (f"--- PART {last_part} --- MUST end on this closing beat, "
+                    f"with no wrap-up line after it: {detail}")
+        sting = outro_note if outro_note else "an unanswered question or interrupted line"
+        return (
+            f"--- PART {last_part} --- MUST cut off on this sting as its very "
+            f"last line — no reaction, no outro, nothing after it: {sting}"
+        )
+
     if position == total:
         detail = outro_note if outro_note else series_outro
         return f"--- PART {last_part} --- MUST end with {detail}."
@@ -413,7 +440,8 @@ def build_section_prompt(template, data, episodes, ep_idx, section_idx,
                                    prev_figure, series_intro, intro_note,
                                    template=cfg.get("template", "narration"))
     outro_spec = build_outro_spec(position, total, next_figure,
-                                   series_outro, outro_note, parts_total)
+                                   series_outro, outro_note, parts_total,
+                                   template=cfg.get("template", "narration"))
 
     all_sections_text = "\n".join(
         f"Section {i+1}: {s} ("
@@ -537,7 +565,14 @@ def extract_parts(output, expected_parts) -> list[tuple[int, str]]:
     for i in range(1, len(chunks), 2):
         num = int(chunks[i])
         text = chunks[i + 1].strip() if i + 1 < len(chunks) else ""
-        parts[num] = text
+        # Ein leerer Block darf vorhandenen Inhalt NIE überschreiben: die
+        # Abschluss-Anweisung "end after --- PART N ---" verleitet das Modell
+        # (v.a. bei 1-Part-Sections, wo Start- und End-Marker identisch sind)
+        # dazu, den Marker am Textende zu WIEDERHOLEN — der Split erzeugt dann
+        # einen zweiten, leeren PART-N-Block, der den echten Inhalt still
+        # auslöschte ("Part zu kurz: 0 Einheiten" trotz korrekter Ausgabe).
+        if text or num not in parts:
+            parts[num] = text
     return [(num, parts[num]) for num in expected_parts if num in parts]
 
 

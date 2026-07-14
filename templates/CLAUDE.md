@@ -19,7 +19,7 @@ hier ohne Python anzufassen:
   `{{PLACEHOLDER}}`-substituiert von
   `fabrik/writing/script_writer.py::build_section_prompt`.
 
-## Zwei Modes, fünf Templates
+## Zwei Modes, sechs Templates
 
 **`mode: "narration"`** — ein Erzähler, Stile pro Section (`section_styles`):
 
@@ -55,8 +55,22 @@ pro Zeile, `[SFX: ...]`-Cues werden nur geloggt, nie vertont:
 - `soap_opera` — gleiche Mechanik, aber `case` ist eine LISTE unabhängiger
   Threads (je `label` + gleiches Sub-Schema): eine Soap-Episode treibt
   mehrere Storylines parallel. Section-Zahl wird ZUSÄTZLICH pro Episode
-  gewählt (wie viele Threads brauchen Sendezeit). Einziges Template mit
-  `locations`-Support (Anzahl via `--locations`).
+  gewählt (wie viele Threads brauchen Sendezeit). `locations`-Support
+  (Anzahl via `--locations`).
+- `shorts` — Hook-first-Kurzform für 9:16-Videos (TikTok/Reels, Rendern:
+  `lofi_clips.py --full` in Lolfi): 1–3-Min-Episoden, 3 Sections × 1 Part
+  (Hook → Turn → Sting), `words_per_part_target` "70 to 120". `case` als
+  LISTE (meist 1 Micro-Thread, soap-Schema), `locations`-Support (Bilder =
+  Video-Hintergründe). **Bewusste Abweichungen von den langen
+  Drama-Templates:** die erste gesprochene Zeile ist der Hook (nie
+  Begrüßung/Szenenaufbau), NARRATOR nur EINE ≤12-Wort-Zeile pro Episode
+  (Captions/Hintergrund orientieren im Video), kurze Sätze (≤~12 Wörter,
+  werden satzweise als Captions eingebrannt), Episodenende = harter
+  Sting-Schnitt. Deshalb KEIN "previously on"-Recap-Gate — stattdessen
+  eigene shorts-Zweige in `build_intro_spec`/`build_outro_spec`
+  (script_writer.py), die intro_note/outro_note als Autoren-Kontext bzw.
+  Sting-Vorgabe durchreichen statt als Sprech-Anweisung (das generische
+  "MUST start with <intro>" hätte Hook-first direkt widersprochen).
 
 ## Regeln, die in den Prompts stehen (und warum)
 

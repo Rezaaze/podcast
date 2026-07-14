@@ -17,7 +17,7 @@ ohne wird `data/series/LATEST` genutzt (oder die einzige Serie).
 ## create_series.py
 
 `python3 -m fabrik.cli.create_series "Topic" [--episodes N] [--minutes M]
-[--locations L] [--template narration|media_analysis|language_course|crime_drama|soap_opera]
+[--locations L] [--template narration|media_analysis|language_course|crime_drama|soap_opera|shorts]
 [--no-review] [--fix]`
 
 - `--minutes` steuert die Episodenlänge: `estimate_section_count()` leitet

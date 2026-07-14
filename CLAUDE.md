@@ -33,7 +33,7 @@ Getrennt nach Laufzeitumgebung und Kopplung, nicht nach Thema:
 | `fabrik/audio/` | Vertonung, TTS-Backends, Mastering | `.venv` + ffmpeg |
 | `fabrik/cli/` | Entry-Points (`python3 -m fabrik.cli.<name>`) | je nach Ziel |
 | `webui/`, `cloud/` | eigenständige Subprojekte | eigenes venv / Shell |
-| `templates/` | Prompt-"Produktdefinition", 5 Templates | reine .md |
+| `templates/` | Prompt-"Produktdefinition", 6 Templates | reine .md |
 | `data/` | Serien, Voices, figure_history, Archiv | meist gitignored |
 
 **Import-Regel (hart):** `fabrik/core/` und `fabrik/writing/` dürfen NIE aus
@@ -81,7 +81,7 @@ cd cloud && ./rent.sh && ./status.sh   # ./stop.sh ./resume.sh ./destroy.sh
 | Vertonung, Backends, Checkpoints, Post-Merge-Safety, Timelines, Voice-Manifest, Seed | `fabrik/audio/CLAUDE.md` |
 | CLI-Flags, create_series-Verhalten, import_story, Bild-Prompt-CLIs | `fabrik/cli/CLAUDE.md` |
 | WebUI, COMMANDS/JobRegistry/SSE, Lolfi-Kopplung, UI-Gotchas | `webui/CLAUDE.md` |
-| Template-Anatomie, die 5 Formate, Accent-Casting, NARRATOR-Regel | `templates/CLAUDE.md` |
+| Template-Anatomie, die 6 Formate, Accent-Casting, NARRATOR-Regel | `templates/CLAUDE.md` |
 | Beat-Layer-Design-Begründung | `docs/beat-layer-design.md` |
 | MWP-Umbau (Plan, Ziel-Layout, Task-Stand) | `docs/mwp-umbau-plan.md` |
 

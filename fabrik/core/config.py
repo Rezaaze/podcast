@@ -532,7 +532,7 @@ def validate_data(data) -> tuple[list[str], list[str]]:
                     validate_case_block(thread, voices, f"{path}.case[{j}]", require_label=True)
             else:
                 validate_case_block(case, voices, f"{path}.case", require_label=False)
-        elif mode == "drama" and data.get("template") in ("crime_drama", "soap_opera"):
+        elif mode == "drama" and data.get("template") in ("crime_drama", "soap_opera", "shorts"):
             warnings.append(f"'{path}.case' fehlt — ohne Wissens-Trennung schreibt Claude alle "
                             f"Figuren ohne echte Wissensgrenzen (siehe templates/{data.get('template')})")
 
