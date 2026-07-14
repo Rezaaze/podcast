@@ -17,6 +17,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 DATA_DIR = os.path.join(BASE_DIR, "data")           # alles, was die Pipeline erzeugt
 SERIES_ROOT = os.path.join(DATA_DIR, "series")
 VOICES_DIR = os.path.join(DATA_DIR, "voices")       # Referenzaufnahmen für Voice-Clones
+SFX_LIBRARY_DIR = os.path.join(DATA_DIR, "sfx_library")  # serienübergreifende generierte SFX-Assets
 TEMPLATES_DIR = os.path.join(BASE_DIR, "templates")
 FIGURE_HISTORY_FILE = os.path.join(DATA_DIR, "figure_history.json")
 LATEST_FILE = os.path.join(SERIES_ROOT, "LATEST")
@@ -101,6 +102,18 @@ def list_series() -> list[str]:
     )
 
 
+def unique_slug(title: str) -> str:
+    """Slug aus dem Serientitel; bei Kollision mit vorhandener Serie wird
+    durchnummeriert statt die bestehende Serie zu überschreiben."""
+    base = slugify(title)
+    slug = base
+    counter = 2
+    while slug in list_series():
+        slug = f"{base}_{counter}"
+        counter += 1
+    return slug
+
+
 def read_latest() -> str | None:
     try:
         with open(LATEST_FILE, "r", encoding="utf-8") as f:
@@ -142,6 +155,13 @@ def resolve_series(slug: str | None = None) -> Series:
 
     series = find_series()
     if series:
+        # Sichtbar machen, WELCHE Serie der LATEST-Fallback gewählt hat: der
+        # Zeiger kann sich während eines langen Laufs ändern (WebUI-Serienwechsel
+        # schreibt ihn durch) — hier steht dann schwarz auf weiß, worauf dieser
+        # Prozess beim Start festgenagelt wurde.
+        source = "LATEST" if read_latest() == series.slug else "einzige Serie"
+        print(f"Serie automatisch aufgelöst ({source}): {series.slug} "
+              f"(explizit festnageln: --series {series.slug})")
         return series
 
     if not available:

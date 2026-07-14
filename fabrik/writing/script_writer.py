@@ -352,7 +352,7 @@ def generate_beats(series: Series, ep_idx: int, episodes, force: bool, cfg: dict
     prompt = build_beats_prompt(episodes, ep_idx, cfg, previous_beats_text)
 
     for attempt in range(1, MAX_RETRIES + 1):
-        output = call_claude(prompt, cfg["model"])
+        output = call_claude(prompt, cfg["model"], label="Beats-Generierung")
         if output:
             parsed = parse_beats(output, expected_scenes)
             if len(parsed) == len(expected_scenes):
@@ -508,16 +508,11 @@ def build_section_prompt(template, data, episodes, ep_idx, section_idx,
     return prompt
 
 
-def call_claude(prompt, model) -> Optional[str]:
+def call_claude(prompt, model, label: str = "Claude") -> Optional[str]:
+    argv = ["claude", "-p", prompt, "--output-format", "text",
+            "--model", model, "--tools", ""]
     try:
-        result = subprocess.run(
-            ["claude", "-p", prompt, "--output-format", "text",
-             "--model", model, "--tools", ""],
-            capture_output=True,
-            text=True,
-            timeout=TIMEOUT_SECONDS,
-            stdin=subprocess.DEVNULL,
-        )
+        result = run_claude_process(argv, TIMEOUT_SECONDS, label)
     except FileNotFoundError:
         print("FEHLER: 'claude' nicht gefunden → Claude Code installieren.")
         sys.exit(1)
@@ -639,7 +634,7 @@ def call_claude_with_retry(prompt, expected_parts, cfg) -> Optional[list[tuple[i
     for attempt in range(1, MAX_RETRIES + 1):
         prefix = f"  Versuch {attempt}/{MAX_RETRIES}"
 
-        output = call_claude(prompt + feedback, cfg["model"])
+        output = call_claude(prompt + feedback, cfg["model"], label="Section-Generierung")
         if not output:
             print(f"{prefix}: Keine Ausgabe erhalten.")
         else:
@@ -738,7 +733,7 @@ def summarize_source_episode(text: str, persona: str, language: str, model: str)
     )
 
     for attempt in range(1, MAX_RETRIES + 1):
-        output = call_claude(prompt, model)
+        output = call_claude(prompt, model, label="Episode-Zusammenfassung")
         if output:
             match = re.search(r"TITLE:\s*(.+?)\s*THEME:\s*(.+)", output, re.DOTALL)
             if match:
@@ -788,7 +783,7 @@ def generate_episode_meta(series: Series, ep_idx, data, episodes, force, cfg) ->
     for attempt in range(1, MAX_RETRIES + 1):
         # Reine Metadaten-Extraktion — läuft auf dem leichten Modell,
         # das kreative Schreiben bleibt auf generation.model.
-        output = call_claude(prompt, cfg.get("light_model", cfg["model"]))
+        output = call_claude(prompt, cfg.get("light_model", cfg["model"]), label="Episode-Metadaten")
         if output:
             match = re.search(r"TITLE:\s*(.+?)\s*DESCRIPTION:\s*(.+)", output, re.DOTALL)
             if match:
@@ -843,9 +838,7 @@ two things in the ACTUAL SCRIPT TEXT (not the case file above):
    thread resolves?
 
 Respond ONLY with valid JSON, no markdown fences, exactly:
-{{"issues": [{{"part": <integer — the PART number the problem is IN, from its "--- PART N ---" "
-              "marker>, "problem": "one short, specific sentence describing the problem, "
-              "quoting or paraphrasing the offending line so it can be found and fixed"}}]}}
+{{"issues": [{{"part": <integer — the PART number the problem is IN, from its "--- PART N ---" marker>, "problem": "one short, specific sentence describing the problem, quoting or paraphrasing the offending line so it can be found and fixed"}}]}}
 
 Do not invent nitpicks — only report a problem a careful producer would actually flag on a
 read-through. An empty list is a perfectly good answer.
@@ -910,6 +903,27 @@ def review_episode_script(episode: dict, position: int, total: int, script_text:
     return issues
 
 
+def parse_review_file(path: str) -> list:
+    """Liest eine früher geschriebene <prefix>N_REVIEW.txt zurück in die
+    issues-Struktur von review_episode_script() — [] bei "Keine
+    Auffälligkeiten.". Damit kann ein Re-Run (--fix oder Resume nach Abbruch)
+    die gecachten Befunde wiederverwenden, statt dasselbe unveränderte Skript
+    erneut (und teuer) zu reviewen."""
+    with open(path, "r", encoding="utf-8") as f:
+        text = f.read()
+    issues = []
+    for line in text.splitlines():
+        line = line.strip()
+        if not line.startswith("- "):
+            continue
+        m = re.match(r"- Part (\d+): (.*)", line)
+        if m:
+            issues.append({"part": int(m.group(1)), "problem": m.group(2)})
+        else:
+            issues.append({"part": None, "problem": line[2:]})
+    return issues
+
+
 BEATS_REVIEW_TIMEOUT_SECONDS = 120
 
 
@@ -941,9 +955,7 @@ for these two things in the ACTUAL BEATS TEXT (not the case file above):
    it is meant to surface — unless this episode is explicitly the one where that thread resolves?
 
 Respond ONLY with valid JSON, no markdown fences, exactly:
-{{"issues": [{{"scene": <integer — the SCENE number the problem is IN, from its "--- SCENE N ---" "
-              "marker>, "problem": "one short, specific sentence describing the problem, "
-              "quoting or paraphrasing the offending beat so it can be found and fixed"}}]}}
+{{"issues": [{{"scene": <integer — the SCENE number the problem is IN, from its "--- SCENE N ---" marker>, "problem": "one short, specific sentence describing the problem, quoting or paraphrasing the offending beat so it can be found and fixed"}}]}}
 
 Do not invent nitpicks — only report a problem a careful producer would actually flag on a
 read-through. An empty list is a perfectly good answer.
@@ -1084,7 +1096,11 @@ def apply_episode_fixes(series: Series, ep_idx: int, episode: dict, cfg: dict, i
 
 
 def generate_episode(series: Series, ep_idx, template, data, episodes, force, cfg,
-                     skip_review: bool = False, fix_review: bool = False) -> bool:
+                     skip_review: bool = False, fix_review: bool = False,
+                     beats_pregenerated: bool = False) -> bool:
+    """beats_pregenerated: der Elternprozess ('all') hat die Beats-Dateien schon
+    seriell in Episodenreihenfolge erzeugt (Kontinuität!) — dann werden sie hier
+    auch mit --force weder gelöscht noch neu generiert, nur geladen."""
     episode_num = ep_idx + 1
     figure = episodes[ep_idx]["figure"]
     sections = episodes[ep_idx]["sections"]
@@ -1101,7 +1117,8 @@ def generate_episode(series: Series, ep_idx, template, data, episodes, force, cf
         print("Vorhandene Datei gelöscht (--force).")
 
     use_beats = cfg.get("use_beats") and episodes[ep_idx].get("case")
-    if use_beats and force:
+    beats_force = force and not beats_pregenerated
+    if use_beats and beats_force:
         for stale_file in (series.beats_file(cfg["prefix"], episode_num),
                            series.beats_review_file(cfg["prefix"], episode_num)):
             if os.path.exists(stale_file):
@@ -1112,14 +1129,14 @@ def generate_episode(series: Series, ep_idx, template, data, episodes, force, cf
     # generation.use_beats aktiv ist. Ein Fehlschlag hier ist NICHT fatal:
     # beats bleibt None, build_section_prompt() fällt dann auf den bisherigen
     # Vorschnitt-Kontext zurück (siehe docs/beat-layer-design.md).
-    beats = generate_beats(series, ep_idx, episodes, force, cfg) if use_beats else None
+    beats = generate_beats(series, ep_idx, episodes, beats_force, cfg) if use_beats else None
 
     # LLM-basierte Beat-Prüfung: Wissens-Verstöße/Spoiler-Leaks auf den kurzen
     # Beats statt teurer Prosa (siehe review_episode_beats()). Warn-only, kein
     # Auto-Repair — nur wenn Beats diesen Lauf tatsächlich vorliegen.
     if use_beats and beats:
         beats_review_file = series.beats_review_file(cfg["prefix"], episode_num)
-        if os.path.exists(beats_review_file) and not force:
+        if os.path.exists(beats_review_file) and not beats_force:
             print(f"  Beats-Review bereits vorhanden: {os.path.basename(beats_review_file)} ✓")
         else:
             print(f"\n  Beats-Review (Wissens-Verstöße/Spoiler-Leaks in den Beats) ...")
@@ -1210,29 +1227,54 @@ def generate_episode(series: Series, ep_idx, template, data, episodes, force, cf
     # nicht scheitern — reine QA nach dem Schreiben.
     if not skip_review and episodes[ep_idx].get("case"):
         review_file = series.review_file(cfg["prefix"], episode_num)
-        if os.path.exists(review_file) and not force and not fix_review:
-            print(f"  Episoden-Review bereits vorhanden: {os.path.basename(review_file)} ✓")
+        # Gecachtes Review-Ergebnis nutzen: das Skript hat sich seit der
+        # REVIEW.txt nicht geändert (--force regeneriert und landet nie hier) —
+        # ein sauberes Ergebnis bleibt sauber, auch unter --fix gibt es dann
+        # nichts zu reparieren. Nur --fix + offene Befunde arbeitet weiter:
+        # mit den GECACHTEN Befunden direkt in die Reparatur, ohne das
+        # unveränderte Skript erst nochmal teuer zu reviewen.
+        cached_issues = (parse_review_file(review_file)
+                         if os.path.exists(review_file) and not force else None)
+        if cached_issues is not None and (not fix_review or not cached_issues):
+            state = ("keine Auffälligkeiten" if not cached_issues
+                     else f"{len(cached_issues)} offene(r) Hinweis(e), --fix zum Reparieren")
+            print(f"  Episoden-Review bereits vorhanden ({state}): {os.path.basename(review_file)} ✓")
         else:
-            print(f"\n  Episoden-Review (Wissens-Verstöße/Spoiler-Leaks im fertigen Skript) ...")
-            issues = review_episode_script(episodes[ep_idx], episode_num, len(episodes),
-                                           previous_content, cfg.get("light_model", cfg["model"]))
+            if cached_issues:
+                print(f"\n  🔁 {len(cached_issues)} Hinweis(e) aus vorhandener "
+                      f"{os.path.basename(review_file)} übernommen — kein erneutes Erst-Review.")
+                issues = cached_issues
+            else:
+                print(f"\n  Episoden-Review (Wissens-Verstöße/Spoiler-Leaks im fertigen Skript) ...")
+                issues = review_episode_script(episodes[ep_idx], episode_num, len(episodes),
+                                               previous_content, cfg.get("light_model", cfg["model"]))
 
             if issues and fix_review:
                 fixable = [i for i in issues if i.get("part") is not None]
-                print(f"  🔧 {len(issues)} Hinweis(e) ({len(fixable)} automatisch reparierbar) — "
-                      f"repariere betroffene Parts ...")
-                fixed = apply_episode_fixes(series, ep_idx, episodes[ep_idx], cfg, issues)
-                print(f"  {fixed}/{len(fixable)} Part(s) repariert — Review erneut, um den Fix zu bestätigen ...")
-                with open(output_file, "r", encoding="utf-8") as f:
-                    updated_text = f.read()
-                reviewed_again = review_episode_script(episodes[ep_idx], episode_num, len(episodes),
-                                                       updated_text, cfg.get("light_model", cfg["model"]))
-                if reviewed_again is not None:
-                    issues = reviewed_again
+                if not fixable:
+                    print(f"  🔧 {len(issues)} Hinweis(e), aber keiner mit Part-Nummer — nichts "
+                          f"automatisch reparierbar, Befunde bleiben protokolliert.")
                 else:
-                    print(f"  ⚠️  Bestätigungs-Review nach der Reparatur fehlgeschlagen — die "
-                          f"ursprünglichen Befunde bleiben als offen protokolliert (die betroffenen "
-                          f"Parts wurden aber schon repariert, ggf. jetzt schon behoben).")
+                    print(f"  🔧 {len(issues)} Hinweis(e) ({len(fixable)} automatisch reparierbar) — "
+                          f"repariere betroffene Parts ...")
+                    fixed = apply_episode_fixes(series, ep_idx, episodes[ep_idx], cfg, issues)
+                    if fixed == 0:
+                        # Kein Part hat sich geändert — ein Bestätigungs-Review würde nur
+                        # dasselbe Skript erneut (und teuer) prüfen. Originalbefunde behalten.
+                        print(f"  0/{len(fixable)} Part(s) repariert — Bestätigungs-Review übersprungen, "
+                              f"ursprüngliche Befunde bleiben protokolliert.")
+                    else:
+                        print(f"  {fixed}/{len(fixable)} Part(s) repariert — Review erneut, um den Fix zu bestätigen ...")
+                        with open(output_file, "r", encoding="utf-8") as f:
+                            updated_text = f.read()
+                        reviewed_again = review_episode_script(episodes[ep_idx], episode_num, len(episodes),
+                                                               updated_text, cfg.get("light_model", cfg["model"]))
+                        if reviewed_again is not None:
+                            issues = reviewed_again
+                        else:
+                            print(f"  ⚠️  Bestätigungs-Review nach der Reparatur fehlgeschlagen — die "
+                                  f"ursprünglichen Befunde bleiben als offen protokolliert (die betroffenen "
+                                  f"Parts wurden aber schon repariert, ggf. jetzt schon behoben).")
 
             if issues is None:
                 # Review-Lauf selbst fehlgeschlagen (Timeout/API-Fehler/unauswertbar) — NICHT als

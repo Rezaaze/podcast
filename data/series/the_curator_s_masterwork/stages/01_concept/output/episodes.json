@@ -1,0 +1,2222 @@
+{
+ "series_title": "The Curator's Masterwork",
+ "language": "English",
+ "mode": "drama",
+ "template": "soap_opera",
+ "writer_persona": "a showrunner for a psychological cat-and-mouse ensemble drama, blending prestige-crime obsession with soap-opera domestic fallout — think a serial killer thriller that never lets go of the detective's marriage, partner, and captain",
+ "style_guidelines": [
+  "Every clue the killer leaves must be legible to the audience only in hindsight — never let the NARRATOR or a character explain what it 'really' means before the story is ready to reveal it.",
+  "Reid's moral erosion must be gradual and earned: each small compromise (a withheld report, a bent rule, a lie to a superior) should feel like the logical next step from the one before it, not a sudden leap.",
+  "Keep violence off-page and psychological — dread, obsession, and dramatic irony are the show's currency, not gore.",
+  "Cut between the manhunt and the home front constantly; the investigation thread and the domestic-collapse thread must feel like two fronts of the same war.",
+  "The Curator never monologues his master plan to the audience — his manipulation is only visible in retrospect, through the gap between what he says and what he later turns out to have orchestrated.",
+  "Dialogue should be clipped and loaded — characters in this world choose words as carefully as the killer does, so subtext always outweighs what's said outright."
+ ],
+ "voices": {
+  "NARRATOR": {
+   "voice": "morgan",
+   "default_style": "calm, measured, a step removed from the action",
+   "description": "the show's narrator — orients the listener at the start of every scene (who, where, when), never a character in the story"
+  },
+  "REID": {
+   "voice": "Ryan",
+   "default_style": "clipped, exhausted intensity — a man running on adrenaline and too little sleep",
+   "description": "Detective Marcus Reid, the city's most decorated investigator, targeted directly by the killer's letters; his growing obsession with 'winning' the game corrodes his marriage, his ethics, and his partnership with Det. Park — he does not yet grasp how much of his own hunt has been designed for him"
+  },
+  "THE_CURATOR": {
+   "voice": "Dylan",
+   "default_style": "chilling precision — slow, deliberate, each word chosen with care, speaks slow and very clear English",
+   "description": "a former linguistics professor of Chinese immigrant background, now an eccentric serial killer who signs his work with cryptic ciphers addressed personally to Reid; he believes he is not committing murders but composing a single, unfinished 'work' — and quietly building Reid into its final brushstroke"
+  },
+  "CAPTAIN_HOLLIS": {
+   "voice": "Uncle_Fu",
+   "default_style": "gravelled, weary authority — a man counting down the months to retirement",
+   "description": "elderly Chinese-American police captain nearing the end of his career, under mounting pressure from the mayor's office over the killings; he shields Reid from scrutiny longer than he should, not realizing how far his star detective has already strayed"
+  },
+  "MIA_REID": {
+   "voice": "Ono_Anna",
+   "default_style": "warm turning brittle — the sound of patience running out",
+   "description": "Reid's wife, a Japanese-American schoolteacher; she watches the husband she married disappear into case files and silence, and drives the season's slow-burn marriage-collapse thread from the home front"
+  },
+  "DET_PARK": {
+   "voice": "Sohee",
+   "default_style": "sharp, loyal, increasingly wary",
+   "description": "Korean-American junior detective and Reid's partner; the squad's conscience, she is the first to notice Reid crossing lines he used to enforce, and the last one still hoping she's wrong about him"
+  },
+  "JOY_CHEN": {
+   "voice": "Vivian",
+   "default_style": "controlled fury under a courtroom-trained calm",
+   "description": "a paralegal and the older sister of a man wrongly implicated by circumstantial evidence in the killings; she fights the department publicly to clear her brother's name, unaware her brother was chosen as a deliberate distraction by the real killer"
+  }
+ },
+ "locations": {
+  "PRECINCT_BULLPEN": {
+   "name": "The Precinct Bullpen",
+   "description": "a cramped, fluorescent-lit detective floor cluttered with case boards and cold coffee, its harsh overhead light making every tired face look worse than it is"
+  },
+  "REID_APARTMENT": {
+   "name": "The Reid Apartment",
+   "description": "a once-warm apartment now half-consumed by red string and pinned crime-scene photos spreading from Reid's home office into the living room"
+  },
+  "THE_CURATOR_STUDY": {
+   "name": "The Curator's Study",
+   "description": "a hidden, book-lined room lit by a single green banker's lamp, every object arranged with obsessive, museum-like precision"
+  },
+  "THE_OLD_TEXTILE_MILL": {
+   "name": "The Old Textile Mill",
+   "description": "a gutted, moon-lit industrial ruin the Curator uses as his private gallery, rusted machinery looming over the tableaux he leaves behind"
+  },
+  "RIVERSIDE_OVERLOOK": {
+   "name": "The Riverside Overlook",
+   "description": "a fog-shrouded park bench above the harbor where cryptic notes and dead drops change hands under sodium streetlight"
+  },
+  "INTERROGATION_ROOM": {
+   "name": "The Interrogation Room",
+   "description": "a stark, gray box with a scarred metal table and a one-way mirror throwing back distorted reflections"
+  },
+  "DOWNTOWN_DINER": {
+   "name": "The Downtown Diner",
+   "description": "a all-night neon-lit diner booth where off-duty detectives unwind, its warm red vinyl a rare splash of comfort in the show's world"
+  },
+  "COURTHOUSE_STEPS": {
+   "name": "The Courthouse Steps",
+   "description": "wide stone steps under a crush of press cameras and flashbulbs, the public stage where the frame-up plays out for the whole city to see"
+  }
+ },
+ "format": {
+  "parts_per_section": 1,
+  "words_per_part_target": "300 to 500",
+  "words_per_part_min": 250,
+  "words_per_part_max": 550
+ },
+ "generation": {
+  "model": "claude-sonnet-5",
+  "use_beats": false
+ },
+ "audio": {
+  "api_url": "http://127.0.0.1:42003",
+  "default_style": "Speak clearly and with dramatic weight",
+  "target_lufs": -16.0,
+  "pause_between_chunks_ms": 250,
+  "pause_between_lines_ms": 700,
+  "pause_between_parts_ms": 3000,
+  "pause_between_episodes_ms": 6000,
+  "merge_anthology": false,
+  "backend": "gradio",
+  "chunk_concurrency": 40,
+  "ref_audio": "data/voices/morgan_ref.wav",
+  "ref_text": "Where did your grandfather find this. Arthur asked, his curiosity suddenly piqued.\n\nHe was an explorer, the girl replied, looking around the cluttered shop. He spent years traveling through distant mountains and dangerous deserts. He always told me that this watch held a secret, but I never believed him until now.\n\nArthur placed the watch under his magnifying lamp. With steady, practiced movements, he used a tiny screwdriver to remove the back casing. What he saw inside took his breath away. Instead of the usual brass gears, the mechanism was made of a strange, shimmering blue metal that seemed to absorb the light. It didn't look like any clockwork he had ever seen in his fifty years of experience.\n\nThis is extraordinary, Arthur whispered, his voice filled with genuine awe. It’s not broken, my dear. It’s simply waiting. Tell me, did your grandfather ever mention a phrase or a specific numbers sequence before he left\n\nThe girl paused, thinking deeply. Only one thing. He kept repeating: 'When the silver moon aligns with the golden sun, the path will reveal itself.' Does that mean anything to you"
+ },
+ "output_prefix": "ep",
+ "series_intro": "In a fog-bound harbor city of old money and new immigrants, a brilliant detective receives a letter no one else was meant to read — and a killer begins a game only the two of them are truly playing. This is the story of a hunt that becomes an obsession, a marriage that becomes collateral, and a masterpiece the detective doesn't know he's helping to finish.",
+ "series_outro": "The game ends where it began — with a letter, and a truth Reid can no longer unsee: every step of the hunt, every rule he broke to win it, was written for him before he ever picked up the first clue. Some threads close hard — a name cleared, a captain's trust spent — others are left open, like the question of who Marcus Reid has become, and whether Mia, or Park, or the man in the mirror, will ever get him back.",
+ "episodes": [
+  {
+   "figure": "First Correspondence",
+   "theme": "Reid receives a killer's opening cipher addressed to him by name, launching the Cipher Killings thread while the first cracks of neglect appear at home with Mia.",
+   "intro_note": "",
+   "outro_note": "Somewhere across the city, a torn receipt is about to surface — and put an innocent name in the killer's place.",
+   "sections": [
+    "Cold Open: A worker discovers a staged body at the Old Textile Mill, a cipher note pinned above it addressed to Detective Marcus Reid by name — the Cipher Killings thread begins.",
+    "Precinct Bullpen: Reid and Det. Park review the note as Captain Hollis briefs them on early pressure from the mayor's office.",
+    "Reid Apartment: Mia sets out an anniversary dinner and waits, checking her phone as the hour slips past.",
+    "The Curator's Study: alone among his catalogued objects, the Curator adds a single item to a locked drawer with quiet, ritual care.",
+    "Precinct Bullpen, late night: Reid stays behind alone, working the cipher long after the bullpen empties out.",
+    "Downtown Diner: Reid and Park unwind over coffee; Park notices he's somewhere else entirely.",
+    "Reid Apartment: Reid comes home hours late; a brittle, half-apologetic exchange with Mia over the cold dinner.",
+    "Riverside Overlook: a second cipher surfaces at a dead drop above the harbor, raising the stakes of the killer's game.",
+    "Precinct Bullpen: Hollis learns of the second clue and the mayor's office tightens its grip on the case.",
+    "The Curator's Study: a brief, unsettling beat — the Curator studies something that suggests he's been watching Reid far more closely than anyone realizes.",
+    "Reid Apartment: Mia realizes the missed dinner wasn't a one-time slip, and asks Reid outright what's really going on.",
+    "Precinct Bullpen: Park offers to take more of the caseload; Reid, distracted, brushes her off without quite meaning to.",
+    "The Old Textile Mill: Reid returns to the scene alone at night, circling the tableau obsessively before anyone else arrives.",
+    "Downtown Diner: alone at a back booth, Reid is handed a new note in person by a passerby he never gets a clear look at.",
+    "Precinct Bullpen: Reid realizes, chilled, that the note's date is his and Mia's anniversary — proof the killer has been watching him long before the first body ever surfaced."
+   ],
+   "section_words": [
+    {
+     "min": 150,
+     "max": 220,
+     "target": "160 to 200"
+    },
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    {
+     "min": 130,
+     "max": 200,
+     "target": "140 to 180"
+    }
+   ],
+   "section_locations": [
+    "THE_OLD_TEXTILE_MILL",
+    "PRECINCT_BULLPEN",
+    "REID_APARTMENT",
+    "THE_CURATOR_STUDY",
+    "PRECINCT_BULLPEN",
+    "DOWNTOWN_DINER",
+    "REID_APARTMENT",
+    "RIVERSIDE_OVERLOOK",
+    "PRECINCT_BULLPEN",
+    "THE_CURATOR_STUDY",
+    "REID_APARTMENT",
+    "PRECINCT_BULLPEN",
+    "THE_OLD_TEXTILE_MILL",
+    "DOWNTOWN_DINER",
+    "PRECINCT_BULLPEN"
+   ],
+   "case": [
+    {
+     "label": "The Cipher Killings",
+     "solution": "For over a decade, the Curator — a former linguistics professor — has quietly murdered people the city stopped counting, staging each body as a tableau and encoding fragments of a private, ongoing 'manuscript' in the arrangement; the killings addressed to Reid are not new crimes but the final chapters of that manuscript, and the Curator's true design is not to be caught but to groom Reid, cipher by cipher, into an obsession that will eventually make Reid himself deliver the piece's last brushstroke.",
+     "objective_facts": [
+      "A cipher letter addressed personally to Detective Marcus Reid was left at the first tableau site, though the killings themselves predate this season by more than a decade.",
+      "Each solved cipher points to a real location and a real time, never to a riddle without a physical answer.",
+      "The killer references private details of Reid's life — dates, habits, choices — that were never released to the press or public record.",
+      "Trace evidence at every tableau site shows specialized knowledge of antique textile machinery consistent with the Old Textile Mill.",
+      "Handwriting and phrasing analysis links the new letters to unsolved cases stretching back more than ten years, though only this season's letters are addressed to Reid by name."
+     ],
+     "character_knowledge": {
+      "REID": {
+       "knows": [
+        "The cipher note found at the mill was addressed to him by name, not to the department in general.",
+        "The note references his and Mia's wedding anniversary, a date never made public."
+       ],
+       "hides": [
+        "He does not tell Captain Hollis that the letter names him personally, afraid it will get him pulled from the case."
+       ],
+       "believes_falsely": [
+        "He believes the killer singled him out at random because he's the department's lead detective, not because he's been chosen and studied over time."
+       ]
+      },
+      "THE_CURATOR": {
+       "knows": [
+        "Every detail of the manuscript he has been composing for over a decade, and exactly which fragment this season begins.",
+        "That Reid is the intended recipient and eventual finisher of the work, though nothing in his outward behavior shows it."
+       ],
+       "hides": [
+        "His true identity and history from everyone in the city, including the fact that his killings predate this season by years."
+       ],
+       "believes_falsely": []
+      },
+      "CAPTAIN_HOLLIS": {
+       "knows": [
+        "A body was found at the mill with a cipher note attached.",
+        "The mayor's office is already asking pointed questions about the case."
+       ],
+       "hides": [],
+       "believes_falsely": [
+        "He assumes this is a difficult but ordinary homicide Reid will close the way he's closed difficult cases before."
+       ]
+      },
+      "DET_PARK": {
+       "knows": [
+        "She was on scene at the mill and saw the note firsthand."
+       ],
+       "hides": [],
+       "believes_falsely": [
+        "She assumes Reid will loop her into every detail of the case as he always has, not yet sensing he's already begun holding some of it back."
+       ]
+      }
+     }
+    },
+    {
+     "label": "The Marriage Collapse",
+     "solution": "Reid's growing distance from Mia is not infidelity, as she will eventually fear, but the slow, secretive pull of the Curator's game — a private obsession Reid feeds by keeping the letters, the hours, and the compromises to himself, telling himself he can repair the marriage once the case is 'solved,' never grasping that this case has no finish line built for him to reach on his own terms.",
+     "objective_facts": [
+      "Reid missed the couple's wedding anniversary dinner to work the case's first night.",
+      "Reid has spent multiple nights this season sleeping at the precinct or in his car rather than at home.",
+      "Reid has not told Mia that the killer's letters are addressed to him personally by name.",
+      "Mia has begun keeping her own private notes on the nights and calls Reid has missed.",
+      "Reid has let calls from Mia go to voicemail during active moments of the investigation on more than one occasion."
+     ],
+     "character_knowledge": {
+      "REID": {
+       "knows": [
+        "He missed their anniversary dinner because of the case, not because of anyone or anything else."
+       ],
+       "hides": [
+        "He hasn't told Mia the letter was addressed to him personally, telling himself it would only frighten her."
+       ],
+       "believes_falsely": [
+        "He believes he can make it up to Mia once this case is closed, not yet grasping that this case may not have an ending he controls."
+       ]
+      },
+      "MIA_REID": {
+       "knows": [
+        "Reid missed their anniversary dinner without calling ahead.",
+        "This is not the first big case that's pulled him away, but something about his attention tonight feels different."
+       ],
+       "hides": [],
+       "believes_falsely": [
+        "She assumes this is simply another demanding case like the ones they've weathered before, not something that will consume him differently."
+       ]
+      }
+     }
+    }
+   ]
+  },
+  {
+   "figure": "The Wrong Name",
+   "theme": "Circumstantial evidence points the department at an innocent man, launching the Frame-Up thread as Joy Chen fights for her brother while Reid's fixation on the letters starts to unsettle Park.",
+   "intro_note": "The anniversary date in the killer's note still echoes through the precinct — and across town, a torn receipt is about to put an innocent man in the killer's place.",
+   "outro_note": "Even as the Chen case takes over the headlines, a new letter is already waiting for Reid — one written for him, and no one else.",
+   "sections": [
+    "Precinct Bullpen: forensics ties a torn receipt bearing Daniel Chen's thumbprint to the dump site, and the department moves fast on its first real suspect.",
+    "Interrogation Room: Daniel Chen, frightened and bewildered, is brought in for questioning with no idea why.",
+    "Courthouse Steps: Joy Chen learns of her brother's arrest and confronts reporters gathering outside for the first time.",
+    "The Curator's Study: a quiet, ambiguous beat as news of the arrest reaches the Curator, who receives it with unreadable calm.",
+    "Precinct Bullpen: Hollis pushes Reid to close the case quickly now that an arrest eases the mayor's office's pressure.",
+    "Riverside Overlook: a new cipher arrives despite Daniel's arrest, quietly unsettling Reid about whether they have the right man.",
+    "Downtown Diner: Reid and Park go over the inconsistency; Park's first real doubts about the case take shape.",
+    "Reid Apartment: Mia notices Reid more distant than usual even by his own new standard, and it costs them another quiet evening.",
+    "Precinct Bullpen: Reid privately doubts Daniel fits the killer's pattern, but stays quiet — an arrest, even a shaky one, eases the pressure on him too.",
+    "Courthouse Steps: Joy Chen holds an impromptu press conference declaring her brother's innocence.",
+    "The Old Textile Mill: alone at the scene, Reid cross-checks the cipher timeline against Daniel's known movements and doesn't like what he finds.",
+    "Interrogation Room: Det. Park quietly re-interviews Daniel herself and notices gaps in the timeline nobody upstairs wants to hear about.",
+    "Reid Apartment: Reid cancels another plan with Mia at the last minute; the silence that follows is worse than an argument.",
+    "Precinct Bullpen: Hollis fields a sharper call from the mayor's liaison, warning that a shaky arrest could backfire publicly.",
+    "Riverside Overlook: a new note arrives that seems to mock the department's arrest — closing on Reid's dawning fear that they have the wrong name."
+   ],
+   "section_words": [
+    null,
+    {
+     "min": 150,
+     "max": 220,
+     "target": "160 to 200"
+    },
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    {
+     "min": 130,
+     "max": 200,
+     "target": "140 to 180"
+    }
+   ],
+   "section_locations": [
+    "PRECINCT_BULLPEN",
+    "INTERROGATION_ROOM",
+    "COURTHOUSE_STEPS",
+    "THE_CURATOR_STUDY",
+    "PRECINCT_BULLPEN",
+    "RIVERSIDE_OVERLOOK",
+    "DOWNTOWN_DINER",
+    "REID_APARTMENT",
+    "PRECINCT_BULLPEN",
+    "COURTHOUSE_STEPS",
+    "THE_OLD_TEXTILE_MILL",
+    "INTERROGATION_ROOM",
+    "REID_APARTMENT",
+    "PRECINCT_BULLPEN",
+    "RIVERSIDE_OVERLOOK"
+   ],
+   "case": [
+    {
+     "label": "The Cipher Killings",
+     "solution": "For over a decade, the Curator — a former linguistics professor — has quietly murdered people the city stopped counting, staging each body as a tableau and encoding fragments of a private, ongoing 'manuscript' in the arrangement; the killings addressed to Reid are not new crimes but the final chapters of that manuscript, and the Curator's true design is not to be caught but to groom Reid, cipher by cipher, into an obsession that will eventually make Reid himself deliver the piece's last brushstroke.",
+     "objective_facts": [
+      "A cipher letter addressed personally to Detective Marcus Reid was left at the first tableau site, though the killings themselves predate this season by more than a decade.",
+      "Each solved cipher points to a real location and a real time, never to a riddle without a physical answer.",
+      "The killer references private details of Reid's life — dates, habits, choices — that were never released to the press or public record.",
+      "Trace evidence at every tableau site shows specialized knowledge of antique textile machinery consistent with the Old Textile Mill.",
+      "Handwriting and phrasing analysis links the new letters to unsolved cases stretching back more than ten years, though only this season's letters are addressed to Reid by name."
+     ],
+     "character_knowledge": {
+      "REID": {
+       "knows": [
+        "A new cipher arrived at the Riverside Overlook after Daniel Chen's arrest, in the killer's same hand and pattern.",
+        "The timing suggests the real killer is either unaware of the arrest or entirely unconcerned by it."
+       ],
+       "hides": [
+        "He still hasn't told Hollis the letters are personally addressed to him, and now he also holds back his doubts about Daniel from the room."
+       ],
+       "believes_falsely": [
+        "He half-hopes pursuing Daniel might provoke the real killer into a mistake out of jealousy, not realizing the arrest was engineered by that same killer and provokes nothing."
+       ]
+      },
+      "THE_CURATOR": {
+       "knows": [
+        "That Daniel Chen was chosen precisely because he is vulnerable and unconnected to the real work.",
+        "That the arrest will buy him time and reveal how the department — and Reid — handle an easy answer."
+       ],
+       "hides": [
+        "Any outward sign that the Chen evidence was planted rather than found."
+       ],
+       "believes_falsely": []
+      },
+      "DET_PARK": {
+       "knows": [
+        "She pulled the thumbprint match herself, and procedurally it holds up.",
+        "Daniel's timeline has gaps that don't sit right with her."
+       ],
+       "hides": [
+        "She hasn't voiced her doubts to Reid directly yet, not wanting to second-guess him in front of Hollis."
+       ],
+       "believes_falsely": [
+        "She assumes that if something's genuinely wrong with the case against Daniel, Reid will catch it himself — she doesn't yet see how distracted he's become."
+       ]
+      }
+     }
+    },
+    {
+     "label": "The Frame-Up",
+     "solution": "The circumstantial evidence implicating Daniel Chen — Joy Chen's younger brother — was deliberately planted by the Curator, who identified Daniel as a plausible, vulnerable fall guy specifically to slow the investigation and test how readily the system, and Reid, would accept an easy answer; Daniel had no connection to the real killings and does not know why he was chosen.",
+     "objective_facts": [
+      "A torn receipt bearing Daniel Chen's thumbprint was recovered half-buried near a body dump site.",
+      "Daniel Chen has one prior arrest, a nonviolent trespassing charge, and no history of violence.",
+      "Daniel Chen has no verifiable alibi witness for the night in question, though he was not at the dump site.",
+      "The physical evidence tying Daniel to the scene is consistent with having been planted using items Daniel had discarded or lost.",
+      "Daniel briefly worked at a laundromat later confirmed to have been frequented by a customer using a false name matching the Curator's known patterns."
+     ],
+     "character_knowledge": {
+      "REID": {
+       "knows": [
+        "The receipt evidence against Daniel is thin, procedurally enough to justify bringing him in, but far from conclusive."
+       ],
+       "hides": [
+        "His private doubt that Daniel fits the killer's pattern at all — voicing it now would only slow an arrest that eases pressure on him."
+       ],
+       "believes_falsely": [
+        "He believes chasing the Daniel lead publicly might force the real killer to react, not realizing the killer already planned for exactly this."
+       ]
+      },
+      "CAPTAIN_HOLLIS": {
+       "knows": [
+        "The mayor's office wants a visible arrest to calm public panic, and Daniel Chen is that arrest."
+       ],
+       "hides": [
+        "He's quietly let the press office use 'person of interest' language before the evidence is anywhere near proven, a shortcut he'll come to regret."
+       ],
+       "believes_falsely": [
+        "He believes the pressure he's fielding is purely political noise, not realizing it's playing directly into the real killer's design."
+       ]
+      },
+      "JOY_CHEN": {
+       "knows": [
+        "Her brother Daniel has no history of violence and was home alone, doing nothing unusual, the night in question.",
+        "The department's case against him rests on a single piece of circumstantial evidence."
+       ],
+       "hides": [],
+       "believes_falsely": [
+        "She believes the police simply picked an easy, disposable target out of laziness or prejudice, not realizing Daniel was deliberately engineered as the fall guy by the real killer."
+       ]
+      },
+      "DET_PARK": {
+       "knows": [
+        "The thumbprint match is technically solid procedure, but the surrounding timeline doesn't add up cleanly."
+       ],
+       "hides": [
+        "Her growing doubts about the case, which she hasn't yet raised with Hollis directly."
+       ],
+       "believes_falsely": [
+        "She assumes Reid will surface the same doubts she has, not sensing how much he's already chosen to let slide."
+       ]
+      }
+     }
+    },
+    {
+     "label": "The Marriage Collapse",
+     "solution": "Reid's growing distance from Mia is not infidelity, as she will eventually fear, but the slow, secretive pull of the Curator's game — a private obsession Reid feeds by keeping the letters, the hours, and the compromises to himself, telling himself he can repair the marriage once the case is 'solved,' never grasping that this case has no finish line built for him to reach on his own terms.",
+     "objective_facts": [
+      "Reid missed the couple's wedding anniversary dinner to work the case's first night.",
+      "Reid has spent multiple nights this season sleeping at the precinct or in his car rather than at home.",
+      "Reid has not told Mia that the killer's letters are addressed to him personally by name.",
+      "Mia has begun keeping her own private notes on the nights and calls Reid has missed.",
+      "Reid has let calls from Mia go to voicemail during active moments of the investigation on more than one occasion."
+     ],
+     "character_knowledge": {
+      "REID": {
+       "knows": [
+        "He's cancelled another evening with Mia, this time without much of an excuse at all."
+       ],
+       "hides": [
+        "He still hasn't told her anything real about the letters or why the case has taken over his life so completely."
+       ],
+       "believes_falsely": [
+        "He still believes there will be a clean moment to make things right with Mia once the Chen case, or the cipher case, resolves."
+       ]
+      },
+      "MIA_REID": {
+       "knows": [
+        "Reid is more distant now than during any previous case in their marriage.",
+        "He cancelled plans again with barely an explanation."
+       ],
+       "hides": [],
+       "believes_falsely": [
+        "She assumes this new distance is simply a worse version of old patterns, not yet suspecting there's a second, hidden reason behind it."
+       ]
+      }
+     }
+    }
+   ]
+  },
+  {
+   "figure": "Rules of the Game",
+   "theme": "The Curator tailors a clue specifically to Reid's psychology, pushing Reid to bend procedure for the first time as Captain Hollis fields mounting pressure over the frame-up's fallout.",
+   "intro_note": "The killer's mockery of the Chen arrest still stings — and now a new letter arrives built from something far more personal than a city landmark.",
+   "outro_note": "Somewhere in the dark of the mill, the Curator is preparing to open his gallery for the first time — and outside the courthouse, Joy Chen's fight for her brother is about to become impossible to ignore.",
+   "sections": [
+    "Precinct Bullpen: a new cipher arrives, this one built from details of a case Reid solved years ago and never spoke of publicly.",
+    "Reid Apartment: Mia watches Reid read the letter over and over at the kitchen table, unable to reach him.",
+    "The Curator's Study: the Curator prepares something new with the same unhurried, museum-like care, giving nothing of his intent away.",
+    "Precinct Bullpen, after hours: Reid quietly holds the letter back from the evidence log, telling himself he'll enter it later.",
+    "Courthouse Steps: Joy Chen's campaign gains real traction as reporters start asking pointed questions about the thinness of the case against her brother.",
+    "Precinct Bullpen: Hollis fields a tense call from the mayor's liaison over the mounting Chen fallout, unaware of what Reid is quietly withholding.",
+    "Downtown Diner: Park notices the letter is missing from the log and asks Reid about it directly.",
+    "Interrogation Room: Daniel Chen's public defender pushes back hard, exposing how little actually ties him to the killings.",
+    "Riverside Overlook: Reid checks a dead drop alone, without backup or a call-in, breaking protocol for the first time.",
+    "Reid Apartment: Mia gently confronts Reid about how far away he's become; he deflects rather than answers.",
+    "The Old Textile Mill: alone at the scene again, Reid realizes with a chill that the newest cipher mirrors a case from his own past far too closely to be coincidence.",
+    "Precinct Bullpen: Hollis warns Reid to keep the Chen fallout clean and by-the-book, unaware of the irony in his own advice.",
+    "Courthouse Steps: Joy Chen secures a sympathetic reporter willing to dig deeper into the department's evidence.",
+    "Downtown Diner: pressed by Park about the missing letter, Reid tells his partner the first real lie of the season.",
+    "Reid Apartment: closing image — Reid alone at his desk with the concealed letter as Mia sleeps, unreachable, in the next room."
+   ],
+   "section_words": [
+    null,
+    null,
+    null,
+    {
+     "min": 140,
+     "max": 210,
+     "target": "150 to 180"
+    },
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    {
+     "min": 130,
+     "max": 200,
+     "target": "140 to 180"
+    },
+    null
+   ],
+   "section_locations": [
+    "PRECINCT_BULLPEN",
+    "REID_APARTMENT",
+    "THE_CURATOR_STUDY",
+    "PRECINCT_BULLPEN",
+    "COURTHOUSE_STEPS",
+    "PRECINCT_BULLPEN",
+    "DOWNTOWN_DINER",
+    "INTERROGATION_ROOM",
+    "RIVERSIDE_OVERLOOK",
+    "REID_APARTMENT",
+    "THE_OLD_TEXTILE_MILL",
+    "PRECINCT_BULLPEN",
+    "COURTHOUSE_STEPS",
+    "DOWNTOWN_DINER",
+    "REID_APARTMENT"
+   ],
+   "case": [
+    {
+     "label": "The Cipher Killings",
+     "solution": "For over a decade, the Curator — a former linguistics professor — has quietly murdered people the city stopped counting, staging each body as a tableau and encoding fragments of a private, ongoing 'manuscript' in the arrangement; the killings addressed to Reid are not new crimes but the final chapters of that manuscript, and the Curator's true design is not to be caught but to groom Reid, cipher by cipher, into an obsession that will eventually make Reid himself deliver the piece's last brushstroke.",
+     "objective_facts": [
+      "A cipher letter addressed personally to Detective Marcus Reid was left at the first tableau site, though the killings themselves predate this season by more than a decade.",
+      "Each solved cipher points to a real location and a real time, never to a riddle without a physical answer.",
+      "The killer references private details of Reid's life — dates, habits, choices — that were never released to the press or public record.",
+      "Trace evidence at every tableau site shows specialized knowledge of antique textile machinery consistent with the Old Textile Mill.",
+      "Handwriting and phrasing analysis links the new letters to unsolved cases stretching back more than ten years, though only this season's letters are addressed to Reid by name."
+     ],
+     "character_knowledge": {
+      "REID": {
+       "knows": [
+        "The newest cipher is built from private details of a case he solved years ago and never discussed outside the department.",
+        "This is proof the killer has been studying him personally for far longer than this season."
+       ],
+       "hides": [
+        "He has now physically withheld the letter from the evidence log rather than merely failing to mention its personal nature — his first real procedural violation.",
+        "He lies to Park's face when she asks about the missing letter."
+       ],
+       "believes_falsely": [
+        "He still believes he can manage this privately and hand over everything once he 'wins' the exchange, not seeing that the game has no such finish line."
+       ]
+      },
+      "THE_CURATOR": {
+       "knows": [
+        "That referencing Reid's own solved case will land harder than any new threat could.",
+        "That Reid has begun bending procedure to keep the game to himself, exactly as intended."
+       ],
+       "hides": [
+        "Any sign that this letter, like the others, was chosen specifically to erode Reid rather than simply challenge him."
+       ],
+       "believes_falsely": []
+      },
+      "DET_PARK": {
+       "knows": [
+        "The letter that came in is missing from the evidence log.",
+        "Reid gave her an answer about it that didn't sit right."
+       ],
+       "hides": [
+        "She hasn't escalated the missing letter to Hollis yet, choosing to ask Reid directly first instead."
+       ],
+       "believes_falsely": [
+        "She wants to believe Reid has an explanation that will make this look less serious than it feels."
+       ]
+      }
+     }
+    },
+    {
+     "label": "The Frame-Up",
+     "solution": "The circumstantial evidence implicating Daniel Chen — Joy Chen's younger brother — was deliberately planted by the Curator, who identified Daniel as a plausible, vulnerable fall guy specifically to slow the investigation and test how readily the system, and Reid, would accept an easy answer; Daniel had no connection to the real killings and does not know why he was chosen.",
+     "objective_facts": [
+      "A torn receipt bearing Daniel Chen's thumbprint was recovered half-buried near a body dump site.",
+      "Daniel Chen has one prior arrest, a nonviolent trespassing charge, and no history of violence.",
+      "Daniel Chen has no verifiable alibi witness for the night in question, though he was not at the dump site.",
+      "The physical evidence tying Daniel to the scene is consistent with having been planted using items Daniel had discarded or lost.",
+      "Daniel briefly worked at a laundromat later confirmed to have been frequented by a customer using a false name matching the Curator's known patterns."
+     ],
+     "character_knowledge": {
+      "REID": {
+       "knows": [
+        "The public defender's challenge has exposed how thin the case against Daniel really is."
+       ],
+       "hides": [
+        "He says nothing to Hollis about how weak he privately believes the case to be, even as the fallout grows."
+       ],
+       "believes_falsely": [
+        "He tells himself staying quiet on Daniel's case is a small, contained compromise, not connected to the larger rules he's already begun breaking elsewhere."
+       ]
+      },
+      "CAPTAIN_HOLLIS": {
+       "knows": [
+        "The mayor's liaison now sees the Chen arrest as a liability rather than a win.",
+        "Reporters are asking exactly the right hard questions about the evidence."
+       ],
+       "hides": [],
+       "believes_falsely": [
+        "He still trusts Reid's judgment completely and has no idea procedure has already been broken on the cipher side of the case."
+       ]
+      },
+      "JOY_CHEN": {
+       "knows": [
+        "A sympathetic reporter is now willing to dig into the department's evidence on her brother's behalf."
+       ],
+       "hides": [],
+       "believes_falsely": [
+        "She believes exposing the department's incompetence publicly is the only lever she has, not knowing the real killer is watching her fight unfold from a distance."
+       ]
+      },
+      "DET_PARK": {
+       "knows": [
+        "The public defender's challenge lines up with the same timeline gaps she already noticed herself."
+       ],
+       "hides": [],
+       "believes_falsely": [
+        "She assumes Reid shares her growing certainty that Daniel is the wrong man, not realizing he's chosen silence over saying so."
+       ]
+      }
+     }
+    },
+    {
+     "label": "The Marriage Collapse",
+     "solution": "Reid's growing distance from Mia is not infidelity, as she will eventually fear, but the slow, secretive pull of the Curator's game — a private obsession Reid feeds by keeping the letters, the hours, and the compromises to himself, telling himself he can repair the marriage once the case is 'solved,' never grasping that this case has no finish line built for him to reach on his own terms.",
+     "objective_facts": [
+      "Reid missed the couple's wedding anniversary dinner to work the case's first night.",
+      "Reid has spent multiple nights this season sleeping at the precinct or in his car rather than at home.",
+      "Reid has not told Mia that the killer's letters are addressed to him personally by name.",
+      "Mia has begun keeping her own private notes on the nights and calls Reid has missed.",
+      "Reid has let calls from Mia go to voicemail during active moments of the investigation on more than one occasion."
+     ],
+     "character_knowledge": {
+      "REID": {
+       "knows": [
+        "He is reading and re-reading the letter obsessively at home, in front of Mia, without explaining why."
+       ],
+       "hides": [
+        "He deflects when Mia asks directly what's wrong, rather than telling her anything true about the letters."
+       ],
+       "believes_falsely": [
+        "He believes his silence is protecting Mia, not realizing it is what's actually driving her away."
+       ]
+      },
+      "MIA_REID": {
+       "knows": [
+        "Reid is reading the same letter over and over without explanation.",
+        "When she asks him directly what's wrong, he deflects rather than answers."
+       ],
+       "hides": [],
+       "believes_falsely": [
+        "She's beginning to wonder if there's something — or someone — else entirely behind his distance, though she has no evidence for it yet."
+       ]
+      }
+     }
+    }
+   ]
+  },
+  {
+   "figure": "The Gallery Opens",
+   "theme": "The Curator reveals his private showcase at the old textile mill, deepening the Cipher Killings thread, while the wrongly accused suspect's public exoneration campaign gains dangerous momentum.",
+   "intro_note": "In the wake of the tailored clue that pushed Reid to bend procedure for the first time, and with Hollis still absorbing the fallout from the frame-up campaign, the hunt is about to lead Reid somewhere the Curator has been waiting for him all along.",
+   "outro_note": "Alone in the gallery long after the forensics teams have gone, Reid can't explain why he came back — only that he did. At home, the boxes of case files have found a new room to fill, and Mia is running out of doors left to close behind them.",
+   "sections": [
+    "Morning briefing at the bullpen: Reid walks Hollis and Park through the latest cipher's rhetorical structure (Cipher Killings)",
+    "Reid and Park breach the old textile mill and find the Curator's private gallery for the first time (Cipher Killings)",
+    "Joy Chen holds a press conference on the courthouse steps demanding Danny's release (The Frame-Up)",
+    "Hollis fields a call from the mayor's office about the press fallout from the frame-up (The Frame-Up)",
+    "In his hidden study, the Curator reviews coverage of the exoneration campaign with quiet satisfaction (Cipher Killings)",
+    "Reid comes home late again; Mia notices the case has spread into a second room (The Reid Marriage)",
+    "Forensics processes the mill scene while Reid resists sharing his own private notes (Cipher Killings)",
+    "Park vents to a friend over coffee about how territorial Reid has become with evidence (Cipher Killings)",
+    "Danny Chen is brought in for renewed questioning as public pressure mounts around him (The Frame-Up)",
+    "A new dead drop appears at the riverside overlook, directly referencing the gallery (Cipher Killings)",
+    "Mia finds another pinned photo has migrated into the living room and says nothing this time (The Reid Marriage)",
+    "The Curator notes, with private precision, exactly how long Reid lingered at each tableau (Cipher Killings)",
+    "Joy Chen's campaign gains an unexpected ally in the press, raising the stakes further (The Frame-Up)",
+    "Hollis warns Reid that the frame-up's publicity could bring scrutiny onto the whole department (The Frame-Up)",
+    "Late that night, Reid returns alone to the gallery, unable to explain why he came back (Cipher Killings)"
+   ],
+   "section_words": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    {
+     "min": 140,
+     "max": 210,
+     "target": "150 to 180"
+    },
+    null,
+    null,
+    null,
+    null,
+    null,
+    {
+     "min": 130,
+     "max": 200,
+     "target": "140 to 170"
+    }
+   ],
+   "section_locations": [
+    "PRECINCT_BULLPEN",
+    "THE_OLD_TEXTILE_MILL",
+    "COURTHOUSE_STEPS",
+    "PRECINCT_BULLPEN",
+    "THE_CURATOR_STUDY",
+    "REID_APARTMENT",
+    "THE_OLD_TEXTILE_MILL",
+    "DOWNTOWN_DINER",
+    "INTERROGATION_ROOM",
+    "RIVERSIDE_OVERLOOK",
+    "REID_APARTMENT",
+    "THE_CURATOR_STUDY",
+    "COURTHOUSE_STEPS",
+    "PRECINCT_BULLPEN",
+    "THE_OLD_TEXTILE_MILL"
+   ],
+   "case": [
+    {
+     "label": "The Cipher Killings",
+     "solution": "The Curator, a former linguistics professor forced out over his obsessive theories of murder as rhetoric, has spent years compiling a private 'manuscript' of killings staged as figures of speech in his own grammar. But the true subject was never the victims: for years he has surveilled Reid specifically, choosing victims and clues calibrated to push Reid toward exact ethical compromises, because the finished 'masterwork' requires Reid himself to become its closing gesture — an executioner shaped and directed without his own knowledge.",
+     "objective_facts": [
+      "Each crime scene at the mill is arranged with museum-grade precision, including a cipher card written in an antiquated rhetorical shorthand.",
+      "Every cipher sent to Reid contains at least one private detail about his own life that was never made public.",
+      "The Curator was quietly dismissed from a university linguistics post years ago after colleagues reported his fixation on 'murder as grammar.'",
+      "Forensics finds no physical evidence tying Danny Chen to the mill's interior staging beyond a single planted shoe impression outside the perimeter."
+     ],
+     "character_knowledge": {
+      "REID": {
+       "knows": [
+        "He has located the Curator's private staging ground at the old textile mill and has begun visiting it to study each tableau firsthand.",
+        "The ciphers follow a private rhetorical logic — the Curator is composing something, not killing at random."
+       ],
+       "hides": [
+        "He has held back a fragment of the latest cipher from the official case file, telling himself he'll share it once he's worked out its meaning."
+       ],
+       "believes_falsely": [
+        "He believes discovering the mill on his own gives him an advantage the Curator didn't intend, not realizing the location was always meant to be found exactly when he found it."
+       ]
+      },
+      "THE_CURATOR": {
+       "knows": [
+        "Every detail of how Reid reacted to finding the gallery, including which tableau held his attention longest."
+       ],
+       "hides": [
+        "That the mill's 'discovery' was staged for Reid's benefit and timed to his psychological state."
+       ],
+       "believes_falsely": [
+        "He believes Park's growing unease is still contained by her loyalty to Reid, underestimating how quickly professional doubt can turn into evidence-gathering."
+       ]
+      },
+      "DET_PARK": {
+       "knows": [
+        "The mill scene was processed with Reid unusually resistant to sharing his own notes with forensics."
+       ],
+       "hides": [
+        "Her private discomfort with how territorial Reid has become over evidence, which she hasn't voiced to Hollis."
+       ],
+       "believes_falsely": [
+        "She assumes Reid's secrecy is exhaustion and stress, not yet suspecting deliberate concealment."
+       ]
+      },
+      "CAPTAIN_HOLLIS": {
+       "knows": [
+        "The mill find is a major break that will buy the department goodwill with the mayor's office."
+       ],
+       "hides": [
+        "He is aware Reid's methods at the new scene bent evidence-handling protocol and has chosen not to log it formally."
+       ],
+       "believes_falsely": [
+        "He believes shielding Reid a little longer will pay off once an arrest is made, not grasping how far Reid has already drifted."
+       ]
+      }
+     }
+    },
+    {
+     "label": "The Frame-Up",
+     "solution": "Danny Chen, Joy Chen's younger brother, was deliberately implicated by the Curator: a manufactured shoe print, a doctored security-camera timestamp, and a public argument with an early victim were all engineered to be found, making Danny a plausible suspect. He is entirely innocent; he was chosen so the department could plausibly pursue him while the real trail went cold, and so his sister's public fight would consume the department's political attention exactly when Reid needed room to work unsupervised.",
+     "objective_facts": [
+      "Danny Chen argued publicly, and was recorded doing so, with one of the mill's victims two weeks before the murder.",
+      "A shoe print matching Danny's size was found near, but not inside, the primary crime scene perimeter.",
+      "A nearby security camera timestamp placing Danny near the docks that night shows a technical discrepancy consistent with tampering, though this has not yet been uncovered by anyone.",
+      "No physical evidence ties Danny to the mill's interior staging."
+     ],
+     "character_knowledge": {
+      "REID": {
+       "knows": [
+        "The case against Danny Chen still rests on evidence he privately considers thin."
+       ],
+       "hides": [
+        "He has said nothing to challenge the DA's growing public confidence in the case against Danny, because the political heat on that thread quietly takes attention off his own irregularities."
+       ],
+       "believes_falsely": [
+        "He tells himself the frame-up will sort itself out on the evidence alone, without his help — a conclusion he hasn't examined too hard."
+       ]
+      },
+      "DET_PARK": {
+       "knows": [
+        "The physical evidence tying Danny Chen to the mill is limited to a single shoe impression outside the perimeter."
+       ],
+       "hides": [
+        "Her growing doubt about the strength of the case, which she hasn't pushed hard within the department."
+       ],
+       "believes_falsely": [
+        "She assumes the weak case against Danny reflects rushed police work under pressure, not a deliberately planted trail."
+       ]
+      },
+      "CAPTAIN_HOLLIS": {
+       "knows": [
+        "The mayor's office wants the frame-up thread closed fast and is pleased to see Joy Chen's public campaign now demanding attention."
+       ],
+       "hides": [
+        "That he's aware the case against Danny is thinner than what's being presented to the press, and is letting the DA's office run with it anyway."
+       ],
+       "believes_falsely": [
+        "He believes the frame-up case reaching a resolution — guilty or not — will relieve enough pressure to give the cipher investigation room to breathe."
+       ]
+      },
+      "JOY_CHEN": {
+       "knows": [
+        "Her brother's public argument with one of the victims was over a personal debt, not violence, and that Danny was elsewhere the night of the killing."
+       ],
+       "hides": [
+        "The specific, embarrassing nature of the debt-related argument, which she has kept out of her public campaign to protect Danny's dignity."
+       ],
+       "believes_falsely": [
+        "She believes the department is targeting Danny out of convenience and bias, not yet suspecting the evidence against him was deliberately manufactured."
+       ]
+      }
+     }
+    },
+    {
+     "label": "The Reid Marriage",
+     "solution": "Mia has reached the end of what she can absorb of Reid's disappearance into the case; she has quietly begun consulting a family law attorney and leaned heavily on her sister for support Reid no longer provides. She has not decided to leave for certain and has not told Reid about the lawyer, hoping one real conversation might still change things — but she has stopped waiting patiently.",
+     "objective_facts": [
+      "Mia has met with a family law attorney once, telling no one but her sister.",
+      "Reid has missed three consecutive commitments tied to their marriage counseling attempts.",
+      "Mia has taken on extra tutoring hours explicitly to have a reason to be out of the apartment during Reid's case-work hours."
+     ],
+     "character_knowledge": {
+      "REID": {
+       "knows": [
+        "He has missed shared commitments with Mia again this week and knows it."
+       ],
+       "hides": [
+        "The extent to which case materials have spread from his home office into their shared living space, which he minimizes when Mia notices."
+       ],
+       "believes_falsely": [
+        "He believes Mia will still be there once the case breaks, underestimating how close she has come to making a decision without him."
+       ]
+      },
+      "MIA_REID": {
+       "knows": [
+        "Exactly how much of their apartment and their marriage the case has now consumed."
+       ],
+       "hides": [
+        "That she has begun quietly speaking to her sister about how much longer she can do this."
+       ],
+       "believes_falsely": [
+        "She believes this is still about one case ending, not yet recognizing it as a deeper change in who Reid has become."
+       ]
+      }
+     }
+    }
+   ]
+  },
+  {
+   "figure": "Breaking Point",
+   "theme": "Reid's marriage with Mia reaches a crisis point after another broken promise, while Park quietly uncovers a procedural violation that troubles her about how Reid has been working the case.",
+   "intro_note": "Reid's late-night return to the mill has left him more certain than ever that he's closing in — certain enough not to notice Park quietly pulling a thread of her own, or how little runway is left at home.",
+   "outro_note": "Park says nothing more than she has to, but the look on her face makes it clear: she knows something is wrong, even if she isn't ready to say what. Upstairs, Hollis is already drafting the conversation he's been putting off for weeks.",
+   "sections": [
+    "Morning at the apartment: the rescheduled counseling appointment comes and goes without Reid (The Reid Marriage)",
+    "Park quietly reviews the mill evidence log and notices a discrepancy in the timestamps (Cipher Killings)",
+    "In his study, the Curator times a new clue to land on a private detail of Reid's home life (Cipher Killings)",
+    "Reid and Park talk shop at the diner; she almost asks him directly what she's seeing (Cipher Killings)",
+    "Joy Chen's legal team files a motion challenging the evidence against Danny (The Frame-Up)",
+    "Mia confronts Reid about the missed appointment; the fight begins in earnest (The Reid Marriage)",
+    "Danny's attorney pushes back hard on the DA in a closed-door meeting (The Frame-Up)",
+    "Park finds hard documentation proving the chain-of-custody gap in the mill evidence (Cipher Killings)",
+    "The fight between Reid and Mia peaks in the kitchen, each word landing like an accusation (The Reid Marriage)",
+    "Reid retreats to the overlook to think, replaying both the case and the fight (Cipher Killings)",
+    "The Curator reflects with quiet satisfaction on how visibly Reid is fraying (Cipher Killings)",
+    "Park sits alone with what she's found, unsure whether to take it to Hollis (Cipher Killings)",
+    "Mia meets her sister and admits how close she came to saying the word 'lawyer' out loud (The Reid Marriage)",
+    "The legal challenge to Danny's case breaks in the evening news, adding new pressure (The Frame-Up)",
+    "Park corners Reid at his desk, her tone careful, hinting she knows something is wrong (Cipher Killings)"
+   ],
+   "section_words": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    {
+     "min": 140,
+     "max": 210,
+     "target": "150 to 180"
+    },
+    null,
+    null,
+    null,
+    null,
+    null,
+    {
+     "min": 140,
+     "max": 210,
+     "target": "150 to 180"
+    }
+   ],
+   "section_locations": [
+    "REID_APARTMENT",
+    "PRECINCT_BULLPEN",
+    "THE_CURATOR_STUDY",
+    "DOWNTOWN_DINER",
+    "COURTHOUSE_STEPS",
+    "REID_APARTMENT",
+    "INTERROGATION_ROOM",
+    "PRECINCT_BULLPEN",
+    "REID_APARTMENT",
+    "RIVERSIDE_OVERLOOK",
+    "THE_CURATOR_STUDY",
+    "PRECINCT_BULLPEN",
+    "DOWNTOWN_DINER",
+    "COURTHOUSE_STEPS",
+    "PRECINCT_BULLPEN"
+   ],
+   "case": [
+    {
+     "label": "The Cipher Killings",
+     "solution": "The Curator, a former linguistics professor forced out over his obsessive theories of murder as rhetoric, has spent years compiling a private 'manuscript' of killings staged as figures of speech in his own grammar. But the true subject was never the victims: for years he has surveilled Reid specifically, choosing victims and clues calibrated to push Reid toward exact ethical compromises, because the finished 'masterwork' requires Reid himself to become its closing gesture — an executioner shaped and directed without his own knowledge.",
+     "objective_facts": [
+      "Each crime scene at the mill is arranged with museum-grade precision, including a cipher card written in an antiquated rhetorical shorthand.",
+      "Every cipher sent to Reid contains at least one private detail about his own life that was never made public.",
+      "The Curator was quietly dismissed from a university linguistics post years ago after colleagues reported his fixation on 'murder as grammar.'",
+      "Forensics finds no physical evidence tying Danny Chen to the mill's interior staging beyond a single planted shoe impression outside the perimeter."
+     ],
+     "character_knowledge": {
+      "REID": {
+       "knows": [
+        "He has located the Curator's private staging ground at the old textile mill and returns to it on his own, off the record.",
+        "The ciphers follow a private rhetorical logic aimed specifically at his own history."
+       ],
+       "hides": [
+        "He has delayed logging a piece of mill evidence long enough to blur its chain of custody, and has said nothing about it to Park or Hollis."
+       ],
+       "believes_falsely": [
+        "He believes he can correct the record quietly later, without anyone noticing the gap he's created."
+       ]
+      },
+      "THE_CURATOR": {
+       "knows": [
+        "Precisely which personal detail of Reid's life to fold into the next cipher for maximum effect."
+       ],
+       "hides": [
+        "That the timing of this clue was chosen to land during a moment of maximum strain in Reid's marriage."
+       ],
+       "believes_falsely": [
+        "He believes Reid's fraying composure is proceeding exactly on schedule, underestimating how close Park is to finding hard proof of the very gap he engineered."
+       ]
+      },
+      "DET_PARK": {
+       "knows": [
+        "She has found documented proof that a piece of mill evidence was logged days later than Reid claims, creating a gap in the chain of custody."
+       ],
+       "hides": [
+        "That she has found this discrepancy at all — she has not yet told Hollis or confronted Reid directly with what she knows."
+       ],
+       "believes_falsely": [
+        "She still hopes there's an innocent explanation for the gap, even though the timeline she's assembled makes that harder to believe."
+       ]
+      },
+      "CAPTAIN_HOLLIS": {
+       "knows": [
+        "Press interest in both the cipher case and the frame-up is intensifying at the same time, straining the department's resources and credibility."
+       ],
+       "hides": [
+        "He continues to keep Reid's irregular methods off formal Internal Affairs radar."
+       ],
+       "believes_falsely": [
+        "He believes he still has time to manage both threads quietly before either one becomes unmanageable."
+       ]
+      }
+     }
+    },
+    {
+     "label": "The Frame-Up",
+     "solution": "Danny Chen, Joy Chen's younger brother, was deliberately implicated by the Curator: a manufactured shoe print, a doctored security-camera timestamp, and a public argument with an early victim were all engineered to be found, making Danny a plausible suspect. He is entirely innocent; he was chosen so the department could plausibly pursue him while the real trail went cold, and so his sister's public fight would consume the department's political attention exactly when Reid needed room to work unsupervised.",
+     "objective_facts": [
+      "Danny Chen argued publicly, and was recorded doing so, with one of the mill's victims two weeks before the murder.",
+      "A shoe print matching Danny's size was found near, but not inside, the primary crime scene perimeter.",
+      "A nearby security camera timestamp placing Danny near the docks that night shows a technical discrepancy consistent with tampering, though this has not yet been uncovered by anyone.",
+      "No physical evidence ties Danny to the mill's interior staging."
+     ],
+     "character_knowledge": {
+      "REID": {
+       "knows": [
+        "Danny Chen's attorney has filed a motion challenging the strength of the evidence against him."
+       ],
+       "hides": [
+        "He still says nothing to strengthen Danny's case even though he privately doubts it, because the distraction still serves him."
+       ],
+       "believes_falsely": [
+        "He continues to tell himself this isn't really his responsibility to fix."
+       ]
+      },
+      "DET_PARK": {
+       "knows": [
+        "The legal motion filed on Danny's behalf raises the same evidentiary doubts she's privately held."
+       ],
+       "hides": [
+        "She hasn't voiced her doubts about the Chen case any more forcefully than before, distracted by what she's found in the mill evidence log."
+       ],
+       "believes_falsely": [
+        "She assumes the weak case against Danny reflects rushed police work under pressure, not a deliberately planted trail."
+       ]
+      },
+      "CAPTAIN_HOLLIS": {
+       "knows": [
+        "The legal challenge to the Chen case could become a public embarrassment if it succeeds."
+       ],
+       "hides": [
+        "That he's aware the case against Danny is thinner than what's being presented to the press, and is letting the DA's office run with it anyway."
+       ],
+       "believes_falsely": [
+        "He believes the frame-up case reaching a resolution — guilty or not — will relieve enough pressure to give the cipher investigation room to breathe."
+       ]
+      },
+      "JOY_CHEN": {
+       "knows": [
+        "Her legal team believes the motion has genuine grounds to succeed."
+       ],
+       "hides": [
+        "The specific, embarrassing nature of the debt-related argument, which she has kept out of her public campaign to protect Danny's dignity."
+       ],
+       "believes_falsely": [
+        "She believes the department is targeting Danny out of convenience and bias, not yet suspecting the evidence against him was deliberately manufactured."
+       ]
+      }
+     }
+    },
+    {
+     "label": "The Reid Marriage",
+     "solution": "Mia has reached the end of what she can absorb of Reid's disappearance into the case; she has quietly begun consulting a family law attorney and leaned heavily on her sister for support Reid no longer provides. She has not decided to leave for certain and has not told Reid about the lawyer, hoping one real conversation might still change things — but she has stopped waiting patiently.",
+     "objective_facts": [
+      "Mia has met with a family law attorney once, telling no one but her sister.",
+      "Reid has missed three consecutive commitments tied to their marriage counseling attempts.",
+      "Mia has taken on extra tutoring hours explicitly to have a reason to be out of the apartment during Reid's case-work hours."
+     ],
+     "character_knowledge": {
+      "REID": {
+       "knows": [
+        "He missed the rescheduled counseling appointment that was supposed to be his last chance to show Mia he meant it."
+       ],
+       "hides": [
+        "How close he came to canceling it before it even started, and that some part of him chose the case over walking through that door."
+       ],
+       "believes_falsely": [
+        "He believes one real conversation, once the case is done, can still repair what the missed appointment cost — underestimating how final this one already feels to Mia."
+       ]
+      },
+      "MIA_REID": {
+       "knows": [
+        "She has now consulted a family law attorney once, telling only her sister."
+       ],
+       "hides": [
+        "The lawyer consultation itself, from Reid — she isn't ready to make it real by saying it aloud to him."
+       ],
+       "believes_falsely": [
+        "She still half-believes one honest conversation could change her mind, even as she quietly prepares for the possibility that it won't."
+       ]
+      }
+     }
+    }
+   ]
+  },
+  {
+   "figure": "The Captain's Warning",
+   "theme": "Hollis threatens to pull Reid from the investigation, prompting Reid to conceal evidence to stay on the case, as the Frame-Up thread edges toward a resolution that costs someone dearly.",
+   "intro_note": "Park's unspoken suspicion now sits between her and Reid like a third partner in every conversation, and Hollis has finally decided he can't wait any longer to have the talk he's been avoiding.",
+   "outro_note": "The charge against Danny Chen buys the department a headline's worth of peace, and buys Reid nothing but silence — his own, and the growing, unplaceable feeling that someone has been watching him far more closely, for far longer, than any case file could explain.",
+   "sections": [
+    "Hollis calls Reid in and warns he may be pulled from the investigation over his handling of evidence (Cipher Killings)",
+    "A tense meeting over Danny Chen's plea options plays out between the DA and Danny's lawyer (The Frame-Up)",
+    "In his study, the Curator prepares a new cipher, aware of the pressure now closing on Reid (Cipher Killings)",
+    "Reid makes the deliberate choice to withhold a new piece of mill evidence from the case file entirely (Cipher Killings)",
+    "At the apartment, Mia notices Reid growing more secretive, still unaware of the lawyer she's seen (The Reid Marriage)",
+    "Danny Chen is formally charged on the courthouse steps amid a frenzy of press cameras (The Frame-Up)",
+    "Park sits alone at the diner, wrestling with whether to take what she knows to Hollis (Cipher Killings)",
+    "Reid returns to the gallery alone against direct orders, breaking another rule he used to enforce (Cipher Killings)",
+    "In the interrogation room, Danny Chen breaks down as he learns he's lost his job over the charge (The Frame-Up)",
+    "Hollis begins to suspect, though he can't yet prove, that Reid has concealed something from him (Cipher Killings)",
+    "At the overlook, Joy Chen receives the devastating news of her brother's formal arraignment (The Frame-Up)",
+    "A quiet, cold scene between Reid and Mia, the distance between them now visible even to him (The Reid Marriage)",
+    "Hollis delivers his final warning to Reid, a line Reid knows he can't uncross (Cipher Killings)",
+    "In his study, the Curator watches Reid's unraveling with quiet approval and a flicker of something more personal (Cipher Killings)",
+    "At the mill that night, a new detail surfaces suggesting the Curator has tracked Reid's life far more intimately than anyone suspected (Cipher Killings)"
+   ],
+   "section_words": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    {
+     "min": 140,
+     "max": 210,
+     "target": "150 to 180"
+    },
+    null,
+    null,
+    null,
+    null,
+    null,
+    {
+     "min": 130,
+     "max": 200,
+     "target": "140 to 170"
+    }
+   ],
+   "section_locations": [
+    "PRECINCT_BULLPEN",
+    "INTERROGATION_ROOM",
+    "THE_CURATOR_STUDY",
+    "PRECINCT_BULLPEN",
+    "REID_APARTMENT",
+    "COURTHOUSE_STEPS",
+    "DOWNTOWN_DINER",
+    "THE_OLD_TEXTILE_MILL",
+    "INTERROGATION_ROOM",
+    "PRECINCT_BULLPEN",
+    "RIVERSIDE_OVERLOOK",
+    "REID_APARTMENT",
+    "PRECINCT_BULLPEN",
+    "THE_CURATOR_STUDY",
+    "THE_OLD_TEXTILE_MILL"
+   ],
+   "case": [
+    {
+     "label": "The Cipher Killings",
+     "solution": "The Curator, a former linguistics professor forced out over his obsessive theories of murder as rhetoric, has spent years compiling a private 'manuscript' of killings staged as figures of speech in his own grammar. But the true subject was never the victims: for years he has surveilled Reid specifically, choosing victims and clues calibrated to push Reid toward exact ethical compromises, because the finished 'masterwork' requires Reid himself to become its closing gesture — an executioner shaped and directed without his own knowledge.",
+     "objective_facts": [
+      "Each crime scene at the mill is arranged with museum-grade precision, including a cipher card written in an antiquated rhetorical shorthand.",
+      "Every cipher sent to Reid contains at least one private detail about his own life that was never made public.",
+      "The Curator was quietly dismissed from a university linguistics post years ago after colleagues reported his fixation on 'murder as grammar.'",
+      "Forensics finds no physical evidence tying Danny Chen to the mill's interior staging beyond a single planted shoe impression outside the perimeter."
+     ],
+     "character_knowledge": {
+      "REID": {
+       "knows": [
+        "Hollis is close to pulling him from the investigation over his handling of evidence."
+       ],
+       "hides": [
+        "He makes the deliberate choice to withhold a new piece of mill evidence from the case file entirely, calculating that losing the case matters more to him than the rule he's breaking."
+       ],
+       "believes_falsely": [
+        "He believes this one concealment is a one-time necessity to finish what he started, not the same rationalization he's made every time before."
+       ]
+      },
+      "THE_CURATOR": {
+       "knows": [
+        "That the pressure closing in on Reid from Hollis is pushing him toward exactly the kind of concealment the Curator has been counting on."
+       ],
+       "hides": [
+        "The full extent of how long and how closely he has been watching Reid's life outside the case, a fact only now beginning to leak through the newest clue."
+       ],
+       "believes_falsely": [
+        "He believes his hand in the concealment will remain invisible to Park, underestimating how far her own quiet investigation has already gone."
+       ]
+      },
+      "DET_PARK": {
+       "knows": [
+        "She now has enough documented irregularities to take to Hollis, but has not yet done so."
+       ],
+       "hides": [
+        "That she is close to going over Reid's head, which she hasn't told him or anyone else."
+       ],
+       "believes_falsely": [
+        "She still hopes confronting Reid herself first might fix this before it becomes a formal problem."
+       ]
+      },
+      "CAPTAIN_HOLLIS": {
+       "knows": [
+        "He has decided to warn Reid directly that he will be pulled from the case if his methods don't change."
+       ],
+       "hides": [
+        "That he suspects, but cannot yet prove, that Reid has already crossed a line he hasn't disclosed."
+       ],
+       "believes_falsely": [
+        "He believes the warning alone will be enough to bring Reid back in line, not realizing how far gone that choice already is."
+       ]
+      }
+     }
+    },
+    {
+     "label": "The Frame-Up",
+     "solution": "Danny Chen, Joy Chen's younger brother, was deliberately implicated by the Curator: a manufactured shoe print, a doctored security-camera timestamp, and a public argument with an early victim were all engineered to be found, making Danny a plausible suspect. He is entirely innocent; he was chosen so the department could plausibly pursue him while the real trail went cold, and so his sister's public fight would consume the department's political attention exactly when Reid needed room to work unsupervised.",
+     "objective_facts": [
+      "Danny Chen argued publicly, and was recorded doing so, with one of the mill's victims two weeks before the murder.",
+      "A shoe print matching Danny's size was found near, but not inside, the primary crime scene perimeter.",
+      "A nearby security camera timestamp placing Danny near the docks that night shows a technical discrepancy consistent with tampering, though this has not yet been uncovered by anyone.",
+      "No physical evidence ties Danny to the mill's interior staging."
+     ],
+     "character_knowledge": {
+      "REID": {
+       "knows": [
+        "Danny Chen has been formally charged despite the weakness of the evidence."
+       ],
+       "hides": [
+        "He still hasn't said anything to push back on the charge, even knowing what it will cost Danny personally."
+       ],
+       "believes_falsely": [
+        "He tells himself this isn't his case to fix, though the silence now costs more than it used to."
+       ]
+      },
+      "DET_PARK": {
+       "knows": [
+        "The formal charge against Danny Chen has cost him his job and his public reputation, whatever the evidence eventually shows."
+       ],
+       "hides": [
+        "She hasn't voiced her doubts about the Chen case any more forcefully than before, distracted by what she's found in the mill evidence log."
+       ],
+       "believes_falsely": [
+        "She still isn't certain whether the case against Danny is simply weak or was built to fail him specifically."
+       ]
+      },
+      "CAPTAIN_HOLLIS": {
+       "knows": [
+        "The formal charge has bought the department a temporary reprieve from press pressure."
+       ],
+       "hides": [
+        "That he's aware the case against Danny is thinner than what's being presented to the press, and let the DA's office run with it anyway."
+       ],
+       "believes_falsely": [
+        "He believes the charge, however thin, closes this front cleanly enough to focus on the cipher case, not anticipating how publicly it may unravel later."
+       ]
+      },
+      "JOY_CHEN": {
+       "knows": [
+        "Her brother has now lost his job and been publicly named following the formal charge."
+       ],
+       "hides": [
+        "The specific, embarrassing nature of the debt-related argument, which she has kept out of her public campaign to protect Danny's dignity."
+       ],
+       "believes_falsely": [
+        "She believes fighting harder in public is still her best option, not yet seeing how deliberately her brother was chosen for this exact role."
+       ]
+      }
+     }
+    },
+    {
+     "label": "The Reid Marriage",
+     "solution": "Mia has reached the end of what she can absorb of Reid's disappearance into the case; she has quietly begun consulting a family law attorney and leaned heavily on her sister for support Reid no longer provides. She has not decided to leave for certain and has not told Reid about the lawyer, hoping one real conversation might still change things — but she has stopped waiting patiently.",
+     "objective_facts": [
+      "Mia has met with a family law attorney once, telling no one but her sister.",
+      "Reid has missed three consecutive commitments tied to their marriage counseling attempts.",
+      "Mia has taken on extra tutoring hours explicitly to have a reason to be out of the apartment during Reid's case-work hours."
+     ],
+     "character_knowledge": {
+      "REID": {
+       "knows": [
+        "The silence between him and Mia now has its own weight, separate from any single missed promise."
+       ],
+       "hides": [
+        "The extent to which case materials have spread from his home office into their shared living space, which he minimizes when Mia notices."
+       ],
+       "believes_falsely": [
+        "He believes there's still time to fix things with Mia once the case resolves — the same belief that's cost him ground every time before."
+       ]
+      },
+      "MIA_REID": {
+       "knows": [
+        "Reid has grown even more distant and guarded since the captain's warning, though she doesn't know why."
+       ],
+       "hides": [
+        "That she has begun quietly speaking to her sister about how much longer she can do this."
+       ],
+       "believes_falsely": [
+        "She isn't sure anymore whether waiting for the case to end is patience or denial."
+       ]
+      }
+     }
+    }
+   ]
+  },
+  {
+   "figure": "Mirror Image",
+   "theme": "Reid begins thinking and acting like the Curator himself, alarming both Park and Mia, while a new clue reveals the killer has been watching Reid far more closely than anyone suspected.",
+   "intro_note": "After Hollis's warning and the quiet evidence Reid buried to survive it, Daniel Chen sits arraigned and bruised in a holding cell — the price of staying in the game. Reid tells himself the cost was worth it. He hasn't yet noticed how much of himself he spent to pay it.",
+   "outro_note": "The clue at the mill confirms it: the Curator has been watching Reid's smallest choices for months, not just his cases. Before Reid can sit with that thought, a lab report lands on his desk — proof, finally, that Daniel Chen never touched a crime scene. Reid has ten minutes before the morning briefing to decide what to do with it.",
+   "sections": [
+    "The 3 A.M. Cadence — Reid reviews the newest cipher alone, and his murmured analysis starts sounding uncomfortably like the letters themselves (The Cipher Killings)",
+    "A Detail No File Contains — a new dead drop references a fact from Reid's childhood that was never in any public record (The Cipher Killings)",
+    "Talking in Someone Else's Voice — Mia catches Reid rehearsing a line under his breath and doesn't recognize the man saying it (The Marriage Collapse)",
+    "The Same Silence — Reid isolates a nervous witness using a tactic lifted straight from the Curator's own documented method, and Park watches, unsettled (The Cipher Killings)",
+    "Bruises on the Record — Joy Chen tells the press her brother was assaulted in custody and demands the department answer for it (The Frame-Up)",
+    "A Different Kind of Warning — Hollis notices the change in Reid but reads it as exhaustion, not erosion (The Cipher Killings)",
+    "Two Women, One Worry — Park and Mia meet by accident over coffee and realize they're watching the same slow disappearance (The Marriage Collapse)",
+    "The Clippings Wall — in a lamplit room, a patient collector arranges a new set of press photographs with evident satisfaction (The Cipher Killings)",
+    "The Ultimatum — Mia tells Reid this is the last broken promise she'll absorb without consequence (The Marriage Collapse)",
+    "A Street From Before — the cipher's newest layer points to a corner from Reid's own childhood, and he can't explain how the Curator would know it (The Cipher Killings)",
+    "Alone in the Machinery — against protocol, Reid goes to the mill by himself at night, moving through it the way its owner would (The Cipher Killings)",
+    "What the Chain Shows — Joy Chen confronts Reid directly about an inconsistency in the evidence log, and he brushes her off cold (The Frame-Up)",
+    "Going It Alone — Park challenges Reid about working solo, and he shuts the conversation down harder than he means to (The Cipher Killings)",
+    "Words in His Sleep — Mia lies awake listening to Reid murmur phrasing that isn't his own (The Marriage Collapse)",
+    "What Was Left to Be Found — the last piece of tonight's clue confirms the killer has been watching far closer, and far longer, than anyone imagined (The Cipher Killings)"
+   ],
+   "section_words": [
+    null,
+    {
+     "min": 120,
+     "max": 190,
+     "target": "140 to 170"
+    },
+    {
+     "min": 110,
+     "max": 180,
+     "target": "130 to 160"
+    },
+    null,
+    null,
+    null,
+    null,
+    null,
+    {
+     "min": 350,
+     "max": 550,
+     "target": "400 to 480"
+    },
+    null,
+    null,
+    null,
+    null,
+    {
+     "min": 100,
+     "max": 170,
+     "target": "120 to 150"
+    },
+    null
+   ],
+   "section_locations": [
+    "PRECINCT_BULLPEN",
+    "RIVERSIDE_OVERLOOK",
+    "REID_APARTMENT",
+    "INTERROGATION_ROOM",
+    "COURTHOUSE_STEPS",
+    "PRECINCT_BULLPEN",
+    "DOWNTOWN_DINER",
+    "THE_CURATOR_STUDY",
+    "REID_APARTMENT",
+    "PRECINCT_BULLPEN",
+    "THE_OLD_TEXTILE_MILL",
+    "PRECINCT_BULLPEN",
+    "DOWNTOWN_DINER",
+    "REID_APARTMENT",
+    "THE_OLD_TEXTILE_MILL"
+   ],
+   "case": [
+    {
+     "label": "The Cipher Killings",
+     "solution": "The killer the press calls the Curator has spent years quietly studying Marcus Reid before ever sending a letter — case files, personnel records, even childhood history — because the killings were never the true work. The real design is Reid himself: every clue, every calculated provocation, is built to erode the one thing that made Reid dangerous to him — his integrity — until the incorruptible detective becomes capable of the exact violence and deception the Curator practices himself.",
+     "objective_facts": [
+      "The newest clue references a private detail from Reid's childhood that exists in no public record.",
+      "The Curator was cataloguing Reid's case history and personal biography for at least two years before the first letter arrived.",
+      "Reid has begun using isolation and tailored psychological pressure in interrogations, methods that mirror the Curator's own documented style.",
+      "The tip that drew Reid to the mill alone tonight was positioned to be found only by him."
+     ],
+     "character_knowledge": {
+      "REID": {
+       "knows": [
+        "The newest clue names a detail from his own childhood.",
+        "He went to the mill alone tonight, outside protocol."
+       ],
+       "hides": [
+        "That he is deliberately adopting the Curator's interrogation methods because they get results faster."
+       ],
+       "believes_falsely": [
+        "That understanding the Curator's mind keeps him one step ahead, when every step is being placed for him to take."
+       ]
+      },
+      "THE_CURATOR": {
+       "knows": [
+        "Every detail of Reid's history, present, and choices this season."
+       ],
+       "hides": [
+        "That the hunt was never about the bodies, but about reshaping the man chasing them."
+       ],
+       "believes_falsely": []
+      },
+      "DET_PARK": {
+       "knows": [
+        "Reid's interrogation tactics have grown harsher and more isolating.",
+        "He is making unilateral moves without informing her."
+       ],
+       "hides": [
+        "That she has started privately documenting his conduct, unsure whether to escalate it."
+       ],
+       "believes_falsely": [
+        "That she can still pull Reid back personally, not grasping his transformation is being engineered by someone else entirely."
+       ]
+      },
+      "CAPTAIN_HOLLIS": {
+       "knows": [
+        "Reid's demeanor has shifted noticeably.",
+        "The mayor's office pressure over the killings continues to mount."
+       ],
+       "hides": [
+        "That he is still shielding Reid from a formal review out of old loyalty."
+       ],
+       "believes_falsely": [
+        "That Reid's coldness is fatigue and stress, not something deeper giving way."
+       ]
+      },
+      "MIA_REID": {
+       "knows": [
+        "Reid has started talking and acting like the letters he studies."
+       ],
+       "hides": [
+        "That she has already met with a divorce attorney."
+       ],
+       "believes_falsely": [
+        "That she is imagining the resemblance to the killer out of fear, not recognizing how literally close it already is."
+       ]
+      }
+     }
+    },
+    {
+     "label": "The Frame-Up",
+     "solution": "Daniel Chen is entirely innocent. The physical evidence tying him to the killings was subtly arranged by the Curator himself, planted to manufacture a plausible suspect who would absorb the department's attention and pressure — and, more precisely, to test and shape how far Marcus Reid would let an innocent man suffer while chasing the real prize.",
+     "objective_facts": [
+      "Daniel Chen has been formally arraigned and is now in pretrial custody.",
+      "Conditions in custody have deteriorated; Daniel was assaulted by another inmate.",
+      "The physical evidence log contains a chain-of-custody inconsistency that Reid noticed weeks ago but never formally pursued."
+     ],
+     "character_knowledge": {
+      "JOY_CHEN": {
+       "knows": [
+        "Daniel was assaulted in custody.",
+        "The evidence chain has irregularities she has flagged through legal channels."
+       ],
+       "hides": [
+        "That she has been feeding case details to a sympathetic reporter to keep public pressure on the department."
+       ],
+       "believes_falsely": [
+        "That institutional laziness alone explains why Daniel is being railroaded, not realizing he was deliberately set up by someone outside the department."
+       ]
+      },
+      "REID": {
+       "knows": [
+        "The chain-of-custody inconsistency in the evidence against Daniel Chen."
+       ],
+       "hides": [
+        "That he hasn't pursued the inconsistency further because doing so would slow his pursuit of the Curator."
+       ],
+       "believes_falsely": [
+        "That Daniel's case will sort itself out through the courts and isn't really his responsibility."
+       ]
+      },
+      "CAPTAIN_HOLLIS": {
+       "knows": [
+        "Mounting political pressure over the Chen case.",
+        "That Daniel was assaulted in custody."
+       ],
+       "hides": [
+        "That he has soft-pedaled an internal complaint about custody conditions to avoid more press scrutiny."
+       ],
+       "believes_falsely": [
+        "That the case against Daniel is solid, since Reid hasn't formally flagged any problems with it."
+       ]
+      }
+     }
+    },
+    {
+     "label": "The Marriage Collapse",
+     "solution": "Mia Reid's marriage to Marcus has been dying by inches for months, not from any single betrayal but from his slow disappearance into the case; she has quietly begun preparing to leave — consulting a divorce attorney and documenting his absences — while still hoping, against the evidence, that the man she married might surface again before she has to make it final.",
+     "objective_facts": [
+      "Mia met with a divorce attorney two weeks ago.",
+      "Reid missed her father's memorial dinner without explanation.",
+      "Reid has been overheard using phrasing lifted directly from the Curator's letters, including in his sleep."
+     ],
+     "character_knowledge": {
+      "MIA_REID": {
+       "knows": [
+        "She has already consulted a lawyer.",
+        "Reid is starting to sound like the man he is hunting."
+       ],
+       "hides": [
+        "The lawyer meeting, entirely, from Reid."
+       ],
+       "believes_falsely": [
+        "That she still has time to decide before any of this becomes real."
+       ]
+      },
+      "REID": {
+       "knows": [
+        "Mia is pulling away and has given him an ultimatum."
+       ],
+       "hides": [
+        "The depth of his own rule-breaking, fearing it would be the final straw."
+       ],
+       "believes_falsely": [
+        "That closing the case will repair the marriage — a complete misread of what Mia actually needs from him."
+       ]
+      },
+      "DET_PARK": {
+       "knows": [
+        "Reid's home life is unraveling because of things he's let slip at work."
+       ],
+       "hides": [
+        "Nothing significant; she keeps Mia's confidence when they speak."
+       ],
+       "believes_falsely": [
+        "That Reid still has enough left in him to fix this himself, if someone reaches him in time."
+       ]
+      }
+     }
+    }
+   ]
+  },
+  {
+   "figure": "Sacrifice Play",
+   "theme": "Reid crosses a line he can't walk back to get ahead of the Curator, echoing the killer's own methods, as the wrongly accused man's fate reaches its breaking point.",
+   "intro_note": "The report proving Daniel Chen's innocence sits unfiled in Reid's desk drawer, and no one — not Park, not Hollis — knows it exists. Reid tells himself it's temporary. Somewhere in a stone room lined with green light, a patient collector rearranges his shelves and waits to see what Reid will do with the truth in his hands.",
+   "outro_note": "Daniel Chen has signed the plea the state offered him, believing no one is coming to save him — because the one man who could has chosen not to. That night, a new note arrives at the overlook, and this time it doesn't reference the case at all. It references the drawer.",
+   "sections": [
+    "The Report That Clears Him — a lab result lands on Reid's desk proving, conclusively, that Daniel Chen was never at the scene (The Frame-Up)",
+    "Ten Minutes — alone, Reid decides not to file it yet, and tells himself it's only temporary (The Cipher Killings)",
+    "A Tableau With a Question in It — the Curator's newest arrangement at the mill seems to already know what Reid chose (The Cipher Killings)",
+    "Bail Denied — Daniel Chen's hearing goes badly, and Joy Chen watches the system close around her brother (The Frame-Up)",
+    "Where Were You — Mia asks Reid to account for a missed evening, and catches the shape of a lie before she catches the words (The Marriage Collapse)",
+    "A Date That Doesn't Match — Park notices a gap in the evidence log's timestamps and can't make it add up (The Cipher Killings)",
+    "Close It Fast — Hollis, leaned on by the mayor's office, pushes for a quick resolution to the Chen case while Reid says nothing (The Frame-Up)",
+    "The Deal on the Table — Joy Chen visits Daniel and finds him ready to confess to something he didn't do just to make it stop (The Frame-Up)",
+    "What the Informant Gives Up — Reid leans on a source with pressure that isn't strictly legal, and gets what he came for (The Cipher Killings)",
+    "An Object Chosen Carefully — in the green lamplight, a small addition to the collection is set exactly where it belongs (The Cipher Killings)",
+    "The First Lie to Her Face — Park asks Reid directly about the missing report, and he lies to her without blinking (The Cipher Killings)",
+    "What Mia Found — Mia discovers proof of what Reid's been hiding, and the fight that follows changes what she's willing to accept (The Marriage Collapse)",
+    "The Plea — worn down and afraid, Daniel Chen accepts guilt for a crime he never committed, over his sister's objections (The Frame-Up)",
+    "Filed Too Late — Reid finally submits the report, only to learn it can no longer undo what's already been signed (The Cipher Killings)",
+    "A Choice Already Accounted For — the shape of tonight's clue suggests the Curator anticipated exactly the decision Reid made (The Cipher Killings)"
+   ],
+   "section_words": [
+    null,
+    {
+     "min": 120,
+     "max": 190,
+     "target": "140 to 170"
+    },
+    null,
+    null,
+    null,
+    null,
+    null,
+    {
+     "min": 350,
+     "max": 550,
+     "target": "400 to 480"
+    },
+    null,
+    null,
+    null,
+    null,
+    {
+     "min": 130,
+     "max": 200,
+     "target": "150 to 180"
+    },
+    null,
+    {
+     "min": 110,
+     "max": 180,
+     "target": "130 to 160"
+    }
+   ],
+   "section_locations": [
+    "PRECINCT_BULLPEN",
+    "INTERROGATION_ROOM",
+    "THE_OLD_TEXTILE_MILL",
+    "COURTHOUSE_STEPS",
+    "REID_APARTMENT",
+    "DOWNTOWN_DINER",
+    "PRECINCT_BULLPEN",
+    "INTERROGATION_ROOM",
+    "RIVERSIDE_OVERLOOK",
+    "THE_CURATOR_STUDY",
+    "PRECINCT_BULLPEN",
+    "REID_APARTMENT",
+    "COURTHOUSE_STEPS",
+    "PRECINCT_BULLPEN",
+    "THE_OLD_TEXTILE_MILL"
+   ],
+   "case": [
+    {
+     "label": "The Cipher Killings",
+     "solution": "The killer the press calls the Curator has spent years quietly studying Marcus Reid before ever sending a letter — case files, personnel records, even childhood history — because the killings were never the true work. The real design is Reid himself: every clue, every calculated provocation, is built to erode the one thing that made Reid dangerous to him — his integrity — until the incorruptible detective becomes capable of the exact violence and deception the Curator practices himself.",
+     "objective_facts": [
+      "Reid used coercive, legally questionable pressure on an informant to advance the case.",
+      "A new tableau left at the mill implies awareness of a choice only Reid could have made and told no one about.",
+      "There is now a discrepancy between the evidence log's official timestamps and its actual entries."
+     ],
+     "character_knowledge": {
+      "REID": {
+       "knows": [
+        "Conclusive proof exists that Daniel Chen is innocent, and he has chosen not to file it.",
+        "He lied directly to Park about a missing report."
+       ],
+       "hides": [
+        "The buried exculpatory evidence, from both Hollis and Park.",
+        "The improper pressure used on his informant."
+       ],
+       "believes_falsely": [
+        "That this sacrifice is temporary and reversible — that he can file the report once the Curator is caught, not grasping there may be no 'once it's over.'"
+       ]
+      },
+      "THE_CURATOR": {
+       "knows": [
+        "The exact shape of the decision Reid has just made, and what it confirms about him."
+       ],
+       "hides": [
+        "That this was the specific compromise the whole season was built to produce."
+       ],
+       "believes_falsely": []
+      },
+      "DET_PARK": {
+       "knows": [
+        "There is a missing or delayed report.",
+        "Reid lied about it to her face."
+       ],
+       "hides": [
+        "That she hasn't taken her suspicions to Hollis yet, giving Reid one more chance to correct himself."
+       ],
+       "believes_falsely": [
+        "That Reid is cutting a corner for a defensible reason, not yet grasping he is protecting an active injustice."
+       ]
+      },
+      "CAPTAIN_HOLLIS": {
+       "knows": [
+        "The mayor's office wants the Chen case closed quickly."
+       ],
+       "hides": [
+        "A growing unease about gaps in Reid's recent paperwork that he has chosen not to confront."
+       ],
+       "believes_falsely": [
+        "That pushing for a fast plea deal serves everyone, unaware exculpatory evidence already exists."
+       ]
+      },
+      "MIA_REID": {
+       "knows": [
+        "Reid lied about his whereabouts again."
+       ],
+       "hides": [
+        "That she has scheduled a follow-up meeting with her attorney."
+       ],
+       "believes_falsely": [
+        "That his lies are about avoidance and exhaustion, not the far heavier thing he's actually concealing."
+       ]
+      }
+     }
+    },
+    {
+     "label": "The Frame-Up",
+     "solution": "Daniel Chen is entirely innocent. The physical evidence tying him to the killings was subtly arranged by the Curator himself, planted to manufacture a plausible suspect who would absorb the department's attention and pressure — and, more precisely, to test and shape how far Marcus Reid would let an innocent man suffer while chasing the real prize.",
+     "objective_facts": [
+      "A lab report now conclusively proves Daniel Chen could not have been at the scene.",
+      "Daniel Chen accepted a guilty plea while the report proving his innocence remained unfiled.",
+      "Conditions and fear in custody directly influenced Daniel's decision to plead."
+     ],
+     "character_knowledge": {
+      "JOY_CHEN": {
+       "knows": [
+        "Daniel was assaulted in custody and is close to accepting a deal out of fear and exhaustion."
+       ],
+       "hides": [
+        "Her own private doubt about whether continuing to fight is even safe for him."
+       ],
+       "believes_falsely": [
+        "That department indifference alone explains Daniel's treatment, unaware Reid personally holds proof of his innocence."
+       ]
+      },
+      "REID": {
+       "knows": [
+        "The proof of Daniel's innocence exists and he alone controls when, or if, it surfaces."
+       ],
+       "hides": [
+        "The report itself, from everyone."
+       ],
+       "believes_falsely": [
+        "That there will be time later to correct this."
+       ]
+      },
+      "CAPTAIN_HOLLIS": {
+       "knows": [
+        "The plea deal is being finalized."
+       ],
+       "hides": [
+        "Nothing new this episode."
+       ],
+       "believes_falsely": [
+        "That the plea represents case closure, not an innocent man's forced confession."
+       ]
+      }
+     }
+    },
+    {
+     "label": "The Marriage Collapse",
+     "solution": "Mia Reid's marriage to Marcus has been dying by inches for months, not from any single betrayal but from his slow disappearance into the case; she has quietly begun preparing to leave — consulting a divorce attorney and documenting his absences — while still hoping, against the evidence, that the man she married might surface again before she has to make it final.",
+     "objective_facts": [
+      "Mia has scheduled a follow-up meeting with her divorce attorney.",
+      "Reid lied to Mia about where he was on a night he was actually pressuring an informant."
+     ],
+     "character_knowledge": {
+      "MIA_REID": {
+       "knows": [
+        "Reid lied to her again about his whereabouts."
+       ],
+       "hides": [
+        "Her follow-up meeting with the attorney."
+       ],
+       "believes_falsely": [
+        "That catching him in this lie might finally shock him into changing, not realizing he is now capable of far larger ones."
+       ]
+      },
+      "REID": {
+       "knows": [
+        "He is losing Mia's trust with every unexplained absence."
+       ],
+       "hides": [
+        "The true reason for his absence."
+       ],
+       "believes_falsely": [
+        "That he can compartmentalize this and fix it later, once the case is closed."
+       ]
+      }
+     }
+    }
+   ]
+  },
+  {
+   "figure": "The Puppet Strings",
+   "theme": "Pieces fall into place suggesting Reid has been guided all season, forcing a confrontation with Mia and Park about who he's become, as the Curator quietly prepares his final act.",
+   "intro_note": "The note that named the drawer confirmed what Reid has refused to say aloud: the Curator has always known things only Reid himself should know. Now the department, Park, and Mia are all asking the same question in different rooms — who has Marcus Reid become — while somewhere, the answer is already being framed and hung.",
+   "outro_note": "The summons is precise down to the minute — an address, a time, and four words that aren't a taunt at all: 'Come finish it, Marcus.' Reid folds the note into his coat and walks out past the review board waiting to suspend him, past Park's warning, past the box of Mia's belongings still by the door. He has one thought left he can trust: that he is the one hunting. He is wrong.",
+   "sections": [
+    "Laid Out End to End — Reid spreads every cipher across a table and starts to see a shape that was never about the killings alone (The Cipher Killings)",
+    "The Last Piece Set in Place — in the lamplight, a patient hand makes a final, precise adjustment before stepping back to look at the whole (The Cipher Killings)",
+    "A File of Her Own — Park lays out, in her own handwriting, every line Reid has crossed this season (The Cipher Killings)",
+    "The Name of the Attorney — Mia tells Reid, plainly, that she has already seen a lawyer (The Marriage Collapse)",
+    "What Existed Before the Plea — word reaches Joy Chen that evidence clearing her brother existed before he ever signed anything (The Frame-Up)",
+    "The File on the Table — Park puts her evidence in front of Reid and asks him to explain it to her face (The Cipher Killings)",
+    "A Note That Knows Too Much — the newest drop references the drawer Reid thought only he knew about (The Cipher Killings)",
+    "Pending Review — Hollis, cornered by what Park found, has no choice but to open a formal inquiry into Reid (The Cipher Killings)",
+    "Everything He Was Chasing — alone among the machinery, Reid finally lets himself consider that the hunt was never his to direct (The Cipher Killings)",
+    "I Don't Know You Anymore — the rawest fight yet between Reid and Mia ends with boxes by the door (The Marriage Collapse)",
+    "Holding Each Other Up — Park and Mia meet again, no longer just worried but bracing for what comes next (The Marriage Collapse)",
+    "Buried and Found — Joy Chen goes public, naming the department, and by implication Reid, for sitting on the truth (The Frame-Up)",
+    "The Board Waits — Reid receives formal notice that he's being pulled from the case pending investigation (The Cipher Killings)",
+    "Come Finish It — a summons arrives, precise and almost gentle, naming a place, a time, and Reid himself (The Cipher Killings)",
+    "What He Still Believes — alone with the note and the empty apartment, Reid tells himself he is still the one in control (The Cipher Killings)"
+   ],
+   "section_words": [
+    null,
+    null,
+    null,
+    {
+     "min": 350,
+     "max": 550,
+     "target": "400 to 480"
+    },
+    null,
+    null,
+    {
+     "min": 120,
+     "max": 190,
+     "target": "140 to 170"
+    },
+    null,
+    null,
+    {
+     "min": 380,
+     "max": 550,
+     "target": "420 to 500"
+    },
+    null,
+    null,
+    null,
+    {
+     "min": 110,
+     "max": 180,
+     "target": "130 to 160"
+    },
+    {
+     "min": 100,
+     "max": 170,
+     "target": "120 to 150"
+    }
+   ],
+   "section_locations": [
+    "PRECINCT_BULLPEN",
+    "THE_CURATOR_STUDY",
+    "DOWNTOWN_DINER",
+    "REID_APARTMENT",
+    "COURTHOUSE_STEPS",
+    "PRECINCT_BULLPEN",
+    "RIVERSIDE_OVERLOOK",
+    "INTERROGATION_ROOM",
+    "THE_OLD_TEXTILE_MILL",
+    "REID_APARTMENT",
+    "DOWNTOWN_DINER",
+    "COURTHOUSE_STEPS",
+    "PRECINCT_BULLPEN",
+    "RIVERSIDE_OVERLOOK",
+    "REID_APARTMENT"
+   ],
+   "case": [
+    {
+     "label": "The Cipher Killings",
+     "solution": "The killer the press calls the Curator has spent years quietly studying Marcus Reid before ever sending a letter — case files, personnel records, even childhood history — because the killings were never the true work. The real design is Reid himself: every clue, every calculated provocation, is built to erode the one thing that made Reid dangerous to him — his integrity — until the incorruptible detective becomes capable of the exact violence and deception the Curator practices himself.",
+     "objective_facts": [
+      "A new note references the exact location of the buried exculpatory report, a detail Reid told no one.",
+      "Hollis has opened a formal internal inquiry into Reid's recent conduct.",
+      "A summons has arrived specifying a precise place and time and addressing Reid by his first name."
+     ],
+     "character_knowledge": {
+      "REID": {
+       "knows": [
+        "The newest clue proves the Curator somehow knew about his private, unreported decision to bury the report.",
+        "He has received a formal notice pulling him from the case pending review."
+       ],
+       "hides": [
+        "The full extent of his conduct from Hollis, even now."
+       ],
+       "believes_falsely": [
+        "That he has been the one directing this hunt all season; he now suspects otherwise but does not yet grasp he was built to be its finisher."
+       ]
+      },
+      "THE_CURATOR": {
+       "knows": [
+        "That the season's design is complete and Reid is ready.",
+        "The exact contents of the summons he has sent."
+       ],
+       "hides": [
+        "The true purpose of the invitation."
+       ],
+       "believes_falsely": []
+      },
+      "DET_PARK": {
+       "knows": [
+        "She has compiled documented proof of Reid's violations across the season.",
+        "She has confronted him directly with it."
+       ],
+       "hides": [
+        "Whether she will formally report him — she still hasn't decided."
+       ],
+       "believes_falsely": [
+        "That if Reid stops now, this can still be fixed, not grasping the endgame is already in motion."
+       ]
+      },
+      "CAPTAIN_HOLLIS": {
+       "knows": [
+        "Enough about the buried report to be forced into opening a formal inquiry."
+       ],
+       "hides": [
+        "How much he still wants to protect Reid, out of guilt for his own past leniency."
+       ],
+       "believes_falsely": [
+        "That suspending and reviewing Reid will resolve the problem, unaware of what is already unfolding around him."
+       ]
+      },
+      "MIA_REID": {
+       "knows": [
+        "She has now told Reid about the lawyer and moved out temporarily."
+       ],
+       "hides": [
+        "Nothing further — she has stopped hiding things from him."
+       ],
+       "believes_falsely": [
+        "That this is purely about the choices Reid made, not realizing an outside architect shaped many of them."
+       ]
+      }
+     }
+    },
+    {
+     "label": "The Frame-Up",
+     "solution": "Daniel Chen is entirely innocent. The physical evidence tying him to the killings was subtly arranged by the Curator himself, planted to manufacture a plausible suspect who would absorb the department's attention and pressure — and, more precisely, to test and shape how far Marcus Reid would let an innocent man suffer while chasing the real prize.",
+     "objective_facts": [
+      "It is now public knowledge that evidence clearing Daniel Chen existed before he signed his plea.",
+      "The department, and Reid specifically, are under scrutiny for the delay."
+     ],
+     "character_knowledge": {
+      "JOY_CHEN": {
+       "knows": [
+        "Proof now exists that exculpatory evidence was sat on before Daniel pled guilty."
+       ],
+       "hides": [
+        "Nothing further — she is going fully public with what she knows."
+       ],
+       "believes_falsely": [
+        "That Reid buried the evidence for ambition or career reasons alone, not realizing it was to protect a far more obsessive private pursuit."
+       ]
+      },
+      "REID": {
+       "knows": [
+        "The fallout from the delayed evidence is now public."
+       ],
+       "hides": [
+        "The true reason he delayed it, since explaining it would expose everything else."
+       ],
+       "believes_falsely": []
+      },
+      "CAPTAIN_HOLLIS": {
+       "knows": [
+        "The scandal is now public and threatens the department."
+       ],
+       "hides": [
+        "Nothing further this episode."
+       ],
+       "believes_falsely": [
+        "That this ends quietly with his own career, unaware of the larger design behind it."
+       ]
+      }
+     }
+    },
+    {
+     "label": "The Marriage Collapse",
+     "solution": "Mia Reid's marriage to Marcus has been dying by inches for months, not from any single betrayal but from his slow disappearance into the case; she has quietly begun preparing to leave — consulting a divorce attorney and documenting his absences — while still hoping, against the evidence, that the man she married might surface again before she has to make it final.",
+     "objective_facts": [
+      "Mia has told Reid directly that she has consulted a divorce attorney.",
+      "Mia has moved out of the apartment temporarily, staying with a friend."
+     ],
+     "character_knowledge": {
+      "MIA_REID": {
+       "knows": [
+        "She has told Reid everything and moved out for now."
+       ],
+       "hides": [
+        "Nothing — she is done hiding things from him."
+       ],
+       "believes_falsely": []
+      },
+      "REID": {
+       "knows": [
+        "Mia is leaving, at least for now."
+       ],
+       "hides": [
+        "Nothing left to hide, though he remains unable to act on what he knows."
+       ],
+       "believes_falsely": [
+        "That catching the Curator will somehow still fix this, a thin hope he can't quite let go of."
+       ]
+      }
+     }
+    }
+   ]
+  },
+  {
+   "figure": "The Masterwork",
+   "theme": "The season's twist lands: the Curator reveals he orchestrated the entire hunt to make Reid the finisher of his own design, closing the Frame-Up and Cipher Killings threads while leaving Reid's future, and his marriage, deliberately unresolved.",
+   "intro_note": "Park's discovery and Mia's ultimatum have left Reid cornered from both fronts — and into that silence comes one last message from the Curator, not a riddle this time, but an address.",
+   "outro_note": "",
+   "sections": [
+    "Riverside Overlook — Cipher Killings: A final dead drop arrives for Reid, an address instead of a riddle, signed like an invitation rather than a taunt.",
+    "Reid Apartment — The Reid Marriage: Mia gives Reid an ultimatum before he can even explain where he's going.",
+    "Courthouse Steps — The Frame-Up: Joy Chen faces the press ahead of the hearing that could finally clear her brother's name.",
+    "Precinct Bullpen — The Frame-Up: Captain Hollis is called before oversight to answer for how long Daniel Chen was held despite thin evidence.",
+    "Downtown Diner — Cipher Killings: Det. Park confronts Reid with what she's pieced together and refuses to let him go to the address alone.",
+    "The Old Textile Mill — Cipher Killings: Reid arrives to find the Curator's gallery finished, every tableau arranged around one empty space clearly meant for a final piece.",
+    "The Curator's Study — Cipher Killings: In a parallel scene, Park finds the Curator's hidden study and the journal he left for exactly this moment.",
+    "The Old Textile Mill — Cipher Killings: Face to face at last, the Curator speaks to Reid not as prey to predator, but as an artist to his chosen instrument.",
+    "The Old Textile Mill — Cipher Killings: In the space built for it, Reid does the one thing the Curator always meant for him to do.",
+    "The Curator's Study — Cipher Killings: Park reads the journal's final pages aloud, and the shape of the whole season rearranges itself around Reid's name.",
+    "Precinct Bullpen — The Frame-Up: With the journal in hand, the truth of Daniel Chen's frame-up is confirmed beyond doubt.",
+    "Courthouse Steps — The Frame-Up: Daniel Chen is formally cleared; Joy Chen's public fight ends in a vindication she never expected to come this way.",
+    "Precinct Bullpen — Cipher Killings: Captain Hollis absorbs what shielding Reid has cost the department, and what it's about to cost him personally.",
+    "Downtown Diner — Cipher Killings / The Reid Marriage: Park and Reid sit with what happened at the mill, and with what it means for what's left between them.",
+    "Reid Apartment — The Reid Marriage: Reid and Mia face each other with nothing left to investigate but themselves, and no verdict either of them is ready to give."
+   ],
+   "section_words": [
+    {
+     "min": 140,
+     "max": 210,
+     "target": "150 to 180"
+    },
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    {
+     "min": 130,
+     "max": 200,
+     "target": "140 to 170"
+    },
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "section_locations": [
+    "RIVERSIDE_OVERLOOK",
+    "REID_APARTMENT",
+    "COURTHOUSE_STEPS",
+    "PRECINCT_BULLPEN",
+    "DOWNTOWN_DINER",
+    "THE_OLD_TEXTILE_MILL",
+    "THE_CURATOR_STUDY",
+    "THE_OLD_TEXTILE_MILL",
+    null,
+    "THE_CURATOR_STUDY",
+    "PRECINCT_BULLPEN",
+    "COURTHOUSE_STEPS",
+    "PRECINCT_BULLPEN",
+    "DOWNTOWN_DINER",
+    "REID_APARTMENT"
+   ],
+   "case": [
+    {
+     "label": "The Cipher Killings",
+     "solution": "The man Reid knows only as the Curator was, before he vanished into his second identity, Professor Arthur Lin, a linguistics academic who came to believe his murders were brushstrokes in a single unfinished composition. Months before the first killing became public, Lin selected Marcus Reid specifically — studying his case history, his marriage, his temperament — because he needed a detective whose hunger to win could be shaped into the work's final gesture. Every cipher was tailored not to be solved, but to be survived just barely enough to keep Reid coming back closer to the edge. The frame-up of Daniel Chen was one deliberate brushstroke in that shaping: an easy, half-true win designed to teach Reid that bending procedure pays off. At the Old Textile Mill, in a tableau space left conspicuously empty, Lin engineers a final confrontation and lets Reid kill him — off any warrant, off any backup, in the same cold, deliberate manner Lin himself always used. A journal left in his study, dated before the season's first murder, spells it out afterward: Reid was never the hunter. He was the necessary hand.",
+     "objective_facts": [
+      "The tableaux left at the Old Textile Mill were arranged in a fixed sequence that only becomes a complete composition once a final act occurs at the same site.",
+      "Professor Arthur Lin began compiling a private file on Marcus Reid's career and home life at least four months before the first cipher was sent.",
+      "Every letter addressed to Reid contained at least one personal detail that could only have come from sustained surveillance predating the murders becoming public.",
+      "The frame-up of Daniel Chen was engineered by Lin specifically to reward Reid's willingness to bend procedure early in the hunt.",
+      "A journal recovered from the Curator's hidden study, dated before the season's first murder, names Reid as 'the necessary hand' for the work's completion.",
+      "Reid killed Arthur Lin at the Old Textile Mill without a warrant, without backup, and without attempting an arrest first."
+     ],
+     "character_knowledge": {
+      "REID": {
+       "knows": [
+        "The full cipher trail leading to the mill",
+        "That he went to the confrontation alone and unauthorized",
+        "That he had a clear moment to arrest Lin instead of what he did"
+       ],
+       "hides": [
+        "From Hollis and Park, the exact sequence of the confrontation, framing it closer to self-defense than it was"
+       ],
+       "believes_falsely": [
+        "Walking into the mill, that ending this on his own terms would be a victory entirely of his own making"
+       ]
+      },
+      "THE_CURATOR": {
+       "knows": [
+        "Every detail of the design, including that his own death is meant to be its final brushstroke",
+        "That Reid was cultivated, not merely pursued"
+       ],
+       "hides": [
+        "The true purpose of the entire hunt from Reid until the confrontation itself — that Reid was never the hunter but the instrument"
+       ],
+       "believes_falsely": [
+        "That his death closes a singular, finished work — he does not seriously entertain that Reid might survive to expose the design rather than simply be consumed by it"
+       ]
+      },
+      "CAPTAIN_HOLLIS": {
+       "knows": [
+        "That Reid went to the mill alone, against direct orders",
+        "That he personally let earlier procedural violations slide to protect Reid"
+       ],
+       "hides": [
+        "From oversight and the mayor's office, exactly how much latitude he quietly gave Reid across the season"
+       ],
+       "believes_falsely": [
+        "That the situation can still be framed as a righteous, contained outcome — not accounting for how far the journal's contents will spread once found"
+       ]
+      },
+      "DET_PARK": {
+       "knows": [
+        "The timeline that finally proves Reid has been unraveling for months",
+        "The contents of the Curator's journal, which she finds and reads first"
+       ],
+       "hides": [
+        "That she sat on her suspicions about Reid longer than she should have, out of loyalty"
+       ],
+       "believes_falsely": [
+        "Until this episode, that Reid could still be pulled back before it was too late"
+       ]
+      },
+      "MIA_REID": {
+       "knows": [
+        "That Reid has been receiving letters from the killer and growing more consumed by them each week"
+       ],
+       "hides": [
+        "That she has already sought a family law consultation, telling no one, including Park"
+       ],
+       "believes_falsely": [
+        "That what's happening to Reid is simply the case wearing him down — not something engineered from outside to reshape him"
+       ]
+      }
+     }
+    },
+    {
+     "label": "The Frame-Up",
+     "solution": "Daniel Chen, Joy Chen's younger brother, was entirely innocent. His only real connection to the murders was incidental: night-shift work that put him near two of the Curator's dead-drop sites. Arthur Lin planted the circumstantial evidence — a torn ticket stub, a mismatched shift log — during a window when Daniel's routine was already public knowledge from a local news piece, deliberately building a case just strong enough to consume the department's attention and to teach Reid, early and cheaply, that instinct could outrun procedure. Daniel was held in pretrial detention for weeks, and it was there, after prosecutors signaled they would seek formal charges, that he attempted to take his own life — the season's breaking point. Hollis, under pressure from the mayor's office for a visible arrest, authorized continued pursuit of Daniel even after Reid privately voiced doubts. The Curator's recovered journal names Daniel outright as 'a page turned to buy time,' confirming what Joy always insisted: her brother was never really a suspect at all.",
+     "objective_facts": [
+      "Daniel Chen's only verifiable connection to the killings was that his night-shift route passed near two dead-drop locations.",
+      "The ticket stub and shift-log discrepancy used against Daniel were planted during a period when his routine had already been made public by a local news profile.",
+      "Daniel Chen attempted self-harm in pretrial detention after prosecutors signaled intent to formally charge him.",
+      "Captain Hollis authorized continued investigation of Daniel Chen after Reid privately expressed doubts about the evidence.",
+      "The Curator's journal explicitly names Daniel Chen as a deliberate distraction, confirming he was never genuinely a suspect."
+     ],
+     "character_knowledge": {
+      "JOY_CHEN": {
+       "knows": [
+        "That her brother is innocent and that the case against him was always thin"
+       ],
+       "hides": [
+        "How much of her own career and reputation she has spent fighting this publicly"
+       ],
+       "believes_falsely": [
+        "That the department targeted Daniel out of prejudice and convenience alone, with no outside hand involved"
+       ]
+      },
+      "CAPTAIN_HOLLIS": {
+       "knows": [
+        "That the case against Daniel Chen was circumstantial and weak from early on"
+       ],
+       "hides": [
+        "From the review board that he greenlit continued detention despite Reid's private doubts, to protect the department's timeline"
+       ],
+       "believes_falsely": [
+        "That Daniel's continued detention was low-risk and easily reversible if the case fell apart"
+       ]
+      },
+      "REID": {
+       "knows": [
+        "That the evidence against Daniel Chen was circumstantial, and that he had doubts early"
+       ],
+       "hides": [
+        "How much he downplayed those doubts to Hollis, to keep department resources on his own cipher hunt instead"
+       ],
+       "believes_falsely": [
+        "That Daniel's case would sort itself out in time without his direct intervention"
+       ]
+      },
+      "DET_PARK": {
+       "knows": [
+        "The timeline discrepancies that ultimately clear Daniel Chen",
+        "That she pushed harder than anyone internally for his release"
+       ],
+       "hides": [],
+       "believes_falsely": [
+        "That Hollis would act on her findings sooner than he ultimately did"
+       ]
+      }
+     }
+    },
+    {
+     "label": "The Reid Marriage",
+     "solution": "The marriage's collapse was never only about Reid's absences. Mia moved into the guest room three weeks before the season's climax, after finding case files in their bed once too often, and has kept a private notebook logging the changes in him since the second cipher arrived — not as ammunition at first, but as a way to understand what was happening to her husband. By the finale it has become something closer to evidence for herself, though she has filed nothing. Reid, even after the mill, still doesn't fully register that for Mia there was a deadline, and that it has already passed; he believes there will be time to repair things once 'the case' is finally over, not understanding that for her the case was never the only thing that needed to end.",
+     "objective_facts": [
+      "Mia moved into the guest room three weeks before the season's climax.",
+      "Mia has kept a private notebook logging Reid's absences and behavior since the second cipher arrived.",
+      "Reid has not slept in the same room as Mia more than four nights in the past two months.",
+      "Mia sought a family law consultation but has not filed any paperwork."
+     ],
+     "character_knowledge": {
+      "REID": {
+       "knows": [
+        "That the marriage is badly strained and that he has been absent for most of it"
+       ],
+       "hides": [
+        "From Mia, and from himself, how close he came to losing control at the mill, downplaying it when he finally tells her"
+       ],
+       "believes_falsely": [
+        "That there will be time to repair things once the case is over, not realizing Mia's deadline has already passed"
+       ]
+      },
+      "MIA_REID": {
+       "knows": [
+        "Exactly how far things have deteriorated, having documented it for weeks"
+       ],
+       "hides": [
+        "The family law consultation, and how close she has come to a decision, from Reid"
+       ],
+       "believes_falsely": [
+        "That leaving now would mean admitting total failure, rather than being the one honest thing left to do"
+       ]
+      },
+      "DET_PARK": {
+       "knows": [
+        "More about the strain in the marriage than Reid has admitted to her, after Mia quietly reached out"
+       ],
+       "hides": [
+        "From Reid that Mia contacted her out of worry"
+       ],
+       "believes_falsely": []
+      }
+     }
+    }
+   ]
+  }
+ ]
+}

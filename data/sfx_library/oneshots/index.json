@@ -1,0 +1,1817 @@
+{
+ "f613db1d00d2c6aa": {
+  "description": "Elias exhales, shaky",
+  "aliases": []
+ },
+ "32550debbed22209": {
+  "description": "Elias's breath catching, a hand striking the seat leather",
+  "aliases": []
+ },
+ "865fb37925962603": {
+  "description": "a beat, tension held",
+  "aliases": []
+ },
+ "d5c5028c2e9a545e": {
+  "description": "a chair creaks as Delia leans back, unsettled",
+  "aliases": []
+ },
+ "51c3509e09508da3": {
+  "description": "a cursor clicks, text scrolling",
+  "aliases": []
+ },
+ "c02d16375390191d": {
+  "description": "a drawer sliding, faint, more memory than sound",
+  "aliases": []
+ },
+ "ad3270e1afce55bb": {
+  "description": "a hand pressing against a window, faint tap",
+  "aliases": []
+ },
+ "6fdcf62a33bf1be5": {
+  "description": "a hand shifting against leather upholstery",
+  "aliases": []
+ },
+ "b05ca2a74eee6dc2": {
+  "description": "a light wind moving through torn plastic sheeting",
+  "aliases": []
+ },
+ "5794c7d233b23ce4": {
+  "description": "a long exhale, barely audible over the engine",
+  "aliases": []
+ },
+ "d01a71d19684e4cb": {
+  "description": "a long exhale, shuddering",
+  "aliases": []
+ },
+ "dffbe07ae9a045f0": {
+  "description": "a long pause — only wind and the distant engine",
+  "aliases": [
+   "long pause, engine hum",
+   "a long pause, distant idling engine"
+  ]
+ },
+ "4d2e62f15ae8190f": {
+  "description": "a low electronic tone, the countdown's rhythm audibly quickening",
+  "aliases": []
+ },
+ "5e17f9a0e78639f4": {
+  "description": "a low industrial hum rising outside, mechanical, unplaceable",
+  "aliases": []
+ },
+ "376fc36676248dba": {
+  "description": "a notification chime — a new message on his desk phone",
+  "aliases": []
+ },
+ "fcece95c520df737": {
+  "description": "a passing car's headlights sweep briefly through the cabin",
+  "aliases": []
+ },
+ "b703bf28f11eca25": {
+  "description": "a phone rings twice, unanswered, somewhere behind her",
+  "aliases": []
+ },
+ "18a55f51f2bbb4b5": {
+  "description": "a recording rewinds, then plays through a small speaker",
+  "aliases": []
+ },
+ "750c35e3d4408e8b": {
+  "description": "a short, involuntary breath — almost a laugh",
+  "aliases": []
+ },
+ "954a6298fc187fe6": {
+  "description": "a single distant sound — metal on metal, brief, then gone",
+  "aliases": []
+ },
+ "c1c579050155e472": {
+  "description": "a single loose panel ticking in the wind",
+  "aliases": []
+ },
+ "a9d0ff0ff1ac0322": {
+  "description": "a single moth ticking against the streetlamp glass, then silence",
+  "aliases": []
+ },
+ "4e3082350633d4c1": {
+  "description": "a single page turned, deliberate",
+  "aliases": []
+ },
+ "dea3422972499113": {
+  "description": "a single photograph set down carefully",
+  "aliases": []
+ },
+ "ed42819271135d9c": {
+  "description": "a soft click, like a recalibration",
+  "aliases": []
+ },
+ "c31ec0394aa0e2d2": {
+  "description": "a soft electronic chime, subtle, from the dashboard",
+  "aliases": [
+   "dashboard chime, soft electronic pulse",
+   "dashboard hum, a faint electronic pulse",
+   "engine hum, a faint electronic chime from the dashboard",
+   "engine hum, a soft electronic chime from the dashboard",
+   "engine idling, faint electronic hum from dash",
+   "soft electronic chime",
+   "soft electronic chime from dashboard speaker",
+   "soft electronic chime from the dashboard",
+   "soft electronic chime, dashboard waking",
+   "soft electronic chime, almost polite",
+   "a single sharp electronic tone from the dashboard",
+   "electronic connection chime",
+   "faint electronic hum from dashboard",
+   "faint electronic hum from the dashboard",
+   "faint electronic hum from the open trunk",
+   "faint electronic hum from the trunk"
+  ]
+ },
+ "80f86410f25da448": {
+  "description": "a soft rustle of movement, not from the car",
+  "aliases": []
+ },
+ "fbb745abadb49c35": {
+  "description": "a switch clicks, the modulator hums back online",
+  "aliases": []
+ },
+ "fd64c949d7be0648": {
+  "description": "box lid closing, latch clicking shut",
+  "aliases": []
+ },
+ "e8e5691073a91969": {
+  "description": "brief pause, a single wiper stroke",
+  "aliases": []
+ },
+ "a20c954eccf37cb9": {
+  "description": "brief pause, faint voice through earpiece, unintelligible",
+  "aliases": []
+ },
+ "da7dc5c03fb3e87a": {
+  "description": "brief silence, engine noise underneath",
+  "aliases": []
+ },
+ "f9cb0af6d479b4f5": {
+  "description": "brief silence, only road noise",
+  "aliases": [
+   "brief silence, only the road noise underneath",
+   "brief silence, only the wipers ticking",
+   "brief silence, road noise under the cabin",
+   "silence stretches, only road noise"
+  ]
+ },
+ "759196e7f44717fc": {
+  "description": "brief silence, then a low chime from the dash",
+  "aliases": []
+ },
+ "889db41c92a936e8": {
+  "description": "brief silence, wind against the car",
+  "aliases": []
+ },
+ "3d9ccf820d9220f6": {
+  "description": "brief static crackle",
+  "aliases": []
+ },
+ "a4191eb1ad729675": {
+  "description": "brief static crackle from the dashboard, then silence",
+  "aliases": [
+   "brief static crackle, then silence",
+   "faint static crackle from the dashboard speaker",
+   "soft static crackle, then silence"
+  ]
+ },
+ "0264b96e963fe703": {
+  "description": "candle flame guttering",
+  "aliases": []
+ },
+ "ca7d75182618d334": {
+  "description": "canvas bag zipped shut",
+  "aliases": []
+ },
+ "72ef9e6e45778b64": {
+  "description": "car accelerating away from the light, tires slick on wet road",
+  "aliases": []
+ },
+ "786127af124765b0": {
+  "description": "car door opening softly",
+  "aliases": [
+   "car door opening, footsteps on gravel",
+   "car door opens, footsteps on gravel",
+   "car door opening",
+   "car door opening, footsteps on frozen ground",
+   "footsteps on frozen ground, closer to the car"
+  ]
+ },
+ "df3ddf69f812328d": {
+  "description": "car door opens",
+  "aliases": [
+   "car door opens, muffled traffic hum",
+   "keys, car door"
+  ]
+ },
+ "089ad88b9970b535": {
+  "description": "car door opens, box set down inside",
+  "aliases": []
+ },
+ "b5913fab5ec6bd94": {
+  "description": "car door sealing shut, rain drumming on the roof",
+  "aliases": []
+ },
+ "e84468d83d82152a": {
+  "description": "car door, engine turning over",
+  "aliases": []
+ },
+ "a236a33c423939be": {
+  "description": "car doors opening",
+  "aliases": []
+ },
+ "3381c2f788375640": {
+  "description": "car engine ticking as it cools",
+  "aliases": [
+   "distant engine ticking as it cools"
+  ]
+ },
+ "0610548dd696ccf8": {
+  "description": "car tires humming over bridge grating",
+  "aliases": []
+ },
+ "0ffba1550db10731": {
+  "description": "cardboard scrape, heavy thud",
+  "aliases": []
+ },
+ "5bf7193985fec55f": {
+  "description": "chain-link fence rattling in the wind",
+  "aliases": [
+   "chain-link fence rattling slightly under grip",
+   "distant chain-link fence creaking",
+   "distant chain-link fence creaking under a hand gripping it",
+   "distant river water, chain-link fence creaking in wind",
+   "wind rattling chain-link fence"
+  ]
+ },
+ "73a52aef4a807391": {
+  "description": "chair creak",
+  "aliases": [
+   "chair creak, a held breath",
+   "office chair creak"
+  ]
+ },
+ "270184b3f061dd5f": {
+  "description": "chair creak, distant elevator ding down the hall",
+  "aliases": []
+ },
+ "1f7ac5972865fcd8": {
+  "description": "chair creak, phone picked up, buttons pressed",
+  "aliases": []
+ },
+ "38adf2534ef8ac3f": {
+  "description": "chair creaking as he leans back",
+  "aliases": [
+   "chair creaking as he sits forward",
+   "couch creaking as he sits down"
+  ]
+ },
+ "7d8eca8ba712695e": {
+  "description": "chair creaking, papers shuffling",
+  "aliases": [
+   "chair rolling back, papers shuffling",
+   "chair creaking"
+  ]
+ },
+ "b3c0df19481f12a6": {
+  "description": "chair legs scraping softly on tile",
+  "aliases": []
+ },
+ "d5c0273532582b46": {
+  "description": "chair scraping back, a door swinging shut behind them, floor noise cutting off",
+  "aliases": []
+ },
+ "8d89973f40cecf81": {
+  "description": "chair sliding back",
+  "aliases": []
+ },
+ "1a21f426986b653f": {
+  "description": "clock ticking in an empty kitchen",
+  "aliases": []
+ },
+ "acf3bac542c1b426": {
+  "description": "clock ticking softly in the background",
+  "aliases": []
+ },
+ "17df23b0f597c6fa": {
+  "description": "clock ticking, slower now, fading under silence",
+  "aliases": []
+ },
+ "8f9a9a9a3244c004": {
+  "description": "countdown chime, sharper than before",
+  "aliases": []
+ },
+ "704dc7cbb52be36b": {
+  "description": "countdown chime, softer, closer",
+  "aliases": []
+ },
+ "ad7c177fa02f91fd": {
+  "description": "countdown tick, faster still",
+  "aliases": []
+ },
+ "f392aa332badf1a1": {
+  "description": "countdown ticking, audibly quicker than before",
+  "aliases": []
+ },
+ "cd0edd1382d774d3": {
+  "description": "countdown ticking, faster, insistent",
+  "aliases": []
+ },
+ "40e23acc552d5782": {
+  "description": "countdown ticking, steady and quickening",
+  "aliases": []
+ },
+ "311e5d4deefa55d0": {
+  "description": "countdown tone, faster pulse",
+  "aliases": [
+   "dashboard countdown tone shifts to a faster, insistent pulse"
+  ]
+ },
+ "f8414a76839cecbf": {
+  "description": "countdown tone, slightly louder, rhythmic",
+  "aliases": []
+ },
+ "be92658490ff07bd": {
+  "description": "countdown tone, steady, insistent",
+  "aliases": []
+ },
+ "45864e33c0ef1760": {
+  "description": "dashboard chime",
+  "aliases": [
+   "dashboard chime, faint",
+   "dashboard chime, low and deliberate",
+   "dashboard chime, short and cold",
+   "dashboard countdown chime, faint and rhythmic",
+   "soft chime",
+   "soft dashboard chime",
+   "soft system chime",
+   "system login chime",
+   "dashboard chime, low and even",
+   "dashboard chime, soft and deliberate"
+  ]
+ },
+ "3c0306a60ebb5698": {
+  "description": "dashboard chime fades, replaced by the low drone of the engine",
+  "aliases": []
+ },
+ "9b9ad6ce50e06ef8": {
+  "description": "dashboard chime, digital tone shift",
+  "aliases": []
+ },
+ "5b86a775df4b0150": {
+  "description": "dashboard chimes softly, a new coordinate loading",
+  "aliases": []
+ },
+ "28cf414a8d17a553": {
+  "description": "dashboard clock ticks down, a soft electronic pulse",
+  "aliases": []
+ },
+ "cd0a009f6a3ed840": {
+  "description": "dashboard countdown tick",
+  "aliases": [
+   "dashboard countdown tick, closer together now",
+   "dashboard countdown tick, faster rhythm"
+  ]
+ },
+ "c573818e733f2da3": {
+  "description": "dashboard countdown tone shifting to a faster tempo",
+  "aliases": []
+ },
+ "cc5e7a5ee0ca0774": {
+  "description": "dashboard hums faintly, a single tone, unreadable",
+  "aliases": []
+ },
+ "64d6b4e6dc099a14": {
+  "description": "dashboard light dims to a low standby glow",
+  "aliases": []
+ },
+ "fc05b8e777af714f": {
+  "description": "dashboard light pulsing once, then steady",
+  "aliases": []
+ },
+ "d8dacad3f41842dc": {
+  "description": "dashboard screen chimes softly",
+  "aliases": []
+ },
+ "022ea132e5144a48": {
+  "description": "dashboard screen dimming, then holding steady",
+  "aliases": []
+ },
+ "8456e7b1c2fe5d1c": {
+  "description": "dashboard screen dims, chime fades out",
+  "aliases": []
+ },
+ "bfbeb5d518fa0dcd": {
+  "description": "dashboard screen goes dark",
+  "aliases": []
+ },
+ "21aecfcbbd21e1e4": {
+  "description": "dashboard screen humming, faint pulse",
+  "aliases": []
+ },
+ "881008cf6c71db5f": {
+  "description": "dashboard speaker click and static settle",
+  "aliases": []
+ },
+ "a6713d5bc96c4906": {
+  "description": "dashboard speaker crackles to life",
+  "aliases": []
+ },
+ "89c597f412880aca": {
+  "description": "dashboard tone, soft and unhurried",
+  "aliases": []
+ },
+ "4394d08274e2d66b": {
+  "description": "data scrolling, faint processing hum",
+  "aliases": []
+ },
+ "70f9c6a440a15f54": {
+  "description": "dial tone, three rings",
+  "aliases": []
+ },
+ "a2a6c528238e4704": {
+  "description": "distant car engine fading, replaced by night insects and a faint electrical hum from the streetlamp",
+  "aliases": []
+ },
+ "7467672984f5a372": {
+  "description": "distant car turning onto gravel, farther back",
+  "aliases": []
+ },
+ "2a42eeba71a64026": {
+  "description": "distant countdown beep, faster interval",
+  "aliases": []
+ },
+ "9291342af5870387": {
+  "description": "distant dispatch radio chatter, muffled through a wall",
+  "aliases": []
+ },
+ "fd24bb0a060eb185": {
+  "description": "distant dog barking",
+  "aliases": []
+ },
+ "ffd0d671cb6e720e": {
+  "description": "distant engine idling, then rolling forward again",
+  "aliases": []
+ },
+ "21cda1bda1c8f91d": {
+  "description": "distant engine, faint and low, carried on wind",
+  "aliases": []
+ },
+ "0e1be3cac8474551": {
+  "description": "distant engine, tires crunching on a gravel access road",
+  "aliases": []
+ },
+ "96a9a056e7cf7f81": {
+  "description": "distant exterior speaker crackle",
+  "aliases": []
+ },
+ "8b8f1d2b16ad39bd": {
+  "description": "distant footsteps on broken concrete",
+  "aliases": [
+   "footsteps on concrete"
+  ]
+ },
+ "aa9ef430c9f789d3": {
+  "description": "distant footsteps receding, elevator doors closing",
+  "aliases": []
+ },
+ "f4d705eadaf62cfe": {
+  "description": "distant hum of an engine, faint",
+  "aliases": [
+   "engine hum, low and steady",
+   "engine hum, low road noise",
+   "engine hum, steady",
+   "engine hum, steady under a sudden silence",
+   "engine settling into a steady, low hum",
+   "headlights hum, engine steady",
+   "low engine hum",
+   "turn signal ticking, low engine hum",
+   "engine hum, closer",
+   "idle engine, low hum"
+  ]
+ },
+ "c1d7dbfda5bc8102": {
+  "description": "distant hum of the dashboard system, waiting",
+  "aliases": []
+ },
+ "85c2bf959ab97c86": {
+  "description": "distant metal groan settling",
+  "aliases": [
+   "distant metal groan, settling",
+   "distant metal groan, wreckage settling",
+   "distant metal settling in the ruin"
+  ]
+ },
+ "1090d3710459c28b": {
+  "description": "distant metal groan, wind through chain-link",
+  "aliases": [
+   "distant metal groaning, wind through a chain-link fence",
+   "night wind through chain-link fence, faint rattle",
+   "wind through chain-link fence"
+  ]
+ },
+ "f28e2671af657f74": {
+  "description": "distant metal groaning, wreckage shifting in the wind",
+  "aliases": [
+   "distant metal groan, wind shifting"
+  ]
+ },
+ "82b826e862acd21c": {
+  "description": "distant office hum, a printer somewhere finishing a page",
+  "aliases": []
+ },
+ "bba512e0baa6340c": {
+  "description": "distant office phone ringing, unanswered",
+  "aliases": [
+   "fluorescent hum continuing, distant office phone ringing unanswered",
+   "office ventilation hum, distant phone ringing unanswered",
+   "phone ringing, sharp office line",
+   "phone ringing, unanswered, distant now"
+  ]
+ },
+ "323cb03d52932815": {
+  "description": "distant river traffic, low hum",
+  "aliases": []
+ },
+ "bef93b4acdd859b2": {
+  "description": "distant siren, brief",
+  "aliases": []
+ },
+ "a6347d7f96e4e5b0": {
+  "description": "distant siren, fading",
+  "aliases": []
+ },
+ "679eb23820d7973e": {
+  "description": "distant siren, far off",
+  "aliases": []
+ },
+ "f87234adcb9e6aa8": {
+  "description": "distant thunder, low",
+  "aliases": []
+ },
+ "b0bb65b90d400edd": {
+  "description": "distant train horn, brief",
+  "aliases": []
+ },
+ "7cac500250134468": {
+  "description": "distant train horn, faint through a window",
+  "aliases": []
+ },
+ "0f1b2b905e76165f": {
+  "description": "distant train horn, far off",
+  "aliases": [
+   "distant train horn, low and far off"
+  ]
+ },
+ "52fb531979861ee7": {
+  "description": "distant voices, muffled",
+  "aliases": []
+ },
+ "f9aa80133dce20cb": {
+  "description": "distant water lapping against a low bank",
+  "aliases": []
+ },
+ "b9f4ad08dbe6f5c3": {
+  "description": "distant water, wind through broken metal",
+  "aliases": [
+   "distant wind through broken steel",
+   "distant wind through torn metal",
+   "soft wind through broken warehouse steel",
+   "wind moving through broken metal",
+   "wind through broken girders",
+   "wind through broken metal",
+   "wind through broken metal, low and constant",
+   "wind through broken steel",
+   "wind moving through torn metal"
+  ]
+ },
+ "912ae21704c90207": {
+  "description": "door hinge creaking, gravel underfoot",
+  "aliases": []
+ },
+ "0498a00611abbaed": {
+  "description": "door latch releasing, boots hitting wet gravel",
+  "aliases": []
+ },
+ "f39c875d2bfed69c": {
+  "description": "electrical hum kicking on, floodlight snapping alight",
+  "aliases": []
+ },
+ "b631599982c704d4": {
+  "description": "engine accelerating, city sounds thinning out",
+  "aliases": []
+ },
+ "83c87eb458c1e2ed": {
+  "description": "engine hum, faint city traffic outside",
+  "aliases": [
+   "faint hum of a refrigerator, distant traffic outside"
+  ]
+ },
+ "69570bd789fab79b": {
+  "description": "engine hum, steady and indifferent to what's happening inside the car",
+  "aliases": []
+ },
+ "48e4388154f910c8": {
+  "description": "engine hum, tires on cracked asphalt",
+  "aliases": [
+   "tires on cracked asphalt"
+  ]
+ },
+ "1cca715f02cc53c4": {
+  "description": "engine humming steady, a distant train horn far off across the river",
+  "aliases": []
+ },
+ "18fb86311488babb": {
+  "description": "engine humming, low and even",
+  "aliases": []
+ },
+ "1b2f1ada441e4ba6": {
+  "description": "engine idle, low hum of dashboard electronics",
+  "aliases": []
+ },
+ "52edfe422ad95d26": {
+  "description": "engine idling at a red light",
+  "aliases": []
+ },
+ "7a0d5a82ffe8de72": {
+  "description": "engine idling at a stoplight",
+  "aliases": [
+   "engine idling low",
+   "engine idling low, tires settling on gravel",
+   "engine idling, low electronic hum",
+   "engine idling, low hum",
+   "engine idling, low hum of interior electronics",
+   "engine idling, low hum of the sedan's electronics",
+   "soft silence, engine idling"
+  ]
+ },
+ "574d4a23046cbacf": {
+  "description": "engine idling down, gravel crunch",
+  "aliases": []
+ },
+ "08cca9fad16f0694": {
+  "description": "engine idling low, rain ticking against glass",
+  "aliases": [
+   "engine idling, rain ticking against glass"
+  ]
+ },
+ "44d6081f6866fb85": {
+  "description": "engine idling, rain easing to a drizzle",
+  "aliases": [
+   "rain easing slightly, engine idling low"
+  ]
+ },
+ "50d9663f541e5d04": {
+  "description": "engine idling, trunk release clunk",
+  "aliases": []
+ },
+ "e4dfc12574a8a301": {
+  "description": "engine note, steady acceleration",
+  "aliases": []
+ },
+ "63bf7c393e916a96": {
+  "description": "engine steady, tires on asphalt, the low electronic pulse of the dashboard timer",
+  "aliases": []
+ },
+ "fde4624e6d919bd7": {
+  "description": "engine ticking down, distant crane creaking in wind",
+  "aliases": []
+ },
+ "739417682f24dcd6": {
+  "description": "exterior speaker clicks off",
+  "aliases": [
+   "speaker clicks off"
+  ]
+ },
+ "28df320a42291143": {
+  "description": "fabric shifting, a low exhale",
+  "aliases": []
+ },
+ "579fba454e0323a0": {
+  "description": "faint agreement through earpiece, then a click",
+  "aliases": []
+ },
+ "9c5fb32712504413": {
+  "description": "faint creak of the sedan door, still open behind them",
+  "aliases": []
+ },
+ "360ec760f55a1f21": {
+  "description": "faint electronic chime, then silence",
+  "aliases": [
+   "soft electronic ping, then silence",
+   "sharp electronic chime, then silence"
+  ]
+ },
+ "897eff9e37fa768b": {
+  "description": "faint electronic hum, unmoving",
+  "aliases": []
+ },
+ "ceae916085653581": {
+  "description": "faint electronic tick, steady, unhurried",
+  "aliases": []
+ },
+ "e0f19a0c3cb74afd": {
+  "description": "faint mechanical click from the dashboard, a system readying itself",
+  "aliases": []
+ },
+ "11f9d8ec15ceb5fd": {
+  "description": "faint mechanical click, barely audible under engine hum",
+  "aliases": []
+ },
+ "bd4b00a6f35e1f67": {
+  "description": "faint reply through earpiece",
+  "aliases": []
+ },
+ "f4457b261754b91a": {
+  "description": "faint reply, longer this time",
+  "aliases": []
+ },
+ "8cf94432d56f4ad0": {
+  "description": "faint reply, short",
+  "aliases": []
+ },
+ "50d02b8dad8582a2": {
+  "description": "faint tap of fingers drumming against leather",
+  "aliases": []
+ },
+ "f129302a0a91f3fa": {
+  "description": "fence creaking faintly as he tightens his grip",
+  "aliases": []
+ },
+ "b9778848d13e728a": {
+  "description": "fence gap scraping slightly as he tests it",
+  "aliases": []
+ },
+ "ff88f4c26b20713b": {
+  "description": "fingers tapping once against the door panel, then stopping",
+  "aliases": []
+ },
+ "941856789a2f81ca": {
+  "description": "fluorescent hum, radio static crackling low",
+  "aliases": []
+ },
+ "c9188f21114786b7": {
+  "description": "fluorescent light humming faintly",
+  "aliases": []
+ },
+ "0437ce58bacc5b0d": {
+  "description": "folder closing",
+  "aliases": []
+ },
+ "8765a76dcae7943a": {
+  "description": "folder closing softly, one page held back",
+  "aliases": []
+ },
+ "7536dcea6f778e47": {
+  "description": "folder pages shifting softly",
+  "aliases": []
+ },
+ "b3286f24be9651b9": {
+  "description": "folding stool creaking open",
+  "aliases": []
+ },
+ "d139f693a5c0a48a": {
+  "description": "footsteps approaching, papers shuffling",
+  "aliases": []
+ },
+ "0ffe7261d999a094": {
+  "description": "footsteps on gravel, fence rattling faintly",
+  "aliases": []
+ },
+ "719d2262ec17472a": {
+  "description": "footsteps on metal grating, wind gusting",
+  "aliases": []
+ },
+ "c56308738bcf172a": {
+  "description": "footsteps on shifting debris",
+  "aliases": []
+ },
+ "0ae88239d7104b91": {
+  "description": "footsteps stop",
+  "aliases": []
+ },
+ "743a8e5c4c245e20": {
+  "description": "gate creaking somewhere ahead, wind picking up",
+  "aliases": []
+ },
+ "a6050a37b78c9a2b": {
+  "description": "gate grinding open, engine revving through",
+  "aliases": []
+ },
+ "fd418318faaf7018": {
+  "description": "gate hinge groaning, metal dragging on gravel",
+  "aliases": []
+ },
+ "6208251723fe92df": {
+  "description": "glass door chime, phone lines ringing faintly in the background",
+  "aliases": []
+ },
+ "76db7268128ac15e": {
+  "description": "gravel and broken concrete underfoot",
+  "aliases": []
+ },
+ "c8beeaf9ed86bfd8": {
+  "description": "gravel crunching faintly under the tires",
+  "aliases": [
+   "gravel crunching under slow tires",
+   "sedan engine dropping speed, gravel crunching faintly under tires"
+  ]
+ },
+ "e84d655570551140": {
+  "description": "gravel crunching under slow footsteps",
+  "aliases": [
+   "gravel crunching under slow, deliberate footsteps",
+   "gravel crunching, footsteps stopping",
+   "gravel crunching, slow deliberate footsteps",
+   "footsteps on gravel"
+  ]
+ },
+ "c546329a6c71a6b7": {
+  "description": "gravel crunching underfoot",
+  "aliases": [
+   "gravel crunching underfoot, cautious",
+   "gravel underfoot"
+  ]
+ },
+ "eb8a8d6b25aebfd4": {
+  "description": "gravel shifting under Cipher's boots",
+  "aliases": []
+ },
+ "3de8344b2452f545": {
+  "description": "gravel shifting under a boot as he steps back",
+  "aliases": []
+ },
+ "32ad3efb36d53384": {
+  "description": "he closes the laptop halfway, lamp still burning",
+  "aliases": []
+ },
+ "7f98fa7ccf219281": {
+  "description": "he taps a pen against the desk, rhythmic, undecided",
+  "aliases": []
+ },
+ "5e2b9a8539f7ff5a": {
+  "description": "headlights click off",
+  "aliases": []
+ },
+ "5a0e9080938a4f49": {
+  "description": "headlights sweeping across chain-link",
+  "aliases": []
+ },
+ "97f8697828ca8686": {
+  "description": "highway noise swelling, then fading toward a quieter street",
+  "aliases": []
+ },
+ "7a6b2437abaea260": {
+  "description": "his footsteps crunching on gravel, moving back toward his usual post at the fence",
+  "aliases": []
+ },
+ "757c78ba96ec35f9": {
+  "description": "hold music, faint and tinny",
+  "aliases": []
+ },
+ "9c96b9ce8f49127f": {
+  "description": "hum rises, then steadies into a low pulse",
+  "aliases": []
+ },
+ "0bab712a335df9ef": {
+  "description": "intercom click, muffled paging over the floor speakers",
+  "aliases": []
+ },
+ "41698b31c8f7ec77": {
+  "description": "keyboard clatter",
+  "aliases": [
+   "keyboard clatter, distant office chatter",
+   "keyboard clatter, distant office hum",
+   "keyboard clatter, fast and deliberate",
+   "keyboard clatter, faster",
+   "keyboard clatter, muffled office hum",
+   "keyboard clatter, pause",
+   "keyboard clatter, soft system chime",
+   "fluorescent office hum, keyboard clatter"
+  ]
+ },
+ "0830195a98a491b2": {
+  "description": "keyboard clatter, a phone being lifted from its cradle",
+  "aliases": []
+ },
+ "74460765e5b424fe": {
+  "description": "keyboard clicks, faint",
+  "aliases": [
+   "keyboard clicks, monitor hum"
+  ]
+ },
+ "ab8cd8fe3798a189": {
+  "description": "keyboard resumes, faster now",
+  "aliases": []
+ },
+ "c57a9a498b631ad9": {
+  "description": "keyboard typing",
+  "aliases": [
+   "keyboard typing, deliberate",
+   "keyboard typing, faster",
+   "keyboard typing resumes, softer",
+   "typing"
+  ]
+ },
+ "3d4ddda1878d7ab7": {
+  "description": "keys jingling, jacket zipper",
+  "aliases": []
+ },
+ "5ee32a1c9453ed4a": {
+  "description": "keys tapping, a task queue reordering onscreen",
+  "aliases": []
+ },
+ "0d2ee804b1b3938f": {
+  "description": "keys tapping, quick",
+  "aliases": []
+ },
+ "ad8bcd8f3e0ea7b4": {
+  "description": "keys typing rapidly",
+  "aliases": []
+ },
+ "5d3ca47cecac0bdf": {
+  "description": "laptop keys clicking",
+  "aliases": []
+ },
+ "2f36b4a9825ed651": {
+  "description": "leather seat shifting",
+  "aliases": [
+   "leather seat shifting, a held breath",
+   "leather seat shifting, tense"
+  ]
+ },
+ "2e8be061a76adedd": {
+  "description": "light rain on the windshield, wipers on a slow interval",
+  "aliases": []
+ },
+ "afdc726d7a5fff15": {
+  "description": "light rain starting against the windshield",
+  "aliases": [
+   "rain starting against the roof, light and steady",
+   "rain starting against the roof, soft and steady",
+   "rain starting against the windshield, faint",
+   "rain starting lightly against the windshield",
+   "rain starting, light against the windshield",
+   "soft rain beginning against the windshield",
+   "soft tick of rain against the windshield",
+   "engine hum, rain starting against the windshield",
+   "rain starting against the windshield"
+  ]
+ },
+ "5f788bbd51d6dad6": {
+  "description": "log file saved, soft confirmation tone",
+  "aliases": []
+ },
+ "10012ddd1b54f141": {
+  "description": "long beat of silence, engine hum",
+  "aliases": [
+   "long silence, only the hum of the engine",
+   "silence, only engine hum",
+   "silence, the hum of the engine suddenly loud"
+  ]
+ },
+ "655fa7139a73e73a": {
+  "description": "long open-air static, no reply",
+  "aliases": [
+   "static, no reply"
+  ]
+ },
+ "f3bc84fde8627776": {
+  "description": "long silence, wind through the wreck",
+  "aliases": []
+ },
+ "69e133bb5ef6a416": {
+  "description": "low mechanical hum, faint vibration rising from the trunk",
+  "aliases": []
+ },
+ "1839c9ef599afead": {
+  "description": "marker ping tone, soft and rhythmic, repeating",
+  "aliases": []
+ },
+ "64d40ec6874dbdf1": {
+  "description": "metal box hinge creaking open",
+  "aliases": []
+ },
+ "f1ebedc405523a22": {
+  "description": "metal groaning, distant creak of settling steel",
+  "aliases": []
+ },
+ "6e4bc92220e6e42e": {
+  "description": "metal latch wrenching free, gate chain snapping taut",
+  "aliases": []
+ },
+ "06dcd03047c2b560": {
+  "description": "metal padlock rattling",
+  "aliases": []
+ },
+ "4a51e7b3cfc2dfa1": {
+  "description": "monitor fan whirring, a soft data-ping",
+  "aliases": []
+ },
+ "79e83b794986863d": {
+  "description": "monitor hum, sudden silence as she leans back",
+  "aliases": []
+ },
+ "a60a509a3409cd6a": {
+  "description": "mouse click",
+  "aliases": [
+   "mouse click, error tone",
+   "mouse click, query tone",
+   "mouse click, screen refresh",
+   "mouse click, soft chime",
+   "mouse click, window minimizing",
+   "mouse click, a map view resolving with a soft chime"
+  ]
+ },
+ "dd958ca651b7454a": {
+  "description": "muffled voice on the other end of the line",
+  "aliases": [
+   "muffled voice on the other end, brief pause"
+  ]
+ },
+ "7c9b0ac014312891": {
+  "description": "no handshake, just the soft click of a seatbelt being tested, then released",
+  "aliases": []
+ },
+ "437509a06d26b73f": {
+  "description": "notebook cover closing, a soft leather snap",
+  "aliases": []
+ },
+ "ff909ed12d43c458": {
+  "description": "office clock ticking, faint",
+  "aliases": []
+ },
+ "778f04786c45ee44": {
+  "description": "office door opening, footsteps receding",
+  "aliases": []
+ },
+ "e57da53df88a80a7": {
+  "description": "office phone receiver lifted, then set back down",
+  "aliases": [
+   "office phone receiver set down softly",
+   "phone set down",
+   "phone set down on the table"
+  ]
+ },
+ "ccc0ca795cf87f18": {
+  "description": "office ventilation hum, distant hallway footsteps",
+  "aliases": []
+ },
+ "dc09f49b153fbc3f": {
+  "description": "old answering machine, faint click and hiss, a recorded voice bleeding through: \"...someone's been asking around about your son again, Wei — thought you'd want to know—\"",
+  "aliases": []
+ },
+ "a271ad6dc6ef2dda": {
+  "description": "old phone ringing on a wooden table",
+  "aliases": []
+ },
+ "df21ba094fca56d0": {
+  "description": "pages turning slowly",
+  "aliases": []
+ },
+ "ad4bd1c2a5d33254": {
+  "description": "paper shifting",
+  "aliases": []
+ },
+ "3fa80fa4db4a9a89": {
+  "description": "paper shuffling, photographs sliding against each other",
+  "aliases": []
+ },
+ "59a7650e446734f2": {
+  "description": "paper sliding across a desk",
+  "aliases": []
+ },
+ "f4ca436aa06c5ce1": {
+  "description": "pen scratching against paper, unhurried",
+  "aliases": []
+ },
+ "1f2366265d5d0f06": {
+  "description": "pen scratching, a printer spooling somewhere unseen",
+  "aliases": []
+ },
+ "3d5a71c6350716b3": {
+  "description": "phone buzzing on desk, ignored",
+  "aliases": []
+ },
+ "aa67843defc88ad0": {
+  "description": "phone line click, faint digital static",
+  "aliases": []
+ },
+ "f1ca34adac011bf0": {
+  "description": "phone picked up, dial tone",
+  "aliases": []
+ },
+ "c2b7b3d70f22f265": {
+  "description": "phone ringing once",
+  "aliases": []
+ },
+ "1578dafb3ff8eaef": {
+  "description": "phone screen tapping, then stopping",
+  "aliases": []
+ },
+ "af3e36291743c3ed": {
+  "description": "phone set down on wood, then picked up again",
+  "aliases": []
+ },
+ "72ce4b366c756e4a": {
+  "description": "phone vibrating faintly on wood, then stillness",
+  "aliases": []
+ },
+ "adf37c2c1bde5ce0": {
+  "description": "photograph paper rustling",
+  "aliases": []
+ },
+ "5817ab5c20336a39": {
+  "description": "printer hum",
+  "aliases": []
+ },
+ "e015bb17ba615d0c": {
+  "description": "radio static",
+  "aliases": [
+   "radio static crackle",
+   "radio static, muffled reply",
+   "silence, radio static continuing",
+   "radio static, brief pause"
+  ]
+ },
+ "f083ed650560f623": {
+  "description": "rain beginning to tap the windshield",
+  "aliases": []
+ },
+ "61f98300504e8e2f": {
+  "description": "rain intensifying, metal groaning under wind",
+  "aliases": []
+ },
+ "72c399daa9981559": {
+  "description": "rain picking up slightly against the roof",
+  "aliases": []
+ },
+ "e53e19eb26eb2d8e": {
+  "description": "rain thickening against glass",
+  "aliases": [
+   "rain thickening against the glass"
+  ]
+ },
+ "9888f5049959fdd6": {
+  "description": "rain ticking against the office window",
+  "aliases": [
+   "rain ticking against the window"
+  ]
+ },
+ "a5bc54f087a6d55c": {
+  "description": "rain ticking against the windshield, wipers dragging once",
+  "aliases": []
+ },
+ "6205571db8236672": {
+  "description": "rapid typing, several keystrokes",
+  "aliases": []
+ },
+ "706cdf638863645f": {
+  "description": "rustle of a folded list unfolding",
+  "aliases": []
+ },
+ "5020f5a3e08d8e49": {
+  "description": "seatbelt click, fabric shifting",
+  "aliases": []
+ },
+ "f6457a0a4a38db24": {
+  "description": "sedan shifting into gear, wet tires rolling forward",
+  "aliases": []
+ },
+ "839074f5f15dc53a": {
+  "description": "sedan tires easing over a pothole",
+  "aliases": []
+ },
+ "ca8ca13950578ef1": {
+  "description": "sedan tires humming on cracked asphalt",
+  "aliases": [
+   "sedan tires on wet asphalt",
+   "sedan tires on wet asphalt, a siren faint somewhere far behind",
+   "tires humming on empty asphalt",
+   "turn signal, tires on wet asphalt"
+  ]
+ },
+ "8a6a49460cfde794": {
+  "description": "sedan tires humming over uneven pavement",
+  "aliases": [
+   "tires humming over uneven asphalt",
+   "tires humming steady over asphalt",
+   "tires humming steady over wet asphalt",
+   "the sedan's tires humming steady over asphalt",
+   "the sedan's tires humming steady over wet asphalt, fading under the score"
+  ]
+ },
+ "9d526d943bac46dd": {
+  "description": "send confirmation chime",
+  "aliases": []
+ },
+ "1733992e0e30d826": {
+  "description": "sharp alert chime, repeating",
+  "aliases": [
+   "a status alert tone, sharp and repeating"
+  ]
+ },
+ "c6dd917498d17507": {
+  "description": "sharp intake of breath",
+  "aliases": []
+ },
+ "6bf1893ff5a48d40": {
+  "description": "silence over the speaker cutting out",
+  "aliases": []
+ },
+ "9e6d57643a763f6b": {
+  "description": "silence returning, wind picking up over open ground",
+  "aliases": []
+ },
+ "54829ed8f71e7e35": {
+  "description": "silence, then a faint metallic tick — cooling engine, far off",
+  "aliases": []
+ },
+ "143ae178904f8c1b": {
+  "description": "silence, wind dying",
+  "aliases": [
+   "silence, wind dying for a beat",
+   "wind dying down to near silence"
+  ]
+ },
+ "c4f00386b6f071a5": {
+  "description": "soft chime, data scrolling",
+  "aliases": []
+ },
+ "1c6c56ab72bfb5aa": {
+  "description": "soft chime, longer pause",
+  "aliases": []
+ },
+ "14aa9354eed8780e": {
+  "description": "soft creak of leather as Elias shifts in his seat",
+  "aliases": []
+ },
+ "0c3e249257355409": {
+  "description": "soft dashboard tone, a countdown digit changing",
+  "aliases": []
+ },
+ "84c8cda3c5a630a1": {
+  "description": "soft digital countdown tone begins, faint",
+  "aliases": []
+ },
+ "b6996428e57e7cc7": {
+  "description": "soft electronic access-denied buzz, then a second chime — override accepted",
+  "aliases": []
+ },
+ "d62d30e9c09e660e": {
+  "description": "soft electronic tone from the case",
+  "aliases": []
+ },
+ "c0e185fedf08b4f8": {
+  "description": "soft engine idle",
+  "aliases": []
+ },
+ "5795d00cda3ecf61": {
+  "description": "soft fabric rustle, faint click of a hidden panel",
+  "aliases": []
+ },
+ "cdd05f80ca80d3fa": {
+  "description": "soft footsteps on gravel, paper rustling",
+  "aliases": []
+ },
+ "d6a9049da025e978": {
+  "description": "soft keyboard clicks, entry saved chime",
+  "aliases": []
+ },
+ "8256259d5bfc6b9c": {
+  "description": "soft mechanical click, dashboard dimming",
+  "aliases": []
+ },
+ "1c7c51436c31212d": {
+  "description": "soft phone vibration, muffled against fabric",
+  "aliases": []
+ },
+ "31a225a8863cab72": {
+  "description": "soft ping, timestamp overlay",
+  "aliases": []
+ },
+ "0c62625642a61db5": {
+  "description": "soft rattle of dashboard displays",
+  "aliases": []
+ },
+ "605cd379b36e6dbd": {
+  "description": "soft rustle of cloth against glass",
+  "aliases": []
+ },
+ "23d3ad49b50fc269": {
+  "description": "soft rustle of fabric, Elias shifting in his seat",
+  "aliases": []
+ },
+ "9e717635e6b4d916": {
+  "description": "soft screen glow, a single tap",
+  "aliases": []
+ },
+ "96eec44e3d09874d": {
+  "description": "static continues, unbroken",
+  "aliases": []
+ },
+ "f09d91c283065f78": {
+  "description": "static fades slightly, then holds steady",
+  "aliases": []
+ },
+ "f157b601e327860a": {
+  "description": "static holds, empty",
+  "aliases": []
+ },
+ "0ec18c037a8e68f6": {
+  "description": "streetlights humming, spaced further apart",
+  "aliases": []
+ },
+ "21a1d24ba4e5d5a1": {
+  "description": "system processing tone",
+  "aliases": []
+ },
+ "5147ff2df9cc35e0": {
+  "description": "the countdown's steady electronic pulse from inside the sedan",
+  "aliases": []
+ },
+ "3809c9250c02c91d": {
+  "description": "the engine slows, then idles",
+  "aliases": []
+ },
+ "5950a0c3de2b8143": {
+  "description": "the hum outside swelling, then the car engine easing into a slower gear",
+  "aliases": []
+ },
+ "909909c6f864a547": {
+  "description": "the line clicks back to life",
+  "aliases": []
+ },
+ "49cb916c41f44de9": {
+  "description": "the partition glass gives a faint electronic click, then stills",
+  "aliases": []
+ },
+ "10a438839dfca4d4": {
+  "description": "the sedan takes a slow turn, tires humming against wet asphalt",
+  "aliases": []
+ },
+ "6cfbae04459ccaac": {
+  "description": "the sedan's dashboard chimes once, a soft electronic tone",
+  "aliases": []
+ },
+ "695b233e9af06da7": {
+  "description": "tires crunch on gravel shoulder",
+  "aliases": [
+   "tires slow slightly, gravel crunch"
+  ]
+ },
+ "637e09bc570140a6": {
+  "description": "tires crunching to a stop on broken asphalt",
+  "aliases": []
+ },
+ "6bfacdd2f613eb77": {
+  "description": "tires humming on wet asphalt, low steady engine drone",
+  "aliases": [
+   "tires humming steady on wet asphalt",
+   "tires on wet asphalt, steady hum",
+   "tires on wet asphalt, steady hum of driving"
+  ]
+ },
+ "59e83f6724470142": {
+  "description": "tires on gravel, engine slowing",
+  "aliases": []
+ },
+ "d6e64ab79949d5ac": {
+  "description": "tires shift onto wet, uneven asphalt",
+  "aliases": []
+ },
+ "cddedde1c27c0559": {
+  "description": "tires shifting from smooth asphalt to rougher pavement",
+  "aliases": [
+   "tires shifting onto rougher asphalt"
+  ]
+ },
+ "d862d966271ac5c4": {
+  "description": "trunk latch releases",
+  "aliases": [
+   "trunk latch releasing",
+   "trunk latch settling"
+  ]
+ },
+ "8dae7934a0713031": {
+  "description": "trunk lid closing, slow and deliberate",
+  "aliases": []
+ },
+ "be146e4e4cc42d3a": {
+  "description": "trunk lid lifting",
+  "aliases": [
+   "trunk lid lifting slowly"
+  ]
+ },
+ "533862d1050a368f": {
+  "description": "trunk release click",
+  "aliases": []
+ },
+ "0c12d6d84d3cbd17": {
+  "description": "turn signal clicking",
+  "aliases": [
+   "turn signal clicking, steady",
+   "turn signal clicking, then silence",
+   "turn signal clicking, then silence as it's switched off",
+   "turn signal ticking",
+   "turn signal ticking, then silence",
+   "turn signal ticking, then silence as the car moves off",
+   "turn signal ticking, unanswered"
+  ]
+ },
+ "742d034b499dac24": {
+  "description": "turn signal clicking, engine note shifting as the car changes lanes",
+  "aliases": []
+ },
+ "0c1fb68a5fb844cc": {
+  "description": "turn signal clicking, then cutting off mid-cycle",
+  "aliases": []
+ },
+ "244884c81329f854": {
+  "description": "turn signal clicking, tires shifting onto rougher pavement",
+  "aliases": [
+   "turn signal, tires easing onto pavement"
+  ]
+ },
+ "ce4738b84f08fa99": {
+  "description": "two car doors, engines turning over",
+  "aliases": []
+ },
+ "aefc479a3831dc06": {
+  "description": "two sharp key presses, system confirmation beep",
+  "aliases": []
+ },
+ "563da03522e0dcaa": {
+  "description": "wind dying, sedan door creaking open in the distance",
+  "aliases": []
+ },
+ "5e84714569fb1d9d": {
+  "description": "wind moving through the chain-link fence, a loose section ticking",
+  "aliases": []
+ },
+ "1e9b30960cf0937b": {
+  "description": "wind picking up briefly, then settling",
+  "aliases": []
+ },
+ "f84c44b3461655b4": {
+  "description": "wind through the fence, a metal sign swinging",
+  "aliases": []
+ },
+ "961ae534627ce435": {
+  "description": "window latch creaking as he leans closer to the glass",
+  "aliases": []
+ },
+ "e333e4cfc9718476": {
+  "description": "window motor whirring down",
+  "aliases": [
+   "window motor whirring up"
+  ]
+ },
+ "9141e006a4e6c57d": {
+  "description": "wipers starting, slow rhythm",
+  "aliases": [
+   "windshield wipers starting, slow rhythm"
+  ]
+ },
+ "a713e8cbd70c1995": {
+  "description": "wipers, one slow sweep",
+  "aliases": []
+ },
+ "573f4b16d1241421": {
+  "description": "worn folder unbuckled, paper rustling",
+  "aliases": []
+ },
+ "f45a33066cd684ef": {
+  "description": "zipper on a worn canvas bag",
+  "aliases": []
+ },
+ "c042d99cf7fce33c": {
+  "description": "a long exhale, faint tremor in his voice",
+  "aliases": []
+ },
+ "e43c4b5e1936c835": {
+  "description": "a soft electronic chime, out of place, cutting through the wiper rhythm",
+  "aliases": []
+ },
+ "1dab8c8275ad15d2": {
+  "description": "another handle pulled, dull thud",
+  "aliases": []
+ },
+ "66179716e8d083a1": {
+  "description": "another soft chime, notification tone",
+  "aliases": []
+ },
+ "a675b80340d7d342": {
+  "description": "car door closing, muffled thunk",
+  "aliases": []
+ },
+ "c6117c7a0e21e161": {
+  "description": "car engine idling, echo of a concrete garage",
+  "aliases": []
+ },
+ "a30ddddd09679c5f": {
+  "description": "car merging into traffic, distant horn",
+  "aliases": []
+ },
+ "afc32172e122d219": {
+  "description": "car pulling out, garage sounds fading behind",
+  "aliases": []
+ },
+ "b819caad9ba3352a": {
+  "description": "chime fades, speakers go silent",
+  "aliases": []
+ },
+ "8fc9c92a4766dfcf": {
+  "description": "dashboard light dims, speaker clicks off",
+  "aliases": []
+ },
+ "0c51a1f04c03b053": {
+  "description": "dashboard screen flickering faintly, then settling",
+  "aliases": []
+ },
+ "6b46d9cb96d7b99f": {
+  "description": "dashboard screen flickering, electronic stutter",
+  "aliases": []
+ },
+ "dd6126374bf63279": {
+  "description": "dashboard screen flickers back to a plain black route line, no labels",
+  "aliases": []
+ },
+ "f0930c65e383d95e": {
+  "description": "distant rail crossing bell, faint through the glass",
+  "aliases": []
+ },
+ "b5d3ef8768b3a76d": {
+  "description": "door closing, footsteps on old floorboards",
+  "aliases": []
+ },
+ "e6a7e896d7a7f6f9": {
+  "description": "door handle clicking uselessly, twice",
+  "aliases": []
+ },
+ "2ffef5bed15a07c4": {
+  "description": "door handle yanked, mechanism unresponsive",
+  "aliases": []
+ },
+ "fe65e11976ca4076": {
+  "description": "door locks engaging in sequence, heavy click",
+  "aliases": []
+ },
+ "dcb4df2f46d7f3a0": {
+  "description": "door opening, keys jingling again",
+  "aliases": []
+ },
+ "6097f7424535fb02": {
+  "description": "elevator chime, slow uneven footsteps on concrete",
+  "aliases": []
+ },
+ "56190ae0e9d1e5ab": {
+  "description": "engine note deepening as the sedan accelerates",
+  "aliases": []
+ },
+ "10a33496cf2aa4a5": {
+  "description": "engine note shifting, tires easing into a turn",
+  "aliases": []
+ },
+ "53db9d6f2f7cb96a": {
+  "description": "fridge door opening, bottle cap twisting off",
+  "aliases": []
+ },
+ "e63f1ebb6490e782": {
+  "description": "gate motor grinding somewhere ahead",
+  "aliases": []
+ },
+ "803697e443d437b1": {
+  "description": "keyboard clicking, quiet",
+  "aliases": []
+ },
+ "5e39dbe6fc4bf523": {
+  "description": "keys jingling, door unlocking, tired exhale",
+  "aliases": []
+ },
+ "7bd2fa4083ef71e8": {
+  "description": "leather seat creaking as someone shifts weight",
+  "aliases": []
+ },
+ "623c78e40c1ee248": {
+  "description": "mouse clicking rapidly",
+  "aliases": []
+ },
+ "15183d02a7546af9": {
+  "description": "notification chime fading under office noise",
+  "aliases": []
+ },
+ "55ff41c8b20ee34d": {
+  "description": "office ambience, keyboard clatter, distant phone ringing",
+  "aliases": []
+ },
+ "46d580fbd5f8d130": {
+  "description": "partition panel beeping, then silence",
+  "aliases": []
+ },
+ "590dbb672cfb36f8": {
+  "description": "phone buzzing nearby, unanswered",
+  "aliases": []
+ },
+ "7f7ec3fb72964934": {
+  "description": "phone buzzing on a hard surface",
+  "aliases": []
+ },
+ "62042c018d989863": {
+  "description": "phone picked up, faint dispatch chatter",
+  "aliases": []
+ },
+ "32224e1b24cdd186": {
+  "description": "quiet mechanical hum from the dashboard",
+  "aliases": []
+ },
+ "9996c7a77eebd5b4": {
+  "description": "rain beginning, light tapping on the roof",
+  "aliases": []
+ },
+ "ee54f8ee351cc892": {
+  "description": "servo whir, steering column adjusting itself",
+  "aliases": []
+ },
+ "75be22405f8cb69c": {
+  "description": "shoes being pulled back on, a groan of effort",
+  "aliases": []
+ },
+ "1c0718456a026eaa": {
+  "description": "soft click, new window opening",
+  "aliases": []
+ },
+ "a41a7310c7bde0c3": {
+  "description": "soft grunt, seat creak",
+  "aliases": []
+ },
+ "fd3c88ec0213766f": {
+  "description": "soft mechanical whir, partition sliding an inch then stopping",
+  "aliases": []
+ },
+ "b4a2047b043f4858": {
+  "description": "soft radar-ping tone",
+  "aliases": []
+ },
+ "d345463081f75d17": {
+  "description": "soft sigh",
+  "aliases": []
+ },
+ "16457ae5e6c3f285": {
+  "description": "the ping tone again, farther off course than before",
+  "aliases": []
+ },
+ "9e894005e6a8d855": {
+  "description": "a door banging open, footsteps receding fast down a hallway",
+  "aliases": []
+ },
+ "f141826fede173c7": {
+  "description": "a held breath through a car speaker",
+  "aliases": []
+ },
+ "8a827cbb15b54e7d": {
+  "description": "a small mechanical click, unacknowledged",
+  "aliases": []
+ },
+ "36eb381af4c1dad7": {
+  "description": "another slow step, wind gusting",
+  "aliases": []
+ },
+ "32220628dbd432ac": {
+  "description": "boots breaking frost-crusted dirt",
+  "aliases": []
+ },
+ "f8fc539e8214bcf5": {
+  "description": "car door locks releasing in sequence",
+  "aliases": []
+ },
+ "3833619205edeb66": {
+  "description": "car doors slamming, radio chatter",
+  "aliases": []
+ },
+ "90b946b3d0fa2555": {
+  "description": "chair scraping back, jacket rustling",
+  "aliases": []
+ },
+ "6d72614e81a439ce": {
+  "description": "chair scraping back, several people moving at once",
+  "aliases": []
+ },
+ "8658572a695f20b0": {
+  "description": "chair scraping softly against the floor",
+  "aliases": []
+ },
+ "e1dfbbee868658bf": {
+  "description": "countdown pulse ticking steadily under the silence",
+  "aliases": []
+ },
+ "6d3bd5cee4479439": {
+  "description": "crunch of frost, quick footsteps",
+  "aliases": []
+ },
+ "3443f3148c6553e7": {
+  "description": "distant idling engine, wind through wire fencing",
+  "aliases": []
+ },
+ "826935dcb518b973": {
+  "description": "distant radio chatter, boots on frost",
+  "aliases": []
+ },
+ "85bae308f1ccb18e": {
+  "description": "distant transmission tone, fading",
+  "aliases": []
+ },
+ "def2d77a5575f110": {
+  "description": "engine turnover, sirens beginning to wind up outside",
+  "aliases": []
+ },
+ "24cf66c66d4a98a8": {
+  "description": "exterior door, engine turning over, tires on cold asphalt",
+  "aliases": []
+ },
+ "7b8f47f02f1d08ab": {
+  "description": "fabric mask pulled away",
+  "aliases": []
+ },
+ "acb7074dbe26ca15": {
+  "description": "faint electronic tone, rhythmic, from inside the sedan",
+  "aliases": []
+ },
+ "c096eb197334448e": {
+  "description": "fast ticking tone continuing",
+  "aliases": []
+ },
+ "3afbad60c36bdc6b": {
+  "description": "footsteps slowing, then stopping",
+  "aliases": []
+ },
+ "f2c1901defdb78bd": {
+  "description": "kettle beginning to whistle, distant traffic through an open window",
+  "aliases": []
+ },
+ "7ade4c01f3203f94": {
+  "description": "kettle clicking off, silence settling in its place",
+  "aliases": []
+ },
+ "783106e2a14ec12e": {
+  "description": "keyboard clatter, overlapping radio chatter, monitors humming",
+  "aliases": []
+ },
+ "c900ed73d3e064ea": {
+  "description": "latch releasing, ticking tone cutting off mid-beat",
+  "aliases": []
+ },
+ "b0f1035978128474": {
+  "description": "muffled voice through phone speaker, indistinct",
+  "aliases": []
+ },
+ "e43f889f577605c7": {
+  "description": "muffled voice, final, clipped",
+  "aliases": []
+ },
+ "36bab0f6278a0315": {
+  "description": "muffled voice, firmer",
+  "aliases": []
+ },
+ "e070ec38420d25f3": {
+  "description": "mug set down on a counter",
+  "aliases": []
+ },
+ "f890beb86ebd459e": {
+  "description": "multiple engines approaching fast, tires on gravel",
+  "aliases": []
+ },
+ "ab2cf0860f9df3b7": {
+  "description": "no sound from the trunk, only wind",
+  "aliases": []
+ },
+ "e814bdb4a448496e": {
+  "description": "screen feed switching",
+  "aliases": []
+ },
+ "445cec5ae453221a": {
+  "description": "single confirmation tone, then quiet",
+  "aliases": []
+ },
+ "1d44c8c9f08756ed": {
+  "description": "soft electronic tick, accelerating",
+  "aliases": []
+ },
+ "27310d7f3ed6bca8": {
+  "description": "two car doors swinging wider, footsteps on gravel",
+  "aliases": []
+ },
+ "39b37ca146d21a57": {
+  "description": "wind across open ground",
+  "aliases": []
+ },
+ "91b1ef864bd1c1f8": {
+  "description": "wind gusting past metal, boots settling on frozen ground",
+  "aliases": []
+ },
+ "ebb3d1df8c97ba28": {
+  "description": "wind over broken metal, distant idling engine",
+  "aliases": []
+ }
+}

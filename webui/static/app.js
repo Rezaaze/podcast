@@ -156,6 +156,10 @@
   const seriesSelect = document.getElementById("pf-series-select");
   const mergeAnthologyCheckbox = document.getElementById("pf-merge-anthology");
   const useBeatsCheckbox = document.getElementById("pf-use-beats");
+  const introFileInput = document.getElementById("pf-intro-file");
+  const introCurrentLabel = document.getElementById("pf-intro-current");
+  const introUploadBtn = document.getElementById("pf-intro-upload-btn");
+  const introRemoveBtn = document.getElementById("pf-intro-remove-btn");
   let seriesList = [];
 
   function currentSeriesSlug() {
@@ -175,6 +179,7 @@
     updateSeriesSelectTitle();
     updateMergeAnthologyCheckbox();
     updateUseBeatsCheckbox();
+    updateIntroAsset();
   }
 
   function updateMergeAnthologyCheckbox() {
@@ -187,6 +192,50 @@
     if (!useBeatsCheckbox) return;
     const s = seriesList.find(s => s.slug === seriesSelect.value);
     useBeatsCheckbox.checked = s ? !!s.use_beats : false;
+  }
+
+  async function updateIntroAsset() {
+    if (!introCurrentLabel) return;
+    const slug = currentSeriesSlug();
+    if (!slug) {
+      introCurrentLabel.textContent = "";
+      if (introRemoveBtn) introRemoveBtn.disabled = true;
+      return;
+    }
+    const res = await fetch(`/api/pf/series/assets?series=${encodeURIComponent(slug)}`);
+    const data = await res.json().catch(() => ({}));
+    const name = data.assets && data.assets.intro;
+    introCurrentLabel.textContent = name ? `aktuell: ${name}` : "kein Intro gesetzt";
+    if (introRemoveBtn) introRemoveBtn.disabled = !name;
+  }
+
+  if (introUploadBtn) {
+    introUploadBtn.addEventListener("click", async () => {
+      const slug = currentSeriesSlug();
+      const file = introFileInput.files[0];
+      if (!slug || !file) return;
+      const form = new FormData();
+      form.append("slug", slug);
+      form.append("stem", "intro");
+      form.append("file", file);
+      const res = await fetch("/api/pf/series/asset", { method: "POST", body: form });
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({}));
+        alert(err.error || "Upload fehlgeschlagen");
+        return;
+      }
+      introFileInput.value = "";
+      await updateIntroAsset();
+    });
+  }
+
+  if (introRemoveBtn) {
+    introRemoveBtn.addEventListener("click", async () => {
+      const slug = currentSeriesSlug();
+      if (!slug) return;
+      await fetch(`/api/pf/series/asset?slug=${encodeURIComponent(slug)}&stem=intro`, { method: "DELETE" });
+      await updateIntroAsset();
+    });
   }
 
   function updateSeriesSelectTitle() {
@@ -222,6 +271,7 @@
       updateSeriesSelectTitle();
       updateMergeAnthologyCheckbox();
       updateUseBeatsCheckbox();
+      updateIntroAsset();
     }
     const s = await (await fetch(`/api/status/pf?series=${encodeURIComponent(slug)}`)).json();
     const lines = [
@@ -263,6 +313,7 @@
     updateSeriesSelectTitle();
     updateMergeAnthologyCheckbox();
     updateUseBeatsCheckbox();
+    updateIntroAsset();
     // Geladene Porträt-Prompts gehören zur vorherigen Serie — leeren.
     document.getElementById("pf-character-blocks").innerHTML = "";
     await setActiveSeries(seriesSelect.value);
@@ -309,6 +360,11 @@
       html += card(`Ep. ${ep.index}: ${ep.figure}`, `Skript ${stateLabel(ep.script_state)} · Audio ${stateLabel(ep.audio_state)}`,
         ep.audio_state === "running" ? "running" : (ep.script_state === "ready" && ep.audio_state === "ready" ? "ready" : "partial"));
     });
+    const failedEps = s.failed_episodes || [];
+    if (failedEps.length) {
+      html += card("⚠ Vertonung endgültig fehlgeschlagen",
+        `${failedEps.join(", ")} — TTS-Server/Log prüfen, dann Vertonung neu starten`, "error");
+    }
     html += card("Anthologie", stateLabel(s.anthology_state), s.anthology_state);
     html += card("Cover", s.cover_exists ? "vorhanden" : "offen", s.cover_exists ? "ready" : "missing");
     const chars = s.characters || {};
@@ -634,10 +690,51 @@
   syncRunningJobs({ reattach: true }).catch(console.error);
   setInterval(() => syncRunningJobs().catch(console.error), 4000);
 
+  // ---------- Vertonungs-Ziel Lokal/Cloud ----------
+  // Bei "cloud" werden die beiden Vertonen-Buttons auf pf_render_remote
+  // (cloud/render_remote.sh) umgeschrieben: pf_batch -> ganze Serie remote,
+  // pf_podcast_maker -> --only <datei>. Alles andere bleibt unberührt;
+  // pf_render_remote startet KEIN lokales TTS (nicht in AUTO_TTS_COMMANDS).
+  const renderTarget = document.getElementById("pf-render-target");
+  const cloudStopAfterLabel = document.getElementById("pf-cloud-stop-after-label");
+  const cloudHint = document.getElementById("pf-cloud-hint");
+
+  function syncRenderTargetUI() {
+    const cloud = renderTarget && renderTarget.value === "cloud";
+    if (cloudStopAfterLabel) cloudStopAfterLabel.hidden = !cloud;
+    if (cloudHint) cloudHint.hidden = !cloud;
+  }
+  if (renderTarget) {
+    renderTarget.value = localStorage.getItem("pfRenderTarget") || "local";
+    renderTarget.addEventListener("change", () => {
+      localStorage.setItem("pfRenderTarget", renderTarget.value);
+      syncRenderTargetUI();
+    });
+    syncRenderTargetUI();
+  }
+
+  function maybeCloudRewrite(commandId, params) {
+    if (!renderTarget || renderTarget.value !== "cloud") return [commandId, params];
+    if (commandId !== "pf_batch" && commandId !== "pf_podcast_maker") return [commandId, params];
+    const mapped = { series: params.series };
+    if (commandId === "pf_podcast_maker") {
+      if (!params.input_file) {
+        alert("Bitte zuerst die Skript-Datei (z.B. ep1.txt) eintragen.");
+        return [null, null];
+      }
+      mapped.only = params.input_file;
+    }
+    const stopAfter = document.getElementById("pf-cloud-stop-after");
+    if (stopAfter && stopAfter.checked) mapped.stop_after = true;
+    return ["pf_render_remote", mapped];
+  }
+
   document.querySelectorAll(".run-btn").forEach(btn => {
     btn.addEventListener("click", () => {
       ensureAudioContext();
-      runCommand(btn.dataset.command, collectParams(btn), btn);
+      const [commandId, params] = maybeCloudRewrite(btn.dataset.command, collectParams(btn));
+      if (!commandId) return;
+      runCommand(commandId, params, btn);
     });
   });
 

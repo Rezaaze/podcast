@@ -33,10 +33,22 @@ Skript-Generierung), dann LUFS-Mastering und Merge zu finaler MP3 mit ID3.
   ein transienter TTS-Schluckauf hieß früher "Episode liegt still, bis ein
   Mensch es merkt und neu klickt". Checkpoints/Part-WAVs fertiger Chunks
   bleiben erhalten, ein Rerun resumed mitten in der Episode.
+- **Fehlschlag-Alarm:** endgültig gescheiterte Episoden schreibt batch.py
+  nach `output/FAILED_EPISODES.json` (ein späterer erfolgreicher Lauf löscht
+  den Marker) — `webui/status.py` liest ihn und die WebUI zeigt eine rote
+  Statuskarte, statt dass der Fehlschlag nur als Log-Zeile verhallt.
+- **Zweiter TTS-Server (optional):** `audio.secondary_api_url` lässt
+  batch.py zwei Episoden parallel vertonen — zwei Worker an einer Queue,
+  Worker 2 rendert via `podcast_maker --api-url`. Der zweite Server muss
+  dieselben Stimmen/Clones anbieten; ist er beim Start nicht erreichbar
+  (`url_reachable`, jede HTTP-Antwort zählt), läuft alles sequentiell über
+  den Primär-Server. `episode_pairs` wird nach Episoden-Index sortiert
+  aufgebaut, die Merge-Reihenfolge bleibt also stabil.
 - `podcast_maker.py` retried `backend.check_api()` 3× im 10s-Abstand statt
-  sofort abzubrechen: `webui/tts_control.py::start_tts` wartet nur auf den
-  offenen PORT, nicht aufs fertig geladene Modell — der Health-Endpoint
-  kann direkt nach Autostart noch kurz erroren.
+  sofort abzubrechen: `webui/tts_control.py::start_tts` pollt zwar
+  inzwischen `/health` nach dem Port (Modell-Load wird abgewartet), aber
+  CLI-Läufe ohne WebUI-Start und Backends ohne /health-Endpoint brauchen
+  das Netz weiterhin.
 
 ## Post-Merge-Crash-Sicherheit (wichtigste Invariante hier)
 
@@ -135,3 +147,15 @@ immer ohne die fehlenden Metadaten je nachzuholen. Fix:
   Prosodie ihrer einen Referenzaufnahme — okay für einen Narrator, klingt
   flach für Drama-Dialog; für `voices.*`-Rollen built-in Speaker
   bevorzugen.
+- **NARRATOR ignoriert `style` IMMER, auch als Built-in-Speaker:**
+  `build_drama_jobs()` in `podcast_maker.py` erzwingt `style=None` für
+  `item.speaker == "NARRATOR"`, unabhängig von Skript-Style-Tags oder
+  `role_cfg.default_style`. Grund: Style/Emotion-Instruct klingt auf der
+  Erzähler-Rolle hörbar "off" — anders als bei Dialog-Rollen, wo Emotion
+  den Zeilen Substanz gibt. Betrifft nur den drama-Modus (case-basierte
+  Templates); der narration-Modus-Narrator (`NARRATOR_ROLE`-Sentinel,
+  section_styles) ist davon unberührt. Gilt (Stand jetzt) nur für
+  `GradioBackend` sauber — `RestBackend.generate_chunk` fällt bei
+  `style=None` auf `self.default_style` zurück statt komplett stumm zu
+  bleiben (kein Narrator-Sonderfall dort, bewusst nicht angefasst, siehe
+  Memory `narrator-style-override`).

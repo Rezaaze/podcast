@@ -22,6 +22,17 @@ RETRY_DELAY_CAP = 30  # oberes Limit für den Backoff, falls MAX_RETRIES mal ste
 FADE_MS = 15
 PEAK_CEILING_DBFS = -1.0
 
+# Pro-Chunk-Lautstärkeangleichung: master_episode() kompressiert/normalisiert
+# nur die FERTIGE Gesamtepisode — laute Momente werden gedämpft, leise Zeilen
+# aber nicht angehoben, und unterschiedliche TTS-Ausgabepegel je Stimme/Style
+# bleiben bis dahin unangetastet nebeneinander stehen. CHUNK_NORM_TARGET_DBFS
+# zieht jeden einzelnen Chunk sanft in Richtung eines gemeinsamen Zielpegels,
+# BEVOR die Chunks zur Episode zusammengefügt werden — CHUNK_NORM_MAX_GAIN_DB
+# deckelt den Eingriff, damit stilistisch gewollte Dynamik (Flüstern vs.
+# Schreien) erhalten bleibt und nur echte Ausreißer eingefangen werden.
+CHUNK_NORM_TARGET_DBFS = -20.0
+CHUNK_NORM_MAX_GAIN_DB = 6.0
+
 
 def trim_silence(segment):
     start_trim = silence.detect_leading_silence(segment, silence_threshold=-40)
@@ -68,6 +79,19 @@ def master_episode(segment, target_lufs):
     return effects.normalize(compressed)
 
 
+def normalize_chunk_loudness(segment, target_dbfs=CHUNK_NORM_TARGET_DBFS,
+                             max_gain_db=CHUNK_NORM_MAX_GAIN_DB):
+    """Gleicht die Lautstärke EINES TTS-Chunks sanft an target_dbfs an, mit
+    auf max_gain_db gedeckeltem Gain (siehe Konstanten-Kommentar oben) — für
+    sehr kurze Chunks nutzt das die simple mittlere pydub-dBFS statt eines
+    vollen LUFS-Meters (pyloudnorm braucht für ITU-R-BS.1770-Gating deutlich
+    längere Blöcke, als ein einzelner Satz-Chunk oft liefert)."""
+    if segment.dBFS == float("-inf"):
+        return segment  # reine Stille (z.B. Pausen-Chunk) — nichts anzugleichen
+    gain = max(-max_gain_db, min(max_gain_db, target_dbfs - segment.dBFS))
+    return segment.apply_gain(gain)
+
+
 def generate_chunk(backend, voice, text, style=None, speed=None):
     """Generiert Audio über das gewählte TTS-Backend mit Retry +
     Plausibilitätsprüfung.
@@ -92,7 +116,7 @@ def generate_chunk(backend, voice, text, style=None, speed=None):
             segment = trim_silence(segment)
             suspicious, reason = is_suspicious_duration(segment, text, speed=speed)
             if not suspicious:
-                return segment
+                return normalize_chunk_loudness(segment)
             print(f"\n    Versuch {attempt}: Verdächtige Ausgabe – {reason}")
             # Server hat geantwortet, nur der Sample war schlecht — sofort erneut
             # versuchen statt zu warten (siehe Docstring oben).
@@ -124,8 +148,11 @@ def load_part_offsets(episode_path):
     path = part_offsets_path(episode_path)
     if not os.path.exists(path):
         return None
-    with open(path, "r", encoding="utf-8") as f:
-        return json.load(f)
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except json.JSONDecodeError:
+        return None
 
 
 def merge_parts_to_episode(part_paths, episode_path, pause_between_parts_ms, target_lufs,
@@ -175,8 +202,11 @@ def merge_parts_to_episode(part_paths, episode_path, pause_between_parts_ms, tar
         os.remove(path)
     print(f"{len(part_paths)} Einzeldateien gelöscht.")
 
-    with open(part_offsets_path(episode_path), "w", encoding="utf-8") as f:
+    offsets_path = part_offsets_path(episode_path)
+    tmp_offsets_path = offsets_path + ".tmp"
+    with open(tmp_offsets_path, "w", encoding="utf-8") as f:
         json.dump(part_offsets, f)
+    os.replace(tmp_offsets_path, offsets_path)
 
     return part_offsets
 

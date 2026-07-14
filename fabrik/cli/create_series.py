@@ -36,7 +36,7 @@ from typing import Optional
 from fabrik.core import config, history, paths, workspace
 from fabrik.core.claude_cli import describe_json_error, parse_json_response, run_claude_process
 
-TIMEOUT_SECONDS = 600
+TIMEOUT_SECONDS = 900
 MAX_ATTEMPTS = 3
 DEFAULT_EPISODE_COUNT = 3
 DEFAULT_MINUTES = 35.0
@@ -143,6 +143,26 @@ def build_prompt(template_text: str, topic: str, episode_count: int, minutes: fl
     template_text = template_text.replace("{{SECTION_COUNT}}", str(section_count))
     template_text = template_text.replace("{{LOCATION_COUNT}}", str(location_count))
 
+    # Single-Source-Substitutionen (Chelsie-Lektion): Stimmen-Roster und
+    # Default-Modell leben in config.py und werden hier eingesetzt, statt
+    # wörtlich kopiert in den Templates zu altern.
+    template_text = template_text.replace("{{DEFAULT_MODEL}}", config.DEFAULTS["model"])
+    roster_bullets = "\n".join(
+        f"  - {name} ({gender}) — {desc}."
+        for name, gender, desc in config.BUILTIN_SPEAKER_ROSTER
+    )
+    roster_compact = ", ".join(
+        f"{name} ({gender[0]}, {desc.split(',')[0]})"
+        for name, gender, desc in config.BUILTIN_SPEAKER_ROSTER
+    )
+    template_text = template_text.replace("{{VOICE_ROSTER}}", roster_bullets)
+    template_text = template_text.replace("{{VOICE_ROSTER_COMPACT}}", roster_compact)
+
+    leftover = sorted(set(re.findall(r"\{\{[A-Z_]+\}\}", template_text)))
+    if leftover:
+        print(f"⚠️  WARNUNG: unersetzte Platzhalter im Creator-Template: {', '.join(leftover)} — "
+              f"sie landen wörtlich im Prompt (Tippfehler im Template?).")
+
     return template_text + topic
 
 
@@ -153,7 +173,7 @@ def compute_timeout(episode_count: int) -> int:
     3-Episoden-Anthologie — ein fixes Timeout wartet bei kleinen Serien
     unnötig lange und bricht bei großen zu früh ab. Nach oben gedeckelt,
     damit ein wirklich hängender Prozess nicht unbegrenzt blockiert."""
-    return min(1800, max(TIMEOUT_SECONDS, 120 * episode_count))
+    return min(3600, max(TIMEOUT_SECONDS, 180 * episode_count))
 
 
 def call_claude(prompt: str, model: str, timeout: int = TIMEOUT_SECONDS, label: str = "Claude") -> str:
@@ -399,7 +419,7 @@ are only writing episodes {start}-{end} in this response.
 def compute_batch_timeout(batch_size: int) -> int:
     """Wie compute_timeout(), aber für einen einzelnen Episoden-Batch statt die ganze Serie —
     kleinerer Floor, ein Batch enthält nur wenige Episoden."""
-    return min(1200, max(300, 120 * batch_size))
+    return min(2400, max(450, 180 * batch_size))
 
 
 def generate_batch_with_retry(creator_prompt: str, skeleton: dict, start: int, end: int, model: str):
@@ -592,12 +612,20 @@ episodes.json:
 """
 
 
-def review_series(data: dict, model: str) -> list:
+def review_series(data: dict, model: str) -> Optional[list]:
     """Inhalts-QA nach bestandener Struktur-Validierung: ein zweiter
     Claude-Aufruf prüft Spoiler-Leaks, Widersprüche, Akzent-Casting und
-    Episoden-Überschneidungen. Nur Warnungen — blockiert nie (bei Fehlern
-    im Review-Aufruf selbst wird still übersprungen, die Serie ist ja
-    strukturell gültig)."""
+    Episoden-Überschneidungen.
+
+    Rückgabe: Liste (auch leer = tatsächlich sauber) bei einem erfolgreichen
+    Review-Lauf, oder None, wenn der Review-Aufruf selbst fehlgeschlagen ist
+    (Timeout/API-Fehler/unauswertbare Antwort) — dieselbe None-vs-[]-Disziplin
+    wie bei review_episode_script/review_episode_beats. Wichtig für den
+    Bestätigungs-Review nach --fix (main()), der einen echten Fehlschlag von
+    einem tatsächlich sauberen Ergebnis unterscheiden muss, statt beides als
+    '✅ keine Auffälligkeiten' zu zeigen. Der ERSTE Review-Aufruf (vor --fix)
+    behandelt None bewusst wie [] (blockiert nie, die Serie ist ja strukturell
+    gültig) — siehe `review_series(...) or []` in main()."""
     prompt = REVIEW_PROMPT.format(template=data.get("template", "narration")) \
         + json.dumps(data, ensure_ascii=False, indent=2)
     timeout = compute_timeout(len(data.get("episodes", [])))
@@ -606,14 +634,14 @@ def review_series(data: dict, model: str) -> list:
         result = run_claude_process(argv, timeout, "Inhalts-Review")
     except (FileNotFoundError, subprocess.TimeoutExpired):
         print("⚠️  Inhalts-Review übersprungen (Claude-Aufruf fehlgeschlagen).")
-        return []
+        return None
     if result.returncode != 0:
         print("⚠️  Inhalts-Review übersprungen (Claude-Aufruf fehlgeschlagen).")
-        return []
+        return None
     parsed = parse_json_response(result.stdout.strip())
     if not isinstance(parsed, dict) or not isinstance(parsed.get("issues"), list):
         print("⚠️  Inhalts-Review übersprungen (Antwort nicht auswertbar).")
-        return []
+        return None
     return [str(i) for i in parsed["issues"]]
 
 
@@ -684,18 +712,6 @@ def repair_series(data: dict, issues: list, model: str, episode_count: int) -> O
     return None
 
 
-def unique_slug(title: str) -> str:
-    """Slug aus dem Serientitel; bei Kollision mit vorhandener Serie wird
-    durchnummeriert statt die bestehende Serie zu überschreiben."""
-    base = paths.slugify(title)
-    slug = base
-    counter = 2
-    while slug in paths.list_series():
-        slug = f"{base}_{counter}"
-        counter += 1
-    return slug
-
-
 def main():
     parser = argparse.ArgumentParser(description="Neue Podcast-Serie via Claude CLI erzeugen.")
     parser.add_argument("topic", help="Thema/Konzept der neuen Serie")
@@ -763,7 +779,9 @@ def main():
 
     if not args.no_review:
         print("🔎  Inhalts-Review (Spoiler-Leaks, Widersprüche, Akzent-Casting, Überschneidungen) ...")
-        issues = review_series(data, config.DEFAULTS["model"])
+        # None (Review-Aufruf selbst gescheitert) wie [] behandeln — dieser
+        # erste Review blockiert nie, die Serie ist ja strukturell gültig.
+        issues = review_series(data, config.DEFAULTS["model"]) or []
 
         if issues and args.fix:
             print(f"🔧  {len(issues)} Hinweis(e) — versuche automatische Reparatur ...")
@@ -793,7 +811,7 @@ def main():
         else:
             print("✅  Inhalts-Review: keine Auffälligkeiten.")
 
-    slug = unique_slug(data.get("series_title", "serie"))
+    slug = paths.unique_slug(data.get("series_title", "serie"))
     series = paths.Series(slug)
     scaffolded = workspace.scaffold_workspace(series, data, args.template)
     with open(series.episodes_file, "w", encoding="utf-8") as f:

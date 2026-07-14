@@ -69,10 +69,33 @@ BACKEND_SUPPORTS_STYLE = {"rest": True, "kokoro": False, "gradio": True}
 # fabrik/audio/tts_backends.py, dort nicht importierbar — dieses Modul darf
 # keine schweren Abhängigkeiten ziehen) — reine Vereinigungsmenge nur für
 # diese Tippfehler-Warnung, keine echte Auflösung (die passiert pro Backend).
-KNOWN_BUILTIN_SPEAKERS = {
-    "Ryan", "Aiden", "Ethan", "Dylan", "Eric", "Uncle_Fu",
-    "Chelsie", "Serena", "Vivian",
-    "Ono_anna", "Sohee", "Uncle_fu",
+# Das TATSÄCHLICHE Roster des lokalen Qwen3-Servers (/api/v1/custom-voice/
+# speakers). "Ethan" und "Chelsie" stehen zwar im offiziellen Qwen3-Roster,
+# existieren auf dem lokalen Server aber NICHT — zweimal live in Produktion
+# gescheitert (the_wildrose_inheritance T6.1, the_long_fare), jeweils erst
+# beim Vertonen statt beim check. Deshalb hier bewusst NICHT gelistet, damit
+# validate_data schon bei 'check' warnt. Kleingeschriebene Varianten sind
+# die Schreibweise des gradio-Backends (siehe tts_backends.py::SPEAKERS).
+# EINE Quelle für das Roster: create_series.py substituiert daraus
+# {{VOICE_ROSTER}} (Bullet-Liste, crime_drama/soap_opera) und
+# {{VOICE_ROSTER_COMPACT}} (Fließtext, language_course) in den
+# Creator-Templates — die Stimmenliste kann damit nie wieder zwischen
+# Code und Templates auseinanderlaufen (Chelsie-Lektion).
+BUILTIN_SPEAKER_ROSTER = [
+    ("Ryan", "male", "native English, accent-free"),
+    ("Aiden", "male", "native American English, accent-free"),
+    ("Dylan", "male", "Chinese-native (Beijing), audible accent"),
+    ("Eric", "male", "Chinese-native (Sichuan), audible accent"),
+    ("Uncle_Fu", "male", "elderly Chinese voice, strong accent; only fits old characters"),
+    ("Serena", "female", "Chinese-native, audible accent"),
+    ("Vivian", "female", "Chinese-native, audible accent"),
+    ("Ono_Anna", "female", "Japanese-native, audible accent"),
+    ("Sohee", "female", "Korean-native, audible accent"),
+]
+
+KNOWN_BUILTIN_SPEAKERS = {name for name, _, _ in BUILTIN_SPEAKER_ROSTER} | {
+    # Schreibweisen des gradio-Backends (anderes App-Roster, s. tts_backends.py)
+    "Ono_anna", "Uncle_fu",
 }
 
 
@@ -99,9 +122,19 @@ VALID_AUDIO_KEYS = {
     "backend", "ref_audio", "ref_text", "model_size", "language", "chunk_gap", "chunk_max_chars",
     "model_path", "language_code", "sample_rate",  # Kokoro-spezifisch
     "merge_anthology",  # false: Episoden bleiben eigenständig, kein ANTHOLOGY_COMPLETE.mp3
+    "secondary_api_url",  # optionaler zweiter TTS-Server (gleiches Backend/gleiche Stimmen!) —
+                          # batch.py vertont dann zwei Episoden parallel (Worker 2 rendert via
+                          # podcast_maker --api-url auf diesem Server)
     "seed",  # Default-Seed für alle Rollen ohne eigenen voices.<ROLLE>.seed (nur backend "rest" + geklonte
              # Stimmen/Prompts — siehe fabrik/audio/tts_backends.py::RestBackend, Built-in-Speaker haben
              # in dieser API keinen seed-Parameter, wird dort ignoriert)
+    "chunk_concurrency",  # Batch-Größe für gleichzeitige Chunk-Generierung (Default 1 = bisheriges
+                          # sequenzielles Verhalten). Nur mit echtem Batch-Endpoint sinnvoll (siehe
+                          # GradioBackend.generate_chunk_batch / cloud/onstart_qwen3_tts.sh) — reine
+                          # Thread-Parallelität ohne Server-seitiges Batching brachte in Tests NULL
+                          # Speedup (CUDA serialisiert nebenläufige Threads auf einem GPU). Empfohlener
+                          # Produktions-Default für backend "gradio": 40 (siehe cloud/README.md für die
+                          # gemessene Speedup-Kurve und die OOM-Grenze bei größeren Werten).
 }
 VALID_EPISODE_KEYS = {
     "figure", "theme", "intro_note", "outro_note", "sections", "section_styles",
@@ -368,9 +401,10 @@ def validate_data(data) -> tuple[list[str], list[str]]:
     for key in ("voice", "default_style"):
         if key in audio and (not isinstance(audio[key], str) or not audio[key].strip()):
             errors.append(f"'audio.{key}' muss ein nicht-leerer String sein")
-    if "api_url" in audio and (not isinstance(audio["api_url"], str)
-                               or not re.match(r"https?://", audio["api_url"])):
-        errors.append("'audio.api_url' muss eine URL sein (z.B. \"http://127.0.0.1:42003\")")
+    for key in ("api_url", "secondary_api_url"):
+        if key in audio and (not isinstance(audio[key], str)
+                             or not re.match(r"https?://", audio[key])):
+            errors.append(f"'audio.{key}' muss eine URL sein (z.B. \"http://127.0.0.1:42003\")")
     if "target_lufs" in audio and not is_num(audio["target_lufs"]):
         errors.append("'audio.target_lufs' muss eine Zahl sein (z.B. -16.0)")
     for key in ("pause_between_chunks_ms", "pause_between_lines_ms",
@@ -379,6 +413,8 @@ def validate_data(data) -> tuple[list[str], list[str]]:
             errors.append(f"'audio.{key}' muss eine ganze Zahl >= 0 sein (Millisekunden)")
     if "chunk_max_chars" in audio and (not is_int(audio["chunk_max_chars"]) or audio["chunk_max_chars"] < 1):
         errors.append("'audio.chunk_max_chars' muss eine ganze Zahl >= 1 sein")
+    if "chunk_concurrency" in audio and (not is_int(audio["chunk_concurrency"]) or audio["chunk_concurrency"] < 1):
+        errors.append("'audio.chunk_concurrency' muss eine ganze Zahl >= 1 sein")
     if "seed" in audio:
         if not is_int(audio["seed"]) or audio["seed"] < 0:
             errors.append("'audio.seed' muss eine ganze Zahl >= 0 sein")
@@ -522,6 +558,26 @@ def validate_or_exit(data):
         sys.exit(1)
 
 
+def _style_reaches_audio(data) -> bool:
+    """Ob Style-Regieanweisungen das gerenderte Audio überhaupt erreichen.
+    Zwei Bedingungen: das Backend muss style/instruct rendern (BACKEND_
+    SUPPORTS_STYLE) UND — im narration-Mode — audio.voice muss ein
+    Built-in-Speaker sein: Clone-Stimmen (z.B. der Default "MyVoice")
+    reproduzieren nur die Prosodie ihrer Referenzaufnahme, der TTS gibt
+    'instruct' ausschließlich an Built-ins weiter (tts_backends.py).
+    Ohne diesen Check formte der Writer VOCAL-DELIVERY-Prosa und der
+    Creator wählte section_styles, die beim Vertonen kommentarlos
+    verworfen wurden. Drama-Mode bleibt beim reinen Backend-Check —
+    dort gilt die Style-Fähigkeit pro Rolle (Clone-Rollen sind eh
+    dokumentiert abgeraten)."""
+    audio = data.get("audio", {})
+    if not supports_style(audio.get("backend", "rest")):
+        return False
+    if data.get("mode", DEFAULTS["mode"]) == "narration":
+        return audio.get("voice", "") in KNOWN_BUILTIN_SPEAKERS
+    return True
+
+
 def build_config(data) -> dict:
     """Extrahiert die Format-/Generierungs-Konfiguration aus episodes.json."""
     fmt = data.get("format", {})
@@ -543,8 +599,9 @@ def build_config(data) -> dict:
         "light_model": gen.get("light_model", DEFAULTS["light_model"]),
         "use_beats": gen.get("use_beats", DEFAULTS["use_beats"]),
         "prefix": data.get("output_prefix", DEFAULTS["output_prefix"]),
-        # Ob das konfigurierte TTS-Backend style/instruct-Regieanweisungen
-        # überhaupt rendert — steuert, ob script_writer.py Style-Anweisungen
-        # in den Schreib-Prompt aufnimmt (spart Tokens, wenn nicht).
-        "supports_style": supports_style(data.get("audio", {}).get("backend", "rest")),
+        # Ob Style-Regieanweisungen das Audio erreichen (Backend UND — bei
+        # narration — Built-in-Voice) — steuert, ob script_writer.py
+        # Style-Anweisungen in den Schreib-Prompt aufnimmt (spart Tokens
+        # und formt keine Prosa für eine Delivery, die nie stattfindet).
+        "supports_style": _style_reaches_audio(data),
     }

@@ -72,6 +72,21 @@ def episode_name_from_file(filepath):
     return stem.capitalize()
 
 
+def url_reachable(url, timeout=5):
+    """Reiner Erreichbarkeits-Check: jede HTTP-Antwort zählt, auch 404 — die
+    Backends haben unterschiedliche Health-Endpoints, hier geht es nur um
+    "Server an/aus", bevor ein zweiter Render-Worker daran gebunden wird."""
+    import urllib.error
+    import urllib.request
+    try:
+        urllib.request.urlopen(url, timeout=timeout)
+        return True
+    except urllib.error.HTTPError:
+        return True
+    except Exception:
+        return False
+
+
 def episode_offsets_ms(episode_paths, pause_ms):
     """Start-Offset jeder Episode in der gemergten Anthologie (MP3-Längen +
     Merge-Pause) — exakt wie merge_episodes() die Tonspur zusammensetzt."""
@@ -119,7 +134,7 @@ def merge_subtitles(episode_paths, anthology_path, pause_ms):
     Lolfi liest daraus die Sprechblasen-Einblendungen für die Anthologie,
     genau wie es *_SUBS.json einer Einzelepisode liest)."""
     import json as _json
-    from podcast_maker import format_srt_timestamp
+    from fabrik.cli.podcast_maker import format_srt_timestamp
 
     cues = []
     missing = []
@@ -367,8 +382,6 @@ def main():
     if os.path.exists(anthology_path):
         print(f"Anthology existiert bereits: {ANTHOLOGY_FILENAME} – lösche sie zum Neu-Generieren.")
 
-    episode_pairs = []  # (script_path, episode_file) — für den Upload-Index
-
     # Ein einzelner Chunk-Timeout/eine kurze Server-Unterbrechung mitten in
     # einem langen "alle Episoden"-Lauf lässt bisher NUR diese eine Episode
     # fehlschlagen (podcast_maker.py bricht die Episode ab, sobald ein Part
@@ -381,6 +394,50 @@ def main():
     BATCH_RETRY_ROUNDS = 2
     BATCH_RETRY_DELAY = 20
 
+    # Optionaler zweiter TTS-Server: mit audio.secondary_api_url vertonen zwei
+    # Worker parallel (Worker 2 rendert via podcast_maker --api-url). Der
+    # Server muss dieselben Stimmen/Clones anbieten — sonst hard-failt dort
+    # die Voice-Auflösung, die Episode landet in der Retry-Runde und damit
+    # ggf. wieder beim Primär-Server.
+    secondary_url = data.get("audio", {}).get("secondary_api_url")
+    if secondary_url and not url_reachable(secondary_url):
+        print(f"Hinweis: audio.secondary_api_url ({secondary_url}) nicht erreichbar — "
+              f"vertone sequentiell über den Primär-Server.")
+        secondary_url = None
+    if secondary_url:
+        print(f"Zweiter TTS-Server aktiv: {secondary_url} — vertone 2 Episoden parallel.")
+
+    completed = {}  # Episoden-Index -> (script, episode_file); hält die Merge-Reihenfolge stabil
+
+    def render_one(i, script, api_url=None) -> bool:
+        """True, sobald die Episoden-MP3 existiert (frisch gerendert oder von
+        einem früheren Lauf). list/dict-Zugriffe hier sind unter CPython atomar,
+        die Worker teilen sich sonst keinen Zustand."""
+        name = episode_name_from_file(script)
+        episode_file = os.path.join(series.output_dir, f"{name}_FULL_EPISODE.mp3")
+
+        if os.path.exists(episode_file):
+            size_mb = os.path.getsize(episode_file) / (1024 * 1024)
+            print(f"[{i}/{len(scripts)}] Übersprungen (existiert): {name}_FULL_EPISODE.mp3 ({size_mb:.1f} MB)")
+            completed[i] = (script, episode_file)
+            return True
+
+        via = f" via {api_url}" if api_url else ""
+        print(f"[{i}/{len(scripts)}] Starte{via}: {os.path.basename(script)} → {name}_FULL_EPISODE.mp3")
+        cmd = [sys.executable, "-m", "fabrik.cli.podcast_maker", script, "--name", name,
+               "--series", series.slug]
+        if api_url:
+            cmd += ["--api-url", api_url]
+        result = subprocess.run(cmd, check=False, cwd=paths.BASE_DIR)
+
+        if result.returncode != 0 or not os.path.exists(episode_file):
+            print(f"  FEHLER bei {script} – wird ggf. erneut versucht.")
+            return False
+
+        completed[i] = (script, episode_file)
+        print(f"  Fertig: {name}_FULL_EPISODE.mp3\n")
+        return True
+
     pending = list(enumerate(scripts, 1))
     failed = []
     for round_num in range(BATCH_RETRY_ROUNDS + 1):
@@ -391,40 +448,62 @@ def main():
                   f"{len(pending)} fehlgeschlagene Episode(n) — warte {BATCH_RETRY_DELAY}s ──")
             time.sleep(BATCH_RETRY_DELAY)
         failed = []
-        for i, script in pending:
-            name = episode_name_from_file(script)
-            episode_file = os.path.join(series.output_dir, f"{name}_FULL_EPISODE.mp3")
+        if secondary_url and len(pending) > 1:
+            import queue
+            import threading
+            work = queue.Queue()
+            for item in pending:
+                work.put(item)
+            failed_lock = threading.Lock()
 
-            if os.path.exists(episode_file):
-                size_mb = os.path.getsize(episode_file) / (1024 * 1024)
-                print(f"[{i}/{len(scripts)}] Übersprungen (existiert): {name}_FULL_EPISODE.mp3 ({size_mb:.1f} MB)")
-                episode_pairs.append((script, episode_file))
-                continue
+            def worker(api_url):
+                while True:
+                    try:
+                        i, script = work.get_nowait()
+                    except queue.Empty:
+                        return
+                    if not render_one(i, script, api_url):
+                        with failed_lock:
+                            failed.append((i, script))
 
-            print(f"[{i}/{len(scripts)}] Starte: {os.path.basename(script)} → {name}_FULL_EPISODE.mp3")
-            result = subprocess.run(
-                [sys.executable, "-m", "fabrik.cli.podcast_maker", script, "--name", name,
-                 "--series", series.slug],
-                check=False, cwd=paths.BASE_DIR
-            )
-
-            if result.returncode != 0 or not os.path.exists(episode_file):
-                print(f"  FEHLER bei {script} – wird ggf. erneut versucht.")
-                failed.append((i, script))
-                continue
-
-            episode_pairs.append((script, episode_file))
-            print(f"  Fertig: {name}_FULL_EPISODE.mp3\n")
+            threads = [threading.Thread(target=worker, args=(url,))
+                       for url in (None, secondary_url)]
+            for t in threads:
+                t.start()
+            for t in threads:
+                t.join()
+            failed.sort()
+        else:
+            for i, script in pending:
+                if not render_one(i, script):
+                    failed.append((i, script))
 
         pending = failed
 
+    episode_pairs = [completed[i] for i in sorted(completed)]  # für den Upload-Index
     episode_paths = [ep for _, ep in episode_pairs]
 
     print(f"\nEpisoden fertig: {len(episode_paths)} | Fehlgeschlagen: {len(failed)}")
 
+    # Endgültige Fehlschläge als Datei persistieren, nicht nur als Log-Zeile:
+    # webui/status.py pollt eh das Dateisystem und macht daraus eine rote
+    # Statuskarte — sonst fällt eine liegengebliebene Episode erst auf, wenn
+    # jemand das SSE-Log bis zum Ende liest. Ein späterer erfolgreicher Lauf
+    # räumt die Datei wieder weg.
+    import json as _json
+    failed_marker = os.path.join(series.output_dir, "FAILED_EPISODES.json")
     if failed:
+        with open(failed_marker, "w", encoding="utf-8") as f:
+            _json.dump({
+                "failed": [os.path.basename(s) for _, s in failed],
+                "retry_rounds": BATCH_RETRY_ROUNDS,
+                "finished_at": time.strftime("%Y-%m-%dT%H:%M:%S"),
+            }, f, ensure_ascii=False, indent=1)
         print(f"Endgültig fehlgeschlagen nach {BATCH_RETRY_ROUNDS} Retry-Runde(n): {[s for _, s in failed]}")
+        print(f"Fehlschlag-Marker geschrieben: {os.path.basename(failed_marker)} (WebUI zeigt eine rote Karte).")
         print("Bitte TTS-Server/Log prüfen und Script danach neu starten – bereits fertige Episoden werden übersprungen.")
+    elif os.path.exists(failed_marker):
+        os.remove(failed_marker)
 
     if len(episode_paths) < 2:
         print("Weniger als 2 Episoden vorhanden – kein Anthology-Merge.")

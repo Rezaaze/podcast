@@ -83,9 +83,15 @@ leaken, selbst bei sauberem Plan.
   Gruppenreferenz-Fehlinterpretation von beliebigem Claude-Text). Danach
   wird die ganze Episode erneut reviewt, um zu bestätigen, dass der Fix
   gelandet ist.
-- Ergebnisse idempotent gecacht in `<prefix>N_REVIEW.txt` (Re-Run skippt
-  außer `--force`/`--fix`); `--no-script-review` skippt komplett. Beide
-  Flags laufen durch `generate_episode.py all`s Subprocess-Parallelität.
+- Ergebnisse idempotent gecacht in `<prefix>N_REVIEW.txt` — und der Cache
+  wird ZURÜCKGELESEN (`parse_review_file`): ein Re-Run (auch mit `--fix`)
+  reviewt ein unverändertes Skript nie erneut. "Keine Auffälligkeiten" →
+  Review-Block komplett übersprungen; REVIEW.txt mit Befunden + `--fix` →
+  gecachte Befunde gehen direkt in die Reparatur (nur das Bestätigungs-
+  Review danach ist ein frischer Call, und nur wenn ≥1 Part wirklich
+  repariert wurde). Nur `--force` (Skript regeneriert) reviewt neu;
+  `--no-script-review` skippt komplett. Alle Flags laufen durch
+  `generate_episode.py all`s Subprocess-Parallelität.
 
 ## Beat-Layer (`generation.use_beats: true`, opt-in, Default aus)
 
@@ -111,10 +117,13 @@ Volle Design-Begründung: `docs/beat-layer-design.md`.
   None/[]‑Disziplin, warn-only, kein Auto-Repair) läuft direkt nach der
   Generierung → `<prefix>N_BEATS_REVIEW.txt`. `--force` löscht BEATS- und
   BEATS_REVIEW-Datei wie die Skriptdatei.
-- **Known limitation:** `all --jobs N` submitted alle Episoden vorab
-  (ThreadPoolExecutor) — Beats-Kontinuität (vorherige Episode lesen) ist
-  nur bei geordneter Generierung zuverlässig. Fehlende Vorgänger-Beats
-  unter `--jobs > 1` = Info-Log, nie Crash.
+- **Beats-Vorlauf bei `all --jobs > 1`:** generate_episode.py generiert
+  alle Beat-Sheets VOR dem Pool seriell in Episodenreihenfolge (Kontinuität
+  braucht die Beats der Vorgänger-Episode) und reicht `--beats-ready` an
+  die Subprocesses durch — dort werden Beats dann auch mit `--force` nicht
+  gelöscht/neu generiert, nur geladen (`beats_pregenerated` in
+  generate_episode()). Fehlende Vorgänger-Beats (z. B. Beat-Call im
+  Vorlauf gescheitert) = Info-Log, nie Crash.
 
 ## Sonstiges
 

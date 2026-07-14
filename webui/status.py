@@ -84,6 +84,11 @@ def pf_status(jobs=None, series_slug=None) -> dict:
             "audio_state": _state(audio_in_progress, audio_ready),
         })
 
+    # Endgültig gescheiterte Vertonungen (batch.py schreibt/löscht den Marker
+    # nach den Retry-Runden) — treibt eine rote Alarm-Karte in der WebUI.
+    failed_marker = _read_json(os.path.join(output_dir, "FAILED_EPISODES.json")) or {}
+    failed_episodes = failed_marker.get("failed", [])
+
     anthology_file = os.path.join(output_dir, "ANTHOLOGY_COMPLETE.mp3")
     archive_dir = os.path.join(PF_DIR, "data", "archive")
     archive_count = len(os.listdir(archive_dir)) if os.path.isdir(archive_dir) else 0
@@ -131,6 +136,7 @@ def pf_status(jobs=None, series_slug=None) -> dict:
         "template": episodes_json.get("template", "narration"),
         "episode_count": len(episodes),
         "episodes": episode_rows,
+        "failed_episodes": failed_episodes,
         "anthology_state": _state(
             running_commands.get("pf_batch", {}).get("state") == "running",
             os.path.exists(anthology_file),
@@ -145,8 +151,9 @@ def pf_status(jobs=None, series_slug=None) -> dict:
     }
 
 
-# Muss mit lofi_system.py::AUDIO_EXTS / PODCAST_EXCLUDE_PATTERNS übereinstimmen
-# (keine gemeinsame Imports zwischen den beiden Projekten, siehe CLAUDE.md).
+# Muss mit Lolfis lolfi/config.py::AUDIO_EXTS / PODCAST_EXCLUDE_PATTERNS
+# übereinstimmen (keine gemeinsamen Imports zwischen den beiden Projekten,
+# siehe Kopplungstabelle in ~/Downloads/Lolfi/CLAUDE.md).
 _PODCAST_AUDIO_EXTS = (".mp3", ".wav", ".flac", ".aac", ".m4a")
 _PODCAST_EXCLUDE_PATTERNS = ("_meta_",)
 

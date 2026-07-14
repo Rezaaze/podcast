@@ -1,0 +1,95 @@
+--- SCENE 1 ---
+1. The sedan continues down a near-empty road, the earlier confession still hanging unspoken between Marcus and Elias.
+2. Marcus keeps his eyes on the road, giving no outward sign of what Elias's admission cost him to hear.
+3. Elias sits rigid, aware he's said more than he meant to and unsure what Marcus will do with it.
+4. The dashboard countdown ticks down, a reminder that Cipher hasn't finished with them yet.
+5. Neither man mentions Harrow by name, though it now sits plainly in the space between them.
+
+--- SCENE 2 ---
+1. Cipher's modulated voice breaks the silence, assigning a new task: retrieve a package from an address near the old warehouse district.
+2. The pickup location is listed under a business name Marcus half-recognizes but can't immediately place.
+3. Elias catches the address too, his composure tightening at the mention of the district.
+4. Marcus notices Elias's reaction and files it away without comment, unwilling to be the one who explains it.
+5. The audience recognizes the address as sitting inside the loop that's been tightening around Harrow all night.
+
+--- SCENE 3 ---
+1. Delia sits alone at her terminal after Wei Su leaves, the folder's contents still settling in her.
+2. She pulls up Crestline's personnel archive and searches Marcus's name, finding the file flagged as sealed.
+3. She requests an override without routing it through her supervisor, telling herself it's just curiosity.
+4. The system returns only that the file was sealed under a settlement NDA a decade ago, no further detail available to her clearance.
+5. She stares at the seal notice, unable yet to connect it to the sedan she's been tracking all night.
+6. She closes the request log manually, hiding that she ever made the query.
+
+--- SCENE 4 ---
+1. Chen, following up on his off-chain call, gets a callback with fresh routing data on the intrusion signal.
+2. He confirms the signal passes through a third proxy hop, each one slower to trace than the last.
+3. The newest data narrows the final hop to a storage facility near the river, matching what he'd suspected but hadn't said aloud.
+4. He weighs calling this in immediately against the risk of being wrong and burning the lead.
+5. He decides to sit on the storage facility detail one more hour, not yet ready to share it with anyone, including Delia.
+
+--- SCENE 5 ---
+1. Cipher's voice returns with instructions for the pickup, and this time she names the place outright: Harrow.
+2. Marcus's hands tighten on the wheel, the word landing exactly the way he feared it would.
+3. Elias goes very still, watching Marcus's reaction rather than processing the word himself.
+4. Marcus recovers his composure quickly, giving Elias nothing to read beyond momentary distraction.
+5. He says nothing to Elias about what the word confirms for him, choosing to let Elias think it's just another cruel demand.
+6. The audience understands this is the moment Marcus's private certainty becomes undeniable, even as he keeps it from the one man who might share it.
+
+--- SCENE 6 ---
+1. Wei Su sits at home with the folder now empty on the table beside him, the copies left with Delia.
+2. He turns his phone over in his hand, half-expecting a call that doesn't come.
+3. He remembers the promise he made himself years ago, to be the one who finally said Danny's name out loud in the right room.
+4. His wrong belief steadies him: he tells himself the person digging into Danny's case will make things right, if he can just get proof to the right hands.
+5. He doesn't yet know that "the right hands" already belong to someone whose intentions go far beyond justice on paper.
+
+--- SCENE 7 ---
+1. Back in the sedan, Elias breaks his own silence, no longer willing to let Marcus's earlier question go unanswered in kind.
+2. He asks, carefully, whether Marcus already knew where tonight was heading before Cipher ever said the word.
+3. Marcus hesitates, caught between his instinct to deflect and the exhaustion of doing it all night.
+4. Elias presses once, quietly, making clear he's done pretending not to notice Marcus's reactions.
+5. Marcus decides, wordlessly, that he can't keep steering around it any longer.
+
+--- SCENE 8 ---
+1. Marcus admits he recognized "Harrow" the instant Cipher said it, and that he's known all night what this was really about.
+2. He goes further than he planned to, admitting he filed the original safety report on the beams before the collapse.
+3. He forces out the part he's hidden longest: that he took a settlement payout afterward and signed away his right to ever say so publicly.
+4. He stops short of naming the falsified sign-off itself, letting the payout confession stand as the full weight of what he's giving up tonight.
+5. Elias absorbs this with a mix of relief and fresh unease, hearing confirmation but not the whole shape of it.
+6. The audience, holding the case file's full truth, recognizes Marcus has confessed real guilt while still protecting his worst secret.
+
+--- SCENE 9 ---
+1. Elias studies Marcus in the rearview mirror, seeing him differently now that both men have admitted pieces of the same night.
+2. He realizes Marcus's silence and his own overruling were two separate failures, not one shared guilt he can fold into his own.
+3. He feels the old assumption crack, the one where he believed Marcus was the driving force behind tonight's punishment.
+4. He doesn't say any of this aloud, choosing to sit with the recalibration rather than hand Marcus the satisfaction of seeing it.
+5. Marcus, unaware of the shift happening across the seat, keeps driving as if nothing has changed.
+
+--- SCENE 10 ---
+1. Chen calls Delia directly, the contact he reached out to earlier in the chain being her after all.
+2. She tells him about the sedan's repeated loop near the river, careful to leave Marcus's name out of it.
+3. He tells her about the third proxy hop and the storage facility it points toward, still holding back his full confidence in the lead.
+4. Both realize, almost at the same moment, that their separate threads are describing the same stretch of riverfront.
+5. Neither says aloud what they're both starting to suspect: that this isn't a random hijacking route.
+6. Delia hangs up without mentioning Wei Su's visit or the sealed personnel file, keeping her personal stake to herself.
+
+--- SCENE 11 ---
+1. Cipher, listening in, registers Marcus's payout confession as more than she expected to get from a single push.
+2. She notes that he stopped just short of the falsified sign-off, the one detail she knows from the buried report that he still hasn't spoken aloud.
+3. She weighs whether tonight's confession is enough to answer the question she set out to answer, and decides it isn't, not fully.
+4. She recalibrates her remaining tasks, deciding the drive to Harrow itself will have to finish what tonight's conversation started.
+5. She gives no sign of any of this through the modulated voice, letting the men believe the task queue is simply continuing as before.
+
+--- SCENE 12 ---
+1. Wei Su gets a call from an old contact, someone who worked the original site inspection years ago.
+2. The contact warns him that another person has recently been asking pointed questions about Danny's death, using details that were never made public.
+3. Wei Su asks who; the contact says only that the questions came through indirect channels, no name attached.
+4. He assumes, as he has all along, that this must be a journalist or lawyer finally taking interest in the case.
+5. The audience, aware of Cipher's engineering of tonight, recognizes the questioner was never anyone so simple.
+
+--- SCENE 13 ---
+1. The narrator observes that three separate threads — the sedan, dispatch, and a grieving father's folder — have each closed the distance to Harrow tonight without any of them fully seeing the others.
+2. Marcus has confessed part of his silence but not all of it; Elias has stopped believing Marcus orchestrated tonight but not yet suspected who did.
+3. Chen and Delia have matched their separate leads to the same riverfront radius, each still withholding one piece from the other.
+4. Wei Su waits, certain the wrong kind of help is coming for his son's memory.
+5. The narrator notes that every road in the episode, however different its travelers, has been bending toward the same warehouse gate.
+6. The episode closes on Cipher's private tally of what's been said and what hasn't, still unresolved.

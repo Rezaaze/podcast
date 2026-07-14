@@ -48,7 +48,7 @@ REQUIRED SCHEMA (follow exactly):
     "words_per_part_max": 620
   },
   "generation": {
-    "model": "claude-sonnet-5"
+    "model": "{{DEFAULT_MODEL}}"
   },
   "audio": {
     "api_url": "http://127.0.0.1:42003",
@@ -95,17 +95,9 @@ SCHEMA RULES:
 - episodes: array of EXACTLY {{EPISODE_COUNT}} episode objects — ONE continuous serialized case that develops across all episodes (not a new case per episode), each ending on a cliffhanger except the finale.
 - Each episode must have approximately {{SECTION_COUNT}} sections (±1, chosen per episode based on scene/plot needs) for a ~{{EPISODE_MINUTES}}-minute episode — do not force a fixed count, a tense confrontation episode may need fewer, longer scenes than one juggling many leads. Do NOT include section_styles — acting styles are written per line inside the script, not per section.
 - voices: exactly one "NARRATOR" role (see below) PLUS 1 investigator/protagonist role plus 2 to 4 recurring suspect/witness/victim's-circle roles. Role names UPPERCASE_WITH_UNDERSCORES (become speaker tags like [LIN_QIU]). Every role gets a DIFFERENT Qwen3-TTS built-in speaker matching plausible gender/age — NARRATOR's voice must be built-in, never a cloned/voice-prompt name, since it needs acting-style range across the whole season.
-- AVAILABLE built-in speakers — the local TTS server has EXACTLY these nine, never invent other names:
-  - Ryan (male) — native English, accent-free.
-  - Aiden (male) — native American English, accent-free.
-  - Ethan (male) — Chinese-native, clearly audible Chinese accent in any non-Chinese language.
-  - Dylan (male) — Chinese-native (Beijing), audible accent.
-  - Eric (male) — Chinese-native (Sichuan), audible accent.
-  - Uncle_Fu (male) — elderly Chinese voice, strong accent; only fits old characters.
-  - Chelsie (female) — Chinese-native, audible accent.
-  - Serena (female) — Chinese-native, audible accent.
-  - Vivian (female) — Chinese-native, audible accent.
-- ACCENT CASTING RULE: the production language is English — a Chinese-native speaker's accent WILL be audible in every single rendered English line. Treat it as a deliberate character trait, never an accident: give every role voiced by a Chinese-native speaker a biography that plausibly explains the accent (Chinese or Chinese-diaspora background, immigrant family, expat witness, ...) and let their `description` reflect it — or set the case in a milieu where such voices are simply normal (international city, mixed community, Chinatown, Singapore/Hong Kong expat circles, ...). There is NO accent-free female voice, so plan female characters' backgrounds accordingly instead of pretending the accent isn't there. Reserve Ryan/Aiden for the NARRATOR and the investigator (the NARRATOR profits most from a neutral voice). For an accented speaker cast as a fluent native, add a softening hint to their default_style (e.g. "speaks slow, deliberate, very clear English") — it reduces, but never removes, the accent.
+- AVAILABLE built-in speakers — the local TTS server has EXACTLY the following, never invent other names:
+{{VOICE_ROSTER}}
+- ACCENT CASTING RULE: the production language is English — a non-native speaker's accent WILL be audible in every single rendered English line. Treat it as a deliberate character trait, never an accident: give every role voiced by a non-native speaker a biography that plausibly explains the accent (Chinese/Japanese/Korean or diaspora background, immigrant family, expat witness, ...) and let their `description` reflect it — or set the case in a milieu where such voices are simply normal (international city, mixed community, Chinatown, Singapore/Hong Kong expat circles, ...). There is NO accent-free female voice, so plan female characters' backgrounds accordingly instead of pretending the accent isn't there. Reserve Ryan/Aiden for the NARRATOR and the investigator (the NARRATOR profits most from a neutral voice). For an accented speaker cast as a fluent native, add a softening hint to their default_style (e.g. "speaks slow, deliberate, very clear English") — it reduces, but never removes, the accent.
 - NARRATOR exists purely to orient a listener who has no visual scene information: pure audio, no on-screen speaker labels. It is not a character and never learns or reveals plot information the listener shouldn't have yet.
 - case.character_knowledge: EVERY key in voices EXCEPT "NARRATOR" must appear here (every speaking character has a knowledge slice, including the investigator — they too should have blind spots and wrong assumptions early on).
 - case.solution and case.objective_facts stay CONSISTENT across every episode's "case" block in the season (the underlying truth doesn't change episode to episode — only how much of it has been uncovered so far, reflected in each episode's character_knowledge growing/shifting).

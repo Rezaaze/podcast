@@ -1,0 +1,758 @@
+--- PART 1 ---
+
+[NARRATOR]
+Previously on The Long Fare: Cipher's voice, piped through the sedan's own speakers, let the name "Harrow" slip loose inside car number one one four — and for one unguarded second, Elias Vance's composure broke in front of the man driving him.
+[NARRATOR]
+Neither the chauffeur, Marcus Kane, nor his passenger, the property developer Elias Vance, has said a single word about it since. The confession, whatever it was, has been riding with them in silence.
+[NARRATOR]
+Now the sedan presses on through near-empty streets, the dashboard countdown Cipher set still ticking down, the quiet in the cabin heavier than either man is willing to admit.
+
+[SFX: tires humming on wet asphalt, low steady engine drone]
+
+[MARCUS_KANE | style: flat, controlled]
+Traffic's clear the rest of the way.
+
+[ELIAS_VANCE | style: guarded, still rattled]
+Good.
+
+[SFX: soft dashboard tone, a countdown digit changing]
+
+[NARRATOR]
+The number on the dash slides lower. Neither of them looks at it directly.
+
+[ELIAS_VANCE | style: careful, testing the silence]
+You've been quiet since I stopped talking.
+
+[MARCUS_KANE | style: even, giving nothing away]
+I'm driving. Quiet's the job.
+
+[ELIAS_VANCE | style: quieter, almost apologetic]
+That's not what I asked you.
+
+[MARCUS_KANE | style: measured, unreadable]
+I heard what you asked.
+
+[SFX: brief pause, a single wiper stroke]
+
+[NARRATOR]
+Marcus keeps his eyes fixed on the road ahead. Whatever it cost him to hear what Elias said, nothing in his face shows it now.
+
+[ELIAS_VANCE | style: rigid, second-guessing himself]
+I said more back there than I meant anyone to hear.
+
+[MARCUS_KANE | style: neutral, closed off]
+You did.
+
+[ELIAS_VANCE | style: tight, watching for a reaction]
+And you're not going to tell me what you make of it.
+
+[MARCUS_KANE | style: quiet, final]
+Not tonight.
+
+[ELIAS_VANCE | style: low, pressing once more]
+Is there a version of tonight where you would?
+
+[MARCUS_KANE | style: barely audible, deflecting]
+Ask me again when we get where we're going.
+
+[SFX: turn signal clicking, engine note shifting as the car changes lanes]
+
+[NARRATOR]
+Outside, the streetlights thin toward the river district. Inside, a name neither man will say out loud sits between them like a third passenger, taking up its own share of the seat.
+
+[ELIAS_VANCE | style: low, uneasy]
+Whatever's coming next—
+
+[MARCUS_KANE | style: cutting in, calm]
+Comes when it comes.
+
+[NARRATOR]
+The countdown ticks again, one digit closer to zero. Somewhere beneath the dashboard, Cipher is still listening, still patient, still waiting for her moment to speak.
+
+--- PART 2 ---
+
+[NARRATOR]
+Still the sedan, still the same stretch of road. The silence between driver and passenger hasn't broken — until the dashboard does it for them.
+
+[SFX: soft electronic chime from dashboard speaker]
+
+[CIPHER | style: calm, unhurried]
+There's a package waiting for you. Pickup only — nothing to deliver yet.
+
+[MARCUS_KANE | style: flat, wary]
+Where.
+
+[CIPHER | style: precise, almost bored]
+Riverside storage row. Unit's leased under a name you'll find familiar. Cross & Tull Holdings.
+
+[MARCUS_KANE | style: quiet, searching]
+That's not familiar.
+
+[CIPHER | style: amused, knowing]
+Give it a minute.
+
+[NARRATOR]
+Marcus says nothing more, but something in his jaw shifts — a name half-remembered, not yet placed. In the back seat, Elias goes still.
+
+[ELIAS_VANCE | style: carefully controlled]
+Cross and Tull. That's a subcontractor name. Old one.
+
+[MARCUS_KANE | style: even, giving nothing]
+Didn't ask you.
+
+[ELIAS_VANCE | style: tight, defensive]
+I'm only saying I've heard it before.
+
+[NARRATOR]
+Elias doesn't finish the thought. He doesn't have to — the district Cipher named sits inside the fenced perimeter that's been creeping closer to the cabin windows for the last hour.
+
+[SFX: turn signal clicking, tires shifting onto rougher pavement]
+
+[ELIAS_VANCE | style: barely masking unease]
+This is the warehouse district.
+
+[MARCUS_KANE | style: unreadable]
+So it is.
+
+[ELIAS_VANCE | style: pressing, quiet]
+You know this area.
+
+[MARCUS_KANE | style: cool, closed door]
+I know every area. It's the job.
+
+[NARRATOR]
+A lie of omission, delivered flat enough to pass. Marcus watches the mirror, not the road, just long enough to see Elias's hands fold together too tightly in his lap.
+
+[MARCUS_KANE]
+(internal beat — no line, only the SFX carries it)
+
+[SFX: engine humming steady, a distant train horn far off across the river]
+
+[CIPHER | style: soft, almost pleasant]
+Third exit. You'll see the fence line soon enough.
+
+[NARRATOR]
+Marcus takes the exit without a word. Beside him — behind him — Elias watches the passing fence posts blur by, recognizing them, saying nothing, the two men circling the same unspoken name from opposite silences.
+
+[SFX: sedan engine dropping speed, gravel crunching faintly under tires]
+
+--- PART 3 ---
+
+[NARRATOR]
+Crestline dispatch, the same night. Delia Reyes, Marcus's oldest friend on the fleet, sits alone now that Wei Su has gone, the folder he left behind still open on her desk.
+
+[DELIA_REYES | style: quiet, unsettled]
+Okay. Okay, that's not nothing.
+
+[SFX: office chair creak]
+
+[DELIA_REYES | style: muttering to herself]
+You don't leave a folder like that with a stranger unless you need somebody to actually look at it.
+
+[SFX: keyboard typing]
+
+[NARRATOR]
+She turns from the folder to her terminal, pulling up Crestline's personnel archive.
+
+[DELIA_REYES | style: focused, low]
+Kane, Marcus.
+
+[SFX: soft system chime]
+
+[DELIA_REYES | style: puzzled]
+"Record restricted." Since when.
+
+[NARRATOR]
+The screen returns a single line where a personnel history should be.
+
+[DELIA_REYES | style: reading aloud, flat]
+File sealed. Access requires supervisor override.
+
+[DELIA_REYES | style: hesitant, testing herself]
+It's just curiosity. I'm not — I'm not doing anything with it.
+
+[SFX: keyboard typing, faster]
+
+[NARRATOR]
+She requests the override herself, without routing it through her supervisor's queue.
+
+[DELIA_REYES | style: whispering, half-guilty]
+Come on. Come on, just tell me something.
+
+[SFX: system processing tone]
+
+[NARRATOR]
+The result loads slowly, then resolves into a single administrative note.
+
+[DELIA_REYES | style: reading aloud, careful]
+Sealed under settlement non-disclosure agreement. Ten years. No further detail available at current clearance.
+
+[DELIA_REYES | style: stunned, quiet]
+A settlement.
+
+[SFX: distant office phone ringing, unanswered]
+
+[DELIA_REYES | style: trying to reason it through]
+Ten years ago he just — he left construction. That's the story. That's always been the story.
+
+[DELIA_REYES | style: doubting herself]
+Settlements don't come from just leaving.
+
+[NARRATOR]
+She stares at the seal notice, the cursor blinking beside words she can't yet fit into any shape that makes sense.
+
+[DELIA_REYES | style: low, almost to the folder]
+Wei Su, what did you actually hand me.
+
+[SFX: paper shifting]
+
+[NARRATOR]
+She doesn't yet connect the sealed file to the sedan she's been tracking half the night, its ping still looping somewhere out past the bridge.
+
+[DELIA_REYES | style: decisive, quiet]
+Nobody needs to see I looked.
+
+[SFX: keyboard typing, deliberate]
+
+[NARRATOR]
+She opens the request log and, line by line, erases any trace that the query was ever made.
+
+[DELIA_REYES | style: firm, final]
+There. Like it never happened.
+
+[SFX: monitor hum, sudden silence as she leans back]
+
+--- PART 4 ---
+
+[NARRATOR]
+Cybercrimes division, past midnight. Detective Leo Chen — the officer chasing tonight's hijacked signal — sits alone under a desk lamp, phone pressed to his ear.
+
+[SFX: phone line click, faint digital static]
+
+[DET_LEO_CHEN | style: low, focused]
+Go ahead. I've got a pen.
+
+[SFX: muffled voice on the other end of the line]
+
+[DET_LEO_CHEN | style: writing quickly]
+Third hop confirmed. Say that again — slower.
+
+[SFX: keyboard clatter]
+
+[DET_LEO_CHEN | style: to himself, quiet]
+Three proxies. Each one buries itself deeper than the last.
+
+[NARRATOR]
+He pulls up a map on his second monitor, a red pin blinking where the trace finally gives out.
+
+[DET_LEO_CHEN | style: barely audible]
+Storage facility. Riverside.
+
+[SFX: chair creaking as he leans back]
+
+[DET_LEO_CHEN | style: measured, testing the thought aloud]
+That's not a coincidence. That's a destination.
+
+[NARRATOR]
+He sets the phone down without ending the call, forgetting it's still connected.
+
+[SFX: distant office hum, a printer somewhere finishing a page]
+
+[DET_LEO_CHEN | style: weighing it]
+I could call this in right now. Get eyes on that lot in twenty minutes.
+
+[DET_LEO_CHEN | style: quieter, more cautious]
+Or I could be wrong. And whoever's running this signal sees the units roll up before I've got anything solid.
+
+[SFX: he taps a pen against the desk, rhythmic, undecided]
+
+[DET_LEO_CHEN | style: firm, deciding]
+One hour. I sit on it one hour.
+
+[NARRATOR]
+He picks the phone back up, ends the call properly this time.
+
+[DET_LEO_CHEN | style: to himself, almost a warning]
+If I burn this lead chasing a hunch, there's no second trace.
+
+[SFX: a notification chime — a new message on his desk phone]
+
+[NARRATOR]
+He glances at the screen. A missed call, logged twenty minutes earlier, from a name he recognizes but hasn't returned yet.
+
+[DET_LEO_CHEN | style: flat, filing it away for later]
+Not yet. Not until I know what I'm handing her.
+
+[SFX: he closes the laptop halfway, lamp still burning]
+
+[NARRATOR]
+For now, the storage facility stays his alone — a single coordinate he isn't ready to share, even with the one person already circling the same river from another direction.
+
+--- PART 5 ---
+
+[NARRATOR]
+Still the sedan, still the river road. Cipher has one more task before this stretch of night is done.
+
+[CIPHER | style: calm, precise]
+Pickup confirmed. The address you have is correct.
+
+[SFX: dashboard chime]
+
+[CIPHER | style: quietly deliberate]
+You'll know it by the fence line. Everyone around here still calls it Harrow.
+
+[SFX: engine hum, tires on cracked asphalt]
+
+[NARRATOR]
+Marcus's hands close on the wheel.
+
+[MARCUS_KANE | style: flat, controlled]
+Copy that.
+
+[NARRATOR]
+He says nothing more. His eyes stay fixed on the road, his jaw set like a man bracing for a blow he's already absorbed.
+
+[ELIAS_VANCE | style: watching, careful]
+You didn't even blink.
+
+[NARRATOR]
+Elias isn't looking at the road. He's looking at Marcus.
+
+[MARCUS_KANE | style: even, deflecting]
+Wasn't expecting to. It's just a name on a map.
+
+[ELIAS_VANCE | style: pressing gently]
+Your knuckles say otherwise.
+
+[NARRATOR]
+Marcus loosens his grip on the wheel, deliberately, like a man remembering he's being watched.
+
+[MARCUS_KANE | style: dry, dismissive]
+Long night. Everyone's hands are tired.
+
+[SFX: dashboard countdown tick]
+
+[NARRATOR]
+The countdown ticks over, indifferent to either of them.
+
+[ELIAS_VANCE | style: quiet, unconvinced]
+Sure.
+
+[NARRATOR]
+He lets it go, but his eyes don't move off the mirror where Marcus's reflection sits.
+
+[MARCUS_KANE | style: internal, tight — barely audible]
+(under his breath) So that's what this is.
+
+[NARRATOR]
+He says it too low for the cabin mic, too low for Elias. Whatever certainty just landed in him, he keeps it behind his teeth.
+
+[CIPHER | style: smooth, unhurried]
+Proceed to the pickup. You have forty minutes.
+
+[SFX: turn signal clicking]
+
+[NARRATOR]
+The sedan banks toward the river, toward the district neither man will name out loud — not yet, not to each other. Marcus drives like nothing has changed. Everything has.
+
+--- PART 6 ---
+
+[NARRATOR]
+Across town, in a small house near the fenced ruin of Harrow Warehouse, retired night watchman Wei Su — the father of the young electrician who died there — sits alone at his kitchen table, the folder he handed over now empty beside him.
+
+[SFX: clock ticking in an empty kitchen]
+
+[WEI_SU | style: quiet, worn]
+Delia said she'd call. If there was anything.
+
+[WEI_SU | style: turning inward, low]
+She didn't say tonight.
+
+[SFX: phone set down on wood, then picked up again]
+
+[NARRATOR]
+He turns his phone over in his hand, checking a screen that hasn't changed.
+
+[WEI_SU | style: murmuring to himself, steady]
+Ten years, I told myself. Ten years, and I'd be the one who finally said his name in the right room. Not a memorial. Not a plaque. A room where it mattered.
+
+[WEI_SU | style: gathering resolve]
+Danny Su. Say it enough times, maybe somebody official finally writes it down where it counts.
+
+[SFX: chair creaking as he leans back]
+
+[WEI_SU | style: almost convincing himself]
+Somebody's been asking questions with real details in them. Details that were never in any report I ever saw printed. That's not nothing. That's somebody doing the work.
+
+[WEI_SU | style: firmer, hopeful]
+A reporter, maybe. Or a lawyer who finally caught the scent. Either way — somebody's close. Closer than anyone's been in years.
+
+[NARRATOR]
+He sets the phone face-up on the table, screen dark, and stares at the space where the folder used to sit.
+
+[WEI_SU | style: softer, to the empty room]
+I just need it in the right hands. That's all I ever wanted. Proof, in the right hands, and this finally stops being a story only I remember.
+
+[SFX: distant train horn, faint through a window]
+
+[WEI_SU | style: settling, quiet conviction]
+Whoever's asking — they'll want the truth to land somewhere it can't be buried again. That's what people who dig this deep are after.
+
+[NARRATOR]
+He does not know that the hands now holding those details answer to no court, no paper, no printed record at all — only to a voice tonight guiding a driver and a CEO toward the very gate he still keeps vigil at.
+
+[SFX: clock ticking, slower now, fading under silence]
+
+--- PART 7 ---
+
+[NARRATOR]
+Still inside the sedan. Elias, the injured passenger, finally speaks first.
+
+[SFX: tires humming on empty asphalt]
+
+[ELIAS_VANCE | style: quiet, deliberate]
+You didn't ask what the address meant. Most drivers would've asked.
+
+[MARCUS_KANE | style: flat, eyes on the road]
+Not my business where we're headed.
+
+[ELIAS_VANCE | style: careful, testing]
+Isn't it. You knew that district before she said a word.
+
+[MARCUS_KANE | style: guarded]
+I know a lot of districts.
+
+[SFX: turn signal clicking]
+
+[ELIAS_VANCE | style: quiet but unyielding]
+I'm done pretending I haven't noticed. Your hands on that wheel. The way you didn't blink when she said Harrow.
+
+[MARCUS_KANE | style: long pause, tired]
+People blink for all kinds of reasons.
+
+[ELIAS_VANCE | style: pressing, low]
+Marcus. Look at me in the mirror and tell me you didn't already know.
+
+[SFX: engine idling at a red light]
+
+[NARRATOR]
+Marcus says nothing for a long moment. Something in him gives way.
+
+[MARCUS_KANE | style: barely audible, resigned]
+Elias—
+
+[NARRATOR]
+He stops. When he speaks again, his voice has changed.
+
+[MARCUS_KANE | style: quiet, finally letting go]
+I've been steering around this all night. I can't do it anymore.
+
+--- PART 8 ---
+
+[NARRATOR]
+The sedan, still on the road toward the river. Marcus, the driver, and Elias, the CEO riding in back, sit with the confession Marcus can no longer hold in.
+
+[MARCUS_KANE | style: flat, resigned | speed: 0.9]
+I knew. The second she said Harrow, I knew exactly what tonight was.
+
+[SFX: engine hum, steady]
+
+[ELIAS_VANCE | style: quiet, bracing]
+Then say it. All of it.
+
+[MARCUS_KANE | style: low, unwavering]
+I filed the report. Three days before it came down. Undersized beams, east wing. I put my name on it and I sent it up the chain.
+
+[NARRATOR]
+A beat of silence fills the cabin before Marcus continues.
+
+[MARCUS_KANE | style: harder now, forcing the words out]
+And then it happened anyway. And afterward, I took money to stay quiet about it. Signed a paper saying I'd never say that report existed. Ten years, I let everyone — Delia, everyone — think I just walked away from construction. I didn't walk. I was paid to disappear.
+
+[SFX: soft rattle of dashboard displays]
+
+[ELIAS_VANCE | style: stunned, quiet]
+You took a settlement.
+
+[MARCUS_KANE | style: bitter, quiet]
+I took it. I told myself I had a family to feed and no company was going to let that report see daylight anyway. So I made it easy for them.
+
+[NARRATOR]
+Elias leans forward slightly, studying Marcus's reflection in the rearview mirror.
+
+[ELIAS_VANCE | style: careful, almost gentle]
+Ten years, and you never told anyone.
+
+[MARCUS_KANE | style: tight, closing off]
+Not Delia. Not a priest. Not myself, most nights.
+
+[SFX: brief silence, then a low chime from the dash]
+
+[NARRATOR]
+The countdown display flickers, a reminder neither man voices aloud.
+
+[ELIAS_VANCE | style: measured, working through it]
+So you've carried the beam report and the payout for silence. That's — that's more than I expected to hear from you tonight.
+
+[MARCUS_KANE | style: guarded, watching the road]
+That's what I've got. That's the whole of it.
+
+[NARRATOR]
+Marcus's jaw sets, and he says nothing more, letting the confession stand as final.
+
+[ELIAS_VANCE | style: quiet, unsettled]
+It doesn't feel like the whole of it. It feels like half a story with the other half still in the room.
+
+[SFX: sedan tires on wet asphalt]
+
+[NARRATOR]
+Marcus doesn't answer. He keeps his eyes forward, hands steady on the wheel, giving Elias nothing further to read.
+
+--- PART 9 ---
+
+[NARRATOR]
+The sedan is still moving through the same empty stretch of road, Marcus and Elias each holding what the last few minutes cost them.
+
+[NARRATOR]
+Nothing outside the car has changed. Something between the two men has.
+
+[SFX: engine hum, low and steady]
+
+[SFX: soft tick of rain against the windshield]
+
+[ELIAS_VANCE | style: quiet, studying him]
+You didn't look at me once. The whole time you were saying it.
+
+[MARCUS_KANE | style: flat, eyes on the road]
+Didn't think I needed to.
+
+[ELIAS_VANCE | style: careful, almost gentle]
+No. I suppose you didn't.
+
+[NARRATOR]
+Elias watches him in the rearview mirror a moment longer than the silence requires.
+
+[SFX: distant siren, fading]
+
+[ELIAS_VANCE | style: measured, testing]
+Ten years, and you never told anyone. Not even the woman at your dispatch.
+
+[MARCUS_KANE | style: guarded, brief]
+Wasn't hers to carry.
+
+[ELIAS_VANCE | style: low, almost to himself]
+No. It wasn't.
+
+[NARRATOR]
+He lets the words sit there, not explaining what's shifted in him — only that something has.
+
+[SFX: dashboard hum, a faint electronic pulse]
+
+[ELIAS_VANCE | style: even, deliberately neutral]
+For what it's worth. I don't think you built any of this. Whatever's driving tonight.
+
+[MARCUS_KANE | style: startled, quickly covered]
+Didn't say I thought that.
+
+[ELIAS_VANCE | style: calm, unreadable]
+You didn't have to.
+
+[NARRATOR]
+Marcus's jaw tightens, but he says nothing more, his eyes back on the road as if the exchange had never happened.
+
+[ELIAS_VANCE | style: quiet, closing the subject]
+Drive.
+
+[NARRATOR]
+Marcus nods once, hands steady on the wheel, unaware of how far the man behind him has already moved.
+
+[SFX: turn signal clicking]
+
+[NARRATOR]
+The car eases into a turn, the road ahead narrowing toward the district neither of them has named aloud since the word first landed between them.
+
+--- PART 10 ---
+
+[NARRATOR]
+Dispatch, same hour. Delia Reyes, the fleet dispatcher and Marcus's oldest friend at Crestline, still sits alone at her terminal when her phone lights up.
+[NARRATOR]
+The caller is Detective Leo Chen, the cybercrimes investigator who first reached out to Crestline earlier tonight.
+
+[DELIA_REYES | style: guarded, already tired]
+Reyes.
+
+[DET_LEO_CHEN | style: even, professional]
+Detective Chen. You're the one who logged the routing anomaly on car one-fourteen.
+
+[DELIA_REYES | style: careful]
+That's me. Figured somebody official would call eventually.
+
+[DET_LEO_CHEN | style: measured]
+I need whatever you've got. Times, coordinates, anything that repeats.
+
+[DELIA_REYES | style: choosing words]
+It's looped the same stretch near the river four times tonight. Same three blocks, over and over. Like whoever's driving it doesn't want to leave that radius.
+
+[SFX: keyboard clicks, faint]
+
+[DET_LEO_CHEN | style: quiet, working it through]
+That tracks with what I've got. The intrusion signal's bouncing through three proxy hops before it hits your sedan's onboard system. Each one's slower to crack than the last.
+
+[DELIA_REYES | style: sharpening]
+And the last hop?
+
+[DET_LEO_CHEN | style: cautious, holding something back]
+Points toward a storage facility near the river. I'm not calling it confirmed yet.
+
+[NARRATOR]
+A pause stretches between them, both hearing the same shape forming.
+
+[DELIA_REYES | style: low, almost to herself]
+Detective. Your storage facility — is it anywhere near the old warehouse district?
+
+[DET_LEO_CHEN | style: guarded, careful now]
+Close enough that I don't like saying it out loud yet.
+
+[SFX: distant siren, brief]
+
+[NARRATOR]
+Neither of them names Harrow. Neither says the word "coincidence" either.
+
+[DELIA_REYES | style: flat, deflecting]
+Could be nothing. Rivers make for a lot of storage.
+
+[DET_LEO_CHEN | style: unconvinced but matching her tone]
+Could be. Send me the timestamps on those loops when you get a chance.
+
+[DELIA_REYES | style: businesslike]
+You'll have them in ten minutes.
+
+[NARRATOR]
+Chen ends the call first. Delia sits with the phone still in her hand a moment longer.
+
+[DELIA_REYES | style: to herself, tight]
+Same stretch of river. Every time.
+
+[NARRATOR]
+She doesn't mention Wei Su's visit, or the sealed personnel file still sitting in her search history. She closes the call log, opens a fresh window, and starts pulling timestamps — telling herself the two things she's carrying tonight have nothing to do with each other.
+
+--- PART 11 ---
+
+[NARRATOR]
+Same hour, away from car one-fourteen. In a windowless room lit only by monitor glow, the voice behind tonight's tasks sits alone with the feed she built this whole night around, and plays the last few minutes back.
+
+[SFX: a recording rewinds, then plays through a small speaker]
+
+[MARCUS_KANE | style: recorded, flattened, replayed through speaker]
+I took the money. I signed the paper. I gave up my right to ever say what I saw out loud.
+
+[CIPHER | style: quiet, to herself]
+There it is. The one thing he's never let another living person hear him say.
+
+[SFX: a cursor clicks, text scrolling]
+
+[CIPHER | style: still, weighing each word]
+Everything in that file said he'd stop exactly there. He did. Word for word, almost.
+
+[CIPHER | style: colder, precise]
+But not the rest. Not the signature that made it certain he'd have something worth burying in the first place. One page short of the whole truth. He knows which page.
+
+[CIPHER | style: low, unhurried]
+And the man beside him went quiet a different way. Relief first. Then something under the relief he didn't want carried on his own face.
+
+[CIPHER | style: almost uncertain]
+I told myself, if the driver said the money out loud, I'd finally know what he's owed tonight. Whether this ends in mercy, or the other thing.
+
+[CIPHER | style: quiet, unsettled]
+It doesn't. Not from this. Not from half a confession dressed up as the whole one.
+
+[SFX: keys tapping, a task queue reordering onscreen]
+
+[CIPHER | style: resolved]
+Then the last two stops I had planned don't matter anymore. Cut them. The road itself finishes this — Harrow will ask him what a dashboard full of tasks never could.
+
+[CIPHER | style: flat, controlled again]
+Let them keep believing it's only the next delivery on a list.
+
+[SFX: a switch clicks, the modulator hums back online]
+
+--- PART 12 ---
+
+[NARRATOR]
+Wei Su's kitchen, later the same night. The folder is gone, carried off in Delia Reyes's hands. The retired watchman is alone when his phone finally rings.
+
+[SFX: old phone ringing on a wooden table]
+
+[WEI_SU | style: startled, then wary]
+Yeah. It's late for you to be calling.
+
+[WEI_SU | style: listening, guarded]
+No, I'm awake. I'm always awake this time of night.
+
+[SFX: chair creaking as he sits forward]
+
+[WEI_SU | style: sharpening, alert]
+Wait — say that again. Someone's asking about Danny?
+
+[WEI_SU | style: low, careful]
+You worked that inspection with me. You'd know if this was nothing. So don't tell me it's nothing.
+
+[WEI_SU | style: quiet, unsettled]
+Details nobody had. Not in the paper, not in the settlement filing. That's what you're telling me.
+
+[WEI_SU | style: pressing gently]
+Who. Just give me a name, that's all I'm asking.
+
+[WEI_SU | style: frustrated, restrained]
+Indirect channels. That's not an answer, that's a dodge dressed up as one.
+
+[SFX: faint hum of a refrigerator, distant traffic outside]
+
+[WEI_SU | style: thinking aloud, hopeful]
+A reporter, maybe. Or somebody's finally hired counsel, after all this time. God knows I've waited long enough for either.
+
+[WEI_SU | style: firmer, resolved]
+If it's a lawyer, they'll want documents. Tell them I have documents. Tell them I've had them for years, just waiting for someone willing to look.
+
+[WEI_SU | style: softer, almost pleading]
+Danny deserves a name attached to what happened to him. Not a settlement nobody's allowed to talk about. A name.
+
+[WEI_SU | style: cautious, quieter]
+You'll call me if you hear anything more? Anything at all.
+
+[WEI_SU | style: subdued]
+Alright. Alright, get some sleep. And — thank you. For calling at all.
+
+[SFX: phone set down on the table]
+
+[NARRATOR]
+Wei Su sits with the dial tone gone, the old hope rekindled — certain that whoever is circling his son's death means to help him. He has no way of knowing the questions were never asked out of mercy.
+
+--- PART 13 ---
+
+[NARRATOR]
+Past midnight, three threads pull toward the same fenced ruin without knowing it. The sedan crosses the river bridge. A dispatcher's terminal glows in an empty office. A widower's phone sits silent on his kitchen table.
+
+[SFX: car tires humming over bridge grating]
+
+[NARRATOR]
+Marcus has given up part of his silence, not all of it. Elias no longer believes the driver built tonight — only that someone else did, someone still faceless to him.
+
+[SFX: distant river traffic, low hum]
+
+[NARRATOR]
+Across the city, a detective and a dispatcher have matched their leads to the same stretch of riverfront, each keeping one piece back. And at a kitchen table, an old watchman waits for help that isn't coming the way he thinks.
+
+[SFX: phone vibrating faintly on wood, then stillness]
+
+[NARRATOR]
+Every road tonight has bent toward one gate.
+
+[CIPHER | style: calm, suddenly gentle | speed: 0.9]
+You've both given me more than I expected. Almost enough.
+
+[SFX: dashboard tone, soft and unhurried]
+
+[CIPHER | style: quiet, intimate]
+The next stop isn't a delivery, Marcus. It never was.
+

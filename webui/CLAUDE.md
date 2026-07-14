@@ -34,9 +34,10 @@ diesem Repo); `webui/config.py` hardcodet `LOLFI_DIR` — nicht wundern über
   der `--fix`-Checkbox, weil vorher kein Boolflag über den
   `data-param-*`-Pfad lief (die ältere merge_anthology-Checkbox hat einen
   eigenen Change-Listener). Bei neuen `data-param-*`-Controls beachten.
-- `webui/tts_control.py::start_tts` wartet nur auf den offenen PORT, nicht
-  aufs geladene Modell — deshalb retried podcast_maker den Health-Check
-  (siehe fabrik/audio/CLAUDE.md).
+- `webui/tts_control.py::start_tts` wartet nach dem offenen Port zusätzlich
+  auf `/health` (200 = Modell geladen; Server ohne /health-Endpoint: offener
+  Port gilt als bereit). podcast_maker retried seinen Health-Check trotzdem
+  weiter — für CLI-Läufe ohne WebUI-Start (siehe fabrik/audio/CLAUDE.md).
 - Jobs werden ohne `stdin=` gespawnt — deshalb braucht jeder
   `claude`-Aufruf in der Pipeline `stdin=DEVNULL` (fabrik/core/CLAUDE.md).
 
@@ -57,6 +58,22 @@ diesem Repo); `webui/config.py` hardcodet `LOLFI_DIR` — nicht wundern über
 - "Szenen-Orte"-Step (`pf_location_prompts`) spiegelt den
   Charakter-Porträts-Step 1:1 (`status.py`s `locations`-Dict,
   `pf-step-locations` versteckt, außer die Serie hat `locations`).
+- **Vertonungs-Ziel Lokal/Cloud** (`#pf-render-target`, localStorage
+  `pfRenderTarget`): bei „cloud" schreibt `app.js::maybeCloudRewrite` die
+  Buttons `pf_batch`/`pf_podcast_maker` beim Klick auf `pf_render_remote`
+  um (`cloud/render_remote.sh`; Einzel-Episode wird `--only <datei>`,
+  Checkbox `#pf-cloud-stop-after` wird `--stop-after`). `pf_render_remote`
+  ist absichtlich NICHT in `AUTO_TTS_COMMANDS` (TTS läuft auf der
+  vast.ai-Instanz) und läuft mit `interpreter_args: []` (bash — `-u` hieße
+  dort nounset, siehe runner.py). Der große „Alles generieren"-Button
+  vertont weiterhin immer lokal.
+- **Parallel-Cloud-Button** (`pf_render_remote_parallel`, eigener Button
+  „☁︎ Fehlende Episoden parallel in der Cloud vertonen" + Zahlenfeld
+  `#pf-cloud-max-parallel` → `--max`): unabhängig vom Lokal/Cloud-
+  Umschalter, wrappt `cloud/render_remote_parallel.sh` — erkennt fehlende
+  Episoden selbst, rendert bis zu N gleichzeitig in Wellen (Instanzen
+  werden nur einmal beschafft, über alle Wellen wiederverwendet). Details/
+  Kostenlogik: cloud/README.md.
 - Generier-Buttons tragen die Checkboxen `--fix`-Review
   (`#pf-fix-review`, `data-param-fix`) und `use_beats` (persistiert wie
   merge_anthology via `POST /api/pf/series/settings`; `GET /api/pf/series`
@@ -65,14 +82,11 @@ diesem Repo); `webui/config.py` hardcodet `LOLFI_DIR` — nicht wundern über
 - Lolfi-Tab: Episoden-Dropdown (`#lolfi-episode-select`, gefüttert von
   `status.py::_list_podcast_episode_files`, wird `--episode <filename>`),
   "▶ Video rendern" (Dropdown leer = Automatik: Anthologie bevorzugt,
-  sonst EINE Episode per Dateinamen-Sortierung — bei 10 Episoden ist das
-  Ep10 vor Ep2!) und "▶ Alle Episoden einzeln rendern" (`lolfi_render_all`,
+  sonst die numerisch ERSTE Einzel-Episode — seit Lolfi-Commit 6f15ed1
+  natürliche Sortierung, Ep2 vor Ep10) und "▶ Alle Episoden einzeln
+  rendern" (`lolfi_render_all`,
   `lofi_system.py --all`) als Ausweg für merge_anthology:false-Serien.
-- Standalone-Block "🏛 Facades-Hintergrundbilder"
-  (`lolfi_regenerate_facades`, `~/Downloads/Lolfi/regenerate_facades.py`):
-  regeneriert die 4 fixen Facades-Stills aus bereits geschriebenen
-  Bild-Prompts via gpt-image-1-mini, ohne Prompts/Konzepte anzufassen.
-  Lolfis Hintergrund-Loop ist ein statischer Clip in
+- Lolfis Hintergrund-Loop ist ein statischer Clip in
   `video/baseline_normal/` (auto-erzeugt von generate_prompts.py mit
   OPENAI_API_KEY); der Kling.ai-Workflow wurde entfernt —
   `video/baseline/` (Ping-Pong) funktioniert nur noch mit manuell

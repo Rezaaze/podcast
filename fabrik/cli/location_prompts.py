@@ -140,44 +140,62 @@ def main():
         return
 
     out_file = prompts_file(series)
-    if os.path.exists(out_file) and not args.force:
-        print(f"Location-Prompts existieren bereits: {out_file}")
-        print("Neu generieren mit --force.")
-        return
+    expected_keys = set(locations)
 
-    model = data.get("generation", {}).get("model", config.DEFAULTS["model"])
-    print(f"Serie: {series.slug} — {len(locations)} Ort(e): {', '.join(locations)}")
-    print(f"Generiere Location-Prompts (Modell: {model}) ...")
-
-    prompt = build_prompt(data, locations)
+    # Vorhandene PROMPTS.txt heißt nur "der TEXT ist fertig" — nicht "die
+    # Bilder sind fertig" (die Datei wird auch im reinen Text-Modus ohne
+    # OPENAI_API_KEY geschrieben). Ein Re-Lauf, nachdem der Key nachträglich
+    # gesetzt wurde, muss die vorhandenen Prompts wiederverwenden können,
+    # statt sie erneut per Claude zu erzeugen — und darf danach nicht
+    # abbrechen, sondern MUSS bei der Bildgenerierung unten ankommen.
     blocks = {}
-    for attempt in range(1, MAX_RETRIES + 1):
-        output = call_claude(prompt, model)
-        if output:
-            blocks = parse_blocks(output, set(locations))
-            if len(blocks) == len(locations):
-                break
-            missing = sorted(set(locations) - set(blocks))
-            print(f"Versuch {attempt}/{MAX_RETRIES}: Blöcke fehlen für {', '.join(missing)}.")
+    if os.path.exists(out_file) and not args.force:
+        with open(out_file, "r", encoding="utf-8") as f:
+            existing = f.read()
+        blocks = parse_blocks(existing, expected_keys)
+        if len(blocks) == len(expected_keys):
+            print(f"Location-Prompts bereits vorhanden: {out_file} (--force zum Neu-Generieren) "
+                  f"— prüfe/erzeuge fehlende Hintergrundbilder ...")
         else:
-            print(f"Versuch {attempt}/{MAX_RETRIES}: keine Ausgabe.")
-        if attempt < MAX_RETRIES:
-            time.sleep(RETRY_DELAY)
+            missing = sorted(expected_keys - set(blocks))
+            print(f"Vorhandene Prompts decken nicht alle Orte ab (fehlen: {', '.join(missing)}, "
+                  f"z.B. neue Locations aus einer inzwischen geänderten episodes.json) — "
+                  f"generiere Prompts neu ...")
+            blocks = {}
 
-    if len(blocks) != len(locations):
-        print("FEHLER: Location-Prompts unvollständig — erneut starten.")
-        sys.exit(1)
+    if not blocks:
+        model = data.get("generation", {}).get("model", config.DEFAULTS["model"])
+        print(f"Serie: {series.slug} — {len(locations)} Ort(e): {', '.join(locations)}")
+        print(f"Generiere Location-Prompts (Modell: {model}) ...")
 
-    os.makedirs(locations_dir(series), exist_ok=True)
-    with open(out_file, "w", encoding="utf-8") as f:
-        f.write(f"# Location-Bild-Prompts — {data.get('series_title', series.slug)}\n")
-        f.write("# Jedes Bild extern generieren und hier im Ordner ablegen als: <ORT_KEY>.png\n")
-        f.write("# (z.B. " + f"{next(iter(locations))}.png" + ") — Lolfi wechselt den Hintergrund\n")
-        f.write("# dann automatisch, wenn die Handlung an diesen Ort springt.\n\n")
-        for key in locations:
-            f.write(f"=== {key} ===\n{blocks[key]}\n\n")
+        prompt = build_prompt(data, locations)
+        for attempt in range(1, MAX_RETRIES + 1):
+            output = call_claude(prompt, model)
+            if output:
+                blocks = parse_blocks(output, expected_keys)
+                if len(blocks) == len(expected_keys):
+                    break
+                missing = sorted(expected_keys - set(blocks))
+                print(f"Versuch {attempt}/{MAX_RETRIES}: Blöcke fehlen für {', '.join(missing)}.")
+            else:
+                print(f"Versuch {attempt}/{MAX_RETRIES}: keine Ausgabe.")
+            if attempt < MAX_RETRIES:
+                time.sleep(RETRY_DELAY)
 
-    print(f"\nGespeichert: {out_file}")
+        if len(blocks) != len(expected_keys):
+            print("FEHLER: Location-Prompts unvollständig — erneut starten.")
+            sys.exit(1)
+
+        os.makedirs(locations_dir(series), exist_ok=True)
+        with open(out_file, "w", encoding="utf-8") as f:
+            f.write(f"# Location-Bild-Prompts — {data.get('series_title', series.slug)}\n")
+            f.write("# Jedes Bild extern generieren und hier im Ordner ablegen als: <ORT_KEY>.png\n")
+            f.write("# (z.B. " + f"{next(iter(locations))}.png" + ") — Lolfi wechselt den Hintergrund\n")
+            f.write("# dann automatisch, wenn die Handlung an diesen Ort springt.\n\n")
+            for key in locations:
+                f.write(f"=== {key} ===\n{blocks[key]}\n\n")
+
+        print(f"\nGespeichert: {out_file}")
 
     if args.no_images or not image_backends.api_key_available():
         for key in locations:

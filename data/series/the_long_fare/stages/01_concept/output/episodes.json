@@ -1,0 +1,1761 @@
+{
+  "series_title": "The Long Fare",
+  "language": "English",
+  "mode": "drama",
+  "template": "soap_opera",
+  "writer_persona": "a showrunner blending high-tension abduction-thriller pacing with character-driven, relationship-first serial drama — think prestige ensemble TV where a ticking-clock premise is the engine, but the real fuel is what two trapped strangers refuse to tell each other",
+  "style_guidelines": [
+    "Marry real-time hijacking urgency with soap-opera relationship stakes — every forced task should cost someone something personal, not just move the plot.",
+    "Let mutual suspicion between driver and passenger show through small tells — what they don't ask, what they flinch at — rather than direct accusation, until a scene forces it into the open.",
+    "The hacker's voice is calm, precise, almost intimate — menace through control, never cartoonish shouting.",
+    "Cut constantly between the sedan in real time and the outside world racing to catch up, mirroring classic parallel-scene soap structure.",
+    "Escalate the hacker's demands in specificity and cruelty gradually — early tasks read as ordinary crime, later ones are personal and symbolic.",
+    "No character states a thread's full truth aloud before the story is ready to reveal it — dramatic irony comes from what the listener assembles faster than the characters do."
+  ],
+  "voices": {
+    "NARRATOR": {
+      "voice": "morgan",
+      "default_style": "calm, measured, a step removed from the action, never lingers on any one thread longer than the scene needs",
+      "description": "the show's narrator — orients the listener at the start of every scene (who, where, when), never a character in the story"
+    },
+    "MARCUS_KANE": {
+      "voice": "Aiden",
+      "default_style": "quiet, controlled, watching everything — cracks only under direct pressure",
+      "description": "Chauffeur for Crestline Chauffeur Service, an ex-construction worker who drives for a living because it lets him stay invisible; he's spent a decade burying what really happened the night Harrow Warehouse came down. Doesn't know how much the man in his back seat or the voice on the dashboard already know about that night."
+    },
+    "ELIAS_VANCE": {
+      "voice": "Dylan",
+      "default_style": "speaks slow, deliberate, very clear English; wounded pride under a wounded body — commands even from the back seat",
+      "description": "CEO of Vance Development, who immigrated from Beijing as a young engineer and built an empire on riverside redevelopment; tonight he's injured and trapped in the back of his own hired car. Believes his driver is just hired help who knows nothing about Harrow — has no idea how wrong he is."
+    },
+    "CIPHER": {
+      "voice": "Vivian",
+      "default_style": "flat, precise, unnervingly calm — never raises her voice even when the demand is cruel",
+      "description": "The unseen voice that has seized control of the sedan's onboard systems, issuing tasks through its speakers all night; her real name and face stay hidden from everyone in the car. Knows exactly why Marcus and Elias are both riding together tonight — what she doesn't know is how far either man will go once cornered."
+    },
+    "DELIA_REYES": {
+      "voice": "Serena",
+      "default_style": "fast-talking, protective, barely holding professional composure",
+      "description": "Dispatcher at Crestline Chauffeur Service and Marcus's oldest friend on the fleet; spends the night watching his GPS ping do things no ordinary route ever does. Doesn't know Marcus's connection to Harrow — only that he's never once wanted to talk about the years before he started driving."
+    },
+    "DET_LEO_CHEN": {
+      "voice": "Eric",
+      "default_style": "measured, methodical, softens his accent when briefing superiors but never fully loses it",
+      "description": "Cybercrimes detective who immigrated from Chengdu as a child; picks up the sedan's hijacked signal almost by accident and becomes the only official trying to stop the night before it ends in fire. Knows the intrusion is sophisticated and personal — doesn't yet know it's rooted in a decade-old warehouse collapse."
+    },
+    "WEI_SU": {
+      "voice": "Uncle_Fu",
+      "default_style": "slow, weighted with old grief, every sentence sounds like it's been carried a long way",
+      "description": "Retired night watchman who still keeps vigil at the fenced-off ruin of Harrow Warehouse, where someone he loved died in the collapse years ago; the one person who remembers the disaster exactly as it happened. Believes he's the only one left who still cares what really happened at Harrow — has no idea how close it's about to come back."
+    }
+  },
+  "locations": {
+    "THE_SEDAN": {
+      "name": "The Hijacked Sedan",
+      "description": "The armored back-and-front cabin of a black luxury sedan, dashboard screens glowing an eerie blue, rain streaking the sealed windows, a locked partition between the front and back seats."
+    },
+    "DISPATCH": {
+      "name": "Dispatch Floor",
+      "description": "Crestline Chauffeur Service's control room, a wall of monitors tracking the fleet's GPS pings under buzzing fluorescent light, radios murmuring over coffee-stained desks."
+    },
+    "VANCE_TOWER": {
+      "name": "The Vance Tower Penthouse",
+      "description": "A glass-walled executive office forty floors up, city lights sprawling below, all steel and marble and cold minimalism."
+    },
+    "RIVERSIDE": {
+      "name": "The Riverside Walk-Up",
+      "description": "Marcus's cramped apartment above a laundromat, peeling wallpaper and a single window facing the elevated train tracks."
+    },
+    "HARROW_WAREHOUSE": {
+      "name": "Harrow Warehouse",
+      "description": "An abandoned riverside warehouse with its collapsed east wing still fenced off, rusted machinery inside and old memorial photos taped to the chain-link outside."
+    },
+    "CYBER_UNIT": {
+      "name": "The Cyber Crimes Bureau",
+      "description": "A cluttered municipal office humming with server racks, a wall of monitors cycling through traffic-cam feeds from across the city."
+    }
+  },
+  "format": {
+    "parts_per_section": 1,
+    "words_per_part_target": "300 to 500",
+    "words_per_part_min": 250,
+    "words_per_part_max": 550
+  },
+  "generation": {
+    "model": "claude-sonnet-5",
+    "use_beats": false
+  },
+  "audio": {
+    "api_url": "http://127.0.0.1:42003",
+    "default_style": "Speak clearly and with dramatic weight",
+    "target_lufs": -16.0,
+    "pause_between_chunks_ms": 250,
+    "pause_between_lines_ms": 700,
+    "pause_between_parts_ms": 3000,
+    "pause_between_episodes_ms": 6000,
+    "merge_anthology": false
+  },
+  "output_prefix": "ep",
+  "series_intro": "It begins as a routine late-night fare: a chauffeur, a wounded passenger who won't say what happened to him, and a black sedan sliding through empty streets. Then the dashboard lights flicker, the locks seal, and a voice that isn't the GPS starts giving directions neither man asked for. Every scene splits between what's happening in that car and who's racing to reach it before the night is over — and the driver and the man in his back seat will spend all ten episodes deciding whether the stranger beside them is more dangerous than the one on the radio.",
+  "series_outro": "The sedan's last stop resolves who was really behind the wheel all along and settles, once and for all, what happened the night Harrow Warehouse came down — but what Marcus, Elias, and Delia do with each other once the doors finally unlock, and whether any of them can trust what's left of their old lives, is where the season leaves the listener.",
+  "episodes": [
+    {
+      "figure": "Loss of Control",
+      "theme": "The sedan's onboard system is seized mid-route, trapping an injured Elias in the back seat with a driver he barely knows, and the first spark of mutual suspicion ignites as neither man will say why he's really so afraid (The Hijacking).",
+      "intro_note": "",
+      "outro_note": "The voice gives its first order that isn't a route — a coordinate with no name attached — and neither man in the back believes, anymore, that this ends when the ride does.",
+      "sections": [
+        "End of the Line: Marcus takes one more late fare from his cramped Riverside walk-up before Crestline calls him back out for a private client run (The Hijacking)",
+        "The Pickup: Marcus collects an injured, guarded Elias Vance from Vance Tower's private garage, both men sizing each other up before a word is said (The Hijacking)",
+        "Merge Onto the Bridge: small talk stays clipped and careful as the sedan pulls into the night traffic (The Hijacking)",
+        "The Screens Flicker: the dashboard glitches, the locks seal, and the sedan stops answering to anyone in it (The Hijacking)",
+        "A Voice That Isn't GPS: Cipher speaks for the first time and makes clear who is driving now (The Hijacking)",
+        "Dispatch Floor, Nothing Wrong Yet: Delia notices an odd blip on car 12's ping and shrugs it off as a glitch (The Hijacking)",
+        "No Room to Argue: Marcus tests the locks while Elias demands answers neither Cipher nor Marcus will give him (The Hijacking)",
+        "What Elias Won't Say: his evasive answers about tonight's injury don't add up, and Marcus notices without asking (The Hijacking)",
+        "What Marcus Won't Say: Elias clocks his driver's guarded reaction to their new route and starts wondering about him too (The Hijacking)",
+        "First Command: Cipher issues the night's first explicit task, and the sedan changes course for good (The Hijacking)",
+        "The Ping Doesn't Add Up: Delia checks car 12 again and decides to keep a closer, quieter watch (The Hijacking)",
+        "Two Men, One Locked Car: forced proximity cracks the two strangers' careful distance, if only for a moment (The Hijacking)",
+        "The First Rule: Cipher lays out the night's one unbreakable condition, and the sedan drives on into the dark (The Hijacking)"
+      ],
+      "section_words": [
+        null,
+        null,
+        null,
+        {
+          "min": 130,
+          "max": 190,
+          "target": "140 to 170"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "section_locations": [
+        "RIVERSIDE",
+        "VANCE_TOWER",
+        "THE_SEDAN",
+        null,
+        null,
+        "DISPATCH",
+        "THE_SEDAN",
+        null,
+        null,
+        null,
+        "DISPATCH",
+        "THE_SEDAN",
+        null
+      ],
+      "case": [
+        {
+          "label": "The Hijacking",
+          "solution": "Cipher exploited a remote-diagnostics firmware backdoor pushed to Crestline Chauffeur Service's fleet three days ago, seizing full control of car 12's locks, partition, dashboard, and navigation the moment Elias Vance was logged as tonight's passenger. She requested Marcus Kane by name through Crestline's private client line when booking the ride, engineering this exact pairing on purpose. The night's forced stops are not random crime — every pickup and drop traces back to a Vance Development subcontractor, and the cargo building in the trunk is the true point of the exercise: a device meant to finish, symbolically and literally, what was left unfinished at Harrow Warehouse ten years ago.",
+          "objective_facts": [
+            "The sedan's onboard system was seized the instant Elias Vance was logged as tonight's passenger.",
+            "The hijack exploits a remote-diagnostics firmware update Crestline pushed to its whole fleet three days ago.",
+            "Cipher has locked the doors, the partition, and every navigation command through a relay only she controls.",
+            "Every forced stop so far traces back to a registered Vance Development subcontractor site.",
+            "Cipher requested Marcus Kane by name when the fare was booked through Crestline's private client line."
+          ],
+          "character_knowledge": {
+            "MARCUS_KANE": {
+              "knows": [
+                "The car stopped answering to him the instant the dashboard screens flickered — every door, every lock, every turn is coming from somewhere else.",
+                "He never chose tonight's route once the system changed hands."
+              ],
+              "hides": [
+                "That the voice's calm, exact phrasing already feels less like a stranger and more like someone who's done homework on him specifically — a suspicion he keeps off his face."
+              ],
+              "believes_falsely": [
+                "He assumes this is a ransomware shakedown aimed at his wealthy passenger, not at him."
+              ]
+            },
+            "ELIAS_VANCE": {
+              "knows": [
+                "He authorized no route change tonight, and whoever's speaking through the dashboard already knew which car and which driver he'd been assigned."
+              ],
+              "hides": [
+                "That his own fear tonight isn't just about the hijacking — it's that someone finally seems to know something he's spent a decade making sure no one could prove."
+              ],
+              "believes_falsely": [
+                "He assumes the driver is nothing more than hired help who has nothing to do with why any of this is happening to him."
+              ]
+            },
+            "CIPHER": {
+              "knows": [
+                "Exactly why Marcus Kane and Elias Vance are riding in the same locked car tonight, and that neither man knows the other belongs to the same old story."
+              ],
+              "hides": [
+                "Her real name, her face, and her own reason for choosing tonight, from everyone in the car and everyone chasing her signal."
+              ],
+              "believes_falsely": [
+                "She's certain Elias will be the first of the two men to break under pressure tonight — his pride has always been louder than his control."
+              ]
+            },
+            "DELIA_REYES": {
+              "knows": [
+                "Car 12's GPS ping just did something no assigned route on the board tonight should do."
+              ],
+              "hides": [
+                "That she's already decided to watch it herself a while longer before flagging it to her floor manager, to give Marcus room before anyone official gets involved."
+              ],
+              "believes_falsely": [
+                "She assumes it's a dashboard glitch or Marcus quietly going off-book for a personal reason, not something being done to him."
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "The First Delivery",
+      "theme": "The hacker forces the sedan into its first criminal drop while Dispatcher Delia watches the car's GPS ping do something no ordinary route ever does and Detective Chen catches his first glimpse of the intrusion (The Hijacking; The Chase begins).",
+      "intro_note": "The coordinate the voice gave has a location now, and Cipher's cold new rule is simple: obey, or find out what happens when you don't.",
+      "outro_note": "Somewhere behind them, a signal both Delia and a detective she's never met have started tracing, unbeknownst to each other, points toward the same stretch of the warehouse district Cipher has been steering the sedan closer to all night.",
+      "sections": [
+        "The Address With No Name: Cipher gives coordinates instead of an explanation, and both men in the back comply because there's no other option (The Hijacking)",
+        "Down the Off-Ramp: the sedan peels away from any route either man would have chosen for himself (The Hijacking)",
+        "What's In the Box: Cipher forces Marcus to retrieve a sealed package from the trunk while Elias watches in silence (The Hijacking)",
+        "Delia Sees It First: car 12's ping stalls in an industrial dead zone that isn't on any assigned itinerary (The Chase)",
+        "A Call She Doesn't Make: Delia debates escalating to her manager and tries Marcus's radio instead — met with silence (The Chase)",
+        "Back on the Road: shaken, Elias tries to negotiate or bribe the voice on the dashboard and is coldly refused (The Hijacking)",
+        "The Question He Won't Ask: the drop site's cross streets ring a bell Marcus wishes they hadn't, and he says nothing (The Hijacking)",
+        "Static in the System: Detective Chen's anomaly system flags an unauthorized signal inside a private fleet's telemetry (The Chase)",
+        "Not Random: Chen digs deeper and realizes the intrusion is too sophisticated for ordinary joyriding (The Chase)",
+        "Second Drop: another forced stop, and a cryptic word passed through the window raises the night's stakes (The Hijacking)",
+        "Delia's Line Crossed: she pulls car 12's raw trip logs herself, outside protocol, rather than wait for permission (The Chase)",
+        "Cracks in the Truce: the fragile cooperation between driver and passenger frays into open suspicion (The Hijacking)",
+        "She's Watching Now: Cipher acknowledges, almost approvingly, that someone outside the car has finally noticed (The Hijacking)"
+      ],
+      "section_words": [
+        null,
+        null,
+        {
+          "min": 150,
+          "max": 220,
+          "target": "160 to 190"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "section_locations": [
+        "THE_SEDAN",
+        null,
+        null,
+        "DISPATCH",
+        null,
+        "THE_SEDAN",
+        null,
+        "CYBER_UNIT",
+        null,
+        "THE_SEDAN",
+        "DISPATCH",
+        "THE_SEDAN",
+        null
+      ],
+      "case": [
+        {
+          "label": "The Hijacking",
+          "solution": "Cipher exploited a remote-diagnostics firmware backdoor pushed to Crestline Chauffeur Service's fleet three days ago, seizing full control of car 12's locks, partition, dashboard, and navigation the moment Elias Vance was logged as tonight's passenger. She requested Marcus Kane by name through Crestline's private client line when booking the ride, engineering this exact pairing on purpose. The night's forced stops are not random crime — every pickup and drop traces back to a Vance Development subcontractor, and the cargo building in the trunk is the true point of the exercise: a device meant to finish, symbolically and literally, what was left unfinished at Harrow Warehouse ten years ago.",
+          "objective_facts": [
+            "The sedan's onboard system was seized the instant Elias Vance was logged as tonight's passenger.",
+            "The hijack exploits a remote-diagnostics firmware update Crestline pushed to its whole fleet three days ago.",
+            "Cipher has locked the doors, the partition, and every navigation command through a relay only she controls.",
+            "Every forced stop so far traces back to a registered Vance Development subcontractor site.",
+            "Cipher requested Marcus Kane by name when the fare was booked through Crestline's private client line."
+          ],
+          "character_knowledge": {
+            "MARCUS_KANE": {
+              "knows": [
+                "The car stopped answering to him the moment the screens flickered, and every stop tonight is coming from Cipher's relay, not any client account.",
+                "The first drop site's cross streets are ones he hasn't driven near in ten years — and his hands remember them before his mind admits why."
+              ],
+              "hides": [
+                "That the address just rattled something loose he's spent a decade keeping buried — he says nothing to Elias, and lets his face go as blank as it did during the drop."
+              ],
+              "believes_falsely": [
+                "He still tells himself this is only about Elias's money or Elias's enemies — that whatever's underneath his own reaction is a coincidence."
+              ]
+            },
+            "ELIAS_VANCE": {
+              "knows": [
+                "Two forced stops now trace to subcontractor sites his own company quietly worked with years ago — a pattern too specific to be random."
+              ],
+              "hides": [
+                "That he recognizes the pattern of sites well enough to guess whose old paperwork is being followed, though he says nothing of it to Marcus."
+              ],
+              "believes_falsely": [
+                "He still assumes this is a rival developer or an activist group settling a business score, not anything that reaches back a full decade."
+              ]
+            },
+            "CIPHER": {
+              "knows": [
+                "The detective's cyber unit has just caught its first trace of her relay — sooner than she'd planned for, though not fast enough to matter yet."
+              ],
+              "hides": [
+                "How much further she intends to push both men tonight before either learns the other's real connection to the cargo she's building toward."
+              ],
+              "believes_falsely": [
+                "She still believes she has more time before anyone outside the car can trace the signal back far enough to stop her."
+              ]
+            },
+            "DELIA_REYES": {
+              "knows": [
+                "Car 12 went dark in an industrial dead zone that isn't on any client itinerary, and stayed there four minutes longer than any legitimate stop would run."
+              ],
+              "hides": [
+                "That she's pulled the raw trip logs herself, outside protocol, rather than escalate through her floor manager first."
+              ],
+              "believes_falsely": [
+                "She still believes if she can just raise Marcus on the radio, she can talk him through whatever's gone wrong — not yet grasping he has no say in any of it."
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Chase",
+          "solution": "Delia Reyes's off-protocol monitoring of car 12's GPS ping and Detective Leo Chen's cyber-anomaly alert are converging on the same signal without either of them realizing it yet: both traces lead back to a relay tower in the warehouse district, the same ground Cipher is steering the sedan toward all night. Neither dispatcher nor detective yet knows the intrusion is personal, or that the car's silent passenger and its driver both have their own history with exactly the ground that relay sits on.",
+          "objective_facts": [
+            "Crestline's dispatch software logged car 12 diverting from its assigned route at 11:47 PM with no manual override recorded.",
+            "The Cyber Crimes Bureau's anomaly system flagged unauthorized packet injection into a private fleet's telemetry within minutes of that same diversion.",
+            "Delia Reyes pulled car 12's raw trip logs herself without notifying her floor manager.",
+            "Both the dispatch anomaly and the Cyber Crimes Bureau's flagged signal trace to a relay tower in the warehouse district."
+          ],
+          "character_knowledge": {
+            "DELIA_REYES": {
+              "knows": [
+                "Car 12 diverted off its assigned route at 11:47 with no override logged, and has gone dark in dead zones twice since."
+              ],
+              "hides": [
+                "That she's kept this to herself rather than report it up the chain yet, afraid of what happens to Marcus's job — or worse — if she's wrong."
+              ],
+              "believes_falsely": [
+                "She assumes whatever's wrong is something Marcus can still talk his way out of, if she can just reach him."
+              ]
+            },
+            "DET_LEO_CHEN": {
+              "knows": [
+                "An unauthorized packet injection hit a private vehicle fleet's telemetry tonight, and the intrusion's sophistication is well beyond typical joyriding or smash-and-grab ransomware."
+              ],
+              "hides": [
+                "That his gut says this is personal and targeted, not random — a read he hasn't shared with his captain yet because he has no evidence to back it."
+              ],
+              "believes_falsely": [
+                "He assumes, given the passenger's identity, that this is most likely corporate espionage aimed at Vance Development rather than anything older or more personal."
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "What the Trunk Won't Say",
+      "theme": "Elias's composure cracks as the hacker's demands turn personal, and night watchman Wei Su surfaces at the fenced-off Harrow Warehouse with a decades-old grievance neither man in the sedan knows is coming for them (The Hijacking; The Harrow Reckoning introduced).",
+      "intro_note": "The signal chasing car 12 is closing on the warehouse district — and inside the sedan, the voice's demands have stopped sounding like crime and started sounding like something owed.",
+      "outro_note": "Cipher names the sedan's next stop, and for one unguarded second before he can school his face back to nothing, Marcus's expression tells Elias they are not headed somewhere unfamiliar to his driver at all.",
+      "sections": [
+        "A Demand That Isn't About Money: Cipher's next task has nothing to do with cash or cargo, and Elias's composure slips for the first time (The Hijacking)",
+        "The Old Vigil: retired night watchman Wei Su keeps his nightly watch at the fenced-off ruin of Harrow Warehouse (The Harrow Reckoning)",
+        "Ten Years of Waiting: Wei Su tends the small memorial he's kept at the fence line every year since the collapse (The Harrow Reckoning)",
+        "He Won't Say Why: Elias's fear stops looking like a rich man's inconvenience, and Marcus can't explain why that unsettles him more (The Hijacking)",
+        "Holding the Line: Delia weighs breaking protocol entirely rather than wait another minute for Marcus to check in (The Hijacking)",
+        "The Task He Can't Refuse: Cipher makes Marcus say a name aloud he hasn't spoken in ten years, and it costs him visibly (The Hijacking)",
+        "What Elias Sees: he clocks exactly how much that name cost his driver, and starts wondering if Marcus is only hired help after all (The Hijacking)",
+        "The Watchman's Ledger: Wei Su goes through old photographs and a warning he's never stopped chasing proof of (The Harrow Reckoning)",
+        "A Question About the River: Cipher mentions the warehouse district for the first time, and neither man in the sedan asks her to explain (The Hijacking)",
+        "The Crack: Elias's composure finally breaks in front of Marcus, if only for a few unguarded words (The Hijacking)",
+        "Something's Coming: a distant sound at the fence line tells Wei Su tonight is different from every other vigil he's kept (The Harrow Reckoning)",
+        "Neither of Them Asks: driver and passenger sit with everything they could ask each other and choose, again, not to (The Hijacking)",
+        "The Trunk Hums: for the first time all night, the cargo in the trunk makes itself heard (The Hijacking)"
+      ],
+      "section_words": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 120,
+          "max": 190,
+          "target": "130 to 160"
+        }
+      ],
+      "section_locations": [
+        "THE_SEDAN",
+        "HARROW_WAREHOUSE",
+        null,
+        "THE_SEDAN",
+        "DISPATCH",
+        "THE_SEDAN",
+        null,
+        "HARROW_WAREHOUSE",
+        "THE_SEDAN",
+        null,
+        "HARROW_WAREHOUSE",
+        "THE_SEDAN",
+        null
+      ],
+      "case": [
+        {
+          "label": "The Hijacking",
+          "solution": "Cipher exploited a remote-diagnostics firmware backdoor pushed to Crestline Chauffeur Service's fleet three days ago, seizing full control of car 12's locks, partition, dashboard, and navigation the moment Elias Vance was logged as tonight's passenger. She requested Marcus Kane by name through Crestline's private client line when booking the ride, engineering this exact pairing on purpose. The night's forced stops are not random crime — every pickup and drop traces back to a Vance Development subcontractor, and the cargo building in the trunk is the true point of the exercise: a device meant to finish, symbolically and literally, what was left unfinished at Harrow Warehouse ten years ago.",
+          "objective_facts": [
+            "The sedan's onboard system was seized the instant Elias Vance was logged as tonight's passenger.",
+            "The hijack exploits a remote-diagnostics firmware update Crestline pushed to its whole fleet three days ago.",
+            "Cipher has locked the doors, the partition, and every navigation command through a relay only she controls.",
+            "Every forced stop so far traces back to a registered Vance Development subcontractor site.",
+            "Cipher requested Marcus Kane by name when the fare was booked through Crestline's private client line."
+          ],
+          "character_knowledge": {
+            "MARCUS_KANE": {
+              "knows": [
+                "Every stop tonight is coming from Cipher's relay, and the tasks have stopped feeling like random crime — they're starting to feel aimed at him specifically.",
+                "Tonight's assigned task made him read a name aloud that he hasn't said out loud in ten years."
+              ],
+              "hides": [
+                "Exactly why that name cost him — he lets Elias see only that it cost him something, nothing more."
+              ],
+              "believes_falsely": [
+                "He still tells himself Elias can't possibly know what that name means — that whatever this is, it hasn't reached back that far. He's wrong."
+              ]
+            },
+            "ELIAS_VANCE": {
+              "knows": [
+                "The tasks tonight have stopped being about his company's money and started being about specific old sites and old names — something he recognizes but Marcus, he assumes, cannot."
+              ],
+              "hides": [
+                "That the pattern of sites is close enough to his own buried history that his composure is cracking from fear of exposure, not just danger."
+              ],
+              "believes_falsely": [
+                "He still assumes whatever old business is being dredged up tonight is his alone to answer for — he has no idea his driver has any stake in it at all."
+              ]
+            },
+            "CIPHER": {
+              "knows": [
+                "Exactly how close both men are, tonight, to the name and the place neither has said aloud to the other in ten years."
+              ],
+              "hides": [
+                "How much of tonight is really about the warehouse, and how much is about something — someone — she's never told either man she has any connection to."
+              ],
+              "believes_falsely": [
+                "She's still certain she controls the order in which the truth surfaces tonight — she hasn't accounted for what Wei Su might already be setting in motion on his own."
+              ]
+            },
+            "DELIA_REYES": {
+              "knows": [
+                "Car 12 has now gone dark in the same stretch of the warehouse district twice tonight — a place with no client account on record."
+              ],
+              "hides": [
+                "That she's close to breaking protocol entirely and calling Marcus's personal cell rather than the dispatch radio."
+              ],
+              "believes_falsely": [
+                "She still believes this ends with Marcus back on the radio, apologizing for a bad night — not with him in real danger."
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Harrow Reckoning",
+          "solution": "Ten years ago, Vance Development raced to convert Harrow Warehouse into riverside condominiums ahead of a refinancing deadline. Marcus Kane, then the overnight shift foreman, discovered the east wing's support beams had been stripped early to keep pace with the schedule and filed a written warning four days before the collapse — a warning that reached Elias Vance, then the project's rising young manager, and went no further because escalating it would have blown the deadline. Hours before the night shift that collapsed the east wing, Marcus traded his post with a younger apprentice electrician to handle a personal emergency; the apprentice — Wei Su's son — died in his place, along with two other workers. The inquest that followed ruled the collapse an equipment failure and closed within six weeks, after Vance Development quietly settled with the victims' families. Marcus has spent a decade believing the deaths are his fault alone for trading the shift; he has never known his own warning was deliberately buried above him. Elias has spent a decade believing the only people who could ever tie him personally to that memo are dead, paid off, or long gone — he has no idea the foreman who wrote it is driving him tonight. Wei Su has never accepted the inquest's finding and has spent ten years certain a warning existed and was silenced, without ever learning whose name was on it or how far up it reached.",
+          "objective_facts": [
+            "The east wing of Harrow Warehouse collapsed during a night shift ten years ago, killing three workers, including an apprentice electrician Wei Su raised as his own son.",
+            "A written safety memo flagging the east wing's prematurely stripped support beams was filed four days before the collapse.",
+            "Marcus Kane was the shift's assigned foreman that night and traded his post with the apprentice hours before the collapse.",
+            "The official inquest ruled the collapse an equipment failure and closed within six weeks, after Vance Development settled privately with the victims' families.",
+            "Wei Su has kept an unofficial vigil at the fenced ruin every year since, convinced the inquest's finding was incomplete."
+          ],
+          "character_knowledge": {
+            "MARCUS_KANE": {
+              "knows": [
+                "He was the shift's foreman the night the east wing came down, and he traded his post with a younger apprentice hours before the collapse to deal with a personal emergency.",
+                "He personally saw the stripped support beams days before the collapse and said something about it to his site supervisor."
+              ],
+              "hides": [
+                "That he ever filed a warning at all — in ten years he's told no one, not even Delia, that he raised the alarm before it happened."
+              ],
+              "believes_falsely": [
+                "He believes the deaths are his fault alone — that if he hadn't traded the shift, or had pushed his warning harder himself, the apprentice would still be alive. He has no idea his warning was buried by someone above his supervisor."
+              ]
+            },
+            "ELIAS_VANCE": {
+              "knows": [
+                "He personally chose to hold the refinancing deadline after being told about the stripped support beams, and quietly arranged the settlements that kept the inquest from looking any further."
+              ],
+              "hides": [
+                "That he ever saw the safety memo before the collapse at all — his public story, believed by nearly everyone, is that Vance Development only learned of the defect afterward."
+              ],
+              "believes_falsely": [
+                "He believes the only people who could ever personally connect him to that memo are dead, paid off, or long gone — he has no idea his own driver tonight is the foreman who wrote it."
+              ]
+            },
+            "WEI_SU": {
+              "knows": [
+                "His son died in the east wing that night, that the inquest closed within six weeks, and that rumors of a buried warning have circulated for years among the old crew."
+              ],
+              "hides": [
+                "How much evidence he's actually gathered at the fence line over ten years — old photographs, a few crew members' names, more than anyone official has ever asked him for."
+              ],
+              "believes_falsely": [
+                "He has long believed a mid-level site supervisor, quietly let go after the inquest, was the one responsible for burying the warning — he's never suspected it reached all the way up to Elias Vance."
+              ]
+            },
+            "CIPHER": {
+              "knows": [
+                "The full account of what happened at Harrow the night it collapsed — whose warning was buried, whose shift was traded, and whose deadline mattered more than either."
+              ],
+              "hides": [
+                "Her own connection to someone lost that night — a fact she has kept from every person in or around the sedan, including Marcus and Elias."
+              ],
+              "believes_falsely": [
+                "She's certain she can control exactly how and when each piece of Harrow's truth reaches Marcus and Elias tonight — she hasn't accounted for Wei Su choosing, on his own, to act."
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "Recognition",
+      "theme": "The hacker routes the sedan past the collapsed Harrow site itself, and Marcus's carefully blank face gives away that he knows exactly where they are, leaving Elias to wonder what his driver isn't telling him (The Hijacking; The Harrow Reckoning).",
+      "intro_note": "Elias's outburst still hangs in the recycled air of the cabin when Cipher's voice returns, calm as ever, with new coordinates — a route that curls the sedan away from the city center and down toward the river, past a stretch of road Marcus has spent ten years driving fares anywhere else to avoid.",
+      "outro_note": "Then Cipher's voice changes register for the first time all night — not a demand this time, but a warning: the next stop has a failsafe neither the man behind the wheel nor the man bleeding into the leather behind him can beat alone, and the countdown to it has already begun.",
+      "sections": [
+        "Back Onto the Road — Cipher issues new coordinates without explanation (The Hijacking)",
+        "A Street Marcus Shouldn't Recognize — he clocks the turn before the GPS even names it (The Harrow Reckoning)",
+        "The Fence Line — the sedan's headlights sweep the chain-link ruin of Harrow (The Harrow Reckoning)",
+        "Wei Su Sees Headlights — a car slows near his vigil spot for the first time in years (The Harrow Reckoning)",
+        "What Elias Asks — he notices Marcus's silence and presses him on it (The Harrow Reckoning)",
+        "The Answer Marcus Doesn't Give — a deflection so smooth it's its own confession (The Harrow Reckoning)",
+        "Cipher Notices Too — her first taunt aimed at Marcus alone (The Hijacking)",
+        "An Old Man's Suspicion — Wei Su writes down the plate number by streetlight (The Harrow Reckoning)",
+        "Elias Pushes Harder — frustration overtakes caution (The Harrow Reckoning)",
+        "Marcus Shuts the Door — a flat lie, delivered too fast (The Harrow Reckoning)",
+        "The Next Coordinates — Cipher's tone shifts to something almost gentle (The Hijacking)",
+        "Two Men, One Locked Car — the narrator closes on the widening silence between them (The Hijacking)"
+      ],
+      "section_words": [
+        null,
+        null,
+        {
+          "min": 140,
+          "max": 210,
+          "target": "150 to 190"
+        },
+        {
+          "min": 130,
+          "max": 200,
+          "target": "140 to 170"
+        },
+        null,
+        {
+          "min": 140,
+          "max": 210,
+          "target": "150 to 190"
+        },
+        null,
+        null,
+        null,
+        {
+          "min": 140,
+          "max": 210,
+          "target": "150 to 190"
+        },
+        null,
+        null
+      ],
+      "section_locations": [
+        "THE_SEDAN",
+        "THE_SEDAN",
+        "THE_SEDAN",
+        "HARROW_WAREHOUSE",
+        "THE_SEDAN",
+        "THE_SEDAN",
+        "THE_SEDAN",
+        "HARROW_WAREHOUSE",
+        "THE_SEDAN",
+        "THE_SEDAN",
+        "THE_SEDAN",
+        "THE_SEDAN"
+      ],
+      "case": [
+        {
+          "label": "The Hijacking",
+          "solution": "Cipher — in truth Mei Su, Wei Su's estranged daughter and Daniel Su's older sister — built and deployed a custom intrusion tool that seized full control of the Crestline sedan's onboard systems the moment Marcus Kane and Elias Vance were both inside it; every drop-off task has been a deliberate step toward forcing the two men together at Harrow Warehouse so she can make them answer, in front of each other, for the collapse that killed her brother.",
+          "objective_facts": [
+            "Cipher seized control of the sedan's locks, dashboard, and drive systems through a single custom intrusion package uploaded during a routine software update earlier that evening.",
+            "Every task Cipher has issued has routed the sedan toward locations connected to Vance Development or to Marcus Kane's years working construction.",
+            "The sedan's rear partition and all four doors remain remotely locked and cannot be overridden from inside the cabin.",
+            "Cipher communicates only through the dashboard speakers, her voice run through a modulator that strips any identifying trait."
+          ],
+          "character_knowledge": {
+            "MARCUS_KANE": {
+              "knows": [
+                "Knows the sedan is being routed with increasing precision toward places tied to his own past, not just random crime.",
+                "Recognizes Cipher is choosing these stops on purpose, not at random."
+              ],
+              "hides": [
+                "Hides from Elias that he suspects the route isn't random at all — the honest answer would mean explaining why."
+              ],
+              "believes_falsely": [
+                "Believes Cipher is some rival contractor or extorted debt collector settling a score with Elias's company — has no idea the hijacking is rooted in his own history at Harrow."
+              ]
+            },
+            "ELIAS_VANCE": {
+              "knows": [
+                "Knows the tasks are becoming more specific to his company's old projects.",
+                "Knows Cipher clearly has inside knowledge of Vance Development's affairs."
+              ],
+              "hides": [
+                "Hides his fear that this is retaliation for a specific past decision, framing it to Marcus as generic corporate sabotage."
+              ],
+              "believes_falsely": [
+                "Believes the driver sitting in front of him has nothing to do with why this is happening — assumes he himself is the sole target."
+              ]
+            },
+            "CIPHER": {
+              "knows": [
+                "Knows precisely why she's routing the car past Harrow tonight, and what reaction she's testing for in each man."
+              ],
+              "hides": [
+                "Hides that she is watching for one very particular reaction from Marcus, presenting every task as businesslike instruction with no personal stake."
+              ],
+              "believes_falsely": [
+                "Believes she can read exactly how far to push before either man breaks — underestimates that Marcus's guilt might make him protect Elias rather than turn on him."
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Harrow Reckoning",
+          "solution": "Ten years ago, Elias Vance, desperate to hit a redevelopment deadline that would secure a major city contract, ordered his construction supervisor to use substandard structural steel and skip a mandatory inspection at Harrow Warehouse's east wing. Marcus Kane, then a young site foreman under crushing debt, caught the shortcut days before the collapse and was paid off by Vance's company to falsify the inspection sign-off rather than report it. The east wing came down during a night shift, killing four workers, including Wei Su's son Daniel, who was covering an extra shift as a favor to Marcus. Marcus has spent a decade believing he alone carries the guilt of that silence; Elias has spent it believing the payoff and a sealed settlement buried the matter for good.",
+          "objective_facts": [
+            "The east wing of Harrow Warehouse collapsed during a night shift ten years ago, killing four construction workers.",
+            "Vance Development held the redevelopment contract for the Harrow riverside site at the time of the collapse.",
+            "Marcus Kane worked construction at Harrow Warehouse in the year before the collapse and was the site's inspection sign-off contact.",
+            "Wei Su's son, Daniel Su, was among the four workers killed in the collapse.",
+            "No criminal charges were ever filed in connection with the collapse; the case was closed after a sealed insurance settlement."
+          ],
+          "character_knowledge": {
+            "MARCUS_KANE": {
+              "knows": [
+                "Recognizes the turn onto the riverside road leading past Harrow Warehouse before Cipher even names the destination.",
+                "Knows he signed the final inspection sign-off the week before the collapse.",
+                "Knows Daniel Su died covering an extra shift as a favor to him."
+              ],
+              "hides": [
+                "Hides his recognition of the route from Elias, calling it 'just another street' when asked why he's gone quiet.",
+                "Has never told anyone at Crestline, including Delia, that he worked Harrow at all."
+              ],
+              "believes_falsely": [
+                "Believes Elias never knew his name or face back when he was a site-level foreman — assumes tonight's route is coincidence rather than something aimed at him specifically."
+              ]
+            },
+            "ELIAS_VANCE": {
+              "knows": [
+                "Knows Vance Development cut the structural steel budget for Harrow's east wing on his personal sign-off.",
+                "Knows a sealed settlement was paid to the victims' families to keep the matter out of court."
+              ],
+              "hides": [
+                "Hides from Marcus that he personally ordered the corner cut, framing the old decision to himself as an engineering call made below his level."
+              ],
+              "believes_falsely": [
+                "Believes his driver is nothing more than hired help with no connection to Harrow — has no idea Marcus worked the site or signed off on the falsified inspection."
+              ]
+            },
+            "CIPHER": {
+              "knows": [
+                "Knows exactly what Marcus falsified and what Elias ordered.",
+                "Has routed tonight's fare past Harrow specifically to watch how each man reacts to the sight of it."
+              ],
+              "hides": [
+                "Hides that she is watching for a very particular reaction from Marcus — whether guilt shows on his face before Elias notices anything."
+              ],
+              "believes_falsely": [
+                "Believes Marcus's silence in the car means he's simply hiding his guilt from Elias — doesn't yet grasp how much of his fear is about protecting Elias from a truth she has no intention of easing."
+              ]
+            },
+            "WEI_SU": {
+              "knows": [
+                "Knows tonight falls in the anniversary week he always keeps vigil at the fence.",
+                "Has heard secondhand, through an old contact, that a Vance Development vehicle was seen near the site."
+              ],
+              "hides": [
+                "Hides from anyone who asks that he's kept a private file of old inspection records for years, waiting for a moment he could use them."
+              ],
+              "believes_falsely": [
+                "Believes whatever is happening near Harrow tonight is unrelated to his estranged daughter — has no idea Cipher is Mei."
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "Uneasy Alliance",
+      "theme": "A task neither man can survive alone forces a fragile truce between driver and passenger even as each still guards his own secret, while Delia's fixation on Marcus's route starts looking, to her bosses, like more than professional concern (The Hijacking; The Chase).",
+      "intro_note": "Cipher's countdown is already running by the time the sedan reaches the next set of coordinates — a failsafe, she calls it, built to punish exactly one kind of driver: one working alone.",
+      "outro_note": "Somewhere across the city, a name finally surfaces on Chen's screen — one that traces straight back to a decade-old settlement neither Marcus nor Elias has spoken of tonight — and on Dispatch's floor, an old man Delia has never met is already asking for her by name.",
+      "sections": [
+        "The Failsafe Cipher Named — the task comes with a clock and a warning (The Hijacking)",
+        "Marcus Lays Out the Only Plan — cooperation, not command, for the first time all night (The Hijacking)",
+        "Elias Refuses, Then Doesn't — pride loses to the clock (The Hijacking)",
+        "Delia's Manual Override — she bends a rule to keep tracking Marcus's ping (The Chase)",
+        "The Supervisor's Question — someone finally asks why she cares this much (The Chase)",
+        "Two Strangers, One Move — driver and passenger execute the task together (The Hijacking)",
+        "What It Costs Marcus — the task draws on something he swore he'd left behind (The Hijacking)",
+        "What It Costs Elias — his composure buys the task's price, barely (The Hijacking)",
+        "Chen Flags the Ping — a second data point that shouldn't match, but does (The Chase)",
+        "A Truce, Barely Spoken — no handshake, just an unspoken agreement to keep going (The Hijacking)",
+        "Delia Makes the Call She Shouldn't — she reaches past her own chain of command (The Chase)",
+        "Cipher Watches the Truce Form — her first sign of surprise all night (The Hijacking)",
+        "The Alliance Cipher Didn't Plan For — the narrator closes on two men who no longer sit like strangers (The Hijacking)"
+      ],
+      "section_words": [
+        null,
+        null,
+        {
+          "min": 140,
+          "max": 210,
+          "target": "150 to 190"
+        },
+        null,
+        {
+          "min": 130,
+          "max": 200,
+          "target": "140 to 170"
+        },
+        null,
+        null,
+        {
+          "min": 140,
+          "max": 210,
+          "target": "150 to 190"
+        },
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "section_locations": [
+        "THE_SEDAN",
+        "THE_SEDAN",
+        "THE_SEDAN",
+        "DISPATCH",
+        "DISPATCH",
+        "THE_SEDAN",
+        "THE_SEDAN",
+        "THE_SEDAN",
+        "CYBER_UNIT",
+        "THE_SEDAN",
+        "DISPATCH",
+        "THE_SEDAN",
+        "THE_SEDAN"
+      ],
+      "case": [
+        {
+          "label": "The Hijacking",
+          "solution": "Cipher — in truth Mei Su, Wei Su's estranged daughter and Daniel Su's older sister — built and deployed a custom intrusion tool that seized full control of the Crestline sedan's onboard systems the moment Marcus Kane and Elias Vance were both inside it; every drop-off task has been a deliberate step toward forcing the two men together at Harrow Warehouse so she can make them answer, in front of each other, for the collapse that killed her brother.",
+          "objective_facts": [
+            "Cipher seized control of the sedan's locks, dashboard, and drive systems through a single custom intrusion package uploaded during a routine software update earlier that evening.",
+            "Every task Cipher has issued has routed the sedan toward locations connected to Vance Development or to Marcus Kane's years working construction.",
+            "The sedan's rear partition and all four doors remain remotely locked and cannot be overridden from inside the cabin.",
+            "Cipher communicates only through the dashboard speakers, her voice run through a modulator that strips any identifying trait."
+          ],
+          "character_knowledge": {
+            "MARCUS_KANE": {
+              "knows": [
+                "Knows that surviving the next task requires trusting Elias enough to act as a team for the first time all night."
+              ],
+              "hides": [
+                "Still hides his personal link to Harrow, but the lie now costs him — he must avoid a specific gesture and location without explaining why."
+              ],
+              "believes_falsely": [
+                "Now believes Elias might be a fellow target rather than the true source of Cipher's grievance — starts extending guarded trust based on that false belief."
+              ]
+            },
+            "ELIAS_VANCE": {
+              "knows": [
+                "Knows he needs Marcus's specific skill and nerve to survive the task, forcing him to rely on a man he doesn't trust."
+              ],
+              "hides": [
+                "Hides how frightened he actually is beneath a commanding tone, worried it will look like weakness in front of 'hired help.'"
+              ],
+              "believes_falsely": [
+                "Believes cooperating with Marcus tonight is purely tactical and temporary — doesn't yet suspect any deeper connection between them."
+              ]
+            },
+            "CIPHER": {
+              "knows": [
+                "Knows the forced-cooperation task is a controlled experiment, watching whether trust between the two men grows or breaks."
+              ],
+              "hides": [
+                "Hides that this test is about her own need to know if either man is capable of protecting the other, versus only himself."
+              ],
+              "believes_falsely": [
+                "Believes the truce is fragile enough that a well-timed later task will shatter it completely — underestimates how much genuine loyalty is starting to form."
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Chase",
+          "solution": "Dispatcher Delia Reyes and Detective Leo Chen are racing, from opposite ends of the city and without knowing of each other for most of the season, to independently trace the same hijacked signal before the sedan reaches wherever Cipher is steering it; neither yet has enough of the picture to realize the intrusion is personal, not random cybercrime.",
+          "objective_facts": [
+            "Crestline's dispatch system logged an unauthorized override on Marcus Kane's vehicle beginning shortly after his last routine check-in.",
+            "The Cyber Crimes Bureau's monitoring picked up a fragment of the intrusion signal matching a signature never seen in prior citywide cases.",
+            "Neither Dispatch nor the Cyber Crimes Bureau has yet shared their findings with the other agency.",
+            "The sedan's GPS transponder continues broadcasting its location even though its route no longer matches any dispatched fare."
+          ],
+          "character_knowledge": {
+            "DELIA_REYES": {
+              "knows": [
+                "Knows Marcus's GPS ping has been looping through locations no fare would ever request, for hours now.",
+                "Knows she's the only one on the dispatch floor still tracking it manually."
+              ],
+              "hides": [
+                "Hides from her supervisors how personally invested she is, downplaying it as standard concern for fleet safety."
+              ],
+              "believes_falsely": [
+                "Believes this is likely a carjacking or extortion targeting Marcus specifically — has no idea a third party or a decade-old case is involved at all."
+              ]
+            },
+            "DET_LEO_CHEN": {
+              "knows": [
+                "Knows the intrusion signature is unusually sophisticated for a simple joyride hack.",
+                "Knows it's been active for hours without triggering standard countermeasures."
+              ],
+              "hides": [
+                "Hides from his superiors how thin his actual evidence is, presenting his hunch as further along than it is to keep the case open."
+              ],
+              "believes_falsely": [
+                "Believes he's chasing a financially-motivated hacking ring — has no reason yet to connect the signal to a specific grievance or victim."
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "The Name Behind the Voice",
+      "theme": "Detective Chen traces the intrusion signal to a name tied to Harrow's victims, Wei Su confronts Delia with a version of the collapse the official record never told, and Elias's composure finally slips in front of Marcus (The Chase; The Harrow Reckoning).",
+      "intro_note": "The name on Chen's screen sends him straight back through the Harrow settlement file, while across town a stranger with an old folder under his arm is already asking Dispatch for the woman who's been chasing Marcus Kane's ping all night.",
+      "outro_note": "Elias's confession still hangs unanswered in the cabin when Cipher's voice returns with a single quiet question aimed at Marcus alone — one that will pull out of him the one truth he swore he'd take to his grave.",
+      "sections": [
+        "The Fragment Chen Finally Reads — a piece of code that shouldn't mean anything, until it does (The Chase)",
+        "A Name From an Old Case File — Harrow surfaces on his screen (The Chase)",
+        "An Old Man at the Front Desk — Wei Su arrives asking for Delia by name (The Chase)",
+        "What Wei Su Carries in a Folder — old paperwork he's kept for years (The Harrow Reckoning)",
+        "The Story Delia Never Heard — Wei Su tells her his version of the collapse (The Harrow Reckoning)",
+        "Delia Reads a Name She Knows — Marcus's name, on a page she's never seen (The Harrow Reckoning)",
+        "Elias Stares Out at Nothing — the silence in the sedan changes texture (The Harrow Reckoning)",
+        "The Question That Breaks Him — Marcus asks the one thing he's avoided all night (The Harrow Reckoning)",
+        "Elias's Composure Slips — a decade of denial gives out in one sentence (The Harrow Reckoning)",
+        "Marcus Watches a Rich Man Crack — and says nothing about his own part in it (The Harrow Reckoning)",
+        "Chen Makes the Call — he decides the hunch is worth the risk (The Chase)",
+        "Cipher Has Been Listening — her first acknowledgment of what she just heard (The Harrow Reckoning)",
+        "One Truth Down, One to Go — the narrator closes on the truth still unsaid (The Harrow Reckoning)"
+      ],
+      "section_words": [
+        null,
+        {
+          "min": 140,
+          "max": 210,
+          "target": "150 to 190"
+        },
+        null,
+        null,
+        {
+          "min": 380,
+          "max": 580,
+          "target": "420 to 500"
+        },
+        {
+          "min": 130,
+          "max": 200,
+          "target": "140 to 170"
+        },
+        null,
+        null,
+        {
+          "min": 380,
+          "max": 580,
+          "target": "420 to 500"
+        },
+        {
+          "min": 140,
+          "max": 210,
+          "target": "150 to 190"
+        },
+        null,
+        null,
+        null
+      ],
+      "section_locations": [
+        "CYBER_UNIT",
+        "CYBER_UNIT",
+        "DISPATCH",
+        "DISPATCH",
+        "DISPATCH",
+        "DISPATCH",
+        "THE_SEDAN",
+        "THE_SEDAN",
+        "THE_SEDAN",
+        "THE_SEDAN",
+        "CYBER_UNIT",
+        "THE_SEDAN",
+        "THE_SEDAN"
+      ],
+      "case": [
+        {
+          "label": "The Chase",
+          "solution": "Dispatcher Delia Reyes and Detective Leo Chen are racing, from opposite ends of the city and without knowing of each other for most of the season, to independently trace the same hijacked signal before the sedan reaches wherever Cipher is steering it; neither yet has enough of the picture to realize the intrusion is personal, not random cybercrime.",
+          "objective_facts": [
+            "Crestline's dispatch system logged an unauthorized override on Marcus Kane's vehicle beginning shortly after his last routine check-in.",
+            "The Cyber Crimes Bureau's monitoring picked up a fragment of the intrusion signal matching a signature never seen in prior citywide cases.",
+            "Neither Dispatch nor the Cyber Crimes Bureau has yet shared their findings with the other agency.",
+            "The sedan's GPS transponder continues broadcasting its location even though its route no longer matches any dispatched fare."
+          ],
+          "character_knowledge": {
+            "DET_LEO_CHEN": {
+              "knows": [
+                "Has traced a fragment of the intrusion tool's code back to a discontinued alias once used by a hacker collective, linked through an old forum post to the Harrow Warehouse settlement case."
+              ],
+              "hides": [
+                "Hides this specific lead from his captain for now, worried it sounds too speculative to justify the resources he wants."
+              ],
+              "believes_falsely": [
+                "Believes the Harrow connection points to a disgruntled former employee of Vance Development — hasn't considered a victim's family member could be responsible."
+              ]
+            },
+            "DELIA_REYES": {
+              "knows": [
+                "Knows, after Wei Su's confrontation, that Marcus was on-site at Harrow Warehouse the year of the collapse — information Marcus never once shared with her in a decade of friendship."
+              ],
+              "hides": [
+                "Hides from dispatch leadership and from Chen how shaken this revelation leaves her, not yet sure what to do with it."
+              ],
+              "believes_falsely": [
+                "Believes Wei Su's version must be exaggerated or bitter rather than literal fact — can't yet reconcile it with the Marcus she thought she knew."
+              ]
+            },
+            "WEI_SU": {
+              "knows": [
+                "Knows Marcus Kane's name from the old inspection paperwork he salvaged years ago; recognizes it the moment he hears it mentioned near Dispatch."
+              ],
+              "hides": [
+                "Hides how he obtained the old paperwork, unwilling to reveal a contact inside the original investigation who fed him copies."
+              ],
+              "believes_falsely": [
+                "Believes confronting Delia is his only remaining way to force the truth into the open — doesn't know Cipher is already forcing it far more directly tonight."
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Harrow Reckoning",
+          "solution": "Ten years ago, Elias Vance, desperate to hit a redevelopment deadline that would secure a major city contract, ordered his construction supervisor to use substandard structural steel and skip a mandatory inspection at Harrow Warehouse's east wing. Marcus Kane, then a young site foreman under crushing debt, caught the shortcut days before the collapse and was paid off by Vance's company to falsify the inspection sign-off rather than report it. The east wing came down during a night shift, killing four workers, including Wei Su's son Daniel, who was covering an extra shift as a favor to Marcus. Marcus has spent a decade believing he alone carries the guilt of that silence; Elias has spent it believing the payoff and a sealed settlement buried the matter for good.",
+          "objective_facts": [
+            "The east wing of Harrow Warehouse collapsed during a night shift ten years ago, killing four construction workers.",
+            "Vance Development held the redevelopment contract for the Harrow riverside site at the time of the collapse.",
+            "Marcus Kane worked construction at Harrow Warehouse in the year before the collapse and was the site's inspection sign-off contact.",
+            "Wei Su's son, Daniel Su, was among the four workers killed in the collapse.",
+            "No criminal charges were ever filed in connection with the collapse; the case was closed after a sealed insurance settlement."
+          ],
+          "character_knowledge": {
+            "MARCUS_KANE": {
+              "knows": [
+                "Knows Elias's composure just broke in front of him, all but confirming Elias personally ordered the steel cut — a detail he never had solid proof of before tonight."
+              ],
+              "hides": [
+                "Still hides that he took payoff money to falsify the sign-off, letting Elias's outburst imply the guilt is entirely the company's, not his own signature on the report."
+              ],
+              "believes_falsely": [
+                "Believes that if he stays silent about his own falsified sign-off, Elias's slip tonight will be the only confession that matters — underestimates that Cipher already knows both truths."
+              ]
+            },
+            "ELIAS_VANCE": {
+              "knows": [
+                "For the first time, admits to himself — and lets it show in front of Marcus — that he knowingly ordered the unsafe shortcut at Harrow."
+              ],
+              "hides": [
+                "Still hides the exact terms of the sealed settlement, and that he personally chose silence over a recall once the risk was flagged internally."
+              ],
+              "believes_falsely": [
+                "Believes his outburst reveals the whole truth of his guilt — has no idea Marcus's signature is on the falsified paperwork that made the shortcut possible."
+              ]
+            },
+            "CIPHER": {
+              "knows": [
+                "Knows Elias just confessed his role aloud for the first time in a decade, and recognizes it as the moment her plan has been building toward."
+              ],
+              "hides": [
+                "Hides how close she is to deciding whether tonight ends at Harrow with an explosion or with something else entirely."
+              ],
+              "believes_falsely": [
+                "Believes Elias's confession means Marcus will finally confess his own part too — underestimates how far Marcus will go to keep his own signature a secret, even now."
+              ]
+            },
+            "WEI_SU": {
+              "knows": [
+                "Knows, from his salvaged paperwork, that a sign-off signature exists on the inspection report from the week before the collapse — though the name has always been smudged and illegible to him."
+              ],
+              "hides": [
+                "Hides from Delia exactly how he obtained the paperwork, protecting an old contact inside the original investigation."
+              ],
+              "believes_falsely": [
+                "Believes revealing the paperwork to Delia will finally force Vance Development to answer for the collapse — doesn't yet know the signature belongs to the very driver behind Marcus's wheel tonight."
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "The Confession Nobody Asked For",
+      "theme": "Cornered by the night's demands, Marcus admits a piece of his own role in the collapse of Harrow Warehouse — a confession he never meant Elias to hear from his own mouth (The Hijacking; The Harrow Reckoning).",
+      "intro_note": "Elias's composure cracked in front of Marcus the moment Cipher's voice let the word 'Harrow' slip loose in the cabin — and neither man has said another word about it since.",
+      "outro_note": "Cipher's voice softens into something almost gentle as she tells them the next stop isn't a delivery at all — it never was.",
+      "sections": [
+        "Recap: The Sedan Presses On",
+        "A New Task With a Familiar Name",
+        "Dispatch Digs Deeper",
+        "Three Hops and Counting",
+        "The Word He Can't Unhear",
+        "A Father's Vigil",
+        "No More Delaying",
+        "What I Signed Away",
+        "The Man Across the Partition",
+        "Notes Compared",
+        "Satisfied, For Now",
+        "Someone's Been Asking",
+        "Not Random At All"
+      ],
+      "section_words": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 120,
+          "max": 190,
+          "target": "130 to 160"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 130,
+          "max": 200,
+          "target": "140 to 170"
+        }
+      ],
+      "section_locations": [
+        "THE_SEDAN",
+        "THE_SEDAN",
+        "DISPATCH",
+        "CYBER_UNIT",
+        "THE_SEDAN",
+        "HARROW_WAREHOUSE",
+        "THE_SEDAN",
+        "THE_SEDAN",
+        "THE_SEDAN",
+        "DISPATCH",
+        "THE_SEDAN",
+        "HARROW_WAREHOUSE",
+        "THE_SEDAN"
+      ],
+      "case": [
+        {
+          "label": "The Hijacking",
+          "solution": "Cipher — in reality a woman with a direct, still-hidden connection to Harrow's dead — built a backdoor into Crestline's fleet telematics months ago specifically to seize control of car #114 the night Elias Vance booked it, using escalating criminal tasks and a live explosive charge wired into the trunk as leverage to force Marcus and Elias to the ruins of Harrow Warehouse and make them answer, in real time, for the night the east wing came down.",
+          "objective_facts": [
+            "The sedan's onboard systems were compromised through a firmware backdoor planted in Crestline's fleet management software roughly four months before tonight.",
+            "Every task Cipher has forced on Marcus tonight has looped the sedan's route closer to the fenced perimeter of Harrow Warehouse.",
+            "Cipher has never once demanded money for herself from any of tonight's forced deliveries."
+          ],
+          "character_knowledge": {
+            "MARCUS_KANE": {
+              "knows": [
+                "Every task tonight has been shaped to make him relive specific choices from the Harrow night, not just commit random crimes."
+              ],
+              "hides": [
+                "That the word 'Harrow,' the instant Cipher used it, told him exactly what tonight has really been about — he lets Elias think it's just another cruel demand."
+              ],
+              "believes_falsely": [
+                "That Cipher must be someone he personally wronged on a job site, not a stranger's grieving family chasing him down a decade later."
+              ]
+            },
+            "ELIAS_VANCE": {
+              "knows": [
+                "Cipher has never once asked him for money, only for information and compliance — a pattern no ordinary extortionist follows."
+              ],
+              "hides": [
+                "That he suspects, but won't say aloud, that tonight is retaliation for Harrow specifically — he's watching to see what Marcus gives up first before admitting he's guessed the same thing."
+              ],
+              "believes_falsely": [
+                "That Marcus might have quietly arranged this entire hijacking himself, as an elaborate shakedown for money he feels he was owed a decade ago."
+              ]
+            },
+            "CIPHER": {
+              "knows": [
+                "Exactly what Marcus's confession tonight will and won't include, because she has read the buried safety report herself."
+              ],
+              "hides": [
+                "That she is engineering tonight's task specifically to draw a fuller admission out of Marcus before the night ends — not simple cruelty for its own sake."
+              ],
+              "believes_falsely": [
+                "That hearing Marcus admit his silence tonight will be enough to know whether he deserves mercy at Harrow — she hasn't yet let herself consider it might not be that simple."
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Chase",
+          "solution": "Detective Chen's trace of the hijack signal and Delia's dogged tracking of Marcus's GPS ping are converging, independently, on the same narrow radius of the city near the river — though neither yet has enough to know exactly where, or why, the trail keeps circling back to Harrow.",
+          "objective_facts": [
+            "The hijack signal routes through at least three proxy servers before reaching the sedan's onboard systems.",
+            "Delia flagged car #114's routing anomalies to her supervisor hours before Chen's unit made formal contact with Crestline.",
+            "Marcus's old Vance Development personnel file has been sealed under a settlement non-disclosure clause for ten years."
+          ],
+          "character_knowledge": {
+            "DELIA_REYES": {
+              "knows": [
+                "The sedan's route has looped past the same three-block radius near the river four separate times tonight."
+              ],
+              "hides": [
+                "That she's started pulling Marcus's old personnel file without telling her supervisor why."
+              ],
+              "believes_falsely": [
+                "That whatever Marcus is hiding has nothing to do with something as old as Harrow — she still thinks that chapter of his life is unrelated to tonight."
+              ]
+            },
+            "DET_LEO_CHEN": {
+              "knows": [
+                "The intrusion signal bounces through at least three proxy hops before reaching the sedan, each harder to trace than the last."
+              ],
+              "hides": [
+                "That his last confirmed hop points toward a storage facility near the river — he hasn't told Delia yet because he isn't sure what it means."
+              ],
+              "believes_falsely": []
+            }
+          }
+        },
+        {
+          "label": "The Harrow Reckoning",
+          "solution": "Ten years ago, foreman Marcus Kane discovered that Vance Development's riverside redevelopment used undersized support beams to hit a construction deadline; he reported it up the chain, but VP Elias Vance overruled the warning to protect the project's schedule and investors. The east wing collapsed days later, killing several workers including apprentice electrician Danny Su. Vance Development quietly settled with Marcus for his silence rather than let his report become public, and Marcus took the payout and disappeared into chauffeuring rather than ever coming forward — a decision that has eaten at him for a decade, while Elias buried his own role so completely he nearly convinced himself the collapse truly was unforeseeable.",
+          "objective_facts": [
+            "Marcus Kane filed an internal safety report three days before the Harrow Warehouse collapse, flagging undersized support beams in the east wing.",
+            "Elias Vance, then Vance Development's VP of Operations, personally signed off on proceeding with construction despite the report.",
+            "Danny Su, a 24-year-old apprentice electrician and Wei Su's son, died in the east wing collapse.",
+            "Vance Development paid Marcus Kane an undisclosed settlement roughly six weeks after the collapse, contingent on a non-disclosure agreement."
+          ],
+          "character_knowledge": {
+            "MARCUS_KANE": {
+              "knows": [
+                "He filed the original safety report on the east wing beams three days before the collapse.",
+                "He accepted Vance Development's settlement money and signed away his right to ever speak publicly about the report."
+              ],
+              "hides": [
+                "That he took the payout at all — he's let Delia and everyone since believe he simply 'left construction' after Harrow, not that he was paid to disappear."
+              ],
+              "believes_falsely": [
+                "That confessing only his own silence tonight, without naming Elias's decision, might be enough to satisfy whoever is doing this to him."
+              ]
+            },
+            "ELIAS_VANCE": {
+              "knows": [
+                "He overruled the safety concern that came up the chain before the collapse, though he's never confirmed to anyone that the report reached his desk specifically."
+              ],
+              "hides": [
+                "That he was the one who signed off on proceeding despite the report — a fact he's kept out of every account of that night for a decade."
+              ],
+              "believes_falsely": [
+                "Now recognizing Marcus as the foreman who filed that report, he assumes Marcus has known his identity all along and is 'punishing' him tonight — not realizing Marcus is just as blindsided as he is."
+              ]
+            },
+            "WEI_SU": {
+              "knows": [
+                "Someone has recently been asking around about Danny's death using details that were never in any public report."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "That whoever is digging into Danny's case must be a journalist or a lawyer, not someone actively orchestrating tonight's events."
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "Countdown to Harrow",
+      "theme": "With the trunk's true cargo finally named aloud, the hacker drives the sedan toward Harrow itself while Delia and Detective Chen race to close the distance before the countdown the voice keeps promising comes due (The Hijacking; The Chase; The Harrow Reckoning).",
+      "intro_note": "Cipher promised the next stop wasn't random — and now the sedan is already moving toward it, dashboard screens glowing brighter than they have all night.",
+      "outro_note": "The sedan's headlights sweep across rusted chain-link, and standing directly in their path, lit up for one frozen second, is a man neither of them expected to see: Wei Su.",
+      "sections": [
+        "The Next Stop",
+        "What's Really in the Trunk",
+        "Two Men, One Truth",
+        "The Storage Unit",
+        "Off the Books",
+        "Headlights in the Distance",
+        "The Timer Starts",
+        "Every Favor Called In",
+        "Meeting in the Middle",
+        "The Man at the Fence",
+        "Old Instincts",
+        "Final Approach",
+        "Through the Fence Line"
+      ],
+      "section_words": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 110,
+          "max": 180,
+          "target": "120 to 150"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 130,
+          "max": 200,
+          "target": "140 to 170"
+        }
+      ],
+      "section_locations": [
+        "THE_SEDAN",
+        "THE_SEDAN",
+        "THE_SEDAN",
+        "CYBER_UNIT",
+        "DISPATCH",
+        "HARROW_WAREHOUSE",
+        "THE_SEDAN",
+        "THE_SEDAN",
+        "CYBER_UNIT",
+        "HARROW_WAREHOUSE",
+        "THE_SEDAN",
+        "THE_SEDAN",
+        "HARROW_WAREHOUSE"
+      ],
+      "case": [
+        {
+          "label": "The Hijacking",
+          "solution": "Cipher — in reality a woman with a direct, still-hidden connection to Harrow's dead — built a backdoor into Crestline's fleet telematics months ago specifically to seize control of car #114 the night Elias Vance booked it, using escalating criminal tasks and a live explosive charge wired into the trunk as leverage to force Marcus and Elias to the ruins of Harrow Warehouse and make them answer, in real time, for the night the east wing came down.",
+          "objective_facts": [
+            "The trunk contains a remote-detonated explosive device wired to the vehicle's onboard battery and timed to Cipher's countdown.",
+            "The countdown Cipher has set is calibrated to expire at the moment the sedan reaches Harrow's fenced perimeter, not before or after.",
+            "Cipher has full remote access to the sedan's locks, engine, and dashboard displays, but not to its brakes or steering — Marcus retains physical control of the wheel."
+          ],
+          "character_knowledge": {
+            "MARCUS_KANE": {
+              "knows": [
+                "The trunk's cargo is a live explosive, not contraband — Cipher confirms it herself over the dash speakers tonight."
+              ],
+              "hides": [
+                "That knowing the bomb is real changes nothing about what he's still refusing to tell Elias — only that something happened at Harrow, never the full shape of it."
+              ],
+              "believes_falsely": [
+                "That he can still talk Cipher down if he keeps driving calmly and doesn't provoke her — he hasn't grasped yet that calm was never what she wanted from him."
+              ]
+            },
+            "ELIAS_VANCE": {
+              "knows": [
+                "The bomb is real, and the countdown is tied to the sedan's arrival at a specific location."
+              ],
+              "hides": [
+                "That he's begun quietly trying to trigger his own security detail through a hidden panel button, without telling Marcus."
+              ],
+              "believes_falsely": [
+                "That his money and connections can still buy a way out of this once they're close enough to wherever they're headed — he underestimates how little Cipher actually wants from him."
+              ]
+            },
+            "CIPHER": {
+              "knows": [
+                "The exact detonation window built into the timer, and that it's tied to the sedan's arrival at Harrow specifically."
+              ],
+              "hides": [
+                "Her own name and any personal connection to Harrow — she still won't let either man hear who's really speaking to them."
+              ],
+              "believes_falsely": []
+            }
+          }
+        },
+        {
+          "label": "The Chase",
+          "solution": "Detective Chen's trace of the hijack signal and Delia's dogged tracking of Marcus's GPS ping lead them, independently and then together, to a proxy chain rented under a storage-unit alias two blocks from Harrow Warehouse — putting them on the road to the warehouse in time to affect, but not fully prevent, however the night at Harrow ends.",
+          "objective_facts": [
+            "The hijack signal's final proxy hop traces to a storage unit leased under the alias 'M. Sutton,' paid for entirely in cash.",
+            "The storage unit sits two blocks from Harrow Warehouse's fenced perimeter.",
+            "Security footage near the unit shows the same woman visiting repeatedly over the past several months."
+          ],
+          "character_knowledge": {
+            "DELIA_REYES": {
+              "knows": [
+                "Chen's trace and her own GPS log now point to the same two-block radius around Harrow."
+              ],
+              "hides": [
+                "That she left her post without her supervisor's sign-off to meet Chen in person tonight."
+              ],
+              "believes_falsely": [
+                "That Marcus's silence about his past is starting to feel connected to tonight somehow, though she still can't say how — Harrow itself hasn't crossed her mind yet."
+              ]
+            },
+            "DET_LEO_CHEN": {
+              "knows": [
+                "The storage unit alias 'M. Sutton' traces to a woman paying entirely in cash who matches footage of someone visiting Harrow's fenced perimeter repeatedly this year."
+              ],
+              "hides": [
+                "That he doesn't yet have a warrant for the unit and is debating whether to move on it anyway before backup arrives."
+              ],
+              "believes_falsely": []
+            }
+          }
+        },
+        {
+          "label": "The Harrow Reckoning",
+          "solution": "Ten years ago, foreman Marcus Kane discovered that Vance Development's riverside redevelopment used undersized support beams to hit a construction deadline; he reported it up the chain, but VP Elias Vance overruled the warning to protect the project's schedule and investors. The east wing collapsed days later, killing several workers including apprentice electrician Danny Su. Vance Development quietly settled with Marcus for his silence rather than let his report become public, and Marcus took the payout and disappeared into chauffeuring rather than ever coming forward — a decision that has eaten at him for a decade, while Elias buried his own role so completely he nearly convinced himself the collapse truly was unforeseeable.",
+          "objective_facts": [
+            "Marcus Kane filed an internal safety report three days before the Harrow Warehouse collapse, flagging undersized support beams in the east wing.",
+            "Elias Vance, then Vance Development's VP of Operations, personally signed off on proceeding with construction despite the report.",
+            "Danny Su, a 24-year-old apprentice electrician and Wei Su's son, died in the east wing collapse.",
+            "Vance Development paid Marcus Kane an undisclosed settlement roughly six weeks after the collapse, contingent on a non-disclosure agreement."
+          ],
+          "character_knowledge": {
+            "WEI_SU": {
+              "knows": [
+                "Headlights have begun circling near the warehouse fence tonight — the first real activity he's seen out here in years."
+              ],
+              "hides": [
+                "That he's kept Danny's old crew badge, with Marcus Kane's name printed beside his son's on the same roster, in a drawer for ten years without ever once confronting him."
+              ],
+              "believes_falsely": [
+                "That tonight's disturbance near the warehouse is just kids or scavengers — at least until the headlights actually turn toward the gate."
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "The Warehouse Floor",
+      "theme": "At the ruined warehouse, driver, passenger, and the voice that has controlled them all night finally occupy the same space, and each learns a piece of the collapse the others had buried (The Harrow Reckoning; The Hijacking).",
+      "intro_note": "The sedan's headlights caught Wei Su standing dead center in the beam, and for the first time all night, the car stopped moving because Marcus chose to stop it.",
+      "outro_note": "The countdown ticks past a number none of them can unhear, and Marcus reaches for the trunk release with a hand that isn't quite steady — the last fare of the night is about to begin.",
+      "sections": [
+        "Inside the Fence",
+        "The Man Who Never Left",
+        "A Voice With a Body",
+        "Closing the Last Distance",
+        "What Elias Buried",
+        "The Letter He Burned",
+        "Everything I Thought I Knew",
+        "The Timer Still Runs",
+        "Three Men at the Wreck",
+        "Through the Same Fence",
+        "What the Voice Actually Wants",
+        "A Choice Nobody Can Make For Him",
+        "The Fuse Point"
+      ],
+      "section_words": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 110,
+          "max": 180,
+          "target": "120 to 150"
+        },
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 120,
+          "max": 190,
+          "target": "130 to 160"
+        }
+      ],
+      "section_locations": [
+        "HARROW_WAREHOUSE",
+        "HARROW_WAREHOUSE",
+        "HARROW_WAREHOUSE",
+        "CYBER_UNIT",
+        "HARROW_WAREHOUSE",
+        "HARROW_WAREHOUSE",
+        "HARROW_WAREHOUSE",
+        "HARROW_WAREHOUSE",
+        "HARROW_WAREHOUSE",
+        "HARROW_WAREHOUSE",
+        "HARROW_WAREHOUSE",
+        "HARROW_WAREHOUSE",
+        "HARROW_WAREHOUSE"
+      ],
+      "case": [
+        {
+          "label": "The Hijacking",
+          "solution": "Cipher — in reality a woman with a direct, still-hidden connection to Harrow's dead — built a backdoor into Crestline's fleet telematics months ago specifically to seize control of car #114 the night Elias Vance booked it, using escalating criminal tasks and a live explosive charge wired into the trunk as leverage to force Marcus and Elias to the ruins of Harrow Warehouse and make them answer, in real time, for the night the east wing came down.",
+          "objective_facts": [
+            "Cipher's countdown reaches its final phase the moment the sedan comes to rest inside Harrow's fenced perimeter.",
+            "Cipher has followed the sedan's arrival on foot, staying masked and at a deliberate distance from the vehicle's headlights.",
+            "Cipher has not yet detonated the device despite having every technical means to do so at will."
+          ],
+          "character_knowledge": {
+            "MARCUS_KANE": {
+              "knows": [
+                "Cipher is physically present at Harrow tonight, not just a voice on a speaker — though she keeps herself masked and in shadow."
+              ],
+              "hides": [
+                "That some part of him recognizes something in how she moves or speaks up close — a familiarity he can't yet place and isn't ready to say aloud."
+              ],
+              "believes_falsely": []
+            },
+            "ELIAS_VANCE": {
+              "knows": [
+                "The person behind tonight's voice is standing somewhere near the wreck, close enough to see but not yet close enough to identify."
+              ],
+              "hides": [
+                "That he's more frightened of who this person might turn out to be than of the bomb itself."
+              ],
+              "believes_falsely": [
+                "That once he sees her face, he'll recognize a business rival or disgruntled former employee — not someone with no professional connection to him at all."
+              ]
+            },
+            "CIPHER": {
+              "knows": [
+                "Both men are finally in the one place she's spent months engineering this night to bring them to."
+              ],
+              "hides": [
+                "Her face and her real name — she keeps herself masked even now, unwilling to let the reveal come before the truth does."
+              ],
+              "believes_falsely": []
+            }
+          }
+        },
+        {
+          "label": "The Harrow Reckoning",
+          "solution": "Ten years ago, foreman Marcus Kane discovered that Vance Development's riverside redevelopment used undersized support beams to hit a construction deadline; he reported it up the chain, but VP Elias Vance overruled the warning to protect the project's schedule and investors. The east wing collapsed days later, killing several workers including apprentice electrician Danny Su. Vance Development quietly settled with Marcus for his silence rather than let his report become public, and Marcus took the payout and disappeared into chauffeuring rather than ever coming forward. In the weeks after the settlement, wracked with guilt, Marcus anonymously mailed Wei Su a letter and a portion of his own settlement money as an apology; believing it was hush money sent by Vance Development itself, Wei Su burned it unopened by the return address, never knowing who it was truly from.",
+          "objective_facts": [
+            "Marcus Kane filed an internal safety report three days before the Harrow Warehouse collapse, flagging undersized support beams in the east wing.",
+            "Elias Vance, then Vance Development's VP of Operations, personally signed off on proceeding with construction despite the report — and had a second engineer's follow-up warning quietly dismissed in the same week.",
+            "Danny Su, a 24-year-old apprentice electrician and Wei Su's son, died in the east wing collapse.",
+            "In the weeks after his settlement, Marcus anonymously mailed Wei Su a letter and a portion of his own money as an apology; Wei Su, believing it was hush money from Vance Development, burned it unopened by the return address."
+          ],
+          "character_knowledge": {
+            "MARCUS_KANE": {
+              "knows": [
+                "He mailed Wei Su an anonymous apology and money years ago, and never learned whether it was received."
+              ],
+              "hides": [
+                "Nothing further to hide from Elias tonight — but he still hasn't found the words to say any of this directly to Wei Su's face."
+              ],
+              "believes_falsely": [
+                "That his own silence, not Elias's decision to bury a second warning too, was the single deciding factor in Danny's death."
+              ]
+            },
+            "ELIAS_VANCE": {
+              "knows": [
+                "He dismissed not just Marcus's report but a second engineer's follow-up warning in that same week — a fact he has never admitted to anyone until Cipher forces it out of him tonight."
+              ],
+              "hides": [
+                "Nothing left to hide about the collapse itself — but he still hasn't decided whether to tell Marcus he now believes Marcus tried, in his own way, to make amends."
+              ],
+              "believes_falsely": []
+            },
+            "WEI_SU": {
+              "knows": [
+                "An anonymous letter and money arrived at his door weeks after Danny's death, which he burned without reading, believing it was Vance Development trying to buy his silence."
+              ],
+              "hides": [
+                "That some nights he's regretted burning it before he even understood what it might have been."
+              ],
+              "believes_falsely": [
+                "Until tonight, that the letter could only have come from Vance Development itself — never once suspecting it might have been from the driver of a construction crew he'd never met by name."
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "The Last Fare",
+      "theme": "The season's reckoning lands — the hijacking ends and Harrow's true account is settled between the three people who share it, while what Marcus, Elias, and Delia do with each other once the night is over remains an open question (The Hijacking resolves; The Harrow Reckoning resolves; aftermath of The Chase).",
+      "intro_note": "The trunk lock finally released on Cipher's command, and the screen bolted inside it lit up with a face neither man in the sedan had ever seen — a woman standing somewhere close, watching them through the car's own cameras. A countdown began ticking in the corner of that screen. Outside the fence, in the grey light before dawn, an old man in a watchman's coat was already walking toward the sound of an idling engine he recognized without knowing why.",
+      "outro_note": "",
+      "sections": [
+        "Dawn Breaks Over Harrow — Wei Su crosses the frozen ground toward a sedan that has no business being here (Harrow Reckoning)",
+        "The Face in the Trunk — Marcus and Elias see Cipher for the first time, and neither man says what he recognizes (Hijacking)",
+        "The Old Watchman's Recognition — Wei Su reaches the fence and hears a voice he has waited ten years to hear again (Harrow Reckoning)",
+        "What the Report Really Said — Cipher speaks directly to Marcus about the certification he signed (Harrow Reckoning; Hijacking)",
+        "Trace Complete — Chen's team locates the intrusion's final relay and moves (Chase)",
+        "Breaking Protocol — Delia leaves her post against direct orders to reach the site (Chase)",
+        "The Payoff — Elias forces the truth out of Marcus in front of the one man both of them have been afraid of (Harrow Reckoning)",
+        "Father and Daughter — Wei Su speaks to Mei through the open window of a car she has spent all night controlling (Harrow Reckoning; Hijacking)",
+        "The Countdown — the timer on the trunk device reaches its final minute (Hijacking)",
+        "Arrival — Chen and Delia reach the fence line as the standoff peaks (Chase)",
+        "Disengage — Mei chooses exposure over detonation (Hijacking resolves)",
+        "Doors Unlocked — Marcus and Elias step out of the sedan for the first time since the hijacking began (Hijacking resolves)",
+        "The Long Fare's Last Mile — a quiet morning at Marcus's apartment leaves the season's real question unanswered (aftermath)"
+      ],
+      "section_words": [
+        null,
+        {
+          "min": 150,
+          "max": 230,
+          "target": "160 to 190"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 120,
+          "max": 200,
+          "target": "130 to 160"
+        },
+        null,
+        null,
+        null,
+        {
+          "min": 380,
+          "max": 550,
+          "target": "420 to 480"
+        }
+      ],
+      "section_locations": [
+        "HARROW_WAREHOUSE",
+        "THE_SEDAN",
+        "HARROW_WAREHOUSE",
+        "THE_SEDAN",
+        "CYBER_UNIT",
+        "DISPATCH",
+        "THE_SEDAN",
+        "HARROW_WAREHOUSE",
+        null,
+        null,
+        null,
+        "THE_SEDAN",
+        "RIVERSIDE"
+      ],
+      "case": [
+        {
+          "label": "The Hijacking",
+          "solution": "Cipher is Mei Su, daughter of Wei Su and sister of Danny Su, a young electrician killed in the Harrow collapse. Trained as a security engineer, she was later contracted to service Crestline Chauffeur Service's fleet software and used that access to plant the backdoor that let her seize the sedan's systems tonight. She engineered the entire hijacking — including a repurposed demolition charge hidden in the trunk, salvaged from decommissioned Vance Development equipment — to trap Marcus and Elias together long enough to force a confession, intending to detonate the charge against Harrow's condemned east wing to destroy the buried vault of falsified reports and payoff records hidden there, not to kill either man, though she let both believe otherwise all night. Confronted by her father at the last minute, she disengages the detonator and instead releases the vault's contents — the unaltered inspection reports and settlement records — directly to Detective Chen's bureau and the press.",
+          "objective_facts": [
+            "The sedan's onboard systems were compromised through a backdoor installed months earlier while Mei Su was contracted to service Crestline's fleet software.",
+            "The trunk contained a rigged demolition charge repurposed from decommissioned Vance Development equipment, alongside a data drive holding the unaltered original Harrow inspection reports.",
+            "Mei Su disabled the charge's detonator herself at the fence line before dawn.",
+            "Once Mei surfaces voluntarily, Detective Chen's team confirms the intrusion's origin and terminates the remaining access to the sedan's systems."
+          ],
+          "character_knowledge": {
+            "MARCUS_KANE": {
+              "knows": [
+                "He has been trapped in a hijacked vehicle all night with a stranger's voice controlling everything.",
+                "He now sees the hacker's face for the first time and does not recognize her — until she names the report he signed."
+              ],
+              "hides": [
+                "He briefly considers lying about the report even now, out of a decade-old habit of protecting himself first."
+              ],
+              "believes_falsely": [
+                "Until this episode, he assumed the voice was some rival of Elias's, with no connection to the collapse itself."
+              ]
+            },
+            "ELIAS_VANCE": {
+              "knows": [
+                "He is being forced to confront a version of himself he paid heavily, years ago, to bury.",
+                "He recognizes the demolition charge's origin as Vance Development salvage the moment he sees it on screen."
+              ],
+              "hides": [
+                "He still hopes, even now, that exposure can be managed the way the original collapse was — with money and lawyers."
+              ],
+              "believes_falsely": [
+                "He believed the settlements had permanently closed every file connected to Harrow; he has no idea a vault of originals survived."
+              ]
+            },
+            "CIPHER": {
+              "knows": [
+                "Every falsified detail of the Harrow certification, and exactly what leverage each man in the sedan fears losing most.",
+                "That her father is standing at the fence and will hear whatever she says next."
+              ],
+              "hides": [
+                "Until her father speaks, she conceals that the charge was never meant to hurt anyone — she needed both men to believe their lives were at stake."
+              ],
+              "believes_falsely": [
+                "She believed destroying the vault physically was the only way anyone would ever believe her; she has not considered that exposure without violence could work just as well until her father asks her to try."
+              ]
+            },
+            "DET_LEO_CHEN": {
+              "knows": [
+                "The intrusion's final relay traces to a location near Harrow Warehouse.",
+                "The sedan's systems are still live and under external control as his team approaches."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "He expects, right up until arrival, that he is chasing a criminal extortion ring, not a single grieving engineer."
+              ]
+            },
+            "DELIA_REYES": {
+              "knows": [
+                "Marcus's GPS ping has led directly to the one ruin he has never once mentioned to her in ten years of friendship.",
+                "She is riding into whatever this is against her supervisor's direct order."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "She still half-believes, until she sees his face at the fence, that Marcus is purely a victim tonight and nothing more."
+              ]
+            },
+            "WEI_SU": {
+              "knows": [
+                "The voice controlling the sedan belongs to his daughter, alive, the moment he hears it through the open window.",
+                "He recognizes the demolition charge for what it represents — the vault he always suspected was sealed inside the collapsed wing."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "He believed Mei had simply vanished out of grief; he never imagined she had spent a decade building the exact skills needed to do this."
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Harrow Reckoning",
+          "solution": "Ten years ago, Elias Vance ordered the retrofit of Harrow Warehouse's east wing completed two weeks ahead of its engineered schedule to meet a redevelopment deadline. Marcus Kane, then site foreman, was pressured by Elias's site manager into signing a false safety certification despite being shown photographs of structural cracking, in exchange for a payoff he used to cover his sister's medical bills. Wei Su, the night watchman, had filed written warnings about the cracking three weeks before the collapse; those warnings were buried before reaching city inspectors. The east wing came down during a night shift, killing three workers, including Wei Su's son Danny, an apprentice electrician. Vance Development quietly settled with the families under non-disclosure agreements within six months, and the official inquiry blamed worker error, implicitly discrediting Wei Su for not escalating further. Marcus left construction entirely and became a chauffeur to disappear; Wei Su took the settlement to survive and has kept vigil at the ruin ever since, never telling his surviving daughter Mei the details of what he signed away in silence.",
+          "objective_facts": [
+            "Vance Development ordered the Harrow east wing retrofit completed two weeks ahead of its original engineering timeline.",
+            "Marcus Kane signed the final safety certification after being shown photographs of structural cracking in the wing.",
+            "Wei Su's written warnings, filed three weeks before the collapse, never reached city inspectors.",
+            "Three workers died in the collapse, including Danny Su, an apprentice electrician and Wei Su's son.",
+            "Vance Development paid settlements to victims' families under non-disclosure agreements within six months of the collapse."
+          ],
+          "character_knowledge": {
+            "MARCUS_KANE": {
+              "knows": [
+                "He signed the false certification for money he needed for his sister's care, and has carried that decision every day since.",
+                "He now says this aloud, in full, for the first time — to Elias, to Mei, and to Wei Su."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "He long believed his silence spared Wei Su's family nothing worse than they'd already suffered; he has never considered that his signature is the one fact Wei Su has spent ten years wanting to hear."
+              ]
+            },
+            "ELIAS_VANCE": {
+              "knows": [
+                "He ordered the schedule that made the collapse possible, and approved the settlements that kept it from ever becoming public.",
+                "He now admits, in front of Wei Su, that the inquiry's finding of worker error was a finding his own lawyers shaped."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "He has told himself for ten years that the settlements were an act of responsibility rather than concealment; tonight is the first time he says the word 'cover-up' about his own decision."
+              ]
+            },
+            "WEI_SU": {
+              "knows": [
+                "His warnings were filed and buried, and his son died three weeks later in the exact spot he'd flagged.",
+                "The settlement he accepted bought his family's survival and his silence in the same signature."
+              ],
+              "hides": [
+                "He has never told Mei precisely how much money he took, or that he suspected Marcus's certification specifically, out of shame."
+              ],
+              "believes_falsely": [
+                "He believed he was the only one who still carried the weight of that night; hearing Marcus's and Elias's admissions in the same hour is the first time he learns how much they, too, have carried."
+              ]
+            },
+            "CIPHER": {
+              "knows": [
+                "Every detail of the falsified certification and the buried warnings, assembled over years from records her father never knew she'd found.",
+                "That her brother's death was preventable by weeks, not chance."
+              ],
+              "hides": [],
+              "believes_falsely": []
+            },
+            "DELIA_REYES": {
+              "knows": [
+                "She learns, for the first time tonight, that Marcus was the foreman who signed off on Harrow — the thing he never once told her in ten years of friendship."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "She had always assumed Marcus's silence about his past was about grief alone; she now has to reconcile the friend she knows with the choice he made."
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Chase",
+          "solution": "Detective Chen's bureau traces the hijacking signal's final relay to a decommissioned Vance Development server still connected to Crestline's fleet network, leading his team to Harrow Warehouse. Delia, informed by Chen, abandons her dispatch post against her supervisor's direct order to ride with his team, arriving at the fence line just as Mei disables the detonator — close enough to see Marcus step out of the sedan, too late to have changed anything that happened inside it.",
+          "objective_facts": [
+            "Chen's bureau traces the intrusion's final relay to Harrow Warehouse roughly twenty minutes before the sedan itself arrives there.",
+            "Delia leaves her dispatch post against direct orders to accompany Chen's team to the site.",
+            "Chen's team reaches the fence line at Harrow Warehouse after Mei Su has already disabled the detonator."
+          ],
+          "character_knowledge": {
+            "DET_LEO_CHEN": {
+              "knows": [
+                "The relay's physical origin and the fastest route to it.",
+                "That his team is arriving after the most dangerous moment, not before it."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "He expects to be the one who stops the threat; he arrives to find it has already been stopped by the person who created it."
+              ]
+            },
+            "DELIA_REYES": {
+              "knows": [
+                "She broke protocol to be here, and would do it again.",
+                "Marcus is alive and walking, and that is the only fact she came for."
+              ],
+              "hides": [],
+              "believes_falsely": []
+            },
+            "MARCUS_KANE": {
+              "knows": [
+                "Delia came for him, against every rule of her job."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "He assumed, all night, that no one outside the sedan would ever know or care what happened to him specifically — he is unprepared for how much Delia clearly does."
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

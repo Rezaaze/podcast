@@ -181,6 +181,43 @@ COMMANDS = {
         "kind": "progress_cr",
         "poll_checkpoints": True,
     },
+    # Cloud-Vertonung: wrappt cloud/render_remote.sh (Upload, Remote-batch.py
+    # gegen 127.0.0.1, Download der Ergebnisse). Bewusst NICHT in
+    # AUTO_TTS_COMMANDS -- die TTS läuft auf der vast.ai-Instanz, das lokale
+    # Pinokio/Qwen3 bleibt aus. "only" rendert eine einzelne Skript-Datei
+    # (podcast_maker statt batch), "stop_after" pausiert die Instanz danach.
+    "pf_render_remote": {
+        "label": "Cloud-Vertonung (vast.ai, render_remote.sh)",
+        "cwd": PF_DIR,
+        "interpreter": lambda: "/bin/bash",
+        "interpreter_args": [],
+        "script": os.path.join("cloud", "render_remote.sh"),
+        "args_schema": [
+            ("positional_required", "series"),
+            ("flag", "only", "--only"),
+            ("boolflag", "stop_after", "--stop-after"),
+        ],
+        "kind": "line",
+    },
+    # Vertont ALLE fehlenden Episoden einer Serie PARALLEL auf mehreren
+    # vast.ai-Instanzen (wellenweise zu je "max_parallel"): wrappt
+    # cloud/render_remote_parallel.sh. Bewusst NICHT in AUTO_TTS_COMMANDS
+    # (kein lokales TTS nötig). "episodes" optional -- ohne das erkennt das
+    # Script selbst, welche Episoden noch keine <Prefix>_FULL_EPISODE.mp3
+    # haben.
+    "pf_render_remote_parallel": {
+        "label": "Cloud-Vertonung parallel (mehrere Instanzen, render_remote_parallel.sh)",
+        "cwd": PF_DIR,
+        "interpreter": lambda: "/bin/bash",
+        "interpreter_args": [],
+        "script": os.path.join("cloud", "render_remote_parallel.sh"),
+        "args_schema": [
+            ("positional_required", "series"),
+            ("flag", "max_parallel", "--max"),
+            ("flag", "episodes", "--episodes"),
+        ],
+        "kind": "line",
+    },
     "pf_batch": {
         "label": "Alle vertonen + Anthologie mergen",
         "cwd": PF_DIR,
@@ -211,15 +248,6 @@ COMMANDS = {
         "args_schema": [
             ("flag", "style", "--style"),
         ],
-        "kind": "line",
-    },
-    "lolfi_regenerate_facades": {
-        "label": "Facades-Hintergrundbilder neu erzeugen",
-        "cwd": LOLFI_DIR,
-        "interpreter": lambda: sys.executable,
-        "script": "regenerate_facades.py",
-        "fixed_args": [],
-        "args_schema": [],
         "kind": "line",
     },
     "pf_character_prompts": {

@@ -352,8 +352,10 @@ findet sie neben der Tonspur im `output/`-Ordner der aktiven Serie:
   werden nicht ins Video gebrannt, sondern beim Upload mitgegeben.
 - **Cover-Art:** `python3 -m fabrik.cli.cover_art` erzeugt einmalig ein
   1024×1024-Serien-Cover via `gpt-image-1-mini` (braucht `OPENAI_API_KEY`,
-  kein Prompts-only-Fallback) und kopiert es standardmäßig zusätzlich auf
-  eine externe Backup-Platte (`--no-copy` zum Abschalten).
+  kein Prompts-only-Fallback) und kopiert es standardmäßig zusätzlich in den
+  Serien-Ordner der externen Backup-Platte
+  (`/Volumes/NO NAME/Podcasts/<Serientitel>/`, wird bei Bedarf angelegt;
+  `--no-copy` zum Abschalten).
 
 Text-Einblendungen laufen über Pillow-gerenderte PNGs + ffmpeg `overlay`
 (das Homebrew-ffmpeg hat keinen drawtext-Filter) — `pip install pillow`

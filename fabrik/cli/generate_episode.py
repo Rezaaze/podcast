@@ -26,7 +26,7 @@ from fabrik.writing import script_writer
 
 
 def _run_episode_subprocess(ep_num: int, series_slug: str, force: bool, no_script_review: bool,
-                            fix_review: bool) -> tuple:
+                            fix_review: bool, beats_ready: bool = False) -> tuple:
     """Führt eine einzelne Episode als separaten Prozess aus (für Parallelisierung)."""
     cmd = [sys.executable, "-m", "fabrik.cli.generate_episode",
            str(ep_num), "--series", series_slug]
@@ -36,6 +36,8 @@ def _run_episode_subprocess(ep_num: int, series_slug: str, force: bool, no_scrip
         cmd.append("--no-script-review")
     if fix_review:
         cmd.append("--fix")
+    if beats_ready:
+        cmd.append("--beats-ready")
     result = subprocess.run(cmd, check=False, cwd=paths.BASE_DIR)
     return ep_num, result.returncode == 0
 
@@ -55,7 +57,13 @@ def main():
     parser.add_argument("--fix", action="store_true",
                         help="Vom Episoden-Review gemeldete Parts automatisch reparieren "
                              "(schreibt nur die betroffenen Parts neu, danach erneuter Review "
-                             "zur Bestätigung) — läuft auch, wenn schon eine REVIEW.txt existiert")
+                             "zur Bestätigung). Eine vorhandene REVIEW.txt wird wiederverwendet: "
+                             "'keine Auffälligkeiten' überspringt den Review komplett, offene "
+                             "Befunde gehen direkt in die Reparatur — kein Re-Review "
+                             "unveränderter Skripte.")
+    # Intern ('all' → Subprocess): Beats wurden vom Elternprozess schon seriell
+    # in Episodenreihenfolge vorgeneriert — nicht löschen/neu generieren, nur laden.
+    parser.add_argument("--beats-ready", action="store_true", help=argparse.SUPPRESS)
     paths.add_series_arg(parser)
     args = parser.parse_args()
 
@@ -81,11 +89,31 @@ def main():
         max_workers = max(1, min(args.jobs, len(episodes)))
         print(f"\nStarte {len(episodes)} Episode(n) mit {max_workers} parallelen Job(s) ...")
 
+        # Beats-Vorlauf: Beats lesen die Beats der VORHERIGEN Episode als
+        # Kontinuitätskontext — unter --jobs>1 wäre die Reihenfolge zufällig
+        # (die dokumentierte Known Limitation). Deshalb hier erst alle
+        # Beat-Sheets seriell in Episodenreihenfolge erzeugen (ein billiger
+        # Call pro Episode), dann die teure Prosa parallel. Ein Fehlschlag
+        # einzelner Beats ist wie bisher nicht fatal (Fallback im Subprocess).
+        beats_ready = False
+        if max_workers > 1 and cfg.get("use_beats") and any(ep.get("case") for ep in episodes):
+            print("\nBeats-Vorlauf: generiere Beat-Sheets seriell in Episodenreihenfolge ...")
+            for idx, ep in enumerate(episodes):
+                if not ep.get("case") or ep.get("source") == "imported":
+                    continue
+                if args.force:
+                    for stale in (series.beats_file(cfg["prefix"], idx + 1),
+                                  series.beats_review_file(cfg["prefix"], idx + 1)):
+                        if os.path.exists(stale):
+                            os.remove(stale)
+                script_writer.generate_beats(series, idx, episodes, False, cfg)
+            beats_ready = True
+
         failed = []
         with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as pool:
             futures = {
                 pool.submit(_run_episode_subprocess, idx + 1, series.slug, args.force,
-                           args.no_script_review, args.fix): idx + 1
+                           args.no_script_review, args.fix, beats_ready): idx + 1
                 for idx in range(len(episodes))
             }
             for future in concurrent.futures.as_completed(futures):
@@ -127,7 +155,7 @@ def main():
 
         ok = script_writer.generate_episode(series, num - 1, template, data, episodes,
                                             args.force, cfg, skip_review=args.no_script_review,
-                                            fix_review=args.fix)
+                                            fix_review=args.fix, beats_pregenerated=args.beats_ready)
         if ok:
             script = os.path.basename(series.script_file(cfg["prefix"], num))
             print(f"\nNächster Schritt: .venv/bin/python -m fabrik.cli.podcast_maker {script}")

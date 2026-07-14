@@ -32,7 +32,7 @@ REQUIRED SCHEMA (follow exactly):
     "words_per_part_max": "number — slightly above the target range's high end"
   },
   "generation": {
-    "model": "claude-sonnet-5"
+    "model": "{{DEFAULT_MODEL}}"
   },
   "audio": {
     "api_url": "http://127.0.0.1:42003",
@@ -79,7 +79,7 @@ REQUIRED SCHEMA (follow exactly):
 SCHEMA RULES:
 - episodes: array of EXACTLY {{EPISODE_COUNT}} episode objects — select the {{EPISODE_COUNT}} strongest, most distinct subjects for the anthology.
 - ALWAYS exactly 4 sections per episode, in this exact fixed order — do not add, remove, merge, or reorder them: (1) Source Comparison, (2) Psychological Deep-Dive, (3) Core Thesis, (4) Ur-Pattern. See FOUR-PART STRUCTURE below.
-- section_styles: exactly 4 entries, one per section
+- section_styles: exactly 4 entries, one per section. NOTE: styles only reach the rendered audio when audio.voice is a BUILT-IN speaker — a cloned voice (like the default "MyVoice") ignores style instructions. Choose them anyway (they take effect the moment a built-in voice is configured), but don't rely on them for meaning.
 - case.solution: required for every episode, 3-6 sentences
 - case.objective_facts: required, at least 4 entries
 - case.character_knowledge: do NOT include this field — this is a solo-narrator format with no character cast

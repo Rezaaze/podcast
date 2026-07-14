@@ -92,6 +92,16 @@
     </div>
     <p class="hint">Ausschalten, wenn die Episoden eigenständig bleiben sollen (z.B. Serien-Formate wie soap_opera) — dann bleibt es bei den einzelnen Episoden-MP3s ohne <code>ANTHOLOGY_COMPLETE.mp3</code>.</p>
     <div class="action-row">
+      <label for="pf-intro-file">🔊 Intro-Jingle (läuft vor jeder Episode):</label>
+      <span class="hint" id="pf-intro-current"></span>
+    </div>
+    <div class="action-row">
+      <input type="file" id="pf-intro-file" accept=".mp3,.wav,.m4a,.flac">
+      <button class="run-btn" id="pf-intro-upload-btn">Hochladen / ersetzen</button>
+      <button class="run-btn" id="pf-intro-remove-btn">Entfernen</button>
+    </div>
+    <p class="hint">Wird direkt vor der Episode eingefügt (<code>assets/intro.*</code> der Serie) — jederzeit hier austauschbar, ohne Skripte oder Vertonung neu anzustoßen.</p>
+    <div class="action-row">
       <label><input type="checkbox" id="pf-use-beats"> Beat-Schicht: vor dem Dialog erst Szenen-Beats planen (<code>generation.use_beats</code>)</label>
     </div>
     <p class="hint">Nur bei case-basierten Templates (crime_drama/soap_opera) wirksam: plant pro Folge in einem Klartext-Durchgang, was in jeder Szene passiert (inkl. Wissens-Verstoß-Prüfung auf den Beats), bevor der eigentliche Dialog geschrieben wird — schließt die Kontinuitätslücke zwischen Sections. Siehe <code>docs/beat-layer-design.md</code>.</p>
@@ -110,17 +120,33 @@
         <button class="run-btn" data-command="pf_generate_episode" data-param-episode="pf-episode-n" data-param-fix="pf-fix-review">Nur diese Episode generieren</button>
       </div>
       <div class="action-row">
+        <label for="pf-render-target">Vertonen auf:</label>
+        <select id="pf-render-target">
+          <option value="local" selected>Lokal (Mac, Pinokio/Qwen3)</option>
+          <option value="cloud">Cloud-GPU (vast.ai RTX 5090)</option>
+        </select>
+        <label id="pf-cloud-stop-after-label" hidden><input type="checkbox" id="pf-cloud-stop-after" checked> Instanz danach pausieren</label>
+      </div>
+      <p class="hint" id="pf-cloud-hint" hidden>Cloud: holt automatisch eine Instanz aus dem Pool (<code>cloud/.instance_pool</code>), lädt Skripte + Referenz-Audio hoch, rendert komplett auf der Instanz und holt die fertigen Episoden zurück. Voraussetzung: <code>audio.backend: "gradio"</code> in der episodes.json der Serie. Abbrechen stoppt nur die Übertragung — der Remote-Lauf ist resumable (erneut starten überspringt Fertiges).</p>
+      <div class="action-row">
         <input type="text" id="pf-script-file" placeholder="figur1.txt">
         <button class="run-btn" data-command="pf_podcast_maker" data-param-input_file="pf-script-file">Nur diese Episode vertonen</button>
         <button class="run-btn" data-command="pf_batch">Alle vertonen + mergen</button>
       </div>
-      <p class="hint">Qwen3-TTS (Pinokio) wird für die Vertonung automatisch gestartet und danach wieder komplett beendet.
+      <p class="hint">Lokal: Qwen3-TTS (Pinokio) wird für die Vertonung automatisch gestartet und danach wieder komplett beendet. Der große Button oben („Alles generieren + vertonen") vertont immer lokal.
         <span id="tts-inline-status"></span>
       </p>
       <div class="action-row">
         <button class="run-btn" data-command="pf_tts_start">TTS manuell starten</button>
         <button class="run-btn" data-command="pf_tts_stop">TTS manuell stoppen</button>
       </div>
+      <hr>
+      <div class="action-row">
+        <label for="pf-cloud-max-parallel">Max. parallele Cloud-Instanzen:</label>
+        <input type="number" id="pf-cloud-max-parallel" value="3" min="1" max="8" style="width:5em">
+        <button class="run-btn" data-command="pf_render_remote_parallel" data-param-max_parallel="pf-cloud-max-parallel">☁︎ Fehlende Episoden parallel in der Cloud vertonen</button>
+      </div>
+      <p class="hint">Erkennt automatisch, welche Episoden noch keine fertige MP3 haben, und rendert bis zu N davon GLEICHZEITIG auf N vast.ai-Instanzen (wellenweise, falls mehr Episoden fehlen als N). Nutzt zuerst die Pool-Instanz(en), mietet fehlende Slots dazu (bevorzugt bekannt zuverlässige Hosts) und löscht diese Ad-hoc-Instanzen danach wieder — nur die dauerhafte Pool-Instanz wird pausiert statt gelöscht. Kostet etwa gleich viele GPU-Minuten wie nacheinander, nur auf kürzere Wanduhrzeit verteilt.</p>
     </details>
   </div>
 
@@ -256,19 +282,6 @@
       <button class="folder-btn" data-key="lolfi_sfx_baseline">📁 sfx/baseline (Umgebungsgeräusche)</button>
       <button class="folder-btn" data-key="lolfi_sfx_variations">📁 sfx/variations (Ereignis-SFX)</button>
       <button class="folder-btn" data-key="lolfi_video_overlays">📁 video/overlays (Screen-Blend-Video)</button>
-    </div>
-  </div>
-
-  <div class="step">
-    <div class="step-head">
-      <h2>🏛 Facades-Hintergrundbilder</h2>
-    </div>
-    <p class="hint">Erzeugt die 4 festen Standard-Szenen der Serie "Facades" (Arbeitszimmer, Bootssteg,
-      Wintergarten, Bibliothek — siehe <code>prompts/FACADES_STANDARD_SCENES.md</code>) aus den bereits
-      vorhandenen Bild-Prompts neu. Überschreibt <code>images/facades_*.png</code>, ohne die Szenen-Konzepte
-      selbst zu verändern.</p>
-    <div class="action-row">
-      <button class="run-btn" data-command="lolfi_regenerate_facades">Facades-Bilder neu erzeugen</button>
     </div>
   </div>
 

@@ -1,0 +1,933 @@
+--- PART 1 ---
+
+[NARRATOR]
+Previously: Detective Park found a season's worth of Reid's silences finally reaching a shape she could name, and gave voice to it. Mia Reid, done waiting for the man she married to come back on his own, gave her husband an ultimatum instead of another night of quiet. Into that pressure, from both sides at once, came a final envelope — and this one wasn't a riddle.
+
+[NARRATOR]
+Riverside Overlook, past midnight. Marcus Reid stands alone at his car, envelope open under a streetlamp.
+
+[SFX: river water against embankment, distant]
+
+[REID | style: quiet, unsettled]
+No numbers. No wordplay.
+
+[REID | style: reading aloud, low]
+"Marcus. Old Textile Mill. Tomorrow, nine o'clock. Come alone. I'll be waiting."
+
+[SFX: paper folding]
+
+[REID | style: to himself, flat]
+Every other one made me work for it.
+
+[REID | style: quieter, unsettled]
+This one just — asked.
+
+[NARRATOR]
+He checks the address against the case boards in his head — streets, warehouses, dead drops the task force already cleared.
+
+[REID | style: certain, low]
+Nowhere we've looked. Nowhere anyone's looked.
+
+[SFX: car door, distant]
+
+[REID | style: resolved, quiet]
+Then it's mine to answer.
+
+[REID | style: barely audible]
+Not the department's. Mine.
+
+--- PART 2 ---
+
+[NARRATOR]
+The Reid apartment, minutes later, the same night. Marcus Reid crosses the living room toward the door — his wife, Mia, a schoolteacher who has spent the season watching him disappear into this case, is already standing in front of it.
+
+[SFX: keys jangling]
+
+[REID | style: rushed, distracted]
+I have to go. I'll call you when I—
+
+[MIA_REID | style: quiet, immovable]
+Don't.
+
+[REID | style: caught off guard]
+Mia.
+
+[MIA_REID | style: flat, final]
+If you open that door right now, for this, there's nothing on the other side of it for you to come back to. I need you to hear that as a fact, not a threat.
+
+[SFX: rain against window]
+
+[REID | style: starting to explain]
+It's not — this isn't like the others. It's an address. It's specific, it's—
+
+[MIA_REID | style: cutting him off, calm]
+I don't need to understand it anymore, Marcus. I gave that up somewhere around the second letter. I just need to know one thing.
+
+[REID | style: quiet]
+What.
+
+[MIA_REID | style: steady]
+Whether you're still going to choose it. Right now. With me standing here.
+
+[SFX: clock ticking]
+
+[NARRATOR]
+Reid doesn't answer. He doesn't move toward the door, and he doesn't move away from it either.
+
+[REID | style: low, almost to himself]
+If I don't go tonight, it doesn't stop. It just — waits. For the next one, or for me to stop looking at all.
+
+[MIA_REID | style: something breaking quietly beneath the calm]
+That's not a no.
+
+[REID | style: barely audible]
+Mia—
+
+[MIA_REID | style: gentle, devastating]
+You don't have to say it. I watched you decide already. About four sentences ago.
+
+[SFX: distant siren, fading]
+
+[NARRATOR]
+He picks up his keys from the table where he set them down without noticing.
+
+[REID | style: guarded, unable to look at her]
+I'll make this right. After.
+
+[MIA_REID | style: no anger left in it, just certainty]
+I'm not going to be the thing waiting for you to have time for, Marcus. Not anymore.
+
+[NARRATOR]
+She doesn't cry. She doesn't raise her voice. She simply steps aside from the door, which is its own kind of answer.
+
+[REID | style: quiet, unsteady]
+I have to.
+
+[MIA_REID | style: already somewhere past this moment]
+I know.
+
+[SFX: door opening, footsteps]
+
+[NARRATOR]
+He goes. She stays exactly where she's standing, listening to the door close behind him.
+
+[SFX: door closing, silence]
+
+--- PART 3 ---
+
+[NARRATOR]
+Courthouse steps, midmorning. Joy Chen, paralegal and older sister of Daniel Chen, stands before a bank of microphones ahead of the hearing that could clear her brother's name.
+
+[SFX: crowd murmur, camera shutters]
+
+[JOY_CHEN | style: rehearsed calm, edges fraying]
+Six months ago, my brother was arrested on evidence that wouldn't have survived a first-year law student's cross-examination. A torn ticket stub. A shift log with a typo in it. That's what took a man's freedom.
+
+[SFX: camera shutters, faster]
+
+[JOY_CHEN | style: steady, deliberate]
+Today I can tell you something new. There was information — timeline information — that existed months before my brother ever entered a plea. Information that could have cleared him then. It didn't reach the people who needed it. Or it reached them and sat on someone's desk.
+
+[SFX: crowd murmur rising, overlapping questions]
+
+[NARRATOR]
+The questions come fast, overlapping, reporters pressing for a name, a department, an accusation she hasn't made yet.
+
+[JOY_CHEN | style: measured, refusing to be rushed]
+I know what you want me to say. I'm not going to say it standing here. I don't have a name for you, and I'm not going to hand you a guess dressed up as one.
+
+[JOY_CHEN | style: harder, controlled]
+What I have is a hearing, three days from now, where that information gets read into the record. Whoever sat on it will answer for it there. Not on these steps.
+
+[SFX: shutters, one voice cutting through the noise]
+
+[NARRATOR]
+A reporter near the front asks whether she believes it was deliberate, or simply department incompetence.
+
+[JOY_CHEN | style: quiet, weighing the word before she says it]
+I've spent six months being told it was incompetence. Timing that clean stops looking like an accident.
+
+[SFX: crowd murmur, subdued]
+
+[JOY_CHEN | style: barely holding composure, then steadying]
+My brother tried to end his life in a cell because no one would look at what I kept telling them to look at. I have waited a long time to not be the only person in a room who believes him. Three days. That's all I'm asking anyone to give me now.
+
+[NARRATOR]
+She steps back from the microphones without waiting for the next question, the first crack of daylight in a fight she has fought publicly, and mostly alone, for months.
+
+--- PART 4 ---
+
+[NARRATOR]
+Precinct Bullpen, mid-morning. Captain Hollis stands before the department's oversight review, called to account for how long Daniel Chen was held on evidence that was always thin.
+
+[CAPTAIN_HOLLIS | style: measured, procedural]
+The decision to continue holding Mr. Chen was based on corroborating physical evidence available at the time — a ticket stub, a shift-log discrepancy. Those are matters of record. I stand by the process that produced them.
+
+[CAPTAIN_HOLLIS | style: same, controlled | speed: 0.95]
+Was it thin. In hindsight, yes. In the moment, it was what we had, and we were under considerable pressure to produce results.
+
+[CAPTAIN_HOLLIS | style: guarded, choosing words carefully]
+Detective Reid's caseload was extensive this season. I made judgment calls about where to direct limited resources. That's a captain's job. I won't apologize for doing it.
+
+[SFX: papers shuffling, a chair creaking]
+
+[CAPTAIN_HOLLIS | style: tighter now, less rehearsed]
+I'm aware of Ms. Chen's press conference this morning. I heard about it walking in the door. I understand the timing looks poor from where you're sitting.
+
+[CAPTAIN_HOLLIS | style: pausing, recalculating | speed: 0.9]
+No — I'm not going to characterize what internal doubts were or weren't raised about the case against Mr. Chen. That's a mischaracterization of how these things get weighed in real time.
+
+[NARRATOR]
+A folder passes down the panel table. Hollis doesn't reach for it.
+
+[CAPTAIN_HOLLIS | style: flat, holding the line]
+If Detective Park's inquiry produces something concrete, I'll answer to it when it's in front of me. I'm not in the business of answering hypotheticals.
+
+[CAPTAIN_HOLLIS | style: quieter, the first crack | speed: 0.9]
+Look. I gave latitude where I believed it was warranted. That's the job. Whether every one of those calls holds up — I can't promise you that. I can tell you I made them in good faith.
+
+[SFX: a long pause, clock ticking faintly]
+
+[CAPTAIN_HOLLIS | style: barely controlled now]
+I'd ask the panel to reserve final judgment until the record is complete. There may be more coming today than any of us in this room currently has in hand.
+
+[NARRATOR]
+He says it evenly. But for the first time since he sat down, Captain Hollis doesn't know exactly what that record is about to say.
+
+--- PART 5 ---
+
+[NARRATOR]
+Downtown diner, the same booth the squad has used for a decade. Late afternoon light through blinds. Det. Park is already seated when Reid arrives, coat still on, keys in hand.
+
+[DET_PARK | style: measured, controlled]
+Sit down, Marcus.
+
+[REID | style: clipped, already moving]
+I don't have time for coffee, Sarah.
+
+[DET_PARK | style: flat, unmoved]
+Sit down anyway.
+
+[SFX: chair scraping, diner ambience — low chatter, clinking cups]
+
+[NARRATOR]
+Reid sits, but doesn't take off his coat.
+
+[DET_PARK | style: quiet, precise]
+You got a drop this morning. No riddle this time. An address. A time. Your first name.
+
+[REID | style: guarded]
+How do you know that.
+
+[DET_PARK | style: even, unhurried]
+Because I've been reading every one of these things since the first week, looking for the shape of a pattern. This one doesn't have one. It's not a puzzle anymore. It's a door held open.
+
+[REID | style: tight, deflecting]
+It's a lead. I follow leads.
+
+[DET_PARK | style: sharper now]
+You follow leads with a partner and a warrant, Marcus. Not alone, off the board, at an address that isn't on any map we've built in nine months.
+
+[SFX: cup set down on saucer]
+
+[REID | style: low, tired]
+This is mine to finish.
+
+[DET_PARK | style: steady, not backing off]
+That's the line. That's the exact line you've used every time you cut me out since Chen's arraignment. I let it go then. I'm not letting it go now.
+
+[REID | style: frustrated, quieter]
+Sarah—
+
+[DET_PARK | style: cutting him off, firm]
+I'm not asking permission to come, and I'm not offering to back you up on a case. I'm telling you I'm not letting you do this one alone. Not this. Not tonight.
+
+[NARRATOR]
+A long silence. Reid looks at her the way a man looks at a door he already knows he isn't going to lock.
+
+[REID | style: hollow, almost to himself]
+You don't know what's waiting there.
+
+[DET_PARK | style: quiet, unwavering]
+Neither do you. That's the point.
+
+[SFX: distant siren passing outside]
+
+[REID | style: worn down, no fight left in it]
+I'm not going to argue with you about this.
+
+[DET_PARK | style: level]
+Good. Because I already decided. I'm driving separately. I'll be there before you finish parking.
+
+[NARRATOR]
+Reid doesn't answer. He stands, drops a few bills on the table, and walks toward the door. Park watches him go, then rises to follow — not asking again, not needing to.
+
+[SFX: diner door chime]
+
+[NARRATOR]
+Neither says the word alone again. It no longer applies, though neither of them yet knows if that will be enough.
+
+--- PART 6 ---
+
+[NARRATOR]
+The Old Textile Mill, past midnight. The Cipher Killings thread returns — Reid alone, following the address to its end.
+
+[SFX: heavy metal door creaking open]
+
+[REID | style: quiet, wary]
+Hello?
+
+[SFX: footsteps echoing on concrete]
+
+[NARRATOR]
+No one answers. What Reid finds instead is arranged — tableaux he's seen only in evidence photos, now assembled together under work lights, each one facing inward toward a single gap in the center of the floor.
+
+[REID | style: low, to himself]
+Six. There were only ever six.
+
+[REID | style: barely audible]
+This makes seven.
+
+[SFX: wind moving through broken windows]
+
+[NARRATOR]
+The seventh space holds nothing. Cleared floor, a lit stand, room enough for exactly one thing — or one person.
+
+[REID | style: unsettled, working it out loud]
+Everything else in this room points here.
+
+[REID | style: quieter, uneasy]
+It's not finished. It's waiting.
+
+[NARRATOR]
+He steps closer, turning slowly, reading details he hadn't expected to recognize — not from the case files, but from his own habits. A specific brand of coffee cup. The exact angle Mia keeps a photograph on their mantel. A torn scrap of paper folded the way he folds his own case notes.
+
+[REID | style: shaken, trying to hold steady]
+That's not from the murder books.
+
+[REID | style: harder, refusing the thought]
+That's mine.
+
+[SFX: distant car door closing]
+
+[NARRATOR]
+Footsteps outside — a second set, deliberate, careful. Park has followed him after all.
+
+[SFX: door hinge creak, softer]
+
+[DET_PARK | style: tense, scanning the room]
+Reid.
+
+[REID | style: guarded, not turning fully]
+You shouldn't be here.
+
+[DET_PARK | style: flat, refusing the deflection]
+Neither should you. Not alone.
+
+[NARRATOR]
+She takes in the tableaux, the lit stand, the gap built into the center of it all — the same wrongness settling over her that's already sitting in him.
+
+[DET_PARK | style: careful, quiet]
+Marcus. What is this supposed to be.
+
+[REID | style: distant, not really answering her]
+I don't know yet.
+
+[NARRATOR]
+But something in the way he says it makes clear he already suspects — even if he isn't ready to say the shape of it out loud.
+
+--- PART 7 ---
+
+[NARRATOR]
+Same building, a different hour of the same night. While Reid crosses the gallery floor, Park works the mill's outer rooms alone, checking seams in the wall the first sweep never flagged.
+
+[SFX: footsteps on concrete, distant machinery hum]
+
+[NARRATOR]
+Behind a false panel in the old office wing, she finds a door that isn't on any blueprint of this building.
+
+[DET_PARK | style: cautious, low voice | speed: 0.9]
+That's not load-bearing. That's not anything.
+
+[SFX: metal panel sliding, hinge creak]
+
+[DET_PARK | style: alert, quiet]
+Reid — if you can hear me, I've got something back here.
+
+[NARRATOR]
+No answer comes back through the walls. She goes in alone.
+
+[DET_PARK | style: hushed, tense]
+Desk. Chair. A lamp that still works.
+
+[SFX: lamp switch click]
+
+[DET_PARK | style: careful, reading tone]
+"Property of no one. Read by exactly one person, at exactly the right hour."
+
+[DET_PARK | style: unsettled | speed: 0.85]
+He knew someone would find this room. He wanted someone to.
+
+[NARRATOR]
+She opens the journal to its earliest pages.
+
+[DET_PARK | style: flat, reading]
+Dates. Four months before the first letter went out. A name I know better than my own.
+
+[DET_PARK | style: quiet dread]
+"Reid. Closure rate, eleven points above division average. Married four years. Wife teaches at—"
+
+[DET_PARK | style: barely controlled]
+Stop. Just — stop and read it straight.
+
+[SFX: pages turning]
+
+[NARRATOR]
+Further in, the entries change tense, more recent, closer to now.
+
+[DET_PARK | style: low, disbelieving]
+This isn't a suspect's file on his own case. This is homework. On him. Before any of this started.
+
+[DET_PARK | style: hardening]
+Every case he ever closed fast, cited here like a résumé. Like Reid was being interviewed for something and never knew it.
+
+[DET_PARK | style: shaken]
+Everything since the second cipher — the hours, the silences, the corners he started cutting — I thought I was watching a man come apart.
+
+[DET_PARK | style: near whisper]
+What if I was watching one get built.
+
+[NARRATOR]
+She should call this in. She doesn't, not yet.
+
+[DET_PARK | style: resolve settling under fear]
+He wasn't hiding this from us forever. Only until tonight. Which means whatever's happening past these walls right now, it was always meant to land on this room.
+
+[NARRATOR]
+She turns another page, closer now to the last entries written, and keeps reading — alone, one lamp lit, while somewhere beyond the wall, the night keeps moving without her.
+
+--- PART 8 ---
+
+[NARRATOR]
+The gallery floor at the Old Textile Mill, night. Reid stands alone among the finished tableaux. From the shadows past the empty space, the Curator steps forward.
+
+[SFX: footsteps on concrete, unhurried]
+
+[THE_CURATOR | style: calm, almost warm]
+You came faster than I expected, Marcus. May I call you that. I think, after everything, I've earned it.
+
+[REID | style: guarded, weapon-ready]
+Hands where I can see them. Now.
+
+[THE_CURATOR | style: unbothered]
+They're empty. They've been empty this whole time. I didn't build tonight around a struggle.
+
+[SFX: distant machinery creak]
+
+[REID | style: tight]
+What did you build it around.
+
+[THE_CURATOR | style: measured, almost tender]
+You. Not tonight — always. From the first week I started reading you, long before you knew my name existed. Your case files. The shape of your marriage. The exact temperature of your temper. I wasn't hunting a detective who could catch me, Marcus. I was looking for one I could raise.
+
+[REID | style: flat, refusing it]
+I caught you. I'm standing here and you're not running.
+
+[THE_CURATOR | style: gentle correction]
+You're standing exactly where I needed you to stand. That's a different thing than catching.
+
+[SFX: wind through broken window]
+
+[REID | style: low, dangerous]
+Careful.
+
+[THE_CURATOR | style: patient]
+The Chen boy. You remember your first real doubt about him — that flicker, before you buried it to keep your hands free for me. That wasn't an accident of the investigation. That was a lesson. I needed to know you'd let instinct outrun procedure when it mattered enough to you. You passed. Beautifully, actually.
+
+[REID | style: shaken, pushing through it]
+You're saying you ruined a man's life to test me.
+
+[THE_CURATOR | style: without apology]
+I'm saying I taught you something you were already capable of learning. I only chose the classroom.
+
+[REID | style: harder, gripping control]
+I'm still the one holding the gun.
+
+[THE_CURATOR | style: soft, certain]
+Yes. You are. That was always the point, Marcus — not to be caught by you. To be finished by you. There's a difference, and by morning you'll understand it better than I do.
+
+[SFX: single drip of water echoing]
+
+[REID | style: quiet, furious at himself]
+You don't get to decide what I am.
+
+[THE_CURATOR | style: almost kind]
+I already did. Months ago. Tonight is only where you find out.
+
+--- PART 9 ---
+
+[NARRATOR]
+The Old Textile Mill, the empty space at the gallery's center. The Curator steps into it.
+
+[THE_CURATOR | style: calm, almost tender]
+This is where it goes, Marcus. Not the letters. Not the ciphers. This.
+
+[SFX: footsteps on concrete, slow]
+
+[THE_CURATOR | style: unhurried]
+No warrant tonight. No radio call. Just the two of us, finishing what was always yours to finish.
+
+[REID | style: low, torn]
+I could still take you in.
+
+[THE_CURATOR | style: quiet certainty]
+You could. That's the whole point. You could, and you won't.
+
+[SFX: a held breath, silence stretching]
+
+[REID | style: barely audible]
+This is my choice.
+
+[THE_CURATOR | style: gentle, final]
+Yes. Say that again when it's done.
+
+[SFX: a single decisive movement, cloth or metal]
+
+[NARRATOR]
+A moment passes. Then another.
+
+[REID | style: hollow, drained of triumph]
+It's done.
+
+[SFX: distant mill wind through broken windows]
+
+[NARRATOR]
+Elsewhere in the mill, in a room no one has searched, a door long painted shut gives way under Park's hand.
+
+--- PART 10 ---
+
+[NARRATOR]
+The hidden study beneath the mill's east wing, minutes after the confrontation began elsewhere. Detective Park, alone, the journal open in her hands.
+
+[SFX: page turning, distant]
+
+[DET_PARK | style: quiet, reading to herself | speed: 0.9]
+"Four months. Four months before the first letter, and I already knew which detective I wanted."
+
+[DET_PARK | style: unsettled, slower]
+He's not talking about the case. He's talking about picking someone.
+
+[SFX: wind through broken windows, low]
+
+[DET_PARK | style: reading, careful, deliberate]
+"Reid will not be told. Reid must arrive at it himself, the way a student arrives at the answer he was always going to be led to. That is the only kind of ending that holds."
+
+[DET_PARK | style: barely audible]
+The necessary hand.
+
+[DET_PARK | style: still, cold realization | speed: 0.85]
+He wrote that. He wrote 'the necessary hand' before Marcus ever opened a file on him.
+
+[SFX: journal pages riffling, stopping]
+
+[DET_PARK | style: to herself, unraveling]
+Every report I filed. Every night I told myself I was just watching him get tired. That wasn't him breaking. That was—
+
+[DET_PARK | style: quiet, disbelieving]
+—that was on schedule.
+
+[SFX: a distant, muffled sound, mill structure settling]
+
+[DET_PARK | style: reading again, flatter, forcing steadiness]
+"The Chen boy was never meant to be caught for long. A page turned, no more, to teach my detective that instinct outruns permission. He will use that lesson again before the end, and not know where he learned it."
+
+[DET_PARK | style: shaken]
+Joy Chen's brother. A lesson. Not a mistake — a lesson, aimed at Marcus.
+
+[SFX: her hand pressing flat against the desk, wood creak]
+
+[DET_PARK | style: low, almost pleading with the page]
+Tell me you're wrong about him. Tell me there's a version where he walks away from whatever's happening right now.
+
+[SFX: page turning, final]
+
+[DET_PARK | style: reading, quieter than before]
+"When it is finished, he will believe the choice was his alone. That belief is the last brushstroke. I will not correct him. No one should."
+
+[DET_PARK | style: very still, the weight landing]
+He's not down there hunting a killer.
+
+[DET_PARK | style: barely a whisper]
+He's finishing a painting somebody else already signed.
+
+[SFX: journal closing, soft thud]
+
+[NARRATOR]
+Elsewhere in the mill, at the same hour, the gallery Reid stands in is already complete.
+
+--- PART 11 ---
+
+[NARRATOR]
+The precinct bullpen, same night. The thread turns back to Daniel Chen — Det. Park has returned from the mill with what she found there, and laid it in front of Captain Hollis.
+
+[CAPTAIN_HOLLIS | style: guarded, reading]
+Walk me through it again. Slowly.
+
+[DET_PARK | style: flat, controlled]
+Ticket stub, shift log — both planted after the news ran that profile on Daniel's route. Not before. After. Whoever did this needed his routine public first.
+
+[SFX: paper pages turning]
+
+[CAPTAIN_HOLLIS | style: low]
+So the timeline we built the case on—
+
+[DET_PARK | style: cutting in, even]
+Was backwards. His only real connection to any of it was a night shift that happened to pass two drop sites. That's it. That's the whole case.
+
+[CAPTAIN_HOLLIS | style: quiet, absorbing it]
+And the journal.
+
+[DET_PARK | style: reading aloud, careful]
+"A page turned to buy time."
+
+[SFX: room fan hum, distant phone ringing unanswered]
+
+[DET_PARK | style: steady]
+He wasn't a suspect, Captain. He was never a suspect. He was a delay somebody built into the investigation on purpose.
+
+[CAPTAIN_HOLLIS | style: tight]
+Delay for what.
+
+[DET_PARK | style: measured, withholding]
+I don't know yet. But it worked. Weeks in a cell, a hearing that almost went to trial — over evidence that didn't exist until a newspaper printed his commute.
+
+[SFX: chair creak]
+
+[CAPTAIN_HOLLIS | style: quiet, cornered]
+I signed off on continuing that pursuit.
+
+[DET_PARK | style: level, not letting him off]
+I know.
+
+[CAPTAIN_HOLLIS | style: forcing composure]
+After Reid raised doubts.
+
+[DET_PARK | style: watching him]
+I know that too, Captain.
+
+[SFX: silence, held a beat too long]
+
+[CAPTAIN_HOLLIS | style: quiet, almost to himself]
+There's no version of this where I say I made a defensible call.
+
+[DET_PARK | style: not unkind, but final]
+No. There isn't.
+
+[NARRATOR]
+Neither says the name Arthur Lin. Neither yet asks why a killer would spend a season manufacturing a delay this precise, or who it was truly built to slow down.
+
+[CAPTAIN_HOLLIS | style: heavy, standing]
+Get this to the DA tonight. Chen walks — however fast we can make that happen.
+
+[DET_PARK | style: already moving]
+It's already on its way to the courthouse.
+
+[SFX: door swinging open, hallway noise rushing in]
+
+[NARRATOR]
+Outside, the truth is already crossing the plaza — toward the one person who has been waiting months to hear it.
+
+--- PART 12 ---
+
+[NARRATOR]
+Courthouse steps, minutes later. Word has just reached Joy Chen outside the hearing room, before the cameras can catch her reaction.
+
+[JOY_CHEN | style: breath caught, disbelief]
+Say that again. Say it slower.
+
+[NARRATOR]
+A clerk repeats it — the charges against Daniel Chen, withdrawn. A journal, recovered evidence, confirmed today.
+
+[JOY_CHEN | style: quiet, unsteady]
+Withdrawn. Not — postponed. Not "pending further review."
+
+[NARRATOR]
+The clerk confirms it a second time. Joy doesn't move for a long moment.
+
+[SFX: distant courthouse chatter, camera shutters]
+
+[JOY_CHEN | style: hollow, barely audible]
+Eleven months. He tried to die in a cell eleven months ago, and it took someone else's confession to a completely different crime to end it.
+
+[NARRATOR]
+Reporters press forward, shouting for a statement, for names, for who's to blame.
+
+[JOY_CHEN | style: controlled, done performing outrage | speed: 0.9]
+Daniel Chen is cleared. That's the only sentence I have for you today.
+
+[NARRATOR]
+A voice from the crowd asks whether she'll pursue the department for damages.
+
+[JOY_CHEN | style: flat, exhausted]
+Ask me that next week. Today I'm going to go tell my brother he can stop waiting.
+
+[NARRATOR]
+She steps back from the microphones, past photographers still calling her name, toward the courthouse doors and away from them.
+
+[JOY_CHEN | style: to herself, almost inaudible]
+No one's going to hand me why. Just — that it's over.
+
+[NARRATOR]
+She doesn't yet know the shape of what freed her brother — only that after a year of being disbelieved, the truth arrived anyway, from somewhere she never thought to look.
+
+[SFX: heavy courthouse door closing, muffling the crowd behind her]
+
+--- PART 13 ---
+
+[NARRATOR | style: terse, neutral]
+The precinct bullpen, past midnight. Cipher Killings thread. Captain Hollis, alone at his desk, the oversight hearing behind him and the mill's report not yet fully written.
+
+[SFX: empty bullpen ambience, distant phone ringing unanswered]
+
+[CAPTAIN_HOLLIS | style: quiet, worn]
+Four months. I gave him four months of looking the other way.
+
+[SFX: file folder set down on desk]
+
+[CAPTAIN_HOLLIS | style: talking himself through it, low]
+The Chen boy's shift log. Reid came to me with doubts and I told him to keep his head down and keep working the ciphers. I told myself that was leadership.
+
+[SFX: chair creaking]
+
+[CAPTAIN_HOLLIS | style: bitter, self-aware]
+It wasn't leadership. It was convenient.
+
+[NARRATOR | style: neutral]
+A knock. A junior officer leans in.
+
+[DET_PARK | style: careful, formal, exhausted]
+Captain. The mill report's in from the scene techs. And — the journal transcript Park sent over. Full copy, like you asked.
+
+[CAPTAIN_HOLLIS | style: flat]
+Leave it.
+
+[SFX: door closing softly]
+
+[NARRATOR | style: neutral]
+Alone again, Hollis opens the folder.
+
+[CAPTAIN_HOLLIS | style: reading aloud, slow, disbelieving]
+"The necessary hand." He wrote that four months before the first body. Before I ever waived a single form for Reid.
+
+[SFX: pages turning]
+
+[CAPTAIN_HOLLIS | style: hollow]
+I thought I was protecting my best detective from a system that moves too slow. I thought the slack I gave him was mine to give.
+
+[CAPTAIN_HOLLIS | style: harder, quieter]
+It wasn't slack. It was room. Room for something else to grow in.
+
+[NARRATOR | style: neutral]
+He sets the transcript down beside the oversight panel's questions, still unanswered on a legal pad.
+
+[CAPTAIN_HOLLIS | style: to himself, almost a confession]
+I can't tell them I didn't know how far I'd let it go. I knew. I just never let myself price it.
+
+[CAPTAIN_HOLLIS | style: bleak, steady]
+Daniel Chen priced it first. Weeks in a cell for evidence I let sit unquestioned so Reid could keep chasing his ghost. That's not a footnote. That's what my judgment cost.
+
+[SFX: distant siren passing outside, fading]
+
+[NARRATOR | style: neutral]
+He doesn't reach for the phone. Doesn't draft a statement. He sits with the folder open, the questions still unanswered.
+
+[CAPTAIN_HOLLIS | style: low, final for now]
+The easy version of this — a captain who trusted his man too much, no more than that — that version's gone. I don't know yet what's left to say instead.
+
+[SFX: clock ticking, bullpen silence]
+
+[NARRATOR | style: neutral]
+He closes the folder, but doesn't move to leave. Somewhere across the city, the account he's about to give and the one his detective already gave are about to meet, and neither will hold.
+
+--- PART 14 ---
+
+[NARRATOR]
+The Downtown Diner, past midnight. Detective Park across the booth from Reid — the same table where, hours earlier, she refused to let him go alone.
+
+[SFX: diner ambience, low hum of a refrigerator case]
+[SFX: coffee cup set down on table]
+
+[REID | style: flat, rehearsed]
+He came at me. I didn't have a choice.
+
+[DET_PARK | style: quiet, unreadable]
+No choice.
+
+[REID | style: guarded]
+He'd already — he wasn't going to let it end any other way, Park. You saw the space he built. That wasn't a room somebody walks out of.
+
+[DET_PARK | style: even, careful]
+I saw the space.
+
+[SFX: rain against diner window, soft]
+
+[REID | style: pressing, testing her]
+So you know what I mean.
+
+[DET_PARK | style: measured]
+I know what the room looked like.
+
+[NARRATOR]
+She doesn't ask what he means by "he came at me." She lets it sit.
+
+[REID | style: quieter, less certain]
+Say something.
+
+[DET_PARK | style: controlled, deliberate]
+What do you want me to say.
+
+[REID | style: low]
+That you believe me.
+
+[DET_PARK | style: gentle but unmoving]
+I believe you were there. I believe he's dead. I believe you're the one who can tell me what happened in between.
+
+[REID | style: defensive, tightening]
+I just told you what happened.
+
+[DET_PARK]
+You told me a version.
+
+[SFX: chair creak]
+
+[NARRATOR]
+Neither of them mentions the study. Neither says the word "journal."
+
+[REID | style: careful, watching her]
+You've been quiet since the mill. Quieter than usual.
+
+[DET_PARK | style: distant, holding something back]
+Long night.
+
+[REID | style: pushing gently]
+That's not it.
+
+[DET_PARK | style: steady, giving nothing away]
+Long season, Marcus.
+
+[NARRATOR]
+She uses his first name. It lands harder than a warning would have.
+
+[REID | style: subdued]
+You always call me Reid.
+
+[DET_PARK]
+I know.
+
+[SFX: distant siren, fading]
+
+[REID | style: barely holding together]
+Whatever you think you know —
+
+[DET_PARK | style: firm, cutting him off without heat]
+I'm not doing this here.
+
+[REID | style: quiet]
+Doing what.
+
+[DET_PARK | style: tired, honest]
+Whatever this is about to become.
+
+[NARRATOR]
+She doesn't elaborate. She doesn't need to.
+
+[REID | style: searching her face]
+Park —
+
+[DET_PARK | style: soft, final for tonight]
+Go home, Reid.
+
+[NARRATOR]
+She uses his last name again. Something between them has already closed, though neither has said so aloud.
+
+[REID | style: hollow]
+Yeah.
+
+[SFX: booth vinyl shifting as someone stands]
+
+[NARRATOR]
+He leaves first. Park stays, her coffee untouched, watching the door long after it's shut behind him.
+
+--- PART 15 ---
+
+[NARRATOR]
+The Reid apartment, that same night. Half the shelves stand empty, boxes stacked by the door. Mia is waiting.
+
+[NARRATOR]
+Reid steps inside still carrying the mill on him, though nothing shows on the surface.
+
+[REID | style: exhausted, careful]
+It's over. The Curator — Lin. Whatever he was calling himself. It's done.
+
+[MIA_REID | style: quiet, unreadable]
+I saw it on the news before you called.
+
+[REID | style: trying to steady himself]
+I want to tell you what happened out there.
+
+[MIA_REID | style: flat, not unkind]
+Do you.
+
+[REID | style: deflecting, softer than he means]
+It was close. Closer than — I handled it. It's handled.
+
+[NARRATOR]
+Mia sets down the mug she's been holding without drinking from it.
+
+[MIA_REID | style: measured, final]
+I'm not asking what happened at the mill, Marcus.
+
+[REID | style: uncertain]
+Then what are you asking.
+
+[MIA_REID | style: steady]
+Nothing. I already asked. Three weeks ago. You just weren't in the room for it.
+
+[NARRATOR]
+A beat passes. Somewhere outside, a car passes slow and unremarkable.
+
+[REID | style: grasping for footing]
+The case is closed, Mia. I'm here now. We can — there's time to fix this.
+
+[MIA_REID | style: gentle but unmoving]
+That's the part you keep getting wrong. There isn't a clock on this that starts over when your work is done.
+
+[SFX: refrigerator hum, distant traffic]
+
+[REID | style: quieter, something landing]
+You already decided.
+
+[MIA_REID | style: calm, no cruelty in it]
+I decided weeks ago. I've just been waiting to see if you'd notice before I said it out loud.
+
+[NARRATOR]
+Reid doesn't move toward her. He doesn't move away either.
+
+[REID | style: barely audible]
+And now.
+
+[MIA_REID | style: even, tired]
+Now I'm not going to hand you a verdict tonight. I don't think you'd hear it the way I mean it.
+
+[NARRATOR]
+She picks the mug back up, holds it without drinking, like something to do with her hands.
+
+[REID | style: hollow]
+So what happens now.
+
+[MIA_REID | style: quiet]
+Now we stand here. That's all either of us has left to do.
+
+[NARRATOR]
+Neither reaches for the other. The room holds them both, unresolved, in the last light of a case that was never really his to close.
+

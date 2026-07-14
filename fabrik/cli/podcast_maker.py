@@ -20,6 +20,7 @@ setzt beim Neustart fort. Fertige Parts/Episoden werden übersprungen.
 """
 
 import argparse
+import concurrent.futures
 import json
 import os
 import re
@@ -36,9 +37,43 @@ from fabrik.writing.script_parser import ScriptFormatError, parse_drama_part
 
 FADE_MS = 15
 NARRATOR_ROLE = "__narrator__"
+PAUSE_ONLY_SILENCE_MS = 500  # Ersatz-Stille für Chunks ohne sprechbaren Text
 
 # Fallbacks — werden in main() aus episodes.json überschrieben
 CHUNK_MAX_CHARS = 350
+
+# Optionale Wiederholungs-Syntax am Ende einer [SFX: ...]-Beschreibung,
+# z.B. "gunshot x3, 0.4s apart" — für Aktionen, die mehrfach hörbar sein
+# sollen (Skript-Prompt-Doku: templates/*/PROMPT_TEMPLATE.md). Ans
+# Stringende verankert (\s*$), damit NUR ein trailing "xN"-Token matcht,
+# nie "x3" mitten im Fließtext.
+_SFX_REPEAT_RE = re.compile(
+    r'(?i)\s*[x×]\s*(\d+)\s*(?:,\s*([\d.]+)\s*s(?:ec(?:onds)?)?\s*apart)?\s*$'
+)
+MAX_SFX_REPEAT = 8  # Schutz gegen Tippfehler/Runaway-Zahl in der xN-Angabe
+
+
+def parse_sfx_repeat(desc):
+    """'gunshot x3, 0.4s apart' -> ('gunshot', 3, 0.4)
+    'gunshot x3' -> ('gunshot', 3, 0.0) — alle Trigger auf demselben ms
+    'city traffic' -> ('city traffic', 1, 0.0) — kein Treffer, unverändert."""
+    match = _SFX_REPEAT_RE.search(desc)
+    if not match:
+        return desc, 1, 0.0
+    count = min(int(match.group(1)), MAX_SFX_REPEAT)
+    if count < 1:
+        return desc, 1, 0.0
+    interval_s = float(match.group(2)) if match.group(2) else 0.0
+    clean_desc = desc[:match.start()].strip()
+    return clean_desc, count, interval_s
+
+
+def expand_sfx_cue(desc, base_ms):
+    """Ein Cue-Text -> Liste von {"ms", "description"}-Einträgen, eine pro
+    Wiederholung (parse_sfx_repeat), zeitlich versetzt um interval_s."""
+    clean_desc, count, interval_s = parse_sfx_repeat(desc)
+    interval_ms = int(interval_s * 1000)
+    return [{"ms": base_ms + i * interval_ms, "description": clean_desc} for i in range(count)]
 
 
 def split_script(file_path):
@@ -93,8 +128,11 @@ def build_narration_jobs(parts, part_styles, default_style, chunk_max_chars):
         style = part_styles.get(idx, default_style)
         jobs = []
         for chunk in textproc.chunk_sentences(textproc.split_into_sentences(part_text), chunk_max_chars):
-            jobs.append({"text": chunk, "role": NARRATOR_ROLE, "style": style,
-                         "speed": None, "line_start": False, "cues": []})
+            job = {"text": chunk, "role": NARRATOR_ROLE, "style": style,
+                   "speed": None, "line_start": False, "cues": []}
+            if not textproc.is_speakable(chunk):
+                job["silence_ms"] = PAUSE_ONLY_SILENCE_MS
+            jobs.append(job)
         all_jobs.append(jobs)
     return all_jobs
 
@@ -114,13 +152,23 @@ def build_drama_jobs(parts, voices_cfg, chunk_max_chars):
             if item.kind == "note":
                 continue  # reine Autoren-Buchhaltung — nie vertont, nie gecuet
             role_cfg = voices_cfg[item.speaker]
-            style = item.style or role_cfg.get("default_style")
+            # NARRATOR ignoriert Style/Emotion IMMER, auch bei Built-in-
+            # Speakern -- Style-Anweisungen (instruct) klingen auf der
+            # Erzähler-Rolle hörbar "off"/komisch, egal was das Skript oder
+            # role_cfg.default_style vorgibt. Voice-Clones ignorieren
+            # instruct ohnehin serverseitig (kein Unterschied dort), aber
+            # dieser Override macht es explizit statt sich implizit auf den
+            # Backend-Unterschied zu verlassen.
+            style = None if item.speaker == "NARRATOR" else (item.style or role_cfg.get("default_style"))
             speed = item.speed if item.speed is not None else role_cfg.get("speed")
             chunks = textproc.chunk_sentences(textproc.split_into_sentences(item.text), chunk_max_chars)
             for c_i, chunk in enumerate(chunks):
-                jobs.append({"text": chunk, "role": item.speaker, "style": style,
-                             "speed": speed, "line_start": c_i == 0,
-                             "cues": pending_cues if c_i == 0 else []})
+                job = {"text": chunk, "role": item.speaker, "style": style,
+                       "speed": speed, "line_start": c_i == 0,
+                       "cues": pending_cues if c_i == 0 else []}
+                if not textproc.is_speakable(chunk):
+                    job["silence_ms"] = PAUSE_ONLY_SILENCE_MS
+                jobs.append(job)
                 if c_i == 0:
                     pending_cues = []
         all_jobs.append({"jobs": jobs, "end_cues": pending_cues})
@@ -319,6 +367,34 @@ def write_sfx_cue_sheet(series, episode_name, part_offsets, num_parts, output_pa
     print(f"SFX-Cue-Sheet geschrieben: {os.path.basename(output_path)} ({len(entries)} Cues)")
 
 
+def write_sfx_cue_json(series, episode_name, part_offsets, num_parts, output_path):
+    """Strukturiertes Gegenstück zu write_sfx_cue_sheet() (das Text-Cue-Sheet
+    bleibt für Menschen/DAW) — für Lolfis automatisches One-Shot-SFX-
+    Triggering (fabrik.cli.sfx_assets generiert dazu passende Sounds,
+    Lolfi matched per sfx_asset_hash(description)). Liest dieselben
+    pro-Part-Cue-JSONs wie write_sfx_cue_sheet(), bereits inkl. per
+    expand_sfx_cue() aufgelöster Wiederholungs-Cues. Schema mirrort
+    write_location_timeline()."""
+    entries = []
+    missing = []
+    for idx in range(1, num_parts + 1):
+        cue_file = cues_json_path(series, episode_name, idx)
+        if not os.path.exists(cue_file):
+            missing.append(idx)
+            continue
+        with open(cue_file, "r", encoding="utf-8") as f:
+            for cue in json.load(f):
+                entries.append({"ms": part_offsets[idx - 1] + cue["ms"], "description": cue["description"]})
+    if missing:
+        print(f"  Hinweis: Keine SFX-Cue-Daten für Part(s) {missing} gefunden — SFX-Cue-JSON ist unvollständig.")
+    if not entries:
+        return
+    entries.sort(key=lambda e: e["ms"])
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump({"episode": episode_name, "cues": entries}, f, ensure_ascii=False, indent=1)
+    print(f"SFX-Cue-JSON geschrieben: {os.path.basename(output_path)} ({len(entries)} Cues)")
+
+
 def subs_json_path(series, episode_name, part_idx):
     return os.path.join(series.cues_dir, f"{episode_name}_Part_{part_idx:02d}_subs.json")
 
@@ -469,6 +545,11 @@ def run_postprocessing(series, cfg, data, episode_name, input_file, episode_path
             write_sfx_cue_sheet(series, episode_name, part_offsets, num_parts, cue_sheet_path)
         except Exception as e:
             print(f"  WARNUNG: SFX-Cue-Sheet fehlgeschlagen ({e}) — Lauf erneut starten, um es nachzuholen.")
+        try:
+            cue_json_path_out = os.path.join(series.output_dir, f"{episode_name}_SFX_CUES.json")
+            write_sfx_cue_json(series, episode_name, part_offsets, num_parts, cue_json_path_out)
+        except Exception as e:
+            print(f"  WARNUNG: SFX-Cue-JSON fehlgeschlagen ({e}) — Lauf erneut starten, um es nachzuholen.")
         try:
             write_speaker_timeline(series, episode_name, part_offsets, num_parts, series.output_dir)
         except Exception as e:
@@ -635,6 +716,10 @@ def main():
     parser = argparse.ArgumentParser(description="Skript → gemasterte Episoden-MP3")
     parser.add_argument("input_file", help="Skript-Datei (Pfad oder Dateiname in scripts/ der Serie)")
     parser.add_argument("--name", default=None, help="Name der Episode (überschreibt Auto-Erkennung)")
+    parser.add_argument("--api-url", default=None, metavar="URL",
+                        help="TTS-Server-URL nur für diesen Lauf überschreiben (statt audio.api_url) — "
+                             "batch.py nutzt das, um einen zweiten Worker gegen audio.secondary_api_url "
+                             "zu fahren. Der Server muss dieselben Stimmen/Clones anbieten.")
     paths.add_series_arg(parser)
     args = parser.parse_args()
 
@@ -643,6 +728,9 @@ def main():
     config.validate_or_exit(data)
     cfg = config.build_config(data)
     audio_cfg = data.get("audio", {})
+    if args.api_url:
+        audio_cfg = dict(audio_cfg, api_url=args.api_url)
+        print(f"TTS-Server-Override: {args.api_url}")
     series.ensure_dirs()
     check_voice_consistency(series, cfg, audio_cfg)
 
@@ -658,6 +746,11 @@ def main():
     pause_lines_ms = audio_cfg.get("pause_between_lines_ms", 600)
     pause_parts_ms = audio_cfg.get("pause_between_parts_ms", 4000)
     target_lufs = audio_cfg.get("target_lufs", -16.0)
+    # >1 nur sinnvoll, wenn der TTS-Server tatsächlich mehrere Generierungen
+    # gleichzeitig bedienen kann statt sie intern zu serialisieren (siehe
+    # audio.chunk_concurrency in fabrik/core/config.py) -- Default 1 erhält
+    # das bisherige rein sequenzielle Verhalten.
+    chunk_concurrency = max(1, audio_cfg.get("chunk_concurrency", 1))
 
     print(f"Serie: {series.slug} | Modus: {mode} | Episodenname: {episode_name}")
     episode_path = os.path.join(series.output_dir, f"{episode_name}_FULL_EPISODE.mp3")
@@ -808,49 +901,119 @@ def main():
             skipped += 1
             continue
 
-        print(f"[{idx}/{len(parts)}] {filename} – {len(jobs)} Chunks")
+        batching = hasattr(backend, "generate_chunk_batch") and chunk_concurrency > 1
+        print(f"[{idx}/{len(parts)}] {filename} – {len(jobs)} Chunks"
+              + (f" (Batch bis {chunk_concurrency})" if batching
+                 else f" (bis zu {chunk_concurrency} gleichzeitig)" if chunk_concurrency > 1 else ""))
 
-        segments = []
+        segments_by_idx = {}
         part_failed = False
 
+        def commit_result(c_idx, job, ckpt, segment, elapsed):
+            nonlocal chunks_done, gen_time, gen_count, part_failed
+            chunks_done += 1
+            if segment:
+                if not job.get("silence_ms"):
+                    gen_time += elapsed
+                    gen_count += 1
+                segment.export(ckpt, format="wav")
+                segments_by_idx[c_idx] = segment
+            else:
+                print(f"\n  FEHLER bei Chunk {c_idx}: '{job['text'][:60]}'")
+                part_failed = True
+            avg = gen_time / gen_count if gen_count > 0 else None
+            eta = textproc.format_eta((total_chunks - chunks_done) * avg) if avg is not None else "?"
+            label = f"[{job['role']}] " if mode == "drama" else ""
+            msg = f"  Chunk {c_idx}/{len(jobs)} {label}| {chunks_done}/{total_chunks} | ETA: {eta}"
+            print(msg.ljust(90), end="\r")
+
+        # Checkpoints + reine Interpunktions-Chunks (Stille, nie ans Backend
+        # — siehe textproc.is_speakable-Docstring) zuerst synchron erledigen,
+        # keine Backend-Last. Rest bleibt in `pending` für Batch/Thread-Pool.
+        pending = []
         for c_idx, job in enumerate(jobs, start=1):
             ckpt = checkpoint_path(series.checkpoint_dir, episode_name, idx, c_idx)
-
             if os.path.exists(ckpt):
                 segment = AudioSegment.from_file(ckpt, format="wav")
+                segments_by_idx[c_idx] = segment
                 chunks_done += 1
                 avg = gen_time / gen_count if gen_count > 0 else None
                 eta = textproc.format_eta((total_chunks - chunks_done) * avg) if avg is not None else "?"
                 msg = f"  Chunk {c_idx}/{len(jobs)} | {chunks_done}/{total_chunks} | ETA: {eta} [checkpoint]"
                 print(msg.ljust(90), end="\r")
-                segments.append(segment)
-                continue
-
-            # ETA für den GERADE STARTENDEN Chunk beruht auf dem Schnitt der
-            # bisher abgeschlossenen echten Generierungen — chunks_done wird
-            # erst NACH generate_chunk() erhöht.
-            avg = gen_time / gen_count if gen_count > 0 else None
-            eta = textproc.format_eta((total_chunks - chunks_done) * avg) if avg is not None else "?"
-            label = f"[{job['role']}] " if mode == "drama" else ""
-            msg = f"  Chunk {c_idx}/{len(jobs)} {label}| {chunks_done + 1}/{total_chunks} | ETA: {eta}"
-            print(msg.ljust(90), end="\r")
-
-            chunk_start = time.time()
-            segment = audio.generate_chunk(backend, resolved_voices[job["role"]],
-                                           job["text"], style=job["style"], speed=job["speed"])
-
-            chunks_done += 1
-            if segment:
-                gen_time += time.time() - chunk_start
-                gen_count += 1
-                segment.export(ckpt, format="wav")
-                segments.append(segment)
+            elif job.get("silence_ms"):
+                commit_result(c_idx, job, ckpt, AudioSegment.silent(duration=job["silence_ms"]), 0.0)
             else:
-                print(f"\n  FEHLER bei Chunk {c_idx}: '{job['text'][:60]}'")
-                part_failed = True
-                break
+                pending.append((c_idx, job, ckpt))
+
+        # Batching bevorzugt: EIN Forward-Pass für mehrere Chunks statt N
+        # sequenzieller Calls, die serverseitig ohnehin denselben CUDA-
+        # Default-Stream teilen (siehe cloud/README.md — Threads allein
+        # brachten dort NULL Speedup, echtes Batching ~13x). ThreadPool
+        # bleibt Fallback für Backends ohne generate_chunk_batch (RestBackend/
+        # KokoroBackend auf dem Mac) oder gemischte kind-Batches (z.B.
+        # Voice-Clone-Rollen neben Built-in-Speakern).
+        batchable, rest = [], []
+        for p in pending:
+            _c_idx, job, _ckpt = p
+            single = [(resolved_voices[job["role"]], job["text"], job["style"], job["speed"])]
+            if batching and backend.supports_batch(single):
+                batchable.append(p)
+            else:
+                rest.append(p)
+
+        # Nach Stimm-Art bucketen, NICHT nur nach chunk_concurrency-
+        # Fenstergröße schneiden: ein Batch-Call bedient serverseitig EIN
+        # Modell (CustomVoice ODER Base). Ein Skript wechselt aber ständig
+        # zwischen Rollen (z.B. Built-in-Speaker REID neben Voice-Clone-
+        # NARRATOR) — ungebucketes Windowing würde gemischte Kinds in ein
+        # Fenster packen und dem falschen Endpoint zuordnen (kind wird nur
+        # vom ERSTEN Job im Fenster abgeleitet, siehe generate_chunk_batch).
+        by_kind = {}
+        for p in batchable:
+            _c_idx, job, _ckpt = p
+            by_kind.setdefault(resolved_voices[job["role"]][0], []).append(p)
+
+        for kind_batchable in by_kind.values():
+            for batch_start in range(0, len(kind_batchable), chunk_concurrency):
+                batch = kind_batchable[batch_start: batch_start + chunk_concurrency]
+                batch_jobs = [(resolved_voices[job["role"]], job["text"], job["style"], job["speed"])
+                              for _c_idx, job, _ckpt in batch]
+                start = time.time()
+                batch_segments, batch_error = backend.generate_chunk_batch(batch_jobs)
+                per_item_elapsed = (time.time() - start) / len(batch)
+                for (c_idx, job, ckpt), segment in zip(batch, batch_segments):
+                    if segment is None and batch_error:
+                        print(f"\n  Batch-Fehler: {batch_error}")
+                    commit_result(c_idx, job, ckpt, segment, per_item_elapsed)
+
+        if rest:
+            def render_one(job):
+                """Läuft in einem Pool-Thread — reine I/O-wartende Backend-
+                Calls, das GIL wird währenddessen freigegeben. Bringt bei
+                diesem Setup KEINEN Durchsatzgewinn (Backend serialisiert
+                ohnehin intern, siehe cloud/README.md), ist aber unschädlich
+                und der einzige Pfad für Backends ohne Batch-Endpoint."""
+                start = time.time()
+                segment = audio.generate_chunk(backend, resolved_voices[job["role"]],
+                                               job["text"], style=job["style"], speed=job["speed"])
+                return segment, time.time() - start
+
+            max_workers = min(chunk_concurrency, len(rest))
+            with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as pool:
+                future_to_job = {pool.submit(render_one, job): (c_idx, job, ckpt)
+                                 for c_idx, job, ckpt in rest}
+                # as_completed statt Original-Reihenfolge: Ergebnisse können
+                # durcheinander reinkommen, landen aber über c_idx in
+                # segments_by_idx -- das Zusammensetzen weiter unten bleibt
+                # dadurch unverändert streng in Original-Skriptreihenfolge.
+                for future in concurrent.futures.as_completed(future_to_job):
+                    c_idx, job, ckpt = future_to_job[future]
+                    segment, elapsed = future.result()
+                    commit_result(c_idx, job, ckpt, segment, elapsed)
 
         print()
+        segments = [segments_by_idx.get(c_idx) for c_idx in range(1, len(jobs) + 1)]
 
         if not part_failed and segments:
             # Zusammensetzen + Cue-Offsets protokollieren: Zeilenwechsel
@@ -864,7 +1027,7 @@ def main():
                     gap = pause_lines_ms if job["line_start"] else pause_chunks_ms
                     combined = combined + AudioSegment.silent(duration=gap)
                 for desc in job["cues"]:
-                    cues.append({"ms": len(combined), "description": desc})
+                    cues.extend(expand_sfx_cue(desc, len(combined)))
                 span_start = len(combined)
                 combined = combined + seg.fade_in(FADE_MS).fade_out(FADE_MS)
                 speaker_spans.append({"start_ms": span_start, "end_ms": len(combined),
@@ -872,7 +1035,7 @@ def main():
                 sub_records.append({"start_ms": span_start, "end_ms": len(combined),
                                     "text": job["text"], "role": job["role"]})
             for desc in end_cues[idx - 1]:
-                cues.append({"ms": len(combined), "description": desc})
+                cues.extend(expand_sfx_cue(desc, len(combined)))
 
             combined.export(part_path, format="wav")
             with open(subs_json_path(series, episode_name, idx), "w", encoding="utf-8") as f:

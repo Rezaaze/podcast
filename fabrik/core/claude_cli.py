@@ -54,15 +54,23 @@ def run_claude_process(argv, timeout, label, heartbeat_seconds=HEARTBEAT_SECONDS
     return subprocess.CompletedProcess(argv, proc.returncode, output.get("stdout", ""), output.get("stderr", ""))
 
 
+def _strip_markdown_fences(raw: str) -> str:
+    """Entfernt einen umschließenden Markdown-Codefence-Block (```json ... ```
+    o.ä.), falls vorhanden. Geteilt zwischen parse_json_response() und
+    describe_json_error(), damit beide immer dieselbe Kandidatur sehen."""
+    raw = raw.strip()
+    if raw.startswith("```"):
+        raw = re.sub(r"^```[a-zA-Z]*\n?", "", raw)
+        raw = re.sub(r"```$", "", raw).strip()
+    return raw
+
+
 def parse_json_response(raw: str):
     """Extrahiert ein JSON-Objekt aus einer Claude-Textantwort (toleriert
     Markdown-Codefences und Text drumherum, versucht notfalls den größten
     {...}-Block). Gibt None zurück statt zu werfen — Aufrufer entscheiden
     selbst, ob ein Retry sinnvoll ist."""
-    raw = raw.strip()
-    if raw.startswith("```"):
-        raw = re.sub(r"^```[a-zA-Z]*\n?", "", raw)
-        raw = re.sub(r"```$", "", raw).strip()
+    raw = _strip_markdown_fences(raw)
     try:
         return json.loads(raw)
     except json.JSONDecodeError:
@@ -85,10 +93,7 @@ def describe_json_error(raw: str) -> Optional[str]:
     wenn gar kein {...}-Block gefunden wurde ODER die Kandidatur tatsächlich valide ist
     (dann ist der Fehler woanders, z.B. reiner Text ohne jedes JSON — Anfang/Ende bleibt
     dort die bessere Diagnose)."""
-    stripped = raw.strip()
-    if stripped.startswith("```"):
-        stripped = re.sub(r"^```[a-zA-Z]*\n?", "", stripped)
-        stripped = re.sub(r"```$", "", stripped).strip()
+    stripped = _strip_markdown_fences(raw)
 
     start, end = stripped.find("{"), stripped.rfind("}")
     if start == -1 or end <= start:

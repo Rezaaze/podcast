@@ -8,6 +8,13 @@ hier ohne Python anzufassen:
   (build_prompt errort sonst laut) und die Literale
   `parts_per_section`/`words_per_part_target` irgendwo im Schema-Block
   (estimate_section_count parst sie für die --minutes-Skalierung).
+  **Single-Source-Platzhalter** (build_prompt substituiert aus
+  `fabrik/core/config.py`, nie wörtlich in Templates pflegen — die
+  Chelsie-Lektion): `{{DEFAULT_MODEL}}` (alle fünf Templates, aus
+  `DEFAULTS["model"]`), `{{VOICE_ROSTER}}` (Bullet-Liste,
+  crime_drama/soap_opera) und `{{VOICE_ROSTER_COMPACT}}` (Fließtext,
+  language_course) aus `BUILTIN_SPEAKER_ROSTER`. Unersetzte
+  `{{...}}`-Platzhalter werden beim Erstellen laut angewarnt.
 - `PROMPT_TEMPLATE.md` — das Per-Section-Skript-Prompt,
   `{{PLACEHOLDER}}`-substituiert von
   `fabrik/writing/script_writer.py::build_section_prompt`.
@@ -31,6 +38,8 @@ hier ohne Python anzufassen:
   mode-agnostisch sind, brauchte das Template null Codeänderung — und
   bekommt Episode-Review (`--fix`) und Beat-Layer "gratis" (beide gaten
   auf `episode.get("case")`), anders als narration/language_course.
+  Achtung beim Beat-Layer: der Beat-Prompt ist szenenorientiert und passt
+  nur bedingt zum Solo-Essay — `use_beats` hier im Zweifel auslassen.
 
 **`mode: "drama"`** — multi-voice, `[SPEAKER | style: ... | speed: ...]`-Tags
 pro Zeile, `[SFX: ...]`-Cues werden nur geloggt, nie vertont:
@@ -53,13 +62,20 @@ pro Zeile, `[SFX: ...]`-Cues werden nur geloggt, nie vertont:
 
 - **ACCENT CASTING RULE:** nur Ryan/Aiden sind akzentfrei; Akzente müssen
   diegetisch sein (Biografie erklärt sie) oder das Setting macht sie
-  unauffällig; NARRATOR bekommt Ryan oder Aiden. Hintergrund:
-  fabrik/core/CLAUDE.md (KNOWN_BUILTIN_SPEAKERS).
-- **NARRATOR-Pflicht** (crime_drama/soap_opera): fixe Rolle in `voices`,
-  built-in only. PROMPT_TEMPLATE.md verlangt 1–2 gesprochene
-  `[NARRATOR]`-Orientierungszeilen (wer/wo/wann) am Anfang jedes PART —
-  hart gelernt: SFX werden nie gemischt, ohne NARRATOR hat ein
-  Szenenwechsel NULL hörbares Signal.
+  unauffällig. Hintergrund: fabrik/core/CLAUDE.md (KNOWN_BUILTIN_SPEAKERS).
+- **NARRATOR-Pflicht** (crime_drama/soap_opera): fixe Rolle in `voices`.
+  PROMPT_TEMPLATE.md verlangt 1–2 gesprochene `[NARRATOR]`-
+  Orientierungszeilen (wer/wo/wann) am Anfang jedes PART — hart gelernt:
+  SFX werden nie gemischt, ohne NARRATOR hat ein Szenenwechsel NULL
+  hörbares Signal. **Beide Templates verlangen jetzt einen Built-in-
+  Speaker (Ryan/Aiden bevorzugt)**, kein Voice-Clone mehr — soap_opera
+  nutzte bis 2026-07-14 bewusst den festen Clone `morgan`, wurde aber auf
+  Built-in umgestellt (Speed-Gewinn beim Cloud-Rendern, ~10x schneller pro
+  Chunk als das Voice-Clone-Modell, siehe cloud/README.md). Style/
+  Instruct wird für die Rolle NARRATOR unabhängig von Built-in/Clone IMMER
+  ignoriert (`build_drama_jobs` in podcast_maker.py erzwingt
+  `style=None`) — Style/Emotion klang auf der Erzähler-Rolle hörbar "off"
+  (User-Feedback), siehe Memory `narrator-style-override`.
 - **section_words-Lektion:** ein Override, der nur 10–20% unter dem
   Episoden-Default liegt, lässt den Writer zuverlässig unterschießen —
   ein wirklich kurzer Beat heißt ~100–200 Wörter, kein kosmetischer

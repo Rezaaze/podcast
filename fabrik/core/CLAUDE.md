@@ -26,11 +26,16 @@ steuert: Inhalt, Format, Voice-Modus, Audio-Backend-Konfig.
 
 ## Voice-Regeln in config.py
 
-- `KNOWN_BUILTIN_SPEAKERS`: die exakt neun eingebauten Qwen3-TTS-Stimmen.
+- `KNOWN_BUILTIN_SPEAKERS`: die exakt neun Stimmen, die der LOKALE
+  Qwen3-Server tatsächlich anbietet — NICHT das offizielle Qwen3-Roster:
+  "Ethan"/"Chelsie" existieren lokal nicht (dafür Ono_Anna/Sohee) und
+  haben zweimal Produktionsläufe erst beim Vertonen scheitern lassen;
+  Roster-Änderungen immer auch in den drei Creator-Templates nachziehen
+  (crime_drama/soap_opera/language_course listen die Stimmen wörtlich).
   Unbekannte Namen sind nur eine Warnung bei `check` (Clones sind legal).
   Nur Ryan/Aiden sind akzentfreie native English speakers — alle anderen
-  (inkl. ALLER Frauenstimmen) haben hörbaren chinesischen Akzent; daher
-  die ACCENT CASTING RULE in den Templates (siehe templates/CLAUDE.md).
+  (inkl. ALLER Frauenstimmen) haben hörbaren Akzent; daher die
+  ACCENT CASTING RULE in den Templates (siehe templates/CLAUDE.md).
 - **Harter Fehler**, wenn zwei `voices`-Rollen auf denselben `voice`-Namen
   auflösen — zwei Charaktere mit gleicher Stimme sind nie beabsichtigt.
 - `NARRATOR` ist von der `character_knowledge`-Vollständigkeits-Warnung

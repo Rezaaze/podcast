@@ -1,0 +1,981 @@
+--- PART 1 ---
+
+[NARRATOR]
+In a fog-bound harbor city of old money and new immigrants, a brilliant detective receives a letter no one else was meant to read — and a killer begins a game only the two of them are truly playing. This is the story of a hunt that becomes an obsession, a marriage that becomes collateral, and a masterpiece the detective doesn't know he's helping to finish.
+
+[NARRATOR | style: measured, atmospheric]
+First Correspondence. The Old Textile Mill, past midnight, looms silent for thirty years. A night-shift guard walks his round.
+
+[SFX: distant metal creak]
+
+[NARRATOR]
+He hears it before he sees it — a wrongness in the quiet, a shape where none should be. He rounds the last loom and stops.
+
+[SFX: footsteps halt abruptly]
+
+[NARRATOR]
+The body has been arranged, not dumped — limbs set with care, objects placed with the patience of a hand that took its time. It is the composition that stops his breath, more than the death.
+
+[SFX: papers rustle in draft]
+
+[NARRATOR]
+Above it, pinned at eye level, a sealed envelope catches the light. Written across its face, in a careful hand: not "Homicide Division." Not "To Whom It May Concern." Just a name — Detective Marcus Reid.
+
+[SFX: police radio static]
+
+[NARRATOR]
+Patrol arrives within the hour. An officer crouches, reads the envelope twice, and reaches for her radio. This one goes up the chain tonight.
+
+[SFX: radio click, urgent voice murmur]
+
+--- PART 2 ---
+
+[NARRATOR]
+Precinct bullpen, later that morning. Detective Marcus Reid sits at his desk with Detective Park — his partner — the evidence bag between them.
+
+[DET_PARK | style: brisk, procedural]
+Sealed envelope, no prints yet, no postal markings. Whoever left it walked it in themselves.
+
+[REID | style: measured, controlled]
+Read it to me again. Slow.
+
+[DET_PARK | style: reading aloud, clinical]
+"To the detective who will carry this." Formal. Almost courteous. Killer's addressing rank, not a person.
+
+[SFX: paper unfolding]
+
+[REID | style: flat, giving nothing away]
+Courteous.
+
+[DET_PARK | style: thinking out loud]
+Some of them like to flatter the lead. Puts you above the uniforms, makes you feel special. Ego bait.
+
+[NARRATOR]
+Reid's eyes move past the line Park read aloud, to two words further down the page — his name, and a date only he and one other person would recognize.
+
+[REID | style: barely controlled, private]
+(beat)
+Yeah.
+
+[SFX: office chatter, muffled, in the background]
+
+[DET_PARK | style: casual, unaware]
+You good? You've got a face.
+
+[REID | style: recovering, dismissive]
+Tired. Long night.
+
+[NARRATOR]
+Captain Hollis crosses the bullpen — the precinct's captain, nearing retirement — a folder under his arm.
+
+[CAPTAIN_HOLLIS | style: authoritative, weary]
+Mayor's office called before I'd had coffee. That's never a good sign.
+
+[DET_PARK | style: respectful, direct]
+Body at the mill, staged. Note left for the lead.
+
+[CAPTAIN_HOLLIS | style: firm, businesslike]
+Staged how.
+
+[DET_PARK | style: matter-of-fact]
+Deliberate. Machinery arranged around him like it meant something.
+
+[CAPTAIN_HOLLIS | style: brushing past, pragmatic]
+Theatrics. We've seen theatrics before. Ugly, but closeable — you build the timeline, you find the grudge, you close it clean before this becomes a headline instead of a case file.
+
+[REID | style: even, agreeable — too agreeable]
+That's the read.
+
+[NARRATOR]
+Hollis studies Reid a beat longer than the moment requires, then lets it go.
+
+[CAPTAIN_HOLLIS | style: pointed, not unkind]
+I need this contained, Marcus. Fast, clean, ordinary. Give the mayor's office nothing to chew on.
+
+[REID | style: steady, betraying nothing]
+Understood, Captain.
+
+[SFX: folder closing, footsteps receding]
+
+[NARRATOR]
+Hollis walks off toward his office. Park turns back to the note, still reading it as routine.
+
+[DET_PARK | style: half to herself]
+Lead detective. Courtesy address. Nothing weirder than that.
+
+[REID | style: quiet, distant]
+Right.
+
+[NARRATOR]
+He doesn't correct her. He folds the note along its original crease and sets it down, the two words that named him and the day he married Mia now folded out of sight — but not out of mind.
+
+--- PART 3 ---
+
+[NARRATOR]
+Across the city, a different clock is running. In the Reid apartment, Mia Reid — his wife — has set the table for their anniversary.
+
+[SFX: dishes and silverware being set down]
+
+[MIA_REID | style: quietly pleased, humming to herself]
+Candles. Good. Now where did I put the — 
+
+[SFX: drawer opening]
+
+[MIA_REID | style: satisfied]
+There you are.
+
+[NARRATOR]
+She lights two candles, checks the clock, and picks up her phone.
+
+[SFX: phone unlock chime]
+
+[MIA_REID | style: warm, unworried]
+"Table's set, chef's getting impatient. Whenever you're done saving the city, dinner's here."
+
+[SFX: text message send]
+
+[NARRATOR]
+Ten minutes pass. Then twenty.
+
+[MIA_REID | style: checking the food, mild]
+Still good. Still fine.
+
+[SFX: oven door opening and closing]
+
+[NARRATOR]
+The candles burn lower. She checks the phone again — nothing.
+
+[MIA_REID | style: a little quieter, half to herself]
+He's probably knee-deep in something. He gets like this.
+
+[NARRATOR]
+She sits. She waits. Forty minutes become an hour.
+
+[SFX: chair creaking as she sits down]
+
+[MIA_REID | style: trying to stay light, but the edge is showing]
+Okay. One hour. That's not — that's not nothing, but it's not new either.
+
+[NARRATOR]
+She opens a blank note on her phone. Her thumbs move slowly, like she isn't sure why she's doing it.
+
+[SFX: typing on phone screen]
+
+[MIA_REID | style: flat, almost clinical]
+Seven forty. No call. No text back.
+
+[NARRATOR]
+She looks at the date at the top of the note — their anniversary — circled days ago on the kitchen calendar behind her.
+
+[MIA_REID | style: steadying herself]
+It's just a case. It's always just a case.
+
+[NARRATOR]
+She blows out one candle to keep it from burning to nothing, and leaves the other lit — for him, whenever he comes.
+
+[SFX: single candle being blown out]
+
+[MIA_REID | style: quiet, more to convince herself than anyone]
+He'll walk in any minute. He always does.
+
+[NARRATOR]
+The second candle keeps burning. No one comes.
+
+--- PART 4 ---
+
+[NARRATOR]
+Across the city, behind a door with three locks, a private collector keeps his own kind of archive.
+
+[NARRATOR]
+Shelves. Glass cases. Objects arranged with more care than most people give to family photographs.
+
+[SFX: soft footsteps on hardwood]
+
+[THE_CURATOR | style: quiet, unhurried]
+Good.
+
+[THE_CURATOR | style: murmuring to himself, contented]
+Everything where it should be.
+
+[SFX: a small brass key turning in a lock]
+
+[NARRATOR]
+He kneels before a low cabinet and draws out its bottom drawer.
+
+[SFX: wooden drawer sliding open, faint creak]
+
+[THE_CURATOR | style: gentle, almost tender]
+There you are.
+
+[NARRATOR]
+Inside, rows of small items rest on dark velvet — each one labeled, each one dated in a careful, slanted hand.
+
+[THE_CURATOR | style: reciting softly, like a private liturgy]
+Number one. Number two. Number three.
+
+[THE_CURATOR | style: measured, deliberate]
+And now.
+
+[SFX: a single object set down, a soft click of glass on wood]
+
+[NARRATOR]
+He sets the newest piece into an empty space that seems, somehow, to have been waiting for it.
+
+[THE_CURATOR | style: unhurried, precise]
+Not late. Never late.
+
+[THE_CURATOR | style: barely audible, wry]
+Only ever on schedule.
+
+[NARRATOR]
+He does not look at it the way a man looks at something he regrets. He looks at it the way a craftsman checks a seam.
+
+[SFX: a clock ticking somewhere in the room]
+
+[THE_CURATOR | style: quiet satisfaction, almost a smile in the voice]
+A good beginning. He'll come looking, in his own time.
+
+[THE_CURATOR | style: soft, private]
+He always does.
+
+[NARRATOR]
+He closes the drawer. The lock turns once, twice, a third time.
+
+[SFX: drawer sliding shut, lock clicking three times]
+
+[THE_CURATOR | style: calm, final]
+Patience is the only signature that matters.
+
+[NARRATOR]
+He straightens the frame of a photograph no one else has ever been permitted to see, adjusting it by the width of a fingernail.
+
+[THE_CURATOR | style: distant, almost fond]
+Soon, Marcus.
+
+[NARRATOR]
+Then he turns off the light, and the room — like everything he touches — falls back into perfect, patient order.
+
+[SFX: light switch click, room falling silent]
+
+--- PART 5 ---
+
+[NARRATOR]
+Back at the precinct, well past midnight. The bullpen has emptied out for the night — desks dark, phones silent — except for Detective Reid, still at his own, the cipher fragments spread beneath a single lamp.
+
+[SFX: distant hum of fluorescent lights, office ambience settling into quiet]
+
+[REID | style: low, muttering to himself, focused]
+Twenty-two south. Fourteen east. That's not a street, that's not anything—
+
+[NARRATOR]
+He crosses out a line on the legal pad and starts again, the same numbers rearranged a different way.
+
+[SFX: pen scratching paper, pages turning]
+
+[REID | style: quietly obsessive, almost to the letter itself]
+You want me looking at the mill. Fine. What am I not looking at.
+
+[NARRATOR]
+He leans back, rubs his eyes, and doesn't look away from the page for more than a second.
+
+[SFX: chair creaking]
+
+[REID | style: flat, rehearsing]
+Grid reference. Has to be a grid reference.
+
+[SFX: phone buzzing against the desk]
+
+[NARRATOR]
+His phone lights up beside the legal pad. Mia's name on the screen.
+
+[REID | style: distant, barely registering it]
+Not now.
+
+[NARRATOR]
+The call rings out. A moment later, a voicemail notification chimes, and a short recorded message plays low from the speaker.
+
+[SFX: voicemail beep]
+
+[MIA_REID | style: light, trying not to sound worried, recorded]
+Hey, it's me. Table's still set, in case you were wondering. Call me when you're done playing detective, okay?
+
+[SFX: voicemail ends, soft click]
+
+[NARRATOR]
+Reid looks at the screen for a moment. Then he reaches over, turns the phone face-down on the desk, and pulls the legal pad back toward him.
+
+[REID | style: quiet, more to himself than anyone]
+I'll make it up to her. Once this is closed.
+
+[NARRATOR]
+He says it like a fact, not a hope, and goes back to the numbers as if the sentence settles something.
+
+[SFX: pen scratching resumes, single lamp buzzing faintly]
+
+[NARRATOR]
+Outside the window behind him, the city keeps moving without him. At the desk, nothing moves at all — just Reid, the cipher, and a phone he has already decided not to pick back up tonight.
+
+--- PART 6 ---
+
+[NARRATOR]
+The Downtown Diner, near midnight. Detective Park across the booth from Reid — his partner, the one who's worked every case at his side this year.
+
+[SFX: diner ambience, low chatter, cups clinking]
+
+[DET_PARK | style: relaxed, familiar]
+Two coffees, black, table twelve. Some things don't change.
+
+[REID | style: distant, half-present]
+Mm.
+
+[DET_PARK | style: teasing]
+That's it? No commentary on the coffee being burnt again?
+
+[REID | style: distracted]
+It's fine.
+
+[DET_PARK | style: settling in, thinking aloud]
+Okay. So the mill guy — no priors, no known enemies, works nights loading freight. Whoever staged him wanted us looking at the machinery, not the body. That's backwards from every scene we've worked.
+
+[SFX: coffee cup set down on table]
+
+[REID]
+Backwards.
+
+[DET_PARK | style: waiting, slightly puzzled]
+Reid.
+
+[REID | style: snapping back, too fast]
+What.
+
+[DET_PARK | style: careful]
+I said it's backwards. You just repeated the word back at me.
+
+[REID | style: covering]
+I heard you. Loading freight. No priors.
+
+[DET_PARK | style: testing]
+And?
+
+[REID | style: vague]
+And we start with the machinery angle. Talk to whoever runs maintenance on that place.
+
+[DET_PARK | style: quiet, watching him]
+That's... where I was going, yeah.
+
+[NARRATOR]
+A silence sits between them — not the comfortable kind.
+
+[SFX: spoon stirring coffee]
+
+[DET_PARK | style: gentler, probing]
+You've been somewhere else since we left the mill.
+
+[REID | style: deflecting, tired]
+Long night. That's all it is.
+
+[DET_PARK | style: pressing lightly]
+We've had long nights before. This is different. You didn't even finish reading the note out loud back at your desk — you just went quiet and handed it to me.
+
+[REID | style: guarded]
+I read it. I know what it says.
+
+[DET_PARK | style: not letting go, but softening]
+I'm not accusing you of anything. I just — usually you talk it out with me. Every angle, every dumb theory, out loud, until one of them sticks. Tonight you're doing all of that somewhere I can't hear it.
+
+[REID | style: forced casualness]
+Maybe I'm running out of dumb theories.
+
+[DET_PARK | style: half-laughing, unconvinced]
+You never run out.
+
+[NARRATOR]
+Reid manages a small, practiced smile. It doesn't reach far.
+
+[REID | style: quiet, almost to himself]
+Just tired, Park. It's a strange one. Give it a day.
+
+[DET_PARK | style: letting it go, but not fully]
+Sure. A day.
+
+[SFX: chair scraping, distant door chime]
+
+[NARRATOR]
+She watches him a moment longer than the conversation calls for, then lets it drop — for now.
+
+--- PART 7 ---
+
+[NARRATOR]
+Past midnight, the Reid apartment. The marriage-collapse thread returns — Mia has waited alone since dinner. Reid, the detective, finally comes home.
+
+[SFX: door lock turning, slow]
+[SFX: door hinge creak]
+
+[REID | style: exhausted, guarded]
+Hey. Sorry — sorry, I know it's late.
+
+[NARRATOR]
+The table is still set. Two candles, burned to stubs. The food untouched, gone cold.
+
+[MIA_REID | style: brittle, controlled calm]
+Late. That's one word for it.
+
+[REID | style: tired, deflecting gently]
+Mia, I got pulled into something. It wasn't — I couldn't just walk out.
+
+[MIA_REID | style: quiet, watching him closely]
+You didn't call.
+
+[REID | style: apologetic but distracted]
+I know. I know, I should have. It got away from me.
+
+[SFX: chair scraping softly]
+
+[MIA_REID | style: even, testing]
+It got away from you. For six hours.
+
+[REID | style: rubbing his face, weary]
+It's — it's this case. It's bigger than anything I've had in a while. I can't really talk about the details.
+
+[MIA_REID | style: measured, not yet accusing]
+I'm not asking for details, Marcus. I'm asking why you couldn't send one text.
+
+[NARRATOR]
+A pause. Reid looks at the table — the candles, the two plates — before he can answer.
+
+[REID | style: low, genuinely sorry]
+You're right. That part's on me. No excuse.
+
+[MIA_REID | style: softening slightly, guarded underneath]
+It's our anniversary. You know that, right? Today.
+
+[REID | style: careful, a beat too long]
+...Yeah. I know.
+
+[NARRATOR]
+He does not say what the note called it. He does not say the killer knew the date too.
+
+[MIA_REID | style: trying to let it go, not quite managing it]
+Okay. Well — the good news is it reheats.
+
+[SFX: refrigerator door open and close]
+
+[REID | style: attempting warmth, tired underneath]
+Let me help. Please.
+
+[MIA_REID | style: gentle but distant]
+I've got it.
+
+[NARRATOR]
+She busies herself at the counter, back to him. He watches her a moment longer than the silence explains.
+
+[REID | style: quiet, almost to himself]
+I'll make it up to you. Once this settles.
+
+[MIA_REID | style: neutral, unconvinced underneath]
+You always say that.
+
+[NARRATOR]
+She doesn't turn around. On her phone, screen dark in her pocket, a note already waits — tonight's date, added to a list only she can see.
+
+[SFX: phone vibrating once, ignored]
+
+[REID | style: barely audible]
+Yeah. I do.
+
+--- PART 8 ---
+
+[NARRATOR]
+Riverside Overlook, above the harbor, past midnight. The Cipher Killings return: Detective Park stands alone at the railing where a patrol sweep has just found a second sealed note.
+
+[SFX: wind off the water, distant foghorn]
+
+[DET_PARK | style: flashlight steady, voice clipped]
+Same fold. Same wax. Somebody wanted this found, not lost.
+
+[SFX: gloved hands unfolding paper]
+
+[DET_PARK | style: reading under her breath, uneasy]
+Same hand, too. This isn't a copycat.
+
+[SFX: radio static, brief]
+
+[DET_PARK | style: dialing, tense]
+Reid. Pick up.
+
+[REID | style: groggy, on the phone]
+Park. It's past one.
+
+[DET_PARK | style: urgent but controlled]
+Riverside Overlook. There's a second one. Same paper, same seal, tucked into the rail housing above the water — exactly the kind of spot you'd only find if you knew where to look.
+
+[REID | style: suddenly awake, guarded]
+Read me what it says.
+
+[DET_PARK | style: careful, professional]
+Not over the line. You need to see it.
+
+[SFX: footsteps on wet concrete]
+
+[REID | style: quiet, measured]
+I'm ten minutes out. Don't let anyone touch it before me.
+
+[DET_PARK | style: half to herself, unsettled]
+Nobody's touching it. It's just — it's staged the same way the mill was. Like he measured the distance from the last one on purpose.
+
+[NARRATOR]
+She looks out over the black water, the note trembling faintly in the wind.
+
+[DET_PARK | style: low, to the empty overlook]
+One's a message. Two's a pattern.
+
+[SFX: harbor bell, distant]
+
+[REID | style: flat, giving nothing away]
+Seal the scene. I'll call it up the chain when I get there.
+
+[DET_PARK | style: firm]
+Copy.
+
+[NARRATOR]
+The line goes quiet. Park folds the note carefully back into its evidence sleeve, still watching the water.
+
+[DET_PARK | style: barely audible]
+He's not done. Whoever this is — he's just getting started.
+
+[SFX: wind gust, paper rustling faintly through plastic]
+
+[NARRATOR]
+Somewhere behind her, a car engine cuts the dark — Reid, arriving alone, before anyone else on the sweep team.
+
+--- PART 9 ---
+
+[NARRATOR | style: terse, neutral]
+The precinct bullpen, the following morning. Captain Hollis — the aging captain nearing retirement — takes the news of a second cipher straight to Reid's desk.
+
+[SFX: office phone receiver set down hard]
+
+[CAPTAIN_HOLLIS | style: clipped, already recalculating]
+Riverside Overlook. Same handwriting, same fold pattern. That's not a copycat, Reid. That's a sequence.
+
+[REID | style: measured, guarded]
+We're treating it that way. Forensics has the drop point sealed off.
+
+[CAPTAIN_HOLLIS | style: low, pressured]
+The mayor's office called before I'd finished my coffee. Second one in a week, they said. Like I'm supposed to explain the timing to them.
+
+[SFX: distant phone ringing, unanswered]
+
+[CAPTAIN_HOLLIS | style: tightening]
+They want a timeline, Marcus. Not a theory. A date. Something I can put in front of a press liaison without getting laughed out of the room.
+
+[REID | style: even, controlled]
+I can't hand you a date I don't have.
+
+[CAPTAIN_HOLLIS | style: pushing, still confident this is ordinary]
+Then give me a shape. This is an elaborate one, I'll grant you — the notes, the staging — but it's still a homicide case. Homicide cases close. Tell me what closing this one looks like.
+
+[REID | style: careful, withholding]
+It looks like patience. Whoever's doing this is meticulous. He's not going to hand us a mistake. We wait for the pattern to repeat, and the pattern gives him up.
+
+[CAPTAIN_HOLLIS | style: skeptical but relenting]
+That's a nice sentence. It won't survive contact with the mayor's chief of staff.
+
+[REID | style: level, reassuring]
+Then buy me two weeks. I'll have more than a sentence by then.
+
+[SFX: chair creaking as Hollis leans back]
+
+[CAPTAIN_HOLLIS | style: weighing it, still trusting]
+Two weeks. And Reid — if there's anything in those notes I should know that isn't in your reports, now's the time.
+
+[REID | style: too smooth, a beat too fast]
+There's nothing in them Park hasn't already logged.
+
+[NARRATOR | style: terse, neutral]
+Hollis studies him a moment longer, then nods, already moving on to the next fire.
+
+[CAPTAIN_HOLLIS | style: tired, resigned]
+Two weeks, Detective. I'm trusting you with the exposure on this one.
+
+[SFX: footsteps receding across the bullpen floor]
+
+[NARRATOR | style: terse, neutral]
+He walks off toward his office, satisfied. He does not yet know how much weight that trust is already carrying.
+
+--- PART 10 ---
+
+[NARRATOR]
+Later that same night, in the private room behind his house, the Curator returns to his archive — the same catalogued space introduced earlier in the episode.
+
+[SFX: door lock disengaging, soft click]
+
+[SFX: paper rustling, drawer sliding open]
+
+[THE_CURATOR | style: quiet, almost tender]
+There you are.
+
+[NARRATOR]
+He lifts a small photograph from a shallow tray of similar items — each one labeled, each one filed by year rather than by case.
+
+[THE_CURATOR | style: unhurried, private]
+Third precinct commendation. Second row, second from the left.
+
+[SFX: faint newspaper crinkle]
+
+[THE_CURATOR | style: measured, cataloguing]
+You were younger then. Certain, in the way men are certain before they understand what they're certain about.
+
+[NARRATOR]
+He sets the photograph beside two others — a wedding announcement clipped from a newspaper long out of print, and a folded page that is not a photograph at all, but a page of handwriting that is unmistakably his own, dated years before tonight.
+
+[THE_CURATOR | style: soft, satisfied]
+Anniversaries. People think they choose them. They only think they do.
+
+[SFX: pen tapping once against wood]
+
+[NARRATOR]
+He does not linger on the wedding clipping. He turns instead to the handwritten page, reading a line of it under his breath, the way a man rereads something he has read a hundred times and still finds satisfying.
+
+[THE_CURATOR | style: hushed, reverent]
+"The brushstroke waits for the hand to be ready. Not before."
+
+[NARRATOR]
+He returns the page to its place, careful that its edge aligns exactly with the others in the drawer — not stacked, arranged, the way everything in this room is arranged.
+
+[THE_CURATOR | style: calm, final]
+Not long now.
+
+[SFX: drawer sliding shut, lock engaging]
+
+[NARRATOR]
+He straightens, smooths the front of his shirt, and looks at the tray one moment longer before switching off the small lamp above it — an ordinary man, by every outward measure, closing up an ordinary night.
+
+[SFX: light switch, click]
+
+--- PART 11 ---
+
+[NARRATOR]
+Back at the Reid apartment, several nights after the cold anniversary dinner. Mia, a schoolteacher, waits up again for her husband.
+
+[SFX: clock ticking, faint]
+[SFX: keys in a door lock]
+
+[NARRATOR]
+Reid comes home to find the lights still on.
+
+[REID | style: tired, wary]
+You're up.
+
+[MIA_REID | style: quiet, controlled]
+I'm always up. That's kind of the pattern.
+
+[REID | style: cautious]
+Mia—
+
+[MIA_REID | style: measured, not yet angry]
+Sit down a second. Please.
+
+[SFX: chair scraping softly]
+
+[MIA_REID | style: steady]
+I made a list. I wasn't going to, but I did.
+
+[REID | style: guarded]
+A list of what.
+
+[MIA_REID | style: flat, factual]
+Tuesday, you slept at the precinct. Thursday, you didn't call, I called four times. Sunday — our anniversary, Marcus — you didn't even text until eleven.
+
+[REID | style: low, defensive]
+I told you, the case broke that night. I couldn't just—
+
+[MIA_REID | style: cutting in, not raising her voice]
+I know. I know you had a reason every single time. That's not what I'm asking about.
+
+[REID | style: wary]
+Then what are you asking about.
+
+[SFX: soft exhale]
+
+[MIA_REID | style: quieter, more exposed]
+We've had hard cases before. I've done this before — the odd hours, the missed dinners, all of it. I never sat here making a list before.
+
+[MIA_REID | style: direct, searching]
+Something's different this time. In you. And I don't know what it is, and I need you to just tell me.
+
+[REID | style: hesitant]
+It's — there's a lot of pressure right now. Hollis, the mayor's office, they're on top of us every day. It's a bad one, Mia. Worse than usual.
+
+[MIA_REID | style: watching him closely]
+That's not an answer. That's what you'd say to Park.
+
+[REID | style: careful, deflecting]
+It's the truth.
+
+[MIA_REID | style: hurt threading through control]
+It's *a* truth. I didn't ask you for the department version.
+
+[SFX: silence, held a beat too long]
+
+[REID | style: quiet, evasive]
+I don't know what else you want me to say.
+
+[MIA_REID | style: steady, sad]
+I want you to look at me when you say it.
+
+[NARRATOR]
+He doesn't answer right away.
+
+[REID | style: barely holding it together]
+I'm handling it. I promise, once this settles, it's you and me again. I just need — a little more time.
+
+[MIA_REID | style: subdued, unconvinced]
+Okay.
+
+[NARRATOR]
+She says nothing else. She doesn't believe him — not entirely — though she still can't name what she doesn't believe.
+
+--- PART 12 ---
+
+[NARRATOR]
+Back at the precinct, the bullpen thinner than it should be. Detective Park stops at Reid's desk, files in hand.
+
+[DET_PARK | style: casual, warm]
+You look like you haven't slept since the mill.
+
+[REID | style: half-present, eyes on paper]
+I slept.
+
+[DET_PARK | style: gently teasing]
+In the chair, maybe.
+
+[SFX: paper shuffling]
+
+[DET_PARK | style: sincere]
+Hey. I pulled the Ferris burglary off your stack, and I can take the canvass logs too. You've got enough on your plate with this one.
+
+[REID]
+Mm.
+
+[DET_PARK]
+I mean it. Let me carry more of the load till this settles.
+
+[REID | style: distracted, half-listening]
+It's fine, Park.
+
+[DET_PARK]
+It's not a big — I'm not saying you can't handle it, I'm saying you don't have to handle all of it alone.
+
+[REID | style: sharp, sudden, too fast]
+I said it's fine. I don't need you managing my caseload.
+
+[SFX: brief silence, a chair creak]
+
+[DET_PARK | style: quiet, stung]
+Okay.
+
+[NARRATOR]
+A beat passes. Reid looks up from the cipher pages, catching the shift in her voice a moment too late.
+
+[REID | style: half-hearted, distracted]
+Park — I didn't mean it like that. It's been a long few days.
+
+[DET_PARK | style: even, careful]
+Sure.
+
+[REID]
+I'll loop you in on the mill stuff tonight. Just — give me an hour.
+
+[DET_PARK | style: masking, professional]
+Take your hour.
+
+[SFX: file folder closing]
+
+[NARRATOR]
+She picks up her files and walks back toward her own desk without another word.
+
+[DET_PARK | style: to herself, low]
+He never used to need an hour.
+
+[NARRATOR]
+Reid doesn't hear her. His eyes have already dropped back to the cipher, pen moving, some part of him already elsewhere.
+
+[REID | style: murmured, absent]
+Anniversary. Mill. Anniversary...
+
+[SFX: pen tapping paper, rhythmic]
+
+[NARRATOR]
+Across the bullpen, Park glances back once — not suspicious yet, only unsettled, filing the moment away the way she's started filing several moments lately.
+
+--- PART 13 ---
+
+[NARRATOR]
+Before dawn, the Old Textile Mill stands empty again — the tape still up, the tableau still held for evidence. Detective Reid has come back alone, hours before his own shift.
+
+[SFX: heavy metal door creaking open]
+
+[SFX: footsteps on concrete, echoing]
+
+[REID | style: low, private, almost reverent]
+Nobody needs to know I was here.
+
+[SFX: distant dripping water]
+
+[REID | style: quiet, methodical]
+Same angle. Same distance from the loom. He didn't just leave her here — he set her here.
+
+[REID | style: murmured, drawn in]
+Like it mattered where the light fell.
+
+[NARRATOR]
+He circles the tableau a second time, then a third, his flashlight tracing the same arc it traced the night before.
+
+[SFX: flashlight click]
+
+[REID | style: hushed, fascinated despite himself]
+Thread count. Machine spacing. He knew this floor before he ever stepped on it.
+
+[REID | style: careful, testing the words aloud]
+"A single, unfinished work." That's what it feels like. Not a crime scene. A — draft.
+
+[SFX: faint metallic creak, old machinery settling]
+
+[REID | style: sharp, startled, then steadying himself]
+Just the building.
+
+[NARRATOR]
+He crouches near the base of the loom, close enough now that a passing patrol would ask why the lead detective is touching evidence with a bare hand.
+
+[REID | style: almost a whisper, private fascination]
+Right here. This is where he stood to look at her. Not to hide her. To look at her.
+
+[REID | style: quiet realization, unsettled]
+I keep coming back to the same spot he did.
+
+[SFX: distant train horn, far off]
+
+[REID | style: firmer, self-correcting, but not entirely convinced]
+Get up. Log the time. Go home.
+
+[NARRATOR]
+He doesn't move yet. He stays another minute, tracing the arrangement with his eyes the way another man might trace a photograph of someone he misses.
+
+[REID | style: barely audible]
+What am I supposed to see that I haven't already seen twice?
+
+[SFX: distant siren, fading]
+
+[NARRATOR]
+Only when the sky through the high windows starts to gray does Reid finally straighten, brushing dust from his knee, and slip out the way he came — before the first uniform arrives to find the scene exactly as he left it.
+
+--- PART 14 ---
+
+[NARRATOR]
+Downtown Diner, well past midnight. The investigation thread continues — Reid sits alone in the back booth where he sat with Park hours earlier, now empty except for him and a scatter of late-night regulars.
+
+[SFX: diner ambience, low chatter, clinking cups]
+
+[REID | style: hollow, talking half to himself]
+Anniversary. Four months out. He knew that before I did.
+
+[SFX: phone buzzing on table]
+
+[REID | style: flat, tired]
+Mia.
+
+[NARRATOR]
+He looks at the screen long enough to read her name, then turns the phone face-down without answering.
+
+[REID | style: quiet, almost rehearsed]
+Later. I'll call her later.
+
+[SFX: chair scraping, footsteps approaching then receding quickly]
+
+[NARRATOR]
+A figure moves past the booth — close, deliberate, gone before Reid fully turns his head.
+
+[REID | style: startled, sharp intake]
+Hey—
+
+[SFX: door chime, brief]
+
+[NARRATOR]
+By the time Reid is on his feet, the door has already swung shut. The diner absorbs the moment like nothing happened — a waitress refilling a cup two booths down, a trucker reading a paper, no one else reacting at all.
+
+[REID | style: low, controlled]
+Nobody saw him. Nobody's going to have seen him.
+
+[NARRATOR]
+Reid sits back down. In his hand, an envelope that wasn't there a moment ago — same paper stock, same careful fold as the first.
+
+[REID | style: barely audible]
+Right here. In the middle of a room full of people. Like it's nothing.
+
+[SFX: envelope tearing, paper unfolding]
+
+[REID | style: guarded, reading under his breath | speed: 0.9]
+Same hand. Same ink.
+
+[NARRATOR]
+He reads it once, then again, his face giving away nothing to anyone glancing over.
+
+[REID | style: cold, decisive]
+Nobody needs to know about this yet. Not until I understand what it says.
+
+[NARRATOR]
+He folds the note along its original crease and slides it into his jacket, phone still face-down on the table, untouched.
+
+[REID | style: quiet, to himself]
+He wants me to sit with it alone. Fine. I can do alone.
+
+[SFX: coffee cup set down firmly]
+
+[NARRATOR]
+Reid doesn't call it in. He doesn't call Park, doesn't call Hollis, doesn't turn the phone back over to see if Mia tried again. He sits with the note the way a man sits with something he isn't ready to name out loud — not yet, not here, not to anyone but himself.
+
+--- PART 15 ---
+
+[NARRATOR]
+Back at the precinct, past midnight, the bullpen sits empty. Reid works alone at his desk with the note passed to him at the diner.
+
+[REID | style: quiet, methodical, murmuring to himself]
+Numbers first. Then the offset.
+
+[SFX: pen scratching on paper]
+
+[REID | style: controlled, tension building]
+Four. Eleven. Twenty-two years... no. Wait.
+
+[REID | style: voice flattening with dread | speed: 0.85]
+That's not a case date.
+
+[NARRATOR]
+He checks the figures twice against the calendar pinned inside his desk drawer.
+
+[REID | style: barely audible, hollowed out]
+That's our anniversary. Mine and Mia's.
+
+[SFX: chair creaking as he goes still]
+
+[REID | style: cold realization | speed: 0.8]
+Nobody prints that in a paper. Nobody pulls that from a file.
+
+[REID | style: shaken, quietly unraveling]
+He's done his homework on me. Whoever's out there, they picked the lead on this case and dug until they found something that would land.
+
+[NARRATOR]
+He folds the note along its original crease and slides it beneath a folder, unread by anyone else.
+
+[REID | style: low, resolved, guarded]
+Not tonight. Not to Hollis. Not to Park.
+
+[REID | style: barely holding steady]
+Not to her.
+
+[SFX: distant clock ticking]
+
+[NARRATOR]
+He sits alone with what he now half-understands, and says nothing more. Somewhere across the city, a torn receipt is about to surface — and put an innocent name in the killer's place.
+

@@ -1,0 +1,94 @@
+--- SCENE 1 ---
+1. Chen pulls up the intrusion fragment again, this time cross-referencing it against an archive of closed-case signatures instead of active threat databases.
+2. A partial match surfaces to a code alias retired years ago, one he vaguely remembers from a case he didn't work directly.
+3. He almost dismisses it as noise, since the alias predates any known cybercrime activity by the same actor.
+4. The system links the alias to an old forum post referencing the Harrow Warehouse settlement.
+5. Chen sits with the coincidence, unable yet to explain why a decade-old civil settlement would intersect a live hijacking signal.
+6. The audience recognizes this as Chen's first real step toward the truth, still miles from realizing it's personal.
+
+--- SCENE 2 ---
+1. Chen pulls the archived case file on Harrow, expecting a routine civil dispute and finding four names redacted for the deceased workers.
+2. He notes Vance Development held the contract and that the case closed via sealed settlement with no criminal referral.
+3. He flags Elias Vance's name without yet connecting it to tonight's hijacked vehicle.
+4. He does not yet see Marcus Kane's name; the file's inspection paperwork was never part of the settlement record.
+5. Chen decides the Harrow angle is worth another hour before he takes it to his captain, still unsure if it's relevant or a dead end.
+
+--- SCENE 3 ---
+1. Wei Su enters the dispatch building and asks the front desk clerk for Delia Reyes by name, not by department.
+2. The clerk, unfamiliar with him, asks the nature of his visit; Wei Su gives a vague answer about "an old matter."
+3. Delia is paged, surprised anyone would come in person asking for her specifically outside a work context.
+4. She hesitates before agreeing to see him, some instinct telling her this isn't administrative.
+5. The audience, holding Wei Su's knowledge of Marcus's name from the salvaged paperwork, understands this visit is not coincidental.
+
+--- SCENE 4 ---
+1. Wei Su sits across from Delia and sets down a worn folder he's clearly kept intact for years.
+2. He opens it to reveal old inspection paperwork from Harrow Warehouse, edges softened from handling.
+3. Delia asks where he got it; he deflects, saying only that he "kept what others wanted forgotten."
+4. He does not reveal the contact inside the original investigation who supplied him copies, protecting that source even now.
+5. Delia notices a signature line on one page, smudged and illegible, without yet grasping its significance.
+
+--- SCENE 5 ---
+1. Wei Su tells Delia that his son Daniel died in the Harrow collapse, working an extra shift as a favor.
+2. He states plainly that no one was ever charged, and that the settlement bought silence rather than accountability.
+3. Delia, unprepared for the weight of this, tries to keep her tone professional while absorbing it personally.
+4. Wei Su's version implies deliberate negligence by the company, a claim Delia isn't ready to fully accept.
+5. Her wrong belief takes root here — she assumes his account must be shaded by grief and bitterness rather than literal fact.
+6. Neither of them yet knows the collapse connects to the man Delia has been quietly tracking all night.
+
+--- SCENE 6 ---
+1. Wei Su turns a page in the folder and points to a name typed cleanly above the smudged signature: Marcus Kane, site foreman.
+2. Delia goes still, recognizing the name instantly as her friend of a decade.
+3. She asks Wei Su to repeat it, needing to hear it twice before she can process it.
+4. Wei Su, watching her reaction, realizes she didn't know — confirming for him that Marcus never told her either.
+5. Delia says nothing about the fare she's been tracking all night, not yet connecting the paperwork to the man in the sedan.
+6. The audience recognizes this as the moment her two separate nights — friendship and duty — begin to collide.
+
+--- SCENE 7 ---
+1. Back in the sedan, the silence after the completed task shifts into something heavier for Elias.
+2. He stares out the window at nothing in particular, no longer performing composure for anyone watching.
+3. Marcus notices the change but doesn't yet name it, sensing something in Elias is loosening.
+4. The quiet stretches long enough that it starts to feel like a held breath rather than calm.
+5. Neither man speaks first, each privately bracing for whatever comes next.
+
+--- SCENE 8 ---
+1. Marcus breaks the silence with the question he's steered around all night: what really happened at Harrow.
+2. He frames it carefully, still not revealing that he already suspects the answer.
+3. Asking it costs him something, since it risks exposing how much he already knows.
+4. Elias flinches at the directness, having expected further evasion, not confrontation.
+5. Marcus watches him for a reaction, unaware he's about to get more honesty than he bargained for.
+
+--- SCENE 9 ---
+1. Elias tries to deflect once, out of old habit, then stops mid-sentence.
+2. Something in the night's pressure — the clock, the shared task, the exhaustion — breaks his usual control.
+3. He admits, in one unguarded sentence, that he knew about the steel and ordered it anyway.
+4. The admission is the first time in ten years he's said it aloud to another person.
+5. He immediately looks like he wants to take it back, but the words are already out.
+6. Marcus absorbs the confirmation of what he'd only suspected, his own face carefully unreadable.
+
+--- SCENE 10 ---
+1. Marcus watches Elias's composure fully give out, the wealthy, controlled man reduced to someone smaller.
+2. He feels something close to vindication, but it's tangled with a guilt he doesn't let show.
+3. He says nothing about his own falsified sign-off, letting Elias's confession stand as the whole truth in the room.
+4. His wrong belief hardens further — he tells himself Elias's admission is enough, that his own silence doesn't need to match it.
+5. The audience, holding both men's hidden truths, recognizes the imbalance Marcus is knowingly preserving.
+
+--- SCENE 11 ---
+1. Chen, weighing the Harrow lead against how thin his evidence still is, decides to act before he loses the signal's trail.
+2. He places a call outside his normal chain of command, reaching toward a contact who can move faster than his captain would allow.
+3. He frames the call strictly around the technical anomaly in the intrusion signature, leaving out his half-formed personal theory about Vance Development.
+4. The call puts his standing on the line if the lead goes nowhere, a risk he accepts without hesitation.
+5. He has no idea this move is about to put him in the same orbit as Delia's parallel, unauthorized tracking.
+
+--- SCENE 12 ---
+1. Cipher, monitoring the cabin's audio, registers Elias's confession the moment it lands.
+2. Something in her calculated certainty shifts — this is the exact admission her whole plan has been aimed at producing.
+3. She notes, privately, that Marcus's silence about his own sign-off is more complete than she'd anticipated even this late.
+4. She gives no outward sign through the modulated voice, keeping her recalibration entirely hidden from both men.
+5. The audience understands she is now recalculating whether Marcus will ever confess unprompted, or whether she'll have to force it herself.
+
+--- SCENE 13 ---
+1. The narrator notes that one of the night's two buried truths has finally surfaced, spoken aloud for the first time in a decade.
+2. Elias's confession sits in the cabin between them, changing the air but not yet the outcome.
+3. Marcus's own signature on the falsified report remains exactly where it's been all night: unspoken.
+4. The narrator draws the line between the two men's silences — one broken, one still intact — without either fully grasping the difference.
+5. The episode closes on Cipher's private recalculation, unseen by either man, of how much further the night still has to go.

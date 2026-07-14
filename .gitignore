@@ -21,3 +21,9 @@ data/archive/
 
 .claude/settings.local.json
 cloud/.last_instance_id
+
+# Laufzeit-Zustand der Cloud-Automation (maschinenlokal, wie .last_instance_id):
+# der Pool gestoppter, fertig eingerichteter vast.ai-Instanzen.
+cloud/.instance_pool
+# Lock-Datei des nebenläufigen figure_history-Zugriffs.
+data/*.lock

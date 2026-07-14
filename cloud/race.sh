@@ -1,14 +1,19 @@
 #!/bin/bash
-# Mietet mehrere RTX-5090-Instanzen GLEICHZEITIG (Standard: 5), wartet bis
-# der Gradio-Server der ERSTEN tatsächlich antwortet, behält nur diese und
+# Mietet mehrere RTX-5090-Instanzen GLEICHZEITIG (Standard: 5, per
+# race_pick_offers.py aus einer Preisspanne + PCIe-Bandbreite + bekannt
+# zuverlässigem Host ausgewählt statt stur der billigsten), wartet bis der
+# Gradio-Server der ERSTEN tatsächlich antwortet, behält nur diese und
 # löscht den Rest sofort wieder. Löst das Problem einzelner Hosts, die beim
 # Docker-Pull/Setup hängen bleiben oder ewig brauchen -- kostet nur ein paar
 # Minuten Parallel-Miete auf den "Verlierern" (typisch < $0.50 insgesamt).
+# Für den normalen Vertonungs-Workflow get_ready_instance.sh nutzen -- das
+# probiert erst den Pool bereits fertig eingerichteter Instanzen und ruft
+# race.sh nur als Fallback auf, wenn der komplette Pool nicht bereit wird.
 #
 # Nutzung: ./race.sh [anzahl]   (Standard: 5)
 set -e
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-TEMPLATE_HASH="5e86232eb1812a3891eae5329cb2b25b"
+TEMPLATE_HASH="c2352e9ebc56ffd4b83b51c6d229363a"
 N="${1:-5}"
 MAX_WAIT_MINUTES=20
 
@@ -57,7 +62,10 @@ for round in $(seq 1 "$ROUNDS"); do
   RAW=$(vastai show instances-v1 --raw 2>/dev/null)
   for IID in "${INSTANCE_IDS[@]}"; do
     URL=$(echo "$RAW" | python3 "${SCRIPT_DIR}/get_gradio_url.py" "$IID" 2>/dev/null) || continue
-    if [ -n "$URL" ] && curl -sf -o /dev/null -m 3 "$URL"; then
+    # -m 10 statt frueher 3: die Gradio-Startseite braucht ueber die
+    # oeffentliche Adresse beobachtet ~5s zum Antworten -- ein 3s-Timeout
+    # meldete einen laengst fertigen Server faelschlich als "nicht bereit".
+    if [ -n "$URL" ] && curl -sf -o /dev/null -m 10 "$URL"; then
       WINNER="$IID"
       WINNER_URL="$URL"
       break 2

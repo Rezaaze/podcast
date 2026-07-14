@@ -119,16 +119,6 @@ def build_section_titles(num_chunks, parts_per_section):
     return titles
 
 
-def unique_slug(title: str) -> str:
-    base = paths.slugify(title)
-    slug = base
-    counter = 2
-    while slug in paths.list_series():
-        slug = f"{base}_{counter}"
-        counter += 1
-    return slug
-
-
 def main():
     parser = argparse.ArgumentParser(
         description="Bestehenden Text (Ordner oder Datei) als neue Serie importieren, ohne Claude Inhalt erfinden zu lassen."
@@ -163,7 +153,7 @@ def main():
     print(f"   → {len(sources)} Episode(n) erkannt.")
 
     persona = "an experienced audiobook producer adapting existing prose for podcast listeners"
-    slug = unique_slug(args.series_title)
+    slug = paths.unique_slug(args.series_title)
     series = paths.Series(slug).ensure_dirs()
 
     episodes = []

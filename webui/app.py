@@ -87,6 +87,76 @@ def api_pf_series_settings():
     return ("", 204)
 
 
+ASSET_STEMS = ("intro", "outro", "transition")
+ASSET_EXTS = (".mp3", ".wav", ".m4a", ".flac")
+
+
+@app.get("/api/pf/series/assets")
+def api_pf_series_assets():
+    """Welche optionalen Audio-Assets (intro/outro/transition) die Serie
+    gerade hat — podcast_maker.find_audio_asset() liest dieselben Dateien
+    aus series/<slug>/assets/ direkt vor dem Merge."""
+    slug = request.args.get("series") or read_latest_slug()
+    series_dir = series_dir_for(slug)
+    if not series_dir:
+        return jsonify(error=f"Unbekannte Serie: {slug}"), 400
+    assets_dir = os.path.join(series_dir, "assets")
+    found = {}
+    for stem in ASSET_STEMS:
+        found[stem] = next(
+            (f"{stem}{ext}" for ext in ASSET_EXTS
+             if os.path.exists(os.path.join(assets_dir, f"{stem}{ext}"))),
+            None)
+    return jsonify(assets=found)
+
+
+@app.post("/api/pf/series/asset")
+def api_pf_series_asset_upload():
+    """Lädt intro/outro/transition hoch und ersetzt eine evtl. vorhandene
+    Version mit ANDERER Endung — sonst würde find_audio_asset() dank fester
+    Endungs-Priorität (.mp3 vor .wav vor ...) weiter die alte Datei
+    aufheben, obwohl der Upload eine neue Endung mitbrachte."""
+    slug = request.form.get("slug", "")
+    stem = request.form.get("stem", "")
+    series_dir = series_dir_for(slug)
+    if not series_dir:
+        return jsonify(error=f"Unbekannte Serie: {slug}"), 400
+    if stem not in ASSET_STEMS:
+        return jsonify(error=f"Unbekanntes Asset: {stem}"), 400
+    file = request.files.get("file")
+    if not file or not file.filename:
+        return jsonify(error="Keine Datei hochgeladen"), 400
+    ext = os.path.splitext(file.filename)[1].lower()
+    if ext not in ASSET_EXTS:
+        return jsonify(error=f"Nicht unterstütztes Format {ext or '(keins)'} "
+                             f"— erlaubt: {', '.join(ASSET_EXTS)}"), 400
+    assets_dir = os.path.join(series_dir, "assets")
+    os.makedirs(assets_dir, exist_ok=True)
+    for old_ext in ASSET_EXTS:
+        old_path = os.path.join(assets_dir, f"{stem}{old_ext}")
+        if os.path.exists(old_path):
+            os.remove(old_path)
+    file.save(os.path.join(assets_dir, f"{stem}{ext}"))
+    return jsonify(filename=f"{stem}{ext}")
+
+
+@app.delete("/api/pf/series/asset")
+def api_pf_series_asset_delete():
+    slug = request.args.get("slug", "")
+    stem = request.args.get("stem", "")
+    series_dir = series_dir_for(slug)
+    if not series_dir:
+        return jsonify(error=f"Unbekannte Serie: {slug}"), 400
+    if stem not in ASSET_STEMS:
+        return jsonify(error=f"Unbekanntes Asset: {stem}"), 400
+    assets_dir = os.path.join(series_dir, "assets")
+    for ext in ASSET_EXTS:
+        p = os.path.join(assets_dir, f"{stem}{ext}")
+        if os.path.exists(p):
+            os.remove(p)
+    return ("", 204)
+
+
 @app.post("/api/pf/series/discard")
 def api_pf_series_discard():
     """Verwirft eine FRISCH erzeugte Serie wieder (Review-Schritt nach

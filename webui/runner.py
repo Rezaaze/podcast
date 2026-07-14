@@ -58,10 +58,13 @@ def build_argv(command_id: str, params: dict) -> tuple[list[str] | None, str | N
     # puffert Python bei Pipe-Redirection (statt TTY) blockweise statt
     # zeilenweise -> print()-Ausgaben landen erst nach Prozessende oder
     # vollem Puffer bei uns, das SSE-Log wirkt "tot" obwohl der Job läuft.
+    # Nicht-Python-Interpreter (z.B. bash, wo "-u" nounset heißt) setzen
+    # "interpreter_args" in COMMANDS explizit.
+    interp_args = cmd.get("interpreter_args", ["-u"])
     if "module" in cmd:
-        argv = [cmd["interpreter"](), "-u", "-m", cmd["module"], *cmd.get("fixed_args", [])]
+        argv = [cmd["interpreter"](), *interp_args, "-m", cmd["module"], *cmd.get("fixed_args", [])]
     else:
-        argv = [cmd["interpreter"](), "-u", cmd["script"], *cmd.get("fixed_args", [])]
+        argv = [cmd["interpreter"](), *interp_args, cmd["script"], *cmd.get("fixed_args", [])]
 
     for entry in schema:
         kind = entry[0]
@@ -191,25 +194,42 @@ class Job:
             checkpoint_thread = threading.Thread(target=self._poll_checkpoints, daemon=True)
             checkpoint_thread.start()
 
-        buf = ""
-        assert self.process.stdout is not None
-        while True:
-            chunk = self.process.stdout.read(1)
-            if chunk == "" and self.process.poll() is not None:
-                break
-            if chunk in ("\n", "\r"):
-                if buf.strip():
-                    self._handle_line(buf)
-                buf = ""
-            elif chunk:
-                buf += chunk
-        if buf.strip():
-            self._handle_line(buf)
+        try:
+            buf = ""
+            assert self.process.stdout is not None
+            while True:
+                chunk = self.process.stdout.read(1)
+                if chunk == "" and self.process.poll() is not None:
+                    break
+                if chunk in ("\n", "\r"):
+                    if buf.strip():
+                        self._handle_line(buf)
+                    buf = ""
+                elif chunk:
+                    buf += chunk
+            if buf.strip():
+                self._handle_line(buf)
 
-        self.returncode = self.process.wait()
-        self.state = "done" if self.returncode == 0 else "error"
-        if checkpoint_thread:
-            self._stop_polling = True
+            self.returncode = self.process.wait()
+            self.state = "done" if self.returncode == 0 else "error"
+        except Exception as exc:
+            # Ohne dieses Netz stirbt der Job-Thread hier stillschweigend:
+            # state bleibt "running", nie kommt ein "done"-Event an — jeder
+            # SSE-Subscriber (stream() blockiert auf q.get()) hängt für immer.
+            self.state = "error"
+            self._log(f"❌ Interner Fehler beim Lesen der Job-Ausgabe: {exc}")
+            if self.process.poll() is None:
+                try:
+                    if os.name != "nt":
+                        os.killpg(os.getpgid(self.process.pid), signal.SIGTERM)
+                    else:
+                        self.process.terminate()
+                except (ProcessLookupError, PermissionError, OSError):
+                    pass
+            self.returncode = self.process.poll()
+        finally:
+            if checkpoint_thread:
+                self._stop_polling = True
 
         # done-Event: bei AUTO_TTS_COMMANDS erst nach dem TTS-Stop in run()
         # emittieren, damit der Log-Stream sauber durchläuft; sonst hier.
@@ -251,6 +271,10 @@ class Job:
             time.sleep(1)
 
 
+MAX_RETAINED_JOBS = 100  # verhindert unbegrenztes Wachstum von _jobs über die Serverlaufzeit
+KILL_ESCALATE_SECONDS = 5  # SIGTERM -> SIGKILL-Frist für Prozessbäume, die SIGTERM ignorieren
+
+
 class JobRegistry:
     def __init__(self):
         self._jobs: dict[str, Job] = {}
@@ -267,8 +291,6 @@ class JobRegistry:
 
     def start(self, command_id: str, params: dict) -> str:
         argv, cwd = build_argv(command_id, params)
-        if self.is_running(command_id):
-            raise ValidationError(f"'{command_id}' läuft bereits")
 
         job_id = uuid.uuid4().hex[:12]
         kind = COMMANDS[command_id]["kind"]
@@ -278,31 +300,81 @@ class JobRegistry:
             if series_dir:
                 checkpoints_dir = os.path.join(series_dir, OUTPUT_RELPATH, ".checkpoints")
         job = Job(job_id, command_id, argv, cwd, kind, checkpoints_dir=checkpoints_dir)
+
+        # Check-and-register muss ATOMAR sein (ein Lock-Block, nicht
+        # is_running() + separater with-Block) — sonst können zwei parallele
+        # Requests für dieselbe command_id beide die Prüfung passieren, bevor
+        # eine von beiden sich einträgt, und zwei Subprozesse für denselben
+        # Slot spawnen.
         with self._lock:
+            running_id = self._running_by_command.get(command_id)
+            running_job = self._jobs.get(running_id) if running_id else None
+            if running_job and running_job.state == "running":
+                raise ValidationError(f"'{command_id}' läuft bereits")
             self._jobs[job_id] = job
             self._running_by_command[command_id] = job_id
+            self._prune_locked()
 
         thread = threading.Thread(target=job.run, daemon=True)
         thread.start()
         return job_id
 
+    def _prune_locked(self):
+        """Entfernt die ältesten ABGESCHLOSSENEN Jobs, sobald _jobs über
+        MAX_RETAINED_JOBS wächst — jeder Job trägt bis zu MAX_BUFFER_LINES
+        Zeilen Buffer, ohne diese Grenze wächst der Speicherverbrauch über
+        die Serverlaufzeit unbegrenzt. Muss unter self._lock aufgerufen
+        werden. Läuft nie laufenden Jobs weg."""
+        if len(self._jobs) <= MAX_RETAINED_JOBS:
+            return
+        finished = sorted(
+            (j for j in self._jobs.values() if j.state != "running"),
+            key=lambda j: j.started_at,
+        )
+        excess = len(self._jobs) - MAX_RETAINED_JOBS
+        for job in finished[:excess]:
+            del self._jobs[job.job_id]
+
     def get(self, job_id: str) -> Job | None:
         return self._jobs.get(job_id)
+
+    @staticmethod
+    def _signal_process_group(process: subprocess.Popen, sig: int):
+        """Schickt sig an die ganze Prozessgruppe (siehe start_new_session in
+        _run_subprocess — batch.py/generate_episode.py starten selbst wieder
+        Subprozesse, ein Signal nur an den direkten Kindprozess ließe die
+        Enkel weiterlaufen). Fällt auf den einzelnen Prozess zurück, wenn die
+        Gruppe nicht (mehr) ansprechbar ist. Nur für os.name != "nt" — unter
+        Windows gibt es keine Prozessgruppen-Signale, siehe kill()."""
+        try:
+            os.killpg(os.getpgid(process.pid), sig)
+        except (ProcessLookupError, PermissionError, OSError):
+            try:
+                process.terminate()
+            except (ProcessLookupError, OSError):
+                pass
 
     def kill(self, job_id: str) -> bool:
         job = self._jobs.get(job_id)
         if not job or not job.process:
             return False
-        # Ganze Prozessgruppe beenden (siehe start_new_session in
-        # _run_subprocess) — terminate() allein ließe von batch.py/
-        # generate_episode.py gestartete Kindprozesse weiterlaufen.
-        try:
-            if os.name != "nt":
-                os.killpg(os.getpgid(job.process.pid), signal.SIGTERM)
-            else:
-                job.process.terminate()
-        except (ProcessLookupError, PermissionError, OSError):
+        if os.name != "nt":
+            self._signal_process_group(job.process, signal.SIGTERM)
+        else:
             job.process.terminate()
+
+        def _escalate():
+            time.sleep(KILL_ESCALATE_SECONDS)
+            if job.process.poll() is None:
+                if os.name != "nt":
+                    self._signal_process_group(job.process, signal.SIGKILL)
+                else:
+                    try:
+                        job.process.kill()
+                    except (ProcessLookupError, OSError):
+                        pass
+
+        threading.Thread(target=_escalate, daemon=True).start()
         return True
 
     def snapshot(self) -> dict:

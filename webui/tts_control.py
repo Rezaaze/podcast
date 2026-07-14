@@ -22,6 +22,7 @@ import signal
 import socket
 import subprocess
 import time
+import urllib.error
 import urllib.request
 
 from config import PF_DIR, current_episodes_json
@@ -126,27 +127,64 @@ def is_port_listening(port: int) -> bool:
         return sock.connect_ex(("127.0.0.1", port)) == 0
 
 
+def _probe_health(port: int) -> str:
+    """'ready': /health antwortet 200. 'no-endpoint': der Server antwortet per
+    HTTP, kennt aber kein /health (z.B. anderes Backend auf dem Port) — dann
+    bleibt der offene Port das beste verfügbare Signal. 'loading': Verbindung
+    schlägt fehl oder 5xx — Port offen, Modell lädt noch."""
+    try:
+        with urllib.request.urlopen(f"http://127.0.0.1:{port}/health", timeout=5) as resp:
+            return "ready" if resp.status == 200 else "no-endpoint"
+    except urllib.error.HTTPError as e:
+        return "loading" if e.code >= 500 else "no-endpoint"
+    except Exception:
+        return "loading"
+
+
+def _wait_for_health(port: int, timeout: float, log) -> bool:
+    """Nach dem offenen Port aufs GELADENE Modell warten: der Port geht auf,
+    bevor der Health-Endpoint gesund ist (podcast_maker retried deshalb bisher
+    blind 3×10s — bei langsamem Modell-Load ein falsches 'Server tot')."""
+    deadline = time.time() + timeout
+    loading_reported = False
+    while time.time() < deadline:
+        status = _probe_health(port)
+        if status == "ready":
+            log("✅ Qwen3-TTS ist bereit (Health-Endpoint antwortet).")
+            return True
+        if status == "no-endpoint":
+            log("Kein /health-Endpoint auf diesem Server — offener Port gilt als bereit.")
+            return True
+        if not loading_reported:
+            log("Port offen, Modell lädt noch — warte auf /health ...")
+            loading_reported = True
+        time.sleep(3)
+    log("❌ Qwen3-TTS: Health-Endpoint wurde nicht rechtzeitig bereit (Timeout).")
+    return False
+
+
 def start_tts(log=print) -> bool:
     """Qwen3-TTS ist in Pinokio als Auto-Start-App konfiguriert (startet von
     selbst, sobald Pinokio hochfährt). Diese Funktion muss also nur Pinokio
-    öffnen (falls nicht schon offen) und warten, bis der Port erreichbar ist.
-    Meldet sich der Port nach einer Weile trotzdem nicht, wird 'pterm run'
-    als Fallback nachgeschoben (z.B. falls Auto-Start mal deaktiviert war)."""
+    öffnen (falls nicht schon offen) und warten, bis der Port erreichbar ist
+    UND der Health-Endpoint das geladene Modell bestätigt. Meldet sich der
+    Port nach einer Weile trotzdem nicht, wird 'pterm run' als Fallback
+    nachgeschoben (z.B. falls Auto-Start mal deaktiviert war)."""
     if not ensure_pinokio_running(log):
         return False
 
     port = get_tts_port()
     if is_port_listening(port):
         log(f"Qwen3-TTS läuft bereits auf Port {port}.")
-        return True
+        return _wait_for_health(port, 60, log)
 
     log("Warte auf Qwen3-TTS (Auto-Start durch Pinokio) ...")
     fallback_triggered = False
     deadline = time.time() + TTS_START_TIMEOUT
     while time.time() < deadline:
         if is_port_listening(port):
-            log("✅ Qwen3-TTS ist bereit.")
-            return True
+            log(f"Port {port} offen.")
+            return _wait_for_health(port, max(30.0, deadline - time.time()), log)
         # Nach einem Drittel der Wartezeit ohne Erfolg: explizit anstoßen,
         # falls Auto-Start aus irgendeinem Grund nicht gegriffen hat.
         if not fallback_triggered and time.time() > deadline - (TTS_START_TIMEOUT * 2 / 3):

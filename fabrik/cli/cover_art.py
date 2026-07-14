@@ -34,11 +34,14 @@ from fabrik.writing.script_writer import call_claude, MAX_RETRIES, RETRY_DELAY
 
 COVER_FILENAME = "cover.png"
 
-# Manuell bestätigter Zielort für den automatischen Kopiervorgang — dorthin
-# legt der Nutzer Cover bisher von Hand (siehe z.B. "Palaces of the Mind The
-# Architects of Madness.jpg" im Wurzelverzeichnis). Kein Absturz, falls die
-# Platte beim Lauf nicht eingesteckt ist — nur eine Warnung, siehe unten.
+# Manuell bestätigter Zielort für den automatischen Kopiervorgang. Auf der
+# Platte pflegt der Nutzer pro Serie einen Ordner "Podcasts/<Serientitel>/"
+# (mit den Episoden darin) — das Cover gehört DORT hinein, nicht flach ins
+# Wurzelverzeichnis (dort lagen früher fälschlich kopierte Cover wie
+# "Vanishing Signal.png"). Kein Absturz, falls die Platte beim Lauf nicht
+# eingesteckt ist — nur eine Warnung, siehe unten.
 EXTERNAL_DRIVE_ROOT = "/Volumes/NO NAME"
+EXTERNAL_PODCASTS_SUBDIR = "Podcasts"
 
 _ILLEGAL_FILENAME_CHARS = re.compile(r'[/\\:*?"<>|]')
 
@@ -79,11 +82,17 @@ def build_prompt(data):
         f"- Must read clearly as a small thumbnail: one strong, clear focal "
         f"point, bold silhouette and composition — not a busy wide scene "
         f"full of small detail that disappears at thumbnail size.\n"
-        f"- NO text, NO typography, NO letters or words anywhere in the "
-        f"image — the title is added separately as metadata. NO close-up "
-        f"human faces (AI-generated faces read as uncanny at thumbnail "
-        f"size) — implied presence, silhouette, or a symbolic object "
-        f"instead.\n"
+        f"- The show's title, \"{series_title}\", must appear as tasteful "
+        f"typography integrated into the composition (movie-poster style) — "
+        f"placed where it stays legible at thumbnail size (e.g. lower third, "
+        f"against a calm area of the image, not over busy detail), in a "
+        f"typeface that matches the hand-painted lo-fi mood (a clean serif "
+        f"or display face, not a generic sans-serif). Spell it EXACTLY as "
+        f"given, nothing added or changed. This is the ONLY text allowed in "
+        f"the image — no other words, letters, or logos anywhere else.\n"
+        f"- NO close-up human faces (AI-generated faces read as uncanny at "
+        f"thumbnail size) — implied presence, silhouette, or a symbolic "
+        f"object instead.\n"
         f"- One paragraph, no camera jargon lists, no numbered options.\n\n"
         f"Answer with EXACTLY this and nothing else — no preamble, no "
         f"markdown, just the prompt text itself."
@@ -97,8 +106,10 @@ def copy_to_external_drive(src_path, series_title):
               f"vorhandene Cover wird dabei nur kopiert, nicht neu generiert).")
         return
 
-    dest_name = f"{sanitize_filename(series_title) or 'cover'}.png"
-    dest_path = os.path.join(EXTERNAL_DRIVE_ROOT, dest_name)
+    safe_title = sanitize_filename(series_title) or "cover"
+    series_folder = os.path.join(EXTERNAL_DRIVE_ROOT, EXTERNAL_PODCASTS_SUBDIR, safe_title)
+    os.makedirs(series_folder, exist_ok=True)
+    dest_path = os.path.join(series_folder, f"{safe_title}.png")
     shutil.copy2(src_path, dest_path)
     print(f"Kopiert nach: {dest_path}")
 

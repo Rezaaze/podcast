@@ -61,7 +61,7 @@ Tag rules:
 - NEVER write stage directions, camera notes, translations in parentheses, pinyin brackets, or any other meta text outside this tag system (SFX/NOTE included). Pinyin may only appear where the HOST explicitly teaches it as spoken content, or inside a [NOTE: ...] tag.
 
 LENGTH BUDGET:
-Each of the {{PARTS_TOTAL}} PARTS must be between {{WORDS_TARGET}} length units. One Chinese character = one unit, one English word = one unit; speaker tags, SFX lines and NOTE lines do not count. This is a STRICT range: never fewer than {{WORDS_MIN}}, never more than {{WORDS_MAX}} units per PART. Write dense, purposeful content — if you run over budget, cut ruthlessly instead of padding.
+Each of the {{PARTS_TOTAL}} PARTS must be {{WORDS_TARGET}} length units long. One Chinese character = one unit, one English word = one unit; speaker tags, SFX lines and NOTE lines do not count. This is a STRICT range: never fewer than {{WORDS_MIN}}, never more than {{WORDS_MAX}} units per PART. Write dense, purposeful content — if you run over budget, cut ruthlessly instead of padding.
 
 PEDAGOGY RULES:
 - Every Chinese line in the drama must be comprehensible from context, cognates, or prior teaching. If the plot genuinely needs a word or pattern beyond {{COURSE_SPEC}}'s level, you may use it — but ONLY if you also flag it with a [NOTE: ...] tag right after its first use (see tag rules above). Never leave an above-level item untagged and unexplained.
