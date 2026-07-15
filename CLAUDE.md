@@ -28,7 +28,7 @@ Getrennt nach Laufzeitumgebung und Kopplung, nicht nach Thema:
 
 | Bereich | Inhalt | Umgebung |
 |---|---|---|
-| `fabrik/core/` | paths, config, textproc, history, claude_cli | stdlib-only, überall importierbar |
+| `fabrik/core/` | paths, config, textproc, history, claude_cli, workspace | stdlib-only, überall importierbar |
 | `fabrik/writing/` | Skript-Generierung, Reviews, Beats | nur `claude` CLI |
 | `fabrik/audio/` | Vertonung, TTS-Backends, Mastering | `.venv` + ffmpeg |
 | `fabrik/cli/` | Entry-Points (`python3 -m fabrik.cli.<name>`) | je nach Ziel |
@@ -56,20 +56,35 @@ python3 -m fabrik.cli.generate_episode check|N|all [--jobs N] [--force] [--fix] 
 .venv/bin/python -m fabrik.cli.podcast_maker ep1.txt
 .venv/bin/python -m fabrik.cli.batch
 
-# 3b/3c. Bild-Prompts (claude CLI; PNGs direkt bei gesetztem OPENAI_API_KEY)
+# 3b/3c. Bild-Prompts + Cover (claude CLI; PNGs direkt bei gesetztem OPENAI_API_KEY)
 python3 -m fabrik.cli.character_prompts [--force]
 python3 -m fabrik.cli.location_prompts [--force]
+python3 -m fabrik.cli.cover_art [--force]         # 1 Cover/Serie, braucht OPENAI_API_KEY
+
+# 3d. Sounddesign (Cues kuratieren + Sounds erzeugen). sfx_plan läuft
+#     bei Drama-Serien (mode: drama) AUTOMATISCH in `generate_episode all`
+#     — vor batch, weil er die MP3 selbst verändert (Lücken vor Cues);
+#     Details: fabrik/cli/CLAUDE.md.
+#     Die ElevenLabs-Schritte laufen bewusst NIE automatisch (kosten pro
+#     Lauf Guthaben) — vor dem Lolfi-Render einmal starten. Alle drei haben
+#     auch Knöpfe im WebUI ("Sounddesign"-Step).
+python3 -m fabrik.cli.sfx_plan [--force]          # nur bei Einzel-Episoden nötig
+python3 -m fabrik.cli.sfx_assets [--force]        # One-Shots (ELEVENLABS_API_KEY)
+python3 -m fabrik.cli.location_ambience [--force] # Orts-Ambience (ELEVENLABS_API_KEY)
 
 # 4. Teaser-Highlights für TikTok/Reels (claude CLI; Rendern übernimmt Lolfi)
 python3 -m fabrik.cli.highlight_clips [--episode N] [--force]
 
-# Alle CLIs: --series <slug>, sonst data/series/LATEST.
+# Alle CLIs außer create_series/import_story (die legen neue Serien an und
+# schreiben LATEST): --series <slug>, sonst data/series/LATEST.
 
 # WebUI (steuert dieses Projekt + Lolfi), Port 5151
 ./start_webui.sh
 
 # Cloud-GPU (vast.ai) für schnelleres TTS — cloud/README.md
 cd cloud && ./rent.sh && ./status.sh   # ./stop.sh ./resume.sh ./destroy.sh
+./render_remote.sh [--only N] [--stop-after] [--local-master]  # Episoden remote vertonen
+./render_remote_parallel.sh [--max N]  # mehrere Instanzen parallel (race.sh holt Offers)
 ```
 
 ## Routing — wo die Details stehen
@@ -79,7 +94,7 @@ cd cloud && ./rent.sh && ./status.sh   # ./stop.sh ./resume.sh ./destroy.sh
 | episodes.json-Schema, validate_data, Voices-Regeln, claude_cli-Plumbing | `fabrik/core/CLAUDE.md` |
 | Skript-Generierung, Retry/Fallback, Wortbudget, Episode-Review, Beat-Layer | `fabrik/writing/CLAUDE.md` |
 | Vertonung, Backends, Checkpoints, Post-Merge-Safety, Timelines, Voice-Manifest, Seed | `fabrik/audio/CLAUDE.md` |
-| CLI-Flags, create_series-Verhalten, import_story, Bild-Prompt-CLIs | `fabrik/cli/CLAUDE.md` |
+| CLI-Flags, create_series-Verhalten, import_story, Bild-Prompt-CLIs, SFX-Kette (sfx_plan) | `fabrik/cli/CLAUDE.md` |
 | WebUI, COMMANDS/JobRegistry/SSE, Lolfi-Kopplung, UI-Gotchas | `webui/CLAUDE.md` |
 | Template-Anatomie, die 6 Formate, Accent-Casting, NARRATOR-Regel | `templates/CLAUDE.md` |
 | Beat-Layer-Design-Begründung | `docs/beat-layer-design.md` |
