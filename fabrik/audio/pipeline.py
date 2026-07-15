@@ -92,6 +92,25 @@ def normalize_chunk_loudness(segment, target_dbfs=CHUNK_NORM_TARGET_DBFS,
     return segment.apply_gain(gain)
 
 
+def postprocess_chunk(segment, text, speed=None):
+    """Die Per-Chunk-Nachbearbeitung, die JEDES frisch generierte Segment
+    durchlaufen muss, bevor es committed/gecheckpointet wird: Silence-Trim,
+    Plausibilitätsprüfung, Loudness-Angleichung. Als eigener Helper, damit
+    der Batch-Pfad (podcast_maker ruft backend.generate_chunk_batch direkt)
+    exakt dieselbe Kette anwendet wie der Einzel-Pfad (generate_chunk unten)
+    — sonst klingen Cloud-gebatchte Episoden anders als lokal vertonte
+    (Pegel-Sprünge, ungetrimmte Ränder) und schlechte Samples landen
+    ungeprüft im Checkpoint.
+
+    Gibt (segment, None) zurück oder (None, grund), wenn das Segment
+    verdächtig ist (Aufrufer regeneriert dann, statt es zu verwenden)."""
+    segment = trim_silence(segment)
+    suspicious, reason = is_suspicious_duration(segment, text, speed=speed)
+    if suspicious:
+        return None, reason
+    return normalize_chunk_loudness(segment), None
+
+
 def generate_chunk(backend, voice, text, style=None, speed=None):
     """Generiert Audio über das gewählte TTS-Backend mit Retry +
     Plausibilitätsprüfung.
@@ -113,10 +132,9 @@ def generate_chunk(backend, voice, text, style=None, speed=None):
     for attempt in range(1, MAX_RETRIES + 1):
         segment, error = backend.generate_chunk(voice, text, style=style, speed=speed)
         if segment is not None:
-            segment = trim_silence(segment)
-            suspicious, reason = is_suspicious_duration(segment, text, speed=speed)
-            if not suspicious:
-                return normalize_chunk_loudness(segment)
+            processed, reason = postprocess_chunk(segment, text, speed=speed)
+            if processed is not None:
+                return processed
             print(f"\n    Versuch {attempt}: Verdächtige Ausgabe – {reason}")
             # Server hat geantwortet, nur der Sample war schlecht — sofort erneut
             # versuchen statt zu warten (siehe Docstring oben).

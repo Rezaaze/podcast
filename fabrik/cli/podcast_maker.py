@@ -1260,17 +1260,37 @@ def main():
         _part_idx, _c_idx, job, _ckpt = p
         by_kind.setdefault(resolved_voices[job["role"]][0], []).append(p)
 
-    for kind_batchable in by_kind.values():
-        for batch_start in range(0, len(kind_batchable), chunk_concurrency):
+    for kind, kind_batchable in by_kind.items():
+        n_windows = (len(kind_batchable) + chunk_concurrency - 1) // chunk_concurrency
+        for win_idx, batch_start in enumerate(range(0, len(kind_batchable), chunk_concurrency), start=1):
             batch = kind_batchable[batch_start: batch_start + chunk_concurrency]
             batch_jobs = [(resolved_voices[job["role"]], job["text"], job["style"], job["speed"])
                           for _part_idx, _c_idx, job, _ckpt in batch]
+            # Eigene Zeile VOR dem Call: ein voller Batch braucht am Stück
+            # Minuten (Kaltstart der Instanz noch mehr) und der Call selbst
+            # gibt bis zum Ende nichts aus — ohne die Zeile sieht der Lauf
+            # im WebUI-Log solange wie ein Hänger aus.
+            print(f"\n  Batch {win_idx}/{n_windows} ({kind}, {len(batch)} Chunks) ...".ljust(90))
             start = time.time()
             batch_segments, batch_error = backend.generate_chunk_batch(batch_jobs)
             per_item_elapsed = (time.time() - start) / len(batch)
             for (part_idx, c_idx, job, ckpt), segment in zip(batch, batch_segments):
                 if segment is None and batch_error:
                     print(f"\n  Batch-Fehler: {batch_error}")
+                if segment is not None:
+                    # Gleiche Nachbearbeitung wie der Einzel-Pfad
+                    # (pipeline.generate_chunk): Trim, Plausibilität,
+                    # Loudness — sonst klingen gebatchte Chunks anders als
+                    # lokal generierte und ein schlechter Sample würde
+                    # ungeprüft gecheckpointet. Verdächtige Segmente werden
+                    # einzeln nachgeneriert (voller Retry-Pfad) — selten
+                    # genug, dass der sequenzielle Nachschuss egal ist.
+                    processed, reason = audio.postprocess_chunk(segment, job["text"], speed=job["speed"])
+                    if processed is None:
+                        print(f"\n  Batch-Chunk verdächtig ({reason}) – generiere einzeln nach ...")
+                        processed = audio.generate_chunk(backend, resolved_voices[job["role"]],
+                                                         job["text"], style=job["style"], speed=job["speed"])
+                    segment = processed
                 commit_result(part_idx, c_idx, job, ckpt, segment, per_item_elapsed)
 
     if rest:

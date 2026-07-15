@@ -28,7 +28,10 @@ Chunks derselben Stimme sind sonst hörbar.
   `/generate_voice_clone_batch` — Endpoints, die
   `cloud/onstart_qwen3_tts.sh` in die Cloud-App patcht). Echte
   GPU-Parallelität, ~13x schneller bei Batch=17; Checkpoint-Semantik pro
-  Chunk bleibt identisch.
+  Chunk bleibt identisch. Jedes Batch-Segment läuft durch dieselbe
+  Nachbearbeitung wie der Einzel-Pfad (`pipeline.postprocess_chunk`:
+  Trim, Plausibilität, Loudness) — verdächtige Segmente werden einzeln
+  via `generate_chunk` nachgeneriert statt ungeprüft gecheckpointet.
 - Anthologie-Merge nutzt ffmpeg stream-copy — Episoden werden nie
   re-encodiert oder voll in RAM geladen.
 - `batch.py` merged ab ≥2 fertigen Episoden zu `ANTHOLOGY_COMPLETE.mp3`;
