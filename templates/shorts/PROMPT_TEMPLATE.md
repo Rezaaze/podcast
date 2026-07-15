@@ -64,7 +64,7 @@ Tag rules:
 - Only roles from the cast list above. The tag stands alone on its own line; the speech follows on the next line(s).
 {{STYLE_TAG_RULE}}
 - "speed" is optional (0.5–2.0) for pacing (hesitation, urgency, a controlled/rehearsed delivery).
-- Sound effects go on their own line as [SFX: short description in English]. Never spoken — they become a cue sheet, NOT mixed into the audio automatically. Use AT MOST 2 per episode, only where a single sound genuinely lands a beat (a door, a phone buzzing). Never rely on SFX for orientation.
+- Sound effects go on their own line as [SFX: short description in English]. Never spoken — they never appear in the podcast MP3; a later step generates each sound and mixes it into the video render. Use AT MOST 2 per episode, only where a single sound genuinely lands a beat (a door, a phone buzzing). Cue ONLY what a microphone would actually pick up — never a held beat, tension, silence, or a character breathing/exhaling: those are not sounds. Never rely on SFX for orientation.
 - NEVER write stage directions, camera notes, or any other meta text outside this tag system.
 
 HOOK-FIRST OPENING (PART 1 only — this rule outranks everything else):

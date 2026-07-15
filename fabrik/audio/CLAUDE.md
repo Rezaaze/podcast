@@ -10,14 +10,25 @@ fabrik/core/textproc.py, schicken Chunks ans TTS-Backend, checkpointen jeden
 gerenderten Chunk als WAV (`stages/03_audio/output/.checkpoints/`,
 resumierbar wie die
 Skript-Generierung), dann LUFS-Mastering und Merge zu finaler MP3 mit ID3.
+Vor dem Merge gleicht `normalize_chunk_loudness` jeden Chunk auf
+`CHUNK_NORM_TARGET_DBFS=-20` an (max. +6 dB Gain) — Pegel-Sprünge zwischen
+Chunks derselben Stimme sind sonst hörbar.
 
 - Drei Backends (`audio.backend` in episodes.json): `rest` (Qwen3-TTS-MLX,
-  Apple Silicon, Default, **Pflicht für mode: drama**), `gradio`
-  (Windows/CUDA via gradio_client, nur narration; auch der Weg zu einer
-  gemieteten vast.ai-GPU), `kokoro` (mlx-audio, kein Style/Instruct).
+  Apple Silicon, Default), `gradio` (CUDA via gradio_client; der Weg zu
+  einer gemieteten vast.ai-GPU — kann inzwischen Built-in-Speaker UND
+  Voice-Clones, drama läuft darüber genauso wie über rest), `kokoro`
+  (mlx-audio, kein Style/Instruct).
 - Jeder TTS-Call ist voll zustandslos (voice/style/speed explizit pro
-  Chunk) — Generierungsreihenfolge hat keinen Einfluss auf Audioqualität,
-  Batching nach Sprecher brächte nichts.
+  Chunk) — Generierungsreihenfolge hat keinen Einfluss auf Audioqualität.
+- **Cloud-Batching (`audio.chunk_concurrency`, nur GradioBackend):**
+  podcast_maker sammelt Chunks über Part-Grenzen in einen Pool, bucketet
+  nach Stimm-Art und schickt sie in Fenstern an
+  `GradioBackend.generate_chunk_batch()` (`/generate_custom_voice_batch`,
+  `/generate_voice_clone_batch` — Endpoints, die
+  `cloud/onstart_qwen3_tts.sh` in die Cloud-App patcht). Echte
+  GPU-Parallelität, ~13x schneller bei Batch=17; Checkpoint-Semantik pro
+  Chunk bleibt identisch.
 - Anthologie-Merge nutzt ffmpeg stream-copy — Episoden werden nie
   re-encodiert oder voll in RAM geladen.
 - `batch.py` merged ab ≥2 fertigen Episoden zu `ANTHOLOGY_COMPLETE.mp3`;
@@ -55,8 +66,8 @@ Skript-Generierung), dann LUFS-Mastering und Merge zu finaler MP3 mit ID3.
 `merge_parts_to_episode` löscht die Part-WAVs sofort nach dem Schreiben der
 Episoden-MP3 und persistiert `part_offsets` VOR dem Return nach
 `<Episode>_PART_OFFSETS.json` (`part_offsets_path`/`load_part_offsets`).
-Grund: die vier Post-Merge-Schritte (SFX-Cue-Sheet, Speaker-Timeline,
-Untertitel, Location-Timeline) lesen kleine Per-Part-JSONs und liefen
+Grund: die fünf Post-Merge-Schritte (SFX-Cue-Sheet .txt, SFX-Cue-JSON,
+Speaker-Timeline, Untertitel, Location-Timeline) lesen kleine Per-Part-JSONs und liefen
 früher ungeschützt NACH dem Point of no Return — ein Raise dort (z. B.
 truncated Side-File nach Kill mitten im Write) ließ die MP3 als "fertig"
 und die WAVs als gelöscht zurück, und der einzige Resume-Check
@@ -74,10 +85,26 @@ immer ohne die fehlenden Metadaten je nachzuholen. Fix:
 
 ## SFX, Assets, Untertitel, Timelines
 
-- `[SFX: ...]`-Cues werden **nie ins Audio gemischt** — nur mit Timestamps
-  nach `output/<Episode>_SFX_CUES.txt` geloggt (manuelles DAW-Mixing).
-  Genau deshalb verlangen die Drama-Templates gesprochene
+- `[SFX: ...]`-Cues werden **nie in die Episoden-MP3 gemischt** — nur mit
+  Timestamps nach `output/<Episode>_SFX_CUES.txt` (menschenlesbar/DAW) und
+  `_SFX_CUES.json` (Lolfi mischt sie beim Video-Render) geloggt. Genau
+  deshalb verlangen die Drama-Templates gesprochene
   NARRATOR-Orientierungszeilen (siehe templates/CLAUDE.md).
+- **Platzierung** hängt am SFX-Plan (`fabrik/cli/sfx_plan.py`, optional):
+  `placement: "before"` gibt dem Cue eine eigene Stille-Lücke VOR der
+  nächsten Sprecherzeile (Länge = Asset-Dauer, gedeckelt auf
+  `SFX_LEAD_MIN/MAX_MS` in podcast_maker) — die folgende Replik kann so auf
+  den Sound reagieren, statt ihn zu übersprechen. `"under"` und **jeder Cue
+  ohne Plan** starten exakt mit der Zeile (das historische Verhalten: ein
+  Türknall lag immer auf dem ersten Wort). Cues, die der Plan verwirft,
+  erscheinen in keinem Cue-Sheet.
+- Die pro-Part-Cue-JSONs (`.cues/`) und `_SFX_CUES.json` tragen zusätzlich
+  `asset` (Dateiname der generierten MP3) und `gain` (geplante Lautstärke),
+  wenn ein Plan existiert — der Vertrag mit Lolfis Mixing.
+- `_LOCATIONS.json`-Spans tragen zusätzlich `ambience` (Stimmungs-Variante
+  des Orts, ebenfalls aus dem SFX-Plan). **Ein Stimmungswechsel bricht eine
+  Spanne auf, auch bei gleichem Ort** — sonst hat Lolfi keine Grenze, an der
+  es auf die andere Schleife überblenden kann.
 - Optionale Serien-Assets `intro.mp3|outro.mp3|transition.mp3` (Jingle
   Anfang/Ende, Sting statt Inter-Part-Stille); die von
   `merge_parts_to_episode` gelieferten Offsets schließen sie ein, alle
@@ -147,15 +174,19 @@ immer ohne die fehlenden Metadaten je nachzuholen. Fix:
   Prosodie ihrer einen Referenzaufnahme — okay für einen Narrator, klingt
   flach für Drama-Dialog; für `voices.*`-Rollen built-in Speaker
   bevorzugen.
-- **NARRATOR ignoriert `style` IMMER, auch als Built-in-Speaker:**
-  `build_drama_jobs()` in `podcast_maker.py` erzwingt `style=None` für
-  `item.speaker == "NARRATOR"`, unabhängig von Skript-Style-Tags oder
-  `role_cfg.default_style`. Grund: Style/Emotion-Instruct klingt auf der
-  Erzähler-Rolle hörbar "off" — anders als bei Dialog-Rollen, wo Emotion
-  den Zeilen Substanz gibt. Betrifft nur den drama-Modus (case-basierte
-  Templates); der narration-Modus-Narrator (`NARRATOR_ROLE`-Sentinel,
-  section_styles) ist davon unberührt. Gilt (Stand jetzt) nur für
-  `GradioBackend` sauber — `RestBackend.generate_chunk` fällt bei
-  `style=None` auf `self.default_style` zurück statt komplett stumm zu
-  bleiben (kein Narrator-Sonderfall dort, bewusst nicht angefasst, siehe
-  Memory `narrator-style-override`).
+- **NARRATOR ignoriert Skript-Style-Tags/`role_cfg.default_style` IMMER,
+  auch als Built-in-Speaker:** `build_drama_jobs()` in `podcast_maker.py`
+  setzt für `item.speaker == "NARRATOR"` immer den festen `NARRATOR_STYLE`
+  statt `item.style`/`role_cfg.default_style`. Grund: Style/Emotion-
+  Instruct klingt auf der Erzähler-Rolle hörbar "off" — anders als bei
+  Dialog-Rollen, wo Emotion den Zeilen Substanz gibt. Betrifft nur den
+  drama-Modus (case-basierte Templates); der narration-Modus-Narrator
+  (`NARRATOR_ROLE`-Sentinel, section_styles) ist davon unberührt.
+  **Bewusst kein `None`:** je nach Backend hätte das etwas anderes
+  bedeutet, aber nie "neutral" — `RestBackend.generate_chunk` fällt bei
+  `style=None` auf `audio.default_style` zurück (in Produktion z.B. "Speak
+  clearly and with dramatic weight", das Gegenteil von neutral),
+  `GradioBackend` (Cloud-Renders, `render_remote.sh` erzwingt dieses
+  Backend immer) schickt bei `None` einen leeren Instruct-String — gar
+  keine Verankerung, hörbares Abdriften über viele Chunks hinweg. Der
+  feste `NARRATOR_STYLE`-Text wirkt bei beiden Backends gleich.

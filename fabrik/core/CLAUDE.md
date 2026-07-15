@@ -1,7 +1,7 @@
 # fabrik/core — stdlib-only Fundament
 
 **Eiserne Regel:** Dieses Paket ist stdlib-only (paths, config, textproc,
-history, claude_cli) und darf NIE aus `fabrik/audio/` importieren. Es muss
+history, claude_cli, workspace) und darf NIE aus `fabrik/audio/` importieren. Es muss
 ohne jedes venv laufen — der Script-Generierungs-Pfad (`claude` CLI, kein
 Python-Paket installiert) hängt daran.
 
@@ -26,23 +26,28 @@ steuert: Inhalt, Format, Voice-Modus, Audio-Backend-Konfig.
 
 ## Voice-Regeln in config.py
 
-- `KNOWN_BUILTIN_SPEAKERS`: die exakt neun Stimmen, die der LOKALE
+- `BUILTIN_SPEAKER_ROSTER`: die exakt neun Stimmen, die der LOKALE
   Qwen3-Server tatsächlich anbietet — NICHT das offizielle Qwen3-Roster:
   "Ethan"/"Chelsie" existieren lokal nicht (dafür Ono_Anna/Sohee) und
-  haben zweimal Produktionsläufe erst beim Vertonen scheitern lassen;
-  Roster-Änderungen immer auch in den drei Creator-Templates nachziehen
-  (crime_drama/soap_opera/language_course listen die Stimmen wörtlich).
-  Unbekannte Namen sind nur eine Warnung bei `check` (Clones sind legal).
+  haben zweimal Produktionsläufe erst beim Vertonen scheitern lassen.
+  Das Roster ist die EINE Quelle: create_series.py substituiert es als
+  `{{VOICE_ROSTER}}` (crime_drama/soap_opera/shorts) bzw.
+  `{{VOICE_ROSTER_COMPACT}}` (language_course) in die Creator-Templates —
+  Roster-Änderungen also nur hier, nie in den Templates.
+  `KNOWN_BUILTIN_SPEAKERS` ist das Validierungs-Superset (Roster + zwei
+  gradio-Kleinschreibvarianten Ono_anna/Uncle_fu); unbekannte Namen sind
+  nur eine Warnung bei `check` (Clones sind legal).
   Nur Ryan/Aiden sind akzentfreie native English speakers — alle anderen
   (inkl. ALLER Frauenstimmen) haben hörbaren Akzent; daher die
   ACCENT CASTING RULE in den Templates (siehe templates/CLAUDE.md).
 - **Harter Fehler**, wenn zwei `voices`-Rollen auf denselben `voice`-Namen
   auflösen — zwei Charaktere mit gleicher Stimme sind nie beabsichtigt.
 - `NARRATOR` ist von der `character_knowledge`-Vollständigkeits-Warnung
-  ausgenommen (crime_drama/soap_opera; built-in only, nie Clone).
+  ausgenommen (crime_drama/soap_opera/shorts; built-in only, nie Clone).
 - Seed-Warnung: built-in Speaker haben serverseitig KEINE Seed-Kontrolle;
   config.py warnt, wenn trotzdem einer gesetzt ist.
-- `BACKEND_SUPPORTS_STYLE` (`rest`: ja, `kokoro`/`gradio`: nein) lebt
+- `BACKEND_SUPPORTS_STYLE` (`rest`/`gradio`: ja, `kokoro`: nein — `gradio`
+  gilt nur für den Built-in-Speaker-Pfad, Clones ignorieren Style eh) lebt
   **bewusst hier und nicht in tts_backends.py** — letzteres importiert
   requests/pydub und würde den No-venv-Pfad brechen. Treibt
   `cfg["supports_style"]`, mit dem script_writer Style-Anweisungen komplett
@@ -69,6 +74,18 @@ Stdlib-only, genutzt von create_series.py und script_writer.py.
   received"), wenn der Elternprozess kein TTY-stdin hat, was exakt der Fall
   ist, wenn das WebUI Jobs spawnt (`webui/runner.py` nutzt Popen ohne
   `stdin=`). Bei jedem neuen `subprocess.run(["claude", ...])` beibehalten.
+
+## paths.py / workspace.py — MWP-Workspace
+
+- `paths.Series` kapselt das Stage-Layout `data/series/<slug>/stages/
+  01_concept … 04_visuals` (`EPISODES_RELPATH = stages/01_concept/output/
+  episodes.json`, Skripte unter `stages/02_scripts/output/`, Audio unter
+  `stages/03_audio/output/`). `resolve_series()`/`add_series_arg()` sind
+  die eine Auflösung des `--series`-Flags (Fallback LATEST bzw. einzige
+  Serie, Abbruch bei Mehrdeutigkeit).
+- `workspace.scaffold_workspace()` stanzt die CONTEXT/CLAUDE-Verträge aus
+  `templates/_workspace/` in einen neuen Serien-Ordner und kopiert die
+  Template-Prompts nach `references/`; idempotent, überschreibt nie.
 
 ## textproc.py
 

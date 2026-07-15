@@ -697,11 +697,13 @@
   // pf_render_remote startet KEIN lokales TTS (nicht in AUTO_TTS_COMMANDS).
   const renderTarget = document.getElementById("pf-render-target");
   const cloudStopAfterLabel = document.getElementById("pf-cloud-stop-after-label");
+  const cloudLocalMasterLabel = document.getElementById("pf-cloud-local-master-label");
   const cloudHint = document.getElementById("pf-cloud-hint");
 
   function syncRenderTargetUI() {
     const cloud = renderTarget && renderTarget.value === "cloud";
     if (cloudStopAfterLabel) cloudStopAfterLabel.hidden = !cloud;
+    if (cloudLocalMasterLabel) cloudLocalMasterLabel.hidden = !cloud;
     if (cloudHint) cloudHint.hidden = !cloud;
   }
   if (renderTarget) {
@@ -726,6 +728,8 @@
     }
     const stopAfter = document.getElementById("pf-cloud-stop-after");
     if (stopAfter && stopAfter.checked) mapped.stop_after = true;
+    const localMaster = document.getElementById("pf-cloud-local-master");
+    if (localMaster && localMaster.checked) mapped.local_master = true;
     return ["pf_render_remote", mapped];
   }
 

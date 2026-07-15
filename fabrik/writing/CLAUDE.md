@@ -36,8 +36,8 @@ Episode-Review (nachträglich) und Beat-Layer (vorab), siehe unten.
 ## Best-Effort-Fallback statt hartem Abbruch
 
 Manche Szenen sind inhaltlich zu dünn, um das Minimum zuverlässig zu
-erreichen (in Produktion beobachtet: 5 Versuche oszillierten 176–232 gegen
-Minimum 220, nie konvergiert — deshalb wurde MAX_RETRIES von 3 auf 2
+erreichen (in Produktion beobachtet: 5 Versuche oszillierten 176–200 gegen
+Ziel 220, nie konvergiert — deshalb wurde MAX_RETRIES von 3 auf 2
 gesenkt). `validate_parts()` gibt `(ok, console, detail, fallback_safe,
 badness)` zurück:
 
@@ -124,6 +124,20 @@ Volle Design-Begründung: `docs/beat-layer-design.md`.
   gelöscht/neu generiert, nur geladen (`beats_pregenerated` in
   generate_episode()). Fehlende Vorgänger-Beats (z. B. Beat-Call im
   Vorlauf gescheitert) = Info-Log, nie Crash.
+
+## Asset-Module (leben hier wegen des No-venv-Pfads, nicht wegen "Writing")
+
+Neben der Skript-Generierung liegen fünf stdlib-only Asset-Module in diesem
+Paket, weil sie von claude-CLI-Pfad-CLIs (kein venv) importiert werden und
+`fabrik/audio/` tabu ist:
+
+- `character_library.py` / `location_library.py` / `sfx_library.py` —
+  serienübergreifende Wiederverwendung von Porträts, Orts-Hintergründen
+  und SFX-Assets (`data/sfx_library/`).
+- `elevenlabs_backend.py` — ElevenLabs SFX/Ambience-Generierung (urllib,
+  `ELEVENLABS_API_KEY`), genutzt von sfx_assets/location_ambience.
+- `image_backends.py` — OpenAI-Bildgenerierung (urllib, `OPENAI_API_KEY`),
+  genutzt von character_prompts/location_prompts/cover_art.
 
 ## Sonstiges
 

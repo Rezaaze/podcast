@@ -32,7 +32,7 @@ import sys
 import time
 
 from fabrik.core import config, paths
-from fabrik.writing import image_backends
+from fabrik.writing import image_backends, location_library
 from fabrik.writing.script_writer import call_claude, MAX_RETRIES, RETRY_DELAY
 
 PROMPTS_FILENAME = "PROMPTS.txt"
@@ -164,7 +164,9 @@ def main():
             blocks = {}
 
     if not blocks:
-        model = data.get("generation", {}).get("model", config.DEFAULTS["model"])
+        # light_model: reine Bild-Prompt-Texte, keine kreative Skript-Arbeit — braucht
+        # nicht das teure Schreibmodell.
+        model = data.get("generation", {}).get("light_model", config.DEFAULTS["light_model"])
         print(f"Serie: {series.slug} — {len(locations)} Ort(e): {', '.join(locations)}")
         print(f"Generiere Location-Prompts (Modell: {model}) ...")
 
@@ -208,20 +210,41 @@ def main():
                   "PNGs unter den genannten Dateinamen in locations/ ablegen.")
         return
 
-    print(f"\nErzeuge Hintergrundbilder (gpt-image-1-mini, {IMAGE_SIZE}) ...")
+    print(f"\nErzeuge Hintergrundbilder (gpt-image-1-mini, {IMAGE_SIZE}) — vor jeder Anfrage "
+          f"wird zuerst die serienübergreifende Orts-Bibliothek geprüft "
+          f"(data/location_library/) ...")
     failed = []
-    for key in locations:
+    reused = 0
+    for key, lcfg in locations.items():
         img_path = os.path.join(locations_dir(series), f"{key}.png")
         if os.path.exists(img_path):
             print(f"  {key}: übersprungen (existiert bereits)")
             continue
+
+        description = lcfg.get("description", "")
+        lib_hash, lib_entry = location_library.find_match(description) if description else (None, None)
+
         try:
-            image_backends.save_image(blocks[key], img_path, size=IMAGE_SIZE)
+            if lib_hash:
+                location_library.copy_from_library(lib_hash, img_path)
+                match_desc = lib_entry.get("description", "")
+                print(f"  {key}: aus Bibliothek wiederverwendet"
+                      f"{f' (≈ \"{match_desc[:60]}\")' if match_desc else ''} → locations/{key}.png")
+                reused += 1
+                continue
+
+            png_bytes = image_backends.generate_image(blocks[key], size=IMAGE_SIZE)
+            with open(img_path, "wb") as f:
+                f.write(png_bytes)
+            if description:
+                location_library.register(description, png_bytes)
             print(f"  {key}: gespeichert → locations/{key}.png")
         except RuntimeError as exc:
             print(f"  {key}: FEHLER — {exc}")
             failed.append(key)
 
+    if reused:
+        print(f"\n{reused} Hintergrundbild(er) aus der Bibliothek wiederverwendet (kein API-Call nötig).")
     if failed:
         print(f"\n{len(failed)} Hintergrundbild(er) fehlgeschlagen ({', '.join(failed)}) — "
               f"Skript erneut starten (fertige Bilder werden übersprungen).")

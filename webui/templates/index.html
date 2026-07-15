@@ -127,8 +127,9 @@
           <option value="cloud">Cloud-GPU (vast.ai RTX 5090)</option>
         </select>
         <label id="pf-cloud-stop-after-label" hidden><input type="checkbox" id="pf-cloud-stop-after" checked> Instanz danach pausieren</label>
+        <label id="pf-cloud-local-master-label" hidden><input type="checkbox" id="pf-cloud-local-master" checked> Mastering lokal auf dem Mac</label>
       </div>
-      <p class="hint" id="pf-cloud-hint" hidden>Cloud: holt automatisch eine Instanz aus dem Pool (<code>cloud/.instance_pool</code>), lädt Skripte + Referenz-Audio hoch, rendert komplett auf der Instanz und holt die fertigen Episoden zurück. Voraussetzung: <code>audio.backend: "gradio"</code> in der episodes.json der Serie. Abbrechen stoppt nur die Übertragung — der Remote-Lauf ist resumable (erneut starten überspringt Fertiges).</p>
+      <p class="hint" id="pf-cloud-hint" hidden>Cloud: holt automatisch eine Instanz aus dem Pool (<code>cloud/.instance_pool</code>), lädt Skripte + Referenz-Audio hoch, rendert komplett auf der Instanz und holt die fertigen Episoden zurück. <code>audio.backend</code> wird in der hochgeladenen Kopie automatisch auf <code>"gradio"</code> umgestellt — die lokale episodes.json kann dauerhaft auf <code>"rest"</code> bleiben (für den lokalen Pinokio/Qwen3-Server). Abbrechen stoppt nur die Übertragung — der Remote-Lauf ist resumable (erneut starten überspringt Fertiges). <strong>Mastering lokal:</strong> die Instanz erzeugt nur die TTS-Parts (reine GPU-Zeit), das CPU-lastige Zusammenfügen/Mastern/Jingle läuft nach dem Download auf dem Mac — spart Instanz-Zeit.</p>
       <div class="action-row">
         <input type="text" id="pf-script-file" placeholder="figur1.txt">
         <button class="run-btn" data-command="pf_podcast_maker" data-param-input_file="pf-script-file">Nur diese Episode vertonen</button>
@@ -149,6 +150,37 @@
       </div>
       <p class="hint">Erkennt automatisch, welche Episoden noch keine fertige MP3 haben, und rendert bis zu N davon GLEICHZEITIG auf N vast.ai-Instanzen (wellenweise, falls mehr Episoden fehlen als N). Nutzt zuerst die Pool-Instanz(en), mietet fehlende Slots dazu (bevorzugt bekannt zuverlässige Hosts) und löscht diese Ad-hoc-Instanzen danach wieder — nur die dauerhafte Pool-Instanz wird pausiert statt gelöscht. Kostet etwa gleich viele GPU-Minuten wie nacheinander, nur auf kürzere Wanduhrzeit verteilt.</p>
     </details>
+  </div>
+
+  <div class="step" id="pf-step-sound">
+    <div class="step-head">
+      <span class="step-badge" id="pf-step-sound-badge">★</span>
+      <h2>Sounddesign (SFX &amp; Ambience)</h2>
+    </div>
+    <p class="hint"><b>Der Plan läuft automatisch</b>, wenn du oben „Alle Episoden generieren" nutzt —
+      er muss VOR dem Vertonen stehen, weil er Lücken in die Episode einfügt (ein Türknall soll
+      hörbar sein, <i>bevor</i> die nächste Zeile darauf reagiert). Von Hand brauchst du ihn nur bei
+      einzelnen Episoden oder nach Skript-Änderungen (dann mit „neu planen" — sonst laufen geänderte
+      Cues ungeplant weiter).<br>
+      Claude kuratiert dabei aus den rohen <code>[SFX: ...]</code>-Cues eine Sound-Palette, wirft
+      Nicht-Geräusche raus („a beat, tension held"), legt Platzierung und Lautstärke fest und plant
+      pro Ort Ambience-Varianten je Stimmung. Ergebnis ist eine editierbare
+      <code>SFX_PLAN.json</code> bei den Skripten.<br>
+      Die beiden ElevenLabs-Schritte kosten Guthaben pro Lauf und laufen deshalb <b>nie</b>
+      automatisch — vor dem Video-Rendern einmal klicken (fertige Sounds werden übersprungen).</p>
+    <div class="action-row">
+      <button class="run-btn primary" data-command="pf_sfx_plan" data-param-force="pf-sfx-plan-force">SFX-Plan erstellen (Claude)</button>
+      <label style="display:flex;align-items:center;gap:4px">
+        <input type="checkbox" id="pf-sfx-plan-force">
+        <span class="hint" style="margin:0">neu planen (überschreibt Handkorrekturen)</span>
+      </label>
+      <button class="folder-btn" data-key="pf_scripts">📁 Skripte (SFX_PLAN.json)</button>
+    </div>
+    <div class="action-row">
+      <button class="run-btn" data-command="pf_sfx_assets">One-Shot-SFX generieren (ElevenLabs)</button>
+      <button class="run-btn" data-command="pf_location_ambience">Orts-Ambience generieren (ElevenLabs)</button>
+      <button class="folder-btn" data-key="pf_output">📁 Audio-Output (sfx/)</button>
+    </div>
   </div>
 
   <div class="step" id="pf-step-characters" hidden>

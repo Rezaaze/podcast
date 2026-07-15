@@ -126,6 +126,23 @@ def main():
             print(f"Fehlgeschlagen: Episode(n) {sorted(failed)}")
             print("batch wird nicht gestartet — erst alle Episoden generieren.")
         else:
+            # SFX-Plan VOR batch: er entscheidet, welche [SFX: ...]-Cues überhaupt
+            # klingen und ob ein Cue eine eigene Lücke VOR der nächsten Zeile
+            # bekommt — das verändert die Episoden-MP3 selbst. Nachträglich
+            # geplant hätte er auf eine fertige MP3 keinen Einfluss mehr (man
+            # müsste sie löschen und neu vertonen). Deshalb hier, an derselben
+            # Stelle und mit demselben Muster, mit dem auch batch gestartet wird.
+            # Kein venv (Claude CLI, stdlib) — anders als batch.
+            if data.get("mode") == "drama":
+                print("\nStarte SFX-Plan (Sounddesign: Palette, Platzierung, Ambience) ...")
+                cmd = [sys.executable, "-m", "fabrik.cli.sfx_plan", "--series", series.slug]
+                if args.force:
+                    # Neue Skripte = neue Cues an neuen Positionen: ein alter Plan
+                    # wäre veraltet (podcast_maker würde ihn dank Text-Abgleich
+                    # zwar nicht falsch anwenden, aber eben auch gar nicht).
+                    cmd.append("--force")
+                subprocess.run(cmd, check=False, cwd=paths.BASE_DIR)
+
             print("\nStarte batch ...")
             venv_python = os.path.join(paths.BASE_DIR, ".venv", "bin", "python")
             python = venv_python if os.path.exists(venv_python) else sys.executable

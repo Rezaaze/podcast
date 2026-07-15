@@ -196,6 +196,7 @@ COMMANDS = {
             ("positional_required", "series"),
             ("flag", "only", "--only"),
             ("boolflag", "stop_after", "--stop-after"),
+            ("boolflag", "local_master", "--local-master"),
         ],
         "kind": "line",
     },
@@ -290,6 +291,45 @@ COMMANDS = {
         "module": "fabrik.cli.highlight_clips",
         "args_schema": [
             ("flag", "episode", "--episode"),
+            ("boolflag", "force", "--force"),
+            ("flag", "series", "--series"),
+        ],
+        "kind": "line",
+    },
+    # --- Sounddesign (SFX/Ambience) ---
+    # sfx_plan läuft AUTOMATISCH in `generate_episode all` (vor batch — er
+    # verändert die MP3 selbst). Der Knopf hier ist für Einzel-Episoden und
+    # zum Neu-Planen nach Skript-Änderungen (--force).
+    "pf_sfx_plan": {
+        "label": "SFX-Plan (Palette, Platzierung, Ambience — Claude)",
+        "cwd": PF_DIR,
+        "interpreter": lambda: sys.executable,
+        "module": "fabrik.cli.sfx_plan",
+        "args_schema": [
+            ("boolflag", "force", "--force"),
+            ("flag", "series", "--series"),
+        ],
+        "kind": "line",
+    },
+    # Die beiden ElevenLabs-Schritte kosten Guthaben pro Lauf — deshalb
+    # bewusst NICHT in einer Automatik-Kette, sondern nur als Knopf.
+    "pf_sfx_assets": {
+        "label": "One-Shot-SFX generieren (ElevenLabs)",
+        "cwd": PF_DIR,
+        "interpreter": lambda: sys.executable,
+        "module": "fabrik.cli.sfx_assets",
+        "args_schema": [
+            ("boolflag", "force", "--force"),
+            ("flag", "series", "--series"),
+        ],
+        "kind": "line",
+    },
+    "pf_location_ambience": {
+        "label": "Orts-Ambience generieren (ElevenLabs)",
+        "cwd": PF_DIR,
+        "interpreter": lambda: sys.executable,
+        "module": "fabrik.cli.location_ambience",
+        "args_schema": [
             ("boolflag", "force", "--force"),
             ("flag", "series", "--series"),
         ],

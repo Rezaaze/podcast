@@ -612,7 +612,7 @@ episodes.json:
 """
 
 
-def review_series(data: dict, model: str) -> Optional[list]:
+def review_series(data: dict, model: str, effort: Optional[str] = None) -> Optional[list]:
     """Inhalts-QA nach bestandener Struktur-Validierung: ein zweiter
     Claude-Aufruf prüft Spoiler-Leaks, Widersprüche, Akzent-Casting und
     Episoden-Überschneidungen.
@@ -630,6 +630,8 @@ def review_series(data: dict, model: str) -> Optional[list]:
         + json.dumps(data, ensure_ascii=False, indent=2)
     timeout = compute_timeout(len(data.get("episodes", [])))
     argv = ["claude", "-p", prompt, "--output-format", "text", "--model", model, "--tools", ""]
+    if effort:
+        argv += ["--effort", effort]
     try:
         result = run_claude_process(argv, timeout, "Inhalts-Review")
     except (FileNotFoundError, subprocess.TimeoutExpired):
@@ -779,9 +781,13 @@ def main():
 
     if not args.no_review:
         print("🔎  Inhalts-Review (Spoiler-Leaks, Widersprüche, Akzent-Casting, Überschneidungen) ...")
+        # light_model: reine QA-Prüfung des fertigen JSON, keine kreative
+        # Skript-Arbeit — braucht nicht das teure Schreibmodell.
+        review_model = data.get("generation", {}).get("light_model", config.DEFAULTS["light_model"])
+        review_effort = data.get("generation", {}).get("effort", config.DEFAULTS["effort"])
         # None (Review-Aufruf selbst gescheitert) wie [] behandeln — dieser
         # erste Review blockiert nie, die Serie ist ja strukturell gültig.
-        issues = review_series(data, config.DEFAULTS["model"]) or []
+        issues = review_series(data, review_model, effort=review_effort) or []
 
         if issues and args.fix:
             print(f"🔧  {len(issues)} Hinweis(e) — versuche automatische Reparatur ...")
@@ -790,7 +796,7 @@ def main():
                 data = fixed
                 data.setdefault("template", args.template)
                 print("  Review erneut, um den Fix zu bestätigen ...")
-                reviewed_again = review_series(data, config.DEFAULTS["model"])
+                reviewed_again = review_series(data, review_model, effort=review_effort)
                 if reviewed_again is not None:
                     issues = reviewed_again
                 else:

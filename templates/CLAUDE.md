@@ -1,7 +1,10 @@
 # templates — die Prompt-"Produktdefinition"
 
 Jedes Template lebt in `templates/<name>/` mit zwei Dateien, iteriert wird
-hier ohne Python anzufassen:
+hier ohne Python anzufassen. (Sonderfall daneben: `templates/_workspace/`
+ist KEIN Format-Template, sondern das MWP-Workspace-Skeleton —
+CONTEXT/CLAUDE-Verträge mit `{{SERIES_TITLE}}`-Platzhaltern, die
+`fabrik/core/workspace.py::scaffold_workspace` in neue Serien stanzt.)
 
 - `EPISODES_CREATOR_PROMPT.md` — erzeugt via create_series.py die komplette
   episodes.json in einem Schuss. Muss `{{FIGURE_HISTORY}}` enthalten
@@ -10,9 +13,9 @@ hier ohne Python anzufassen:
   (estimate_section_count parst sie für die --minutes-Skalierung).
   **Single-Source-Platzhalter** (build_prompt substituiert aus
   `fabrik/core/config.py`, nie wörtlich in Templates pflegen — die
-  Chelsie-Lektion): `{{DEFAULT_MODEL}}` (alle fünf Templates, aus
+  Chelsie-Lektion): `{{DEFAULT_MODEL}}` (alle sechs Templates, aus
   `DEFAULTS["model"]`), `{{VOICE_ROSTER}}` (Bullet-Liste,
-  crime_drama/soap_opera) und `{{VOICE_ROSTER_COMPACT}}` (Fließtext,
+  crime_drama/soap_opera/shorts) und `{{VOICE_ROSTER_COMPACT}}` (Fließtext,
   language_course) aus `BUILTIN_SPEAKER_ROSTER`. Unersetzte
   `{{...}}`-Platzhalter werden beim Erstellen laut angewarnt.
 - `PROMPT_TEMPLATE.md` — das Per-Section-Skript-Prompt,
@@ -42,7 +45,11 @@ hier ohne Python anzufassen:
   nur bedingt zum Solo-Essay — `use_beats` hier im Zweifel auslassen.
 
 **`mode: "drama"`** — multi-voice, `[SPEAKER | style: ... | speed: ...]`-Tags
-pro Zeile, `[SFX: ...]`-Cues werden nur geloggt, nie vertont:
+pro Zeile, `[SFX: ...]`-Cues werden nie vertont und landen nie in der
+Episoden-MP3 (aber im Video-Render: `fabrik/cli/sfx_plan.py` kuratiert sie,
+Lolfi mischt sie — deshalb verlangen die Templates seit 2026-07-14 explizit
+nur noch physisch hörbare Ereignisse; "a beat, tension held" oder "X exhales,
+shaky" waren echte Produktions-Cues, für die ElevenLabs Geld gekostet hat):
 
 - `language_course` — Mandarin-Lern-Hörspiel; `[NOTE: wort — pinyin —
   bedeutung]`-Zeilen werden vor TTS gestrippt und der nächsten Section
@@ -76,7 +83,7 @@ pro Zeile, `[SFX: ...]`-Cues werden nur geloggt, nie vertont:
 
 - **ACCENT CASTING RULE:** nur Ryan/Aiden sind akzentfrei; Akzente müssen
   diegetisch sein (Biografie erklärt sie) oder das Setting macht sie
-  unauffällig. Hintergrund: fabrik/core/CLAUDE.md (KNOWN_BUILTIN_SPEAKERS).
+  unauffällig. Hintergrund: fabrik/core/CLAUDE.md (BUILTIN_SPEAKER_ROSTER).
 - **NARRATOR-Pflicht** (crime_drama/soap_opera): fixe Rolle in `voices`.
   PROMPT_TEMPLATE.md verlangt 1–2 gesprochene `[NARRATOR]`-
   Orientierungszeilen (wer/wo/wann) am Anfang jedes PART — hart gelernt:
@@ -87,9 +94,11 @@ pro Zeile, `[SFX: ...]`-Cues werden nur geloggt, nie vertont:
   Built-in umgestellt (Speed-Gewinn beim Cloud-Rendern, ~10x schneller pro
   Chunk als das Voice-Clone-Modell, siehe cloud/README.md). Style/
   Instruct wird für die Rolle NARRATOR unabhängig von Built-in/Clone IMMER
-  ignoriert (`build_drama_jobs` in podcast_maker.py erzwingt
-  `style=None`) — Style/Emotion klang auf der Erzähler-Rolle hörbar "off"
-  (User-Feedback), siehe Memory `narrator-style-override`.
+  ignoriert (`build_drama_jobs` in `fabrik/cli/podcast_maker.py` erzwingt
+  den festen neutralen `NARRATOR_STYLE`-Text — bewusst kein `None`, das
+  fiele je nach Backend auf `default_style` bzw. leeren Instruct zurück,
+  Details in fabrik/audio/CLAUDE.md) — Style/Emotion klang auf der
+  Erzähler-Rolle hörbar "off" (User-Feedback).
 - **section_words-Lektion:** ein Override, der nur 10–20% unter dem
   Episoden-Default liegt, lässt den Writer zuverlässig unterschießen —
   ein wirklich kurzer Beat heißt ~100–200 Wörter, kein kosmetischer

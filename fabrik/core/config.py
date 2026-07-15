@@ -44,9 +44,13 @@ DEFAULTS = {
     "light_model": "claude-haiku-4-5",
     "output_prefix": "figur",
     "use_beats": False,
+    # None = Claude-CLI-Default (aktuell "high") — nur überschreiben, wenn der
+    # Token-Verbrauch pro Section/Review gezielt gesenkt werden soll.
+    "effort": None,
 }
 
 VALID_MODES = {"narration", "drama"}
+VALID_EFFORT_LEVELS = {"low", "medium", "high", "xhigh", "max"}
 
 # Welche audio.backend-Werte "style"/"instruct"-Regieanweisungen überhaupt
 # rendern (siehe fabrik/tts_backends.py-Docstrings) — script_writer.py nutzt
@@ -113,7 +117,7 @@ VALID_FORMAT_KEYS = {
     "parts_per_section", "words_per_part_target",
     "words_per_part_min", "words_per_part_max",
 }
-VALID_GENERATION_KEYS = {"model", "light_model", "use_beats"}
+VALID_GENERATION_KEYS = {"model", "light_model", "use_beats", "effort"}
 VALID_AUDIO_BACKENDS = {"rest", "gradio", "kokoro"}
 VALID_AUDIO_KEYS = {
     "api_url", "voice", "default_style", "target_lufs",
@@ -389,6 +393,8 @@ def validate_data(data) -> tuple[list[str], list[str]]:
         errors.append("'generation.light_model' muss ein nicht-leerer String sein")
     if "use_beats" in gen and not isinstance(gen["use_beats"], bool):
         errors.append("'generation.use_beats' muss ein Bool sein")
+    if "effort" in gen and gen["effort"] is not None and gen["effort"] not in VALID_EFFORT_LEVELS:
+        errors.append(f"'generation.effort' muss None oder eines von {sorted(VALID_EFFORT_LEVELS)} sein")
 
     # --- audio ---
     audio = data.get("audio", {})
@@ -598,6 +604,7 @@ def build_config(data) -> dict:
         "model": gen.get("model", DEFAULTS["model"]),
         "light_model": gen.get("light_model", DEFAULTS["light_model"]),
         "use_beats": gen.get("use_beats", DEFAULTS["use_beats"]),
+        "effort": gen.get("effort", DEFAULTS["effort"]),
         "prefix": data.get("output_prefix", DEFAULTS["output_prefix"]),
         # Ob Style-Regieanweisungen das Audio erreichen (Backend UND — bei
         # narration — Built-in-Voice) — steuert, ob script_writer.py

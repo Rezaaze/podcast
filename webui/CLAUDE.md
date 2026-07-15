@@ -58,11 +58,33 @@ diesem Repo); `webui/config.py` hardcodet `LOLFI_DIR` — nicht wundern über
 - "Szenen-Orte"-Step (`pf_location_prompts`) spiegelt den
   Charakter-Porträts-Step 1:1 (`status.py`s `locations`-Dict,
   `pf-step-locations` versteckt, außer die Serie hat `locations`).
+- `pf_cover_art` (Button im Visuals-Bereich) wrappt `fabrik.cli.cover_art`
+  (`--force`, braucht OPENAI_API_KEY); `status.py` meldet `cover_exists`
+  (`.../04_visuals/output/cover.png`) für die Statuskarte.
+- **Sounddesign-Step** (`#pf-step-sound`) mit drei Knöpfen: `pf_sfx_plan`
+  (Claude; Checkbox `#pf-sfx-plan-force` → `--force`), `pf_sfx_assets` und
+  `pf_location_ambience` (beide ElevenLabs). Zwei Dinge, die man beim
+  Anfassen wissen muss:
+  - `sfx_plan` läuft bei Drama-Serien (`mode: drama`) ohnehin AUTOMATISCH
+    in `generate_episode all` (also
+    hinter dem großen „Alles generieren"-Button) — und zwar VOR `batch`,
+    weil er Stille-Lücken in die Episoden-MP3 einfügt. Der Knopf hier ist
+    nur für Einzel-Episoden und fürs Neu-Planen. Ihn in eine Kette NACH dem
+    Vertonen zu hängen wäre wirkungslos (die MP3 ist dann schon fertig).
+  - Die beiden ElevenLabs-Knöpfe **kosten pro Lauf Guthaben** und sind
+    deshalb bewusst in keiner Automatik. Sie brauchen `ELEVENLABS_API_KEY`
+    in der Umgebung des WebUI-Prozesses (der erbt sie von der Shell, die
+    `start_webui.sh` gestartet hat — ein Key, der nur in einer anderen Shell
+    exportiert wurde, fehlt hier). Fertige Sounds werden übersprungen, ein
+    zweiter Klick kostet also nichts.
 - **Vertonungs-Ziel Lokal/Cloud** (`#pf-render-target`, localStorage
   `pfRenderTarget`): bei „cloud" schreibt `app.js::maybeCloudRewrite` die
   Buttons `pf_batch`/`pf_podcast_maker` beim Klick auf `pf_render_remote`
   um (`cloud/render_remote.sh`; Einzel-Episode wird `--only <datei>`,
-  Checkbox `#pf-cloud-stop-after` wird `--stop-after`). `pf_render_remote`
+  Checkbox `#pf-cloud-stop-after` wird `--stop-after`, Checkbox
+  `#pf-cloud-local-master` wird `--local-master` — Mastering/Post-
+  Processing dann lokal statt auf der Instanz; beide Checkboxen blendet
+  `syncRenderTargetUI` nur bei Ziel „cloud" ein). `pf_render_remote`
   ist absichtlich NICHT in `AUTO_TTS_COMMANDS` (TTS läuft auf der
   vast.ai-Instanz) und läuft mit `interpreter_args: []` (bash — `-u` hieße
   dort nounset, siehe runner.py). Der große „Alles generieren"-Button
@@ -72,8 +94,9 @@ diesem Repo); `webui/config.py` hardcodet `LOLFI_DIR` — nicht wundern über
   `#pf-cloud-max-parallel` → `--max`): unabhängig vom Lokal/Cloud-
   Umschalter, wrappt `cloud/render_remote_parallel.sh` — erkennt fehlende
   Episoden selbst, rendert bis zu N gleichzeitig in Wellen (Instanzen
-  werden nur einmal beschafft, über alle Wellen wiederverwendet). Details/
-  Kostenlogik: cloud/README.md.
+  werden nur einmal beschafft, über alle Wellen wiederverwendet). Das
+  Schema kennt zusätzlich `--episodes` (explizite Liste; aktuell ohne
+  UI-Feld). Details/Kostenlogik: cloud/README.md.
 - Generier-Buttons tragen die Checkboxen `--fix`-Review
   (`#pf-fix-review`, `data-param-fix`) und `use_beats` (persistiert wie
   merge_anthology via `POST /api/pf/series/settings`; `GET /api/pf/series`

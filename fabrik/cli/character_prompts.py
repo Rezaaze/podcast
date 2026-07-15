@@ -35,7 +35,7 @@ import sys
 import time
 
 from fabrik.core import config, paths
-from fabrik.writing import image_backends
+from fabrik.writing import character_library, image_backends
 from fabrik.writing.script_parser import ScriptFormatError, parse_drama_part
 from fabrik.writing.script_writer import call_claude, MAX_RETRIES, RETRY_DELAY
 
@@ -327,7 +327,9 @@ def main():
             blocks = {}
 
     if not blocks:
-        model = data.get("generation", {}).get("model", config.DEFAULTS["model"])
+        # light_model: reine Bild-Prompt-Texte, keine kreative Skript-Arbeit — braucht
+        # nicht das teure Schreibmodell.
+        model = data.get("generation", {}).get("light_model", config.DEFAULTS["light_model"])
         n_blocks = len(expected_ids)
         print(f"Generiere Porträt-Prompts ({n_blocks} Blöcke, nur tatsächlich "
               f"gebrauchte Emotionen, Modell: {model}) ...")
@@ -373,9 +375,17 @@ def main():
         return
 
     print(f"\nErzeuge Porträts (gpt-image-1-mini, {len(targets)} Bilder) — Emotionsvarianten "
-          f"per Bild-Edit auf dem Neutral-Porträt derselben Rolle, für konsistentes Aussehen ...")
+          f"per Bild-Edit auf dem Neutral-Porträt derselben Rolle, für konsistentes Aussehen. "
+          f"Vor jeder Anfrage wird zuerst die serienübergreifende Porträt-Bibliothek geprüft "
+          f"(data/character_library/) ...")
     failed = []
+    reused = 0
     neutral_bytes_by_role = {}
+    # Rolle -> Bibliotheks-Hash, NUR gesetzt wenn das Neutral-Bild dieser
+    # Rolle aus der Bibliothek wiederverwendet wurde — steuert, unter
+    # welchem Hash eine später fehlende Emotion nachgeliefert wird (in den
+    # wiederverwendeten Charakter hinein, nicht als komplett neuer Eintrag).
+    reused_hash_by_role = {}
     for block_id, role, fname, emotion in targets:
         img_path = os.path.join(characters_dir(series), fname)
         if os.path.exists(img_path):
@@ -384,7 +394,27 @@ def main():
                 with open(img_path, "rb") as f:
                     neutral_bytes_by_role[role] = f.read()
             continue
+
+        description = roles[role].get("description", "")
+        lib_hash = reused_hash_by_role.get(role)
+        lib_entry = None
+        if lib_hash is None and description:
+            lib_hash, lib_entry = character_library.find_match(description)
+
         try:
+            if lib_hash and os.path.exists(character_library.portrait_path(lib_hash, emotion)):
+                character_library.copy_from_library(lib_hash, emotion, img_path)
+                with open(img_path, "rb") as f:
+                    png_bytes = f.read()
+                match_desc = (lib_entry or {}).get("description", "")
+                print(f"  {fname}: aus Bibliothek wiederverwendet"
+                      f"{f' (≈ \"{match_desc[:60]}\")' if match_desc else ''} → characters/{fname}")
+                reused += 1
+                if emotion is None:
+                    neutral_bytes_by_role[role] = png_bytes
+                    reused_hash_by_role[role] = lib_hash
+                continue
+
             if emotion is None:
                 png_bytes = image_backends.generate_image(blocks[block_id])
                 neutral_bytes_by_role[role] = png_bytes
@@ -398,11 +428,19 @@ def main():
                     png_bytes = image_backends.edit_image(reference, blocks[block_id])
             with open(img_path, "wb") as f:
                 f.write(png_bytes)
+            if description:
+                # lib_hash gesetzt heißt: Neutral kam aus der Bibliothek, aber
+                # DIESE Emotion fehlte dort noch -- unter demselben Eintrag
+                # nachtragen statt einen neuen anzulegen.
+                target_hash = lib_hash or character_library.character_hash(description)
+                character_library.register(target_hash, description, png_bytes, emotion)
             print(f"  {fname}: gespeichert → characters/{fname}")
         except RuntimeError as exc:
             print(f"  {fname}: FEHLER — {exc}")
             failed.append(fname)
 
+    if reused:
+        print(f"\n{reused} Porträt(s) aus der Bibliothek wiederverwendet (kein API-Call nötig).")
     if failed:
         print(f"\n{len(failed)} Porträt(s) fehlgeschlagen ({', '.join(failed)}) — "
               f"Skript erneut starten (fertige Porträts werden übersprungen).")

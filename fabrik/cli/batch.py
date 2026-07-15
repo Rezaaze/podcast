@@ -305,7 +305,9 @@ def generate_anthology_meta(series, data, force=False) -> bool:
     persona = data.get("writer_persona", config.DEFAULTS["writer_persona"])
     language = data.get("language", config.DEFAULTS["language"])
     series_title = data.get("series_title", "")
-    model = data.get("generation", {}).get("model", config.DEFAULTS["model"])
+    # light_model: reine Metadaten-Extraktion (analog Episoden-Meta), keine kreative
+    # Skript-Arbeit — braucht nicht das teure Schreibmodell.
+    model = data.get("generation", {}).get("light_model", config.DEFAULTS["light_model"])
 
     figures_text = "\n".join(f"- {ep['figure']}: {ep['theme']}" for ep in episodes)
     prompt = (
@@ -351,8 +353,20 @@ def generate_anthology_meta(series, data, force=False) -> bool:
 
 def main():
     parser = argparse.ArgumentParser(description="Alle Skripte einer Serie vertonen + Anthologie mergen")
+    # Aufgeteilter Render (siehe podcast_maker.py --skip-merge/--merge-only):
+    # reine TTS-Vertonung von der teuren GPU-Instanz trennen, Mastering lokal.
+    parser.add_argument("--skip-merge", action="store_true",
+                        help="Jede Episode NUR vertonen (Parts erzeugen), KEIN Merge/Mastering und "
+                             "KEIN Anthology-Merge — für Remote-Rendern auf der GPU-Instanz.")
+    parser.add_argument("--merge-only", action="store_true",
+                        help="TTS überspringen; jede Episode nur aus vorhandenen Part-WAVs lokal "
+                             "mastern + Anthologie mergen (kein TTS-Server nötig). Gegenstück zu --skip-merge.")
     paths.add_series_arg(parser)
     args = parser.parse_args()
+
+    if args.skip_merge and args.merge_only:
+        print("FEHLER: --skip-merge und --merge-only schließen sich gegenseitig aus.")
+        sys.exit(1)
 
     series = paths.resolve_series(args.series)
     data = config.load_episodes(series.episodes_file)
@@ -399,7 +413,9 @@ def main():
     # Server muss dieselben Stimmen/Clones anbieten — sonst hard-failt dort
     # die Voice-Auflösung, die Episode landet in der Retry-Runde und damit
     # ggf. wieder beim Primär-Server.
-    secondary_url = data.get("audio", {}).get("secondary_api_url")
+    # merge-only läuft rein lokal (CPU), kein TTS-Server — der Zweit-Server-
+    # Pfad (TTS-Lastverteilung) ist dann bedeutungslos und bleibt aus.
+    secondary_url = None if args.merge_only else data.get("audio", {}).get("secondary_api_url")
     if secondary_url and not url_reachable(secondary_url):
         print(f"Hinweis: audio.secondary_api_url ({secondary_url}) nicht erreichbar — "
               f"vertone sequentiell über den Primär-Server.")
@@ -416,19 +432,39 @@ def main():
         name = episode_name_from_file(script)
         episode_file = os.path.join(series.output_dir, f"{name}_FULL_EPISODE.mp3")
 
-        if os.path.exists(episode_file):
+        # --skip-merge: die MP3 entsteht in diesem Modus NIE (nur Parts) — sie
+        # taugt weder als "schon fertig"-Kürzel noch als Erfolgs-Marker.
+        # podcast_maker überspringt bereits erzeugte Parts selbst (Checkpoints),
+        # ein Re-Run ist also billig.
+        if not args.skip_merge and os.path.exists(episode_file):
             size_mb = os.path.getsize(episode_file) / (1024 * 1024)
             print(f"[{i}/{len(scripts)}] Übersprungen (existiert): {name}_FULL_EPISODE.mp3 ({size_mb:.1f} MB)")
             completed[i] = (script, episode_file)
             return True
 
         via = f" via {api_url}" if api_url else ""
-        print(f"[{i}/{len(scripts)}] Starte{via}: {os.path.basename(script)} → {name}_FULL_EPISODE.mp3")
+        ziel = "nur Parts (skip-merge)" if args.skip_merge else \
+               "lokales Mastering (merge-only)" if args.merge_only else \
+               f"{name}_FULL_EPISODE.mp3"
+        print(f"[{i}/{len(scripts)}] Starte{via}: {os.path.basename(script)} → {ziel}")
         cmd = [sys.executable, "-m", "fabrik.cli.podcast_maker", script, "--name", name,
                "--series", series.slug]
         if api_url:
             cmd += ["--api-url", api_url]
+        if args.skip_merge:
+            cmd.append("--skip-merge")
+        elif args.merge_only:
+            cmd.append("--merge-only")
         result = subprocess.run(cmd, check=False, cwd=paths.BASE_DIR)
+
+        if args.skip_merge:
+            # Erfolg = Subprozess sauber beendet (keine MP3 als Marker).
+            if result.returncode != 0:
+                print(f"  FEHLER bei {script} – wird ggf. erneut versucht.")
+                return False
+            completed[i] = (script, None)
+            print(f"  Parts fertig: {name}\n")
+            return True
 
         if result.returncode != 0 or not os.path.exists(episode_file):
             print(f"  FEHLER bei {script} – wird ggf. erneut versucht.")
@@ -504,6 +540,15 @@ def main():
         print("Bitte TTS-Server/Log prüfen und Script danach neu starten – bereits fertige Episoden werden übersprungen.")
     elif os.path.exists(failed_marker):
         os.remove(failed_marker)
+
+    if args.skip_merge:
+        # Reine Vertonung fertig (nur Parts). Anthology-Merge + Upload-Index
+        # brauchen die Episoden-MP3s, die es hier noch nicht gibt — beides
+        # läuft lokal via 'batch.py --merge-only' (bzw. automatisch über
+        # render_remote.sh --local-master) nach dem Download.
+        print("\n--skip-merge: reine Vertonung fertig (nur Parts erzeugt), kein "
+              "Merge/Mastering/Index. Lokal fertigstellen mit 'batch.py --merge-only'.")
+        return
 
     if len(episode_paths) < 2:
         print("Weniger als 2 Episoden vorhanden – kein Anthology-Merge.")

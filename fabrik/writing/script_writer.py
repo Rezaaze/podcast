@@ -379,7 +379,7 @@ def generate_beats(series: Series, ep_idx: int, episodes, force: bool, cfg: dict
     prompt = build_beats_prompt(episodes, ep_idx, cfg, previous_beats_text)
 
     for attempt in range(1, MAX_RETRIES + 1):
-        output = call_claude(prompt, cfg["model"], label="Beats-Generierung")
+        output = call_claude(prompt, cfg["model"], label="Beats-Generierung", effort=cfg.get("effort"))
         if output:
             parsed = parse_beats(output, expected_scenes)
             if len(parsed) == len(expected_scenes):
@@ -536,9 +536,11 @@ def build_section_prompt(template, data, episodes, ep_idx, section_idx,
     return prompt
 
 
-def call_claude(prompt, model, label: str = "Claude") -> Optional[str]:
+def call_claude(prompt, model, label: str = "Claude", effort: Optional[str] = None) -> Optional[str]:
     argv = ["claude", "-p", prompt, "--output-format", "text",
             "--model", model, "--tools", ""]
+    if effort:
+        argv += ["--effort", effort]
     try:
         result = run_claude_process(argv, TIMEOUT_SECONDS, label)
     except FileNotFoundError:
@@ -669,7 +671,7 @@ def call_claude_with_retry(prompt, expected_parts, cfg) -> Optional[list[tuple[i
     for attempt in range(1, MAX_RETRIES + 1):
         prefix = f"  Versuch {attempt}/{MAX_RETRIES}"
 
-        output = call_claude(prompt + feedback, cfg["model"], label="Section-Generierung")
+        output = call_claude(prompt + feedback, cfg["model"], label="Section-Generierung", effort=cfg.get("effort"))
         if not output:
             print(f"{prefix}: Keine Ausgabe erhalten.")
         else:
@@ -818,7 +820,8 @@ def generate_episode_meta(series: Series, ep_idx, data, episodes, force, cfg) ->
     for attempt in range(1, MAX_RETRIES + 1):
         # Reine Metadaten-Extraktion — läuft auf dem leichten Modell,
         # das kreative Schreiben bleibt auf generation.model.
-        output = call_claude(prompt, cfg.get("light_model", cfg["model"]), label="Episode-Metadaten")
+        output = call_claude(prompt, cfg.get("light_model", cfg["model"]), label="Episode-Metadaten",
+                             effort=cfg.get("effort"))
         if output:
             match = re.search(r"TITLE:\s*(.+?)\s*DESCRIPTION:\s*(.+)", output, re.DOTALL)
             if match:
@@ -883,7 +886,8 @@ SCRIPT TEXT:
 """
 
 
-def review_episode_script(episode: dict, position: int, total: int, script_text: str, model: str):
+def review_episode_script(episode: dict, position: int, total: int, script_text: str, model: str,
+                           effort: Optional[str] = None):
     """Nachträglicher Konsistenz-Check EINER fertigen Episode gegen ihr eigenes
     case-File: prüft im tatsächlich geschriebenen Skripttext (nicht nur im Plan),
     ob eine Figur etwas außerhalb ihres Wissens-Slices verrät oder eine
@@ -915,6 +919,8 @@ def review_episode_script(episode: dict, position: int, total: int, script_text:
     )
     timeout = compute_review_timeout(script_text)
     argv = ["claude", "-p", prompt, "--output-format", "text", "--model", model, "--tools", ""]
+    if effort:
+        argv += ["--effort", effort]
     try:
         result = run_claude_process(argv, timeout, "Episoden-Review")
     except (FileNotFoundError, subprocess.TimeoutExpired):
@@ -1000,7 +1006,8 @@ BEATS TEXT:
 """
 
 
-def review_episode_beats(episode: dict, position: int, total: int, beats_text: str, model: str):
+def review_episode_beats(episode: dict, position: int, total: int, beats_text: str, model: str,
+                          effort: Optional[str] = None):
     """Wie review_episode_script(), aber auf der kurzen Beats-Textmenge statt
     der fertigen Prosa — Logikfehler (Wissens-Verstoß, Spoiler-Leak) fliegen so
     VOR dem teuren Dialog-Schreiben auf statt erst danach (siehe
@@ -1018,6 +1025,8 @@ def review_episode_beats(episode: dict, position: int, total: int, beats_text: s
     )
     timeout = compute_beats_review_timeout(beats_text)
     argv = ["claude", "-p", prompt, "--output-format", "text", "--model", model, "--tools", ""]
+    if effort:
+        argv += ["--effort", effort]
     try:
         result = run_claude_process(argv, timeout, "Beats-Review")
     except (FileNotFoundError, subprocess.TimeoutExpired):
@@ -1179,7 +1188,8 @@ def generate_episode(series: Series, ep_idx, template, data, episodes, force, cf
             with open(beats_file, "r", encoding="utf-8") as f:
                 beats_text = f.read()
             beats_issues = review_episode_beats(episodes[ep_idx], episode_num, len(episodes),
-                                                beats_text, cfg.get("light_model", cfg["model"]))
+                                                beats_text, cfg.get("light_model", cfg["model"]),
+                                                effort=cfg.get("effort"))
             if beats_issues is None:
                 # Review-Lauf selbst fehlgeschlagen — KEINE Datei schreiben, damit ein
                 # künftiger Lauf es erneut versucht (gleiche Disziplin wie REVIEW.txt).
@@ -1282,7 +1292,8 @@ def generate_episode(series: Series, ep_idx, template, data, episodes, force, cf
             else:
                 print(f"\n  Episoden-Review (Wissens-Verstöße/Spoiler-Leaks im fertigen Skript) ...")
                 issues = review_episode_script(episodes[ep_idx], episode_num, len(episodes),
-                                               previous_content, cfg.get("light_model", cfg["model"]))
+                                               previous_content, cfg.get("light_model", cfg["model"]),
+                                               effort=cfg.get("effort"))
 
             if issues and fix_review:
                 fixable = [i for i in issues if i.get("part") is not None]
@@ -1303,7 +1314,8 @@ def generate_episode(series: Series, ep_idx, template, data, episodes, force, cf
                         with open(output_file, "r", encoding="utf-8") as f:
                             updated_text = f.read()
                         reviewed_again = review_episode_script(episodes[ep_idx], episode_num, len(episodes),
-                                                               updated_text, cfg.get("light_model", cfg["model"]))
+                                                               updated_text, cfg.get("light_model", cfg["model"]),
+                                                               effort=cfg.get("effort"))
                         if reviewed_again is not None:
                             issues = reviewed_again
                         else:

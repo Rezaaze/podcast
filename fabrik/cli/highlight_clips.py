@@ -195,12 +195,14 @@ def validate_clips(clips, cues):
     return errors
 
 
-def call_claude(prompt, model, label):
+def call_claude(prompt, model, label, effort=None):
     """Wie script_writer.call_claude, aber mit dem längeren lokalen Timeout.
     stdin=DEVNULL + Heartbeat übernimmt run_claude_process; nur 'claude not
     found' und 401 brechen ab, alles andere ist retryable (None)."""
     argv = ["claude", "-p", prompt, "--output-format", "text",
             "--model", model, "--tools", ""]
+    if effort:
+        argv += ["--effort", effort]
     try:
         result = run_claude_process(argv, TIMEOUT_SECONDS, label)
     except FileNotFoundError:

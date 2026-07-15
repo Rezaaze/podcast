@@ -2,8 +2,10 @@
 
 Aufruf immer als Modul vom Projekt-Root: `python3 -m fabrik.cli.<name>`
 (das WebUI macht exakt das via `"module"`-Einträge in
-`webui/config.py::COMMANDS`). Alle CLIs akzeptieren `--series <slug>`;
-ohne wird `data/series/LATEST` genutzt (oder die einzige Serie).
+`webui/config.py::COMMANDS`). Alle CLIs außer create_series/import_story
+(die legen neue Serien an und schreiben LATEST) akzeptieren
+`--series <slug>`; ohne wird `data/series/LATEST` genutzt (oder die
+einzige Serie).
 
 | CLI | Zweck | braucht |
 |---|---|---|
@@ -13,12 +15,17 @@ ohne wird `data/series/LATEST` genutzt (oder die einzige Serie).
 | podcast_maker / batch | vertonen (eine/alle Episoden) | .venv + ffmpeg + TTS-Server |
 | character_prompts / location_prompts / cover_art | Bild-Prompts (+ PNGs bei OPENAI_API_KEY) | claude CLI (Bilder: stdlib urllib, kein venv) |
 | highlight_clips | Teaser-Highlights (30–90s) für 9:16-Clips auswählen | claude CLI |
+| sfx_plan | SFX-Cues kuratieren: Palette + Platzierung + Lautstärke | claude CLI |
+| sfx_assets / location_ambience | die Sounds dazu generieren (ElevenLabs) | ELEVENLABS_API_KEY, stdlib urllib |
 
 ## create_series.py
 
 `python3 -m fabrik.cli.create_series "Topic" [--episodes N] [--minutes M]
-[--locations L] [--template narration|media_analysis|language_course|crime_drama|soap_opera|shorts]
-[--no-review] [--fix]`
+[--locations L] [--template T] [--no-review] [--fix]`
+
+`--template` nimmt jeden Ordnernamen unter `templates/` (kein argparse-
+`choices`); aktuell: narration, media_analysis, language_course,
+crime_drama, soap_opera, shorts.
 
 - `--minutes` steuert die Episodenlänge: `estimate_section_count()` leitet
   die Section-Zahl aus minutes (WORDS_PER_MINUTE=150) und den
@@ -68,13 +75,18 @@ ohne wird `data/series/LATEST` genutzt (oder die einzige Serie).
 - Creator-Templates tragen einen expliziten `{{FIGURE_HISTORY}}`-
   Platzhalter (`build_prompt` errort laut, wenn er fehlt UND der Legacy-
   ALREADY-USED-FIGURES-Regex nicht greift — kein stilles Auslassen).
-- Timeout skaliert: `compute_timeout` = 120s/Episode, Floor 600s, Cap
-  1800s. Heartbeat alle 20s via `run_claude_process` (fabrik/core).
+- Timeout skaliert: `compute_timeout` = 180s/Episode, Floor 900s, Cap
+  3600s. Heartbeat alle 20s via `run_claude_process` (fabrik/core).
+- **Batch-Pfad für große Case-Serien:** überschreiten crime_drama/
+  soap_opera (`CASE_BASED_TEMPLATES`) zusammen
+  `BATCH_THRESHOLD_EPISODE_MINUTES=200` Episodenminuten, weicht
+  `skip_one_shot` auf `generate_series_batched` aus (episodes.json in
+  mehreren Claude-Calls statt einem One-Shot am Output-Limit).
 
 ## generate_episode.py
 
 - `check` — nur episodes.json validieren.
-- `N [--fix] [--no-script-review]` — eine Episode; bei
+- `N [--force] [--fix] [--no-script-review]` — eine Episode; bei
   `"source": "imported"` wird die Generierung übersprungen und direkt
   `generate_episode_meta()` gerufen (Skript existiert schon).
 - `all [--jobs N] [--force] [--fix] [--no-script-review]` — alle Episoden
@@ -89,8 +101,12 @@ Claude nichts erfinden darf. **Nur narration-Mode.**
 - Zwei Quellformen: Ordner (eine Datei = eine Episode, wörtlich) oder eine
   lange Datei (Auto-Split via Kapitelüberschrift-Regexes, Fallback
   absatzbewusster Wortzahl-Split, `textproc.chunk_prose_by_words`).
+  Feintuning über `--split-on`, `--words-per-episode`,
+  `--words-per-part-max`, `--parts-per-section`, `--language`,
+  `--template`.
 - Pro Episode genau EIN Claude-Call (`summarize_source_episode`, nur
-  Titel+Theme, light_model); PART-Chunking deterministisch OHNE Minimum —
+  Titel+Theme, light_model); `--no-summary` schaltet auch den ab (dann
+  null Claude-Calls). PART-Chunking deterministisch OHNE Minimum —
   der Quelltext diktiert seine Länge.
 - Episoden bekommen `"source": "imported"`; podcast_maker/batch brauchen
   keinerlei Anpassung (lesen nur die fertige Skriptdatei). Beat-Layer wird
@@ -98,7 +114,8 @@ Claude nichts erfinden darf. **Nur narration-Mode.**
 
 ## character_prompts.py / location_prompts.py
 
-- `character_prompts [--force]` → `data/series/<slug>/characters/PROMPTS.txt`;
+- `character_prompts [--force]` →
+  `data/series/<slug>/stages/04_visuals/output/characters/PROMPTS.txt`;
   mit `OPENAI_API_KEY` zusätzlich direkt `<ROLE>.png` via gpt-image-1-mini
   (`fabrik/writing/image_backends.py`, stdlib urllib, kein venv);
   `--no-images` erzwingt prompts-only. NARRATOR ausgenommen.
@@ -117,6 +134,9 @@ Claude nichts erfinden darf. **Nur narration-Mode.**
   Rolle (1536x1024 Landscape — Video-Hintergrund, kein Porträt), gleiche
   Key-/`--no-images`-Logik. No-op mit Meldung, wenn episodes.json keine
   `locations` hat (nur soap_opera fragt danach).
+- `cover_art [--force] [--no-copy]` erzeugt EIN Serien-Cover
+  (`.../04_visuals/output/cover.png`); braucht zwingend `OPENAI_API_KEY`
+  (kein prompts-only-Modus wie bei den beiden anderen).
 
 ## highlight_clips.py
 
@@ -138,3 +158,105 @@ schreibt `<Name>_FULL_EPISODE_HIGHLIGHTS.json` nach `stages/03_audio/output/`
   Zeiten überleben (Vertrag: Kopplungstabelle in Lolfi/CLAUDE.md).
 - `parse_meta_file` ist lokal gespiegelt (Original in fabrik/audio/
   pipeline.py — für dieses venv-freie CLI tabu, Import-Regel).
+
+## Die SFX-Kette: sfx_plan → podcast_maker → sfx_assets → Lolfi
+
+**Was automatisch läuft:** `generate_episode all` ruft bei Drama-Serien
+(`mode: "drama"`, also crime_drama/soap_opera — narration-Templates haben
+keine SFX-Cues) `sfx_plan` selbst auf — nach den Skripten, VOR `batch`
+(mit `--force`, wenn die Skripte neu generiert wurden). Das ist keine Bequemlichkeit, sondern Pflicht: der Plan entscheidet
+über Lücken IN der Episoden-MP3, nachträglich geplant hätte er auf eine fertige
+MP3 keinen Einfluss mehr. **`sfx_assets`/`location_ambience` laufen bewusst
+NICHT automatisch** (ElevenLabs kostet pro Lauf) — sie werden von Hand
+aufgerufen, bevor Lolfi rendert.
+
+Nicht automatisch ist der Einzel-Episoden-Pfad: `generate_episode <N>` und
+`podcast_maker` allein planen NICHT. Wer einzeln arbeitet, ruft `sfx_plan`
+selbst auf, bevor er vertont — sonst laufen die Cues im Alt-Verhalten (auf dem
+Zeilenstart, ohne Drops). Alle drei CLIs haben dafür Knöpfe im WebUI-Cockpit
+(`#pf-step-sound`, siehe webui/CLAUDE.md).
+
+`sfx_plan` ist der Schritt, der zwischen "Claude schreibt `[SFX: ...]` ins
+Skript" und "ffmpeg legt eine MP3 auf ms X" lange gefehlt hat. Ohne ihn war
+die Auswahl zwar nicht zufällig, aber auch kein Plan: jeder Cue-Freitext
+wurde 1:1 an ElevenLabs geschickt, landete auf dem ERSTEN WORT der nächsten
+Zeile und auf einer pauschalen Lautstärke.
+
+`python3 -m fabrik.cli.sfx_plan [--force]` → `stages/02_scripts/output/
+SFX_PLAN.json` (serienweit, aus den Skripten abgeleitet — deshalb bei den
+Skripten und schon VOR dem Vertonen lauffähig). Der Plan ist ein
+Review-Gate: von Hand editierbar. **Ohne `--force` ist der Lauf
+inkrementell:** ein vorhandener Plan wird nur um Episoden ergänzt, die ihm
+fehlen (neue Skripte, frühere Fehlschläge aus `unplanned_episodes`) —
+geplante Episoden und Handkorrekturen bleiben unangetastet, die neuen
+Episoden werden auf die vorhandene Palette verpflichtet. `--force` plant
+ALLES neu (Handkorrekturen gehen verloren).
+
+- **Ein Claude-Call pro Episode, Palette wächst mit** (seriell, wie der
+  Beats-Vorlauf in generate_episode.py): Episode N sieht die Assets aus
+  1..N-1 und wird auf Wiederverwendung verpflichtet — deshalb klingt der
+  Türknall in Episode 7 wie der in Episode 1. Ein Call für die ganze Serie
+  wäre am Output-Limit gescheitert (Produktionsserie: 793 Cues).
+- Input ist ein durchnummeriertes **Cue-Inventar** (Cue + Zeile davor/
+  danach), nicht das Skript; Claude antwortet mit Cue-INDIZES (Muster wie
+  highlight_clips) und kann so keine Cues erfinden.
+- Pro Cue: `keep` (Nicht-Geräusche wie "a beat, tension held" oder
+  "X exhales, shaky" fliegen raus), `asset_key`, `placement`
+  (`before`/`under`, siehe fabrik/audio/CLAUDE.md), `gain`.
+  `MAX_KEPT_CUES_PER_PART=5` ist die Dichte-Bremse — als Prompt-Regel UND
+  als Validierung, die in den Retry zurückgefüttert wird.
+- Das `locations`-Mapping geht mit ins Prompt, mit der Ansage, dass diese
+  Orte bereits eine durchgehende Ambience-Schleife haben — Wind/Möwen/Regen
+  werden dadurch verworfen statt doppelt zu klingen. Erstes Produktions-
+  Ergebnis: von 15 Cues blieben 9, alle 6 Drops waren Atmosphäre, die die
+  Location-Ambience schon trägt.
+- **Der Plan ist optional.** Fehlt er (oder scheitert eine Episode: sie
+  landet in `unplanned_episodes`), verhält sich die ganze Kette exakt wie
+  vorher — Cue auf dem Zeilenstart, Lolfi hasht den Cue-Text. Nichts an
+  bestehenden Serien bricht. Gescheiterte Episoden holt der nächste
+  `sfx_plan`-Lauf (ohne `--force`) automatisch nach.
+- **Stale-Guard:** der Plan adressiert Cues über ihre POSITION (episode,
+  part, n-ter Cue im Part). Wird ein Skript neu generiert, kann an derselben
+  Position ein ANDERER Cue stehen — `podcast_maker::resolve_cue` vergleicht
+  deshalb zusätzlich den Cue-Text und ignoriert den Eintrag bei Abweichung
+  (Warnung + Alt-Verhalten). Ein veralteter Plan kann also nie den falschen
+  Sound platzieren, nur gar keinen. Kur: `sfx_plan --force`.
+- **Dateinamen-Vertrag:** mit Plan liegt die MP3 unter
+  `sfx_asset_hash(<Palette-Prompt>)`, NICHT unter dem Hash des Cue-Texts.
+  podcast_maker schreibt den Namen als `asset`-Feld in die
+  `_SFX_CUES.json`, Lolfi liest ihn von dort (Hash nur noch Fallback).
+  Wer `prompt` im Plan von Hand ändert, muss `--force` laufen lassen — der
+  Hash wird nicht automatisch nachgezogen.
+
+`sfx_assets` generiert daraufhin die **Palette** (kuratierter Prompt +
+geplante Dauer) statt roher Cue-Texte und spart die Sounds, die gar keine
+sind. Ohne Plan bleibt der Alt-Pfad (Cue-Texte aus den `_SFX_CUES.json`,
+also erst nach dem Vertonen möglich).
+
+### Ambience-Teil desselben Plans
+
+Zweiter Claude-Call in `sfx_plan` (unabhängig von den Cues; Quelle sind die
+`sections` + `section_locations` aus episodes.json, NICHT die Skripte —
+deshalb ein Call für die ganze Serie statt einer pro Episode). Er schreibt
+`ambience.variants` + `ambience.sections` in denselben Plan.
+
+- Vorher hatte jeder Ort EINE Schleife für die ganze Serie: ein stilles
+  Frühstück und eine Mitternachts-Eskalation im selben Raum klangen
+  identisch. Jetzt bekommt jeder Ort bis zu
+  `MAX_AMBIENCE_VARIANTS_PER_LOCATION=3` Stimmungen, und jede Szene wird
+  einer zugewiesen. Das Prompt verlangt ausdrücklich, KEINE Stimmungen zu
+  erfinden, die die Szenen nicht hergeben — bei `the_wildrose_inheritance`
+  (2 Episoden) kam korrekt 1 Variante pro Ort zurück, bei `the_long_fare`
+  (10 Episoden) 12 Varianten für 6 Orte (THE_SEDAN: fahrend-im-Regen /
+  Leerlauf am erzwungenen Halt / geparkt bei Morgengrauen).
+- Loops enthalten per Prompt-Regel **keine Einzelereignisse** — ein Türknall
+  in einer 20s-Schleife knallt alle 20 Sekunden erneut.
+- `location_ambience` generiert daraus `sfx/ambience/<VARIANTE>.mp3` UND
+  weiterhin `sfx/ambience/<ORT_KEY>.mp3` als Fallback (Lolfi nimmt die
+  Variante, sonst den Ort, sonst die alte Zufalls-Baseline).
+  `AMBIENCE_GEN_DURATION_SECONDS` ist von 10s auf 20s hoch — 10s waren bei
+  einer 4-Minuten-Szene 24 Wiederholungen und damit hörbar ein Metronom.
+- `podcast_maker` hängt die Variante als Feld `ambience` an die Spans der
+  `<Episode>_LOCATIONS.json`. **Ein Stimmungswechsel bricht eine Spanne
+  auf**, auch wenn der Ort derselbe bleibt — sonst könnte Lolfi mittendrin
+  nicht überblenden.

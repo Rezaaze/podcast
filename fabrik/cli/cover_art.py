@@ -142,7 +142,9 @@ def main():
               "anders als bei Porträts/Locations gibt es hier keinen Text-Prompt-Fallback.")
         sys.exit(1)
 
-    model = data.get("generation", {}).get("model", config.DEFAULTS["model"])
+    # light_model: reiner Bild-Prompt-Text, keine kreative Skript-Arbeit — braucht
+    # nicht das teure Schreibmodell.
+    model = data.get("generation", {}).get("light_model", config.DEFAULTS["light_model"])
     print(f"Serie: {series.slug} — generiere Cover-Prompt (Modell: {model}) ...")
 
     prompt_text = None
