@@ -97,6 +97,16 @@ diesem Repo); `webui/config.py` hardcodet `LOLFI_DIR` — nicht wundern über
   werden nur einmal beschafft, über alle Wellen wiederverwendet). Das
   Schema kennt zusätzlich `--episodes` (explizite Liste; aktuell ohne
   UI-Feld). Details/Kostenlogik: cloud/README.md.
+- **Server-Pool (Scouting):** „Nächsten Server mieten" (`pf_cloud_rent` →
+  `cloud/rent.sh` als normaler Job; in `PF_SERIES_SCOPED_EXCLUDE`, kein
+  series-Param) + Liste `#pf-cloud-pool` aus `GET /api/cloud/instances`
+  (vastai-Live-Instanzen gemerged mit `cloud/.machine_stats.json`).
+  ★ Favorit / ✗ Verwerfen posten `POST /api/cloud/machine`
+  (favorite|unfavorite|reject; reject destroyt optional die Instanz) →
+  `machine_stats.py`-Subcommands. `manual=True` schützt das Urteil vor
+  der 10-Min-Heuristik, `avoid=True` meidet die Maschine dauerhaft in
+  jeder Offer-Suche. Manuell beurteilte Maschinen bleiben immer gelistet
+  (sonst wäre „Favorit entfernen" im UI nicht umkehrbar).
 - Generier-Buttons tragen die Checkboxen `--fix`-Review
   (`#pf-fix-review`, `data-param-fix`) und `use_beats` (persistiert wie
   merge_anthology via `POST /api/pf/series/settings`; `GET /api/pf/series`
