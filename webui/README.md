@@ -1,10 +1,9 @@
 # Cockpit-WebUI
 
-Lokales Web-Cockpit für beide Pipelines (Podcast-Fabrik + Lolfi): Skripte per
-Klick ausführen mit Live-Log, Status-Dashboard, Copy-Paste-Blöcke für die
-manuellen Schritte (Claude-Serien-Prompt, Charakter-Porträt-Prompts,
-Lolfi-Bild/Kling/Suno-Prompts, Anthology-Meta), Ordner direkt im Finder
-öffnen.
+Lokales Web-Cockpit für die Podcast-Fabrik-Pipeline: Skripte per Klick
+ausführen mit Live-Log, Status-Dashboard, Copy-Paste-Blöcke für die manuellen
+Schritte (Claude-Serien-Prompt, Charakter-Porträt-Prompts, Anthology-Meta),
+Ordner direkt im Finder öffnen.
 
 Job-Steuerung: laufende Jobs überleben einen Browser-Reload (die Seite
 verbindet sich automatisch wieder mit Log-Stream und Button-Zustand), lassen
@@ -35,7 +34,7 @@ python3 -m venv .venv
 ```
 
 Öffnet auf `http://127.0.0.1:5151`. Voraussetzung wie beim Rest der Pipeline:
-`claude` CLI eingeloggt für alle Skript-Generierungs-Schritte, die venvs der
-Einzelprojekte (`Podcast-Fabrik/.venv`, `Lolfi/.venv`) für Vertonung/Render.
+`claude` CLI eingeloggt für alle Skript-Generierungs-Schritte, das
+Podcast-Fabrik-`.venv` für die Vertonung.
 
 Läuft ausschließlich auf localhost, kein Auth — reines Single-User-Tool.

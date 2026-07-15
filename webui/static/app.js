@@ -80,16 +80,6 @@
     }
   }
 
-  // ---------- Tabs ----------
-  document.querySelectorAll(".tab-btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-      document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
-      document.querySelectorAll(".tab-panel").forEach(p => p.classList.remove("active"));
-      btn.classList.add("active");
-      document.getElementById("tab-" + btn.dataset.tab).classList.add("active");
-    });
-  });
-
   // ---------- Status polling ----------
   function stateLabel(state) {
     return { ready: "fertig", partial: "teilweise", running: "läuft", missing: "offen" }[state] || state;
@@ -131,19 +121,6 @@
       seriesDone ? "done" : "current",
       !seriesDone ? "upcoming" : (episodesDone ? "done" : "current"),
       !seriesDone || !episodesDone ? "upcoming" : (anthologyDone ? "done" : "current"),
-    ];
-  }
-
-  function lolfiStepStates(s) {
-    const sceneDone = !!s.current_scene_title;
-    const promptsDone = s.latest_prompt_state === "ready";
-    const assetsDone = s.video_baseline_ready && s.music_ready;
-    const renderDone = s.render_state === "ready";
-    return [
-      sceneDone ? "done" : "current",
-      !sceneDone ? "upcoming" : (promptsDone ? "done" : "current"),
-      !sceneDone || !promptsDone ? "upcoming" : (assetsDone ? "done" : "current"),
-      !sceneDone || !promptsDone || !assetsDone ? "upcoming" : (renderDone ? "done" : "current"),
     ];
   }
 
@@ -259,6 +236,23 @@
   const reviewPanel = document.getElementById("pf-series-review");
   const reviewContent = document.getElementById("pf-series-review-content");
   let reviewSlug = null;
+  // Aktive Serie VOR dem "Serie erstellen"-Lauf — "Verwerfen" stellt sie
+  // wieder her, statt LATEST der mtime-Heuristik des Servers zu überlassen.
+  let preCreateSlug = null;
+
+  // Das Orte-Feld wirkt nur bei Templates, deren Creator-Prompt
+  // {{LOCATION_COUNT}} kennt (data-locations aus config.list_templates())
+  // — bei allen anderen ausblenden.
+  const templateSelect = document.getElementById("pf-template");
+  const locationsLabel = document.getElementById("pf-locations-label");
+  function syncLocationsVisibility() {
+    const opt = templateSelect && templateSelect.options[templateSelect.selectedIndex];
+    if (locationsLabel) locationsLabel.hidden = !(opt && opt.dataset.locations === "1");
+  }
+  if (templateSelect) {
+    templateSelect.addEventListener("change", syncLocationsVisibility);
+    syncLocationsVisibility();
+  }
 
   async function showSeriesReview() {
     const data = await (await fetch("/api/pf/series")).json();
@@ -305,7 +299,14 @@
     reviewPanel.hidden = true;
     reviewSlug = null;
     seriesSelect.value = "";
-    await loadSeriesList();
+    // Zur vorher aktiven Serie zurück (falls sie noch existiert) und das
+    // auch nach series/LATEST durchschreiben — der Server hat LATEST beim
+    // Discard nur heuristisch (mtime) repointet.
+    await loadSeriesList(preCreateSlug || undefined);
+    if (preCreateSlug && seriesSelect.value === preCreateSlug) {
+      await setActiveSeries(preCreateSlug);
+    }
+    preCreateSlug = null;
     refreshStatus();
   });
 
@@ -376,6 +377,11 @@
     if (locs.keys) {
       html += card("Szenen-Orte", `${locs.images}/${locs.keys} Bilder`,
         locs.images >= locs.keys ? "ready" : (locs.images || locs.prompts_ready ? "partial" : "missing"));
+    }
+    const thumbs = s.thumbnails || {};
+    if (thumbs.total) {
+      html += card("Episoden-Thumbnails", `${thumbs.ready}/${thumbs.total}`,
+        thumbs.ready >= thumbs.total ? "ready" : (thumbs.ready ? "partial" : "missing"));
     }
     html += card("Archiv", `${s.archive_count} Serie(n)`, s.archive_count ? "ready" : "missing");
     container.innerHTML = html;
@@ -471,43 +477,6 @@
     loadLocationPrompts().catch(console.error);
   });
 
-  async function refreshLolfiStatus() {
-    const res = await fetch("/api/status/lolfi");
-    const s = await res.json();
-    const container = document.getElementById("lolfi-status-cards");
-    let html = "";
-    html += card("Szenen", s.scene_count, s.scene_count ? "ready" : "missing");
-    html += card("Aktuelle Szene", s.current_scene_title || "—", s.current_scene_title ? "ready" : "missing");
-    html += card("Prompt-Set", s.latest_prompt_file ? stateLabel(s.latest_prompt_state) : "offen", s.latest_prompt_state);
-    html += card("Loop-Clip", s.video_baseline_ready ? "vorhanden" : "fehlt", s.video_baseline_ready ? "ready" : "missing");
-    html += card("Musik", s.music_ready ? "vorhanden" : "fehlt", s.music_ready ? "ready" : "missing");
-    html += card("SFX", (s.sfx_baseline_ready || s.sfx_variations_ready) ? "vorhanden" : "fehlt", (s.sfx_baseline_ready || s.sfx_variations_ready) ? "ready" : "missing");
-    html += card("Renders", (s.renders || []).length, s.render_state);
-    container.innerHTML = html;
-
-    document.getElementById("lolfi-scene-text").textContent = s.current_scene_text || "(keine Szene vorhanden)";
-
-    const list = document.getElementById("lolfi-renders-list");
-    list.innerHTML = (s.renders || []).map(r =>
-      `<li>${r.name} — ${r.size_mb} MB</li>`
-    ).join("") || "<li>(noch keine Renders)</li>";
-
-    const episodeSelect = document.getElementById("lolfi-episode-select");
-    if (episodeSelect) {
-      const files = s.podcast_episode_files || [];
-      const previous = episodeSelect.value;
-      const optionsHtml = ['<option value="">Automatisch (Anthologie bevorzugt)</option>']
-        .concat(files.map(f => `<option value="${f}">${f}</option>`))
-        .join("");
-      if (optionsHtml !== episodeSelect.dataset.rendered) {
-        episodeSelect.innerHTML = optionsHtml;
-        episodeSelect.dataset.rendered = optionsHtml;
-        if (files.includes(previous)) episodeSelect.value = previous;
-      }
-    }
-    applyStepStates("lolfi", lolfiStepStates(s));
-  }
-
   async function refreshTtsStatus() {
     const res = await fetch("/api/status/tts");
     const s = await res.json();
@@ -520,7 +489,6 @@
 
   function refreshStatus() {
     refreshPfStatus().catch(console.error);
-    refreshLolfiStatus().catch(console.error);
     refreshTtsStatus().catch(console.error);
   }
   loadSeriesList().then(refreshStatus).catch(() => refreshStatus());
@@ -610,9 +578,6 @@
         }).catch(console.error);
       } else {
         refreshStatus();
-      }
-      if (payload.returncode === 0 && commandId === "lolfi_generate_prompts") {
-        loadLolfiPromptSet().catch(console.error);
       }
       if (payload.returncode === 0 && commandId === "pf_character_prompts") {
         loadCharacterPrompts().catch(console.error);
@@ -838,6 +803,7 @@
       ensureAudioContext();
       const [commandId, params] = maybeCloudRewrite(btn.dataset.command, collectParams(btn));
       if (!commandId) return;
+      if (commandId === "pf_create_series") preCreateSlug = currentSeriesSlug();
       runCommand(commandId, params, btn);
     });
   });
@@ -867,8 +833,9 @@
     const episodes = document.getElementById("pf-episodes").value || 3;
     const template = document.getElementById("pf-template").value;
     const minutes = document.getElementById("pf-minutes").value || 35;
+    const locations = document.getElementById("pf-locations").value;
     if (!topic.trim()) { alert("Bitte zuerst ein Thema eintragen."); return; }
-    const res = await fetch(`/api/blocks/pf/series-prompt?topic=${encodeURIComponent(topic)}&episodes=${episodes}&template=${encodeURIComponent(template)}&minutes=${minutes}`);
+    const res = await fetch(`/api/blocks/pf/series-prompt?topic=${encodeURIComponent(topic)}&episodes=${episodes}&template=${encodeURIComponent(template)}&minutes=${minutes}&locations=${encodeURIComponent(locations)}`);
     const data = await res.json();
     document.getElementById("pf-series-block").textContent = data.block || data.error || "";
   });
@@ -880,15 +847,4 @@
     document.getElementById("pf-upload-index-block").textContent = data.upload_index || "(noch nicht vorhanden)";
   });
 
-  async function loadLolfiPromptSet() {
-    const res = await fetch("/api/blocks/lolfi/prompt-set");
-    const data = await res.json();
-    document.getElementById("lolfi-prompt-source").textContent = data.source_file
-      ? `Quelle: ${data.source_file}` : "(noch kein Prompt-Set vorhanden)";
-    document.getElementById("lolfi-image-prompt").textContent = data.image_prompt || "";
-    document.getElementById("lolfi-image-negative").textContent = data.image_negative_prompt || "";
-    document.getElementById("lolfi-suno-prompt").textContent = data.suno_prompt || "";
-  }
-
-  document.getElementById("lolfi-prompt-load-btn").addEventListener("click", loadLolfiPromptSet);
 })();

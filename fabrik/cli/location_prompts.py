@@ -17,9 +17,10 @@ Ist OPENAI_API_KEY gesetzt (und --no-images nicht angegeben), wird für jeden
 Ort sofort ein PNG über gpt-image-1-mini erzeugt (im Querformat, passend als
 Video-Hintergrund) und als series/<slug>/locations/<ORT_KEY>.png abgelegt —
 ohne Key bleibt es wie bisher bei den Text-Prompts zum manuellen Einfügen bei
-einem Bildmodell deiner Wahl. Dort findet sie das Lolfi-Video-Rendering und
-wechselt automatisch den Hintergrund, wenn die Handlung an diesen Ort
-springt (Location-Timeline aus podcast_maker.py/batch.py).
+einem Bildmodell deiner Wahl. Nützlich für Cover-Kunst, Social-Media-Assets
+oder einen eigenen Video-Export, der den Hintergrund anhand der
+Location-Timeline (podcast_maker.py/batch.py) wechselt, wenn die Handlung an
+diesen Ort springt.
 
 Braucht kein .venv — nur die Claude CLI (wie generate_episode.py); die
 Bildgenerierung selbst nutzt nur stdlib (urllib), kein zusätzliches Paket.
@@ -192,8 +193,8 @@ def main():
         with open(out_file, "w", encoding="utf-8") as f:
             f.write(f"# Location-Bild-Prompts — {data.get('series_title', series.slug)}\n")
             f.write("# Jedes Bild extern generieren und hier im Ordner ablegen als: <ORT_KEY>.png\n")
-            f.write("# (z.B. " + f"{next(iter(locations))}.png" + ") — Lolfi wechselt den Hintergrund\n")
-            f.write("# dann automatisch, wenn die Handlung an diesen Ort springt.\n\n")
+            f.write("# (z.B. " + f"{next(iter(locations))}.png" + ") — für Cover-Kunst,\n")
+            f.write("# Social-Media-Assets oder einen eigenen Video-Export.\n\n")
             for key in locations:
                 f.write(f"=== {key} ===\n{blocks[key]}\n\n")
 

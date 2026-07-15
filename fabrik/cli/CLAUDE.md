@@ -14,6 +14,7 @@ einzige Serie).
 | generate_episode | Skripte schreiben (`check`/`N`/`all`) | claude CLI |
 | podcast_maker / batch | vertonen (eine/alle Episoden) | .venv + ffmpeg + TTS-Server |
 | character_prompts / location_prompts / cover_art | Bild-Prompts (+ PNGs bei OPENAI_API_KEY) | claude CLI (Bilder: stdlib urllib, kein venv) |
+| episode_thumbnails | dramatisches, spoilerfreies Poster-Thumbnail pro Episode (16:9 + 1:1) | claude CLI (Bilder: stdlib urllib, kein venv) |
 | highlight_clips | Teaser-Highlights (30–90s) für 9:16-Clips auswählen | claude CLI |
 | sfx_plan | SFX-Cues kuratieren: Palette + Platzierung + Lautstärke | claude CLI |
 | sfx_assets / location_ambience | die Sounds dazu generieren (ElevenLabs) | ELEVENLABS_API_KEY, stdlib urllib |
@@ -145,6 +146,49 @@ Claude nichts erfinden darf. **Nur narration-Mode.**
 - `cover_art [--force] [--no-copy]` erzeugt EIN Serien-Cover
   (`.../04_visuals/output/cover.png`); braucht zwingend `OPENAI_API_KEY`
   (kein prompts-only-Modus wie bei den beiden anderen).
+
+## episode_thumbnails.py
+
+Dramatisches, spoilerfreies Poster-Thumbnail pro Episode — kurze Hook-Zeile
+(2–5 Wörter, movie-poster-artig) + ein Symbol-Motiv im Cover-Art-Stil (keine
+Nahaufnahme-Gesichter, gleiche `masterpiece, painted lo-fi animation
+style`-Stilfamilie), je einmal im Querformat (16:9, `1536x1024`, Video-
+Upload) und quadratisch (1:1, `1024x1024`, Podcast-Episodenbild).
+
+- **Läuft automatisch** am Ende jeder Episoden-Generierung
+  (`fabrik/cli/generate_episode.py`, sowohl im normalen als auch im
+  `"source": "imported"`-Zweig — direkt nach dem jeweiligen
+  `generate_episode_meta`-Aufruf) — genau wie Titel/Beschreibung ein
+  nice-to-have: ein Fehlschlag lässt die Episode NICHT scheitern. Ohne
+  `OPENAI_API_KEY` wird der Schritt übersprungen (kein Fehler), sonst würde
+  jeder Lauf ohne gesetzten Key als "fehlgeschlagen" markiert.
+- Logik lebt in `fabrik/writing/thumbnail_writer.py` (NICHT in
+  `script_writer.py` selbst — der Aufruf sitzt eine Ebene höher in
+  `generate_episode.py`, weil `thumbnail_writer.py` `call_claude`/
+  `MAX_RETRIES`/`RETRY_DELAY` aus `script_writer.py` importiert, wie
+  `cover_art.py`/`location_prompts.py` es auch tun; ein Import in die
+  Gegenrichtung wäre ein Zirkel-Import).
+  **Ein Claude-Text-Call, zwei Bild-Calls:** ein Bildprompt wird EINMAL
+  erzeugt (fürs Querformat UND das Quadrat gemeinsam formuliert — Fokuspunkt
+  und Text zentriert genug für beide Crops) und dann für BEIDE Größen an
+  gpt-image-1-mini geschickt.
+- Hook-Zeile und Bildprompt laufen auf `light_model` (reine Text-/
+  Prompt-Arbeit, kein kreatives Schreiben). Die Hook-Zeile bekommt dieselbe
+  Spoilerfrei-Regel wie die Zuschauer-Frage aus `generate_episode_meta`
+  (darf Ende/Twist/Auflösung nicht verraten), max. 40 Zeichen.
+- Standalone: `python3 -m fabrik.cli.episode_thumbnails [--episode N]
+  [--force] [--series SLUG]` — zum Nachholen (Key erst später gesetzt) oder
+  gezielten Neu-Generieren einzelner Episoden, ohne das ganze Skript neu zu
+  schreiben (`--episode`-Pattern wie `highlight_clips.py`). Anders als beim
+  automatischen Pfad bricht das Standalone-CLI OHNE Key hart ab (`sys.exit`)
+  — hier ist die Bildgenerierung der ganze Zweck des Aufrufs, kein
+  Nebenprodukt.
+- Ausgabe: `stages/04_visuals/output/thumbnails/<prefix>N_wide.png` +
+  `<prefix>N_square.png`. Idempotent pro Datei: existiert eine der beiden
+  Größen schon, wird nur die fehlende nachgeholt (kein `--force` nötig für
+  einen reinen Teil-Fehlschlag-Retry).
+- WebUI-Knopf: `#pf-step-thumbnails` (`pf_episode_thumbnails`, optionales
+  Episoden-Nummer-Feld + `--force`-Checkbox, siehe webui/CLAUDE.md).
 
 ## highlight_clips.py
 

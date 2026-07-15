@@ -4,11 +4,10 @@ die aktuellen Dateien frisch von Disk."""
 import glob
 import json
 import os
-import re
 
-from config import (LOLFI_DIR, PF_DIR, current_series_dir, series_dir_for,
+from config import (PF_DIR, current_series_dir, series_dir_for,
                     EPISODES_RELPATH, SCRIPTS_RELPATH, OUTPUT_RELPATH,
-                    CHARACTERS_RELPATH, LOCATIONS_RELPATH, VISUALS_RELPATH)
+                    CHARACTERS_RELPATH, LOCATIONS_RELPATH, THUMBNAILS_RELPATH, VISUALS_RELPATH)
 
 
 def _read_json(path):
@@ -140,6 +139,18 @@ def pf_status(jobs=None, series_slug=None) -> dict:
                 highlights_ready += 1
     highlights = {"audio_ready": highlights_audio, "with_highlights": highlights_ready}
 
+    # Episoden-Thumbnails (fabrik.cli.episode_thumbnails / automatisch am Ende
+    # jeder Episoden-Generierung): wie viele Episoden haben schon BEIDE
+    # Größen (<prefix>N_wide.png + <prefix>N_square.png)?
+    thumbnails_dir = os.path.join(series_dir, THUMBNAILS_RELPATH) if series_dir else None
+    thumbnails_ready = 0
+    if thumbnails_dir and os.path.isdir(thumbnails_dir):
+        for i in range(1, len(episodes) + 1):
+            if (os.path.exists(os.path.join(thumbnails_dir, f"{prefix}{i}_wide.png"))
+                    and os.path.exists(os.path.join(thumbnails_dir, f"{prefix}{i}_square.png"))):
+                thumbnails_ready += 1
+    thumbnails = {"ready": thumbnails_ready, "total": len(episodes)}
+
     return {
         "series_slug": os.path.basename(series_dir) if series_dir else None,
         "series_title": episodes_json.get("series_title"),
@@ -156,114 +167,10 @@ def pf_status(jobs=None, series_slug=None) -> dict:
         "characters": characters,
         "locations": locations,
         "highlights": highlights,
+        "thumbnails": thumbnails,
         "cover_exists": cover_exists,
         "anthology_meta_exists": os.path.exists(os.path.join(scripts_dir, "ANTHOLOGY_META.txt")),
         "upload_index_exists": os.path.exists(os.path.join(output_dir, "UPLOAD_INDEX.md")),
         "archive_count": archive_count,
-        "running_jobs": running_commands,
-    }
-
-
-# Muss mit Lolfis lolfi/config.py::AUDIO_EXTS / PODCAST_EXCLUDE_PATTERNS
-# übereinstimmen (keine gemeinsamen Imports zwischen den beiden Projekten,
-# siehe Kopplungstabelle in ~/Downloads/Lolfi/CLAUDE.md).
-_PODCAST_AUDIO_EXTS = (".mp3", ".wav", ".flac", ".aac", ".m4a")
-_PODCAST_EXCLUDE_PATTERNS = ("_meta_",)
-
-
-def _list_podcast_episode_files() -> list:
-    """Alle einzeln wählbaren Episoden-Audiodateien (inkl. einer evtl.
-    vorhandenen Anthologie) aus dem Output-Ordner der aktiven Serie sowie dem
-    lokalen Lolfi-Ordner podcast/ — gleiche Reihenfolge/Filter wie
-    lofi_system.py::PODCAST_DIRS, aber nur zum Auflisten fürs Dropdown, ohne
-    Dauer-Probing (das übernimmt lofi_system.py selbst beim Rendern)."""
-    pf_series_dir = current_series_dir()
-    dirs = [
-        os.path.join(LOLFI_DIR, "podcast"),
-        os.path.join(pf_series_dir, OUTPUT_RELPATH) if pf_series_dir else None,
-    ]
-    files = []
-    for d in dirs:
-        if not d or not os.path.isdir(d):
-            continue
-        for fname in sorted(os.listdir(d)):
-            if os.path.splitext(fname)[1].lower() not in _PODCAST_AUDIO_EXTS:
-                continue
-            if any(p in fname.lower() for p in _PODCAST_EXCLUDE_PATTERNS):
-                continue
-            files.append(fname)
-    return files
-
-
-def lolfi_status(jobs=None) -> dict:
-    scene_history = _read_json(os.path.join(LOLFI_DIR, "scene_history.json")) or []
-    scene_text = _read_text(os.path.join(LOLFI_DIR, "szene.txt")) or ""
-    scene_title_match = re.search(r"^Titel:\s*(.+)$", scene_text, re.MULTILINE)
-
-    prompt_files = sorted(
-        glob.glob(os.path.join(LOLFI_DIR, "prompts", "*.txt")),
-        key=os.path.getmtime, reverse=True,
-    )
-    latest_prompt_file = prompt_files[0] if prompt_files else None
-    latest_pattern_file = None
-    if latest_prompt_file:
-        candidate = latest_prompt_file[:-4] + "_pattern.json"
-        if os.path.exists(candidate):
-            latest_pattern_file = candidate
-
-    def _nonempty_dir(*parts):
-        d = os.path.join(LOLFI_DIR, *parts)
-        if not os.path.isdir(d):
-            return False
-        return any(not f.startswith(".") for f in os.listdir(d))
-
-    renders = sorted(
-        glob.glob(os.path.join(LOLFI_DIR, "video", "output", "*")),
-        key=os.path.getmtime, reverse=True,
-    )
-    render_rows = [
-        {
-            "name": os.path.basename(r),
-            "size_mb": round(os.path.getsize(r) / (1024 * 1024), 1),
-            "mtime": os.path.getmtime(r),
-        }
-        for r in renders if os.path.isfile(r)
-    ]
-
-    running_commands = jobs.snapshot() if jobs else {}
-
-    pf_series_dir = current_series_dir()
-    pf_output_dir = os.path.join(pf_series_dir, OUTPUT_RELPATH) if pf_series_dir else None
-    local_podcast_dir = os.path.join(LOLFI_DIR, "podcast")
-    podcast_sources = {
-        "local (podcast/)": len([f for f in os.listdir(local_podcast_dir) if f.lower().endswith((".mp3", ".wav"))])
-            if os.path.isdir(local_podcast_dir) else 0,
-        "Podcast-Fabrik (series/.../output/)": len([f for f in os.listdir(pf_output_dir) if f.lower().endswith((".mp3", ".wav"))])
-            if pf_output_dir and os.path.isdir(pf_output_dir) else 0,
-    }
-
-    return {
-        "scene_count": len(scene_history),
-        "current_scene_title": scene_title_match.group(1).strip() if scene_title_match else None,
-        "current_scene_text": scene_text,
-        "latest_prompt_file": os.path.basename(latest_prompt_file) if latest_prompt_file else None,
-        "latest_prompt_state": _state(
-            running_commands.get("lolfi_generate_prompts", {}).get("state") == "running",
-            bool(latest_prompt_file),
-        ),
-        "latest_pattern_ready": bool(latest_pattern_file),
-        # lofi_system.py akzeptiert den Loop-Clip aus baseline/ (Pingpong)
-        # ODER baseline_normal/ (nur vorwärts, Standbild-Auto-Pfad).
-        "video_baseline_ready": _nonempty_dir("video", "baseline") or _nonempty_dir("video", "baseline_normal"),
-        "music_ready": _nonempty_dir("music"),
-        "sfx_baseline_ready": _nonempty_dir("sfx", "baseline"),
-        "sfx_variations_ready": _nonempty_dir("sfx", "variations"),
-        "renders": render_rows,
-        "podcast_sources": podcast_sources,
-        "podcast_episode_files": _list_podcast_episode_files(),
-        "render_state": _state(
-            running_commands.get("lolfi_render", {}).get("state") == "running",
-            bool(render_rows),
-        ),
         "running_jobs": running_commands,
     }

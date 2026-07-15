@@ -71,9 +71,11 @@ def build_argv(command_id: str, params: dict) -> tuple[list[str] | None, str | N
         name = entry[1]
         value = (params or {}).get(name)
         if kind == "positional_required":
-            if not value:
+            # str(value).strip(): auch ein Nur-Leerzeichen-Topic aus dem
+            # Textfeld zählt als fehlend, statt als "  " beim CLI zu landen.
+            if value is None or not str(value).strip():
                 raise ValidationError(f"Parameter '{name}' ist erforderlich")
-            argv.append(str(value))
+            argv.append(str(value).strip())
         elif kind == "flag":
             cli_flag = entry[2]
             if value not in (None, ""):

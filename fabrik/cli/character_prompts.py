@@ -9,20 +9,19 @@ Verwendung:
   python3 character_prompts.py --no-images         # nur Prompts, keine Bilder erzeugen
 
 Für jede Rolle aus dem voices-Mapping (außer NARRATOR) baut Claude ein
-neutrales Porträt PLUS ein Porträt je Emotion (siehe EMOTIONS unten, spiegelt
-Lolfis Emotionserkennung) — alle mit einem für die Rolle IDENTISCHEN
-Charakter und einem für alle Charaktere IDENTISCHEN Stil-Block, damit die
-Bilder wie ein Ensemble aussehen und nur der Gesichtsausdruck variiert.
+neutrales Porträt PLUS ein Porträt je Emotion (siehe EMOTIONS unten) — alle
+mit einem für die Rolle IDENTISCHEN Charakter und einem für alle Charaktere
+IDENTISCHEN Stil-Block, damit die Bilder wie ein Ensemble aussehen und nur
+der Gesichtsausdruck variiert.
 
 Ist OPENAI_API_KEY gesetzt (und --no-images nicht angegeben), wird für jede
 Rolle+Emotion sofort ein PNG über gpt-image-1-mini erzeugt und als
 series/<slug>/characters/<ROLLE>.png (neutral) bzw.
 series/<slug>/characters/<ROLLE>_<emotion>.png abgelegt — ohne Key bleibt es
 wie bisher bei den Text-Prompts zum manuellen Einfügen bei einem Bildmodell
-deiner Wahl. Dort findet sie das Lolfi-Video-Rendering und blendet je
-Sprech-Abschnitt automatisch das zur erkannten Emotion passende Bild ein
-(Fallback: neutrales Bild), basierend auf der Sprecher-Timeline aus
-podcast_maker.py/batch.py.
+deiner Wahl. Nützlich für Cover-Kunst, Social-Media-Assets oder einen
+eigenen Video-Export, der Sprech-Abschnitte anhand der Sprecher-Timeline aus
+podcast_maker.py/batch.py mit dem zur Emotion passenden Bild illustriert.
 
 Braucht kein .venv — nur die Claude CLI (wie generate_episode.py); die
 Bildgenerierung selbst nutzt nur stdlib (urllib), kein zusätzliches Paket.
@@ -41,13 +40,11 @@ from fabrik.writing.script_writer import call_claude, MAX_RETRIES, RETRY_DELAY
 
 PROMPTS_FILENAME = "PROMPTS.txt"
 
-# Spiegelt EXAKT die Emotion-Keys aus Lolfis EMOTIONS-Dict
-# (~/Downloads/Lolfi/lofi_system.py) — das ist eine separate Codebase ohne
-# gemeinsamen Import, die Keys müssen also manuell synchron gehalten werden.
-# Lolfi klassifiziert pro Sprech-Spanne aus dem Style-Regieanweisungstext eine
-# dieser Emotionen und blendet dann, wenn eine Datei
-# characters/<ROLLE>_<emotion>.png existiert, genau die statt des neutralen
-# Porträts ein (Fallback: neutrales Bild, wenn die Variante fehlt).
+# Eigene Emotions-Taxonomie dieses Projekts (sieben Keys) — jede Rolle
+# bekommt ein Porträt pro Emotion, benannt als characters/<ROLLE>_<emotion>.png
+# (Fallback: das neutrale Porträt, wenn eine Variante fehlt). Ein optionaler
+# Video-Export würde pro Sprech-Spanne aus dem Style-Regieanweisungstext
+# (classify_emotion() unten) genau diese Datei nachladen.
 EMOTIONS = {
     "anger": "angry, furious — glaring eyes, tense jaw, aggressive forward posture",
     "fear": "afraid, scared — wide eyes, tense shoulders, defensive/recoiling posture",
@@ -59,11 +56,8 @@ EMOTIONS = {
 }
 
 
-# Spiegelt EXAKT die Keywords aus Lolfis classify_emotion() (lofi_system.py)
-# — gleiche dict-Reihenfolge (= gleiche Match-Priorität, "vulnerability" zuerst
-# aus demselben Grund wie dort: Fassade-bricht-Regieanweisungen dürfen nicht
-# fälschlich als "joy" durchgehen). Manuell synchron halten, wie EMOTIONS oben
-# — kein gemeinsamer Import zwischen den beiden Codebases.
+# dict-Reihenfolge = Match-Priorität: "vulnerability" zuerst, damit eine
+# Fassade-bricht-Regieanweisung nicht fälschlich als "joy" durchgeht.
 EMOTION_KEYWORDS = {
     "vulnerability": ["crack", "raw", "unguarded", "breaking through",
                        "catching himself", "catching herself", "for one line",
@@ -89,11 +83,10 @@ assert set(EMOTION_KEYWORDS) == set(EMOTIONS), "EMOTION_KEYWORDS muss exakt zu E
 
 
 def classify_emotion(style_text):
-    """Exakt Lolfis classify_emotion() gespiegelt — ordnet eine Style-Regie-
-    anweisung ("whispering, afraid to be heard") der ersten passenden Emotion
-    zu, None wenn nichts matcht. Nur wenn dieselbe Klassifikation hier auch
-    tatsächlich matcht, würde Lolfi die entsprechende Emotionsvariante beim
-    Video-Rendern je abrufen."""
+    """Ordnet eine Style-Regieanweisung ("whispering, afraid to be heard")
+    der ersten passenden Emotion zu, None wenn nichts matcht — bestimmt,
+    welche Porträt-Emotionsvariante für einen Sprech-Abschnitt gebraucht
+    würde (z.B. für einen optionalen Video-Export)."""
     if not style_text:
         return None
     lowered = style_text.lower()
@@ -106,9 +99,10 @@ def classify_emotion(style_text):
 def find_used_emotions(series, roles):
     """Scannt alle vorhandenen Episoden-Skripte nach style-Regieanweisungen
     pro Rolle und klassifiziert sie über classify_emotion() — liefert pro
-    Rolle nur die Emotionen, die Lolfi beim Video-Rendern für diese Rolle
-    überhaupt einmal abrufen würde. Rollen ohne (noch) generierte Skripte
-    bekommen eine leere Menge zurück (→ nur das Neutral-Porträt nötig)."""
+    Rolle nur die Emotionen, die für diese Rolle tatsächlich vorkommen (spart
+    Bild-Generierung für nie gebrauchte Varianten). Rollen ohne (noch)
+    generierte Skripte bekommen eine leere Menge zurück (→ nur das
+    Neutral-Porträt nötig)."""
     used = {role: set() for role in roles}
     scripts_dir = series.scripts_dir
     if not os.path.isdir(scripts_dir):
@@ -357,7 +351,7 @@ def main():
             f.write(f"# Charakter-Porträt-Prompts — {data.get('series_title', series.slug)}\n")
             f.write("# Jedes Bild extern generieren und hier im Ordner ablegen unter dem genannten\n")
             f.write("# Dateinamen (neutral: <ROLLE>.png, je Emotion: <ROLLE>_<emotion>.png) —\n")
-            f.write("# Lolfi blendet dann automatisch das zur Szene passende Bild ein.\n\n")
+            f.write("# für Cover-Kunst, Social-Media-Assets oder einen eigenen Video-Export.\n\n")
             for block_id, _role, fname, _emotion in targets:
                 f.write(f"=== {block_id} === (→ characters/{fname})\n{blocks[block_id]}\n\n")
 

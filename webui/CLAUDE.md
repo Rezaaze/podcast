@@ -1,12 +1,8 @@
-# webui — Flask-Cockpit für Podcast-Fabrik UND Lolfi
+# webui — Flask-Cockpit für Podcast-Fabrik
 
-Flask (`app.py`) + Vanilla JS (`static/app.js`), Single-Page mit zwei Tabs
-(Podcast-Fabrik / Lolfi). Eigenes venv (`webui/.venv`, Setup via
-`./start_webui.sh`), Port 5151 (`WEBUI_PORT` überschreibt).
-
-Lolfi ist ein SEPARATES Projekt (`~/Downloads/Lolfi`, Video/Musik, nicht in
-diesem Repo); `webui/config.py` hardcodet `LOLFI_DIR` — nicht wundern über
-"lolfi_*"-Pfade.
+Flask (`app.py`) + Vanilla JS (`static/app.js`), Single-Page. Eigenes venv
+(`webui/.venv`, Setup via `./start_webui.sh`), Port 5151 (`WEBUI_PORT`
+überschreibt).
 
 ## Architektur
 
@@ -49,18 +45,37 @@ diesem Repo); `webui/config.py` hardcodet `LOLFI_DIR` — nicht wundern über
 - "Serie erstellen" spiegelt die create_series-Flags 1:1 (episodes,
   minutes, locations als Number-Inputs; `args_schema` in COMMANDS; für den
   "Block erzeugen"-Copy-Fallback `webui/prompt_blocks.py::
-  build_series_prompt_block` / `/api/blocks/pf/series-prompt`).
+  build_series_prompt_block` / `/api/blocks/pf/series-prompt` — inkl.
+  `locations`). Das Template-Dropdown wird NICHT mehr hart in index.html
+  gepflegt: `config.list_templates()` enumeriert `templates/*/
+  EPISODES_CREATOR_PROMPT.md` bei jedem Seitenaufruf (neue Templates
+  erscheinen ohne Server-Neustart; Beschreibungen in
+  `config.TEMPLATE_DESCRIPTIONS`). Das Orte-Feld ist nur sichtbar, wenn
+  der Creator-Prompt des gewählten Templates `{{LOCATION_COUNT}}` enthält
+  (`data-locations` an den Options, `app.js::syncLocationsVisibility`).
 - Nach erfolgreichem Create zeigt `#pf-series-review`
   (`app.js::showSeriesReview`) das Konzept mit "Behalten"/"Verwerfen".
   Discard = `POST /api/pf/series/discard`, löscht `series/<slug>/` NUR
   solange keine Skripte und keine Outputs existieren (Server-Guard) und
-  repointet LATEST auf die zuletzt geänderte verbleibende Serie.
+  repointet LATEST auf die zuletzt geänderte verbleibende Serie; der
+  Client merkt sich beim Klick auf "Serie erstellen" die vorher aktive
+  Serie (`preCreateSlug`) und stellt sie nach Discard wieder her
+  (Dropdown + LATEST).
 - "Szenen-Orte"-Step (`pf_location_prompts`) spiegelt den
   Charakter-Porträts-Step 1:1 (`status.py`s `locations`-Dict,
   `pf-step-locations` versteckt, außer die Serie hat `locations`).
 - `pf_cover_art` (Button im Visuals-Bereich) wrappt `fabrik.cli.cover_art`
   (`--force`, braucht OPENAI_API_KEY); `status.py` meldet `cover_exists`
   (`.../04_visuals/output/cover.png`) für die Statuskarte.
+- **Episoden-Thumbnails-Step** (`#pf-step-thumbnails`, `pf_episode_thumbnails`
+  → `fabrik.cli.episode_thumbnails`): dramatisches, spoilerfreies
+  Poster-Thumbnail pro Episode (Hook-Zeile + Symbol-Motiv, 16:9 + 1:1) —
+  läuft AUTOMATISCH am Ende jeder Episoden-Generierung mit (siehe
+  fabrik/cli/CLAUDE.md), der Knopf hier ist nur zum Nachholen (Key erst
+  später gesetzt) oder gezielten `--force`-Neu-Generieren einzelner
+  Episoden über das Nummernfeld (`#pf-thumbnails-episode`, optional, leer =
+  alle). `status.py` liefert `thumbnails.{ready,total}` (beide Größen pro
+  Episode vorhanden) für die Statuskarte.
 - **Sounddesign-Step** (`#pf-step-sound`) mit drei Knöpfen: `pf_sfx_plan`
   (Claude; Checkbox `#pf-sfx-plan-force` → `--force`), `pf_sfx_assets` und
   `pf_location_ambience` (beide ElevenLabs). Zwei Dinge, die man beim
@@ -112,25 +127,10 @@ diesem Repo); `webui/config.py` hardcodet `LOLFI_DIR` — nicht wundern über
   merge_anthology via `POST /api/pf/series/settings`; `GET /api/pf/series`
   liefert den Wert pro Serie, `updateUseBeatsCheckbox()` synct beim
   Serienwechsel).
-- **Teaser-Clips-Step (Lolfi-Tab, Schritt 5):** `pf_highlight_clips`
+- **Teaser-Highlights-Step** (`#pf-step-highlights`): `pf_highlight_clips`
   (Episoden-NUMMER via `#pf-highlight-episode`, leer = alle vertonten)
-  schreibt die HIGHLIGHTS.json, „📂 Audio-Output" ist das Review-Gate zum
-  Hand-Editieren, `lolfi_clips` (nutzt das Episoden-Dropdown aus Schritt 4,
-  Dateinamen-Fragment) rendert die 9:16-Clips nach `video/output/`.
-  Checkbox `#lolfi-clips-full` (`--full`) rendert stattdessen die GANZE
-  Episode als ein 9:16-Video — der Weg für nativ kurze Serien
-  (create_series mit 1–3 Minuten), keine Highlights-Auswahl nötig.
-  `status.py` liefert dazu das `highlights`-Dict (vertonte Episoden vs.
-  Episoden mit HIGHLIGHTS.json).
-- Lolfi-Tab: Episoden-Dropdown (`#lolfi-episode-select`, gefüttert von
-  `status.py::_list_podcast_episode_files`, wird `--episode <filename>`),
-  "▶ Video rendern" (Dropdown leer = Automatik: Anthologie bevorzugt,
-  sonst die numerisch ERSTE Einzel-Episode — seit Lolfi-Commit 6f15ed1
-  natürliche Sortierung, Ep2 vor Ep10) und "▶ Alle Episoden einzeln
-  rendern" (`lolfi_render_all`,
-  `lofi_system.py --all`) als Ausweg für merge_anthology:false-Serien.
-- Lolfis Hintergrund-Loop ist ein statischer Clip in
-  `video/baseline_normal/` (auto-erzeugt von generate_prompts.py mit
-  OPENAI_API_KEY); der Kling.ai-Workflow wurde entfernt —
-  `video/baseline/` (Ping-Pong) funktioniert nur noch mit manuell
-  platziertem Clip.
+  schreibt die HIGHLIGHTS.json (Zeiten + Hook-Text) neben die MP3, „📂
+  Audio-Output" ist das Review-Gate zum Hand-Editieren — Weiterverarbeitung
+  (Clips schneiden) läuft außerhalb der WebUI, in einem Video-Editor nach
+  Wahl. `status.py` liefert dazu das `highlights`-Dict (vertonte Episoden
+  vs. Episoden mit HIGHLIGHTS.json).

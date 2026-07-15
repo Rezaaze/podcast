@@ -137,7 +137,14 @@ Paket, weil sie von claude-CLI-Pfad-CLIs (kein venv) importiert werden und
 - `elevenlabs_backend.py` — ElevenLabs SFX/Ambience-Generierung (urllib,
   `ELEVENLABS_API_KEY`), genutzt von sfx_assets/location_ambience.
 - `image_backends.py` — OpenAI-Bildgenerierung (urllib, `OPENAI_API_KEY`),
-  genutzt von character_prompts/location_prompts/cover_art.
+  genutzt von character_prompts/location_prompts/cover_art/
+  episode_thumbnails.
+- `thumbnail_writer.py` — dramatisches, spoilerfreies Episoden-Thumbnail
+  (Hook-Zeile + Poster-Bildprompt, je ein Render in 16:9 und 1:1); importiert
+  `call_claude`/`MAX_RETRIES`/`RETRY_DELAY` aus `script_writer.py` (wie
+  `cover_art.py`), der automatische Aufruf sitzt deshalb in
+  `fabrik/cli/generate_episode.py`, nicht in `script_writer.py` selbst —
+  sonst Zirkel-Import. Details: fabrik/cli/CLAUDE.md.
 
 ## Sonstiges
 

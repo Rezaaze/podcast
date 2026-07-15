@@ -48,6 +48,7 @@ class Series:
         self.visuals_dir = os.path.join(self.root, STAGE_VISUALS, "output")
         self.characters_dir = os.path.join(self.visuals_dir, "characters")
         self.locations_dir = os.path.join(self.visuals_dir, "locations")
+        self.thumbnails_dir = os.path.join(self.visuals_dir, "thumbnails")
         self.references_dir = os.path.join(self.root, "references")
         self.assets_dir = os.path.join(self.root, "assets")
         self.checkpoint_dir = os.path.join(self.output_dir, ".checkpoints")
@@ -87,6 +88,11 @@ class Series:
 
     def beats_review_file(self, prefix: str, episode_num: int) -> str:
         return os.path.join(self.scripts_dir, f"{prefix}{episode_num}_BEATS_REVIEW.txt")
+
+    def thumbnail_file(self, prefix: str, episode_num: int, aspect: str) -> str:
+        """aspect: 'wide' (16:9, Video-Thumbnail) oder 'square' (1:1,
+        Podcast-Episoden-Bild) — siehe fabrik/writing/thumbnail_writer.py."""
+        return os.path.join(self.thumbnails_dir, f"{prefix}{episode_num}_{aspect}.png")
 
 
 def slugify(title: str) -> str:

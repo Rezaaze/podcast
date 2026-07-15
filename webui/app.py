@@ -1,4 +1,4 @@
-"""Cockpit-WebUI für Podcast-Fabrik + Lolfi. Start: python3 app.py"""
+"""Cockpit-WebUI für Podcast-Fabrik. Start: python3 app.py"""
 
 import glob
 import json
@@ -28,7 +28,10 @@ jobs = JobRegistry()
 
 @app.get("/")
 def index():
-    return render_template("index.html", commands=COMMANDS)
+    # Templates bei jedem Seitenaufruf frisch enumerieren — ein neues
+    # Template unter templates/ erscheint so ohne Server-Neustart.
+    return render_template("index.html", commands=COMMANDS,
+                           pf_templates=config.list_templates())
 
 
 @app.get("/api/status/pf")
@@ -195,11 +198,6 @@ def api_pf_series_discard():
     return ("", 204)
 
 
-@app.get("/api/status/lolfi")
-def api_status_lolfi():
-    return jsonify(status.lolfi_status(jobs))
-
-
 @app.get("/api/status/tts")
 def api_status_tts():
     port = tts_control.get_tts_port()
@@ -332,17 +330,18 @@ def api_kill(job_id):
 @app.get("/api/blocks/pf/series-prompt")
 def api_series_prompt():
     topic = request.args.get("topic", "")
-    episodes = int(request.args.get("episodes", 3))
     template = request.args.get("template", "narration")
-    minutes = float(request.args.get("minutes", 35))
     if not topic.strip():
         return jsonify(error="topic fehlt"), 400
-    return jsonify(block=prompt_blocks.build_series_prompt_block(topic, episodes, template, minutes))
-
-
-@app.get("/api/blocks/lolfi/prompt-set")
-def api_prompt_set():
-    return jsonify(prompt_blocks.parse_latest_prompt_set())
+    try:
+        episodes = int(request.args.get("episodes", 3))
+        minutes = float(request.args.get("minutes", 35))
+        locations_raw = request.args.get("locations")
+        locations = int(locations_raw) if locations_raw else None
+    except ValueError:
+        return jsonify(error="episodes/minutes/locations müssen Zahlen sein"), 400
+    return jsonify(block=prompt_blocks.build_series_prompt_block(
+        topic, episodes, template, minutes, locations))
 
 
 @app.get("/api/blocks/pf/anthology-meta")

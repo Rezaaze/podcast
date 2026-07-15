@@ -22,7 +22,7 @@ import subprocess
 import sys
 
 from fabrik.core import config, history, paths
-from fabrik.writing import script_writer
+from fabrik.writing import script_writer, thumbnail_writer
 
 
 def _run_episode_subprocess(ep_num: int, series_slug: str, force: bool, no_script_review: bool,
@@ -168,12 +168,20 @@ def main():
             print(f"\nEpisode {num}: \"{episode['figure']}\" — bereits importiert "
                   f"(import_story.py), Skript-Generierung übersprungen ✓")
             script_writer.generate_episode_meta(series, num - 1, data, episodes, args.force, cfg)
+            thumbnail_writer.generate_episode_thumbnail(series, num - 1, data, episodes, args.force, cfg)
             return
 
         ok = script_writer.generate_episode(series, num - 1, template, data, episodes,
                                             args.force, cfg, skip_review=args.no_script_review,
                                             fix_review=args.fix, beats_pregenerated=args.beats_ready)
         if ok:
+            # Nice-to-have wie generate_episode_meta (das generate_episode()
+            # bereits intern aufruft) — hier statt in script_writer.py, damit
+            # thumbnail_writer.py von dort importieren kann, ohne einen
+            # Zirkel-Import zu riskieren (call_claude/MAX_RETRIES/RETRY_DELAY
+            # kommen aus script_writer.py, wie bei cover_art.py/location_prompts.py).
+            thumbnail_writer.generate_episode_thumbnail(series, num - 1, data, episodes,
+                                                        args.force, cfg)
             script = os.path.basename(series.script_file(cfg["prefix"], num))
             print(f"\nNächster Schritt: .venv/bin/python -m fabrik.cli.podcast_maker {script}")
         else:

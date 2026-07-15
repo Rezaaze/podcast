@@ -193,10 +193,10 @@ button:hover:not(:disabled) { filter: brightness(1.1); }
 .copy-btn:hover:not(:disabled) { color: var(--text); border-color: var(--muted); filter: none; }
 
 .substep summary { opacity: 0.75; }
-#pf-build-block-btn, #pf-meta-load-btn, #lolfi-prompt-load-btn {
+#pf-build-block-btn, #pf-meta-load-btn {
   background: transparent; border: 1px solid var(--border); color: var(--muted); font-size: 0.8rem;
 }
-#pf-build-block-btn:hover, #pf-meta-load-btn:hover, #lolfi-prompt-load-btn:hover { color: var(--text); border-color: var(--muted); }
+#pf-build-block-btn:hover, #pf-meta-load-btn:hover { color: var(--text); border-color: var(--muted); }
 
 .hint { color: var(--muted); font-size: 0.8rem; margin: 0 0 0.5rem; }
 
@@ -215,9 +215,6 @@ button:hover:not(:disabled) { filter: brightness(1.1); }
   margin: 0;
 }
 .copy-block-group { display: flex; flex-direction: column; gap: 0.8rem; }
-
-#lolfi-renders-list { list-style: none; padding: 0; margin: 0; font-size: 0.85rem; }
-#lolfi-renders-list li { padding: 0.3rem 0; border-bottom: 1px solid var(--border); color: var(--muted); }
 
 .log-panel {
   position: fixed;

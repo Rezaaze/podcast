@@ -1,4 +1,4 @@
-"""Pfade beider Projekte + feste Kommando-Whitelist für runner.py.
+"""Pfade + feste Kommando-Whitelist für runner.py.
 
 Der Browser sendet nur einen command_id-String + Parameter — nie Pfade,
 Interpreter oder Rohbefehle. Diese Datei ist die einzige Quelle dafür, was
@@ -10,7 +10,6 @@ import sys
 
 WEBUI_DIR = os.path.dirname(os.path.abspath(__file__))
 PF_DIR = os.path.dirname(WEBUI_DIR)
-LOLFI_DIR = os.path.join(os.path.expanduser("~"), "Downloads", "Lolfi")
 
 # Das Serien-Layout (MWP-Workspace: stages/NN_*/output/) lebt in
 # fabrik/core/paths.py — stdlib-only, daher auch aus dem WebUI-venv
@@ -25,6 +24,7 @@ OUTPUT_RELPATH = os.path.join(pf_paths.STAGE_AUDIO, "output")
 VISUALS_RELPATH = os.path.join(pf_paths.STAGE_VISUALS, "output")
 CHARACTERS_RELPATH = os.path.join(VISUALS_RELPATH, "characters")
 LOCATIONS_RELPATH = os.path.join(VISUALS_RELPATH, "locations")
+THUMBNAILS_RELPATH = os.path.join(VISUALS_RELPATH, "thumbnails")
 
 
 def series_root_dir():
@@ -82,6 +82,44 @@ def current_series_dir():
 def current_episodes_json():
     d = current_series_dir()
     return os.path.join(d, EPISODES_RELPATH) if d else None
+
+
+# Kurzbeschreibungen fürs Template-Dropdown. Die Liste der Templates selbst
+# kommt aus templates/ (jeder Ordner mit EPISODES_CREATOR_PROMPT.md) — neue
+# Templates erscheinen automatisch, nur eben ohne Beschreibung, bis sie hier
+# eingetragen sind.
+TEMPLATE_DESCRIPTIONS = {
+    "narration": "Ein-Sprecher-Anthologie",
+    "language_course": "Sprachkurs-Hörspiel",
+    "crime_drama": "Multi-Voice-Krimi mit Fallakten",
+    "soap_opera": "Ensemble-Seifenoper mit parallelen Strängen",
+    "shorts": "Hook-first-Kurzform für TikTok/Reels (1–3 Min, 9:16)",
+    "media_analysis": "Film-/Medien-Analyse durch die Struktur-Psychologie-Linse",
+}
+
+
+def list_templates() -> list:
+    """Alle nutzbaren Templates (Ordner unter templates/ mit
+    EPISODES_CREATOR_PROMPT.md) + ob der Creator-Prompt {{LOCATION_COUNT}}
+    kennt — daran hängt, ob das Orte-Feld im UI sichtbar ist."""
+    result = []
+    if not os.path.isdir(pf_paths.TEMPLATES_DIR):
+        return result
+    for name in sorted(os.listdir(pf_paths.TEMPLATES_DIR)):
+        prompt_file = os.path.join(pf_paths.TEMPLATES_DIR, name, "EPISODES_CREATOR_PROMPT.md")
+        if not os.path.isfile(prompt_file):
+            continue
+        try:
+            with open(prompt_file, "r", encoding="utf-8") as f:
+                supports_locations = "{{LOCATION_COUNT}}" in f.read()
+        except OSError:
+            supports_locations = False
+        result.append({
+            "slug": name,
+            "description": TEMPLATE_DESCRIPTIONS.get(name, ""),
+            "supports_locations": supports_locations,
+        })
+    return result
 
 
 def venv_python(project_dir: str) -> str:
@@ -245,26 +283,6 @@ COMMANDS = {
         "kind": "line",
         "poll_checkpoints": True,
     },
-    "lolfi_generate_scene": {
-        "label": "Neue Szene generieren",
-        "cwd": LOLFI_DIR,
-        "interpreter": lambda: sys.executable,
-        "script": "generate_scene.py",
-        "fixed_args": [],
-        "args_schema": [],
-        "kind": "line",
-    },
-    "lolfi_generate_prompts": {
-        "label": "Prompts aus Szene generieren",
-        "cwd": LOLFI_DIR,
-        "interpreter": lambda: sys.executable,
-        "script": "generate_prompts.py",
-        "fixed_args": ["--scene-file", "szene.txt"],
-        "args_schema": [
-            ("flag", "style", "--style"),
-        ],
-        "kind": "line",
-    },
     "pf_character_prompts": {
         "label": "Charakter-Porträt-Prompts generieren",
         "cwd": PF_DIR,
@@ -293,6 +311,18 @@ COMMANDS = {
         "interpreter": lambda: sys.executable,
         "module": "fabrik.cli.cover_art",
         "args_schema": [
+            ("boolflag", "force", "--force"),
+            ("flag", "series", "--series"),
+        ],
+        "kind": "line",
+    },
+    "pf_episode_thumbnails": {
+        "label": "Episoden-Thumbnails generieren (16:9 + 1:1)",
+        "cwd": PF_DIR,
+        "interpreter": lambda: sys.executable,
+        "module": "fabrik.cli.episode_thumbnails",
+        "args_schema": [
+            ("flag", "episode", "--episode"),
             ("boolflag", "force", "--force"),
             ("flag", "series", "--series"),
         ],
@@ -360,38 +390,6 @@ COMMANDS = {
         "kind": "pyfunc",
         "pyfunc": "tts_control.stop_tts",
         "args_schema": [],
-    },
-    "lolfi_render": {
-        "label": "Video rendern (lofi_system.py)",
-        "cwd": LOLFI_DIR,
-        "interpreter": lambda: venv_python(LOLFI_DIR),
-        "script": "lofi_system.py",
-        "fixed_args": [],
-        "args_schema": [
-            ("flag", "episode", "--episode"),
-        ],
-        "kind": "cr_steps",
-    },
-    "lolfi_render_all": {
-        "label": "Alle Episoden einzeln rendern (lofi_system.py --all)",
-        "cwd": LOLFI_DIR,
-        "interpreter": lambda: venv_python(LOLFI_DIR),
-        "script": "lofi_system.py",
-        "fixed_args": ["--all"],
-        "args_schema": [],
-        "kind": "cr_steps",
-    },
-    "lolfi_clips": {
-        "label": "Teaser-Clips 9:16 rendern (lofi_clips.py)",
-        "cwd": LOLFI_DIR,
-        "interpreter": lambda: venv_python(LOLFI_DIR),
-        "script": "lofi_clips.py",
-        "fixed_args": [],
-        "args_schema": [
-            ("flag", "episode", "--episode"),
-            ("boolflag", "full", "--full"),
-        ],
-        "kind": "cr_steps",
     },
 }
 

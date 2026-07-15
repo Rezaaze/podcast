@@ -13,10 +13,6 @@ eine gemasterte MP3 pro Episode (+ optional Anthologie-Merge). Kein
 Build-Step, **keine Test-Suite, kein Linter** — Python-CLI-Skripte,
 orchestriert von einem Flask-WebUI, plus vast.ai-Automation für Cloud-GPU-TTS.
 
-Ein zweites, separates Projekt — `~/Downloads/Lolfi` (Video/Musik, nicht in
-diesem Repo) — teilt sich das WebUI-Cockpit; `webui/config.py` hardcodet
-`LOLFI_DIR`.
-
 **⚠️ Aktueller Umbau:** Das Repo wird nach dem Model Workspace Protocol
 umgebaut (Branch `mwp-umbau`) — Plan und Task-Stand in
 `docs/mwp-umbau-plan.md`. Vor Arbeit an Pfaden in `fabrik/` dort den
@@ -66,19 +62,20 @@ python3 -m fabrik.cli.cover_art [--force]         # 1 Cover/Serie, braucht OPENA
 #     — vor batch, weil er die MP3 selbst verändert (Lücken vor Cues);
 #     Details: fabrik/cli/CLAUDE.md.
 #     Die ElevenLabs-Schritte laufen bewusst NIE automatisch (kosten pro
-#     Lauf Guthaben) — vor dem Lolfi-Render einmal starten. Alle drei haben
-#     auch Knöpfe im WebUI ("Sounddesign"-Step).
+#     Lauf Guthaben) — bei Bedarf einmal starten. Alle drei haben auch
+#     Knöpfe im WebUI ("Sounddesign"-Step).
 python3 -m fabrik.cli.sfx_plan [--force]          # nur bei Einzel-Episoden nötig
 python3 -m fabrik.cli.sfx_assets [--force]        # One-Shots (ELEVENLABS_API_KEY)
 python3 -m fabrik.cli.location_ambience [--force] # Orts-Ambience (ELEVENLABS_API_KEY)
 
-# 4. Teaser-Highlights für TikTok/Reels (claude CLI; Rendern übernimmt Lolfi)
+# 4. Teaser-Highlights für Social-Media-Clips auswählen (claude CLI;
+#    Zuschneiden übernimmt ein Video-Editor nach Wahl)
 python3 -m fabrik.cli.highlight_clips [--episode N] [--force]
 
 # Alle CLIs außer create_series/import_story (die legen neue Serien an und
 # schreiben LATEST): --series <slug>, sonst data/series/LATEST.
 
-# WebUI (steuert dieses Projekt + Lolfi), Port 5151
+# WebUI, Port 5151
 ./start_webui.sh
 
 # Cloud-GPU (vast.ai) für schnelleres TTS — cloud/README.md
@@ -95,7 +92,7 @@ cd cloud && ./rent.sh && ./status.sh   # ./stop.sh ./resume.sh ./destroy.sh
 | Skript-Generierung, Retry/Fallback, Wortbudget, Episode-Review, Beat-Layer | `fabrik/writing/CLAUDE.md` |
 | Vertonung, Backends, Checkpoints, Post-Merge-Safety, Timelines, Voice-Manifest, Seed | `fabrik/audio/CLAUDE.md` |
 | CLI-Flags, create_series-Verhalten, import_story, Bild-Prompt-CLIs, SFX-Kette (sfx_plan) | `fabrik/cli/CLAUDE.md` |
-| WebUI, COMMANDS/JobRegistry/SSE, Lolfi-Kopplung, UI-Gotchas | `webui/CLAUDE.md` |
+| WebUI, COMMANDS/JobRegistry/SSE, UI-Gotchas | `webui/CLAUDE.md` |
 | Template-Anatomie, die 6 Formate, Accent-Casting, NARRATOR-Regel | `templates/CLAUDE.md` |
 | Beat-Layer-Design-Begründung | `docs/beat-layer-design.md` |
 | MWP-Umbau (Plan, Ziel-Layout, Task-Stand) | `docs/mwp-umbau-plan.md` |
