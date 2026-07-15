@@ -134,6 +134,12 @@ def reconcile():
         machine_id = str(entry["machine_id"])
         elapsed = now - entry["created_at"]
         record = stats.setdefault(machine_id, {})
+        if record.get("manual"):
+            # Der User hat über das WebUI explizit geurteilt (Favorit oder
+            # verworfen) -- die Zeit-Heuristik darf das nie überschreiben:
+            # eine bewusst verworfene Maschine würde sonst nach der nächsten
+            # >10-Min-Instanz wieder zum Favoriten.
+            continue
         if elapsed >= FAVORITE_THRESHOLD_SECONDS:
             record["favorite"] = True
             record.pop("blacklisted_until", None)
@@ -150,14 +156,51 @@ def reconcile():
 
 
 def blacklisted_machine_ids():
-    """Menge der aktuell (noch nicht abgelaufen) blacklisteten machine_ids,
-    für pick_cheapest_offer.py/race_pick_offers.py."""
+    """Menge der zu meidenden machine_ids für pick_cheapest_offer.py/
+    race_pick_offers.py: zeitlich blacklistete (Heuristik, läuft ab) UND
+    manuell verworfene (avoid=True, dauerhaft -- WebUI-'Verwerfen')."""
     stats = _load_stats()
     now = time.time()
     return {
         int(mid) for mid, rec in stats.items()
-        if rec.get("blacklisted_until") and rec["blacklisted_until"] > now
+        if rec.get("avoid")
+        or (rec.get("blacklisted_until") and rec["blacklisted_until"] > now)
     }
+
+
+def set_favorite(machine_id, flag):
+    """Manuelles Favoriten-Urteil aus dem WebUI. manual=True schützt die
+    Entscheidung vor der Zeit-Heuristik in reconcile()."""
+    stats = _load_stats()
+    record = stats.setdefault(str(machine_id), {})
+    record["favorite"] = bool(flag)
+    record["manual"] = True
+    if flag:
+        record.pop("blacklisted_until", None)
+        record.pop("avoid", None)
+    _save(STATS_FILE, stats)
+
+
+def reject(machine_id):
+    """Manuelles 'Verwerfen' aus dem WebUI: Maschine dauerhaft meiden
+    (avoid=True statt ablaufender Blacklist) und offene Tracking-Einträge
+    der Maschine entfernen, damit reconcile() sie nicht doch noch anhand
+    der Laufzeit als Favorit einstuft."""
+    stats = _load_stats()
+    record = stats.setdefault(str(machine_id), {})
+    record["favorite"] = False
+    record["manual"] = True
+    record["avoid"] = True
+    record.pop("blacklisted_until", None)
+    _save(STATS_FILE, stats)
+    tracked = [e for e in _load_tracked() if str(e.get("machine_id")) != str(machine_id)]
+    _save(TRACKED_FILE, tracked)
+
+
+def dump():
+    """Alles, was das WebUI für die Server-Pool-Ansicht braucht, als EIN
+    JSON auf stdout (Stats pro Maschine + noch offene Tracking-Einträge)."""
+    print(json.dumps({"stats": _load_stats(), "tracked": _load_tracked()}))
 
 
 def favorite_machine_ids():
@@ -174,7 +217,9 @@ def is_blacklisted(machine_id):
 if __name__ == "__main__":
     if len(sys.argv) < 2:
         print("Nutzung: machine_stats.py record <instance_id> | reconcile | "
-              "is-blacklisted <machine_id>", file=sys.stderr)
+              "is-blacklisted <machine_id> | favorite <machine_id> | "
+              "unfavorite <machine_id> | reject <machine_id> | dump",
+              file=sys.stderr)
         sys.exit(1)
     cmd = sys.argv[1]
     if cmd == "record" and len(sys.argv) == 3:
@@ -183,6 +228,14 @@ if __name__ == "__main__":
         reconcile()
     elif cmd == "is-blacklisted" and len(sys.argv) == 3:
         print("1" if is_blacklisted(int(sys.argv[2])) else "")
+    elif cmd == "favorite" and len(sys.argv) == 3:
+        set_favorite(int(sys.argv[2]), True)
+    elif cmd == "unfavorite" and len(sys.argv) == 3:
+        set_favorite(int(sys.argv[2]), False)
+    elif cmd == "reject" and len(sys.argv) == 3:
+        reject(int(sys.argv[2]))
+    elif cmd == "dump":
+        dump()
     else:
         print("Unbekanntes Kommando.", file=sys.stderr)
         sys.exit(1)

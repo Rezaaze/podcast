@@ -282,3 +282,8 @@ button:hover:not(:disabled) { filter: brightness(1.1); }
   white-space: pre-wrap;
   word-break: break-word;
 }
+
+/* Cloud-Server-Pool (Scouting) */
+.cloud-pool-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; margin: 0.5rem 0; }
+.cloud-pool-table td { padding: 0.35rem 0.6rem; border-bottom: 1px solid var(--border, #2a2f3a); vertical-align: middle; }
+.cloud-pool-table button { font-size: 0.8rem; }

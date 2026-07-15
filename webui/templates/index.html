@@ -149,6 +149,14 @@
         <button class="run-btn" data-command="pf_render_remote_parallel" data-param-max_parallel="pf-cloud-max-parallel">☁︎ Fehlende Episoden parallel in der Cloud vertonen</button>
       </div>
       <p class="hint">Erkennt automatisch, welche Episoden noch keine fertige MP3 haben, und rendert bis zu N davon GLEICHZEITIG auf N vast.ai-Instanzen (wellenweise, falls mehr Episoden fehlen als N). Nutzt zuerst die Pool-Instanz(en), mietet fehlende Slots dazu (bevorzugt bekannt zuverlässige Hosts) und löscht diese Ad-hoc-Instanzen danach wieder — nur die dauerhafte Pool-Instanz wird pausiert statt gelöscht. Kostet etwa gleich viele GPU-Minuten wie nacheinander, nur auf kürzere Wanduhrzeit verteilt.</p>
+      <hr>
+      <h3>Server-Pool (Scouting)</h3>
+      <div class="action-row">
+        <button class="run-btn" data-command="pf_cloud_rent">☁︎ Nächsten Server mieten</button>
+        <button id="pf-cloud-pool-refresh">↻ Liste aktualisieren</button>
+      </div>
+      <div id="pf-cloud-pool"><p class="hint">(noch nicht geladen)</p></div>
+      <p class="hint">Mietet die günstigste passende RTX-5090-Instanz (Osteuropa/Baltikum, verworfene Maschinen ausgeschlossen, Favoriten bevorzugt) und richtet den TTS-Server ein. Danach testen (z.B. eine Episode cloud-vertonen) und hier urteilen: <b>★ Favorit</b> = Maschine wird bei jeder künftigen Miete bevorzugt · <b>✗ Verwerfen</b> = Instanz löschen und Maschine dauerhaft meiden. So wächst über Zeit ein Pool zuverlässiger Server (<code>cloud/.machine_stats.json</code>). Die 10-Minuten-Automatik läuft weiter, aber manuelle Urteile überstimmen sie.</p>
     </details>
   </div>
 

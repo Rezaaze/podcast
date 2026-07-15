@@ -4,6 +4,9 @@ import glob
 import json
 import os
 import shutil
+import subprocess
+import sys
+import time
 
 from flask import Flask, Response, jsonify, render_template, request
 
@@ -207,6 +210,94 @@ def api_status_tts():
     )
     listening = tts_control.is_port_listening(port)
     return jsonify(port=port, listening=listening, starting=starting and not listening)
+
+
+# ---------- Cloud-Server-Pool (vast.ai) ----------
+# Server-Scouting-Workflow: "Nächsten Server mieten" läuft als normaler Job
+# (pf_cloud_rent -> cloud/rent.sh), die Routen hier liefern die Liste
+# (Live-Instanzen + gelerntes Maschinen-Urteil) und nehmen das manuelle
+# Urteil entgegen. Favoriten/Verworfene fließen über machine_stats.py
+# automatisch in JEDE Offer-Suche ein (pick_cheapest_offer/race_pick_offers).
+
+CLOUD_DIR = os.path.join(PF_DIR, "cloud")
+MACHINE_STATS = os.path.join(CLOUD_DIR, "machine_stats.py")
+
+
+def _machine_stats_cmd(*args, timeout=30):
+    # machine_stats.py ist stdlib-only -- der venv-Python des WebUI reicht.
+    return subprocess.run([sys.executable, MACHINE_STATS, *args],
+                          capture_output=True, text=True, timeout=timeout)
+
+
+@app.get("/api/cloud/instances")
+def api_cloud_instances():
+    """Live-Instanzen (vastai) + Maschinen-Stats (Favorit/Blacklist/avoid)
+    für die Server-Pool-Ansicht. vastai-Fehler sind kein 500 -- die Ansicht
+    zeigt dann nur die gelernten Maschinen."""
+    machines = {}
+    dump = _machine_stats_cmd("dump")
+    if dump.returncode == 0:
+        try:
+            machines = json.loads(dump.stdout).get("stats", {})
+        except json.JSONDecodeError:
+            pass
+
+    instances, error = [], None
+    if shutil.which("vastai") is None:
+        error = "vastai-CLI nicht im PATH des WebUI-Prozesses"
+    else:
+        try:
+            raw = subprocess.run(["vastai", "show", "instances-v1", "--raw"],
+                                 capture_output=True, text=True, timeout=30)
+            if raw.returncode != 0:
+                error = (raw.stderr or raw.stdout or "vastai-Fehler").strip()[:300]
+            else:
+                for inst in (json.loads(raw.stdout).get("instances") or []):
+                    instances.append({
+                        "instance_id": inst.get("id"),
+                        "machine_id": inst.get("machine_id"),
+                        "gpu_name": inst.get("gpu_name"),
+                        "geolocation": inst.get("geolocation"),
+                        "dph_total": inst.get("dph_total"),
+                        "status": inst.get("actual_status") or inst.get("cur_state"),
+                        "label": inst.get("label"),
+                    })
+        except (subprocess.TimeoutExpired, json.JSONDecodeError, OSError) as exc:
+            error = str(exc)[:300]
+
+    now = time.time()
+    machine_rows = {}
+    for mid, rec in machines.items():
+        machine_rows[str(mid)] = {
+            "favorite": bool(rec.get("favorite")),
+            "avoid": bool(rec.get("avoid")),
+            "manual": bool(rec.get("manual")),
+            "blacklisted": bool(rec.get("blacklisted_until") and rec["blacklisted_until"] > now),
+        }
+    return jsonify(instances=instances, machines=machine_rows, error=error)
+
+
+@app.post("/api/cloud/machine")
+def api_cloud_machine():
+    """Manuelles Urteil über eine Maschine: favorite | unfavorite | reject.
+    reject kann optional zusätzlich die laufende Instanz destroyen."""
+    payload = request.get_json(silent=True) or {}
+    machine_id = payload.get("machine_id")
+    action = payload.get("action")
+    if not machine_id or action not in ("favorite", "unfavorite", "reject"):
+        return jsonify(error="machine_id und action (favorite|unfavorite|reject) nötig"), 400
+
+    destroy_error = None
+    if action == "reject" and payload.get("instance_id"):
+        destroyed = subprocess.run(["vastai", "destroy", "instance", str(payload["instance_id"])],
+                                   capture_output=True, text=True, timeout=60)
+        if destroyed.returncode != 0:
+            destroy_error = (destroyed.stderr or destroyed.stdout or "destroy fehlgeschlagen").strip()[:300]
+
+    result = _machine_stats_cmd(action, str(machine_id))
+    if result.returncode != 0:
+        return jsonify(error=(result.stderr or "machine_stats fehlgeschlagen").strip()[:300]), 500
+    return jsonify(ok=True, destroy_error=destroy_error)
 
 
 @app.post("/api/run/<command_id>")

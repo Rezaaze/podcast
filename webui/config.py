@@ -219,6 +219,20 @@ COMMANDS = {
         ],
         "kind": "line",
     },
+    # Server-Scouting: mietet die günstigste passende Instanz (rent.sh --
+    # Osteuropa/Baltikum-Filter, Blacklist/Favoriten via machine_stats.py)
+    # und richtet den TTS-Server ein. Der User testet sie und markiert sie
+    # dann in der Server-Pool-Liste als Favorit oder verwirft sie
+    # (/api/cloud/*-Routen in app.py). Kein series-Bezug.
+    "pf_cloud_rent": {
+        "label": "Cloud: Nächsten Server mieten (rent.sh)",
+        "cwd": PF_DIR,
+        "interpreter": lambda: "/bin/bash",
+        "interpreter_args": [],
+        "script": os.path.join("cloud", "rent.sh"),
+        "args_schema": [],
+        "kind": "line",
+    },
     "pf_batch": {
         "label": "Alle vertonen + Anthologie mergen",
         "cwd": PF_DIR,

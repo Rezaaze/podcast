@@ -530,7 +530,7 @@
   // pf_create_series legt eine NEUE Serie an und braucht daher keine
   // Serien-Auswahl; jedes andere pf_*-Kommando wirkt auf die gerade
   // ausgewählte Serie und bekommt sie automatisch als 'series'-Param mit.
-  const PF_SERIES_SCOPED_EXCLUDE = new Set(["pf_create_series", "pf_import_story"]);
+  const PF_SERIES_SCOPED_EXCLUDE = new Set(["pf_create_series", "pf_import_story", "pf_cloud_rent"]);
 
   function collectParams(btn) {
     const params = {};
@@ -616,6 +616,11 @@
       }
       if (payload.returncode === 0 && commandId === "pf_character_prompts") {
         loadCharacterPrompts().catch(console.error);
+      }
+      if (commandId === "pf_cloud_rent") {
+        // Auch bei Fehlschlag neu laden — eine halb eingerichtete Instanz
+        // taucht trotzdem in der vastai-Liste auf und soll sichtbar sein.
+        loadCloudPool().catch(console.error);
       }
     });
     es.onerror = () => {
@@ -714,6 +719,101 @@
     });
     syncRenderTargetUI();
   }
+
+  // ---------- Cloud-Server-Pool (Scouting) ----------
+  // Liste = Live-Instanzen (vastai) + gelerntes Maschinen-Urteil aus
+  // cloud/.machine_stats.json. ★/✗ posten nach /api/cloud/machine; die
+  // Urteile fließen über machine_stats.py in jede künftige Offer-Suche ein.
+  const cloudPool = document.getElementById("pf-cloud-pool");
+
+  async function cloudMachineAction(machineId, action, instanceId) {
+    const body = { machine_id: machineId, action };
+    if (instanceId) body.instance_id = instanceId;
+    const res = await fetch("/api/cloud/machine", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+    });
+    const data = await res.json();
+    if (!res.ok) alert(data.error || "Aktion fehlgeschlagen");
+    else if (data.destroy_error) alert("Maschine vermerkt, aber Instanz-Löschen schlug fehl: " + data.destroy_error);
+    await loadCloudPool();
+  }
+
+  function cloudJudgement(m) {
+    if (!m) return "–";
+    if (m.favorite) return "★ Favorit" + (m.manual ? "" : " (auto)");
+    if (m.avoid) return "✗ verworfen";
+    if (m.blacklisted) return "✗ blacklisted (temporär)";
+    return "–";
+  }
+
+  async function loadCloudPool() {
+    if (!cloudPool) return;
+    let data;
+    try {
+      data = await (await fetch("/api/cloud/instances")).json();
+    } catch {
+      cloudPool.innerHTML = '<p class="hint">Server-Liste nicht erreichbar.</p>';
+      return;
+    }
+    const machines = data.machines || {};
+    const rows = [];
+    const liveMachineIds = new Set();
+    for (const inst of data.instances || []) {
+      liveMachineIds.add(String(inst.machine_id));
+      const m = machines[String(inst.machine_id)];
+      const fav = m && m.favorite;
+      rows.push(`<tr>
+        <td>Instanz ${inst.instance_id}</td>
+        <td>Maschine ${inst.machine_id}</td>
+        <td>${inst.gpu_name || "?"} · ${inst.geolocation || "?"} · $${(inst.dph_total || 0).toFixed(3)}/h</td>
+        <td>${inst.status || "?"}</td>
+        <td>${cloudJudgement(m)}</td>
+        <td>
+          <button class="cloud-fav-btn" data-machine="${inst.machine_id}" data-fav="${fav ? 1 : 0}">${fav ? "☆ Favorit entfernen" : "★ Favorit"}</button>
+          <button class="cloud-reject-btn" data-machine="${inst.machine_id}" data-instance="${inst.instance_id}">✗ Verwerfen</button>
+        </td>
+      </tr>`);
+    }
+    // Gelernte Maschinen ohne Live-Instanz (der eigentliche "Pool"):
+    for (const [mid, m] of Object.entries(machines)) {
+      if (liveMachineIds.has(mid)) continue;
+      // Manuell beurteilte bleiben immer sichtbar — sonst verschwindet eine
+      // Maschine nach "Favorit entfernen" aus der Liste und das Urteil wäre
+      // im WebUI nicht mehr umkehrbar.
+      if (!m.favorite && !m.avoid && !m.blacklisted && !m.manual) continue;
+      rows.push(`<tr>
+        <td>–</td>
+        <td>Maschine ${mid}</td>
+        <td></td>
+        <td></td>
+        <td>${cloudJudgement(m)}</td>
+        <td>${m.favorite
+          ? `<button class="cloud-fav-btn" data-machine="${mid}" data-fav="1">☆ Favorit entfernen</button>`
+          : `<button class="cloud-fav-btn" data-machine="${mid}" data-fav="0">★ Favorit</button>`}</td>
+      </tr>`);
+    }
+    const errorLine = data.error ? `<p class="hint">⚠ ${data.error}</p>` : "";
+    cloudPool.innerHTML = errorLine + (rows.length
+      ? `<table class="cloud-pool-table"><tbody>${rows.join("")}</tbody></table>`
+      : '<p class="hint">Keine Instanzen und noch keine beurteilten Maschinen.</p>');
+
+    cloudPool.querySelectorAll(".cloud-fav-btn").forEach(b => {
+      b.addEventListener("click", () =>
+        cloudMachineAction(Number(b.dataset.machine), b.dataset.fav === "1" ? "unfavorite" : "favorite"));
+    });
+    cloudPool.querySelectorAll(".cloud-reject-btn").forEach(b => {
+      b.addEventListener("click", () => {
+        if (!confirm(`Maschine ${b.dataset.machine} dauerhaft meiden und Instanz ${b.dataset.instance} LÖSCHEN?`)) return;
+        cloudMachineAction(Number(b.dataset.machine), "reject", Number(b.dataset.instance));
+      });
+    });
+  }
+
+  const cloudPoolRefresh = document.getElementById("pf-cloud-pool-refresh");
+  if (cloudPoolRefresh) cloudPoolRefresh.addEventListener("click", () => loadCloudPool());
+  loadCloudPool().catch(console.error);
 
   function maybeCloudRewrite(commandId, params) {
     if (!renderTarget || renderTarget.value !== "cloud") return [commandId, params];
