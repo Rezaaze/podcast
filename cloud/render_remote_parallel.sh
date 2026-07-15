@@ -44,6 +44,8 @@ REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
 export PATH="${HOME}/.local/bin:${PATH}"
 TEMPLATE_HASH="c2352e9ebc56ffd4b83b51c6d229363a"
 
+python3 "${SCRIPT_DIR}/machine_stats.py" reconcile
+
 SERIES="$1"
 if [ -z "$SERIES" ]; then
   echo "Nutzung: $0 <series_slug> [--max N] [--episodes ep6.txt,ep7.txt,...]"
@@ -111,9 +113,13 @@ POOL_FILE="${SCRIPT_DIR}/.instance_pool"
 touch "$POOL_FILE"
 
 is_ready() {
-  local iid="$1" raw url
-  raw=$(vastai show instances-v1 --raw 2>/dev/null) || return 1
-  url=$(echo "$raw" | python3 "${SCRIPT_DIR}/get_gradio_url.py" "$iid" 2>/dev/null) || return 1
+  # Direkt pipen statt über eine Bash-Variable umleiten -- siehe
+  # get_ready_instance.sh für die Begründung (großes 'onstart'-Feld
+  # übersteht den Variable/echo-Umweg nicht zuverlässig, macht is_ready()
+  # sonst lautlos permanent blind).
+  local iid="$1" url
+  url=$(vastai show instances-v1 --raw 2>/dev/null \
+    | python3 "${SCRIPT_DIR}/get_gradio_url.py" "$iid" 2>/dev/null) || return 1
   [ -n "$url" ] && curl -sf -o /dev/null -m 10 "$url"
 }
 
@@ -162,9 +168,10 @@ if [ "$NEED_MORE" -gt 0 ]; then
     IID=$(echo "$RESULT" | python3 -c "import json,sys; print(json.load(sys.stdin).get('new_contract',''))" 2>/dev/null)
     [ -n "$IID" ] || continue
     echo "  -> Ad-hoc-Instanz ${IID}"
+    python3 "${SCRIPT_DIR}/machine_stats.py" record "$IID"
     ALL_IDS+=("$IID")
     ALL_ADHOC+=("1")
-  done < <(vastai search offers 'gpu_name=RTX_5090 disk_space>=40 reliability>0.98 verified=true rentable=true inet_down>1000 inet_up>1000' -o 'dph_total' --raw 2>/dev/null \
+  done < <(vastai search offers 'gpu_name=RTX_5090 disk_space>=40 reliability>0.98 verified=true rentable=true inet_down>1000 inet_up>1000 geolocation in [PL,CZ,SK,HU,RO,BG,EE,LV,LT,UA,MD]' -o 'dph_total' --raw 2>/dev/null \
     | python3 "${SCRIPT_DIR}/race_pick_offers.py" "$NEED_MORE")
 fi
 

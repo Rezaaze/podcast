@@ -20,10 +20,13 @@ spielen."""
 import json
 import sys
 
-# 137831: hohe Rechenleistung/Batching-Zuverlaessigkeit (US).
+from machine_stats import blacklisted_machine_ids, favorite_machine_ids
+
 # 55308: zweifach verifiziert (Stamm-Instanz UND eine parallele
 # Zweitinstanz auf derselben Maschine) -- Rendern UND Download liefen
-# beide Male komplett durch. NICHT hier eintragen: machine_id 77325
+# beide Male komplett durch.
+# 141151 (Polen): vom User am 15.07. direkt als gut bestätigt.
+# NICHT hier eintragen: machine_id 77325
 # (Ungarn) -- kurz nach der Miete komplett aus "vastai show instances"
 # verschwunden. NICHT mehr hier: machine_id 117811 (Daenemark) -- Rendern
 # lief gut, aber der Ergebnis-Download scheiterte beim echten
@@ -31,7 +34,13 @@ import sys
 # dann zwei Verbindungsabbrueche), am Ende ging eine bereits fertig
 # gerenderte Episode verloren, weil die Instanz vor erfolgreichem Download
 # geloescht wurde. Siehe Memory 'vastai-stamm-instanz'.
-KNOWN_RELIABLE_MACHINE_IDS = {137831, 55308}
+# NICHT MEHR HIER: machine_id 137831 (US, hohe Rechenleistung/Batching-
+# Zuverlaessigkeit) -- User will grundsaetzlich nur Ost-/Baltikum-Server
+# (Wunsch, nicht Zuverlaessigkeits-Problem). Der 'geolocation in
+# [PL,CZ,SK,HU,RO,BG,EE,LV,LT,UA,MD]'-Filter in der Suchanfrage schliesst
+# sie ohnehin aus; hier zusaetzlich entfernt, damit sie auch nicht ueber
+# einen kuenftig gelockerten Filter wieder hereinrutscht.
+KNOWN_RELIABLE_MACHINE_IDS = {55308, 141151}
 PRICE_BAND = 1.15  # bis zu 15% teurer als das billigste Angebot akzeptieren,
                     # wenn es dafuer schneller (hoehere PCIe-Bandbreite) ist
 
@@ -39,10 +48,21 @@ offers = json.load(sys.stdin)
 if not offers:
     sys.exit("Keine passenden Angebote gefunden — Filter in rent.sh lockern.")
 
+# Maschinen, deren zuletzt getrackte Instanz vor Ablauf von
+# FAVORITE_THRESHOLD_SECONDS verschwunden ist (siehe machine_stats.py),
+# fliegen hart raus — unabhängig von Preis/PCIe-Bandbreite.
+blacklisted = blacklisted_machine_ids()
+offers = [o for o in offers if o.get("machine_id") not in blacklisted]
+if not offers:
+    sys.exit("Alle passenden Angebote sind aktuell blacklisted — "
+              "cloud/.machine_stats.json prüfen oder abwarten.")
+
+reliable_ids = KNOWN_RELIABLE_MACHINE_IDS | favorite_machine_ids()
+
 min_price = min(o["dph_total"] for o in offers)
 candidates = [o for o in offers if o["dph_total"] <= min_price * PRICE_BAND]
 
-reliable = [o for o in candidates if o.get("machine_id") in KNOWN_RELIABLE_MACHINE_IDS]
+reliable = [o for o in candidates if o.get("machine_id") in reliable_ids]
 if reliable:
     best = min(reliable, key=lambda o: o["dph_total"])
 else:
@@ -54,7 +74,7 @@ reliability = best.get("reliability2", 0)
 verification = best.get("verification", "?")
 pcie_bw = best.get("pcie_bw", 0)
 dlperf = best.get("dlperf", 0)
-tag = " [bekannt zuverlässiger Host]" if best.get("machine_id") in KNOWN_RELIABLE_MACHINE_IDS else ""
+tag = " [bekannt zuverlässiger Host]" if best.get("machine_id") in reliable_ids else ""
 print(f"  -> Offer {best['id']}: ${price:.3f}/hr, {geo}, reliability={reliability:.2f}, "
       f"verification={verification}, pcie_bw={pcie_bw:.1f}, dlperf={dlperf:.0f}{tag}",
       file=sys.stderr)

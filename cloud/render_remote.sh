@@ -34,6 +34,7 @@ shift
 INSTANCE_ID=""
 ONLY_FILE=""
 STOP_AFTER=0
+LOCAL_MASTER=0
 while [ $# -gt 0 ]; do
   case "$1" in
     --only)
@@ -42,6 +43,12 @@ while [ $# -gt 0 ]; do
       ;;
     --stop-after)
       STOP_AFTER=1
+      shift
+      ;;
+    --local-master)
+      # Remote NUR vertonen (GPU), Mastering/Merge/Jingle lokal auf dem Mac:
+      # spart teure Instanz-Zeit, da alles Nicht-GPU nach dem Download läuft.
+      LOCAL_MASTER=1
       shift
       ;;
     *)
@@ -71,18 +78,16 @@ if [ ! -f "$EPISODES_JSON" ]; then
   exit 1
 fi
 
-# Fail-fast statt das Backend stillschweigend umzubiegen: dieser Workflow
-# rendert remote gegen die Qwen3-TTS-Gradio-App der Instanz (GradioBackend) --
-# sowohl narration (Voice Clone) als auch drama (Custom-Voice-Rollen aus
-# GradioBackend.SPEAKERS) sind darüber möglich.
-BACKEND=$(python3 -c "import json; print(json.load(open('${EPISODES_JSON}')).get('audio', {}).get('backend', 'rest'))")
-if [ "$BACKEND" != "gradio" ]; then
-  echo "FEHLER: audio.backend in ${EPISODES_JSON} ist '${BACKEND}', nicht 'gradio'."
-  echo "  Dieser Workflow rendert remote gegen den Qwen3-TTS-Gradio-Server der Instanz --"
-  echo "  dafür muss episodes.json bereits 'audio.backend: \"gradio\"' haben (+ ref_audio/ref_text für"
-  echo "  Voice-Clone-Rollen, bzw. Built-in-Speaker-Namen aus GradioBackend.SPEAKERS für Drama-Rollen)."
-  exit 1
-fi
+# Kein Fail-Fast mehr auf audio.backend: dieser Workflow rendert IMMER remote
+# gegen die Qwen3-TTS-Gradio-App der Instanz (GradioBackend) -- die REMOTE-
+# Kopie von episodes.json bekommt "backend": "gradio" weiter unten automatisch
+# gepatcht (wie schon api_url), unabhängig davon, was lokal eingestellt ist.
+# Die lokale Datei kann damit dauerhaft auf "rest" stehen (für den lokalen
+# Pinokio/Qwen3-Server, Port 42003) -- kein manuelles Hin-und-Her-Schalten
+# zwischen lokalem und Cloud-Rendern mehr nötig. Voice-Auflösung (Voice-Clone
+# ref_audio/ref_text bzw. Built-in-Speaker-Namen aus GradioBackend.SPEAKERS
+# für Drama-Rollen) prüft podcast_maker.py ohnehin zur Laufzeit gegen den
+# tatsächlichen Backend -- kein Grund, das hier vorab zu duplizieren.
 
 echo "=== SSH-Ziel für Instanz ${INSTANCE_ID} auflösen ==="
 SSH_URL=$(vastai ssh-url "$INSTANCE_ID" 2>/dev/null)
@@ -163,26 +168,39 @@ rsync -avz $RSYNC_TIMEOUT -e "$RSYNC_SSH" \
   "${REPO_ROOT}/data/voices/" "${USERHOST}:${REMOTE_ROOT}/data/voices/"
 
 echo ""
-echo "=== audio.api_url in der REMOTE-Kopie auf 127.0.0.1:7860 umbiegen ==="
+echo "=== audio.backend/api_url in der REMOTE-Kopie auf gradio/127.0.0.1:7860 umbiegen ==="
 # Nur die remote Kopie wird gepatcht -- die lokale episodes.json bleibt
-# unverändert (sie behält ihre öffentliche Adresse für den alten Direkt-Weg).
+# unverändert (bleibt z.B. dauerhaft auf "rest" für den lokalen
+# Pinokio/Qwen3-Server, Port 42003, ohne manuelles Umschalten vor jedem
+# Cloud-Lauf). "backend" wird IMMER auf "gradio" gezwungen, unabhängig vom
+# lokalen Wert -- dieser Workflow rendert remote ausschließlich gegen die
+# Qwen3-TTS-Gradio-App der Instanz.
 ssh "${SSH_OPTS[@]}" "$USERHOST" "python3 -c \"
 import json
 path = '${REMOTE_ROOT}/data/series/${SERIES}/${EPISODES_RELPATH}'
 with open(path) as f:
     data = json.load(f)
-data.setdefault('audio', {})['api_url'] = 'http://127.0.0.1:7860'
+audio = data.setdefault('audio', {})
+audio['backend'] = 'gradio'
+audio['api_url'] = 'http://127.0.0.1:7860'
 with open(path, 'w') as f:
     json.dump(data, f, ensure_ascii=False, indent=1)
 \""
 
 echo ""
+# --local-master: remote NUR die TTS-Parts erzeugen (--skip-merge), das
+# CPU-lastige Mastering/Merge/Jingle läuft nach dem Download lokal auf dem
+# Mac -- so belegt nur die reine GPU-Vertonung die teure Instanz-Zeit.
+SKIP_MERGE_FLAG=""
+if [ "$LOCAL_MASTER" -eq 1 ]; then
+  SKIP_MERGE_FLAG=" --skip-merge"
+fi
 if [ -n "$ONLY_FILE" ]; then
-  echo "=== Vertone remote NUR ${ONLY_FILE} (podcast_maker.py) -- läuft komplett lokal auf der Instanz ==="
-  REMOTE_RENDER_CMD="python3 -u -m fabrik.cli.podcast_maker ${ONLY_FILE} --series ${SERIES}"
+  echo "=== Vertone remote NUR ${ONLY_FILE} (podcast_maker.py)${SKIP_MERGE_FLAG:+ [nur Parts, Mastering lokal]} ==="
+  REMOTE_RENDER_CMD="python3 -u -m fabrik.cli.podcast_maker ${ONLY_FILE} --series ${SERIES}${SKIP_MERGE_FLAG}"
 else
-  echo "=== Vertone remote (batch.py) -- läuft komplett lokal auf der Instanz ==="
-  REMOTE_RENDER_CMD="python3 -u -m fabrik.cli.batch --series ${SERIES}"
+  echo "=== Vertone remote (batch.py)${SKIP_MERGE_FLAG:+ [nur Parts, Mastering lokal]} ==="
+  REMOTE_RENDER_CMD="python3 -u -m fabrik.cli.batch --series ${SERIES}${SKIP_MERGE_FLAG}"
 fi
 set +e
 # PYTHONUNBUFFERED=1 (nicht nur "python3 -u" auf batch.py selbst) ist nötig,
@@ -192,8 +210,61 @@ set +e
 # puffert podcast_maker.py seine prints komplett (stdout ist über SSH kein
 # TTY) und im Log sieht es minutenlang aus wie eingefroren, obwohl im
 # Hintergrund längst gerendert wird.
-ssh "${SSH_OPTS[@]}" "$USERHOST" "cd ${REMOTE_ROOT} && PYTHONUNBUFFERED=1 ${REMOTE_RENDER_CMD}"
-BATCH_EXIT=$?
+#
+# Läuft im HINTERGRUND auf der Instanz (nohup + Exit-Code-Marker-Datei),
+# statt den SSH-Aufruf blockierend abzuwarten: sonst liegen bei einer
+# Mehr-Episoden-Serie längst fertige Episoden bis zum allerletzten Moment
+# nur ungenutzt auf der Instanz -- ein Verbindungsabbruch kurz vor Ende
+# würfe sie alle weg, weil noch nichts heruntergeladen wäre. Der Poll-Loop
+# unten holt stattdessen schon während der laufenden Generierung ab, was
+# fertig ist (Best-Effort, "|| true" -- der finale Download-Block weiter
+# unten mit seinen 3 Versuchen bleibt die verbindliche, robuste Instanz).
+REMOTE_LOG="${REMOTE_ROOT}/.render.log"
+REMOTE_DONE="${REMOTE_ROOT}/.render_done"
+# </dev/null ist Pflicht, nicht nur >/dev/null 2>&1: ssh schließt die
+# Verbindung erst, wenn ALLE Filedeskriptoren des Remote-Kommandos (auch
+# STDIN) geschlossen sind. UND: "cd X && nohup ... &" reicht dafür NICHT --
+# bash backgroundet dabei die GANZE "cd && nohup"-Kette in einer impliziten
+# Subshell, und genau DIESE Subshell hält noch die ursprüngliche STDIN der
+# SSH-Sitzung offen (das </dev/null sitzt nur auf dem inneren nohup-Befehl,
+# zu spät). Live gemessen: mit "cd &&" davor bleibt die SSH-Verbindung bis
+# zum Ende des Hintergrundjobs offen (14s bei einem 10s-Testjob statt der
+# üblichen ~4-5s reiner Verbindungsaufbau); OHNE das cd-Präfix (cd stattdessen
+# INNERHALB des bash -c) kehrt sie sofort zurück, exakt wie erwartet. Deshalb
+# hier bewusst nur EIN einziges "nohup bash -c '...' &" auf oberster Ebene,
+# cd als erster Befehl innerhalb des bash -c-Strings statt davor.
+ssh "${SSH_OPTS[@]}" "$USERHOST" "rm -f '${REMOTE_LOG}' '${REMOTE_DONE}'; nohup bash -c 'cd \"${REMOTE_ROOT}\" && PYTHONUNBUFFERED=1 ${REMOTE_RENDER_CMD} > \"${REMOTE_LOG}\" 2>&1; echo \$? > \"${REMOTE_DONE}\"' </dev/null >/dev/null 2>&1 & disown"
+LAUNCH_EXIT=$?
+if [ "$LAUNCH_EXIT" -ne 0 ]; then
+  echo "FEHLER: Remote-Render konnte nicht gestartet werden (SSH-Verbindung fehlgeschlagen)."
+  exit 1
+fi
+
+echo "=== Remote-Render läuft im Hintergrund -- lade fertige Episoden bereits jetzt zwischendurch ab ==="
+POLL_SECONDS=30
+LAST_TAIL_LINE=0
+while true; do
+  # Best-Effort-Zwischen-Download: Fehler hier sind nie fatal, der finale
+  # Block unten holt am Ende ohnehin noch mal alles ab.
+  rsync -avz $RSYNC_TIMEOUT -e "$RSYNC_SSH" \
+    "${USERHOST}:${REMOTE_ROOT}/data/series/${SERIES}/${OUTPUT_RELPATH}/" "${SERIES_DIR}/${OUTPUT_RELPATH}/" \
+    >/dev/null 2>&1 || true
+
+  # Neue Log-Zeilen seit dem letzten Check zeigen, damit das WebUI-Log nicht
+  # wie eingefroren aussieht, während im Hintergrund gerendert wird.
+  NEW_LOG=$(ssh "${SSH_OPTS[@]}" "$USERHOST" "tail -n +$((LAST_TAIL_LINE + 1)) '${REMOTE_LOG}' 2>/dev/null" 2>/dev/null)
+  if [ -n "$NEW_LOG" ]; then
+    echo "$NEW_LOG"
+    LAST_TAIL_LINE=$((LAST_TAIL_LINE + $(printf '%s\n' "$NEW_LOG" | wc -l)))
+  fi
+
+  DONE_CONTENT=$(ssh "${SSH_OPTS[@]}" "$USERHOST" "cat '${REMOTE_DONE}' 2>/dev/null")
+  if [ -n "$DONE_CONTENT" ]; then
+    BATCH_EXIT="$DONE_CONTENT"
+    break
+  fi
+  sleep "$POLL_SECONDS"
+done
 set -e
 
 echo ""
@@ -247,6 +318,36 @@ if [ "${DOWNLOAD_FAILED:-0}" -eq 1 ]; then
   exit 1
 fi
 
+LOCAL_MASTER_EXIT=0
+if [ "$LOCAL_MASTER" -eq 1 ]; then
+  echo ""
+  echo "=== Lokales Mastering auf dem Mac (--local-master) ==="
+  # Die Instanz ist zu diesem Zeitpunkt schon pausiert (falls --stop-after) --
+  # Mastering/Merge/Jingle brauchen keine GPU und laufen komplett lokal, ohne
+  # dass die Instanz-Uhr weiterläuft.
+  LOCAL_PY="${REPO_ROOT}/.venv/bin/python"
+  if [ ! -x "$LOCAL_PY" ]; then
+    echo "FEHLER: ${LOCAL_PY} nicht gefunden -- lokales venv (pydub/pyloudnorm/ffmpeg) nötig."
+    echo "  Die Part-WAVs liegen in ${SERIES_DIR}/${OUTPUT_RELPATH}/ -- manuell fertigstellen mit:"
+    if [ -n "$ONLY_FILE" ]; then
+      echo "    .venv/bin/python -m fabrik.cli.podcast_maker ${ONLY_FILE} --series ${SERIES} --merge-only"
+    else
+      echo "    .venv/bin/python -m fabrik.cli.batch --series ${SERIES} --merge-only"
+    fi
+    exit 1
+  fi
+  if [ -n "$ONLY_FILE" ]; then
+    ( cd "$REPO_ROOT" && "$LOCAL_PY" -m fabrik.cli.podcast_maker "$ONLY_FILE" --series "$SERIES" --merge-only )
+  else
+    ( cd "$REPO_ROOT" && "$LOCAL_PY" -m fabrik.cli.batch --series "$SERIES" --merge-only )
+  fi
+  LOCAL_MASTER_EXIT=$?
+  if [ "$LOCAL_MASTER_EXIT" -ne 0 ]; then
+    echo "WARNUNG: Lokales Mastering mit Fehler beendet (Exit ${LOCAL_MASTER_EXIT}) --"
+    echo "  Part-WAVs liegen in ${SERIES_DIR}/${OUTPUT_RELPATH}/, erneut mit --merge-only mastern."
+  fi
+fi
+
 if [ "$BATCH_EXIT" -ne 0 ]; then
   echo ""
   echo "WARNUNG: Remote-Vertonung mit Fehler beendet (Exit ${BATCH_EXIT})."
@@ -255,5 +356,13 @@ if [ "$BATCH_EXIT" -ne 0 ]; then
   exit "$BATCH_EXIT"
 fi
 
+if [ "$LOCAL_MASTER_EXIT" -ne 0 ]; then
+  exit "$LOCAL_MASTER_EXIT"
+fi
+
 echo ""
-echo "Fertig -- Ergebnisse liegen in ${SERIES_DIR}/${OUTPUT_RELPATH}/"
+if [ "$LOCAL_MASTER" -eq 1 ]; then
+  echo "Fertig -- remote vertont, lokal gemastert. Ergebnisse in ${SERIES_DIR}/${OUTPUT_RELPATH}/"
+else
+  echo "Fertig -- Ergebnisse liegen in ${SERIES_DIR}/${OUTPUT_RELPATH}/"
+fi

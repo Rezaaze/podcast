@@ -149,17 +149,21 @@ cd cloud
 # Pool-Ausfall auf race.sh zurück. render_remote.sh ruft das selbst auf --
 # manuelles resume.sh/status.sh-Ratespiel ist nicht mehr nötig.
 
-# 1. Einmalig pro Serie: episodes.json auf backend "gradio" einstellen.
-#    narration: Voice Clone (ref_audio/ref_text wie gehabt aus data/voices/).
-#    drama: pro Rolle einen Built-in-Speaker-Namen aus GradioBackend.SPEAKERS
-#    (fabrik/audio/tts_backends.py) unter voices.<ROLLE>.voice eintragen --
-#    andere Namen fallen auf den (einen, geteilten) Voice-Clone-Pfad zurück.
-#    chunk_concurrency: 40 fuer echtes Batching (siehe oben) -- wirkt auf
-#    Built-in-Speaker- UND Voice-Clone-Rollen (getrennte Batch-Endpoints,
-#    gemischte Kinds werden automatisch in getrennte Fenster bucketet).
-#    api_url ist für render_remote.sh irrelevant (wird remote automatisch auf
-#    127.0.0.1 gesetzt), nur für den alten Direkt-Weg unten gebraucht:
-#      "audio": { "backend": "gradio", "chunk_concurrency": 40, "ref_audio": "...", "ref_text": "...", ... }
+# 1. Einmalig pro Serie in episodes.json: für drama-Rollen einen
+#    Built-in-Speaker-Namen aus GradioBackend.SPEAKERS (fabrik/audio/
+#    tts_backends.py) unter voices.<ROLLE>.voice eintragen -- andere Namen
+#    fallen auf den (einen, geteilten) Voice-Clone-Pfad zurück (narration:
+#    ref_audio/ref_text wie gehabt aus data/voices/). chunk_concurrency: 40
+#    fuer echtes Batching (siehe oben) -- wirkt auf Built-in-Speaker- UND
+#    Voice-Clone-Rollen (getrennte Batch-Endpoints, gemischte Kinds werden
+#    automatisch in getrennte Fenster bucketet).
+#    audio.backend/api_url NICHT von Hand umstellen: render_remote.sh
+#    patcht in der REMOTE-Kopie automatisch "backend": "gradio" +
+#    api_url auf 127.0.0.1:7860, unabhängig vom lokalen Wert -- die lokale
+#    episodes.json bleibt dauerhaft auf "rest" (für den lokalen
+#    Pinokio/Qwen3-Server, Port 42003), kein manuelles Hin-und-Her-Schalten
+#    zwischen lokalem und Cloud-Rendern mehr nötig.
+#      "audio": { "chunk_concurrency": 40, "ref_audio": "...", "ref_text": "...", ... }
 
 # 2. Serie remote vertonen: holt/wartet auf eine einsatzbereite Instanz,
 #    lädt Skripte+Referenz-Audio hoch, rendert KOMPLETT auf der Instanz
@@ -189,7 +193,13 @@ Umschalter **„Vertonen auf: Lokal / Cloud-GPU"**. Bei „Cloud" laufen die
 beiden Vertonen-Buttons über das Kommando `pf_render_remote`
 (`webui/config.py`), das genau dieses `render_remote.sh` aufruft — „Alle
 vertonen" = ganze Serie, „Nur diese Episode" = `--only <datei>`. Die
-Checkbox „Instanz danach pausieren" hängt `--stop-after` an. Bei `--only`
+Checkbox „Instanz danach pausieren" hängt `--stop-after` an. Die Checkbox
+**„Mastering lokal auf dem Mac"** hängt `--local-master` an: die Instanz
+erzeugt dann NUR die TTS-Parts (`--skip-merge`, reine GPU-Zeit), das
+CPU-lastige Zusammenfügen/Mastern/Jingle/Untertitel läuft nach dem Download
+lokal auf dem Mac (`podcast_maker.py`/`batch.py --merge-only`, braucht das
+lokale `.venv`). Spart teure Instanz-Zeit, weil alles Nicht-GPU von der
+Instanz-Uhr verschwindet. Bei `--only`
 lädt `render_remote.sh` NICHT den ganzen Serien-Ordner hoch — bereits
 fertig gerenderte Episoden-MP3s/SRT/SUBS anderer Episoden (können pro
 Serie mehrere hundert MB sein) bleiben außen vor, nur Skripte,
@@ -232,7 +242,7 @@ neu eintragen (für `render_remote.sh` nicht nötig, siehe oben).
 | Datei | Zweck |
 |---|---|
 | `onstart_qwen3_tts.sh` | Läuft bei jedem Boot der Instanz. Setup+Warmup nur beim ersten Mal, danach nur Server-Start. |
-| `get_ready_instance.sh` | **Haupteinstieg.** Probiert den Instanz-Pool per Resume durch, fällt nur bei komplettem Ausfall auf `race.sh` zurück und füllt den Pool danach wieder auf. |
+| `get_ready_instance.sh` | **Haupteinstieg.** Probiert den Instanz-Pool per Resume durch; ist keine Pool-Instanz rechtzeitig bereit, wird EIN gezielter Suchaufruf auf die bevorzugte Stamm-Instanz (`PREFERRED_MACHINE_ID`, aktuell 55308) versucht — kein Warten/Polling, hat sie gerade kein Angebot, sofort weiter zu `race.sh`. Füllt den Pool danach mit dem Gewinner wieder auf. |
 | `rent.sh` | Sucht eine verfügbare RTX 5090 (Preisspanne + PCIe-Bandbreite + bekannt zuverlässiger Host), mietet sie mit dem gespeicherten Template. Manueller Einzel-Weg / von `race.sh` intern genutzt. |
 | `race.sh [n]` | Mietet `n` Instanzen parallel, behält die zuerst bereite. Wird von `get_ready_instance.sh` als Fallback aufgerufen. |
 | `status.sh [id]` | Zeigt Status, öffentliche Gradio-Adresse und die letzten Log-Zeilen. |
@@ -243,8 +253,17 @@ neu eintragen (für `render_remote.sh` nicht nötig, siehe oben).
 | `destroy.sh [id]` | Löscht die Instanz UND ihre Festplatte unwiderruflich (mit Sicherheitsabfrage). Danach auch aus `.instance_pool` austragen. |
 | `.last_instance_id` | Zeigt auf die zuletzt verwendete Instanz, macht die ID-Angabe bei den anderen Scripts optional. |
 | `.instance_pool` | Liste (eine ID pro Zeile) der vorgewärmten, für Resume vorgesehenen Instanzen — max. 2, von `get_ready_instance.sh` verwaltet. |
+| `machine_stats.py` | Lernt aus dem tatsächlichen Verlauf: `reconcile` klassifiziert getrackte Instanzen, die seit dem letzten Lauf verschwunden sind (egal ob automatisch oder von Hand gelöscht) — < 10 Min. gelebt → Maschine für 3 Std. blacklisted, ≥ 10 Min. → dauerhaft favorisiert. `.tracked_instances.json`/`.machine_stats.json` sind die zugehörigen State-Dateien. |
 
 ## Hinweise
+
+- **Nur Ost-/Baltikum-Server:** `rent.sh`/`race.sh`/`render_remote_parallel.sh`
+  filtern hart auf `geolocation in [PL,CZ,SK,HU,RO,BG,EE,LV,LT,UA,MD]` — User-
+  Wunsch, keine US- oder sonstigen Server. Liste ist in allen drei Scripten
+  dupliziert (gleiches Muster wie `TEMPLATE_HASH`); bei Änderung an allen drei
+  Stellen nachziehen. `get_ready_instance.sh`s Direktversuch auf
+  `PREFERRED_MACHINE_ID` (55308, Estland) braucht den Filter nicht, zielt ja
+  schon auf eine konkrete Maschine in der Region.
 
 - **Download-Robustheit:** Jeder `rsync`-Aufruf in `render_remote.sh` läuft
   mit `--timeout=60` (bricht ab, wenn 60s lang keine Daten fließen, statt
