@@ -63,8 +63,16 @@ Stdlib-only, genutzt von create_series.py und script_writer.py.
   bei Ts)` alle 20s — `--output-format text` streamt nicht, ohne Heartbeat
   sieht ein langer Call im Log identisch zu einem Hänger aus. Wirft
   `subprocess.TimeoutExpired` wie `subprocess.run()`.
-- `parse_json_response(raw)` strippt Markdown-Fences / greift den größten
-  `{...}`-Block; gibt bei unparsebarem Input `None` zurück (wirft nie).
+- `parse_json_response(raw)` strippt Markdown-Fences, probiert dann JEDE
+  `{`-Position im Text einzeln (`_json_decoder.raw_decode`) und nimmt die
+  LÄNGSTE erfolgreiche Kandidatur — nicht nur "erste `{` bis letzte `}`":
+  ein Modell hält sich trotz Anweisung manchmal nicht an "nur JSON, kein
+  Kommentar" und schreibt vorher ein kurzes Beispiel-Fragment mit eigener
+  `{}` (z.B. ein einzelnes section_words-Objekt zur Illustration) — die
+  naive erste-`{`-Regel hätte das als Start genommen und wäre an "Extra
+  data" gescheitert, obwohl das eigentlich gemeinte, viel längere Objekt
+  direkt danach im Text stand. Gibt bei unparsebarem Input `None` zurück
+  (wirft nie).
 - **Retry-Disziplin:** Timeout oder Non-Zero-Exit eines `claude`-Calls, der
   eine Retry-Schleife füttert, muss *retryable* sein, nie `sys.exit()` —
   ein einzelner flakiger Call darf keinen Batch-Job töten. Nur "claude not

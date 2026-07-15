@@ -65,47 +65,82 @@ def _strip_markdown_fences(raw: str) -> str:
     return raw
 
 
+def _json_candidates(text: str):
+    """Versucht ab JEDER '{'-Position in text einen JSON-Wert zu dekodieren
+    (json.JSONDecoder.raw_decode -- liest genau EINEN Wert und ignoriert
+    alles danach, im Gegensatz zu json.loads). Liefert pro Position ein
+    (start, end, obj, error)-Tupel: bei Erfolg end/obj gesetzt und error
+    None, bei Fehlschlag end/obj None und error das JSONDecodeError.
+
+    Grund für "jede Position" statt nur der ersten '{': ein Modell hält sich
+    trotz gegenteiliger Anweisung manchmal nicht an "nur JSON, kein
+    Kommentar" und schreibt vorher ein kurzes Beispiel-Fragment, das selbst
+    eine '{' enthält (z.B. ein einzelnes section_words-Objekt als
+    Illustration) -- die erste '{' im Text ist dann NICHT die des
+    eigentlich gemeinten Objekts. Geteilt zwischen parse_json_response()
+    (nimmt die längste erfolgreiche Kandidatur) und describe_json_error()
+    (zeigt den Fehler der am weitesten gekommenen Kandidatur, wenn keine
+    einzige erfolgreich war)."""
+    decoder = json.JSONDecoder()
+    idx = text.find("{")
+    while idx != -1:
+        try:
+            obj, end = decoder.raw_decode(text, idx)
+            yield idx, end, obj, None
+        except json.JSONDecodeError as e:
+            yield idx, None, None, e
+        idx = text.find("{", idx + 1)
+
+
 def parse_json_response(raw: str):
     """Extrahiert ein JSON-Objekt aus einer Claude-Textantwort (toleriert
-    Markdown-Codefences und Text drumherum, versucht notfalls den größten
-    {...}-Block). Gibt None zurück statt zu werfen — Aufrufer entscheiden
-    selbst, ob ein Retry sinnvoll ist."""
+    Markdown-Codefences, Text/Beispiel-Fragmente mit eigenen '{}' drumherum
+    -- siehe _json_candidates()). Von allen an irgendeiner '{'-Position
+    erfolgreich dekodierten Kandidaturen wird die LÄNGSTE genommen: das
+    eigentlich gemeinte (volle) Objekt ist praktisch immer um Größenordnungen
+    länger als ein kurzes Beispiel-Fragment. Gibt None zurück statt zu
+    werfen — Aufrufer entscheiden selbst, ob ein Retry sinnvoll ist."""
     raw = _strip_markdown_fences(raw)
     try:
         return json.loads(raw)
     except json.JSONDecodeError:
-        start, end = raw.find("{"), raw.rfind("}")
-        if start != -1 and end > start:
-            try:
-                return json.loads(raw[start:end + 1])
-            except json.JSONDecodeError:
-                pass
-        return None
+        pass
+
+    best = None  # (span, obj)
+    for start, end, obj, error in _json_candidates(raw):
+        if error is not None:
+            continue
+        span = end - start
+        if best is None or span > best[0]:
+            best = (span, obj)
+    return best[1] if best else None
 
 
 def describe_json_error(raw: str) -> Optional[str]:
-    """Diagnose-Ergänzung zu parse_json_response(): wenn die extrahierte {...}-Kandidatur
-    an einem echten json.JSONDecodeError scheitert (nicht nur an fehlenden/zusätzlichen
-    Markdown-Fences drumherum), liefert diese Funktion eine lesbare Fehlermeldung MIT
-    Position und einem Kontext-Fenster um die Fehlerstelle — bei einer mehrere tausend
-    Zeichen langen Antwort liegt ein Syntaxfehler oft mitten im Dokument, wo weder Anfang
-    noch Ende der Antwort (die sonst übliche Diagnose) etwas verraten. Gibt None zurück,
-    wenn gar kein {...}-Block gefunden wurde ODER die Kandidatur tatsächlich valide ist
-    (dann ist der Fehler woanders, z.B. reiner Text ohne jedes JSON — Anfang/Ende bleibt
-    dort die bessere Diagnose)."""
+    """Diagnose-Ergänzung zu parse_json_response(): wenn KEINE '{'-Kandidatur
+    (siehe _json_candidates()) erfolgreich dekodiert, liefert diese Funktion
+    eine lesbare Fehlermeldung MIT Position und einem Kontext-Fenster um die
+    Fehlerstelle der am weitesten gekommenen Kandidatur (deren Fehlerposition
+    am größten ist) — bei einer mehrere tausend Zeichen langen Antwort liegt
+    ein Syntaxfehler oft mitten im Dokument, wo weder Anfang noch Ende der
+    Antwort (die sonst übliche Diagnose) etwas verraten. Gibt None zurück,
+    wenn gar keine '{' gefunden wurde ODER irgendeine Kandidatur tatsächlich
+    erfolgreich dekodiert (dann liefert parse_json_response() bereits ein
+    Ergebnis und dieser Fehlerpfad wird gar nicht erst aufgerufen)."""
     stripped = _strip_markdown_fences(raw)
 
-    start, end = stripped.find("{"), stripped.rfind("}")
-    if start == -1 or end <= start:
+    candidates = list(_json_candidates(stripped))
+    if not candidates:
         return None
-    candidate = stripped[start:end + 1]
+    if any(error is None for _s, _e, _o, error in candidates):
+        return None
 
-    try:
-        json.loads(candidate)
-        return None
-    except json.JSONDecodeError as e:
-        window_start = max(0, e.pos - 100)
-        window_end = min(len(candidate), e.pos + 100)
-        window = candidate[window_start:window_end]
-        return (f"JSON-Fehler: {e.msg} (Zeile {e.lineno}, Spalte {e.colno}, "
-                f"Zeichen {e.pos} von {len(candidate)}):\n            ...{window}...")
+    # err.pos ist absolut in `stripped` (raw_decode(text, idx) zählt Positionen
+    # relativ zum GESAMTEN text, nicht relativ zu idx) -- die am weitesten
+    # gekommene Kandidatur ist die mit dem größten err.pos.
+    err = max((c[3] for c in candidates), key=lambda e: e.pos)
+    window_start = max(0, err.pos - 100)
+    window_end = min(len(stripped), err.pos + 100)
+    window = stripped[window_start:window_end]
+    return (f"JSON-Fehler: {err.msg} (Zeile {err.lineno}, Spalte {err.colno}, "
+            f"Zeichen {err.pos} von {len(stripped)}):\n            ...{window}...")
