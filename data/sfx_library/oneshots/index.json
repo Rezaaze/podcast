@@ -1612,7 +1612,9 @@
  },
  "590dbb672cfb36f8": {
   "description": "phone buzzing nearby, unanswered",
-  "aliases": []
+  "aliases": [
+   "phone buzzing"
+  ]
  },
  "7f7ec3fb72964934": {
   "description": "phone buzzing on a hard surface",
@@ -1812,6 +1814,911 @@
  },
  "ebb3d1df8c97ba28": {
   "description": "wind over broken metal, distant idling engine",
+  "aliases": []
+ },
+ "0944bed2338dca0e": {
+  "description": "fabric ripping slightly",
+  "aliases": []
+ },
+ "cd2bd50cde79b81a": {
+  "description": "A few sheets of paper being shuffled and squared together on a wooden desk, dry paper rustle, close mic, indoors, no music, no speech",
+  "aliases": []
+ },
+ "e8de59db4527e214": {
+  "description": "An old wooden chair creaking once as someone shifts their weight, close mic, small office room, no music, no speech",
+  "aliases": []
+ },
+ "5e1b3da36bb1500b": {
+  "description": "A cardboard box lid scraping open, dry cardboard-on-cardboard friction, indoors, close mic, no music, no speech",
+  "aliases": []
+ },
+ "714b8a9086b46438": {
+  "description": "A stack of paper envelopes sliding off a wooden shelf and landing in a loose pile on a desk, paper slide followed by a soft thud, indoors, close mic, no music, no speech",
+  "aliases": []
+ },
+ "b1c620d76f188222": {
+  "description": "A single old photograph being lifted off a desk, thin brittle paper rustle, brief, close mic, indoors, no music, no speech",
+  "aliases": []
+ },
+ "ec409b2fe12a2b86": {
+  "description": "A car door closing, heard from a distance below through open air, muffled low thud, outdoors, no music, no speech",
+  "aliases": []
+ },
+ "616aaf879b7f81b5": {
+  "description": "Footsteps walking across wet wooden deck boards, damp wood underfoot, outdoor coastal setting, a few steps, no music, no speech",
+  "aliases": []
+ },
+ "8fe8e0824fc5d6b2": {
+  "description": "A loose wooden window shutter rattling intermittently against its frame on an exterior wall, wind-driven knocking, no music, no speech",
+  "aliases": []
+ },
+ "8874763042f17e82": {
+  "description": "A wooden bench creaking once as someone sits down, weight settling onto old wood, outdoor deck, close mic, no music, no speech",
+  "aliases": []
+ },
+ "ba9e69f8712bfba7": {
+  "description": "a rapid-fire camera shutter clicking several times in quick succession, close mic, outdoor waterfront crime scene, no music, no speech",
+  "aliases": []
+ },
+ "213d322c8f5e809e": {
+  "description": "a single latex or nitrile glove snapping tightly onto a hand, one sharp snap, close mic, outdoor waterfront ambience faint underneath, no music, no speech",
+  "aliases": []
+ },
+ "1143eddd2f0f26de": {
+  "description": "a plastic evidence sleeve with a card inside sliding across a metal table, close mic, quiet police precinct interior, no music, no speech",
+  "aliases": []
+ },
+ "023c92c34aad59d5": {
+  "description": "a smartphone buzzing once against a wooden surface, short vibration rattle, domestic kitchen interior, no music, no speech",
+  "aliases": []
+ },
+ "6d3c7a35afdcfd04": {
+  "description": "a small bunch of metal keys lifted off a wall hook, light metallic jingle, domestic kitchen interior, no music, no speech",
+  "aliases": []
+ },
+ "8d0691b1d6697540": {
+  "description": "a wooden front door opening with a soft creak and latch click, close mic, suburban home interior, no music, no speech",
+  "aliases": []
+ },
+ "2ec3a0c1ead80659": {
+  "description": "a wooden front door clicking shut firmly, a single latch click, suburban home interior, no music, no speech",
+  "aliases": []
+ },
+ "af9b8d5961727779": {
+  "description": "a ceramic mug set down firmly on a formica tabletop, a single solid clunk, diner interior, no music, no speech",
+  "aliases": []
+ },
+ "5199e4a1cce2da75": {
+  "description": "a metal office desk drawer sliding open on its runners, a short metallic rattle, police precinct interior, no music, no speech",
+  "aliases": [
+   "a metal office desk drawer sliding shut, short metallic rattle ending in a soft click, quiet police precinct interior, no music, no speech"
+  ]
+ },
+ "db27121fe77bbee6": {
+  "description": "a retractable ballpoint pen clicking once, a small sharp click, close mic, quiet interior, no music, no speech",
+  "aliases": []
+ },
+ "b83c25e54d74b0c6": {
+  "description": "a small paper notebook flipping open, quick cover and page rustle, close mic, quiet interior, no music, no speech",
+  "aliases": [
+   "a single page of a small paper notebook turning, soft quick paper rustle, close mic, quiet interior, no music, no speech"
+  ]
+ },
+ "9cebf44d41d108e6": {
+  "description": "a small paper notebook closing, soft pages settling and cover thud, close mic, quiet interior, no music, no speech",
+  "aliases": []
+ },
+ "d5483f054bfddbcc": {
+  "description": "a small brass bell mounted above a shop door jangling as the door opens or closes, bright metallic jingle, antiquarian bookshop interior, no music, no speech",
+  "aliases": []
+ },
+ "5123d74eb2b48e11": {
+  "description": "a large heavy hardcover book set down firmly on a wooden counter, a solid thud with pages settling, bookshop interior, no music, no speech",
+  "aliases": []
+ },
+ "6a177703cac56abe": {
+  "description": "a single page of old brittle paper turning, dry crackling rustle, close mic, quiet interior, no music, no speech",
+  "aliases": []
+ },
+ "3001bef679adc48c": {
+  "description": "an old mechanical cash register drawer sliding open with a bell ding then sliding shut, small grocery store interior, no music, no speech",
+  "aliases": []
+ },
+ "b23ea8b55b09b657": {
+  "description": "an electronic shop door chime sounding as a door opens, two-tone bright chime, small grocery store interior, no music, no speech",
+  "aliases": []
+ },
+ "25a1d105ba259edc": {
+  "description": "a computer mouse click followed by steady rhythmic keyboard typing, close mic, quiet office interior at night, no music, no speech",
+  "aliases": []
+ },
+ "ce29f4d8b793495d": {
+  "description": "a metal desk drawer sliding open then sliding shut a moment later, two short metallic rattles, police precinct interior at night, no music, no speech",
+  "aliases": []
+ },
+ "3ce07563b6bb3f90": {
+  "description": "a jacket zipper pulled up quickly followed by footsteps walking away and receding toward a door, close then fading, office interior, no music, no speech",
+  "aliases": []
+ },
+ "b0bbeaceb0b24a83": {
+  "description": "a computer monitor powering down with a soft electronic click and a faint fading hum, close mic, quiet office interior at night, no music, no speech",
+  "aliases": []
+ },
+ "1b8add68196f68e2": {
+  "description": "a rusted chain-link gate creaking slowly open, metal hinges groaning, industrial waterfront at night, no music, no speech",
+  "aliases": []
+ },
+ "c6d5049c3f70cc06": {
+  "description": "slow deliberate footsteps in heavy work boots on wet gravel, steady unhurried pace, industrial waterfront at night, no music, no speech",
+  "aliases": []
+ },
+ "dd5f292425055572": {
+  "description": "a distant low foghorn sounding once over open water, mournful and muffled, heard far across a foggy industrial waterfront, no music, no speech",
+  "aliases": []
+ },
+ "67bbdc5692a254ba": {
+  "description": "a rusted chain-link gate swinging shut with a metallic clatter, industrial waterfront at night, no music, no speech",
+  "aliases": []
+ },
+ "d73154c9b4c0efdd": {
+  "description": "a door clicking shut somewhere down a long echoing corridor, distant and reverberant, fluorescent-lit precinct hallway, no music, no speech",
+  "aliases": []
+ },
+ "d41c7457b358b7c2": {
+  "description": "a cardboard folder tapped once firmly against an open palm, a soft flat thud, close mic, quiet interior, no music, no speech",
+  "aliases": []
+ },
+ "f6c8fcf207d48e47": {
+  "description": "a heavy deadbolt lock turning slowly with a solid metallic clunk, followed by a small bell settling still, back room of an antiquarian bookshop, no music, no speech",
+  "aliases": []
+ },
+ "4f749714b3a24493": {
+  "description": "a small wooden drawer sliding open on old worn runners, a soft dry wooden scrape, close mic, quiet back room interior, no music, no speech",
+  "aliases": [
+   "a small wooden drawer sliding shut on old worn runners, a soft dry wooden scrape ending in a light thud, close mic, quiet interior, no music, no speech"
+  ]
+ },
+ "35c8b18c3ef1465b": {
+  "description": "a small wooden box lid lifting softly, followed by paper contents shifting gently inside, close mic, quiet interior, no music, no speech",
+  "aliases": []
+ },
+ "9bb0a03a5e3425f1": {
+  "description": "a metal key turning in a front door lock, mechanical tumbler clicks, suburban home entrance at night, no music, no speech",
+  "aliases": []
+ },
+ "94128791fe3e0bd8": {
+  "description": "a soft wooden creak as someone shifts weight and stands up from a staircase step, close mic, quiet home interior at night, no music, no speech",
+  "aliases": []
+ },
+ "2ca45e218e77c836": {
+  "description": "footsteps walking away and up a wooden staircase, receding into the distance, quiet home interior at night, no music, no speech",
+  "aliases": []
+ },
+ "7a99049d8326d0cf": {
+  "description": "a wooden desk chair creaking as someone leans back in it, close mic, quiet home study at night, no music, no speech",
+  "aliases": []
+ },
+ "650f1ba8036e576f": {
+  "description": "a pen tapping twice against a wooden desk, two short sharp taps, close mic, quiet interior at night, no music, no speech",
+  "aliases": []
+ },
+ "0e87cd0c77c45750": {
+  "description": "a pen scratching steadily across paper as someone writes, close mic, quiet interior at night, no music, no speech",
+  "aliases": []
+ },
+ "00aa6bb75b4e350c": {
+  "description": "a ceramic coffee mug set down firmly on a wooden office desk, single solid thud, quiet police precinct interior ambience faint underneath, no music, no speech",
+  "aliases": []
+ },
+ "6be2ee4a0609a318": {
+  "description": "a smartphone buzzing once against a wooden office desk, short vibration rattle, quiet police precinct interior, no music, no speech",
+  "aliases": []
+ },
+ "00033d88f7480480": {
+  "description": "a hardcover book pulled free from a tightly packed row of books on a wooden shelf, dry paper and spine friction rustle, close mic, antiquarian bookshop interior, no music, no speech",
+  "aliases": []
+ },
+ "5b7fc2a8250946db": {
+  "description": "a handheld flashlight switch clicking on, small mechanical click followed by a faint electronic hum, close mic, foggy industrial waterfront at night, no music, no speech",
+  "aliases": []
+ },
+ "0d06df798523afa6": {
+  "description": "a police radio handset keying up with a short burst of static before a transmission, close mic, quiet industrial waterfront at night, no music, no speech",
+  "aliases": []
+ },
+ "a96ccd080652bc07": {
+  "description": "a cardboard case file folder closing, soft paper and cover thud, close mic, quiet police precinct office interior, no music, no speech",
+  "aliases": []
+ },
+ "7c3fd29e9406ec58": {
+  "description": "a ceramic mug set down on a wooden kitchen counter, single solid clunk, quiet suburban home interior, no music, no speech",
+  "aliases": []
+ },
+ "4c9cecf3249b9a7b": {
+  "description": "a metal spoon set down against a ceramic saucer, single light clink, close mic, quiet diner interior, no music, no speech",
+  "aliases": [
+   "a metal spoon set down gently against the rim of a ceramic bowl, single light clink, close mic, quiet domestic kitchen interior, no music, no speech"
+  ]
+ },
+ "5b11eafc8b2311a0": {
+  "description": "a jacket lifted off a hook, fabric rustling softly, close mic, quiet suburban home interior, no music, no speech",
+  "aliases": []
+ },
+ "59bb91a100fd7609": {
+  "description": "a small piece of paper unfolding, stiff crease sounds as it opens, close mic, quiet interior, no music, no speech",
+  "aliases": []
+ },
+ "e5738738cb0e2fd6": {
+  "description": "a single wooden floorboard creaking on the floor above, heard faintly from below, quiet suburban home interior at night, no music, no speech",
+  "aliases": []
+ },
+ "9f09c5c409051c96": {
+  "description": "a small wheeled library ladder rolling a short distance along a metal rail, rhythmic wheel clicks, close mic, antiquarian bookshop interior, no music, no speech",
+  "aliases": []
+ },
+ "74fd7565c4880a5d": {
+  "description": "a stack of loose papers squared and tapped against a hard desktop, brief rhythmic paper taps, close mic, quiet office interior, no music, no speech",
+  "aliases": []
+ },
+ "605c937baae1513e": {
+  "description": "a bedroom door being eased shut quietly, soft controlled latch click, close mic, quiet suburban home interior at night, no music, no speech",
+  "aliases": []
+ },
+ "ac8c76fec2b6d355": {
+  "description": "slow footsteps on wet wooden dock boards, damp creaking impacts, close mic, foggy industrial waterfront at night, no music, no speech",
+  "aliases": [
+   "footsteps retreating over wet wooden dock boards, fading into the distance, damp creaking impacts, foggy industrial waterfront at night, no music, no speech",
+   "slow cautious footsteps on wet wooden dock boards coming to an abrupt stop, damp creaking impacts settling into silence, close mic, foggy industrial waterfront at night, no music, no speech"
+  ]
+ },
+ "ce67389dfc2c35af": {
+  "description": "a small object scraping softly against wet wooden dock boards as it is lifted, brief damp friction sound, close mic, foggy industrial waterfront at night, no music, no speech",
+  "aliases": []
+ },
+ "9baa00f7bf1a4041": {
+  "description": "a smartphone camera shutter clicking once, single crisp digital click, close mic, quiet outdoor waterfront ambience faint underneath, no music, no speech",
+  "aliases": []
+ },
+ "30870f9538230b2f": {
+  "description": "a cardboard folder dropped flat onto a hard desk, single sharp slap, close mic, quiet police precinct interior, no music, no speech",
+  "aliases": []
+ },
+ "778ef5efa406294f": {
+  "description": "a smartphone buzzing against a tabletop with a short vibration rattle, then being picked up, close mic, quiet diner interior, no music, no speech",
+  "aliases": []
+ },
+ "aabc569974d60efc": {
+  "description": "a chair scraping back on a hard floor as someone rises from a diner booth, brief wooden scrape, close mic, quiet diner interior, no music, no speech",
+  "aliases": []
+ },
+ "859c2a4bf533e947": {
+  "description": "a smartphone unlocking with a soft electronic chime, close mic, quiet interior at night, no music, no speech",
+  "aliases": []
+ },
+ "1f0b3f397045b623": {
+  "description": "a phone call connecting, a single ring tone cutting short as the call picks up, close mic, quiet interior at night, no music, no speech",
+  "aliases": []
+ },
+ "aa28523c2a953797": {
+  "description": "gloved hands rustling quickly through wet cardboard and rope debris, searching, close mic, foggy outdoor industrial waterfront morning, no music, no speech",
+  "aliases": []
+ },
+ "ffdadef29e9c1232": {
+  "description": "a small object dropped into a plastic evidence bag, soft crinkle and light rattle, close mic, outdoor waterfront ambience faint underneath, no music, no speech",
+  "aliases": []
+ },
+ "907e680af0a14375": {
+  "description": "a car door closing followed by an engine starting up, heard from a distance, outdoor urban morning, no music, no speech",
+  "aliases": []
+ },
+ "84c0a1caf05d6302": {
+  "description": "a plastic evidence bag set down firmly on a wooden desk, soft crinkle and thud, close mic, quiet police precinct interior, no music, no speech",
+  "aliases": []
+ },
+ "569fdf19136267f3": {
+  "description": "a chair pushed back on a hard floor, papers gathered quickly off a desk, close mic, quiet police precinct interior, no music, no speech",
+  "aliases": []
+ },
+ "49b920f25aa1bc8e": {
+  "description": "an office chair with wheels rolling back quickly on a hard tile floor, close mic, quiet police precinct interior, no music, no speech",
+  "aliases": []
+ },
+ "afa4ed50ff8a60ab": {
+  "description": "fabric rustling as a coat pocket is turned inside out, close mic, quiet suburban home interior, no music, no speech",
+  "aliases": []
+ },
+ "2b4f23c1c9d07ecf": {
+  "description": "a small piece of paper folding closed, then a coat pocket being smoothed flat, close mic, quiet suburban home interior, no music, no speech",
+  "aliases": []
+ },
+ "96f44c5b720d68da": {
+  "description": "a stack of paper grocery bags shifting against each other, soft crinkle, close mic, small grocery store interior, no music, no speech",
+  "aliases": []
+ },
+ "e10c136c3d4a8d5e": {
+  "description": "a single coin dropped into an open metal cash register drawer, small metallic clink, close mic, small grocery store interior, no music, no speech",
+  "aliases": []
+ },
+ "8baa0fbfd2079c7f": {
+  "description": "a metal fork set down deliberately on a ceramic plate, single sharp clink, close mic, quiet diner interior, no music, no speech",
+  "aliases": []
+ },
+ "17c21451bff91635": {
+  "description": "a metal roll-up shutter grinding upward, grocery store entrance opening for the day, mechanical rattle, no music, no speech",
+  "aliases": []
+ },
+ "7f9192dfdf3e09f7": {
+  "description": "a metal drawer beneath a cash register sliding open slowly and quietly, muffled mechanical scrape, small grocery store interior, no music, no speech",
+  "aliases": [
+   "a metal drawer beneath a cash register sliding shut quickly, muffled mechanical scrape ending in a soft click, small grocery store interior, no music, no speech"
+  ]
+ },
+ "ddb36e657f0d7f6d": {
+  "description": "a metal roll-up shutter grate rattling down and locking, grocery store closing for the day, mechanical rattle ending in a lock click, no music, no speech",
+  "aliases": []
+ },
+ "2ff09db1f45275b6": {
+  "description": "a hardcover ledger account book closing softly, paper and cover settling, close mic, quiet back room interior, no music, no speech",
+  "aliases": []
+ },
+ "0ed39604f72f62ea": {
+  "description": "a wooden chair leg scraping once briefly against a hard floor, close mic, quiet interior, no music, no speech",
+  "aliases": []
+ },
+ "b76be957c75b7750": {
+  "description": "a small wooden drawer sliding open in a home study or bedroom, soft dry wooden scrape, close mic, quiet suburban home interior, no music, no speech",
+  "aliases": []
+ },
+ "041488a2b6f257df": {
+  "description": "a small wooden box lid closing softly, close mic, quiet interior, no music, no speech",
+  "aliases": []
+ },
+ "30c6c956d0d210d7": {
+  "description": "a chair pushed back on a hard floor followed by an office door opening, close mic, quiet police precinct interior, no music, no speech",
+  "aliases": []
+ },
+ "ba35f9187c6a1718": {
+  "description": "footsteps approaching on an office floor, then a paper coffee cup set down on a wooden desk, close mic, quiet police precinct interior at night, no music, no speech",
+  "aliases": []
+ },
+ "bb6d5899140dd634": {
+  "description": "a desktop stapler clicking once, a single sharp mechanical snap, close mic, quiet office interior at night, no music, no speech",
+  "aliases": []
+ },
+ "e2120613e6ef895f": {
+  "description": "a paper envelope dropped into a metal desk tray, soft paper flutter and a light metallic clink, close mic, quiet police precinct interior at night, no music, no speech",
+  "aliases": []
+ },
+ "57e3cddf1c09f8cf": {
+  "description": "a plastic evidence bag zipper being unzipped, sharp zipping sound, close mic, quiet outdoor waterfront ambience faint underneath, no music, no speech",
+  "aliases": [
+   "a plastic evidence bag being sealed shut, sharp zipper-lock crinkle and rustle, close mic, outdoor waterfront ambience faint underneath, no music, no speech"
+  ]
+ },
+ "f13258c9dce76838": {
+  "description": "slow footsteps retreating over wet gravel, fading into the distance, industrial waterfront at night, no music, no speech",
+  "aliases": []
+ },
+ "1ad64857885400ee": {
+  "description": "a heavy key turning slowly in a small padlock, mechanical tumbler click, close mic, quiet back room interior, no music, no speech",
+  "aliases": []
+ },
+ "54c564f89e133746": {
+  "description": "a small object set down gently against a wooden surface, soft muted tap, close mic, quiet interior, no music, no speech",
+  "aliases": []
+ },
+ "8803b9e72dbdc6a4": {
+  "description": "a small padlock clicking shut, single sharp metallic click, close mic, quiet back room interior, no music, no speech",
+  "aliases": []
+ },
+ "c1c09fe4f666cdd6": {
+  "description": "a metal bucket set down hard on outdoor pavement, solid clunk with water sloshing inside, no music, no speech",
+  "aliases": []
+ },
+ "eed191b4ac612b1e": {
+  "description": "a stiff scrub brush working hard back and forth against a glass window, bristly friction sound, close mic, faint outdoor street ambience underneath, no music, no speech",
+  "aliases": []
+ },
+ "ebb1ed4c4d28a5c9": {
+  "description": "a photograph pinned to a corkboard with a metal push pin, small sharp poke and a light paper flutter, close mic, quiet police precinct interior, no music, no speech",
+  "aliases": []
+ },
+ "352761baf83975cf": {
+  "description": "metal cutlery pieces set down one at a time on a wooden dinner table, light individual clinks in unhurried sequence, domestic kitchen interior, no music, no speech",
+  "aliases": []
+ },
+ "f9f2fdbd92472094": {
+  "description": "a phone call ending abruptly, a soft electronic click as the line disconnects, close mic, quiet domestic kitchen interior at night, no music, no speech",
+  "aliases": []
+ },
+ "703a7bdba38e9439": {
+  "description": "a small bunch of metal keys dropped into a small ceramic dish, light metallic jingle and clink, domestic home entryway interior, no music, no speech",
+  "aliases": []
+ },
+ "6bd72a2184b222d3": {
+  "description": "tissue paper unfolding and unwrapping around a small object, soft delicate crinkling rustle, close mic, quiet office interior, no music, no speech",
+  "aliases": []
+ },
+ "9481af5514905791": {
+  "description": "an interior office door pulled shut firmly from inside, a solid single latch click, close mic, quiet police precinct interior, no music, no speech",
+  "aliases": []
+ },
+ "9bd93e667fb71af2": {
+  "description": "a desk lamp switch clicking on, small mechanical click followed by a faint electrical hum, close mic, quiet office interior at night, no music, no speech",
+  "aliases": []
+ },
+ "14b585cff05f5c54": {
+  "description": "a glass coffee pot set down onto a hot plate warmer, a solid clink of glass on metal followed by a faint sizzle, close mic, quiet police precinct interior, no music, no speech",
+  "aliases": []
+ },
+ "07fa5480c13980fe": {
+  "description": "a car door slamming shut hard and quickly, sharp metallic clunk, close mic, outdoor industrial waterfront morning, no music, no speech",
+  "aliases": []
+ },
+ "7c145b82049a22cf": {
+  "description": "an old push-button telephone handset lifted off its cradle, plastic click and cord movement, close mic, small grocery store interior, no music, no speech",
+  "aliases": []
+ },
+ "dbfc464a1488da9a": {
+  "description": "an old telephone receiver set down onto its cradle harder than intended, sharp plastic clatter, close mic, small grocery store interior, no music, no speech",
+  "aliases": []
+ },
+ "1269aac97e952db6": {
+  "description": "a paper envelope sliding across a wooden table surface, soft paper friction rustle, close mic, quiet domestic interior at night, no music, no speech",
+  "aliases": []
+ },
+ "7ab7da7a5539b935": {
+  "description": "three touch-tone phone dialing tones played in quick succession then cut off into abrupt silence, close mic, quiet domestic interior at night, no music, no speech",
+  "aliases": []
+ },
+ "c842e8fdc4510f54": {
+  "description": "a zipper on a coat pocket being unzipped, close mic, quiet suburban home interior, no music, no speech",
+  "aliases": []
+ },
+ "1a77c24033cbaa9b": {
+  "description": "a wooden interior door opening at the end of a hallway, soft creak heard at a distance, close mic, quiet suburban home interior, no music, no speech",
+  "aliases": []
+ },
+ "8aa5e7a68ddfcff2": {
+  "description": "a small object dropped into a fabric coat pocket, soft fabric rustle and muffled thud, close mic, quiet suburban home interior, no music, no speech",
+  "aliases": []
+ },
+ "ef0ff9d934a2c50c": {
+  "description": "a hardcover book's pages flipping quickly one after another, then the book snapping shut abruptly, close mic, quiet suburban home interior, no music, no speech",
+  "aliases": []
+ },
+ "403c78d562e003e9": {
+  "description": "a wall light switch clicking off, small mechanical click, quiet suburban home interior, no music, no speech",
+  "aliases": []
+ },
+ "c6286f301d2b4246": {
+  "description": "a stapled paper printout flipped over hard onto a desk, sharp paper slap, close mic, quiet police precinct interior, no music, no speech",
+  "aliases": []
+ },
+ "ecb67b35537b4302": {
+  "description": "a heavy wooden back door opening onto an outdoor alley then shutting, wood and metal latch sounds, close mic, quiet urban alley ambience faint underneath, no music, no speech",
+  "aliases": []
+ },
+ "48d5c1799f68d33f": {
+  "description": "several pages of an old book turning quickly one after another, riffling paper rustle, close mic, quiet antiquarian bookshop interior, no music, no speech",
+  "aliases": []
+ },
+ "88545fc2bfa38d6c": {
+  "description": "a door bolt sliding shut, a solid metallic slide and click, quiet domestic interior, no music, no speech",
+  "aliases": []
+ },
+ "2dc2a931d76243ef": {
+  "description": "a wooden chair scraping back sharply against a hard tile floor, brief scrape, close mic, quiet interior, no music, no speech",
+  "aliases": []
+ },
+ "cd81e4ff00a6cad6": {
+  "description": "a stack of loose papers slapped down flat onto a hard counter, sharp paper slap, close mic, quiet domestic kitchen interior, no music, no speech",
+  "aliases": []
+ },
+ "35eca63caf36015f": {
+  "description": "a kitchen cabinet door closing softly, gentle wood contact and latch click, close mic, quiet domestic kitchen interior, no music, no speech",
+  "aliases": []
+ },
+ "1dabeac40f4a5d36": {
+  "description": "a ceramic coffee mug set down on a metal counter, single solid clink, close mic, quiet police precinct interior, no music, no speech",
+  "aliases": []
+ },
+ "c20506f87b988f7f": {
+  "description": "a police radio handset crackling with static and a brief dispatch call, close mic, quiet police precinct interior at night, no music, no speech",
+  "aliases": []
+ },
+ "206fbd3d96535a9d": {
+  "description": "a ballpoint pen set down on a wooden desk, single soft clack, close mic, quiet interior, no music, no speech",
+  "aliases": []
+ },
+ "531e9df0391a5173": {
+  "description": "a wooden kitchen chair being pulled out slowly from a table, drawn-out wood scrape, close mic, quiet suburban home interior, no music, no speech",
+  "aliases": []
+ },
+ "45279ecd45a8b221": {
+  "description": "a small folded piece of paper set down firmly on a wooden table, soft paper tap, close mic, quiet suburban home interior, no music, no speech",
+  "aliases": []
+ },
+ "5ca866b1cafd86ff": {
+  "description": "a bucket lifted off the ground, water sloshing inside, close mic, quiet outdoor pavement, no music, no speech",
+  "aliases": []
+ },
+ "5f47dcb825541171": {
+  "description": "a car door closing, heard from a short distance away, outdoor urban street ambience, no music, no speech",
+  "aliases": []
+ },
+ "958b68d4770ea84b": {
+  "description": "footsteps walking then stopping close beside someone on outdoor pavement, close mic, quiet urban street ambience, no music, no speech",
+  "aliases": []
+ },
+ "94721af9f725b764": {
+  "description": "a car engine starting outside then fading away down the street, outdoor night ambience, no music, no speech",
+  "aliases": []
+ },
+ "b913e216f78f179b": {
+  "description": "a car door closing quietly and gently, soft muted clunk, outdoor night ambience, no music, no speech",
+  "aliases": []
+ },
+ "1b98f0d4e2d9bc78": {
+  "description": "a car turn signal indicator clicking rhythmically, repeated soft mechanical ticks, close mic, quiet car interior at night, no music, no speech",
+  "aliases": []
+ },
+ "451c6fac142b1fb0": {
+  "description": "a car engine ticking softly as it cools after being turned off, small metallic ticks, quiet outdoor night ambience, no music, no speech",
+  "aliases": []
+ },
+ "f14d5511592cc45f": {
+  "description": "a corded office desk telephone ringing insistently, mechanical bell ringer, close mic, quiet police precinct interior early morning, no music, no speech",
+  "aliases": []
+ },
+ "4d16b2ad19eedd9a": {
+  "description": "an office telephone receiver set down into its desk cradle, soft plastic click and cord settling, close mic, quiet police precinct interior, no music, no speech",
+  "aliases": [
+   "an office telephone receiver lifted off its desk cradle, plastic click and faint cord movement, close mic, quiet police precinct interior, no music, no speech"
+  ]
+ },
+ "89df36d1f4bbc331": {
+  "description": "a ballpoint pen tapping once against a wooden desk, single sharp tap, close mic, quiet interior, no music, no speech",
+  "aliases": []
+ },
+ "035dec1fce1e6dfc": {
+  "description": "a single sheet of paper folded in half and creased sharply along the fold, crisp paper crease sound, close mic, quiet interior, no music, no speech",
+  "aliases": []
+ },
+ "7084b133e1a635b0": {
+  "description": "a lone gull crying out low over open water, followed immediately by slow deliberate footsteps on wet gravel, foggy industrial waterfront, no music, no speech",
+  "aliases": []
+ },
+ "4235eb1ccb7df394": {
+  "description": "several pages of a spiral-bound supplier directory flipping quickly one after another, brisk paper rustle, close mic, quiet police precinct interior, no music, no speech",
+  "aliases": []
+ },
+ "9f34f66eacf775bf": {
+  "description": "a mechanical cash register till drawer sliding shut quietly, soft metallic rattle ending in a click, close mic, small grocery store interior, no music, no speech",
+  "aliases": []
+ },
+ "edc728e61ff5027e": {
+  "description": "a paper receipt torn cleanly from a mechanical till roll, short crisp tearing rip, close mic, small grocery store interior, no music, no speech",
+  "aliases": []
+ },
+ "c395b771e0531030": {
+  "description": "a ballpoint pen cap pulled off with a small sharp plastic click, close mic, quiet interior, no music, no speech",
+  "aliases": []
+ },
+ "60f05e623645f8b8": {
+  "description": "a hardcover book sliding a few inches along a wooden shelf, dry wood and spine friction rustle, close mic, antiquarian bookshop interior, no music, no speech",
+  "aliases": []
+ },
+ "4354d3078d2b8560": {
+  "description": "multiple car doors shutting in quick succession, close mic, several police vehicles arriving at a nighttime raid, outdoor street, no music, no speech",
+  "aliases": []
+ },
+ "f7ab0eaa88a40674": {
+  "description": "a police car radio crackling to life with a brief dispatch confirmation message, close mic, outdoor street at night, no music, no speech",
+  "aliases": []
+ },
+ "dddbc1ab003c0a1e": {
+  "description": "several people running quickly across pavement toward a storefront, urgent overlapping footsteps, close mic, outdoor street at night, no music, no speech",
+  "aliases": []
+ },
+ "b9317cb9276cad7c": {
+  "description": "a metal shelf bracket scraping as cardboard boxes are shifted and pulled aside, close mic, small grocery store interior, no music, no speech",
+  "aliases": []
+ },
+ "10b291cf9459a16e": {
+  "description": "an electronic fingerprint scanner beeping twice in quick succession, small digital beeps, close mic, quiet police precinct interior, no music, no speech",
+  "aliases": []
+ },
+ "f6cc4d022a52e77a": {
+  "description": "a single camera shutter clicking once, crisp mechanical click, close mic, quiet police precinct interrogation room, no music, no speech",
+  "aliases": []
+ },
+ "00518ba0eecb04f8": {
+  "description": "a heavy metal jail cell door sliding along its track then clanging shut, loud metallic impact, close mic, police precinct holding cell interior, no music, no speech",
+  "aliases": []
+ },
+ "381e0a5a2219aa32": {
+  "description": "a heavy object smashing through a large glass storefront pane, sudden violent shattering crash with falling shards, outdoor street at night, no music, no speech",
+  "aliases": []
+ },
+ "486f358088535c7c": {
+  "description": "a smartphone camera shutter clicking three times in quick succession, crisp digital clicks, close mic, quiet interior with broken glass debris underfoot, no music, no speech",
+  "aliases": []
+ },
+ "f3bc2e899d562449": {
+  "description": "a cardboard folder closing firmly on a metal table, sharp flat clap, close mic, quiet police precinct interrogation room, no music, no speech",
+  "aliases": []
+ },
+ "4ef8509732c39935": {
+  "description": "a heavy door swinging shut and latching at the end of a long echoing hallway, reverberant thud, fluorescent-lit precinct interior, no music, no speech",
+  "aliases": []
+ },
+ "0d98d2085ed08947": {
+  "description": "a small brass shop bell jingling softly then fading as a front door is locked for the night, antiquarian bookshop interior, no music, no speech",
+  "aliases": []
+ },
+ "81be64a7df503e85": {
+  "description": "an old radio scanner switching on with a burst of static settling into low-volume crackle, close mic, quiet back room interior, no music, no speech",
+  "aliases": []
+ },
+ "df861f699ae4948f": {
+  "description": "a small wooden desk drawer sliding open, then sliding shut a moment later, two soft dry wooden scrapes, close mic, quiet back room interior, no music, no speech",
+  "aliases": []
+ },
+ "3d0653cf1ae4a930": {
+  "description": "an old radio scanner switching off with a small mechanical click, close mic, quiet interior, no music, no speech",
+  "aliases": []
+ },
+ "5a3f76378fc915c2": {
+  "description": "a car engine shutting off abruptly, heard close outside a suburban house at night, no music, no speech",
+  "aliases": []
+ },
+ "5d2ea925dced17b4": {
+  "description": "a small cardboard matchbook flicking open and snapping shut once, quick paper and cardboard flick, close mic, quiet interior, no music, no speech",
+  "aliases": []
+ },
+ "048fbb6fbb483775": {
+  "description": "a corded office telephone ringing once then the receiver being lifted off its cradle, plastic click, close mic, quiet police precinct interior early morning, no music, no speech",
+  "aliases": []
+ },
+ "95c960dacf258eb6": {
+  "description": "a stack of cardboard file folders dropped onto a wooden desk, heavy multi-folder thud, close mic, quiet police precinct interior, no music, no speech",
+  "aliases": []
+ },
+ "78cb579a86b4155a": {
+  "description": "a single hand clapping down briefly on a shoulder, soft fabric thud, close mic, quiet interior, no music, no speech",
+  "aliases": []
+ },
+ "ab9a81b3e25f3f96": {
+  "description": "an office telephone ringing three times in a row then stopping, unanswered, corded desk phone bell, quiet police precinct interior, no music, no speech",
+  "aliases": []
+ },
+ "2a0b3843aff3cd87": {
+  "description": "soft footsteps followed by a chair being pushed back gently on a kitchen floor, close mic, quiet suburban home interior, no music, no speech",
+  "aliases": []
+ },
+ "e9b4d6c9b8a1a757": {
+  "description": "a metal security shutter grinding slowly down along its track, mechanical rattle, outdoor grocery storefront at dusk, no music, no speech",
+  "aliases": []
+ },
+ "c4b08a2adbe1308c": {
+  "description": "a padlock snapping shut firmly, single sharp metallic click, outdoor grocery storefront at dusk, no music, no speech",
+  "aliases": []
+ },
+ "3989e9f149d922dd": {
+  "description": "a paper envelope being torn open, sharp crisp tearing sound, close mic, quiet office interior at night, no music, no speech",
+  "aliases": []
+ },
+ "404a372ac08f478d": {
+  "description": "a full sequence of touch-tone telephone dialing tones pressed in quick succession, close mic, quiet office interior at night, no music, no speech",
+  "aliases": []
+ },
+ "19e88bf4ff007c75": {
+  "description": "a stiff scrub brush working hard back and forth against corrugated sheet metal, several gritty strokes, close mic, faint outdoor residential street ambience underneath, no music, no speech",
+  "aliases": []
+ },
+ "8a07a7f54030ccbe": {
+  "description": "a screen door on a spring hinge creaking open, light metallic screech and rattle, close mic, quiet residential street ambience faint underneath, no music, no speech",
+  "aliases": []
+ },
+ "eb66b5007dab9515": {
+  "description": "a disposable pocket lighter flicked once, small metallic spark wheel and flame catch click, close mic, quiet interior, no music, no speech",
+  "aliases": []
+ },
+ "6d78f9c93457d703": {
+  "description": "loose papers inside a cardboard folder turning slowly one by one, soft repeated paper rustle, close mic, quiet office interior at night, no music, no speech",
+  "aliases": []
+ },
+ "0fe718bacb6101ec": {
+  "description": "a smartphone touchscreen key tapped once then held down, soft tap followed by a faint sustained press tone, close mic, quiet interior at night, no music, no speech",
+  "aliases": []
+ },
+ "0763705ceef63b77": {
+  "description": "a hardcover book closing softly, gentle pages settling and cover meeting, close mic, quiet antiquarian bookshop interior, no music, no speech",
+  "aliases": []
+ },
+ "ddae21daa8ca24b1": {
+  "description": "a glossy photograph sliding across a metal tabletop, soft paper-on-metal friction, close mic, quiet police precinct interior, no music, no speech",
+  "aliases": []
+ },
+ "030180ba9ce48dc1": {
+  "description": "a small object set down firmly on a café tabletop, sharp solid tap, close mic, quiet café interior ambience faint underneath, no music, no speech",
+  "aliases": []
+ },
+ "e5d25aacae0c7c3e": {
+  "description": "an old brass desk lamp arm pulled lower on its metal hinge, soft mechanical creak and adjustment click, close mic, quiet interior at night, no music, no speech",
+  "aliases": []
+ },
+ "66c3de1418c320dd": {
+  "description": "a folder of loose papers set down on a wooden desk, soft paper rustle and solid thud, close mic, quiet interior at night, no music, no speech",
+  "aliases": []
+ },
+ "319ba82c93f2af04": {
+  "description": "a metal wax seal stamp pressed firmly into warm wax on paper, soft squelch and a solid press, close mic, quiet interior at night, no music, no speech",
+  "aliases": []
+ },
+ "99883b5ce6111d26": {
+  "description": "a manila envelope dropped flat onto a wooden desk, soft paper thud, close mic, quiet police precinct interior, no music, no speech",
+  "aliases": []
+ },
+ "eaf0778b3f724acb": {
+  "description": "an office inkjet printer humming to life then printing a page, mechanical whirring and paper feed sounds, close mic, quiet office interior at night, no music, no speech",
+  "aliases": []
+ },
+ "2ac30cb11ca235a6": {
+  "description": "a firm double knock on a wooden office door, close mic, quiet police precinct interior at night, no music, no speech",
+  "aliases": []
+ },
+ "66baee476655193e": {
+  "description": "a pen cap clicked firmly into place then the pen set down on a wooden desk, small plastic click followed by a soft clack, close mic, quiet office interior at night, no music, no speech",
+  "aliases": []
+ },
+ "92a0fbd085546363": {
+  "description": "a cardboard box set down hard onto a wooden shop counter, solid thud with a slight box rattle, small grocery store interior, no music, no speech",
+  "aliases": []
+ },
+ "f83fc71cc9288ada": {
+  "description": "a wire coat hanger swinging and clinking softly against another empty hanger in a closet, close mic, quiet suburban home bedroom interior, no music, no speech",
+  "aliases": []
+ },
+ "bbc118056c7ad765": {
+  "description": "a smartphone buzzing three times in quick succession against a wooden tabletop, short vibration rattles, quiet domestic interior at night, no music, no speech",
+  "aliases": []
+ },
+ "7068b195dff8f20a": {
+  "description": "small postcards sliding one at a time across a wooden tabletop and coming to rest, soft repeated paper friction, close mic, quiet interior at night, no music, no speech",
+  "aliases": []
+ },
+ "a032498a747a60eb": {
+  "description": "a duffel bag zipper pulled quickly and firmly shut, sharp zipping rasp, close mic, quiet suburban home bedroom interior, no music, no speech",
+  "aliases": []
+ },
+ "077dfac2bd0f9fc5": {
+  "description": "a car door closing outdoors, followed immediately by footsteps walking up a gravel path toward a house, quiet suburban night ambience, no music, no speech",
+  "aliases": []
+ },
+ "e08ebe84856af1ad": {
+  "description": "small metal keys picked up off a kitchen counter with a light jingle, followed immediately by a front door opening with a soft creak, close mic, quiet suburban home interior, no music, no speech",
+  "aliases": []
+ },
+ "ea13cc0470bbc07f": {
+  "description": "a wooden crate lid set down firmly onto a wooden table, solid hollow thud, close mic, quiet back room interior, no music, no speech",
+  "aliases": []
+ },
+ "39365c7483e3dd0f": {
+  "description": "a wooden match struck alight with a sharp scratch, then the small flame catching a candle wick, close mic, quiet interior at night, no music, no speech",
+  "aliases": []
+ },
+ "24d5d3f14a91e6c1": {
+  "description": "three firm knocks on a heavy wooden shop door, close mic, quiet foggy waterfront night ambience faint underneath, no music, no speech",
+  "aliases": []
+ },
+ "cc10e93a2a827efe": {
+  "description": "a heavy wooden shop door creaking open slowly at night, no bell, close mic, quiet antiquarian bookshop interior, no music, no speech",
+  "aliases": []
+ },
+ "043eab8f8f8f51ac": {
+  "description": "a smartphone ringing repeatedly with no answer, standard ringtone, close mic, quiet domestic interior at night, no music, no speech",
+  "aliases": []
+ },
+ "083ce8b863b7022c": {
+  "description": "a soft electronic voicemail beep tone, single short chime, close mic, quiet interior at night, no music, no speech",
+  "aliases": []
+ },
+ "14e55c47a2d8b852": {
+  "description": "an office door pushed open abruptly without a preceding knock, quick creak and swing, close mic, quiet police precinct interior at night, no music, no speech",
+  "aliases": []
+ },
+ "62a0c36ed559c756": {
+  "description": "an office telephone receiver lifted off its cradle followed by several push-button dialing tones pressed in quick succession, close mic, quiet police precinct interior at night, no music, no speech",
+  "aliases": []
+ },
+ "f91d1adda39fcf2c": {
+  "description": "a small brass shop bell settling into stillness after slight movement, a few soft fading tinkles, close mic, quiet antiquarian bookshop interior at night, no music, no speech",
+  "aliases": []
+ },
+ "b80bce2ba7da35a9": {
+  "description": "a small plastic pill bottle set down hard onto a wooden counter, sharp rattle of pills inside, close mic, quiet interior, no music, no speech",
+  "aliases": []
+ },
+ "715cb2940dc1e86f": {
+  "description": "a wooden shop door bursting open forcefully, a brass bell clattering hard and rapidly against the door frame, close mic, quiet antiquarian bookshop interior at night, no music, no speech",
+  "aliases": []
+ },
+ "d9fa9cc919c90ee6": {
+  "description": "a body slamming hard into a wooden bookshelf, books crashing and tumbling down onto a wooden floor, close mic, quiet interior, no music, no speech",
+  "aliases": []
+ },
+ "28c774df9ef0baa8": {
+  "description": "metal handcuffs ratcheting shut around wrists, several sharp mechanical clicks, close mic, quiet interior, no music, no speech",
+  "aliases": []
+ },
+ "2b2b17b9716c7cd9": {
+  "description": "a stack of hardcover books dropping onto a wooden table, multiple heavy thuds landing at once, close mic, quiet fluorescent-lit police precinct interior, no music, no speech",
+  "aliases": []
+ },
+ "21f3ca89e6bd8174": {
+  "description": "a heavy metal warehouse door easing open slowly on a stiff, rusted hinge, low groaning creak, close mic, industrial waterfront ambience faint underneath, no music, no speech",
+  "aliases": []
+ },
+ "e1f7afab320feba5": {
+  "description": "a single wet wooden dock plank creaking sharply as body weight shifts onto it, close mic, foggy industrial waterfront at night, no music, no speech",
+  "aliases": []
+ },
+ "5bce1aa8771a118f": {
+  "description": "two bodies colliding hard against a wet wooden dock surface, heavy impact thud with a splash of water, close mic, foggy industrial waterfront at night, no music, no speech",
+  "aliases": []
+ },
+ "7544eb77931e8908": {
+  "description": "a single gunshot firing outdoors, sharp loud crack with a brief flat echo, foggy industrial waterfront at night, no music, no speech",
+  "aliases": []
+ },
+ "c81b5749517c7dd4": {
+  "description": "a police radio crackling with static, heard faintly at a distance, foggy industrial waterfront at night, no music, no speech",
+  "aliases": []
+ },
+ "4bb2fec7a3e9ec68": {
+  "description": "a small bunch of keys jangling softly as footsteps walk away toward a stairwell, close mic, quiet parking structure interior, no music, no speech",
+  "aliases": []
+ },
+ "a15a85fa4369cf60": {
+  "description": "a wooden door scraping open over warped floorboards, dry uneven friction and low creak, close mic, quiet back room interior, no music, no speech",
+  "aliases": []
+ },
+ "0c2b4191e36ca2f0": {
+  "description": "an old push-button telephone ringing on a shop counter, mechanical bell ringer, close mic, quiet small grocery store interior, no music, no speech",
+  "aliases": []
+ },
+ "c84c9bcb33b2f8fd": {
+  "description": "a single sheet of paper set down flat on a wooden shop counter, soft paper tap, close mic, quiet small grocery store interior, no music, no speech",
+  "aliases": []
+ },
+ "c20156a0be1dcfb6": {
+  "description": "an electronic shop door chime sounding briefly, then the door easing closed again with no footsteps entering, close mic, quiet small grocery store interior, no music, no speech",
+  "aliases": []
+ },
+ "3bf8155d1d4afc76": {
+  "description": "a glass jar set down onto a wooden shelf, single soft clink, close mic, quiet small grocery store interior, no music, no speech",
+  "aliases": []
+ },
+ "14cefeb364b06d7b": {
+  "description": "a box cutter blade slicing quickly through packing tape, sharp tearing rip, close mic, quiet small grocery store interior, no music, no speech",
+  "aliases": []
+ },
+ "827886733ab9df07": {
+  "description": "a small bunch of metal keys set down hard on a kitchen counter, sharp metallic clatter, close mic, quiet suburban home interior, no music, no speech",
+  "aliases": []
+ },
+ "d1fcba98250ca0f8": {
+  "description": "a cardboard box shifting then set down onto a wooden floor, soft thud with a brief box rustle, close mic, quiet suburban home interior, no music, no speech",
+  "aliases": []
+ },
+ "e4c510a076f74da4": {
+  "description": "a wooden kitchen chair pushed back quickly from a table, sharp wood scrape against a hard floor, close mic, quiet suburban home interior, no music, no speech",
+  "aliases": []
+ },
+ "f9a0714c4ca8772e": {
+  "description": "a metal spoon stirring slowly and unhurriedly inside a porcelain cup, soft rhythmic clinking, close mic, quiet diner interior, no music, no speech",
   "aliases": []
  }
 }

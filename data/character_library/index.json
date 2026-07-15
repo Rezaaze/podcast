@@ -1,0 +1,231 @@
+{
+ "2001bafb68fc3322": {
+  "description": "the groom; native English speaker, the anchor voice of the cast. Proposed to Lena while still entangled with Ivy, and has spent months convincing himself the engagement would quietly end what he started.",
+  "aliases": [],
+  "emotions": []
+ },
+ "a561267c83f531d2": {
+  "description": "Lena's older sister and maid of honor; moved from Hong Kong as a teenager, fluent English with a residual accent. Has been carrying a secret for eight months and planned to bury it before anyone ever looked closely enough to find it.",
+  "aliases": [],
+  "emotions": [
+   "anger",
+   "fear",
+   "vulnerability"
+  ]
+ },
+ "a02bc84bfb838896": {
+  "description": "the bride, marrying tomorrow; Chinese-American, raised bilingual by a family that emigrated from Guangzhou — fluent, professional English with an audible accent she's long since stopped noticing. She trusts her sister completely, which is exactly the blind spot the season exploits.",
+  "aliases": [],
+  "emotions": [
+   "anger",
+   "fear",
+   "joy",
+   "sadness"
+  ]
+ },
+ "46ebbce38ed61558": {
+  "description": "elderly Chinese-American police captain nearing the end of his career, under mounting pressure from the mayor's office over the killings; he shields Reid from scrutiny longer than he should, not realizing how far his star detective has already strayed",
+  "aliases": [],
+  "emotions": [
+   "anger",
+   "fear",
+   "sadness",
+   "vulnerability"
+  ]
+ },
+ "6420658c9180e3f4": {
+  "description": "Korean-American junior detective and Reid's partner; the squad's conscience, she is the first to notice Reid crossing lines he used to enforce, and the last one still hoping she's wrong about him",
+  "aliases": [],
+  "emotions": [
+   "anger",
+   "fear",
+   "joy",
+   "sadness",
+   "surprise",
+   "vulnerability"
+  ]
+ },
+ "5de524aface651b7": {
+  "description": "a paralegal and the older sister of a man wrongly implicated by circumstantial evidence in the killings; she fights the department publicly to clear her brother's name, unaware her brother was chosen as a deliberate distraction by the real killer",
+  "aliases": [],
+  "emotions": [
+   "anger",
+   "fear",
+   "joy",
+   "sadness",
+   "surprise",
+   "vulnerability"
+  ]
+ },
+ "0aeb8462dae8ad0f": {
+  "description": "Reid's wife, a Japanese-American schoolteacher; she watches the husband she married disappear into case files and silence, and drives the season's slow-burn marriage-collapse thread from the home front",
+  "aliases": [],
+  "emotions": [
+   "anger",
+   "fear",
+   "sadness",
+   "surprise",
+   "vulnerability"
+  ]
+ },
+ "021e15d46235b387": {
+  "description": "Detective Marcus Reid, the city's most decorated investigator, targeted directly by the killer's letters; his growing obsession with 'winning' the game corrodes his marriage, his ethics, and his partnership with Det. Park — he does not yet grasp how much of his own hunt has been designed for him",
+  "aliases": [],
+  "emotions": [
+   "anger",
+   "fear",
+   "joy",
+   "love",
+   "sadness",
+   "surprise",
+   "vulnerability"
+  ]
+ },
+ "096b4cb3059464f4": {
+  "description": "a former linguistics professor of Chinese immigrant background, now an eccentric serial killer who signs his work with cryptic ciphers addressed personally to Reid; he believes he is not committing murders but composing a single, unfinished 'work' — and quietly building Reid into its final brushstroke",
+  "aliases": [],
+  "emotions": [
+   "joy",
+   "love",
+   "vulnerability"
+  ]
+ },
+ "ec6376a021e2bcb7": {
+  "description": "The unseen voice that has seized control of the sedan's onboard systems, issuing tasks through its speakers all night; her real name and face stay hidden from everyone in the car. Knows exactly why Marcus and Elias are both riding together tonight — what she doesn't know is how far either man will go once cornered.",
+  "aliases": [],
+  "emotions": [
+   "anger",
+   "fear",
+   "joy",
+   "love",
+   "vulnerability"
+  ]
+ },
+ "d51b726c92cee02f": {
+  "description": "Dispatcher at Crestline Chauffeur Service and Marcus's oldest friend on the fleet; spends the night watching his GPS ping do things no ordinary route ever does. Doesn't know Marcus's connection to Harrow — only that he's never once wanted to talk about the years before he started driving.",
+  "aliases": [],
+  "emotions": [
+   "anger",
+   "fear",
+   "joy",
+   "surprise",
+   "vulnerability"
+  ]
+ },
+ "dbcd7da2957c4527": {
+  "description": "Cybercrimes detective who immigrated from Chengdu as a child; picks up the sedan's hijacked signal almost by accident and becomes the only official trying to stop the night before it ends in fire. Knows the intrusion is sophisticated and personal — doesn't yet know it's rooted in a decade-old warehouse collapse.",
+  "aliases": [],
+  "emotions": [
+   "anger",
+   "fear",
+   "surprise"
+  ]
+ },
+ "0c0b08889f5f093f": {
+  "description": "CEO of Vance Development, who immigrated from Beijing as a young engineer and built an empire on riverside redevelopment; tonight he's injured and trapped in the back of his own hired car. Believes his driver is just hired help who knows nothing about Harrow — has no idea how wrong he is.",
+  "aliases": [],
+  "emotions": [
+   "anger",
+   "fear",
+   "sadness",
+   "surprise",
+   "vulnerability"
+  ]
+ },
+ "945d4fd5a7c18ec8": {
+  "description": "Chauffeur for Crestline Chauffeur Service, an ex-construction worker who drives for a living because it lets him stay invisible; he's spent a decade burying what really happened the night Harrow Warehouse came down. Doesn't know how much the man in his back seat or the voice on the dashboard already know about that night.",
+  "aliases": [],
+  "emotions": [
+   "anger",
+   "fear",
+   "sadness",
+   "surprise",
+   "vulnerability"
+  ]
+ },
+ "720b4de70aea1aa0": {
+  "description": "Retired night watchman who still keeps vigil at the fenced-off ruin of Harrow Warehouse, where someone he loved died in the collapse years ago; the one person who remembers the disaster exactly as it happened. Believes he's the only one left who still cares what really happened at Harrow — has no idea how close it's about to come back.",
+  "aliases": [],
+  "emotions": [
+   "anger",
+   "fear",
+   "love",
+   "sadness",
+   "surprise",
+   "vulnerability"
+  ]
+ },
+ "095a07e50d591465": {
+  "description": "the precinct captain, a first-generation immigrant who rose through the ranks and mentored Elias personally; torn between institutional loyalty and a mounting suspicion that his best detective is compromised",
+  "aliases": [],
+  "emotions": [
+   "anger",
+   "sadness",
+   "surprise",
+   "vulnerability"
+  ]
+ },
+ "cf775108b22810f4": {
+  "description": "a brilliant homicide detective drawn into a killer's psychological game; his hunger to win it slowly erodes his own ethics, and he does not see how far he has already fallen",
+  "aliases": [],
+  "emotions": [
+   "anger",
+   "fear",
+   "joy",
+   "love",
+   "sadness",
+   "surprise",
+   "vulnerability"
+  ]
+ },
+ "4c466a2fe52ebb65": {
+  "description": "a Beijing-born grocery store owner whose ordinary life is destroyed when the killer's planted evidence and Elias's tunnel vision make him the season's convenient suspect",
+  "aliases": [],
+  "emotions": [
+   "anger",
+   "fear",
+   "joy",
+   "love",
+   "sadness",
+   "surprise",
+   "vulnerability"
+  ]
+ },
+ "8dc28b2b265ae89b": {
+  "description": "Elias's wife, a Korean-born family therapist who emigrated in her twenties; she senses her husband disappearing into the case but misreads the distance as infidelity rather than obsession",
+  "aliases": [],
+  "emotions": [
+   "anger",
+   "fear",
+   "joy",
+   "sadness",
+   "surprise",
+   "vulnerability"
+  ]
+ },
+ "1c9b157fc0312342": {
+  "description": "Elias's young partner, raised in a Chinese immigrant household; she idolizes him at first and is the first to notice the small procedural lies he tells himself",
+  "aliases": [],
+  "emotions": [
+   "anger",
+   "fear",
+   "joy",
+   "sadness",
+   "surprise",
+   "vulnerability"
+  ]
+ },
+ "557e506b1963975b": {
+  "description": "an elderly antiquarian bookshop owner, an immigrant scholar with a decades-old grievance no one else knows about; the killer, though nothing in his public manner suggests it",
+  "aliases": [],
+  "emotions": [
+   "anger",
+   "fear",
+   "joy",
+   "love",
+   "sadness",
+   "surprise",
+   "vulnerability"
+  ]
+ }
+}

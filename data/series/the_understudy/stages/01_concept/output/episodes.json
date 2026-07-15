@@ -1,0 +1,2326 @@
+{
+  "series_title": "The Understudy",
+  "language": "English",
+  "mode": "drama",
+  "template": "soap_opera",
+  "writer_persona": "a showrunner for character-driven, relationship-first serial psychological thriller, blending obsessive-procedural tension with soap-opera domestic fallout, in the vein of prestige ensemble TV",
+  "style_guidelines": [
+    "Every scene should feel like it's overheard, not narrated at — let dialogue carry subtext instead of characters stating their feelings outright.",
+    "The killer's clues should read as genuinely clever and unsettling, never as lazy riddles solved by convenient leaps of logic.",
+    "Domestic scenes (the Vance marriage) deserve the same craft and stakes as procedural scenes — a quiet dinner-table silence can carry as much dread as a crime scene.",
+    "Let institutional politics (captain, partner, precinct) breathe as their own texture — bureaucracy, favors, and reputations matter as much as the case itself.",
+    "Escalate psychological unease gradually: Elias's moral compromises should feel like small, justifiable steps at the time, only clearly damning in hindsight.",
+    "Never let a character's dialogue reveal knowledge that belongs to another character's private thread — misunderstandings must arise honestly from what each person actually knows."
+  ],
+  "voices": {
+    "NARRATOR": {
+      "voice": "Ryan",
+      "default_style": "calm, measured, a step removed from the action",
+      "description": "the show's narrator — orients the listener at the start of every scene (who, where, when), never a character in the story"
+    },
+    "ELIAS_VANCE": {
+      "voice": "Aiden",
+      "default_style": "sharp, controlled, a detective's precision fraying at the edges under obsession",
+      "description": "a brilliant homicide detective drawn into a killer's psychological game; his hunger to win it slowly erodes his own ethics, and he does not see how far he has already fallen"
+    },
+    "MIRA_VANCE": {
+      "voice": "Sohee",
+      "default_style": "warm but increasingly guarded, speaks slow and deliberate, very clear English",
+      "description": "Elias's wife, a Korean-born family therapist who emigrated in her twenties; she senses her husband disappearing into the case but misreads the distance as infidelity rather than obsession"
+    },
+    "CAPTAIN_ZHOU": {
+      "voice": "Eric",
+      "default_style": "gruff authority softened by genuine affection for his protégé, speaks clear and unhurried English",
+      "description": "the precinct captain, a first-generation immigrant who rose through the ranks and mentored Elias personally; torn between institutional loyalty and a mounting suspicion that his best detective is compromised"
+    },
+    "PARTNER_LIN": {
+      "voice": "Vivian",
+      "default_style": "eager, quick-tongued, gradually curdling into wary suspicion",
+      "description": "Elias's young partner, raised in a Chinese immigrant household; she idolizes him at first and is the first to notice the small procedural lies he tells himself"
+    },
+    "SIMON_BORU": {
+      "voice": "Uncle_Fu",
+      "default_style": "soft-spoken, unhurried, courteous in a way that never quite feels safe",
+      "description": "an elderly antiquarian bookshop owner, an immigrant scholar with a decades-old grievance no one else knows about; the killer, though nothing in his public manner suggests it"
+    },
+    "HAN_MEI": {
+      "voice": "Dylan",
+      "default_style": "proud, plainspoken, increasingly frightened and defiant",
+      "description": "a Beijing-born grocery store owner whose ordinary life is destroyed when the killer's planted evidence and Elias's tunnel vision make him the season's convenient suspect"
+    }
+  },
+  "locations": {
+    "PRECINCT": {
+      "name": "Ninth District Precinct",
+      "description": "a fluorescent-lit bullpen choked with corkboards, red string, and coffee-stained case files under a permanent hum of overworked ceiling fans"
+    },
+    "VANCE_HOME": {
+      "name": "The Vance House",
+      "description": "a warm suburban home slowly going cold — family photographs on every wall, one side of the bed increasingly, conspicuously undisturbed"
+    },
+    "BOOKSHOP": {
+      "name": "Boru's Rare Books",
+      "description": "a cramped antiquarian bookshop thick with dust and lamplight, shelves leaning close overhead, and a locked back room no customer has ever seen"
+    },
+    "DOCKS": {
+      "name": "The Tannery Docks",
+      "description": "a rusted industrial waterfront wrapped in river fog, shipping containers stacked like a maze, chosen again and again as the killer's stage"
+    },
+    "DINER": {
+      "name": "Ruby's All-Night Diner",
+      "description": "a neon-lit 24-hour diner with cracked red vinyl booths, the one place detectives go to say what they can't say at the precinct"
+    },
+    "HAN_GROCERY": {
+      "name": "Han's Grocery",
+      "description": "a small, warmly lit corner grocery with family photos taped behind the register, its windows increasingly marked by graffiti as suspicion spreads"
+    }
+  },
+  "format": {
+    "parts_per_section": 1,
+    "words_per_part_target": "300 to 500",
+    "words_per_part_min": 250,
+    "words_per_part_max": 550
+  },
+  "generation": {
+    "model": "claude-sonnet-5",
+    "use_beats": false
+  },
+  "audio": {
+    "backend": "rest",
+    "api_url": "http://127.0.0.1:42003",
+    "chunk_concurrency": 40,
+    "default_style": "Speak clearly and with dramatic weight",
+    "target_lufs": -16.0,
+    "pause_between_chunks_ms": 250,
+    "pause_between_lines_ms": 700,
+    "pause_between_parts_ms": 3000,
+    "pause_between_episodes_ms": 6000,
+    "merge_anthology": false
+  },
+  "output_prefix": "ep",
+  "series_intro": "In a city where the fog off the docks never quite lifts, a brilliant detective receives a postcard with no return address — a single line of verse, and a promise that more will follow. What begins as an irresistible intellectual challenge becomes something else entirely: a season-long descent in which the hunter forgets, one compromise at a time, that he was never the one setting the terms of the game.",
+  "series_outro": "The killer's true design comes fully into the light — a masterwork completed not by his own hand, but by the detective he spent months quietly shaping into an instrument. What remains afterward is left deliberately unresolved: a marriage too damaged to say for certain whether it survives, a precinct that must decide what to do with a detective it can no longer fully trust, and a wrongly accused man whose name is cleared on paper long before it is cleared in the eyes of his neighbors.",
+  "episodes": [
+    {
+      "figure": "The First Postcard",
+      "theme": "Elias receives the killer's first cryptic clue and is instantly captivated by the intellectual challenge, while Mira quietly notes the first cracks in his attention at home and Han's grocery is glimpsed as unremarkable background about to be anything but (The Puppeteer's Game and The Vance Marriage both begin, no resolution yet).",
+      "intro_note": "",
+      "outro_note": "Alone at his desk long after the bullpen empties, Elias finally cracks the verse's hidden reference — and feels an unwelcome chill at how precisely it was built to lead him, and only him, exactly here.",
+      "sections": [
+        "Cold Open: A Body at the Tannery Docks (The Puppeteer's Game begins)",
+        "Precinct Briefing: Zhou Assigns the Docks Case to Elias and Lin (The Puppeteer's Game)",
+        "The Postcard Arrives, Addressed to Elias by Name (The Puppeteer's Game)",
+        "Vance Home, Morning: Mira Notices Elias Somewhere Else Already (The Vance Marriage)",
+        "Ruby's Diner: Elias and Lin Trade First Theories Over Coffee (The Puppeteer's Game)",
+        "Precinct: Elias Reads the Postcard's Verse Alone, Says Little (The Puppeteer's Game)",
+        "Boru's Rare Books: Elias Chases the Verse's First Reference (The Puppeteer's Game)",
+        "Boru's Rare Books: A Courteous Old Bookseller and an Unplaceable Unease (The Puppeteer's Game)",
+        "Han's Grocery: An Ordinary Afternoon, Soon to Be Anything But (Unremarkable Background)",
+        "Vance Home, Dinner: Elias Distracted, Mira Watching (The Vance Marriage)",
+        "Precinct: Lin Notices the Silence but Lets It Go (The Puppeteer's Game)",
+        "The Tannery Docks, Alone at Night: Elias Walks the Scene Again (The Puppeteer's Game)",
+        "Vance Home: Mira Calls Her Sister, Unable to Name What's Wrong (The Vance Marriage)",
+        "Precinct: Captain Zhou Clocks Elias's Late Hours (The Puppeteer's Game)",
+        "Boru's Rare Books, After Closing: A Small, Private Ritual (The Puppeteer's Game)",
+        "Vance Home, Late: A Brittle Exchange at the Door (The Vance Marriage)",
+        "Precinct, Past Midnight: Elias Cracks the First Layer — and Feels Watched (The Puppeteer's Game)"
+      ],
+      "section_words": [
+        {
+          "min": 130,
+          "max": 200,
+          "target": "140 to 170"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 140,
+          "max": 210,
+          "target": "150 to 180"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "section_locations": [
+        "DOCKS",
+        "PRECINCT",
+        "PRECINCT",
+        "VANCE_HOME",
+        "DINER",
+        "PRECINCT",
+        "BOOKSHOP",
+        "BOOKSHOP",
+        "HAN_GROCERY",
+        "VANCE_HOME",
+        "PRECINCT",
+        "DOCKS",
+        "VANCE_HOME",
+        "PRECINCT",
+        "BOOKSHOP",
+        "VANCE_HOME",
+        "PRECINCT"
+      ],
+      "case": [
+        {
+          "label": "The Puppeteer's Game",
+          "solution": "Simon Boru, the quiet antiquarian bookseller Elias has come to trust as a source on obscure texts, is the killer behind the postcards and the Tannery Docks murders. Decades ago, Boru's son died in prison after a wrongful conviction that the department — including Elias's own mentor — quietly let stand rather than reopen an inconvenient case; Boru has spent years since planning not merely a string of murders but a slow, deliberate remaking of a brilliant detective into someone capable of the same moral trespasses the system committed against him. Every clue is engineered to flatter Elias's intellect while nudging him toward cutting corners, and the final 'masterwork' Boru intends is not a murder he commits himself, but one he maneuvers Elias into committing.",
+          "objective_facts": [
+            "A body was found at the Tannery Docks with a hand-delivered postcard addressed personally to Detective Elias Vance left at the scene.",
+            "The postcard contains a single line of verse and no return address, and forensics finds no usable prints or fibers on it.",
+            "Simon Boru's late son, Daniel Boru, died in state custody nine years ago following a conviction Simon has never publicly disputed.",
+            "Every clue left by the killer references an obscure text that can be sourced to stock once carried by Boru's Rare Books."
+          ],
+          "character_knowledge": {
+            "ELIAS_VANCE": {
+              "knows": [
+                "The postcard was addressed to him by name and left deliberately at a fresh crime scene",
+                "The verse on the postcard references an obscure text he doesn't yet recognize"
+              ],
+              "hides": [
+                "That the postcard was addressed to him personally — he hasn't told Captain Zhou, wanting to solve it before it becomes 'his' case in a way that invites oversight"
+              ],
+              "believes_falsely": [
+                "That the postcard is simply an unusually bold piece of evidence left by an attention-seeking killer, rather than a message engineered specifically to draw him into a private contest"
+              ]
+            },
+            "PARTNER_LIN": {
+              "knows": [
+                "A cryptic postcard addressed to Elias personally was recovered from the scene and logged as evidence"
+              ],
+              "hides": [
+                "Her mild reluctance to press Elias on why he's keeping the postcard's full wording to himself, not wanting to seem like she's overstepping this early in their partnership"
+              ],
+              "believes_falsely": [
+                "That Elias is simply being thorough by keeping his notes close, not that he's already begun working the case alone in ways he won't share"
+              ]
+            },
+            "SIMON_BORU": {
+              "knows": [
+                "Every detail of the postcard's verse, and exactly which obscure text it points to, because he chose and placed it himself"
+              ],
+              "hides": [
+                "That he is the author of the postcard and the murder, presenting himself to Elias as nothing more than a helpful bookseller"
+              ],
+              "believes_falsely": [
+                "That grooming Elias into someone capable of his own trespasses will finally quiet his own grief — a certainty his meticulous planning has never actually tested"
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Vance Marriage",
+          "solution": "There is no affair. Elias's growing distance from Mira is entirely the product of the killer's private game consuming his attention and his nights; he keeps it from her not out of guilt over infidelity but out of a mistaken belief that shielding her from the case protects their marriage, and that silence reads to Mira as exactly the kind of guilt he isn't feeling.",
+          "objective_facts": [
+            "Elias has not discussed the postcard, the verse, or any detail of the killer's contact with Mira.",
+            "Elias has stayed at the precinct or driven to the docks alone on multiple nights this week without telling Mira where he was.",
+            "Mira has noticed Elias checking his phone and stepping out of rooms to take calls he doesn't explain."
+          ],
+          "character_knowledge": {
+            "ELIAS_VANCE": {
+              "knows": [
+                "He is not being unfaithful to Mira",
+                "He has been staying away from home later than usual because of the case"
+              ],
+              "hides": [
+                "The existence and contents of the postcard, and how much time he's spending chasing it alone, because he tells himself she has enough to carry with her own patients"
+              ],
+              "believes_falsely": [
+                "That keeping Mira in the dark is protecting her, when in fact the silence itself is what's frightening her"
+              ]
+            },
+            "MIRA_VANCE": {
+              "knows": [
+                "Elias has been distant, secretive about his phone, and out at odd hours without explanation"
+              ],
+              "hides": [
+                "Her growing unease from Elias directly, choosing to watch and wait rather than confront him outright"
+              ],
+              "believes_falsely": [
+                "That the pattern of secrecy and distance most likely points to another woman, since Elias has never shut her out like this over a case before"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "Reading Between the Lines",
+      "theme": "Elias cracks the hidden meaning of the first clue and chooses to keep the killer's game as a private obsession rather than share it with his partner, while Mira notices he has started keeping secrets that have nothing to do with paperwork (The Puppeteer's Game escalates, The Vance Marriage strain deepens).",
+      "intro_note": "Elias closes out his first night having cracked the postcard's opening reference, unsettled by how deliberately it seemed aimed at him — a feeling he tells no one, not even Mira, who has already begun to notice the distance opening between them.",
+      "outro_note": "The next volume Boru presses into his hands falls open, unprompted, to a page already worn soft at exactly the passage Elias needs — and for one unguarded second he wonders how a stranger's bookshop could possibly know his mind that well, before he shakes the thought off, buttons his coat, and heads out into the fog toward whatever the docks are about to show him.",
+      "sections": [
+        "Precinct: Elias Shares Half the Decoded Reference with Lin (The Puppeteer's Game)",
+        "Boru's Rare Books: Elias Returns to Chase the Next Layer (The Puppeteer's Game)",
+        "The Tannery Docks: A Second Staged Tableau, No Body Yet (The Puppeteer's Game)",
+        "Precinct Briefing: Zhou Questions Where the New Lead Came From (The Puppeteer's Game)",
+        "Vance Home, Morning: Mira Asks Directly Where He's Been (The Vance Marriage)",
+        "Ruby's Diner: Lin Presses, Gently, for the Postcard's Full Text (The Puppeteer's Game)",
+        "Precinct: Elias Chooses What Stays Out of the Official File (The Puppeteer's Game)",
+        "Vance Home: Mira Finds a Note That Isn't in Elias's Handwriting (The Vance Marriage)",
+        "Boru's Rare Books: A Second 'Recommendation' Meant to Guide Him (The Puppeteer's Game)",
+        "Precinct: Lin Spots a Gap in Elias's Timeline (The Puppeteer's Game)",
+        "Vance Home, Late Again: A Brittle Goodnight (The Vance Marriage)",
+        "The Tannery Docks, Alone: Elias Crosses a Small Procedural Line (The Puppeteer's Game)",
+        "Precinct: Zhou Catches It, and Lets It Go — For Now (The Puppeteer's Game)",
+        "Ruby's Diner: Lin Confides Her Unease to a Fellow Officer (The Puppeteer's Game)",
+        "Vance Home: Mira Decides to Finally Say Something to Someone (The Vance Marriage)",
+        "Precinct, Night: A Book Falls Open to Exactly the Right Page (The Puppeteer's Game)"
+      ],
+      "section_words": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 150,
+          "max": 220,
+          "target": "160 to 190"
+        },
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "section_locations": [
+        "PRECINCT",
+        "BOOKSHOP",
+        "DOCKS",
+        "PRECINCT",
+        "VANCE_HOME",
+        "DINER",
+        "PRECINCT",
+        "VANCE_HOME",
+        "BOOKSHOP",
+        "PRECINCT",
+        "VANCE_HOME",
+        "DOCKS",
+        "PRECINCT",
+        "DINER",
+        "VANCE_HOME",
+        "PRECINCT"
+      ],
+      "case": [
+        {
+          "label": "The Puppeteer's Game",
+          "solution": "Simon Boru, the quiet antiquarian bookseller Elias has come to trust as a source on obscure texts, is the killer behind the postcards and the Tannery Docks murders. Decades ago, Boru's son died in prison after a wrongful conviction that the department — including Elias's own mentor — quietly let stand rather than reopen an inconvenient case; Boru has spent years since planning not merely a string of murders but a slow, deliberate remaking of a brilliant detective into someone capable of the same moral trespasses the system committed against him. Every clue is engineered to flatter Elias's intellect while nudging him toward cutting corners, and the final 'masterwork' Boru intends is not a murder he commits himself, but one he maneuvers Elias into committing.",
+          "objective_facts": [
+            "A body was found at the Tannery Docks with a hand-delivered postcard addressed personally to Detective Elias Vance left at the scene.",
+            "The postcard contains a single line of verse and no return address, and forensics finds no usable prints or fibers on it.",
+            "Simon Boru's late son, Daniel Boru, died in state custody nine years ago following a conviction Simon has never publicly disputed.",
+            "Every clue left by the killer references an obscure text that can be sourced to stock once carried by Boru's Rare Books."
+          ],
+          "character_knowledge": {
+            "ELIAS_VANCE": {
+              "knows": [
+                "The verse's reference led him to a specific rare edition that only a handful of shops in the city would stock",
+                "A second cryptic recommendation from Boru has pointed him toward the next layer of the game, though he doesn't yet suspect Boru himself"
+              ],
+              "hides": [
+                "That he deliberately left the postcard's full text out of the official case file, telling himself he'll add it later once he's solved more of it himself"
+              ],
+              "believes_falsely": [
+                "That declining to share the full clue with Lin and Zhou is a temporary, harmless delay rather than the first real breach of protocol"
+              ]
+            },
+            "PARTNER_LIN": {
+              "knows": [
+                "The case timeline Elias filed doesn't quite match what she remembers him saying about his whereabouts one of the nights"
+              ],
+              "hides": [
+                "Her discovery of the discrepancy, deciding to watch a little longer before raising it with him or Zhou"
+              ],
+              "believes_falsely": [
+                "That the gap in his timeline is a simple clerical error, not a sign he's working an angle without her"
+              ]
+            },
+            "SIMON_BORU": {
+              "knows": [
+                "Exactly which second text will draw Elias one layer deeper, and that Elias still has no idea the recommendation came from anything but a helpful bookseller's memory"
+              ],
+              "hides": [
+                "His visible pleasure at how precisely Elias is following the path he's laid, masking it as simple professional courtesy"
+              ],
+              "believes_falsely": [
+                "That his careful pacing leaves no room for anyone at the precinct to notice what's happening before it's too late — a confidence his own eagerness is already starting to strain"
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Vance Marriage",
+          "solution": "There is no affair. Elias's growing distance from Mira is entirely the product of the killer's private game consuming his attention and his nights; he keeps it from her not out of guilt over infidelity but out of a mistaken belief that shielding her from the case protects their marriage, and that silence reads to Mira as exactly the kind of guilt he isn't feeling.",
+          "objective_facts": [
+            "Elias has not discussed the postcard, the verse, or any detail of the killer's contact with Mira.",
+            "Elias has stayed at the precinct or driven to the docks alone on multiple nights this week without telling Mira where he was.",
+            "Mira has noticed Elias checking his phone and stepping out of rooms to take calls he doesn't explain."
+          ],
+          "character_knowledge": {
+            "ELIAS_VANCE": {
+              "knows": [
+                "Mira asked directly where he'd been two nights this week and he gave her a half-true answer about paperwork"
+              ],
+              "hides": [
+                "That his answer to her question left out the drive to the docks entirely"
+              ],
+              "believes_falsely": [
+                "That a half-truth to protect her focus is not really the same as a lie"
+              ]
+            },
+            "MIRA_VANCE": {
+              "knows": [
+                "Elias gave her a vague, incomplete answer when she asked where he'd been"
+              ],
+              "hides": [
+                "That she's begun mentally cataloguing inconsistencies in his account, rather than raising them with him directly"
+              ],
+              "believes_falsely": [
+                "That his vagueness is the careful evasiveness of someone protecting an affair, not someone protecting a case he thinks he's shielding her from"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "A Little Circumstantial",
+      "theme": "A second clue leads the investigation toward Han's grocery store, and Elias's eagerness to chase the connection plants the season's first seed of a wrongful suspicion (The Puppeteer's Game advances, The Frame is introduced).",
+      "intro_note": "The uncanny ease of that borrowed book still nags at him, but Elias buries the thought under the pull of the case — and when a matchbook from a quiet neighborhood grocery turns up near the docks, he follows the thread without once asking why it was left somewhere so easy to find.",
+      "outro_note": "Over Lin's objections and without Han's alibi ever properly checked, Elias walks into Zhou's office and asks for a warrant — certain, for the first time in the case, that he's finally ahead of the game, when every version of that certainty so far has belonged to someone else.",
+      "sections": [
+        "The Tannery Docks: A Matchbook and a Receipt Turn Up at the Scene (The Puppeteer's Game / The Frame begins)",
+        "Precinct: Zhou Sends Elias and Lin Toward Han's Grocery (The Frame)",
+        "Han's Grocery: An Ordinary Morning, Family Photos Behind the Register (The Frame)",
+        "Precinct: Elias Feels the Pull of a Lead He Can Finally Close (The Frame)",
+        "Boru's Rare Books: Another Reference, Another Step Closer (The Puppeteer's Game)",
+        "Vance Home, Morning: Mira Quietly Checks What She Shouldn't (The Vance Marriage)",
+        "Han's Grocery: Elias and Lin Question a Nervous, Cooperative Han (The Frame)",
+        "Ruby's Diner: Lin Says Out Loud How Thin the Evidence Really Is (The Frame)",
+        "Precinct: Elias Overrides Her Doubt with His Gut (The Frame)",
+        "Han's Grocery, After Hours: Han Tells His Family He's Scared (The Frame)",
+        "Vance Home: Mira Finds the Note Again — and Decides What It Means (The Vance Marriage)",
+        "Precinct: Zhou Asks, Directly, for the Full Case File (The Puppeteer's Game)",
+        "Precinct: Elias Leaves Out What the Postcard Really Says (The Puppeteer's Game)",
+        "The Tannery Docks: Elias Re-Examines the Evidence and Suppresses a Doubt (The Frame)",
+        "Boru's Rare Books, After Closing: Something Put Away, Carefully (The Puppeteer's Game)",
+        "Han's Grocery: The First Graffiti Appears on the Window (The Frame)",
+        "Precinct: Elias Pushes Zhou for a Warrant on Han (The Frame — cliffhanger)"
+      ],
+      "section_words": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 140,
+          "max": 210,
+          "target": "150 to 180"
+        },
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 120,
+          "max": 190,
+          "target": "130 to 160"
+        },
+        null
+      ],
+      "section_locations": [
+        "DOCKS",
+        "PRECINCT",
+        "HAN_GROCERY",
+        "PRECINCT",
+        "BOOKSHOP",
+        "VANCE_HOME",
+        "HAN_GROCERY",
+        "DINER",
+        "PRECINCT",
+        "HAN_GROCERY",
+        "VANCE_HOME",
+        "PRECINCT",
+        "PRECINCT",
+        "DOCKS",
+        "BOOKSHOP",
+        "HAN_GROCERY",
+        "PRECINCT"
+      ],
+      "case": [
+        {
+          "label": "The Puppeteer's Game",
+          "solution": "Simon Boru, the quiet antiquarian bookseller Elias has come to trust as a source on obscure texts, is the killer behind the postcards and the Tannery Docks murders. Decades ago, Boru's son died in prison after a wrongful conviction that the department — including Elias's own mentor — quietly let stand rather than reopen an inconvenient case; Boru has spent years since planning not merely a string of murders but a slow, deliberate remaking of a brilliant detective into someone capable of the same moral trespasses the system committed against him. Every clue is engineered to flatter Elias's intellect while nudging him toward cutting corners, and the final 'masterwork' Boru intends is not a murder he commits himself, but one he maneuvers Elias into committing.",
+          "objective_facts": [
+            "A body was found at the Tannery Docks with a hand-delivered postcard addressed personally to Detective Elias Vance left at the scene.",
+            "The postcard contains a single line of verse and no return address, and forensics finds no usable prints or fibers on it.",
+            "Simon Boru's late son, Daniel Boru, died in state custody nine years ago following a conviction Simon has never publicly disputed.",
+            "Every clue left by the killer references an obscure text that can be sourced to stock once carried by Boru's Rare Books."
+          ],
+          "character_knowledge": {
+            "ELIAS_VANCE": {
+              "knows": [
+                "The new clue's phrasing points, with just enough ambiguity to feel like his own deduction, toward Han's Grocery and its surrounding block"
+              ],
+              "hides": [
+                "That part of his confidence in the Han lead comes from wanting a concrete win to justify the hours he's sunk into the case alone"
+              ],
+              "believes_falsely": [
+                "That his read on the clue is purely his own analytical leap, not a path deliberately narrow enough to only lead one direction"
+              ]
+            },
+            "PARTNER_LIN": {
+              "knows": [
+                "The physical evidence tying the docks to Han's Grocery is thin — a matchbook and a receipt, nothing placing Han at the scene itself"
+              ],
+              "hides": [
+                "Her doubt about the strength of the case, choosing not to escalate it past a passing comment over coffee"
+              ],
+              "believes_falsely": [
+                "That Elias's instincts, which have been right before, are probably right here too, even though the evidence itself doesn't yet support it"
+              ]
+            },
+            "SIMON_BORU": {
+              "knows": [
+                "That the matchbook and receipt placing suspicion on Han's Grocery were planted by his own hand, chosen because an ordinary grocer makes a far more convincing 'solvable' answer than the truth"
+              ],
+              "hides": [
+                "That the entire Han lead exists only because he manufactured it, letting Elias believe he found it himself"
+              ],
+              "believes_falsely": [
+                "That sacrificing an innocent man's reputation is simply the price of the larger design, a cost he's stopped letting himself weigh"
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Vance Marriage",
+          "solution": "There is no affair. Elias's growing distance from Mira is entirely the product of the killer's private game consuming his attention and his nights; he keeps it from her not out of guilt over infidelity but out of a mistaken belief that shielding her from the case protects their marriage, and that silence reads to Mira as exactly the kind of guilt he isn't feeling.",
+          "objective_facts": [
+            "Elias has not discussed the postcard, the verse, or any detail of the killer's contact with Mira.",
+            "Elias has stayed at the precinct or driven to the docks alone on multiple nights this week without telling Mira where he was.",
+            "Mira has noticed Elias checking his phone and stepping out of rooms to take calls he doesn't explain."
+          ],
+          "character_knowledge": {
+            "ELIAS_VANCE": {
+              "knows": [
+                "Mira has started asking more pointed questions and going quiet in a way that isn't like her"
+              ],
+              "hides": [
+                "That he still hasn't told her anything true about the postcard, even as her suspicion visibly grows"
+              ],
+              "believes_falsely": [
+                "That her cooling toward him is just stress from her own patients, not distrust aimed squarely at him"
+              ]
+            },
+            "MIRA_VANCE": {
+              "knows": [
+                "She's found a folded note in his coat pocket with handwriting that isn't his, referencing something cryptic she doesn't understand"
+              ],
+              "hides": [
+                "That she's held onto the note without confronting him, waiting to see if he'll mention it himself"
+              ],
+              "believes_falsely": [
+                "That the note is proof of a person he's been meeting in secret, when it is in fact the killer's clue, not a lover's"
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Frame",
+          "solution": "Han Mei is entirely innocent. The matchbook and receipt tying him to the Tannery Docks were planted by Simon Boru specifically because an ordinary, hardworking grocer with no real connection to the murders makes a far more convincing scapegoat than the truth — and because feeding Elias a lead he believes he found himself is the next step in eroding his judgment. Han's own nervousness during questioning, born of an old, unrelated brush with immigration paperwork trouble years ago, reads to Elias as guilt rather than fear.",
+          "objective_facts": [
+            "A matchbook from Han's Grocery and a receipt bearing Han's handwriting were recovered near the Tannery Docks crime scene.",
+            "Neither item places Han Mei physically at the docks at the time of the murder.",
+            "Han Mei has no criminal record and a documented alibi for at least one of the nights in question that has not yet been seriously checked.",
+            "Han Mei had a minor, unrelated immigration paperwork issue years ago that he has never disclosed to police out of fear it will be used against him."
+          ],
+          "character_knowledge": {
+            "ELIAS_VANCE": {
+              "knows": [
+                "A matchbook and receipt tied to Han's Grocery were found near the docks",
+                "Han grew visibly nervous and evasive under questioning"
+              ],
+              "hides": [
+                "That he hasn't yet seriously pursued Han's alibi for the night in question, because doing so risks undercutting the lead he wants to be true"
+              ],
+              "believes_falsely": [
+                "That Han's nervousness is a sign of guilt about the murders, when it's actually fear rooted in something unrelated and years old"
+              ]
+            },
+            "PARTNER_LIN": {
+              "knows": [
+                "The physical evidence against Han is circumstantial and thin",
+                "Han's alibi hasn't actually been checked yet"
+              ],
+              "hides": [
+                "Her growing unease about pursuing Han this hard on this little evidence, not wanting to contradict Elias in front of Zhou"
+              ],
+              "believes_falsely": [
+                "That there's probably something more solid backing Elias's certainty that simply hasn't made it into the file yet"
+              ]
+            },
+            "HAN_MEI": {
+              "knows": [
+                "He has never been to the Tannery Docks and has no idea why his matchbook or receipt would turn up there",
+                "He has a solid alibi for the night in question that no one has asked him for in detail"
+              ],
+              "hides": [
+                "His old immigration paperwork trouble from years back, afraid that admitting to it will make him look even more suspicious"
+              ],
+              "believes_falsely": [
+                "That simply telling the truth about not knowing anything will be enough to clear him quickly, not realizing how his fear-driven evasiveness reads as guilt"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "Rules Are for Other Cases",
+      "theme": "Elias bends procedure to keep pace with the killer's timetable, drawing Captain Zhou's first quiet concern while the case against an increasingly cornered Han hardens without real proof (The Puppeteer's Game, The Frame, institutional doubt all escalate together).",
+      "intro_note": "The second clue led straight to Han's Grocery, and Elias, hungry for a lead, let suspicion outrun proof. Now the investigation tightens around a man whose only crime may be convenience.",
+      "outro_note": "Elias gets his warrant. He has barely finished signing it when a new postcard arrives at the house, and its final line makes unmistakably clear that whoever is writing them was watching him fill out that very form.",
+      "sections": [
+        "Precinct Morning: The Board Fills In",
+        "Chasing the Second Clue",
+        "Zhou's Quiet Question",
+        "Business as Usual, For Now",
+        "A Pretext at the Counter",
+        "An Empty Chair at Dinner",
+        "What Elias Doesn't Say",
+        "The Bookseller's Courtesy",
+        "Research, Elias Calls It",
+        "Small Discrepancies",
+        "What Lin Won't Say Yet",
+        "Another Body, Another Clock",
+        "The Warrant Elias Wants",
+        "Zhou Signs Anyway",
+        "A Small Kindness, Refused",
+        "Paint on the Window",
+        "The Postcard That Knows Too Much"
+      ],
+      "section_words": [
+        null,
+        null,
+        {
+          "min": 130,
+          "max": 220,
+          "target": "150 to 190"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 100,
+          "max": 190,
+          "target": "120 to 150"
+        }
+      ],
+      "section_locations": [
+        "PRECINCT",
+        "PRECINCT",
+        "PRECINCT",
+        "HAN_GROCERY",
+        "HAN_GROCERY",
+        "VANCE_HOME",
+        "VANCE_HOME",
+        "BOOKSHOP",
+        "BOOKSHOP",
+        "PRECINCT",
+        "DINER",
+        "DOCKS",
+        "PRECINCT",
+        "PRECINCT",
+        "VANCE_HOME",
+        "HAN_GROCERY",
+        "VANCE_HOME"
+      ],
+      "case": [
+        {
+          "label": "The Puppeteer's Game",
+          "solution": "Simon Boru, whose son was killed years ago by a violent offender the justice system quietly failed to properly punish, has spent a year secretly studying Elias Vance before selecting him as the instrument of a private philosophical experiment: proof that even the most principled enforcer of justice can be turned, one small compromise at a time, into a killer himself. Boru is committing a series of staged murders, seeding each scene with cryptic literary clues drawn from rare antiquarian texts sold only through his own shop, deliberately calibrated to be solvable by a mind like Elias's and no other, while quietly manipulating physical evidence to implicate an innocent bystander. The endgame is not the killings themselves but the final act he intends to engineer: Elias, believing he is stopping or avenging something, will be maneuvered into killing Boru's true final target with his own hands, completing Boru's masterwork by someone else's conscience.",
+          "objective_facts": [
+            "Every clue left at a crime scene traces back to rare antiquarian volumes and restoration materials handled exclusively through Boru's shop.",
+            "Trace evidence at each scene bears a distinctive archival-grade paper and ink that Boru privately restores in his back room.",
+            "Boru cultivated an anonymous correspondence with Elias for nearly a year before the first postcard arrived, though Elias does not yet know this."
+          ],
+          "character_knowledge": {
+            "ELIAS_VANCE": {
+              "knows": [
+                "The second clue's physical trail leads to materials tied to a specific kind of antiquarian restoration work.",
+                "He has visited Boru's bookshop twice now under the pretext of case research."
+              ],
+              "hides": [
+                "He has told no one, not even Lin, the full extent of his private engagement with the killer's game.",
+                "He minimizes to himself how much procedure he has already bent to keep pace with the killer's timetable."
+              ],
+              "believes_falsely": [
+                "He believes he remains fully in control of the investigation and could end the private game on his own terms whenever he chooses."
+              ]
+            },
+            "PARTNER_LIN": {
+              "knows": [
+                "Elias has been filing reports late and skipping standard consultation with her on new leads."
+              ],
+              "hides": [
+                "She hasn't voiced her unease to Captain Zhou yet, telling herself she's being overly cautious."
+              ],
+              "believes_falsely": [
+                "She assumes Elias's new secrecy is about protecting a sensitive source, not a private obsession."
+              ]
+            },
+            "CAPTAIN_ZHOU": {
+              "knows": [
+                "Elias requested a records pull that doesn't fully match the official case file."
+              ],
+              "hides": [
+                "He hasn't reported this discrepancy up the chain, protecting Elias out of personal loyalty."
+              ],
+              "believes_falsely": [
+                "He believes this is a temporary lapse brought on by stress, not the start of a pattern."
+              ]
+            },
+            "SIMON_BORU": {
+              "knows": [
+                "He has engineered every clue Elias has solved so far, including the trail leading to his own shop, and watches Elias's visits with quiet satisfaction."
+              ],
+              "hides": [
+                "His true identity, his grievance, and the calculation behind his courteous manner, from everyone who knows him."
+              ],
+              "believes_falsely": [
+                "He believes Elias is now fully hooked and ready for the next phase of the game, underestimating how much Partner Lin's quiet suspicion could threaten his timetable."
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Vance Marriage",
+          "solution": "Elias is not unfaithful; he has retreated into a secretive, obsessive private engagement with the killer's game, hiding evidence and canceling plans out of shame at how deep his obsession runs, not out of any affair. Mira, met only with silence and no explanation, misreads the distance as betrayal.",
+          "objective_facts": [
+            "Elias has canceled several planned evenings with Mira over recent weeks, including a standing anniversary dinner reservation.",
+            "He has begun coming home smelling faintly of old paper and river air, with no explanation offered."
+          ],
+          "character_knowledge": {
+            "ELIAS_VANCE": {
+              "knows": [
+                "He has canceled plans and knows Mira is hurt by his absence and distraction."
+              ],
+              "hides": [
+                "He hides that his distraction is the killer's game, not another woman, because admitting the obsession feels more shameful to him than a suspected affair."
+              ],
+              "believes_falsely": [
+                "He believes keeping Mira away from case details is an act of protecting her, rather than an act of abandonment."
+              ]
+            },
+            "MIRA_VANCE": {
+              "knows": [
+                "Her husband is distant, guarded with his phone and his evenings, and has broken plans that once mattered to both of them."
+              ],
+              "hides": [
+                "She hasn't confronted him directly yet, choosing instead to quietly watch for more signs before saying anything."
+              ],
+              "believes_falsely": [
+                "She believes his secrecy points to an affair, since he offers no other explanation and refuses to discuss the case with her at all."
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Frame",
+          "solution": "Han Mei is entirely innocent. Boru planted ordinary items purchased at Han's own grocery, along with fabricated location-based evidence, to falsely tie him to the second crime scene, exploiting the fact that anyone can walk into an open store and buy anything. Elias's eagerness for a fast resolution causes him to treat thin circumstantial evidence as far stronger than it is.",
+          "objective_facts": [
+            "The packaging and twine recovered at the second crime scene are common brands sold to dozens of Han's customers every week.",
+            "Han was seen near the Tannery Docks the same week purely because of his routine weekly supply run, unrelated to the murder.",
+            "No physical evidence recovered so far ties Han directly to the victim; everything gathered is circumstantial or location-based."
+          ],
+          "character_knowledge": {
+            "ELIAS_VANCE": {
+              "knows": [
+                "The circumstantial links between purchases traceable to Han's grocery and items found at the crime scene."
+              ],
+              "hides": [
+                "He minimizes to Captain Zhou just how thin the direct evidence against Han actually is, framing it as stronger than it is to secure a warrant."
+              ],
+              "believes_falsely": [
+                "He believes his instinct about Han is essentially correct, and that a warrant will simply confirm what he already senses is true."
+              ]
+            },
+            "PARTNER_LIN": {
+              "knows": [
+                "The evidence connecting Han to the scene is entirely circumstantial and location-based, nothing more."
+              ],
+              "hides": [
+                "She voices only mild doubt to Elias privately, not wanting to undermine him in front of Captain Zhou."
+              ],
+              "believes_falsely": [
+                "She believes Elias's read of the case is probably right, since his instincts have proven reliable on every case before this one."
+              ]
+            },
+            "CAPTAIN_ZHOU": {
+              "knows": [
+                "The warrant request against Han rests on thin evidentiary grounds."
+              ],
+              "hides": [
+                "He signs off anyway without voicing his full reservations, wanting to preserve Elias's authority and momentum in front of the department."
+              ],
+              "believes_falsely": [
+                "He believes Elias, even under visible stress, will not go further than the actual evidence allows."
+              ]
+            },
+            "HAN_MEI": {
+              "knows": [
+                "He has never had any involvement whatsoever in the killings and has nothing to hide."
+              ],
+              "hides": [
+                "He doesn't reveal to police how frightened and cornered he genuinely feels, presenting a defiant face to protect his family's dignity."
+              ],
+              "believes_falsely": [
+                "He believes that simply repeating the truth will eventually clear him, not yet grasping how far the suspicion against him has already hardened."
+              ]
+            },
+            "SIMON_BORU": {
+              "knows": [
+                "Exactly how and why the planted evidence was placed to point at Han."
+              ],
+              "hides": [
+                "His role in framing Han from everyone, including his own quiet awareness of the man's growing suffering."
+              ],
+              "believes_falsely": [
+                "He believes Han's suffering is an acceptable, even necessary, cost of the demonstration he is building, a chilling miscalculation of what he is actually owed to prove his point."
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Captain's Doubt",
+          "solution": "Captain Zhou and Partner Lin have each independently begun noticing Elias skip proper channels, requisition evidence on thin pretexts, and grow more secretive, but neither has shared their suspicions with the other, leaving both quietly building separate, uncoordinated concerns about the same man.",
+          "objective_facts": [
+            "Elias filed a records request based on a records pull he later cannot fully account for through normal channels.",
+            "Captain Zhou has not raised his concerns about Elias with anyone else in the department, including Partner Lin."
+          ],
+          "character_knowledge": {
+            "ELIAS_VANCE": {
+              "knows": [
+                "He is bending procedure and senses that Captain Zhou has noticed something is off."
+              ],
+              "hides": [
+                "He downplays the pattern to himself, treating each shortcut as an isolated, justified exception rather than a trend."
+              ],
+              "believes_falsely": [
+                "He believes Zhou's trust in him is unconditional and will absorb any short-term irregularities without lasting consequence."
+              ]
+            },
+            "CAPTAIN_ZHOU": {
+              "knows": [
+                "There is at least one paperwork inconsistency and one records request from Elias that doesn't fully track."
+              ],
+              "hides": [
+                "He hasn't escalated this to Internal Affairs or even raised it directly and fully with Elias, out of personal loyalty."
+              ],
+              "believes_falsely": [
+                "He believes he can manage this quietly himself, without it becoming an institutional problem."
+              ]
+            },
+            "PARTNER_LIN": {
+              "knows": [
+                "She has begun privately noting specific dates and incidents where Elias diverged from standard procedure."
+              ],
+              "hides": [
+                "She hasn't shown her notes to Zhou or anyone else, torn between loyalty to her mentor and her own growing unease."
+              ],
+              "believes_falsely": [
+                "She believes she alone has noticed this pattern, not realizing Captain Zhou has his own private concerns forming in parallel."
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "What Mira Found",
+      "theme": "Mira discovers a discarded note in Elias's coat that she misreads as evidence of an affair, just as Partner Lin begins privately cataloguing the small rules he's been breaking (The Vance Marriage and institutional doubt both widen their knowledge gaps).",
+      "intro_note": "The new postcard arrived the same night Elias signed off on a warrant built on sand, proof, if he'd let himself see it, that the killer was watching every move he made. He didn't let himself see it.",
+      "outro_note": "Mira doesn't ask again. That night, when Elias again pulls on his coat past midnight, she doesn't stay in bed. She follows him, three car lengths back, out past the precinct, toward a part of town she's never once heard him mention.",
+      "sections": [
+        "A Note in the Coat",
+        "What Mira Reads Into It",
+        "Lin Starts a List",
+        "The Case That Won't Bend",
+        "Something Lin Doesn't Say Out Loud",
+        "A Private Client at Closing Time",
+        "Research, Again",
+        "The Grocery After Hours",
+        "Almost Asking",
+        "Two Quiet Worries, Unshared",
+        "A Line Elias Answers",
+        "The Question, Finally",
+        "The Answer That Isn't One",
+        "Friction at Ruby's",
+        "Words on the Glass",
+        "Mira Decides",
+        "Three Car Lengths Back"
+      ],
+      "section_words": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 120,
+          "max": 210,
+          "target": "140 to 180"
+        },
+        null,
+        null,
+        null,
+        {
+          "min": 100,
+          "max": 190,
+          "target": "120 to 150"
+        }
+      ],
+      "section_locations": [
+        "VANCE_HOME",
+        "VANCE_HOME",
+        "PRECINCT",
+        "PRECINCT",
+        "DINER",
+        "BOOKSHOP",
+        "BOOKSHOP",
+        "HAN_GROCERY",
+        "VANCE_HOME",
+        "PRECINCT",
+        "DOCKS",
+        "VANCE_HOME",
+        "VANCE_HOME",
+        "DINER",
+        "HAN_GROCERY",
+        "VANCE_HOME",
+        "DOCKS"
+      ],
+      "case": [
+        {
+          "label": "The Puppeteer's Game",
+          "solution": "Simon Boru, whose son was killed years ago by a violent offender the justice system quietly failed to properly punish, has spent a year secretly studying Elias Vance before selecting him as the instrument of a private philosophical experiment: proof that even the most principled enforcer of justice can be turned, one small compromise at a time, into a killer himself. Boru is committing a series of staged murders, seeding each scene with cryptic literary clues drawn from rare antiquarian texts sold only through his own shop, deliberately calibrated to be solvable by a mind like Elias's and no other, while quietly manipulating physical evidence to implicate an innocent bystander. The endgame is not the killings themselves but the final act he intends to engineer: Elias, believing he is stopping or avenging something, will be maneuvered into killing Boru's true final target with his own hands, completing Boru's masterwork by someone else's conscience.",
+          "objective_facts": [
+            "Every clue left at a crime scene traces back to rare antiquarian volumes and restoration materials handled exclusively through Boru's shop.",
+            "Trace evidence at each scene bears a distinctive archival-grade paper and ink that Boru privately restores in his back room.",
+            "Boru cultivated an anonymous correspondence with Elias for nearly a year before the first postcard arrived, though Elias does not yet know this."
+          ],
+          "character_knowledge": {
+            "ELIAS_VANCE": {
+              "knows": [
+                "He now recognizes a recurring pattern in the killer's references pointing toward specific historical injustices and unresolved court cases."
+              ],
+              "hides": [
+                "He has begun answering the killer's clues with private responses of his own, a compromise he tells no one about, not even Lin."
+              ],
+              "believes_falsely": [
+                "He believes engaging the killer privately, off the books, is still an investigative tactic fully under his control, not a game whose rules he has already agreed to play by."
+              ]
+            },
+            "SIMON_BORU": {
+              "knows": [
+                "He continues carefully engineering each exchange, noting Elias's private replies as confirmation the hook is fully set."
+              ],
+              "hides": [
+                "His identity and true motive from everyone, including the calculation behind every courteous word he offers a customer."
+              ],
+              "believes_falsely": [
+                "He believes he still fully controls the pace of Elias's unraveling, underestimating how close Mira's growing suspicion is to accidentally destabilizing his careful timetable."
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Vance Marriage",
+          "solution": "Elias is not unfaithful; he has retreated into a secretive, obsessive private engagement with the killer's game, hiding evidence and canceling plans out of shame at how deep his obsession runs, not out of any affair. Mira, met only with silence and no explanation, misreads the distance as betrayal.",
+          "objective_facts": [
+            "Elias has canceled several planned evenings with Mira over recent weeks, including a standing anniversary dinner reservation.",
+            "A folded, handwritten note in unfamiliar handwriting, unrelated to any romantic contact, fell from Elias's coat pocket at home."
+          ],
+          "character_knowledge": {
+            "ELIAS_VANCE": {
+              "knows": [
+                "He was careless with a note connected to his private exchange with the killer and dismisses its disappearance as unimportant."
+              ],
+              "hides": [
+                "When finally confronted, he lies about the note's contents and origin, claiming it is nothing more than case paperwork, rather than reveal how far into the killer's game he has gone."
+              ],
+              "believes_falsely": [
+                "He believes his vague deflection will settle Mira's worry, wrongly assuming she will accept it rather than push further."
+              ]
+            },
+            "MIRA_VANCE": {
+              "knows": [
+                "She found a cryptic note in his coat, in handwriting that isn't his, referencing an address or phrase she doesn't recognize."
+              ],
+              "hides": [
+                "She doesn't tell Elias right away that she found it, choosing to watch him first before confronting him."
+              ],
+              "believes_falsely": [
+                "She interprets the note as evidence of a romantic entanglement, rather than a fragment of his secret continued correspondence with the killer."
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Frame",
+          "solution": "Han Mei is entirely innocent. Boru planted ordinary items purchased at Han's own grocery, along with fabricated location-based evidence, to falsely tie him to the second crime scene, exploiting the fact that anyone can walk into an open store and buy anything. Elias's eagerness for a fast resolution causes him to treat thin circumstantial evidence as far stronger than it is.",
+          "objective_facts": [
+            "The packaging and twine recovered at the second crime scene are common brands sold to dozens of Han's customers every week.",
+            "Public complaints and vandalism directed at Han's Grocery have increased sharply since word of the investigation spread."
+          ],
+          "character_knowledge": {
+            "ELIAS_VANCE": {
+              "knows": [
+                "Public pressure and vandalism at Han's grocery are increasing as word of the investigation spreads."
+              ],
+              "hides": [
+                "He avoids re-examining whether the case against Han is actually solid, choosing not to look too closely at his own doubt."
+              ],
+              "believes_falsely": [
+                "He believes the community's growing suspicion of Han confirms his own instinct, rather than recognizing it as rumor and fear feeding on itself."
+              ]
+            },
+            "HAN_MEI": {
+              "knows": [
+                "The so-called evidence against him consists only of items sold to countless ordinary customers."
+              ],
+              "hides": [
+                "He hides from his wife and daughter exactly how frightened he is, trying to project calm at home."
+              ],
+              "believes_falsely": [
+                "He believes that if he simply keeps cooperating with the police, an officer of the law must eventually see reason."
+              ]
+            },
+            "CAPTAIN_ZHOU": {
+              "knows": [
+                "Complaints about the handling of the Han case are now reaching him from outside the department."
+              ],
+              "hides": [
+                "He still hasn't formally challenged Elias's conclusions, hoping new evidence will resolve the matter cleanly on its own."
+              ],
+              "believes_falsely": [
+                "He believes there is still time to quietly correct course before any real institutional damage is done."
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Captain's Doubt",
+          "solution": "Captain Zhou and Partner Lin have each independently begun noticing Elias skip proper channels, requisition evidence on thin pretexts, and grow more secretive, but neither has shared their suspicions with the other, leaving both quietly building separate, uncoordinated concerns about the same man.",
+          "objective_facts": [
+            "Partner Lin has begun keeping a private notebook logging specific dates and incidents where Elias diverged from standard procedure.",
+            "Captain Zhou has received at least one indirect inquiry from outside the precinct about the Han case's handling."
+          ],
+          "character_knowledge": {
+            "PARTNER_LIN": {
+              "knows": [
+                "She has now logged multiple specific instances of Elias skipping consultation with her or altering timelines in his reports."
+              ],
+              "hides": [
+                "She still hasn't shown her notebook to anyone, torn between protecting her mentor and her own mounting unease."
+              ],
+              "believes_falsely": [
+                "She believes she alone has noticed this pattern, not realizing Captain Zhou has his own private concerns forming in parallel."
+              ]
+            },
+            "CAPTAIN_ZHOU": {
+              "knows": [
+                "He has now had at least one indirect flag from outside the precinct about the case's handling."
+              ],
+              "hides": [
+                "He hasn't told Lin that he shares her unspoken worry, keeping his doubts compartmentalized out of old habit."
+              ],
+              "believes_falsely": [
+                "He believes Lin's loyalty to Elias would keep her from noticing anything wrong, underestimating her."
+              ]
+            },
+            "ELIAS_VANCE": {
+              "knows": [
+                "He senses Lin has grown quieter and more careful around him lately."
+              ],
+              "hides": [
+                "He doesn't examine why, and doesn't invite her concerns even when she leaves an opening to raise them."
+              ],
+              "believes_falsely": [
+                "He believes her quietness is simple professional focus, not the early sign of eroding trust."
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "The Almost-Confession",
+      "theme": "A new clue very nearly exposes the killer's identity, but Elias's certainty about Han blinds him to the moment slipping past, pushing The Frame toward crisis just as The Puppeteer's Game tightens its grip (Escalation peaks ahead of the season's midpoint turn).",
+      "intro_note": "Mira followed him into the fog off the docks and watched him vanish into a bookshop she's never heard him mention, then watched him come out again an hour later, saying nothing. She still doesn't know what she saw. Neither, yet, does he know she was there.",
+      "outro_note": "Elias holds the one piece of paper that could have ended this the right way, and folds it back into the case file as a footnote, because it doesn't fit the story he's already decided is true. Then he picks up his phone and gives the order to bring Han in.",
+      "sections": [
+        "Pressure From Above",
+        "The File Elias Trusts",
+        "A Riskier Line",
+        "Found at the Water's Edge",
+        "Reading It Twice",
+        "Lin's Other Theory",
+        "After the Fog",
+        "What Mira Doesn't Ask",
+        "Weighing Whether to Stay",
+        "The Rift at Ruby's",
+        "Zhou Wants This Closed",
+        "A Careful Kind of Calm",
+        "Questions at the Counter",
+        "An Answer That Satisfies",
+        "The Case Elias Makes",
+        "Alone With the Folded Page",
+        "The Order"
+      ],
+      "section_words": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 130,
+          "max": 220,
+          "target": "150 to 190"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 100,
+          "max": 190,
+          "target": "120 to 150"
+        }
+      ],
+      "section_locations": [
+        "PRECINCT",
+        "PRECINCT",
+        "BOOKSHOP",
+        "DOCKS",
+        "PRECINCT",
+        "PRECINCT",
+        "VANCE_HOME",
+        "VANCE_HOME",
+        "HAN_GROCERY",
+        "DINER",
+        "PRECINCT",
+        "BOOKSHOP",
+        "BOOKSHOP",
+        "BOOKSHOP",
+        "PRECINCT",
+        "PRECINCT",
+        "PRECINCT"
+      ],
+      "case": [
+        {
+          "label": "The Puppeteer's Game",
+          "solution": "Simon Boru, whose son was killed years ago by a violent offender the justice system quietly failed to properly punish, has spent a year secretly studying Elias Vance before selecting him as the instrument of a private philosophical experiment: proof that even the most principled enforcer of justice can be turned, one small compromise at a time, into a killer himself. Boru is committing a series of staged murders, seeding each scene with cryptic literary clues drawn from rare antiquarian texts sold only through his own shop, deliberately calibrated to be solvable by a mind like Elias's and no other, while quietly manipulating physical evidence to implicate an innocent bystander. The endgame is not the killings themselves but the final act he intends to engineer: Elias, believing he is stopping or avenging something, will be maneuvered into killing Boru's true final target with his own hands, completing Boru's masterwork by someone else's conscience.",
+          "objective_facts": [
+            "Every clue left at a crime scene traces back to rare antiquarian volumes and restoration materials handled exclusively through Boru's shop.",
+            "The newest clue's phrasing, read plainly, does not point toward Han Mei or his grocery at all.",
+            "Boru cultivated an anonymous correspondence with Elias for nearly a year before the first postcard arrived, though Elias does not yet know this."
+          ],
+          "character_knowledge": {
+            "ELIAS_VANCE": {
+              "knows": [
+                "He has received a new clue whose language, followed correctly, doesn't point to Han at all, the first real crack in his own certainty."
+              ],
+              "hides": [
+                "He hides from Zhou and Lin exactly how directly this new clue undermines the case against Han, because admitting it would mean admitting he's been wrong for weeks."
+              ],
+              "believes_falsely": [
+                "He believes he can hold two incompatible readings at once, that Han is still guilty and that this clue is just noise, without recognizing that his own certainty, not the evidence, is now steering the case."
+              ]
+            },
+            "PARTNER_LIN": {
+              "knows": [
+                "She reads the same clue differently and traces its physical origin to materials sold through a single specialty bookshop."
+              ],
+              "hides": [
+                "She doesn't yet tell Elias she's pursuing this alternate lead on her own, unsure whether it's instinct or insubordination."
+              ],
+              "believes_falsely": [
+                "She believes the shop's elderly owner is simply a helpful, slightly odd bystander with useful expertise, having no idea she is standing across the counter from the killer."
+              ]
+            },
+            "SIMON_BORU": {
+              "knows": [
+                "He deliberately calibrated this clue to sit dangerously close to the truth, a risk taken to keep Elias fully hooked, and recognizes Lin's visit as the nearest anyone has come to him."
+              ],
+              "hides": [
+                "His identity from Lin in the moment, offering just enough plausible expertise to satisfy her question without raising suspicion."
+              ],
+              "believes_falsely": [
+                "He believes he has fully contained the risk Lin represents, underestimating how sharp her instincts actually are."
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Frame",
+          "solution": "Han Mei is entirely innocent. Boru planted ordinary items purchased at Han's own grocery, along with fabricated location-based evidence, to falsely tie him to the second crime scene, exploiting the fact that anyone can walk into an open store and buy anything. Elias's eagerness for a fast resolution causes him to treat thin circumstantial evidence as far stronger than it is.",
+          "objective_facts": [
+            "The packaging and twine recovered at the second crime scene are common brands sold to dozens of Han's customers every week.",
+            "No new evidence obtained this week connects Han directly to any crime scene."
+          ],
+          "character_knowledge": {
+            "ELIAS_VANCE": {
+              "knows": [
+                "The new clue doesn't fit any theory involving Han."
+              ],
+              "hides": [
+                "He buries this fact in the case file rather than raising it, and instead builds the argument for Han's arrest more forcefully to outrun his own doubt."
+              ],
+              "believes_falsely": [
+                "He believes that moving to arrest now, while public pressure is high, is decisive leadership, not the moment he stops being led by evidence at all."
+              ]
+            },
+            "CAPTAIN_ZHOU": {
+              "knows": [
+                "Public and institutional pressure to close the case has become significant."
+              ],
+              "hides": [
+                "He privately doubts the strength of the case but authorizes the arrest anyway, prioritizing institutional pressure over his own reservations."
+              ],
+              "believes_falsely": [
+                "He believes authorizing the arrest now still leaves room to correct course later, not realizing how publicly irreversible arresting Han will actually be."
+              ]
+            },
+            "HAN_MEI": {
+              "knows": [
+                "The harassment and suspicion surrounding his store have become constant and are directly affecting his family."
+              ],
+              "hides": [
+                "He hides from his wife and daughter exactly how afraid he is that the police will act against him regardless of the truth."
+              ],
+              "believes_falsely": [
+                "He believes his years in the community and his plain innocence will protect him from something as drastic as an arrest."
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Captain's Doubt",
+          "solution": "Captain Zhou and Partner Lin have each independently begun noticing Elias skip proper channels, requisition evidence on thin pretexts, and grow more secretive, but neither has shared their suspicions with the other, leaving both quietly building separate, uncoordinated concerns about the same man.",
+          "objective_facts": [
+            "Captain Zhou authorizes Han's arrest despite privately doubting the strength of the evidence.",
+            "Partner Lin possesses a concrete alternate lead, the bookshop, that she has not yet shared with Elias or Captain Zhou."
+          ],
+          "character_knowledge": {
+            "CAPTAIN_ZHOU": {
+              "knows": [
+                "Authorizing this arrest under the current evidence is a risk he wouldn't normally take."
+              ],
+              "hides": [
+                "He doesn't voice this hesitation to Elias directly, letting institutional momentum carry the decision instead."
+              ],
+              "believes_falsely": [
+                "He believes Elias's judgment, even now, is more reliable than his own doubts."
+              ]
+            },
+            "PARTNER_LIN": {
+              "knows": [
+                "She now has a specific, concrete alternate lead, the bookshop, that hasn't been shared or investigated by the team."
+              ],
+              "hides": [
+                "She keeps this to herself a little longer, wanting more before bringing it to Elias or Captain Zhou."
+              ],
+              "believes_falsely": [
+                "She believes she still has time before the case against Han becomes irreversible, not knowing an arrest order is about to be given."
+              ]
+            },
+            "ELIAS_VANCE": {
+              "knows": [
+                "He senses friction from Lin over his dismissal of her alternate reading of the clue."
+              ],
+              "hides": [
+                "He chooses authority over dialogue, shutting down her reading rather than engaging it."
+              ],
+              "believes_falsely": [
+                "He believes reasserting his authority will settle the team's doubts rather than deepen them."
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Vance Marriage",
+          "solution": "Elias is not unfaithful; he has retreated into a secretive, obsessive private engagement with the killer's game, hiding evidence and canceling plans out of shame at how deep his obsession runs, not out of any affair. Mira, met only with silence and no explanation, misreads the distance as betrayal.",
+          "objective_facts": [
+            "Mira followed Elias to Boru's bookshop at night and watched him enter and leave without incident.",
+            "Elias remains unaware that Mira followed him or that she saw where he went."
+          ],
+          "character_knowledge": {
+            "MIRA_VANCE": {
+              "knows": [
+                "She followed Elias to a bookshop she's never heard him mention and watched him leave without incident, but has no way to explain what it means."
+              ],
+              "hides": [
+                "She still hasn't told Elias she followed him, weighing whether to confront him with what she saw or keep watching quietly."
+              ],
+              "believes_falsely": [
+                "She interprets the secretive visit as further evidence of an affair, assuming the bookshop is a cover or meeting place, rather than a piece of the murder investigation."
+              ]
+            },
+            "ELIAS_VANCE": {
+              "knows": [
+                "Nothing of Mira's nighttime visit; he remains entirely unaware she followed him."
+              ],
+              "hides": [
+                "He continues withholding any explanation of his evenings from her, treating silence as protection."
+              ],
+              "believes_falsely": [
+                "He believes Mira has simply resigned herself to his unpredictable hours, misreading her silence as acceptance rather than surveillance."
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "The Night They Took Han",
+      "theme": "Han's wrongful arrest detonates through the precinct and the Vance household alike in the season's biggest turn yet, as Mira learns just enough of what Elias has done to shatter her trust in him (MIDPOINT TURN: The Frame crisis, The Vance Marriage upheaval, and The Puppeteer's Game collide).",
+      "intro_note": "The clue Elias nearly missed in the small hours points, at last, somewhere concrete — and by dawn, that certainty has a name, a storefront, and a set of handcuffs waiting.",
+      "outro_note": "Han Mei sits in a holding cell insisting on his innocence to walls that don't answer. In Boru's Rare Books, a new note waits to be found, addressed to a detective who no longer knows he's being led. And in a house gone quiet, Mira Vance packs a bag she hasn't decided yet whether she's taking out the door.",
+      "sections": [
+        "Cold Open: Sirens on the Water (The Frame)",
+        "The Raid at Han's Grocery (The Frame)",
+        "Booked (The Frame)",
+        "A Window Broken Before Morning (The Frame)",
+        "The Interrogation Room (The Frame)",
+        "A Quiet Evening at Boru's (The Puppeteer's Game)",
+        "Waiting Up (The Vance Marriage)",
+        "What Was in the Coat Pocket (The Vance Marriage)",
+        "The Call from the DA's Office (Institutional Doubt)",
+        "Off the Record, Booth Three (Institutional Doubt)",
+        "A Good Night's Work (The Frame / Institutional Doubt)",
+        "Elias Comes Home (The Vance Marriage)",
+        "Not What You Think, Worse (The Vance Marriage)",
+        "The Grocery Goes Dark (The Frame)",
+        "A Note for the Detective (The Puppeteer's Game)",
+        "Zhou Makes a Decision (Institutional Doubt)",
+        "What the City Doesn't Know Yet (all threads)"
+      ],
+      "section_words": [
+        null,
+        {
+          "min": 140,
+          "max": 200,
+          "target": "150 to 180"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 130,
+          "max": 190,
+          "target": "140 to 170"
+        },
+        null,
+        null,
+        null,
+        {
+          "min": 120,
+          "max": 180,
+          "target": "130 to 160"
+        }
+      ],
+      "section_locations": [
+        "DOCKS",
+        "HAN_GROCERY",
+        "PRECINCT",
+        "HAN_GROCERY",
+        "PRECINCT",
+        "BOOKSHOP",
+        "VANCE_HOME",
+        "VANCE_HOME",
+        "PRECINCT",
+        "DINER",
+        "PRECINCT",
+        "VANCE_HOME",
+        "VANCE_HOME",
+        "HAN_GROCERY",
+        "BOOKSHOP",
+        "PRECINCT",
+        "DOCKS"
+      ],
+      "case": [
+        {
+          "label": "The Puppeteer's Game",
+          "solution": "Simon Boru, terminally ill and once a promising young criminologist broken and discredited decades ago by an institution he trusted, has spent months as the season's serial killer, engineering murders as a philosophical 'masterwork' about how systems corrupt good men. Every postcard, clue, and near-miss was designed not to be solved by Elias alone, but to walk him step by step toward a final act: killing Simon himself in what will look like a justified shooting, so that Elias — not Simon — becomes the hand that completes the masterwork, proving Simon's thesis and making the detective his unwitting successor.",
+          "objective_facts": [
+            "Simon Boru has terminal pancreatic cancer with only months to live.",
+            "Every clue left for Elias was authored and placed by Simon personally, timed to his own schedule, not a real investigative trail.",
+            "Simon was once a criminology researcher who was quietly discredited and dismissed decades ago after a professional betrayal by a mentor at the precinct's founding generation.",
+            "Simon has never directly killed anyone himself in this case; each death was staged to implicate someone else while Simon orchestrated from a distance.",
+            "Simon's final design requires Elias himself to commit a fatal act against Simon, believing it justified."
+          ],
+          "character_knowledge": {
+            "ELIAS_VANCE": {
+              "knows": [
+                "The killer has left a new clue congratulating him, arriving the same night as Han's arrest, which he reads as validation rather than warning",
+                "He has begun to treat the case as a private duel only he can finish"
+              ],
+              "hides": [
+                "That the timing of the clue matched Han's arrest almost exactly, because admitting it to Zhou or Lin would raise doubts he isn't ready to face"
+              ],
+              "believes_falsely": [
+                "He believes catching Han proves his instincts are sound and that the killer is rattled by his success, when in fact Simon is pleased that events are unfolding exactly as designed"
+              ]
+            },
+            "SIMON_BORU": {
+              "knows": [
+                "Han Mei's arrest is proceeding exactly as he engineered it",
+                "Elias's growing recklessness means the final phase of the game can begin sooner than planned"
+              ],
+              "hides": [
+                "That he authored the evidence trail that led to Han",
+                "That his quiet approval of Elias's methods is calculated encouragement, not genuine admiration"
+              ],
+              "believes_falsely": []
+            },
+            "PARTNER_LIN": {
+              "knows": [
+                "The clue that arrived tonight uses the same handwriting and paper stock as every prior postcard"
+              ],
+              "hides": [
+                "That her private log now includes the coincidence of the clue's timing with the arrest, which she hasn't shown anyone yet"
+              ],
+              "believes_falsely": [
+                "She still assumes the clue-writer and the actual killer must be two separate people working in concert, not the same man"
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Frame",
+          "solution": "Simon planted physical evidence connecting Han Mei's grocery to two of the murder scenes, exploiting the fact that Han had been secretly buying discounted, undocumented imported goods from a supplier to keep his struggling store afloat — a real but unrelated illegality that made Han evasive and physically present near the docks at hours he couldn't explain to police, giving Elias's tunnel-visioned case against him just enough true detail to feel solid.",
+          "objective_facts": [
+            "The physical evidence found at Han's grocery, a victim's watch and matching fibers, was planted there by Simon Boru, not left by Han.",
+            "Han Mei has been receiving undocumented, under-the-table shipments of discounted goods from a dock supplier to keep his grocery solvent, requiring him to be at the docks at odd hours.",
+            "Han Mei has no connection whatsoever to any of the murders.",
+            "Elias built the case against Han primarily on circumstantial proximity and Han's evasiveness, not on solid direct evidence."
+          ],
+          "character_knowledge": {
+            "HAN_MEI": {
+              "knows": [
+                "He has never harmed anyone and has no idea why police evidence points to him",
+                "His undocumented dock shipments explain his late-night movements, but admitting them means confessing to a different crime"
+              ],
+              "hides": [
+                "The existence of his under-the-table supplier deal, even now, for fear it will be used against him on top of the murder charge"
+              ],
+              "believes_falsely": [
+                "He believes a rival grocer or a disgruntled former employee must be behind the planted evidence, not a stranger he's never met"
+              ]
+            },
+            "ELIAS_VANCE": {
+              "knows": [
+                "The physical evidence found in Han's storeroom",
+                "Han's inability to account for several nights near the docks"
+              ],
+              "hides": [
+                "A nagging awareness that the evidence arrived almost too conveniently, which he suppresses rather than investigates"
+              ],
+              "believes_falsely": [
+                "He believes the arrest is justified and that Han's evasiveness is guilt rather than an unrelated secret"
+              ]
+            },
+            "PARTNER_LIN": {
+              "knows": [
+                "The chain of custody on the planted watch has a gap Elias glossed over"
+              ],
+              "hides": [
+                "That she flagged the gap once already tonight and was overruled"
+              ],
+              "believes_falsely": [
+                "She isn't yet certain the case is actually wrong, only that it was built too fast"
+              ]
+            },
+            "CAPTAIN_ZHOU": {
+              "knows": [
+                "The DA wants an arrest tonight regardless of remaining gaps in the evidence"
+              ],
+              "hides": [
+                "His own doubts about the strength of the case from the DA, to protect Elias and the precinct's public standing"
+              ],
+              "believes_falsely": [
+                "He believes Elias's read on Han is probably right, because Elias has rarely been wrong before"
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Vance Marriage",
+          "solution": "Elias has told no one, including Mira, about the postcards or the private game he believes he's playing with the killer, both because Zhou asked him to keep it contained and because some part of him wants to solve it alone; his silence and late nights are entirely about the case, but Mira — finding fragments of postcards and cryptic notes without context — has concluded he is having an affair, a wound that hardens into genuine, independent distance of her own.",
+          "objective_facts": [
+            "Elias has never been unfaithful to Mira at any point this season.",
+            "Elias has deliberately withheld all details of the postcard game from Mira since the first episode.",
+            "Mira found a torn postcard fragment and a hotel matchbook from a stakeout in Elias's coat, which she has not shown him.",
+            "Mira has begun confiding in a colleague at her therapy practice about the state of her marriage."
+          ],
+          "character_knowledge": {
+            "MIRA_VANCE": {
+              "knows": [
+                "Elias has been coming home later and later, distracted even when present"
+              ],
+              "hides": [
+                "That she found a torn postcard fragment and a hotel matchbook in his coat and has told no one, not even her colleague, exactly what she found"
+              ],
+              "believes_falsely": [
+                "She is now nearly certain Elias is having an affair"
+              ]
+            },
+            "ELIAS_VANCE": {
+              "knows": [
+                "He has been distant and secretive with Mira for months"
+              ],
+              "hides": [
+                "The postcards and the entire private game from Mira, believing he is protecting her by keeping it contained"
+              ],
+              "believes_falsely": [
+                "He believes his silence reads to Mira as work stress, not betrayal"
+              ]
+            }
+          }
+        },
+        {
+          "label": "Institutional Doubt",
+          "solution": "Partner Lin has spent weeks privately logging Elias's procedural violations, uncertain whether to bring them to Zhou; Captain Zhou has been absorbing mounting pressure from the DA's office and city hall to produce an arrest, which made him slower than he should have been to question Elias's methods, and Han's wrongful, publicly botched arrest becomes the event that forces both of them to act.",
+          "objective_facts": [
+            "Partner Lin has kept a private written log of at least six procedural violations by Elias since the case began.",
+            "Captain Zhou has received direct pressure from the District Attorney's office to produce a named suspect before the arrest of Han Mei.",
+            "Han Mei's arrest was leaked to the press within hours, triggering public backlash before formal charges were even filed.",
+            "Zhou authorized Han's arrest despite his own private reservations about the strength of the evidence."
+          ],
+          "character_knowledge": {
+            "PARTNER_LIN": {
+              "knows": [
+                "Six specific procedural shortcuts Elias has taken since the case began, all logged privately"
+              ],
+              "hides": [
+                "The existence of the log itself, from both Elias and Zhou"
+              ],
+              "believes_falsely": [
+                "She still believes that if she raises her concerns clearly enough, Elias will course-correct on his own"
+              ]
+            },
+            "CAPTAIN_ZHOU": {
+              "knows": [
+                "The DA's office pressured him directly to produce a named suspect before tonight's press cycle"
+              ],
+              "hides": [
+                "The full extent of that pressure from both Elias and Lin, preferring to absorb it himself"
+              ],
+              "believes_falsely": [
+                "He believes he can still contain the fallout quietly if Han's case holds even partially"
+              ]
+            },
+            "ELIAS_VANCE": {
+              "knows": [
+                "Zhou authorized the arrest despite incomplete evidence"
+              ],
+              "hides": [
+                "That he pushed Zhou harder than procedure allowed to get that authorization"
+              ],
+              "believes_falsely": [
+                "He believes the ends will justify the means once the real killer is caught"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "Whose Hands Are Clean",
+      "theme": "With Han's case collapsing under public scrutiny, Elias digs deeper into the killer's game to justify what he's already done, forcing Partner Lin to choose between loyalty and conscience (The Frame begins to unravel, institutional doubt reaches crisis, The Puppeteer's Game intensifies).",
+      "intro_note": "Days later, the city has an opinion about Han Mei's arrest, and none of the people closest to Elias Vance can agree anymore on who he actually is.",
+      "outro_note": "Captain Zhou closes his office door on a detective he no longer fully trusts. Somewhere in the dark of Boru's back room, the next envelope is already sealed — and it has Elias Vance's name on it, waiting for the one clue he won't be able to walk away from.",
+      "sections": [
+        "The Morning After, In Graffiti (The Frame)",
+        "Han's Grocery, Closed Sign Turned Ashamed (The Frame)",
+        "The Defense's First Move (The Frame)",
+        "Elias Pushes Back (The Frame)",
+        "Booth Three Again (Institutional Doubt)",
+        "A Log With No Good Place to Go (Institutional Doubt)",
+        "Research, or Something Like It (The Puppeteer's Game)",
+        "The Guest Room (The Vance Marriage)",
+        "Standing at the Board Alone (The Puppeteer's Game)",
+        "Lin Opens the Folder (Institutional Doubt)",
+        "Zhou Asks the Question Directly (Institutional Doubt)",
+        "A Losing Case, One Wall Away (The Frame)",
+        "What Mira Tells Her Friend (The Vance Marriage)",
+        "Dust and Lamplight, Alone (The Puppeteer's Game)",
+        "An Envelope Arrives (The Puppeteer's Game)",
+        "Off the Case, On Paper (Institutional Doubt)",
+        "The Shape of What's Coming (all threads)"
+      ],
+      "section_words": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 130,
+          "max": 190,
+          "target": "140 to 170"
+        },
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 130,
+          "max": 190,
+          "target": "140 to 170"
+        },
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 130,
+          "max": 190,
+          "target": "140 to 170"
+        },
+        {
+          "min": 120,
+          "max": 180,
+          "target": "130 to 160"
+        }
+      ],
+      "section_locations": [
+        "HAN_GROCERY",
+        "HAN_GROCERY",
+        "PRECINCT",
+        "PRECINCT",
+        "DINER",
+        "PRECINCT",
+        "BOOKSHOP",
+        "VANCE_HOME",
+        "PRECINCT",
+        "PRECINCT",
+        "PRECINCT",
+        "PRECINCT",
+        "DINER",
+        "BOOKSHOP",
+        "PRECINCT",
+        "PRECINCT",
+        "DOCKS"
+      ],
+      "case": [
+        {
+          "label": "The Puppeteer's Game",
+          "solution": "Simon Boru, terminally ill and once a promising young criminologist broken and discredited decades ago by an institution he trusted, has spent months as the season's serial killer, engineering murders as a philosophical 'masterwork' about how systems corrupt good men. Every postcard, clue, and near-miss was designed not to be solved by Elias alone, but to walk him step by step toward a final act: killing Simon himself in what will look like a justified shooting, so that Elias — not Simon — becomes the hand that completes the masterwork, proving Simon's thesis and making the detective his unwitting successor.",
+          "objective_facts": [
+            "Simon Boru has terminal pancreatic cancer with only months to live.",
+            "Every clue left for Elias was authored and placed by Simon personally, timed to his own schedule, not a real investigative trail.",
+            "Simon was once a criminology researcher who was quietly discredited and dismissed decades ago after a professional betrayal by a mentor at the precinct's founding generation.",
+            "Simon has never directly killed anyone himself in this case; each death was staged to implicate someone else while Simon orchestrated from a distance.",
+            "Simon's final design requires Elias himself to commit a fatal act against Simon, believing it justified."
+          ],
+          "character_knowledge": {
+            "ELIAS_VANCE": {
+              "knows": [
+                "A new clue has arrived hinting that the game is nearing its final move"
+              ],
+              "hides": [
+                "That he sought out Simon's shop under the pretext of research, actually to talk through the case out loud with someone who isn't watching him with suspicion"
+              ],
+              "believes_falsely": [
+                "He believes the killer is watching him with something like respect, rather than steering him toward a predetermined end"
+              ]
+            },
+            "SIMON_BORU": {
+              "knows": [
+                "Elias sought him out unprompted this week, confirming the design is working ahead of schedule"
+              ],
+              "hides": [
+                "That he deliberately dropped a reference during their conversation to nudge Elias toward the next clue"
+              ],
+              "believes_falsely": []
+            },
+            "PARTNER_LIN": {
+              "knows": [
+                "The newest clue's phrasing echoes something oddly specific from local history that doesn't match any file in the case"
+              ],
+              "hides": [
+                "That she has started her own quiet research into who in the city would know that specific history"
+              ],
+              "believes_falsely": [
+                "She has begun to suspect the clue-writer might be closer to the investigation than anyone assumes, but she still cannot imagine it's a bystander like Simon Boru"
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Frame",
+          "solution": "Simon planted physical evidence connecting Han Mei's grocery to two of the murder scenes, exploiting the fact that Han had been secretly buying discounted, undocumented imported goods from a supplier to keep his struggling store afloat — a real but unrelated illegality that made Han evasive and physically present near the docks at hours he couldn't explain to police, giving Elias's tunnel-visioned case against him just enough true detail to feel solid.",
+          "objective_facts": [
+            "The physical evidence found at Han's grocery, a victim's watch and matching fibers, was planted there by Simon Boru, not left by Han.",
+            "Han Mei has been receiving undocumented, under-the-table shipments of discounted goods from a dock supplier to keep his grocery solvent, requiring him to be at the docks at odd hours.",
+            "Han Mei has no connection whatsoever to any of the murders.",
+            "Elias built the case against Han primarily on circumstantial proximity and Han's evasiveness, not on solid direct evidence."
+          ],
+          "character_knowledge": {
+            "HAN_MEI": {
+              "knows": [
+                "His lawyer has found a timestamp gap in the evidence log the police built against him"
+              ],
+              "hides": [
+                "The supplier arrangement still, even now, afraid new charges would follow if he admitted it"
+              ],
+              "believes_falsely": [
+                "He still suspects a specific rival grocer of orchestrating this, and has now named that suspicion to his lawyer, wrongly"
+              ]
+            },
+            "ELIAS_VANCE": {
+              "knows": [
+                "The defense has found a genuine gap in the evidence chain of custody"
+              ],
+              "hides": [
+                "That he minimized the gap's significance to Zhou to protect the case, downplaying his own doubt"
+              ],
+              "believes_falsely": [
+                "He tells himself the gap is a technicality, not evidence of Han's innocence"
+              ]
+            },
+            "PARTNER_LIN": {
+              "knows": [
+                "The specific timestamp discrepancy the defense found"
+              ],
+              "hides": [
+                "That she noticed the same discrepancy days before the defense did and didn't escalate it"
+              ],
+              "believes_falsely": [
+                "She no longer believes Han is guilty, though she hasn't said so out loud to anyone yet"
+              ]
+            },
+            "CAPTAIN_ZHOU": {
+              "knows": [
+                "The DA's office is now nervous about the case's strength given public scrutiny"
+              ],
+              "hides": [
+                "That he's quietly preparing a fallback plan in case the case collapses, without telling Elias"
+              ],
+              "believes_falsely": [
+                "He still hopes the case can be salvaged with more evidence rather than accepting Han may be innocent"
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Vance Marriage",
+          "solution": "Elias has told no one, including Mira, about the postcards or the private game he believes he's playing with the killer, both because Zhou asked him to keep it contained and because some part of him wants to solve it alone; his silence and late nights are entirely about the case, but Mira — finding fragments of postcards and cryptic notes without context — has concluded he is having an affair, a wound that hardens into genuine, independent distance of her own.",
+          "objective_facts": [
+            "Elias has never been unfaithful to Mira at any point this season.",
+            "Elias has deliberately withheld all details of the postcard game from Mira since the first episode.",
+            "Mira found a torn postcard fragment and a hotel matchbook from a stakeout in Elias's coat, which she has not shown him.",
+            "Mira has begun confiding in a colleague at her therapy practice about the state of her marriage."
+          ],
+          "character_knowledge": {
+            "MIRA_VANCE": {
+              "knows": [
+                "She has decided to consult a lawyer about a possible separation and has told her colleague everything"
+              ],
+              "hides": [
+                "From Elias, that she has already taken concrete legal steps"
+              ],
+              "believes_falsely": [
+                "She now treats the affair theory as effectively confirmed in her own mind, even without direct proof"
+              ]
+            },
+            "ELIAS_VANCE": {
+              "knows": [
+                "Mira has grown coldly distant, barely speaking to him at home"
+              ],
+              "hides": [
+                "Still hasn't told her anything about the case, doubling down on his silence as the marriage worsens"
+              ],
+              "believes_falsely": [
+                "He believes the marriage can wait until after the case is solved"
+              ]
+            }
+          }
+        },
+        {
+          "label": "Institutional Doubt",
+          "solution": "Partner Lin has spent weeks privately logging Elias's procedural violations, uncertain whether to bring them to Zhou; Captain Zhou has been absorbing mounting pressure from the DA's office and city hall to produce an arrest, which made him slower than he should have been to question Elias's methods, and Han's wrongful, publicly botched arrest becomes the event that forces both of them to act.",
+          "objective_facts": [
+            "Partner Lin has kept a private written log of at least six procedural violations by Elias since the case began.",
+            "Captain Zhou has received direct pressure from the District Attorney's office to produce a named suspect before the arrest of Han Mei.",
+            "Han Mei's arrest was leaked to the press within hours, triggering public backlash before formal charges were even filed.",
+            "Zhou authorized Han's arrest despite his own private reservations about the strength of the evidence."
+          ],
+          "character_knowledge": {
+            "PARTNER_LIN": {
+              "knows": [
+                "She brought her full log to Zhou today"
+              ],
+              "hides": [
+                "Her own guilt about not speaking sooner, which she keeps from both Zhou and Elias"
+              ],
+              "believes_falsely": [
+                "She fears this will end her partnership with Elias for good"
+              ]
+            },
+            "CAPTAIN_ZHOU": {
+              "knows": [
+                "The full extent of Elias's procedural violations, laid out in Lin's log"
+              ],
+              "hides": [
+                "That he hasn't yet decided what disciplinary action to take, and hasn't told Elias that Lin brought this to him"
+              ],
+              "believes_falsely": [
+                "He still believes he can manage this internally without it reaching the DA or the press"
+              ]
+            },
+            "ELIAS_VANCE": {
+              "knows": [
+                "Zhou is now asking him pointed questions about his methods"
+              ],
+              "hides": [
+                "The true depth of what he's done, including at least one coerced statement, even from himself in some ways"
+              ],
+              "believes_falsely": [
+                "He interprets Zhou's scrutiny as institutional cowardice rather than legitimate concern"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "The Last Clue",
+      "theme": "The killer's final message strips away all ambiguity about what Elias has become, steering him toward a target he no longer fully believes he chose for himself (The Puppeteer's Game reaches its climax).",
+      "intro_note": "Pulled from his own case and packing up an empty half of his bed, Elias Vance has nothing left to lose by the rules — which is, of course, precisely the condition the final clue was written for.",
+      "outro_note": "At the edge of the water, with no backup and no warrant, Elias Vance finally asks the old man in front of him the only question that matters — and the answer, delivered with terrible calm, is not the one he came for.",
+      "sections": [
+        "One Week Gone (Institutional Doubt)",
+        "Zhou's Office Door Closes (Institutional Doubt)",
+        "The Charges Are Dropped (The Frame)",
+        "Han Comes Home to a Different Street (The Frame)",
+        "Half a Closet Empty (The Vance Marriage)",
+        "Nothing Left to Lose (Institutional Doubt)",
+        "An Invitation, Handwritten (The Puppeteer's Game)",
+        "Reading the Water (The Puppeteer's Game)",
+        "Lin Watches Him Not Listen (Institutional Doubt)",
+        "The Old Man's Private Hour (The Puppeteer's Game)",
+        "Back to the Docks, Alone (The Puppeteer's Game)",
+        "A Call That Rings Out (The Vance Marriage)",
+        "Zhou Notices the Silence (Institutional Doubt)",
+        "Face to Face at Last (The Puppeteer's Game)",
+        "The Mask Slips (The Puppeteer's Game)",
+        "The Question Elias Didn't Come to Ask (The Puppeteer's Game)",
+        "What Happens Next Is Not What Anyone Planned (all threads)"
+      ],
+      "section_words": [
+        null,
+        {
+          "min": 130,
+          "max": 190,
+          "target": "140 to 170"
+        },
+        null,
+        null,
+        {
+          "min": 120,
+          "max": 180,
+          "target": "130 to 160"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 120,
+          "max": 180,
+          "target": "130 to 160"
+        },
+        null,
+        null,
+        null,
+        {
+          "min": 130,
+          "max": 190,
+          "target": "140 to 170"
+        },
+        {
+          "min": 120,
+          "max": 180,
+          "target": "130 to 160"
+        }
+      ],
+      "section_locations": [
+        "PRECINCT",
+        "PRECINCT",
+        "PRECINCT",
+        "HAN_GROCERY",
+        "VANCE_HOME",
+        "DINER",
+        "BOOKSHOP",
+        "DOCKS",
+        "PRECINCT",
+        "BOOKSHOP",
+        "DOCKS",
+        "VANCE_HOME",
+        "PRECINCT",
+        "DOCKS",
+        "DOCKS",
+        "DOCKS",
+        "DOCKS"
+      ],
+      "case": [
+        {
+          "label": "The Puppeteer's Game",
+          "solution": "Simon Boru, terminally ill and once a promising young criminologist broken and discredited decades ago by an institution he trusted, has spent months as the season's serial killer, engineering murders as a philosophical 'masterwork' about how systems corrupt good men. Every postcard, clue, and near-miss was designed not to be solved by Elias alone, but to walk him step by step toward a final act: killing Simon himself in what will look like a justified shooting, so that Elias — not Simon — becomes the hand that completes the masterwork, proving Simon's thesis and making the detective his unwitting successor.",
+          "objective_facts": [
+            "Simon Boru has terminal pancreatic cancer with only months to live.",
+            "Every clue left for Elias was authored and placed by Simon personally, timed to his own schedule, not a real investigative trail.",
+            "Simon was once a criminology researcher who was quietly discredited and dismissed decades ago after a professional betrayal by a mentor at the precinct's founding generation.",
+            "Simon has never directly killed anyone himself in this case; each death was staged to implicate someone else while Simon orchestrated from a distance.",
+            "Simon's final design requires Elias himself to commit a fatal act against Simon, believing it justified."
+          ],
+          "character_knowledge": {
+            "ELIAS_VANCE": {
+              "knows": [
+                "The final clue points explicitly to the docks, and to Boru's shop itself"
+              ],
+              "hides": [
+                "From Zhou and Lin, that he intends to go alone tonight, against direct orders"
+              ],
+              "believes_falsely": [
+                "He still believes he is the one hunting the killer, not the one being led to a final staged confrontation"
+              ]
+            },
+            "SIMON_BORU": {
+              "knows": [
+                "Elias is arriving essentially on schedule, alone, exactly as required"
+              ],
+              "hides": [
+                "The true nature of what he intends to happen at the docks tonight"
+              ],
+              "believes_falsely": [
+                "He assumes no one else will arrive in time to interrupt the final act, not accounting for how far Lin's suspicions have already carried her"
+              ]
+            },
+            "PARTNER_LIN": {
+              "knows": [
+                "Elias has gone off the grid tonight, out of contact and off the case"
+              ],
+              "hides": [
+                "Nothing now — she is escalating straight to Zhou"
+              ],
+              "believes_falsely": [
+                "She still doesn't know Simon Boru is the killer, only suspects the bookshop is significant based on her research into the local history referenced in the clues"
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Frame",
+          "solution": "Simon planted physical evidence connecting Han Mei's grocery to two of the murder scenes, exploiting the fact that Han had been secretly buying discounted, undocumented imported goods from a supplier to keep his struggling store afloat — a real but unrelated illegality that made Han evasive and physically present near the docks at hours he couldn't explain to police, giving Elias's tunnel-visioned case against him just enough true detail to feel solid.",
+          "objective_facts": [
+            "The physical evidence found at Han's grocery, a victim's watch and matching fibers, was planted there by Simon Boru, not left by Han.",
+            "Han Mei has been receiving undocumented, under-the-table shipments of discounted goods from a dock supplier to keep his grocery solvent, requiring him to be at the docks at odd hours.",
+            "Han Mei has no connection whatsoever to any of the murders.",
+            "Elias built the case against Han primarily on circumstantial proximity and Han's evasiveness, not on solid direct evidence."
+          ],
+          "character_knowledge": {
+            "HAN_MEI": {
+              "knows": [
+                "The charges against him have been formally dropped for insufficient evidence"
+              ],
+              "hides": [
+                "The supplier arrangement, still, even now that the murder case is over, afraid of new charges for that unrelated matter"
+              ],
+              "believes_falsely": [
+                "He still doesn't know who framed him or why, and suspects the wrong person"
+              ]
+            },
+            "ELIAS_VANCE": {
+              "knows": [
+                "Han's case has collapsed and the charges are dropped"
+              ],
+              "hides": [
+                "Real guilt about what his tunnel vision cost Han, which he hasn't voiced to anyone"
+              ],
+              "believes_falsely": [
+                "He tells himself Han must still be involved somehow, unable to fully accept his own error"
+              ]
+            },
+            "CAPTAIN_ZHOU": {
+              "knows": [
+                "The DA has formally dropped charges against Han and the precinct is facing public criticism"
+              ],
+              "hides": [],
+              "believes_falsely": []
+            }
+          }
+        },
+        {
+          "label": "The Vance Marriage",
+          "solution": "Elias has told no one, including Mira, about the postcards or the private game he believes he's playing with the killer, both because Zhou asked him to keep it contained and because some part of him wants to solve it alone; his silence and late nights are entirely about the case, but Mira — finding fragments of postcards and cryptic notes without context — has concluded he is having an affair, a wound that hardens into genuine, independent distance of her own.",
+          "objective_facts": [
+            "Elias has never been unfaithful to Mira at any point this season.",
+            "Elias has deliberately withheld all details of the postcard game from Mira since the first episode.",
+            "Mira found a torn postcard fragment and a hotel matchbook from a stakeout in Elias's coat, which she has not shown him.",
+            "Mira has begun confiding in a colleague at her therapy practice about the state of her marriage."
+          ],
+          "character_knowledge": {
+            "MIRA_VANCE": {
+              "knows": [
+                "She has moved out and is in the process of separating from Elias"
+              ],
+              "hides": [
+                "Whether she would come back if he told her the full truth — she avoids examining that possibility because she still believes it's an affair"
+              ],
+              "believes_falsely": [
+                "She still holds to the affair theory, even now, without ever having found proof"
+              ]
+            },
+            "ELIAS_VANCE": {
+              "knows": [
+                "Mira has left"
+              ],
+              "hides": [
+                "Even now, in what may be his last real chance, he still doesn't tell her about the postcards"
+              ],
+              "believes_falsely": [
+                "He believes it's already too late to explain, a despair that guarantees his own silence"
+              ]
+            }
+          }
+        },
+        {
+          "label": "Institutional Doubt",
+          "solution": "Partner Lin has spent weeks privately logging Elias's procedural violations, uncertain whether to bring them to Zhou; Captain Zhou has been absorbing mounting pressure from the DA's office and city hall to produce an arrest, which made him slower than he should have been to question Elias's methods, and Han's wrongful, publicly botched arrest becomes the event that forces both of them to act.",
+          "objective_facts": [
+            "Partner Lin has kept a private written log of at least six procedural violations by Elias since the case began.",
+            "Captain Zhou has received direct pressure from the District Attorney's office to produce a named suspect before the arrest of Han Mei.",
+            "Han Mei's arrest was leaked to the press within hours, triggering public backlash before formal charges were even filed.",
+            "Zhou authorized Han's arrest despite his own private reservations about the strength of the evidence."
+          ],
+          "character_knowledge": {
+            "CAPTAIN_ZHOU": {
+              "knows": [
+                "He has formally pulled Elias off the case as of this week, based on Lin's log"
+              ],
+              "hides": [
+                "That he still feels personally responsible for not stopping this sooner, a guilt he hasn't shown anyone"
+              ],
+              "believes_falsely": [
+                "He believes formally pulling Elias off the case will be enough to stop him"
+              ]
+            },
+            "PARTNER_LIN": {
+              "knows": [
+                "Elias defied Zhou's order and went to the docks anyway"
+              ],
+              "hides": [],
+              "believes_falsely": []
+            },
+            "ELIAS_VANCE": {
+              "knows": [
+                "He has been formally removed from the case"
+              ],
+              "hides": [
+                "That he is going to the docks anyway, in direct defiance of that order"
+              ],
+              "believes_falsely": [
+                "He believes this final act will vindicate him, even though he is now acting entirely outside the law"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "The Masterwork",
+      "theme": "The killer's true design is revealed as Elias completes an act he was engineered to commit from the very first postcard, leaving his marriage, his career, and Han's shattered reputation all deliberately unresolved (The Puppeteer's Game resolves with its twist; The Vance Marriage and institutional threads stay open).",
+      "intro_note": "The last clue left no room for doubt about where it was leading — or about what Elias had let himself become to get there. Alone, and already certain of an ending he no longer feels he chose, he follows it to the one place the killer has always been steering him.",
+      "outro_note": "",
+      "sections": [
+        "Narrator: The Final Summons — Elias walks alone into the fog toward the docks, carrying the last clue's real meaning (The Puppeteer's Game)",
+        "Face to Face at Last — Elias confronts Simon Boru at the Tannery Docks, weapon drawn (The Puppeteer's Game)",
+        "The Brother's Name — Simon finally speaks of Aldous, the brother destroyed by a detective's certainty forty years ago (The Puppeteer's Game)",
+        "You Were Never Chasing Me — Simon goads Elias toward the line he has spent a year walking him to (The Puppeteer's Game)",
+        "No Witnesses — the confrontation ends in violence with no one left to record what truly happened (The Puppeteer's Game)",
+        "Narrator: What the Fog Swallowed — the docks fall silent as dawn approaches (The Puppeteer's Game)",
+        "The Official Version — Captain Zhou receives Elias's report and decides how much of it to believe (The Puppeteer's Game, institutional doubt)",
+        "A Number That Doesn't Add Up — Partner Lin notices the timeline in Elias's report doesn't match the evidence log (The Puppeteer's Game)",
+        "What Did You Do — Lin corners Elias privately before deciding whether to file her own report (The Puppeteer's Game)",
+        "The Locked Back Room — officers clearing Boru's Rare Books find a handwritten confession never meant for a courtroom (The Puppeteer's Game, The Frame)",
+        "Charges Dropped — Han Mei learns the case against him has collapsed, though no one from the precinct says why in public (The Frame)",
+        "An Apology Elias Owes — Elias comes to Han's Grocery to say what he can't put in any official statement (The Frame)",
+        "Too Late for Sorry — Han's answer makes clear a dropped charge is not the same as a cleared name (The Frame)",
+        "The House He Comes Back To — Elias returns to the Vance house changed in a way Mira can see before he says a word (The Vance Marriage)",
+        "The Version He Tells Her — Elias gives Mira a story that leaves out exactly what happened at the docks (The Vance Marriage)",
+        "Last Booth by the Window — Elias and Captain Zhou share a quiet, unfinished conversation at Ruby's Diner (institutional doubt, The Puppeteer's Game)",
+        "Narrator: The Masterwork — the season closes on a marriage in limbo, a name half-cleared, and a detective who got exactly what the killer wanted him to become"
+      ],
+      "section_words": [
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 130,
+          "max": 190,
+          "target": "140 to 170"
+        },
+        {
+          "min": 120,
+          "max": 180,
+          "target": "130 to 160"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 140,
+          "max": 200,
+          "target": "150 to 180"
+        },
+        null,
+        null,
+        null,
+        null
+      ],
+      "section_locations": [
+        "DOCKS",
+        "DOCKS",
+        "DOCKS",
+        "DOCKS",
+        "DOCKS",
+        null,
+        "PRECINCT",
+        "PRECINCT",
+        "PRECINCT",
+        "BOOKSHOP",
+        "HAN_GROCERY",
+        "HAN_GROCERY",
+        null,
+        "VANCE_HOME",
+        null,
+        "DINER",
+        null
+      ],
+      "case": [
+        {
+          "label": "The Puppeteer's Game",
+          "solution": "For nearly a year, Simon Boru — outwardly a courteous antiquarian bookseller — personally committed every murder in the case, staged every crime scene, and mailed every cryptic clue, all as an elaborate act of vengeance for his younger brother Aldous, who was wrongly convicted forty years ago on the confident say-so of another celebrated detective and died in prison still protesting his innocence. Simon fabricated the evidence linking the murders to Han Mei specifically to force Elias into repeating that old injustice, and spent the year's clues deliberately steering Elias toward cutting ethical corners. The killer's true masterwork was never the murders themselves: it was engineering his own death at Elias's hands, alone at the Tannery Docks, off the record and unwitnessed, so that the detective who prided himself on his principles would become, in the one moment that mattered most, exactly the kind of man who destroyed Aldous.",
+          "objective_facts": [
+            "Simon Boru fabricated every clue, staged crime scene, and postcard sent to Elias Vance over the preceding year.",
+            "Simon Boru's younger brother, Aldous Boru, was convicted forty years ago of a murder he did not commit and died in prison still protesting his innocence.",
+            "The physical evidence linking the murders to Han Mei was planted by Simon Boru and had no genuine connection to Han.",
+            "Simon Boru died at the Tannery Docks at Elias Vance's hand, with no other officer present, no arrest made, and no formal record of a confession.",
+            "Simon Boru left a handwritten confession in the locked back room of Boru's Rare Books, addressed only to Elias, never filed as evidence."
+          ],
+          "character_knowledge": {
+            "SIMON_BORU": {
+              "knows": [
+                "every detail of his own crimes and his true motive: avenging Aldous by making a celebrated detective become a killer",
+                "that the confrontation at the docks is the final, intended step of his plan, not an interruption of it"
+              ],
+              "hides": [
+                "his identity as the killer from everyone but Elias, and even from Elias until the docks — to protect the plan until its final move"
+              ],
+              "believes_falsely": [
+                "that forcing Elias to kill him will finally silence forty years of grief over Aldous — a resolution the story never confirms actually arrives"
+              ]
+            },
+            "ELIAS_VANCE": {
+              "knows": [
+                "by episode's end, that Simon was the killer and that the clues were built specifically to unravel him",
+                "that he killed Simon alone at the docks with no witness and no arrest"
+              ],
+              "hides": [
+                "the true, ungoverned circumstances of Simon's death from Captain Zhou and Partner Lin, offering a version of the report that omits how far outside procedure he went"
+              ],
+              "believes_falsely": [
+                "that killing Simon at the docks ended the game on his own terms, when in fact it was the exact outcome Simon spent the year engineering"
+              ]
+            },
+            "CAPTAIN_ZHOU": {
+              "knows": [
+                "Elias's official report of the docks confrontation and the physical evidence recovered afterward"
+              ],
+              "hides": [
+                "his own doubts about that report's completeness from his superiors, choosing to protect Elias and the precinct rather than push for a deeper inquiry"
+              ],
+              "believes_falsely": [
+                "that quietly accepting the official version will contain the damage — not yet reckoning with how much has already gotten out"
+              ]
+            },
+            "PARTNER_LIN": {
+              "knows": [
+                "that the timeline in Elias's report does not match the evidence log from earlier in the case"
+              ],
+              "hides": [
+                "her doubts about Elias's account from Captain Zhou for as long as she can, torn between loyalty and conscience"
+              ],
+              "believes_falsely": [
+                "that confronting Elias privately first will settle the matter, without yet grasping how much of this goes beyond one falsified timeline"
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Frame",
+          "solution": "Han Mei was never involved in the murders. Every piece of evidence connecting him to the case — planted in his storeroom and photographed at the scenes — was fabricated by Simon Boru specifically to frame an innocent immigrant shopkeeper, deliberately echoing the wrongful conviction that destroyed Simon's own brother decades earlier. Following Simon's death and the discovery of his private confession, the charges against Han are formally dropped — but the precinct never issues any public correction, leaving Han legally cleared and socially condemned in the same breath.",
+          "objective_facts": [
+            "The physical evidence tying Han Mei to the murders was manufactured by Simon Boru without Han's knowledge.",
+            "The charges against Han Mei are formally dropped following the discovery of Simon Boru's confession.",
+            "No public statement or press correction clearing Han Mei's name is issued by the Ninth District Precinct.",
+            "Graffiti and a boycott of Han's Grocery continue after the charges are quietly dropped."
+          ],
+          "character_knowledge": {
+            "HAN_MEI": {
+              "knows": [
+                "that he is innocent and that the charges against him have now been dropped"
+              ],
+              "hides": [
+                "the full depth of his humiliation and fury from Elias when Elias comes to apologize, answering him with clipped composure instead"
+              ],
+              "believes_falsely": [
+                "that having the charges dropped will be enough, on its own, to restore his life and his neighbors' trust — a belief the episode's ending does not bear out"
+              ]
+            },
+            "ELIAS_VANCE": {
+              "knows": [
+                "that Han was entirely innocent and that Simon fabricated every piece of evidence against him"
+              ],
+              "hides": [
+                "from Han the full, off-the-books circumstances of how the truth actually came out, offering only the sanitized version he gave his precinct"
+              ],
+              "believes_falsely": [
+                "that a personal, private apology can meaningfully repair the damage his tunnel vision did to Han's life and livelihood"
+              ]
+            },
+            "CAPTAIN_ZHOU": {
+              "knows": [
+                "that the department must drop the charges against Han Mei once Simon Boru's confession surfaces"
+              ],
+              "hides": [
+                "the internal disciplinary conversation about Elias's conduct from any public accounting of the case"
+              ],
+              "believes_falsely": [
+                "that closing the file quietly, without fanfare, is what best protects the precinct — rather than recognizing it leaves Han with nothing"
+              ]
+            },
+            "PARTNER_LIN": {
+              "knows": [
+                "the paperwork trail that proves Han was framed from the very beginning"
+              ],
+              "hides": [
+                "her intention to file a formal complaint about Elias's conduct, waiting until she's certain before acting"
+              ],
+              "believes_falsely": [
+                "that exposing what Elias did on the record will be enough, by itself, to make things right for Han"
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Vance Marriage",
+          "solution": "Elias never had an affair — his secrecy all season was entirely about the killer's game, not another woman — but the emotional abandonment Mira felt was real, and by the season's end his off-the-books killing of Simon Boru becomes one more truth he cannot bring himself to tell her fully. The marriage's future is left genuinely undecided: not reconciled, not ended.",
+          "objective_facts": [
+            "Elias Vance did not have an affair at any point during the season.",
+            "Mira Vance had begun preparing to leave the house before the season's climax.",
+            "Elias returns from the Tannery Docks changed in ways he does not explain to Mira.",
+            "No reconciliation or separation between Elias and Mira is finalized by the season's end."
+          ],
+          "character_knowledge": {
+            "ELIAS_VANCE": {
+              "knows": [
+                "that his marriage is in real crisis because of the secrecy he kept all season, not because of any affair"
+              ],
+              "hides": [
+                "the true nature of Simon Boru's death from Mira, giving her only a softened account"
+              ],
+              "believes_falsely": [
+                "that once the case is truly behind him, he can simply return to the marriage as it was — underestimating how far Mira has already moved on from waiting for that"
+              ]
+            },
+            "MIRA_VANCE": {
+              "knows": [
+                "that something in Elias changed the night he came back from the docks, in a way that doesn't fit her old theory of an affair"
+              ],
+              "hides": [
+                "from Elias exactly how far she had already gotten in planning to leave before he came home"
+              ],
+              "believes_falsely": [
+                "that naming whatever he's still hiding — even now assuming it's some version of another woman — would be enough to let her decide whether to stay, when the truth is something she isn't prepared to hear"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

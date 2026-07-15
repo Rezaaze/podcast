@@ -1,0 +1,949 @@
+--- PART 1 ---
+
+[NARRATOR]
+Previously: Mira Vance followed her husband through fog off the docks and watched him vanish into a bookshop she'd never once heard him mention.
+An hour later he came out again, unremarkable, unhurried, and said nothing to her about where he'd been.
+She still doesn't know what she saw. He doesn't know she was there to see it.
+
+[NARRATOR]
+Six days later, before sunrise, in Captain Zhou's office at the precinct — the captain who rose through these same ranks and mentored Elias himself.
+His desk phone rings before the rest of the floor has even filled up.
+
+[SFX: a desk phone ringing]
+
+[CAPTAIN_ZHOU | style: crisp, professional mask going on]
+Captain Zhou.
+
+[CAPTAIN_ZHOU | style: measured, listening]
+Yes. I'm aware of the coverage. We're aware of all of it.
+
+[CAPTAIN_ZHOU | style: patient, absorbing something]
+No, I understand the concern. I do.
+
+[CAPTAIN_ZHOU | style: a flicker of dry irony under the calm]
+"Optics." Yes. I know what the word means, sir.
+
+[CAPTAIN_ZHOU | style: still even, but tightening]
+We have a suspect we're building against. I'd rather build it right than build it fast.
+
+[CAPTAIN_ZHOU | style: holding the line, quieter now]
+A week is not a long time on a homicide.
+
+[CAPTAIN_ZHOU | style: something in him giving half an inch]
+Understood. I hear you.
+
+[CAPTAIN_ZHOU | style: closing the call, controlled]
+I'll have something for the department by end of week.
+
+[SFX: a phone receiver set down into its cradle]
+
+[NARRATOR]
+Alone now, Zhou sits a moment before the empty room.
+
+[CAPTAIN_ZHOU | style: low, to himself, no one else to hear it]
+Concern. That's what they're calling it now.
+
+[CAPTAIN_ZHOU | style: quiet, working it through]
+Three calls in nine days from a man who's never once asked me about a case before it closed.
+
+[CAPTAIN_ZHOU | style: tired, honest only because no one's listening]
+And I still don't have enough on Han Mei to hang a decent parking ticket, let alone a homicide.
+
+[CAPTAIN_ZHOU | style: harder, weighing the cost of the alternative]
+But try telling them that. Try telling them the file's thin, six weeks in, with the mayor's office reading the papers over my shoulder.
+
+[CAPTAIN_ZHOU | style: settling into something he doesn't like]
+Admitting it now costs me more than it would have cost me a month ago. That's the arithmetic. That's the whole ugly arithmetic of it.
+
+[NARRATOR]
+He doesn't call Elias. He doesn't call Lin. He sits with it alone, the way he's sat with every hard number in this building for twenty years.
+
+[CAPTAIN_ZHOU | style: final, decision half-made already]
+End of the week, then.
+
+[NARRATOR]
+He doesn't yet know a clock has already started somewhere he can't see it — one that neither Elias nor Lin has any reason yet to be watching.
+
+--- PART 2 ---
+
+[NARRATOR]
+The precinct, that same evening, most desks empty. Elias Vance, the detective driving the Han case, alone with the file he intends to build his arrest on.
+
+[ELIAS_VANCE | style: low, focused, talking himself through it]
+Twine. Packaging. The register receipts from March.
+
+[SFX: a folder thumping down onto a desk]
+
+[ELIAS_VANCE | style: muttering, decisive]
+Lead with the receipts. Receipts first, then the twine.
+
+[NARRATOR]
+He works alone, no one to argue with but the paper in front of him.
+
+[ELIAS_VANCE | style: quiet, rationalizing]
+This isn't shaping anything. This is just... organizing it so somebody else can follow the logic.
+
+[SFX: pages sliding against each other, shuffled and restacked]
+
+[ELIAS_VANCE | style: still quiet, but firmer]
+The store's proximity goes second. Then the timeline gap — the timeline gap reads strong if it's not buried behind the weak stuff.
+
+[NARRATOR]
+He sets three thin pages toward the back of the stack without reading them again.
+
+[ELIAS_VANCE | style: dismissive, half to himself]
+Those don't help anyone. They just muddy it.
+
+[SFX: a desk lamp clicking on]
+
+[ELIAS_VANCE | style: reading aloud, building momentum]
+"Recovered packaging, consistent brand, consistent supplier —" consistent. That's a strong word. That's a word that holds up in a room.
+
+[NARRATOR]
+He reads the assembled file back to himself from the top, aloud, as if rehearsing it for an audience only he can see.
+
+[ELIAS_VANCE | style: growing conviction, almost persuaded by his own voice]
+Store two blocks from the first scene. No verified alibi for the window that matters. Materials that trace back to his own shelves. Read together — read together, that's not thin. That's a case.
+
+[SFX: a pen tapping once against the desk, then stopping]
+
+[NARRATOR]
+He sits back, satisfied, unaware of what he's just done.
+
+[ELIAS_VANCE | style: certain, quiet, final]
+I'm not making it say something it doesn't. I'm just — putting it in order.
+
+[NARRATOR]
+He closes the folder, squares its edges, and doesn't open it again to check what he buried.
+
+--- PART 3 ---
+
+[NARRATOR]
+The Puppeteer's Game continues, deep in the back room of Boru's antiquarian bookshop, well past closing. Simon Boru, the shop's elderly owner, works alone at a lamplit table.
+
+[SIMON_BORU | style: quiet, precise, talking himself through it]
+Read it the way he will read it. Not the way anyone else would.
+
+[SIMON_BORU | style: measured, almost clinical]
+"The keeper of small things learns their price too late." Han keeps a store. A grocer. It's close enough for the ones who want it closed. But Elias — Elias won't stop at "close enough."
+
+[SIMON_BORU | style: quietly satisfied, dangerous calm]
+He'll ask what a keeper actually is. He'll ask whose price. And for one clean moment, he'll be looking at the right door.
+
+[SIMON_BORU | style: colder, more deliberate]
+That's the risk. I've never let the language sit this near the truth before.
+
+[SIMON_BORU | style: weighing it, exacting]
+Too near, and it reads as planted. Too far, and he settles for Han again without ever really doubting himself. It has to sit exactly on that line.
+
+[SIMON_BORU | style: quietly amused, unsettling]
+But a man stops chasing the moment he stops believing there's still something left to find. Better a hair too sharp than dull enough to bore him.
+
+[SFX: a single sheet of paper being folded and creased sharply]
+
+[SIMON_BORU | style: methodical]
+No one else touches this. Not the girl — she reads for facts, not architecture. Not the captain — he reads for pressure. Only Elias reads for the shape underneath.
+
+[SIMON_BORU | style: low, almost to the page itself]
+The phrasing comes from the Ashworth binding. Nothing outside these walls even lists it as extant. If it's ever traced, it's traced to me. By then, it won't matter — he'll already be standing exactly where I need him.
+
+[NARRATOR]
+He slides the folded page into a waxed paper sleeve, the kind used to wrap old bindings, and sets it inside a plain courier envelope addressed to no one.
+
+[SIMON_BORU | style: low, final]
+By the water, then. Where the last one was. He'll trust the pattern before he trusts his own doubt.
+
+[SFX: a drawer sliding shut and latching]
+
+[SIMON_BORU | style: quiet, controlled]
+My hand stays out of it from here. It only has to look found.
+
+[SIMON_BORU | style: barely audible, almost a private vow]
+One clean, dangerous line. And still — mine alone to read.
+
+[NARRATOR]
+He turns off the lamp, leaving the envelope ready by the door, and the shop settles back into its ordinary dark.
+
+--- PART 4 ---
+
+[NARRATOR]
+Dawn, the waterfront. Elias Vance and his partner, Partner Lin, arrive at a scene near the docks where a body has been found, a new clue left beside it.
+
+[ELIAS_VANCE | style: clipped, already moving]
+Talk to me. What do we have.
+
+[PARTNER_LIN | style: focused, procedural]
+Responding officer logged it forty minutes ago. Body's already been cleared by the medical examiner's people. This is just us and the item now.
+
+[SFX: a gull crying out low over water, then footsteps on wet gravel]
+
+[PARTNER_LIN | style: careful, cataloguing]
+Folded paper, tucked under a stone by the piling. Same stock as before. Same hand.
+
+[ELIAS_VANCE | style: leaning in, hungry]
+Read it to me.
+
+[PARTNER_LIN | style: flat, precise]
+"The keeper miscounts his flock and calls it faith."
+
+[ELIAS_VANCE | style: already certain, fast]
+Miscounts his flock. That's inventory. That's a man who doesn't know what's on his own shelves. That's Han.
+
+[PARTNER_LIN | style: guarded, quiet]
+Copy that. I'll bag it.
+
+[SFX: an evidence bag crinkling shut]
+
+[ELIAS_VANCE | style: satisfied, moving on]
+Get me photographs from every angle before the tide comes up any further. I want this logged clean.
+
+[PARTNER_LIN | style: even, giving nothing away]
+Already on it.
+
+[NARRATOR]
+Lin photographs the paper, the stone, the wet ground beneath it, her face unreadable to the officers standing at the perimeter.
+
+[PARTNER_LIN | style: to herself, barely audible]
+Faith. Not inventory.
+
+[ELIAS_VANCE | style: distracted, already elsewhere]
+What was that?
+
+[PARTNER_LIN | style: quick, covering]
+Nothing. Making sure I've got the angle.
+
+[SFX: a camera shutter clicking twice]
+
+[NARRATOR]
+She says nothing further, filing the wrongness away rather than voicing it, while Elias walks the wet stones already composing the argument he'll bring back to the precinct.
+
+[ELIAS_VANCE | style: half to himself, building momentum]
+Miscounts his flock. He's been skimming something. Product, money, doesn't matter which. It fits.
+
+[PARTNER_LIN | style: neutral, watching him]
+We'll see what it says next to the rest of the file.
+
+[NARRATOR]
+Neither of them yet says the word that matters — that a man who tends a flock isn't a man who counts stock on a shelf. The clue enters the case exactly as it was left for them, unquestioned, undetected as anything but a break.
+
+--- PART 5 ---
+
+[NARRATOR]
+Back at the precinct, past nine. Elias and Lin sit across from each other at his desk, the clue from the water's edge sealed in a plastic sleeve between them.
+
+[ELIAS_VANCE | style: leaning in, deliberate]
+Read it again. Out loud.
+
+[PARTNER_LIN | style: flat, careful]
+"The keeper miscounts his flock and calls it faith."
+
+[SFX: a plastic evidence sleeve set down on a desk]
+
+[ELIAS_VANCE | style: building an argument, half to himself]
+Keeper. Flock. That's a man who looks after people who depend on him — customers, neighbors. That's a shopkeeper, Lin. That's a till.
+
+[PARTNER_LIN | style: measured, not backing down yet]
+Or it's someone who tends to more than commerce and lies to himself about it. That's not a cash register, Elias. That's a conscience.
+
+[ELIAS_VANCE | style: short laugh, dismissive]
+A conscience doesn't leave fingerprints.
+
+[PARTNER_LIN]
+Neither does "calls it faith." Read it straight, it doesn't say store. It doesn't say grocer. It doesn't say Han.
+
+[ELIAS_VANCE | style: sharpening, faster]
+It doesn't have to say his name. Nothing this guy leaves says a name. That's the game. You stretch it.
+
+[PARTNER_LIN | style: pressing gently]
+Or you stop stretching and let it say what it actually says.
+
+[SFX: a chair leg scraping back an inch on tile]
+
+[ELIAS_VANCE | style: harder edge now, cutting her off]
+We have three weeks of physical evidence pointing at that store. I'm not throwing that out because a sentence can be read two ways.
+
+[PARTNER_LIN | style: quieter, watching him]
+I'm not saying throw it out. I'm saying this piece doesn't help you build it.
+
+[ELIAS_VANCE | style: closing the subject, tired]
+Every piece helps if you know what you're looking at.
+
+[PARTNER_LIN | style: even, retreating without agreeing]
+Sure. Okay.
+
+[NARRATOR]
+She doesn't say anything else. She writes nothing down that contradicts him.
+
+[ELIAS_VANCE | style: already moving on, softer]
+Get some sleep, Lin. Long week coming.
+
+[PARTNER_LIN | style: light, unreadable]
+Yeah. You too.
+
+[NARRATOR]
+She gathers her jacket, glancing once more at the sealed clue before she leaves it on his desk. Her reading of it hasn't moved an inch.
+
+--- PART 6 ---
+
+[NARRATOR]
+The precinct bullpen, later that same evening. Elias has gone. Partner Lin stays behind, alone with the clue's photographs spread across her desk.
+
+[SFX: a desk lamp clicking on]
+
+[PARTNER_LIN | style: quiet, methodical]
+Paper stock, thread-bound, hand-numbered pages. That's not off a shelf anywhere in this city.
+
+[PARTNER_LIN | style: low, to herself]
+Restoration wax on the binding edge. Somebody's still doing this the old way.
+
+[SFX: pages of a supplier directory flipping]
+
+[PARTNER_LIN | style: focused, quickening]
+Three shops citywide carry stock like this. Two only do estate sales.
+
+[PARTNER_LIN | style: careful, weighing it]
+One does restoration work. Antiquarian. Walking distance from the second scene.
+
+[PARTNER_LIN | style: hesitant, arguing with herself | speed: 0.9]
+Or I'm just tired of being told I'm wrong and looking for a reason to be right.
+
+[SFX: a chair pushing back]
+
+[PARTNER_LIN | style: resolved, quiet]
+I'm not bringing this to him. Not yet. Not to Zhou either.
+
+[PARTNER_LIN | style: firm, deciding]
+I'll see the shop myself first. Then I'll know if it's a lead or a grudge.
+
+[SFX: a desk drawer closing]
+
+--- PART 7 ---
+
+[NARRATOR]
+Morning. Mira sits alone at the kitchen table, coffee gone cold, having barely slept. Elias has already left for the precinct.
+
+[MIRA_VANCE | style: exhausted, turning something over]
+A side door. Not the front. He didn't even look up at the sign.
+
+[MIRA_VANCE | style: quiet, methodical]
+Like he'd done it before. Like he knew exactly which door.
+
+[MIRA_VANCE | style: trying to reason it out]
+An hour. In and out. No bag, no flowers, nothing in his hands either way.
+
+[MIRA_VANCE | style: frustrated with herself]
+There has to be a woman. There's always supposed to be a woman.
+
+[MIRA_VANCE | style: quieter, uncertain]
+Unless she works there. Unless it's — office hours. Unless I'm building a stranger's affair out of a locked bookshop and an hour of nothing.
+
+[MIRA_VANCE | style: hardening again]
+No. He wouldn't drive across the city at midnight for a book.
+
+[MIRA_VANCE | style: half to herself, testing the words]
+Some arrangement, then. Something that doesn't look like what it is from the street. That's why the door. That's why the fog didn't bother him — he wanted it.
+
+[MIRA_VANCE | style: tired, almost pleading with herself]
+I just can't see all of it yet. That's all this is. A piece missing, not a wrong picture.
+
+[NARRATOR]
+She picks up her phone, opens a search bar, and types the bookshop's name from memory — she never got close enough to read the sign clearly, only guessed at the letters in the streetlight.
+
+[MIRA_VANCE | style: quiet, disappointed]
+Nothing. Not even hours listed.
+
+[MIRA_VANCE | style: resolve settling in]
+Fine. Then I go back and look at it properly. In daylight, where I can actually read the door.
+
+[NARRATOR]
+She sets the phone face-down on the table, the screen still faintly lit, and doesn't move to clear the coffee cup in front of her.
+
+[MIRA_VANCE | style: low, to herself]
+I'm not imagining this. I know what I saw.
+
+[NARRATOR]
+Outside, a car alarm chirps twice as someone unlocks it down the street — an ordinary sound she doesn't register at all.
+
+[MIRA_VANCE | style: steadier now, decision made]
+I'll wait. I'll watch. I won't ask him first — not until I know what I'm even asking.
+
+[NARRATOR]
+She finally rises, pours the cold coffee down the sink, and starts the day as though it were any other, the note of what she saw folded somewhere she alone knows to look.
+
+--- PART 8 ---
+
+[NARRATOR]
+The Vance house, that same evening. Elias comes home from the precinct. Mira has been waiting since dark.
+
+[SFX: a front door opening, keys dropped into a dish]
+
+[ELIAS_VANCE | style: tired, distracted]
+Smells good. You didn't have to.
+
+[MIRA_VANCE | style: light, carefully even]
+It's just soup. Sit down before it's cold.
+
+[SFX: a chair pulled out, ceramic bowl set on wood]
+
+[NARRATOR]
+She watches him settle in, unhurried, choosing her moment.
+
+[MIRA_VANCE | style: casual, testing]
+Long day?
+
+[ELIAS_VANCE | style: flat, already half elsewhere]
+Long week.
+
+[MIRA_VANCE | style: quiet]
+You look like you haven't slept.
+
+[ELIAS_VANCE]
+I slept.
+
+[MIRA_VANCE | style: gentle, probing]
+Where, though.
+
+[ELIAS_VANCE | style: a beat, mildly puzzled]
+Here. Where else would I sleep, Mira.
+
+[NARRATOR]
+He says it plainly, no flinch in it. She hears the plainness and doesn't know what to do with it.
+
+[MIRA_VANCE | style: softer, retreating slightly]
+I don't know. You've been keeping strange hours. I thought maybe you were crashing at the precinct.
+
+[ELIAS_VANCE | style: a short humorless laugh]
+Some nights I might as well. Zhou's got me pinned to a case that won't sit still.
+
+[NARRATOR]
+This is her opening. She can name the shop now, the fog, the side door. She lets it pass.
+
+[MIRA_VANCE | style: careful, almost too casual]
+Do you ever just... walk, when it gets like that? Clear your head?
+
+[ELIAS_VANCE | style: distracted, spooning soup]
+Sometimes. Why?
+
+[MIRA_VANCE]
+No reason. You used to, before we were married. Walk for hours and not tell me where.
+
+[ELIAS_VANCE | style: faintly amused, unaware]
+I still do that to you?
+
+[MIRA_VANCE | style: even, watching him]
+A little.
+
+[NARRATOR]
+He looks up at her, and there's nothing in his face but tiredness. No guilt, no evasion she can point to.
+
+[ELIAS_VANCE | style: sincere, oblivious]
+I'm sorry. It's not about you. It's this case, it doesn't let go of me when I leave the building.
+
+[MIRA_VANCE | style: measured, masking the disappointment]
+I know.
+
+[NARRATOR]
+She believes him about the not-letting-go. She doesn't believe it's only the case.
+
+[ELIAS_VANCE]
+You okay? You've got that face.
+
+[MIRA_VANCE | style: composed, closing the door she opened]
+I'm fine. Eat your soup before it's cold, like I said.
+
+[SFX: a spoon set down against the bowl's rim]
+
+[NARRATOR]
+He goes back to eating. She watches him a moment longer, the real question still folded up and unspoken between them.
+
+--- PART 9 ---
+
+[NARRATOR]
+Closing time at Han Mei's grocery — the shopkeeper Elias's case has quietly turned into its target. The front window still boarded since it was smashed last week. Han is alone at the counter, on the phone with his wife, who took their daughter to her sister's for the night.
+
+[HAN_MEI | style: tired, trying to sound steady]
+I heard her. Through the wall, I heard every word. She wants us gone from here, and I don't have a clever answer for that.
+
+[HAN_MEI | style: quiet, pushing back]
+But twelve years on this street, twelve years these people have watched me hand them their groceries, their birthday cakes, their credit when they needed it. That has to count for something.
+
+[HAN_MEI | style: firm, a little bitter]
+You want to know what closing costs us? Not just the rent I still owe on the walk-in cooler. It costs us pretending, for the rest of our lives, that we ran because a man wearing a badge decided to stop looking at anyone else.
+
+[HAN_MEI | style: low, strained]
+The window, yes. I know about the window. I was the one on my knees sweeping the glass at six in the morning so she wouldn't see it before school.
+
+[HAN_MEI | style: firmer, almost pleading]
+So we close, and what — we hand them an empty storefront as a trophy? That's not safety. That's surrender with a bow on it.
+
+[HAN_MEI | style: quieter, worn down]
+You keep saying staying open is what invites the next brick through the glass. I keep saying closing is what tells them they can finish the job without anyone stopping them.
+
+[HAN_MEI | style: exhaling, softer]
+I don't have a better argument tonight than the one I had yesterday. I know that.
+
+[HAN_MEI | style: gentle, quieter still]
+She's twelve. She shouldn't have to be brave about a broken window. But being scared and being wrong aren't the same thing, and someone needs to say that out loud in this family tonight.
+
+[HAN_MEI | style: gentle]
+Put her on a second.
+
+[HAN_MEI | style: warm, careful]
+Hey. I heard what you told your mother. I'm not going to pretend I have it solved. I just — I need one more day before I say the word "closed" out loud. Can you give me that?
+
+[HAN_MEI | style: quieter, hurt but trying]
+I know "one more day" is what I said yesterday too.
+
+[SFX: a metal till drawer sliding shut]
+
+[HAN_MEI | style: resigned, to his wife again]
+Put it back on me. Tomorrow. Same as today — we decide again in the morning, and whatever we decide, we decide it together, all three of us.
+
+[SFX: a receipt torn from the till roll]
+
+[HAN_MEI | style: barely audible, alone now]
+Twelve years. It has to mean something more than this.
+
+--- PART 10 ---
+
+[NARRATOR]
+The precinct, later that afternoon. Captain Zhou calls Elias back into his office — the same room where yesterday's disagreement never quite ended.
+
+[CAPTAIN_ZHOU | style: measured, closing the door behind him]
+I got a call this morning. Above my pay grade. You know the kind.
+
+[ELIAS_VANCE | style: already bracing]
+Let me guess. Someone wants a headline.
+
+[CAPTAIN_ZHOU | style: flat, controlled]
+Someone wants this closed. Soon. They didn't say those words. They said "public confidence." They said "timeline." It means the same thing.
+
+[ELIAS_VANCE | style: leaning forward, energized]
+Then it's good timing. I've got the file ready to move on Han.
+
+[CAPTAIN_ZHOU]
+That's not why I told you.
+
+[ELIAS_VANCE | style: not listening]
+No, it fits, Captain. Pressure from above, evidence from below — for once they're pointing the same direction.
+
+[CAPTAIN_ZHOU | style: sharper]
+The financials still don't hold, Elias. Han's accounts don't move like a man hiding money, they move like a man running a grocery store.
+
+[ELIAS_VANCE | style: dismissive, quick]
+Or like a man careful enough not to leave a trail. You don't get sloppy money from someone who's been getting away with this for months.
+
+[CAPTAIN_ZHOU | style: quiet, deliberate]
+Or you get no trail from someone who never did it.
+
+[SFX: a desk drawer sliding shut]
+
+[ELIAS_VANCE | style: controlled but hard]
+I've read this file a dozen times. It holds.
+
+[CAPTAIN_ZHOU | style: tired, direct]
+You've read your file a dozen times. I'm asking if you've read the evidence.
+
+[ELIAS_VANCE | style: cold]
+They're the same thing.
+
+[CAPTAIN_ZHOU | style: long pause, then flat]
+They're not supposed to be.
+
+[NARRATOR]
+Neither man moves. The silence between them sits longer than either intended.
+
+[CAPTAIN_ZHOU | style: resigned, official]
+The department wants a decision this week. I need to know where you stand before I put my name on anything.
+
+[ELIAS_VANCE | style: certain, unwavering]
+I stand where I've stood since the second clue. Han did this. Give me the order and I'll bring him in myself.
+
+[CAPTAIN_ZHOU | style: measured, giving nothing away]
+I haven't given you an order.
+
+[ELIAS_VANCE | style: standing, taking the file off the desk]
+Then I'll wait. But not for long, Captain. Neither will they.
+
+[NARRATOR]
+Elias leaves without another word. Zhou stays behind his desk, the phone call from that morning still sitting unspoken between them.
+
+--- PART 11 ---
+
+[NARRATOR]
+The precinct, later that same afternoon. Captain Zhou, alone in his office now, the door closed.
+
+[SFX: an office door clicking shut]
+
+[CAPTAIN_ZHOU | style: low, private, weighing something]
+Thin. It's thin, and everyone in that building above me knows it's thin, and not one of them cares.
+
+[CAPTAIN_ZHOU | style: quieter, almost rehearsing]
+Common packaging. Common twine. A man who owns a store people walk into every day of the week.
+
+[SFX: a desk drawer sliding open]
+
+[CAPTAIN_ZHOU | style: flat, procedural, talking himself into it]
+Signature line's right here. All it needs is my name.
+
+[CAPTAIN_ZHOU | style: bargaining with himself]
+It's not a conviction. It's an arrest. There's a difference — I can still slow this down after, if it needs slowing.
+
+[CAPTAIN_ZHOU | style: harder, cutting off his own doubt]
+And if I sit on it another week, I'm the one who let a killer keep working while I waited for evidence that might never come. That's not caution. Above me, that's a career.
+
+[CAPTAIN_ZHOU | style: quieter again, more honest]
+Twenty-two years I've read a file before I signed anything. This is the first time I'm reading around one.
+
+[SFX: a pen uncapping]
+
+[CAPTAIN_ZHOU | style: steady, deciding out loud]
+Elias has been right before. Righter than I've been, more than once. That has to count for something now.
+
+[CAPTAIN_ZHOU | style: almost pleading, to no one]
+Later. I fix it later, if it needs fixing. Nothing about signing this is final by itself.
+
+[SFX: pen scratching a signature on paper]
+
+[CAPTAIN_ZHOU | style: exhaling the words, resigned]
+There. Done.
+
+[CAPTAIN_ZHOU | style: still, thoughtful, a beat too late]
+Should've asked Lin what she's been chasing this week before I did this. She's sharp. Sharper than she knows.
+
+[CAPTAIN_ZHOU | style: dismissing it, tired]
+She'd have said something already if it mattered. She would have.
+
+[SFX: a phone receiver lifted from its cradle]
+
+[CAPTAIN_ZHOU | style: brisk, back to procedure]
+Get me processing. Tell them the order's signed — it's moving.
+
+--- PART 12 ---
+
+[NARRATOR]
+Later that evening, back with The Puppeteer's Game. The antiquarian bookshop, closed for the night. Simon Boru moves alone through the narrow aisles.
+
+[SIMON_BORU | style: quiet, unhurried, almost fond]
+No, no. Wrong shelf.
+
+[SFX: a hardcover book being slid a few inches along a wooden shelf]
+
+[SIMON_BORU | style: low, practicing under his breath]
+"Where do I source the flax paper? Three importers, none of them large. I could give you the invoices myself, if it would put your mind at ease."
+
+[SIMON_BORU | style: same, testing the phrasing again]
+"Put your mind at ease." Yes. That's the register. Helpful. Never eager.
+
+[NARRATOR]
+He straightens a stack of ledgers that were already straight.
+
+[SIMON_BORU | style: to himself, wry]
+A man who tidies a shop no one's coming into. There's a word for that. I believe it starts with guilt, in most people.
+
+[SIMON_BORU | style: softer, almost tender, addressed to nothing in particular]
+Not in me. Call it — housekeeping. Everything in its place, before the last few movements play out.
+
+[NARRATOR]
+He crosses to the back of the shop.
+
+[SFX: a deadbolt sliding home, heavy and deliberate]
+
+[SIMON_BORU | style: satisfied, matter-of-fact]
+Good.
+
+[NARRATOR]
+He checks the sightline from the front window to the street outside, an old habit, worn smooth by repetition.
+
+[SIMON_BORU | style: measured, quietly pleased with himself]
+Clear view of the corner. Clear view of the door. If someone comes asking questions — and someone will, sooner now than later — I'll see them coming before they see the shop.
+
+[SIMON_BORU | style: lower, almost a private confession, but still guarded]
+Let them come. I've built this counter for exactly that conversation. Every answer already sitting where I can reach it, like everything else in this room.
+
+[NARRATOR]
+He returns to the register, opens the ledger, runs a finger down the column of the day's small sales.
+
+[SIMON_BORU | style: calm, final, closing a private thought rather than a ledger]
+It's a good sign, isn't it. That they're finally close enough to feel the heat of it. Means the design was sound.
+
+[SFX: the shop bell rattling faintly as he tests the latch on the front door]
+
+[SIMON_BORU | style: satisfied]
+Locked.
+
+[NARRATOR]
+He turns off the lamp by the register, leaving only the streetlight through the front glass, and stands a moment longer than the closing of a shop requires.
+
+--- PART 13 ---
+
+[NARRATOR]
+Late morning, downtown — a narrow antiquarian bookshop wedged between a tailor and a shuttered newsstand. Partner Lin steps in alone, no badge shown, no backup told where she's gone.
+
+[SFX: a brass door chime]
+
+[SIMON_BORU | style: mild, unhurried]
+Take your time. Most people just want the smell of old paper. It rarely disappoints.
+
+[PARTNER_LIN | style: casual, testing]
+Actually, I had a question. Research, more than shopping. You deal in restoration materials too, not just the books themselves?
+
+[SIMON_BORU | style: pleasant, precise]
+Endpapers, marbling, binder's thread, certain inks that don't exist anymore outside a handful of suppliers. I'm one of the last people in this city who still sources it properly. Why — what's the project?
+
+[PARTNER_LIN | style: measuring him]
+Not mine. I'm trying to place a phrase — the kind of thing that comes out of a very specific text. Older. Restored, maybe. I thought someone who handles this material might recognize the flavor of it.
+
+[SIMON_BORU | style: unbothered, warm]
+Flavor's a good word for it. Most modern readers wouldn't know a genuine period phrase if it bit them. Go on — say it.
+
+[NARRATOR]
+Lin recites the clue's wording, plain, without explaining where it came from.
+
+[SIMON_BORU | style: thoughtful, considering]
+Mm. That cadence — could be lifted from any number of restoration primers. Nothing I'd call rare, though the phrasing's been dressed up a little. Someone with a decent private collection could've found that without much trouble.
+
+[PARTNER_LIN | style: careful, watching]
+Would that someone have needed a place like this? Specifically?
+
+[SIMON_BORU | style: gently amused]
+Flattering, but no. I'd like to think I'm harder to replace than that. Whoever wrote it knows their sources — but sources like mine aren't as narrow as people assume. There are two other shops across the river that would sell you the same paper stock.
+
+[SFX: a heavy ledger closing]
+
+[NARRATOR]
+Boru sets the ledger aside, unhurried, watching her take that in.
+
+[SIMON_BORU | style: mild, closing the topic]
+If it helps, I can write down the other names for you. I doubt it'll lead anywhere — but I'd rather be useful than mysterious.
+
+[PARTNER_LIN | style: relaxing slightly]
+That would help. Thank you.
+
+[NARRATOR]
+He writes without hesitation, handing her a slip of paper, his manner unchanged from the moment she walked in.
+
+--- PART 14 ---
+
+[NARRATOR]
+Still inside Boru's shop, at the counter. Lin waits on his answer; Boru takes his time giving it.
+
+[SIMON_BORU | style: unhurried, precise]
+The paper you're describing — that grain, that particular foxing pattern — it's restoration stock. Cotton rag, treated with a gelatin size the old binderies used before the war. I'd say you're looking at material that passed through maybe three, four hands before it ever touched a crime scene.
+
+[PARTNER_LIN | style: taking notes, careful]
+And your shop's one of those hands.
+
+[SIMON_BORU | style: mild, almost amused]
+One of very few left, detective. There's a supplier in Marrow Street who still does the endpapers properly. I buy from him. So does a framer two blocks from the courthouse. So did a rare book dealer who retired to Portugal three years ago and likely still has stock rotting in a warehouse somewhere. It narrows your world. It doesn't narrow it to me.
+
+[NARRATOR]
+He lets that sit a moment before continuing, watching her face rather than the page.
+
+[SIMON_BORU | style: gently correcting]
+If you want a shorter list, I could write down the two other names. Save you some legwork.
+
+[PARTNER_LIN | style: softening, grateful]
+That would help. Thank you.
+
+[SFX: a pen scratching quickly on a small notepad]
+
+[NARRATOR]
+He tears the sheet free and slides it across the counter.
+
+[SIMON_BORU | style: warm, closing the subject]
+I hope it's nothing. Truly. This city's had enough this year.
+
+[PARTNER_LIN | style: relaxing, polite]
+Me too.
+
+[NARRATOR]
+She folds the note into her jacket pocket, glancing once more around the crowded shelves.
+
+[PARTNER_LIN | style: casual, almost an afterthought]
+You've been here a long time. Ever get customers who — I don't know — collect this stuff for the wrong reasons?
+
+[SIMON_BORU | style: unbothered, dry]
+Collectors are strange people, detective. Strange isn't the same as dangerous. In forty years I've sold to eccentrics, obsessives, one man who bought nothing but funeral rites for a decade. None of them ever gave me a reason to call anyone.
+
+[NARRATOR]
+She nods, satisfied, and steps back toward the door.
+
+[PARTNER_LIN | style: sincere]
+Appreciate your time, Mr. Boru.
+
+[SIMON_BORU | style: courteous]
+Anytime.
+
+[SFX: a shop bell jingling as the door opens and closes]
+
+[NARRATOR]
+Alone again, Boru watches the empty street through the window a long moment before he moves.
+
+[SIMON_BORU | style: quiet, private, satisfied]
+Contained.
+
+[NARRATOR]
+He returns to straightening the shelf he never actually left, certain the danger has already passed him by.
+
+--- PART 15 ---
+
+[NARRATOR]
+Captain Zhou's office, later that afternoon. Elias arrives with a case file under his arm, ready to make his argument.
+
+[ELIAS_VANCE | style: controlled, building momentum]
+I want to walk you through it. All of it, in order.
+
+[CAPTAIN_ZHOU | style: measured, listening]
+Then walk me through it.
+
+[SFX: a file folder set down firmly on a desk]
+
+[ELIAS_VANCE | style: rehearsed, persuasive]
+Packaging from the second scene matches product lines Han carries. The twine's a specialty grade — not something you pick up at a hardware store. And he's had three documented complaints filed against him this year alone, all from people who felt threatened.
+
+[CAPTAIN_ZHOU | style: dry, testing]
+Complaints from customers who thought he shorted them on change.
+
+[ELIAS_VANCE | style: firm, brushing past]
+That's a pattern of conflict, Captain. I'm not asking you to ignore where it's thin. I'm asking you to look at where it isn't.
+
+[CAPTAIN_ZHOU | style: quiet]
+And the money. His deposits don't match his receipts some weeks.
+
+[ELIAS_VANCE | style: measured, dismissive]
+A man who runs a cash business and doesn't want the IRS crawling up his register. That's not evidence of murder. That's Tuesday.
+
+[NARRATOR]
+Elias turns a page, and turns past another without pausing on it.
+
+[CAPTAIN_ZHOU | style: careful]
+Nothing new this week ties him to a scene directly.
+
+[ELIAS_VANCE | style: even, deliberate]
+Nothing that contradicts it either.
+
+[NARRATOR]
+He does not say the clue's plain reading. He does not say it points away from Han. He lets the sentence end there.
+
+[CAPTAIN_ZHOU | style: low, weighing]
+You know what's sitting on my desk right now. Calls from three levels up asking why this is taking so long.
+
+[ELIAS_VANCE | style: leaning forward, sharpening]
+Then you know exactly what I'm handing you. A way to answer them. Every week we wait is a week they say we're not moving, and a week he's still walking around free if I'm right about him.
+
+[CAPTAIN_ZHOU | style: quiet, unconvinced but tired]
+If.
+
+[ELIAS_VANCE | style: certain]
+When.
+
+[NARRATOR]
+Zhou looks at the file a long moment. He doesn't open it past the first few pages.
+
+[CAPTAIN_ZHOU | style: reluctant, giving ground]
+Get me the arrest paperwork drafted. I want to review it myself before it goes anywhere.
+
+[ELIAS_VANCE | style: relief masked as professionalism]
+It'll be on your desk within the hour.
+
+[SFX: a chair pushed back, footsteps toward a door]
+
+[NARRATOR]
+Elias gathers the file and leaves. Zhou remains at his desk, the weaker pages of the case still unread, his doubt still exactly where it was — unspoken.
+
+--- PART 16 ---
+
+[NARRATOR]
+Past midnight, the Vance house. Elias asleep down the hall. Mira sits alone at the kitchen table with the light low.
+
+[MIRA_VANCE | style: quiet, to herself, worn]
+Side door. Ten forty. Out again at eleven fifty-one.
+
+[SFX: a drawer sliding open on its runners]
+
+[MIRA_VANCE | style: barely audible]
+No sign. No name over the window I could even read.
+
+[SFX: paper unfolding, softly]
+
+[MIRA_VANCE | style: flat, tired]
+An hour, Elias. What takes an hour in a shop like that.
+
+[NARRATOR]
+She studies the page a long moment, then sets it down, unfolded, on the table in front of her.
+
+[MIRA_VANCE | style: rehearsing, low]
+I followed you. I stood in the fog for an hour because I didn't believe what you told me, and I still don't know what I saw.
+
+[NARRATOR]
+She holds the sentence in her mouth without sending it anywhere.
+
+[MIRA_VANCE | style: quieter, retreating from the thought]
+Not tonight. Not with that look he had at dinner. He'd just — close the door tighter.
+
+[NARRATOR]
+She turns the page a quarter turn, as if a different angle might explain more.
+
+[MIRA_VANCE | style: thinking aloud, tentative]
+Maybe it's not the door that's wrong. Maybe it's the dark. A shop in daylight is just a shop.
+
+[MIRA_VANCE | style: firmer, deciding]
+I could walk past it tomorrow. See the sign. See who's inside. That's not following him. That's just — walking.
+
+[NARRATOR]
+She almost believes herself.
+
+[MIRA_VANCE | style: quiet, resigned]
+Not yet, though. Not the shop, not him. Just — watch a little longer.
+
+[NARRATOR]
+She folds the page back along its old creases, corner to corner, until it's small again.
+
+[SFX: a drawer sliding shut]
+
+[MIRA_VANCE | style: barely a whisper]
+A little longer.
+
+[NARRATOR]
+The kitchen light goes out. Down the hall, Elias doesn't stir, carrying his own silence into the same dark she's just chosen to keep hers in.
+
+--- PART 17 ---
+
+[NARRATOR]
+The precinct, that afternoon. Captain Zhou's office, then Elias's desk down the hall.
+
+[SFX: a pen scratching a signature across paper]
+
+[CAPTAIN_ZHOU | style: flat, final]
+Authorized. Bring him in tonight.
+
+[NARRATOR]
+Down the hall, the order reaches Elias.
+
+[ELIAS_VANCE | style: quiet satisfaction]
+Finally. Somebody upstairs remembers how this job works.
+
+[PARTNER_LIN | style: catching up too late, sharp]
+Tonight? Elias, I wanted another day —
+
+[ELIAS_VANCE | style: already moving past her]
+Zhou signed it. We don't have another day.
+
+[NARRATOR]
+Lin says nothing further. The moment for the bookshop has already closed.
+
+[NARRATOR]
+Alone at his desk, Elias sets one page apart from the rest.
+
+[ELIAS_VANCE | style: barely audible, to himself]
+Doesn't fit. Doesn't matter.
+
+[SFX: a single sheet of paper folding, then a file drawer sliding shut]
+
+[NARRATOR]
+He lifts the phone.
+
+[ELIAS_VANCE | style: calm, certain, closing the door on doubt]
+This is Vance. Bring Han Mei in.
+
