@@ -633,7 +633,7 @@ def tag_episode_from_meta(episode_path, input_file, data):
     series_title = data.get("series_title", "")
     prefix = data.get("output_prefix", config.DEFAULTS["output_prefix"])
     meta_path = os.path.splitext(input_file)[0] + "_META.txt"
-    title, description = audio.parse_meta_file(meta_path)
+    title, description, _question = audio.parse_meta_file(meta_path)
     if not title:
         print(f"  Hinweis: Keine {os.path.basename(meta_path)} gefunden — "
               f"MP3 bleibt ohne ID3-Titel/Beschreibung.")

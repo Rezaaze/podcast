@@ -92,6 +92,14 @@ crime_drama, soap_opera, shorts.
 - `all [--jobs N] [--force] [--fix] [--no-script-review]` — alle Episoden
   (Subprocess pro Episode), danach automatisch batch.py.
 - `--fix`/Review-Semantik und Beats: siehe fabrik/writing/CLAUDE.md.
+- Jede Episode bekommt automatisch eine `<prefix>N_META.txt`
+  (Titel/Beschreibung/Zuschauer-Frage, `script_writer.generate_episode_meta`)
+  — die Frage ist bewusst spoilerfrei (ans Episoden-Thema/-Dilemma
+  gebunden, aber ohne Auflösung/Twist), landet über
+  `pipeline.parse_meta_file` in `batch.py::generate_upload_index` als
+  „Frage an die Zuschauer" in `UPLOAD_INDEX.md` — dort zum Copy-Paste in
+  Videobeschreibung/Community-Post. Ältere `_META.txt` ohne `FRAGE:`-Feld
+  liefern `None` (kein Fehler, die Zeile fehlt dann nur im Index).
 
 ## import_story.py
 

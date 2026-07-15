@@ -230,16 +230,19 @@ def merge_parts_to_episode(part_paths, episode_path, pause_between_parts_ms, tar
 
 
 def parse_meta_file(meta_path):
-    """Liest TITEL/BESCHREIBUNG aus einer *_META.txt (Format wie von
-    script_writer.generate_episode_meta() geschrieben)."""
+    """Liest TITEL/BESCHREIBUNG/FRAGE aus einer *_META.txt (Format wie von
+    script_writer.generate_episode_meta() geschrieben). FRAGE ist optional
+    (ältere META-Dateien ohne Zuschauer-Frage) -- dann None."""
     if not os.path.exists(meta_path):
-        return None, None
+        return None, None, None
     with open(meta_path, "r", encoding="utf-8") as f:
         content = f.read()
-    match = re.search(r"TITEL:\s*(.+?)\s*BESCHREIBUNG:\s*(.+)", content, re.DOTALL)
+    match = re.search(r"TITEL:\s*(.+?)\s*BESCHREIBUNG:\s*(.+?)(?:\n\s*FRAGE:\s*(.+))?\s*$",
+                      content, re.DOTALL)
     if not match:
-        return None, None
-    return match.group(1).strip(), match.group(2).strip()
+        return None, None, None
+    question = match.group(3).strip() if match.group(3) else None
+    return match.group(1).strip(), match.group(2).strip(), question
 
 
 def extract_episode_number(input_file, prefix):

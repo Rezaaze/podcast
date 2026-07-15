@@ -810,10 +810,17 @@ def generate_episode_meta(series: Series, ep_idx, data, episodes, force, cfg) ->
         f"2. A description: 120 to 180 words, matching the tone of the "
         f"series. First sentence must hook immediately. Describe what the listener will "
         f"experience without spoiling the ending. Mention the series name once. "
-        f"No hashtags, no emojis, no bullet points, no meta commentary.\n\n"
+        f"No hashtags, no emojis, no bullet points, no meta commentary.\n"
+        f"3. A discussion question for viewers/listeners to post as a comment-bait "
+        f"question (e.g. in the video description or a community post): tied to the "
+        f"episode's theme/dilemma, inviting people to share their own opinion or "
+        f"experience — NOT a trivia/recall question about plot details, and it must "
+        f"NOT reveal or hint at the ending, the twist, or how the theme resolves. "
+        f"One sentence, ends with a question mark.\n\n"
         f"Answer in EXACTLY this format and nothing else:\n"
         f"TITLE: <the title>\n"
-        f"DESCRIPTION:\n<the description>"
+        f"DESCRIPTION:\n<the description>\n"
+        f"QUESTION: <the question>"
     )
 
     print(f"\n  Generiere Titel & Beschreibung ...")
@@ -823,14 +830,17 @@ def generate_episode_meta(series: Series, ep_idx, data, episodes, force, cfg) ->
         output = call_claude(prompt, cfg.get("light_model", cfg["model"]), label="Episode-Metadaten",
                              effort=cfg.get("effort"))
         if output:
-            match = re.search(r"TITLE:\s*(.+?)\s*DESCRIPTION:\s*(.+)", output, re.DOTALL)
+            match = re.search(r"TITLE:\s*(.+?)\s*DESCRIPTION:\s*(.+?)\s*QUESTION:\s*(.+)",
+                              output, re.DOTALL)
             if match:
                 title = match.group(1).strip()
                 description = match.group(2).strip()
-                if title and len(title) <= 120 and len(description.split()) >= 60:
+                question = match.group(3).strip()
+                if (title and len(title) <= 120 and len(description.split()) >= 60
+                        and question and question.endswith("?")):
                     with open(meta_file, "w", encoding="utf-8") as f:
-                        f.write(f"TITEL:\n{title}\n\nBESCHREIBUNG:\n{description}\n")
-                    print(f"  ✓ Titel & Beschreibung gespeichert: {os.path.basename(meta_file)}")
+                        f.write(f"TITEL:\n{title}\n\nBESCHREIBUNG:\n{description}\n\nFRAGE:\n{question}\n")
+                    print(f"  ✓ Titel & Beschreibung & Zuschauer-Frage gespeichert: {os.path.basename(meta_file)}")
                     print(f"    → {title}")
                     return True
         print(f"  Versuch {attempt}/{MAX_RETRIES}: unbrauchbare Metadaten-Ausgabe.")

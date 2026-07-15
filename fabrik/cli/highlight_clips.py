@@ -64,15 +64,16 @@ def mp3_path(series, episode_name):
 
 
 def parse_meta_file(meta_path):
-    """TITEL/BESCHREIBUNG aus <prefix>N_META.txt — Regex identisch zu
-    fabrik/audio/pipeline.py::parse_meta_file, hier lokal gespiegelt, weil
-    dieses CLI ohne venv laufen muss und fabrik/audio deshalb tabu ist
-    (Import-Regel, siehe fabrik/core/CLAUDE.md)."""
+    """TITEL/BESCHREIBUNG (FRAGE wird hier ignoriert) aus <prefix>N_META.txt
+    — Regex identisch zu fabrik/audio/pipeline.py::parse_meta_file, hier
+    lokal gespiegelt, weil dieses CLI ohne venv laufen muss und
+    fabrik/audio deshalb tabu ist (Import-Regel, siehe fabrik/core/CLAUDE.md)."""
     if not os.path.exists(meta_path):
         return None, None
     with open(meta_path, "r", encoding="utf-8") as f:
         content = f.read()
-    match = re.search(r"TITEL:\s*(.+?)\s*BESCHREIBUNG:\s*(.+)", content, re.DOTALL)
+    match = re.search(r"TITEL:\s*(.+?)\s*BESCHREIBUNG:\s*(.+?)(?:\n\s*FRAGE:\s*.+)?\s*$",
+                      content, re.DOTALL)
     if not match:
         return None, None
     return match.group(1).strip(), match.group(2).strip()

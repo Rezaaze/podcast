@@ -115,7 +115,7 @@ def write_chapters(episode_pairs, anthology_path, pause_ms):
     offsets = episode_offsets_ms(episode_paths, pause_ms)
     chapters = []
     for (script, episode_file), offset in zip(episode_pairs, offsets):
-        title, _ = audio.parse_meta_file(os.path.splitext(script)[0] + "_META.txt")
+        title, _desc, _question = audio.parse_meta_file(os.path.splitext(script)[0] + "_META.txt")
         chapters.append({"start_ms": offset,
                          "title": title or episode_name_from_file(episode_file)})
 
@@ -270,7 +270,7 @@ def generate_upload_index(series, episode_pairs, anthology_path, data, chapters=
 
     for script, episode_file in episode_pairs:
         meta_path = os.path.splitext(script)[0] + "_META.txt"
-        title, desc = audio.parse_meta_file(meta_path)
+        title, desc, question = audio.parse_meta_file(meta_path)
         episode_num = audio.extract_episode_number(script, prefix)
         display_title = audio.format_season_title(series_title, season, episode_num, title)
         lines.append(f"## {os.path.basename(episode_file)}")
@@ -279,10 +279,15 @@ def generate_upload_index(series, episode_pairs, anthology_path, data, chapters=
             lines.append(f"**Spotify-Metadaten:** Staffel {season}, Folge {episode_num} "
                          f"(in die entsprechenden Felder bei Spotify for Podcasters eintragen)\n")
         lines.append(f"**Beschreibung:**\n{desc or '(keine Beschreibung generiert)'}\n")
+        # Comment-Bait-Frage fürs Ende der Videobeschreibung/einen Community-Post —
+        # bewusst spoilerfrei (siehe generate_episode_meta-Prompt), fehlt bei
+        # Episoden von vor diesem Feature (keine FRAGE: in der META.txt).
+        if question:
+            lines.append(f"**Frage an die Zuschauer:** {question}\n")
         lines.append("---\n")
 
     if os.path.exists(anthology_path):
-        title, desc = audio.parse_meta_file(series.anthology_meta_file)
+        title, desc, _question = audio.parse_meta_file(series.anthology_meta_file)
         lines.append(f"## {os.path.basename(anthology_path)}  (Gesamt-Anthologie)")
         lines.append(f"**Titel:** {title or '(kein Titel generiert)'}\n")
         lines.append(f"**Beschreibung:**\n{desc or '(keine Beschreibung generiert)'}\n")
@@ -575,7 +580,7 @@ def main():
     # Titel & Beschreibung sind nice-to-have — ein Fehlschlag hier lässt den
     # Merge nicht scheitern (Skript erneut starten generiert sie nach).
     generate_anthology_meta(series, data)
-    title, description = audio.parse_meta_file(series.anthology_meta_file)
+    title, description, _question = audio.parse_meta_file(series.anthology_meta_file)
     if title:
         if audio.tag_mp3(anthology_path, title=title, album=data.get("series_title", ""), comment=description):
             print(f"ID3-Tags geschrieben (Titel: \"{title}\")")

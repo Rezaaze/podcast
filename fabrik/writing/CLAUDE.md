@@ -54,7 +54,7 @@ badness)` zurück:
 ## Leichtes Modell für nicht-kreative Calls
 
 `generation.light_model` (Default `claude-haiku-4-5`) für:
-`generate_episode_meta` (Titel/Beschreibung), beide LLM-Reviews
+`generate_episode_meta` (Titel/Beschreibung/Zuschauer-Frage), beide LLM-Reviews
 (`review_episode_script`, `review_episode_beats`), `import_story`s
 Metadaten-Summarization. Kreatives (Sections, Beats, `repair_part`) bleibt
 auf `generation.model`.
