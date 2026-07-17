@@ -1,26 +1,53 @@
 # templates — die Prompt-"Produktdefinition"
 
-Jedes Template lebt in `templates/<name>/` mit zwei Dateien, iteriert wird
-hier ohne Python anzufassen. (Sonderfall daneben: `templates/_workspace/`
-ist KEIN Format-Template, sondern das MWP-Workspace-Skeleton —
+Jedes Template lebt in `templates/<name>/`, iteriert wird hier ohne Python
+anzufassen. (Sonderfall daneben: `templates/_workspace/` ist KEIN
+Format-Template, sondern das MWP-Workspace-Skeleton —
 CONTEXT/CLAUDE-Verträge mit `{{SERIES_TITLE}}`-Platzhaltern, die
 `fabrik/core/workspace.py::scaffold_workspace` in neue Serien stanzt.)
 
+**Zwei Dateien** (narration, media_analysis, language_course, shorts):
 - `EPISODES_CREATOR_PROMPT.md` — erzeugt via create_series.py die komplette
   episodes.json in einem Schuss. Muss `{{FIGURE_HISTORY}}` enthalten
   (build_prompt errort sonst laut) und die Literale
   `parts_per_section`/`words_per_part_target` irgendwo im Schema-Block
   (estimate_section_count parst sie für die --minutes-Skalierung).
-  **Single-Source-Platzhalter** (build_prompt substituiert aus
-  `fabrik/core/config.py`, nie wörtlich in Templates pflegen — die
-  Chelsie-Lektion): `{{DEFAULT_MODEL}}` (alle sechs Templates, aus
-  `DEFAULTS["model"]`), `{{VOICE_ROSTER}}` (Bullet-Liste,
-  crime_drama/soap_opera/shorts) und `{{VOICE_ROSTER_COMPACT}}` (Fließtext,
-  language_course) aus `BUILTIN_SPEAKER_ROSTER`. Unersetzte
-  `{{...}}`-Platzhalter werden beim Erstellen laut angewarnt.
 - `PROMPT_TEMPLATE.md` — das Per-Section-Skript-Prompt,
   `{{PLACEHOLDER}}`-substituiert von
   `fabrik/writing/script_writer.py::build_section_prompt`.
+
+**Drei Dateien** (crime_drama, soap_opera — die zwei `CASE_BASED_TEMPLATES`,
+seit dem Stage-01-Umbau, Begründung: `docs/konzept-stage-umbau.md`):
+`EPISODES_CREATOR_PROMPT.md` entfällt zugunsten von drei kleinen,
+aufeinander aufbauenden Prompts (Details der Verträge:
+`templates/_workspace/stage_01{a,b,c}_CONTEXT.md`):
+- `CANON_PROMPT.md` — EIN Call, liefert `canon.json` (Welt, Cast, Orte nur
+  soap_opera, `threads` mit `label`/`solution`/`objective_facts`). Trägt
+  weiterhin `parts_per_section`/`words_per_part_target` für
+  `estimate_section_count`.
+- `ARC_PROMPT.md` — EIN Call, bekommt `canon.json` als `{{CANON_JSON}}`
+  injiziert, liefert `arc.json` (`turning_points` — jeder Wendepunkt EINER
+  Episode zugeteilt — plus `figure`/`theme` pro Episode).
+- `EPISODE_PROMPT.md` — EIN Call PRO EPISODE (parallel), bekommt
+  `{{CANON_JSON}}` + `{{ARC_JSON}}` + `{{EPISODE_NUMBER}}` +
+  `{{EPISODE_TURNING_POINTS}}` injiziert, liefert `sections`
+  (`{title, what, who, thread, location, words}` — bei crime_drama ohne
+  `location`) + `case` (`{label, character_knowledge}`) + `intro_note`/
+  `outro_note` für GENAU diese eine Episode.
+  `{{SECTION_WORDS_MIN}}`/`{{SECTION_WORDS_MAX}}` sind das
+  Detailtiefe-Band für `what` (sprachneutral über
+  `textproc.count_length_units`, Default 12-30) — hartes Vertragsfeld,
+  nicht nur "Pflichtfeld": verhindert, dass dieselbe Episode drei
+  ausführliche Szenen und eine Stichwort-Szene mischt (CONCOCT-Lektion,
+  siehe docs/konzept-stage-umbau.md).
+
+**Single-Source-Platzhalter** (build_prompt substituiert aus
+`fabrik/core/config.py`, nie wörtlich in Templates pflegen — die
+Chelsie-Lektion), gelten für alle Varianten: `{{DEFAULT_MODEL}}` (aus
+`DEFAULTS["model"]`), `{{VOICE_ROSTER}}` (Bullet-Liste,
+crime_drama/soap_opera/shorts) und `{{VOICE_ROSTER_COMPACT}}` (Fließtext,
+language_course) aus `BUILTIN_SPEAKER_ROSTER`. Unersetzte
+`{{...}}`-Platzhalter werden beim Erstellen laut angewarnt.
 
 ## Zwei Modes, sechs Templates
 

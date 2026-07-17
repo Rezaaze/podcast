@@ -22,6 +22,18 @@ einzige Serie).
 
 ## create_series.py
 
+**⚠️ In Umbau (Branch `mwp-umbau`, Plan: `docs/konzept-stage-umbau.md`):**
+für `CASE_BASED_TEMPLATES` wird der Ein-Schuss-/Batch-Mechanismus unten
+durch drei kleine, aufeinander aufbauende Calls ersetzt (Kanon → Bogen →
+Episoden einzeln parallel) — Vertrag bereits geschrieben
+(`templates/_workspace/stage_01{a,b,c}_CONTEXT.md`,
+`templates/{crime_drama,soap_opera}/{CANON,ARC,EPISODE}_PROMPT.md`), der
+Generierungscode in `create_series.py` (unten beschrieben) läuft zum
+Zeitpunkt dieses Absatzes noch auf dem ALTEN Batch-Pfad — dieser Abschnitt
+wird erst nach Phase 3 des Umbau-Plans überschrieben, nicht schon jetzt,
+um keine Dokumentation zu schreiben, die dem tatsächlichen Code
+widerspricht.
+
 `python3 -m fabrik.cli.create_series "Topic" [--episodes N] [--minutes M]
 [--locations L] [--template T] [--no-review] [--fix]`
 

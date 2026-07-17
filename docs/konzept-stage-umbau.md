@@ -187,16 +187,45 @@ Modell, nicht gegen selbstgemachte Redundanz.
 
 ### Phase 0 — Absichern
 
-- [ ] **T0.1 Commit des Ist-Stands.** Der Working Tree trägt die
+- [x] **T0.1 Commit des Ist-Stands.** Der Working Tree trug die
       17.07.-Fixes (Runner-`boolflag_off`, Reparatur-Dispatcher,
       Abriss-Erkennung, Checkpoint-Schlüssel, Geister-Review-Fix,
-      `check_section_detail`). Erst committen, dann umbauen.
-- [ ] **T0.2 Reparaturlauf abwarten.** `generate_episode all --no-audio
-      --fix` über seven_seats/founding/glasshouse muss durch sein, sonst
-      kollidieren Handkorrekturen mit laufenden Part-Reparaturen.
-- [ ] **T0.3 Referenz-Datensatz einfrieren.** Die Section-Tiefen-Messung
-      über alle 15 Serien als Tabelle in dieses Dokument, damit nach dem
-      Umbau vergleichbar ist, ob 01c die Granularität wirklich stabilisiert.
+      `check_section_detail`) — committet (17.07., "Ist-Stand vor
+      Stage-01-Umbau").
+- [x] **T0.2 Reparaturlauf abwarten.** Keine `generate_episode --fix`-
+      Prozesse liefen mehr (geprüft via `ps aux`) — nichts zu kollidieren.
+- [x] **T0.3 Referenz-Datensatz einfrieren.** Section-Tiefe pro Episode
+      (Ø `count_length_units` je Section) über alle Case-based-Serien
+      (`soap_opera`/`crime_drama`/`shorts`) mit vorhandener episodes.json,
+      Stand 17.07.2026 — Basis für den Vergleich in Phase 5 (T5.3).
+      Faktor = max/min innerhalb der Serie; ≥3 markiert als Batch-Cliff
+      (deckt sich mit dem Befund oben: kein Gradient, ein Kippschalter).
+
+      | Serie | Template | Eps | min | max | Faktor | Section-Tiefe pro Episode |
+      |---|---|---|---|---|---|---|
+      | chain_of_custody | soap_opera | 10 | 3.0 | 32.1 | **10.7** ⚠️ | 21.8, 20.5, 20.6, 23.2, 21.7, 21.8, 3.8, 3.6, 3.0, 32.1 |
+      | mwp_smoke | soap_opera | 10 | 3.0 | 32.1 | **10.7** ⚠️ | 21.8, 20.5, 20.6, 23.2, 21.7, 21.8, 3.8, 3.6, 3.0, 32.1 |
+      | the_long_fare | soap_opera | 10 | 3.5 | 23.0 | **6.5** ⚠️ | 21.5, 20.2, 23.0, 14.5, 14.8, 16.2, 3.9, 3.5, 4.4, 17.7 |
+      | the_understudy | soap_opera | 10 | 3.8 | 21.5 | **5.7** ⚠️ | 12.4, 12.7, 12.6, 4.2, 4.0, 3.8, 6.9, 7.0, 7.2, 21.5 |
+      | the_glasshouse_vote | soap_opera | 10 | 3.7 | 23.4 | **6.4** ⚠️ | 18.3, 21.3, 23.4, 16.6, 20.9, 17.4, 4.1, 3.9, 3.9, 3.7 |
+      | the_founding_collection | soap_opera | 8 | 7.2 | 27.3 | **3.8** ⚠️ | 9.5, 8.5, 7.2, 27.3, 23.8, 25.7, 20.5, 20.3 |
+      | negative_space | soap_opera | 8 | 7.2 | 21.0 | 2.9 | 8.2, 7.2, 21.0, 19.4, 17.5, 16.4, 17.6, 18.9 |
+      | borrowed_pulse | soap_opera | 10 | 8.1 | 20.8 | 2.6 | 19.1, 19.5, 20.8, 16.9, 16.9, 17.1, 8.5, 8.1, 8.2, 20.6 |
+      | cured_by_design | soap_opera | 8 | 9.1 | 22.1 | 2.4 | 19.8, 21.1, 21.3, 22.1, 15.4, 13.6, 10.1, 9.1 |
+      | amity_hollow | soap_opera | 8 | 13.6 | 25.3 | 1.9 | 17.7, 19.5, 24.0, 23.5, 14.9, 13.6, 23.1, 25.3 |
+      | seven_seats | soap_opera | 6 | 14.0 | 24.2 | 1.7 | 16.2, 17.0, 14.0, 17.9, 21.7, 24.2 |
+      | discharged_cured | soap_opera | 8 | 12.6 | 20.6 | 1.6 | 19.2, 20.4, 20.6, 19.4, 14.8, 12.6, 16.4, 16.8 |
+      | the_curator_s_masterwork | soap_opera | 10 | 16.4 | 23.9 | 1.5 | 20.8, 20.2, 20.5, 16.9, 16.4, 18.9, 23.9, 23.5, 22.7, 23.8 |
+      | vanishing_signal | soap_opera | 10 | 10.7 | 14.7 | 1.4 | 12.1, 11.3, 12.8, 10.9, 10.7, 10.8, 10.7, 12.8, 11.6, 14.7 |
+      | facades | soap_opera | 10 | 23.4 | 31.3 | 1.3 | 27.8, 28.2, 25.2, 26.5, 25.2, 23.4, 27.0, 26.2, 26.0, 31.3 |
+      | the_wildrose_inheritance | soap_opera | 2 | 32.5 | 38.7 | 1.2 | 38.7, 32.5 |
+      | first_do_harm | shorts | 5 | 37.7 | 42.7 | 1.1 | 42.7, 37.7, 40.7, 41.0, 38.3 |
+      | stitched | shorts | 2 | 29.0 | 31.0 | 1.1 | 31.0, 29.0 |
+
+      5 von 17 Serien tragen den Batch-Cliff (Faktor ≥3) — deckungsgleich
+      mit dem im Befund oben genannten Sample. `mwp_smoke` ist eine
+      1:1-Kopie von `chain_of_custody` (Smoke-Test-Fixture), zählt separat
+      mit, weil beide unabhängig regeneriert werden könnten.
 
 ### Phase 1 — Verträge schreiben (reine .md-Arbeit, gefahrlos)
 
