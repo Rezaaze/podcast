@@ -227,5 +227,287 @@
    "surprise",
    "vulnerability"
   ]
+ },
+ "770b5ecfa7866caf": {
+  "description": "Maya's longtime podcast producer and co-host, a lifelong local with no personal stake in Hollow Pines beyond the story itself; his blind spot is trusting official channels a beat too long.",
+  "aliases": [],
+  "emotions": [
+   "anger",
+   "fear",
+   "joy",
+   "sadness",
+   "surprise",
+   "vulnerability"
+  ]
+ },
+ "cd95699e715f863b": {
+  "description": "the podcast's lead investigator, who immigrated from Seoul with her mother at twelve and has spent her adult life chasing overlooked stories; she doesn't yet know how close Hollow Pines sits to her own family.",
+  "aliases": [],
+  "emotions": [
+   "anger",
+   "fear",
+   "joy",
+   "love",
+   "sadness",
+   "surprise",
+   "vulnerability"
+  ]
+ },
+ "9d13e49e4058ce5d": {
+  "description": "a sitting state senator eyeing a run for governor, granddaughter of Hollow Pines' medical director; publicly a reform-minded pragmatist, privately desperate to keep her family's role in the asylum's history buried.",
+  "aliases": [],
+  "emotions": [
+   "anger",
+   "fear",
+   "sadness",
+   "surprise",
+   "vulnerability"
+  ]
+ },
+ "0fe5633c35f86133": {
+  "description": "a former Hollow Pines nurse, now in her eighties, who immigrated from Guangzhou in the 1960s; she has carried the diaries' secrets — and one secret bigger than the rest — for fifty years.",
+  "aliases": [],
+  "emotions": [
+   "anger",
+   "fear",
+   "joy"
+  ]
+ },
+ "6a723c3151cb5627": {
+  "description": "Diana Chen's son, an investigative journalist who spent much of his childhood with his father's family in Beijing before returning to the US; assigned to cover the same story as Maya, he's caught between loyalty to his mother and his own reporting instincts.",
+  "aliases": [],
+  "emotions": [
+   "anger",
+   "fear",
+   "joy",
+   "sadness",
+   "surprise",
+   "vulnerability"
+  ]
+ },
+ "241e0ee34149f949": {
+  "description": "the Chen family's longtime fixer and attorney, born in Chengdu and educated in the US; ruthlessly protective of Diana's career, he's hiding a family connection of his own to what really happened at Hollow Pines.",
+  "aliases": [],
+  "emotions": [
+   "anger",
+   "fear",
+   "love",
+   "sadness",
+   "surprise",
+   "vulnerability"
+  ]
+ },
+ "19e3f3ce2659f430": {
+  "description": "lead investigator for the digital forensics unit; native English speaker; still carries guilt from a prior case where he dismissed a whistleblower who turned out to be right, and is determined not to make that mistake twice.",
+  "aliases": [],
+  "emotions": [
+   "fear",
+   "sadness",
+   "surprise",
+   "vulnerability"
+  ]
+ },
+ "c45da7c83f341bc2": {
+  "description": "child trauma psychologist attached to the investigation to work with Milo, the sole survivor; emigrated from Chengdu as a teenager and has built her career reading what silence hides — she believes she's protecting the last witness, blind to what he's really protecting.",
+  "aliases": [],
+  "emotions": [
+   "anger",
+   "fear",
+   "sadness",
+   "vulnerability"
+  ]
+ },
+ "7e2396493e869340": {
+  "description": "signals and audio forensics analyst, Beijing-born, moved to the US for graduate work in acoustic engineering; his cousin's family lived in Amity Hollow, so this case is personal in a way he hasn't told the team.",
+  "aliases": [],
+  "emotions": [
+   "anger",
+   "fear",
+   "sadness",
+   "surprise",
+   "vulnerability"
+  ]
+ },
+ "3435f1505151363c": {
+  "description": "government liaison assigned to facilitate the team's access to the restricted zone; Korean-American, raised between Seoul and the Pacific Northwest — officially there to help; unofficially reporting every step of the investigation to someone else.",
+  "aliases": [],
+  "emotions": [
+   "anger",
+   "fear",
+   "joy",
+   "sadness",
+   "vulnerability"
+  ]
+ },
+ "f9d64276e902fd10": {
+  "description": "retired systems engineer living off-grid near the ridge; decades ago helped build the original underground facility before it was taken over and repurposed; carries a guilt he's never spoken aloud.",
+  "aliases": [],
+  "emotions": [
+   "anger",
+   "fear",
+   "love",
+   "sadness",
+   "vulnerability"
+  ]
+ },
+ "134142da0b2a9dde": {
+  "description": "the sole survivor, a boy of about ten found alone in the village clutching a drawing of a recurring symbol; refuses to speak to anyone but Dr. Lin — or so it appears.",
+  "aliases": [],
+  "emotions": [
+   "vulnerability"
+  ]
+ },
+ "c104f325d369c075": {
+  "description": "a Chinese-American elementary school teacher, born and raised in the city to an immigrant family; survives an illegal black-market heart transplant and slowly discovers she has inherited more than a heartbeat — she is the emotional center of the marriage thread and the unwilling battleground of the resurrection thread; she does not know, at first, whose heart she carries or why her hands sometimes act before she decides anything",
+  "aliases": [],
+  "emotions": [
+   "anger",
+   "fear",
+   "joy",
+   "love",
+   "sadness",
+   "surprise",
+   "vulnerability"
+  ]
+ },
+ "d5762087abc9f8ca": {
+  "description": "the dead contract killer known in the underworld as 'the Quiet Man', trained overseas by a transnational syndicate; his consciousness survives as cellular memory in the heart now beating in Maya's chest, intruding as an internal presence only the listener can hear distinctly; he knows exactly what he wants finished and does not care what it costs the woman carrying him",
+  "aliases": [],
+  "emotions": [
+   "anger",
+   "joy",
+   "love",
+   "vulnerability"
+  ]
+ },
+ "86355c21da02eaa6": {
+  "description": "a native-born homicide detective chasing a cold case that has suddenly gone warm again; drives the cover-up investigation into the clinic and the illegal organ trade, and has no idea the trail leads to a schoolteacher",
+  "aliases": [],
+  "emotions": [
+   "anger",
+   "fear",
+   "sadness",
+   "surprise",
+   "vulnerability"
+  ]
+ },
+ "bb40bac36490e5d2": {
+  "description": "Maya's husband, a second-generation Chinese-American restaurant owner; loves her without reservation and has no framework for what's happening to her — his blind spot is assuming her lies are about another man, not about a dead man",
+  "aliases": [],
+  "emotions": [
+   "anger",
+   "fear",
+   "joy",
+   "love",
+   "sadness",
+   "surprise",
+   "vulnerability"
+  ]
+ },
+ "b1cb86db86b4f73e": {
+  "description": "the matriarch who built the syndicate the Quiet Man once served; immigrated decades ago and never lost her accent or her control; drives the resurrection thread from the top, deciding whether Maya is a threat to eliminate or an asset to claim, and hides her own role in what happened to Marcus",
+  "aliases": [],
+  "emotions": [
+   "anger",
+   "fear",
+   "joy",
+   "sadness",
+   "vulnerability"
+  ]
+ },
+ "aed94dfc55ec2586": {
+  "description": "a Korean-American enforcer and Marcus's former protégé — and the person who loved him before he died; assigned by Madam Chen to hunt the rumored 'ghost', she is the first to recognize something real in Maya and the character most torn between duty and a grief she never got to finish",
+  "aliases": [],
+  "emotions": [
+   "anger",
+   "fear",
+   "sadness",
+   "surprise",
+   "vulnerability"
+  ]
+ },
+ "58f8329ced82f1d0": {
+  "description": "The clinic's founding surgeon-in-chief, a native Englishman convinced his radical psychosurgery will revolutionize the treatment of 'unmanageable' women; charismatic and genuinely believes he heals more than he harms, blind to the bodies his certainty has cost.",
+  "aliases": [],
+  "emotions": [
+   "joy",
+   "love",
+   "sadness"
+  ]
+ },
+ "47cfd4aec7789bf2": {
+  "description": "The clinic's night nurse, born in London to a Chinese father and an English mother and trained in a charity hospital that few better wards would credit; she took this post because it was the one open to her, and now can't unsee what its records are hiding.",
+  "aliases": [],
+  "emotions": [
+   "anger",
+   "fear",
+   "surprise"
+  ]
+ },
+ "eb68b43f70a4542f": {
+  "description": "Moorhouse's assistant surgeon, trained in Guangzhou and granted his English accreditation only through Moorhouse's patronage; deeply in debt to the man who employs him, and complicit in the paperwork long before he lets himself admit what it covers.",
+  "aliases": [],
+  "emotions": [
+   "fear",
+   "sadness",
+   "surprise",
+   "vulnerability"
+  ]
+ },
+ "4e13685ebfbd897b": {
+  "description": "second-generation Korean-American investigative host who found the time capsule footage first and refuses to let it go; brilliant at chasing paper trails, blind to the one trail sitting across the studio microphone from her every day",
+  "aliases": [],
+  "emotions": [
+   "anger",
+   "fear",
+   "surprise",
+   "vulnerability"
+  ]
+ },
+ "74823196afe16fe9": {
+  "description": "Mira's co-host, the show's reassuring public face; secretly the grandson of the asylum's former director, quietly steering the investigation away from his own family's blood while playing the loyal partner",
+  "aliases": [],
+  "emotions": [
+   "anger",
+   "fear",
+   "sadness",
+   "vulnerability"
+  ]
+ },
+ "87f4c81e3e80d294": {
+  "description": "rising political star from a Hong Kong-immigrant family dynasty, unaware for most of her life that her grandmother was one of the 'cured' patients; caught between protecting her career and confronting what her bloodline was built on",
+  "aliases": [],
+  "emotions": [
+   "anger",
+   "fear",
+   "sadness",
+   "vulnerability"
+  ]
+ },
+ "5a114e2a19e4fc60": {
+  "description": "international corporate-security fixer for the shadow network protecting the asylum's surviving beneficiaries; Sichuan-raised, trained abroad in reputation management and 'narrative control,' now running the campaign to erase the podcast",
+  "aliases": [],
+  "emotions": [
+   "anger",
+   "joy"
+  ]
+ },
+ "2225bd78b83bfd39": {
+  "description": "elderly immigrant former records orderly at the asylum in the 1970s, now the only living witness willing to talk; knows more names than he's ever said out loud and is terrified of what saying them will cost him",
+  "aliases": [],
+  "emotions": [
+   "anger",
+   "fear",
+   "sadness",
+   "vulnerability"
+  ]
+ },
+ "a4eeb17f9c337923": {
+  "description": "the missing nurse whose sealed diaries and Polaroids started it all, heard only through dramatized diary-voice flashbacks to 1970s; documented the conditioning program in code because she knew exactly who would come looking for her notes",
+  "aliases": [],
+  "emotions": [
+   "fear",
+   "sadness"
+  ]
  }
 }

@@ -1,0 +1,2521 @@
+{
+  "series_title": "Borrowed Pulse",
+  "language": "English",
+  "mode": "drama",
+  "template": "soap_opera",
+  "writer_persona": "a showrunner for character-driven, relationship-first serial drama in the vein of prestige ensemble TV, fusing body-horror psychological thriller with soap-opera marriage-and-loyalty stakes",
+  "style_guidelines": [
+    "Filter every scene through exactly one character's limited knowledge; never let a line of dialogue leak a fact that character doesn't actually have.",
+    "Ground the body-horror in physical, specific detail — a flinch, a reflex, a borrowed fluency in violence — rather than abstract dread.",
+    "Let the psychological war between Maya's own voice and Marcus's intruding persona escalate gradually: early signs are subtle (a steadier hand, a colder pause), later scenes should feel like a real fight for control of a single body.",
+    "Keep gang-war violence mostly implied or aftermath-driven; the drama lives in suspicion, intimacy, and the terror of not trusting your own hands.",
+    "Give the city's mixed diaspora communities specific, lived-in texture — food, ritual, code-switching — never caricature or shorthand.",
+    "Cliffhangers escalate in scale and intimacy as the season progresses; do not let every episode land with the same weight.",
+    "Every thread should be advanced primarily through what a character does NOT say, not through convenient overheard confessions."
+  ],
+  "voices": {
+    "NARRATOR": {
+      "voice": "Ryan",
+      "default_style": "calm, measured, a step removed from the action",
+      "description": "the show's narrator — orients the listener at the start of every scene (who, where, when), never a character in the story"
+    },
+    "MAYA_LIN": {
+      "voice": "Vivian",
+      "default_style": "speaks slow, deliberate, very clear English — only the faintest trace of her family's accent slips through when she's exhausted or afraid",
+      "description": "a Chinese-American elementary school teacher, born and raised in the city to an immigrant family; survives an illegal black-market heart transplant and slowly discovers she has inherited more than a heartbeat — she is the emotional center of the marriage thread and the unwilling battleground of the resurrection thread; she does not know, at first, whose heart she carries or why her hands sometimes act before she decides anything"
+    },
+    "MARCUS_TAN": {
+      "voice": "Eric",
+      "default_style": "controlled, clipped diction, unnerving calm — cold precision even when the words are Maya's own mouth speaking them",
+      "description": "the dead contract killer known in the underworld as 'the Quiet Man', trained overseas by a transnational syndicate; his consciousness survives as cellular memory in the heart now beating in Maya's chest, intruding as an internal presence only the listener can hear distinctly; he knows exactly what he wants finished and does not care what it costs the woman carrying him"
+    },
+    "DET_CALLOWAY": {
+      "voice": "Aiden",
+      "default_style": "dry, dogged, speaks like someone who has seen too much and stopped being surprised by any of it",
+      "description": "a native-born homicide detective chasing a cold case that has suddenly gone warm again; drives the cover-up investigation into the clinic and the illegal organ trade, and has no idea the trail leads to a schoolteacher"
+    },
+    "DANIEL_WOO": {
+      "voice": "Dylan",
+      "default_style": "warm, easy, very clear English — a lifetime in the city, only a light lilt from his parents' household remains, sharpening into worry as the season goes on",
+      "description": "Maya's husband, a second-generation Chinese-American restaurant owner; loves her without reservation and has no framework for what's happening to her — his blind spot is assuming her lies are about another man, not about a dead man"
+    },
+    "MADAM_CHEN": {
+      "voice": "Serena",
+      "default_style": "silken, unhurried, every word a calculated threat wrapped in courtesy",
+      "description": "the matriarch who built the syndicate the Quiet Man once served; immigrated decades ago and never lost her accent or her control; drives the resurrection thread from the top, deciding whether Maya is a threat to eliminate or an asset to claim, and hides her own role in what happened to Marcus"
+    },
+    "SORA_KIM": {
+      "voice": "Sohee",
+      "default_style": "clipped and wary, quick bursts of Korean-accented English breaking through when her control slips",
+      "description": "a Korean-American enforcer and Marcus's former protégé — and the person who loved him before he died; assigned by Madam Chen to hunt the rumored 'ghost', she is the first to recognize something real in Maya and the character most torn between duty and a grief she never got to finish"
+    }
+  },
+  "locations": {
+    "MAYAS_APARTMENT": {
+      "name": "Maya and Daniel's Apartment",
+      "description": "a modest walk-up with warm lamp light and family photos on every shelf, a home that slowly starts hiding things — a burner phone, a folding knife — that no one there remembers buying"
+    },
+    "THE_CLINIC": {
+      "name": "The Clinic",
+      "description": "an off-the-books private recovery clinic — sterile fluorescent white, humming monitors, staff trained to never quite meet your eyes"
+    },
+    "THE_DOCKS": {
+      "name": "The Docks",
+      "description": "the syndicate's shipping-container harbor — fog rolling off black water, sodium lights smearing orange through the mist, crates stacked like coffins"
+    },
+    "NIGHT_MARKET": {
+      "name": "The Night Market",
+      "description": "Daniel's family restaurant and the street market around it — rising steam, neon signage in three languages, a crowd loud enough to swallow a whispered threat whole"
+    },
+    "THE_PRECINCT": {
+      "name": "The Precinct",
+      "description": "Detective Calloway's homicide bureau — flickering gray fluorescents, a corkboard thick with photographs and red string, cold coffee on every desk"
+    },
+    "THE_TEAHOUSE": {
+      "name": "Madam Chen's Teahouse",
+      "description": "a private parlor behind a public teahouse — lacquered red walls, gold trim, curling incense smoke, a gracious-looking room built for deciding who lives"
+    }
+  },
+  "format": {
+    "parts_per_section": 1,
+    "words_per_part_target": "300 to 500",
+    "words_per_part_min": 250,
+    "words_per_part_max": 550
+  },
+  "generation": {
+    "model": "claude-sonnet-5",
+    "use_beats": true
+  },
+  "audio": {
+    "api_url": "http://127.0.0.1:42003",
+    "default_style": "Speak clearly and with dramatic weight",
+    "target_lufs": -16.0,
+    "pause_between_chunks_ms": 250,
+    "pause_between_lines_ms": 700,
+    "pause_between_parts_ms": 3000,
+    "pause_between_episodes_ms": 6000,
+    "merge_anthology": false
+  },
+  "output_prefix": "ep",
+  "series_intro": "A body surfaces in the harbor bearing the exact signature of a killer the underworld buried years ago, and across town a schoolteacher wakes from an illegal, life-saving transplant with a stranger's steadiness in her hands. This is the story of the heart that wouldn't stay dead, the marriage it's quietly destroying, and the war two rival worlds are about to wage over a woman who has no idea she's already lost the fight for her own body.",
+  "series_outro": "By the finale, the underworld learns the plain, brutal truth of what walked among them — not a resurrected killer, but a borrowed heart — and the syndicate war that truth ignited settles into an uneasy new order; the clinic's illegal trade is exposed and its architects answer for it; the vendetta the dead man carried into Maya's chest is finally spent, one way or another. What does not resolve, and is not meant to, is the marriage — Maya and Daniel are left standing in the wreckage of what she hid from him, with no clean way back to who they were.",
+  "episodes": [
+    {
+      "figure": "The Second Heart",
+      "theme": "Maya survives an illegal black-market transplant and wakes changed in ways she can't name, while a body pulled from the harbor bearing an assassin's exact signature reopens Detective Calloway's cold case and Daniel welcomes his wife home with no idea what now beats inside her chest.",
+      "intro_note": "",
+      "outro_note": "That night, lying beside Daniel's steady breathing, Maya will press two fingers to her own throat and hold them there — waiting, without knowing why, to feel a pulse she no longer recognizes as only her own.",
+      "sections": [
+        "Recovery Room, Hour One — Maya wakes from the illegal transplant into a body that feels subtly wrong (The Second Heart)",
+        "The Machines Keep Time — a nurse's evasive answers about the donor unsettle her (The Second Heart)",
+        "Daniel at the Bedside — a husband's relief, unaware of what now beats in his wife's chest (The Marriage)",
+        "Fog Over the Water — a body surfaces at the docks bearing a dead killer's exact marks (The Harbor Body)",
+        "A Name From a Closed File — Detective Calloway recognizes the case he never got to finish (The Harbor Body)",
+        "Tea and Rumor — Madam Chen hears whispers that the Quiet Man has returned (The Quiet Man's Return)",
+        "A Ghost She Buried Twice — Sora Kim's composure cracks at the mention of his name (The Quiet Man's Return)",
+        "A Stranger's Stillness — alone in recovery, Maya's hand steadies itself before she decides to move it (The Second Heart)",
+        "Discharge Papers — Maya is released with instructions and a chart that doesn't quite add up (The Second Heart)",
+        "Coming Home — Daniel carries her threshold-to-threshold, grateful and afraid to ask for more (The Marriage)",
+        "Steam and Neon — the Woo family welcomes Maya back at the Night Market with food and noise (The Marriage)",
+        "The Knife Drawer — reaching for dinner, Maya's hand knows the grip a fraction of a second before she does (The Second Heart)",
+        "Scrubbing the Chart — clinic staff quietly rewrite a donor record that was never supposed to exist (The Harbor Body)",
+        "Cold Case, Warm Body — Calloway pulls the dusty file and finds it doesn't close so easily (The Harbor Body)",
+        "Who Was on That Dock — Madam Chen demands to know whose blood was spilled in her territory (The Quiet Man's Return)",
+        "Send Sora — Chen orders her sharpest hunter to find out if a ghost is real (The Quiet Man's Return)",
+        "Three A.M. — Maya sits awake beside a sleeping Daniel, listening to a heartbeat that no longer feels entirely hers (The Marriage / The Second Heart)"
+      ],
+      "section_words": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 130,
+          "max": 200,
+          "target": "140 to 170"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 150,
+          "max": 220,
+          "target": "160 to 190"
+        }
+      ],
+      "section_locations": [
+        "THE_CLINIC",
+        "THE_CLINIC",
+        "THE_CLINIC",
+        "THE_DOCKS",
+        "THE_DOCKS",
+        "THE_TEAHOUSE",
+        "THE_TEAHOUSE",
+        "THE_CLINIC",
+        "THE_CLINIC",
+        "MAYAS_APARTMENT",
+        "NIGHT_MARKET",
+        "MAYAS_APARTMENT",
+        "THE_CLINIC",
+        "THE_PRECINCT",
+        "THE_TEAHOUSE",
+        "THE_TEAHOUSE",
+        "MAYAS_APARTMENT"
+      ],
+      "case": [
+        {
+          "label": "The Second Heart",
+          "solution": "Maya's cardiologist arranged an illegal black-market heart transplant at The Clinic because she was dying and there was no time left on the legal waitlist; the donor heart came from Marcus Tan, an assassin killed weeks earlier, whose organs passed through the Clinic's off-book pipeline with his identity erased from her chart. The transplant carries his cellular memory — a real, if unproven, phenomenon here — that will progressively contend for control of Maya's body and mind.",
+          "objective_facts": [
+            "Maya was a low-priority case on the legal transplant list and would have died within days without intervention.",
+            "Her cardiologist arranged the procedure at The Clinic in secret, against every protocol, because there was no time left.",
+            "The donor heart came from a body procured through the Clinic's off-book pipeline, its true identity erased from her chart."
+          ],
+          "character_knowledge": {
+            "MAYA_LIN": {
+              "knows": [
+                "Her transplant was illegal and black-market, and that it saved her life",
+                "Clinic staff told her not to ask about the donor"
+              ],
+              "hides": [
+                "That her body is already doing things she never taught it to do, concealed out of fear of sounding unstable so soon after surgery"
+              ],
+              "believes_falsely": [
+                "That not being told the donor's identity is standard anonymization for black-market cases, not something being actively hidden from her specifically"
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Quiet Man's Return",
+          "solution": "Marcus Tan, the syndicate's top enforcer known as 'the Quiet Man,' was killed seven weeks ago on Madam Chen's direct order after he refused a final contract. Chen had him killed quietly to avoid a war within her own ranks, and let Sora believe he simply vanished. His body was never properly recovered by the syndicate; it passed through a corrupt broker into The Clinic's black-market pipeline, and his heart now beats in Maya Lin's chest. There is no resurrection — only a heart that remembers, and a woman it is slowly overwriting.",
+          "objective_facts": [
+            "Marcus Tan was killed approximately seven weeks ago, not at the harbor and not recently.",
+            "Madam Chen personally authorized his death after he refused a final contract.",
+            "Sora Kim was told only that Marcus disappeared, not that he was killed on Chen's order.",
+            "Marcus's body never received a syndicate funeral or confirmed burial."
+          ],
+          "character_knowledge": {
+            "MADAM_CHEN": {
+              "knows": [
+                "Marcus Tan is dead",
+                "She personally ordered his death"
+              ],
+              "hides": [
+                "From Sora and the wider syndicate that the order came from her, letting them believe he simply vanished, to protect her authority and Sora's loyalty"
+              ],
+              "believes_falsely": [
+                "That the harbor body's resemblance to his signature is a rival family's message or a copycat, not literally his own remains resurfacing"
+              ]
+            },
+            "SORA_KIM": {
+              "knows": [
+                "Marcus vanished without a word seven weeks ago",
+                "Her grief for him is unresolved"
+              ],
+              "hides": [
+                "How deeply she still loves him, keeping a flat professional mask in front of Chen"
+              ],
+              "believes_falsely": [
+                "That he is simply gone for good, and the rumor is someone borrowing a dead man's reputation to spread fear"
+              ]
+            },
+            "MARCUS_TAN": {
+              "knows": [
+                "The true circumstances of his own death",
+                "That his final contract went uncompleted"
+              ],
+              "hides": [
+                "The identity of that final target from Maya's conscious awareness, feeding her only disjointed fragments rather than the whole memory, because a clean truth would let her fight back sooner"
+              ],
+              "believes_falsely": [
+                "That the body carrying him will simply be a tool to finish what he started, not accounting for the fact that Maya's own will might resist him"
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Marriage",
+          "solution": "Maya's escalating secrecy, blackouts, and unexplained physical changes will drive Daniel to wrongly suspect an affair, when the truth — a dead killer's memory overwriting his wife — is something neither of them has any framework to imagine; the marriage will not survive the truth even once it surfaces.",
+          "objective_facts": [
+            "Maya has begun concealing details of her recovery and mental state from Daniel almost immediately after surgery.",
+            "Daniel keeps a private, growing sense that something about his wife's first night home doesn't add up."
+          ],
+          "character_knowledge": {
+            "MAYA_LIN": {
+              "knows": [
+                "She is hiding a moment of blank time and an unnerving physical steadiness from Daniel"
+              ],
+              "hides": [
+                "It, out of fear of sounding unstable so soon after major surgery"
+              ],
+              "believes_falsely": [
+                "That it's adrenaline or medication, and it will pass with rest"
+              ]
+            },
+            "DANIEL_WOO": {
+              "knows": [
+                "Only that Maya seems a half-step elsewhere tonight"
+              ],
+              "hides": [
+                "His own unease, telling himself not to hover on her first night home"
+              ],
+              "believes_falsely": [
+                "That it's ordinary post-op exhaustion, nothing more"
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Harbor Body",
+          "solution": "The corpse pulled from the harbor is Marcus Tan's own body, dumped by the traffickers who harvested his organs after Madam Chen had him killed; storm tides finally surface it. Detective Calloway recognizes identifying marks tying it to a disappearance case he never closed, unaware the body is weeks old and was surgically harvested before it ever reached the water.",
+          "objective_facts": [
+            "A corpse surfaces at the docks bearing marks that identify it, unmistakably, as Marcus Tan.",
+            "Calloway's precinct filed Marcus's disappearance as an open case tied to organized crime years ago.",
+            "The body shows signs of black-market surgical harvesting, not a standard death or burial."
+          ],
+          "character_knowledge": {
+            "DET_CALLOWAY": {
+              "knows": [
+                "The body matches Marcus Tan's identifying marks",
+                "His old file was never properly closed"
+              ],
+              "hides": [
+                "How personally obsessed he already is with reopening it, for fear the case gets reassigned"
+              ],
+              "believes_falsely": [
+                "That Marcus was killed recently in a fresh piece of gang violence, not realizing the body is weeks old and was surgically harvested before it reached the water"
+              ]
+            },
+            "MADAM_CHEN": {
+              "knows": [
+                "The body is Marcus's",
+                "She is the one who had him killed"
+              ],
+              "hides": [
+                "Any connection to the order from Calloway's world and from her own people, reacting with practiced surprise at the discovery"
+              ],
+              "believes_falsely": [
+                "That the timing of the body's surfacing must be a deliberate message from an enemy, rather than simple chance of tide and a trafficker's carelessness"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "Phantom Reflexes",
+      "theme": "Maya's hands start remembering skills she never learned even as she hides her first blackout from Daniel, while Sora Kim spots a stranger's stance flicker across security footage and the clinic quietly begins scrubbing its records.",
+      "intro_note": "Maya came home from her illegal transplant into her husband's careful, unknowing love — and into a body that, in the quiet of that first night, no longer answered to her alone. Now, days later, she is trying, against everything her own hands seem to remember, to be normal again.",
+      "outro_note": "In the dark of the apartment, the voice inside Maya's chest stops flickering and starts speaking in full, clear sentences for the first time — and across town, Sora Kim makes a decision she hasn't told Madam Chen: she is going to find out, with her own hands, whether the ghost in that footage is real.",
+      "sections": [
+        "Morning Routine — Maya tries to return to normal life, unnerved by how sharp her senses have become (The Second Heart)",
+        "A Steadier Hand — at the sink, Maya catches herself moving with a precision she's never had (The Second Heart)",
+        "Marcus's Fragment — a flicker of memory that isn't hers surfaces mid-motion (The Quiet Man's Return)",
+        "Lunch Rush — Daniel notices something off in how Maya carries herself at the Night Market counter (The Marriage)",
+        "The Missing Hour — Maya loses time between leaving the restaurant and arriving home, and can't account for it (The Marriage)",
+        "What Daniel Doesn't Ask — he notices dirt on her shoes and stiffness in her shoulder and says nothing (The Marriage)",
+        "Grainy Footage — Sora reviews security tape from a dockside alley and freezes on a stance she'd know anywhere (The Quiet Man's Return)",
+        "A Question She Can't Ask Chen — Sora keeps the footage to herself rather than report it immediately (The Quiet Man's Return)",
+        "Scrubbing the System — clinic staff delete a transplant log entry and reroute a shipment manifest (The Harbor Body)",
+        "A Nurse Hesitates — one worker almost flags the irregularity to an earlier inquiry, then backs down (The Harbor Body)",
+        "Calloway Requests Records — the detective formally requests the Clinic's patient files and is stonewalled (The Harbor Body)",
+        "Tea Poured Cold — Madam Chen presses her lieutenants for confirmation on the harbor body's identity (The Quiet Man's Return)",
+        "Marcus's Voice, Closer — the internal presence grows more distinct, giving Maya an instruction rather than just a flicker (The Second Heart / The Quiet Man's Return)",
+        "A Lie by Omission — Maya tells Daniel she's just tired, swallowing the blackout whole (The Marriage)",
+        "Sora's Report, Half-True — she tells Chen only that the rumor might have 'some substance,' omitting what she actually recognized (The Quiet Man's Return)",
+        "Night Watch — Sora begins quietly surveilling the alley, waiting for the stance to reappear (The Quiet Man's Return)",
+        "Held Breath — Maya, alone, presses a hand to her sternum and asks the silence a question it doesn't answer (The Second Heart)"
+      ],
+      "section_words": [
+        null,
+        null,
+        {
+          "min": 120,
+          "max": 190,
+          "target": "140 to 170"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 150,
+          "max": 220,
+          "target": "160 to 190"
+        }
+      ],
+      "section_locations": [
+        "MAYAS_APARTMENT",
+        "MAYAS_APARTMENT",
+        "MAYAS_APARTMENT",
+        "NIGHT_MARKET",
+        "MAYAS_APARTMENT",
+        "MAYAS_APARTMENT",
+        "THE_DOCKS",
+        "THE_TEAHOUSE",
+        "THE_CLINIC",
+        "THE_CLINIC",
+        "THE_PRECINCT",
+        "THE_TEAHOUSE",
+        "MAYAS_APARTMENT",
+        "MAYAS_APARTMENT",
+        "THE_TEAHOUSE",
+        "THE_DOCKS",
+        "MAYAS_APARTMENT"
+      ],
+      "case": [
+        {
+          "label": "The Second Heart",
+          "solution": "Maya's cardiologist arranged an illegal black-market heart transplant at The Clinic because she was dying and there was no time left on the legal waitlist; the donor heart came from Marcus Tan, an assassin killed weeks earlier, whose organs passed through the Clinic's off-book pipeline with his identity erased from her chart. The transplant carries his cellular memory — a real, if unproven, phenomenon here — that will progressively contend for control of Maya's body and mind.",
+          "objective_facts": [
+            "Maya was a low-priority case on the legal transplant list and would have died within days without intervention.",
+            "Her cardiologist arranged the procedure at The Clinic in secret, against every protocol, because there was no time left.",
+            "The donor heart came from a body procured through the Clinic's off-book pipeline, its true identity erased from her chart."
+          ],
+          "character_knowledge": {
+            "MAYA_LIN": {
+              "knows": [
+                "Her hands complete unfamiliar tasks — knife grip, weight-shifting, cash counting — with a speed she never had before surgery"
+              ],
+              "hides": [
+                "The missing hour after leaving the restaurant, telling herself and Daniel she simply lost track of time"
+              ],
+              "believes_falsely": [
+                "That this is a temporary side effect of anesthesia or an unlisted medication, something her body will settle out of"
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Quiet Man's Return",
+          "solution": "Marcus Tan, the syndicate's top enforcer known as 'the Quiet Man,' was killed seven weeks ago on Madam Chen's direct order after he refused a final contract. Chen had him killed quietly to avoid a war within her own ranks, and let Sora believe he simply vanished. His body was never properly recovered by the syndicate; it passed through a corrupt broker into The Clinic's black-market pipeline, and his heart now beats in Maya Lin's chest. There is no resurrection — only a heart that remembers, and a woman it is slowly overwriting.",
+          "objective_facts": [
+            "Marcus Tan was killed approximately seven weeks ago, not at the harbor and not recently.",
+            "Madam Chen personally authorized his death after he refused a final contract.",
+            "Sora Kim was told only that Marcus disappeared, not that he was killed on Chen's order.",
+            "Marcus's body never received a syndicate funeral or confirmed burial."
+          ],
+          "character_knowledge": {
+            "MADAM_CHEN": {
+              "knows": [
+                "Marcus Tan is dead and that she ordered it"
+              ],
+              "hides": [
+                "From Sora and the wider syndicate that the order came from her"
+              ],
+              "believes_falsely": [
+                "That if a 'ghost' exists, it must be a trained impersonator sent by a rival, worth capturing rather than simply killing outright"
+              ]
+            },
+            "SORA_KIM": {
+              "knows": [
+                "She has now seen, on grainy footage, a stance and balance she would recognize anywhere as Marcus's"
+              ],
+              "hides": [
+                "This specific recognition from Madam Chen, reporting only a vague 'possible substance' to the rumor"
+              ],
+              "believes_falsely": [
+                "That investigating alone, quietly, without official syndicate resources, is the safest way to find the truth before anyone else gets hurt by a wrong guess"
+              ]
+            },
+            "MARCUS_TAN": {
+              "knows": [
+                "The true circumstances of his own death and that his final contract went uncompleted",
+                "That his presence in Maya is growing stronger and clearer"
+              ],
+              "hides": [
+                "The identity of that final target from Maya's conscious awareness, feeding her only disjointed fragments rather than the whole memory"
+              ],
+              "believes_falsely": [
+                "That the body carrying him will simply be a tool to finish what he started, not accounting for the fact that Maya's own will might resist him"
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Marriage",
+          "solution": "Maya's escalating secrecy, blackouts, and unexplained physical changes will drive Daniel to wrongly suspect an affair, when the truth — a dead killer's memory overwriting his wife — is something neither of them has any framework to imagine; the marriage will not survive the truth even once it surfaces.",
+          "objective_facts": [
+            "Maya has begun concealing details of her recovery and mental state from Daniel almost immediately after surgery.",
+            "Daniel keeps a running, private tally of small inconsistencies in Maya's account of her days."
+          ],
+          "character_knowledge": {
+            "MAYA_LIN": {
+              "knows": [
+                "She lost an hour she can't account for after leaving the restaurant"
+              ],
+              "hides": [
+                "It completely, offering Daniel a vague, false explanation"
+              ],
+              "believes_falsely": [
+                "That one lie now is kinder than frightening him with something she doesn't understand herself"
+              ]
+            },
+            "DANIEL_WOO": {
+              "knows": [
+                "Dirt on her shoes and stiffness in her shoulder don't match her story about where she was"
+              ],
+              "hides": [
+                "That he's started quietly noticing and cataloguing these small inconsistencies"
+              ],
+              "believes_falsely": [
+                "That if there's something Maya isn't telling him, it's more likely an old flame or a private worry than anything physically dangerous"
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Harbor Body",
+          "solution": "The corpse pulled from the harbor is Marcus Tan's own body, dumped by the traffickers who harvested his organs after Madam Chen had him killed; storm tides finally surface it. Detective Calloway recognizes identifying marks tying it to a disappearance case he never closed, unaware the body is weeks old and was surgically harvested before it ever reached the water.",
+          "objective_facts": [
+            "A corpse surfaces at the docks bearing marks that identify it, unmistakably, as Marcus Tan.",
+            "Calloway's precinct filed Marcus's disappearance as an open case tied to organized crime years ago.",
+            "The body shows signs of black-market surgical harvesting, not a standard death or burial."
+          ],
+          "character_knowledge": {
+            "DET_CALLOWAY": {
+              "knows": [
+                "The Clinic denied his records request without a clear legal reason"
+              ],
+              "hides": [
+                "How far he's willing to push past normal channels to get those records"
+              ],
+              "believes_falsely": [
+                "That Marcus was killed recently in a fresh piece of gang violence, still unaware of the black-market harvesting angle"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "The Quiet Man's Ghost",
+      "theme": "Whispers that the Quiet Man survived spread through Madam Chen's syndicate and send Sora hunting a ghost, while Maya wakes with bruises and a burner phone she can't explain, feeling an unexplained pull toward an address she's never seen, and Daniel's first real suspicion takes root.",
+      "intro_note": "The voice inside Maya has stopped flickering and started speaking — and across the city, Sora Kim has quietly begun her own hunt for a ghost she isn't ready to name aloud to Madam Chen. Neither woman yet knows how close they already are to each other.",
+      "outro_note": "Past midnight, the burner phone lights up once in the silent apartment with a single message meant for a dead man — and somewhere across the city, someone who trusted that message is about to learn, in the worst possible way, that the Quiet Man never really left.",
+      "sections": [
+        "Whispers in the Ranks — syndicate soldiers trade rumors that the Quiet Man walks again (The Quiet Man's Return)",
+        "Chen Silences the Room — Madam Chen shuts down the talk in front of her people, then seethes alone (The Quiet Man's Return)",
+        "Sora's Private Ledger — she starts her own quiet file on the 'ghost,' separate from Chen's official hunt (The Quiet Man's Return)",
+        "Waking Wrong — Maya wakes with bruised knuckles and no memory of the night before (The Second Heart)",
+        "The Phone in the Coat Pocket — she finds a burner phone that isn't hers, already warm from use (The Marriage)",
+        "A Number With No Name — the phone holds a single unlabeled contact and nothing else (The Second Heart)",
+        "The Pull — a compulsion to visit an address she's never seen tightens in Maya's chest like a held note (The Quiet Man's Return)",
+        "She Goes Anyway — Maya finds herself outside a building she can't explain wanting to reach (The Quiet Man's Return)",
+        "Marcus Recognizes It Even If She Doesn't — this was his, once (The Quiet Man's Return)",
+        "Daniel Finds the Bruises — he sees her knuckles at breakfast and asks a direct question for the first time (The Marriage)",
+        "The First Real Lie — Maya invents an explanation and watches Daniel choose, for now, to believe it (The Marriage)",
+        "Calloway Canvasses the Docks — he asks around near where the body surfaced and hears the same ghost rumor from a different angle (The Harbor Body)",
+        "A Name Half-Spoken — a dockworker almost says 'the Quiet Man' to Calloway before catching himself (The Harbor Body)",
+        "Sora Finds the Address Too — her own hunt leads her to the same building Maya was drawn to (The Quiet Man's Return)",
+        "Missed by Minutes — Sora arrives just after Maya has already gone, and finds a trace she recognizes (The Quiet Man's Return)",
+        "Daniel Alone in the Kitchen — turning the burner phone's twin thought over in his head after Maya's asleep, deciding to keep watching instead of confronting (The Marriage)",
+        "A Text From No One — the burner phone buzzes once in the dark with a message meant for a dead man (The Second Heart / The Quiet Man's Return)"
+      ],
+      "section_words": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 130,
+          "max": 200,
+          "target": "150 to 180"
+        },
+        null,
+        null,
+        {
+          "min": 130,
+          "max": 200,
+          "target": "150 to 180"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 100,
+          "max": 170,
+          "target": "120 to 150"
+        }
+      ],
+      "section_locations": [
+        "THE_DOCKS",
+        "THE_TEAHOUSE",
+        "THE_TEAHOUSE",
+        "MAYAS_APARTMENT",
+        "MAYAS_APARTMENT",
+        "MAYAS_APARTMENT",
+        "MAYAS_APARTMENT",
+        "THE_DOCKS",
+        "THE_DOCKS",
+        "MAYAS_APARTMENT",
+        "MAYAS_APARTMENT",
+        "THE_DOCKS",
+        "THE_DOCKS",
+        "THE_DOCKS",
+        "THE_DOCKS",
+        "MAYAS_APARTMENT",
+        "MAYAS_APARTMENT"
+      ],
+      "case": [
+        {
+          "label": "The Second Heart",
+          "solution": "Maya's cardiologist arranged an illegal black-market heart transplant at The Clinic because she was dying and there was no time left on the legal waitlist; the donor heart came from Marcus Tan, an assassin killed weeks earlier, whose organs passed through the Clinic's off-book pipeline with his identity erased from her chart. The transplant carries his cellular memory — a real, if unproven, phenomenon here — that will progressively contend for control of Maya's body and mind.",
+          "objective_facts": [
+            "Maya was a low-priority case on the legal transplant list and would have died within days without intervention.",
+            "Her cardiologist arranged the procedure at The Clinic in secret, against every protocol, because there was no time left.",
+            "The donor heart came from a body procured through the Clinic's off-book pipeline, its true identity erased from her chart."
+          ],
+          "character_knowledge": {
+            "MAYA_LIN": {
+              "knows": [
+                "She now wakes with physical evidence — bruised knuckles — that something happens while she's not present in her own body"
+              ],
+              "hides": [
+                "The burner phone and its single unlabeled contact from Daniel entirely, pocketing it before he can see"
+              ],
+              "believes_falsely": [
+                "That if she can identify and control the trigger for these episodes, she can keep this contained without ever telling anyone, including her own doctor"
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Quiet Man's Return",
+          "solution": "Marcus Tan, the syndicate's top enforcer known as 'the Quiet Man,' was killed seven weeks ago on Madam Chen's direct order after he refused a final contract. Chen had him killed quietly to avoid a war within her own ranks, and let Sora believe he simply vanished. His body was never properly recovered by the syndicate; it passed through a corrupt broker into The Clinic's black-market pipeline, and his heart now beats in Maya Lin's chest. There is no resurrection — only a heart that remembers, and a woman it is slowly overwriting.",
+          "objective_facts": [
+            "Marcus Tan was killed approximately seven weeks ago, not at the harbor and not recently.",
+            "Madam Chen personally authorized his death after he refused a final contract.",
+            "Sora Kim was told only that Marcus disappeared, not that he was killed on Chen's order.",
+            "Marcus's body never received a syndicate funeral or confirmed burial."
+          ],
+          "character_knowledge": {
+            "MADAM_CHEN": {
+              "knows": [
+                "Marcus Tan is dead and that she ordered it"
+              ],
+              "hides": [
+                "From Sora and the wider syndicate that the order came from her"
+              ],
+              "believes_falsely": [
+                "That flushing out whoever the 'ghost' is through an old signal or address tied to Marcus will expose an impersonator, not imagining a transplant"
+              ]
+            },
+            "SORA_KIM": {
+              "knows": [
+                "She now has a physical location tied to the ghost, from her own surveillance"
+              ],
+              "hides": [
+                "That she went to that address alone, off any official record, rather than reporting it immediately"
+              ],
+              "believes_falsely": [
+                "That whoever she finds there will be an impostor she can either turn or eliminate — not her dead lover's memory living in a stranger's body"
+              ]
+            },
+            "MARCUS_TAN": {
+              "knows": [
+                "The address in question meant something to him in life, and it pulls Maya there instinctively"
+              ],
+              "hides": [
+                "The full weight of what that place was to him, from Maya's conscious understanding"
+              ],
+              "believes_falsely": [
+                "That the body carrying him will simply be a tool to finish what he started, not accounting for the fact that Maya's own will might resist him"
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Marriage",
+          "solution": "Maya's escalating secrecy, blackouts, and unexplained physical changes will drive Daniel to wrongly suspect an affair, when the truth — a dead killer's memory overwriting his wife — is something neither of them has any framework to imagine; the marriage will not survive the truth even once it surfaces.",
+          "objective_facts": [
+            "Maya has begun concealing details of her recovery and mental state from Daniel almost immediately after surgery.",
+            "Objects unfamiliar to their shared life, including a burner phone, have begun appearing without explanation."
+          ],
+          "character_knowledge": {
+            "MAYA_LIN": {
+              "knows": [
+                "She now has bruised knuckles and a burner phone she can't explain to herself, let alone Daniel"
+              ],
+              "hides": [
+                "Both facts entirely, inventing a story about a fall at school"
+              ],
+              "believes_falsely": [
+                "That Daniel accepting her explanation means the danger has passed, rather than that he's simply chosen, for now, not to push"
+              ]
+            },
+            "DANIEL_WOO": {
+              "knows": [
+                "Maya's explanation for her bruises doesn't fully add up"
+              ],
+              "hides": [
+                "His suspicion that she's hiding something serious, deciding to watch rather than confront"
+              ],
+              "believes_falsely": [
+                "That whatever this is points toward infidelity — the one explanation that never crosses his mind is a dead man's memory living in her hands"
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Harbor Body",
+          "solution": "The corpse pulled from the harbor is Marcus Tan's own body, dumped by the traffickers who harvested his organs after Madam Chen had him killed; storm tides finally surface it. Detective Calloway recognizes identifying marks tying it to a disappearance case he never closed, unaware the body is weeks old and was surgically harvested before it ever reached the water.",
+          "objective_facts": [
+            "A corpse surfaces at the docks bearing marks that identify it, unmistakably, as Marcus Tan.",
+            "Calloway's precinct filed Marcus's disappearance as an open case tied to organized crime years ago.",
+            "The body shows signs of black-market surgical harvesting, not a standard death or burial."
+          ],
+          "character_knowledge": {
+            "DET_CALLOWAY": {
+              "knows": [
+                "A dockworker's slip of the tongue confirms the harbor rumor mill is using the exact name 'the Quiet Man'"
+              ],
+              "hides": [
+                "How much weight he's now putting on street rumor rather than hard evidence, for fear of looking unprofessional"
+              ],
+              "believes_falsely": [
+                "That Marcus was killed recently in a fresh piece of gang violence, still unaware of the black-market harvesting angle"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "Blackout",
+      "theme": "A syndicate enforcer is left broken by hands that moved without Maya's permission, convincing the underworld the Quiet Man walks again and giving his unfinished business its first violent shape, while Calloway's trail from the harbor body finally leads him to the clinic's door.",
+      "intro_note": "Maya woke three nights ago with bruised knuckles, a burner phone she never bought, and an address burned into her mind that she has never seen with her own eyes — and no memory of how any of it got there. Daniel has started watching her too closely for comfort. Now whatever pulled her into the dark has left someone broken behind it.",
+      "outro_note": "Marcus's voice is no longer a whisper at the edge of her thoughts — it is a second set of hands. Maya sits alone in the apartment at 3 a.m., staring at a folding knife she does not remember taking out of the drawer, and cannot say for certain whether she put it down herself, or he did.",
+      "sections": [
+        "Cold open: a syndicate enforcer is found at the docks, methodically dismantled by someone who knew exactly where to hurt him",
+        "Sora Kim arrives at the scene and recognizes the technique — a signature only one man was ever taught",
+        "Flashback fragment: Maya surfaces on the docks in the fog, blood on her knuckles, no memory of the hour before",
+        "Maya calls in sick to school, shaking, unable to explain the state of her hands to herself",
+        "Daniel finds her hiding her knuckles under long sleeves and asks what happened; Maya lies about a fall",
+        "Interior: Marcus's presence settles deeper into Maya's thoughts, calm and satisfied in a way that terrifies her",
+        "Madam Chen receives word of the beating at the Teahouse and demands details",
+        "Chen and a lieutenant debate whether a rival is impersonating the Quiet Man to destabilize her territory",
+        "Sora insists on taking the hunt personally, over Chen's mild objection",
+        "Detective Calloway reviews new forensics on the harbor body — harvesting marks, not a street kill",
+        "Calloway leans on an old informant for anything connecting the body to a private surgical operation",
+        "At the Night Market, Daniel watches Maya flinch at a stranger's raised hand like she's braced for a fight, and can't unsee it",
+        "Maya's fingers twitch through a knife-grip reflex over dinner service before she catches herself",
+        "Sora tails Maya from a distance near the market, close enough to see a stance she'd know anywhere",
+        "Sora sits with what she saw, unable to decide if it's real or grief inventing ghosts",
+        "Calloway's informant gives up a name: an off-the-books recovery clinic that doesn't ask questions",
+        "Calloway parks outside the Clinic at closing time, watching staff move with the brisk care of people erasing something"
+      ],
+      "section_words": [
+        {
+          "min": 130,
+          "max": 190,
+          "target": "140 to 170"
+        },
+        null,
+        {
+          "min": 120,
+          "max": 190,
+          "target": "130 to 170"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 110,
+          "max": 180,
+          "target": "120 to 160"
+        },
+        null,
+        null,
+        null,
+        {
+          "min": 130,
+          "max": 200,
+          "target": "140 to 180"
+        }
+      ],
+      "section_locations": [
+        "THE_DOCKS",
+        "THE_DOCKS",
+        "THE_DOCKS",
+        "MAYAS_APARTMENT",
+        "MAYAS_APARTMENT",
+        null,
+        "THE_TEAHOUSE",
+        "THE_TEAHOUSE",
+        "THE_TEAHOUSE",
+        "THE_PRECINCT",
+        "THE_PRECINCT",
+        "NIGHT_MARKET",
+        "NIGHT_MARKET",
+        "NIGHT_MARKET",
+        null,
+        "THE_PRECINCT",
+        "THE_CLINIC"
+      ],
+      "case": [
+        {
+          "label": "The Ghost",
+          "solution": "Marcus Tan is dead — Madam Chen ordered his execution two years ago and his body was dumped in the harbor after his organs were secretly harvested through her own black-market Clinic. There is no resurrection: the 'Quiet Man sightings' are Maya Lin's body acting out Marcus's transplanted heart's cellular memory, amplified by his surviving consciousness, which is slowly seizing more control of her.",
+          "objective_facts": [
+            "Marcus Tan, the syndicate's 'Quiet Man,' was executed on Madam Chen's order roughly two years ago.",
+            "His organs, including his heart, were harvested through the Clinic before his body was dumped, unidentified, in the harbor.",
+            "Maya Lin received his heart in an illegal transplant four weeks ago.",
+            "Every reported 'sighting' of the Quiet Man since has occurred during one of Maya's blackouts."
+          ],
+          "character_knowledge": {
+            "MAYA_LIN": {
+              "knows": [
+                "She woke on the docks with someone else's violence still humming in her hands and no memory of the hour before."
+              ],
+              "hides": [
+                "The blackout and the state of her knuckles from Daniel, telling him she fell."
+              ],
+              "believes_falsely": [
+                "She believes this is some form of breakdown or surgical trauma response, not a second will acting through her."
+              ]
+            },
+            "MARCUS_TAN": {
+              "knows": [
+                "He is the one who found and beat the enforcer, using Maya's body to do it."
+              ],
+              "hides": [
+                "From Maya's conscious mind, the full clarity and intention behind what her hands just did — he lets her feel only the aftermath, not the decision."
+              ],
+              "believes_falsely": []
+            },
+            "MADAM_CHEN": {
+              "knows": [
+                "Marcus is unquestionably dead — she had him killed herself — yet the beating carries his exact signature."
+              ],
+              "hides": [
+                "Her own order to execute Marcus, from Sora and the wider syndicate, who believe the official story of insubordination."
+              ],
+              "believes_falsely": [
+                "She assumes a rival is staging an impersonation to unsettle her, not that the 'ghost' is biological and unintentional."
+              ]
+            },
+            "SORA_KIM": {
+              "knows": [
+                "The technique used on the enforcer belonged to Marcus alone — she trained under him and would know it anywhere."
+              ],
+              "hides": [
+                "How deeply the sighting has shaken her personally, keeping her face professional in front of Chen."
+              ],
+              "believes_falsely": [
+                "She is starting to wonder if he somehow survived his death, with no framework yet for a transplant."
+              ]
+            },
+            "DET_CALLOWAY": {
+              "knows": [
+                "The harbor body's wounds are surgical, not the result of a street killing — someone harvested it with care."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "He assumes he's protecting evidence from a living fugitive tied to the body, not investigating a two-year-old corpse."
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Vendetta",
+          "solution": "Marcus's last, uncompleted contract was a hit on Anthony Reyes, a lieutenant he'd discovered was secretly informing for Madam Chen — including feeding her the intelligence that let her have Marcus's own estranged brother killed in a rival crew. Marcus refused to let it go; Chen had him executed rather than lose her mole or let the betrayal surface. The intruding consciousness now driving Maya is pulling her, piece by piece, toward finishing that hit.",
+          "objective_facts": [
+            "Marcus had one contract left unfinished when he died: killing Anthony Reyes.",
+            "Reyes has worked for years as Madam Chen's informant inside a rival crew, unbeknownst to that crew.",
+            "The intelligence Reyes fed Chen led directly to the death of Marcus's estranged brother.",
+            "Marcus's final known movements, before his execution, were toward Reyes's territory at the docks."
+          ],
+          "character_knowledge": {
+            "MAYA_LIN": {
+              "knows": [
+                "A name keeps surfacing unbidden in her thoughts, attached to a feeling of cold, focused purpose she doesn't recognize as her own."
+              ],
+              "hides": [
+                "The name and the pull toward it, even from herself half the time — she hasn't said it aloud to anyone."
+              ],
+              "believes_falsely": [
+                "She believes the intrusive name is a random symptom of stress, not a target."
+              ]
+            },
+            "MARCUS_TAN": {
+              "knows": [
+                "Exactly who Reyes is, what he did, and why the debt has to be paid."
+              ],
+              "hides": [
+                "The full shape of the vendetta from Maya's waking mind, feeding her only enough fragments to keep her moving without giving her enough to refuse or seek help."
+              ],
+              "believes_falsely": []
+            },
+            "MADAM_CHEN": {
+              "knows": [
+                "The enforcer beaten tonight answers to Reyes, and that this cannot be coincidence."
+              ],
+              "hides": [
+                "Her true motive for killing Marcus — protecting Reyes as her mole — from everyone in her organization, including Sora."
+              ],
+              "believes_falsely": [
+                "She assumes eliminating Marcus buried the truth about Reyes permanently."
+              ]
+            },
+            "SORA_KIM": {
+              "knows": [
+                "The man beaten tonight works under Reyes."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "She believes Marcus died as punishment for refusing an unrelated job, exactly as Chen told her — she has no idea Reyes is connected."
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Marriage",
+          "solution": "There is no affair and no betrayal of the heart — Maya is hiding escalating blackouts, violence, and fear from Daniel purely to protect him, certain that the truth would either terrify him or put him in danger. The lie is not about another man; it is about a dead one.",
+          "objective_facts": [
+            "Maya has experienced multiple blackout episodes since her surgery, each followed by unexplained injuries or missing time.",
+            "Maya has not told Daniel the truth about any of them.",
+            "Daniel has directly observed evidence of at least one of these episodes and one deliberate lie from Maya."
+          ],
+          "character_knowledge": {
+            "MAYA_LIN": {
+              "knows": [
+                "She is blacking out and waking up changed, and she is running out of plausible explanations."
+              ],
+              "hides": [
+                "All of it from Daniel — she tells him she fell, that she's just tired from recovery."
+              ],
+              "believes_falsely": [
+                "She believes she can manage this alone long enough to protect him, not realizing how fast it's accelerating."
+              ]
+            },
+            "DANIEL_WOO": {
+              "knows": [
+                "Maya flinched tonight like someone braced for violence, and her knuckles didn't come from any fall he can picture."
+              ],
+              "hides": [
+                "How frightened he actually is, keeping his questions gentle instead of forcing the issue."
+              ],
+              "believes_falsely": [
+                "He's starting to wonder if there's someone else, some part of her life he's been shut out of — not a dead man's hands."
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Clinic Cover-Up",
+          "solution": "The Clinic is a black-market transplant operation secretly financed by Madam Chen's syndicate through shell entities, performing off-the-books surgeries using organs harvested from the syndicate's own casualties — including Marcus Tan, whose heart went to Maya Lin. Detective Calloway's cold case on the harbor body is leading him, fact by fact, straight to its door.",
+          "objective_facts": [
+            "The Clinic performed Maya Lin's illegal heart transplant four weeks ago.",
+            "The harbor body shows surgical harvesting markers matching the Clinic's known procedures.",
+            "The Clinic is financially controlled by Madam Chen's syndicate, concealed behind shell companies.",
+            "Clinic staff have begun altering or destroying patient records since the harbor body was identified."
+          ],
+          "character_knowledge": {
+            "DET_CALLOWAY": {
+              "knows": [
+                "A source has pointed him to an off-the-books recovery clinic that matches the harbor body's surgical profile."
+              ],
+              "hides": [
+                "How solid he privately believes the lead is, downplaying it to his captain so it doesn't get pulled for lack of resources."
+              ],
+              "believes_falsely": [
+                "He assumes he's chasing a profit-driven organ trafficking ring, with no idea a syndicate war or a living recipient sits behind it."
+              ]
+            },
+            "MADAM_CHEN": {
+              "knows": [
+                "The Clinic is hers, run through cutouts, and Maya Lin is its most recent — and most dangerous — recipient."
+              ],
+              "hides": [
+                "Her ownership of the Clinic and the fact of Maya's transplant from Calloway and from her own people."
+              ],
+              "believes_falsely": [
+                "She believes the paper trail has been cleaned thoroughly enough to survive scrutiny."
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "Two Sets of Hands",
+      "theme": "The war inside Maya for control of her own body intensifies as Marcus's instincts and his pull toward unfinished business push harder, Sora's surveillance of her turns personal and conflicted, and Daniel finds a hidden weapon in their apartment that Maya explains away with a lie that costs her something real.",
+      "intro_note": "The knife in Maya's hand at 3 a.m. is still there in the morning, wiped clean and hidden at the back of a drawer — she doesn't remember doing either. Daniel is watching her the way you watch a stove you're not sure you turned off.",
+      "outro_note": "Mid-sentence, mid-argument, Daniel watches his wife's voice drop half an octave and go glass-flat, every trace of Maya gone from it for three full seconds before she blinks and comes back, terrified, with no memory of what she just said to him.",
+      "sections": [
+        "Maya tries grounding exercises to quiet the intrusive calm she feels building in her chest",
+        "Interior: Marcus pushes at the edges of her control, patient and certain he'll win eventually",
+        "Daniel, tidying the apartment, finds the folding knife pushed to the back of a drawer",
+        "Confrontation: Daniel holds up the knife; Maya claims she bought it after a break-in scare she never reported",
+        "Daniel doesn't fully believe her, but lets it go for tonight, and something in the marriage quietly cracks",
+        "Madam Chen formally assigns Sora to surveil Maya Lin directly, not just the rumors around her",
+        "Chen's instructions are precise: watch, confirm, do not engage",
+        "Sora begins tailing Maya during ordinary errands, telling herself this is only reconnaissance",
+        "At the Night Market, Sora watches Maya move through a crowd with a gait she would know blind",
+        "Sora has to step away and breathe, grief she never let herself finish surfacing without permission",
+        "Detective Calloway follows a financial trail linking the Clinic to a shell company he can't yet pin to a name",
+        "Calloway starts building the paperwork for a warrant, aware he needs more before a judge will sign",
+        "A stranger bumps Maya's shoulder near the Docks and her hand is at his wrist before she registers moving",
+        "Maya realizes she walked to the Docks with no memory of choosing to go there",
+        "Sora, tailing at a distance, watches Maya release the stranger and nearly steps out of the shadows before stopping herself",
+        "Maya comes home shaking; Daniel, already on edge from the knife, pushes harder than he ever has for the truth",
+        "Cliffhanger: mid-argument, Marcus speaks through Maya's mouth in his own cold cadence, and Daniel hears a stranger answer him from his wife's face"
+      ],
+      "section_words": [
+        null,
+        null,
+        {
+          "min": 110,
+          "max": 180,
+          "target": "120 to 160"
+        },
+        null,
+        null,
+        null,
+        {
+          "min": 110,
+          "max": 180,
+          "target": "120 to 160"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 100,
+          "max": 170,
+          "target": "110 to 150"
+        },
+        null,
+        null,
+        null,
+        {
+          "min": 140,
+          "max": 210,
+          "target": "150 to 190"
+        }
+      ],
+      "section_locations": [
+        "MAYAS_APARTMENT",
+        null,
+        "MAYAS_APARTMENT",
+        "MAYAS_APARTMENT",
+        "MAYAS_APARTMENT",
+        "THE_TEAHOUSE",
+        "THE_TEAHOUSE",
+        "NIGHT_MARKET",
+        "NIGHT_MARKET",
+        "NIGHT_MARKET",
+        "THE_PRECINCT",
+        "THE_PRECINCT",
+        "THE_DOCKS",
+        "THE_DOCKS",
+        "THE_DOCKS",
+        "MAYAS_APARTMENT",
+        "MAYAS_APARTMENT"
+      ],
+      "case": [
+        {
+          "label": "The Ghost",
+          "solution": "Marcus Tan is dead — Madam Chen ordered his execution two years ago and his body was dumped in the harbor after his organs were secretly harvested through her own black-market Clinic. There is no resurrection: the 'Quiet Man sightings' are Maya Lin's body acting out Marcus's transplanted heart's cellular memory, amplified by his surviving consciousness, which is slowly seizing more control of her.",
+          "objective_facts": [
+            "Marcus Tan, the syndicate's 'Quiet Man,' was executed on Madam Chen's order roughly two years ago.",
+            "His organs, including his heart, were harvested through the Clinic before his body was dumped, unidentified, in the harbor.",
+            "Maya Lin received his heart in an illegal transplant four weeks ago.",
+            "Every reported 'sighting' of the Quiet Man since has occurred during one of Maya's blackouts."
+          ],
+          "character_knowledge": {
+            "MAYA_LIN": {
+              "knows": [
+                "Something inside her is patient, deliberate, and getting stronger every time she loses time."
+              ],
+              "hides": [
+                "The knife, the blackouts, and the growing sense that she is losing ground in her own body, from everyone including herself when she can manage it."
+              ],
+              "believes_falsely": [
+                "She still frames this to herself as illness rather than another will — accepting the alternative feels like losing before the fight starts."
+              ]
+            },
+            "MARCUS_TAN": {
+              "knows": [
+                "He is winning, incrementally, and has no reason to hurry."
+              ],
+              "hides": [
+                "The scope of his patience and his certainty of eventual full control, letting Maya believe each incident is isolated."
+              ],
+              "believes_falsely": []
+            },
+            "MADAM_CHEN": {
+              "knows": [
+                "The 'ghost' has been seen enough times now that ignoring it is no longer an option — she needs eyes on it directly."
+              ],
+              "hides": [
+                "From Sora, that her real fear is not a rival's stunt but the possibility Marcus somehow persisted."
+              ],
+              "believes_falsely": [
+                "She still assumes any resolution will involve finding and eliminating a person, not understanding the biological nature of what's happening."
+              ]
+            },
+            "SORA_KIM": {
+              "knows": [
+                "Watching Maya move is like watching Marcus's ghost wear unfamiliar skin."
+              ],
+              "hides": [
+                "The personal toll of the surveillance from Chen, reporting only clinical observations."
+              ],
+              "believes_falsely": [
+                "She's inching toward believing he's somehow alive inside this woman, without yet having any language for a transplant."
+              ]
+            },
+            "DET_CALLOWAY": {
+              "knows": [
+                "The shell company behind the Clinic is real and traceable, if slow-going."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "He still believes he's untangling a trafficking operation, unaware it intersects with a live gang war over a supposed resurrection."
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Vendetta",
+          "solution": "Marcus's last, uncompleted contract was a hit on Anthony Reyes, a lieutenant he'd discovered was secretly informing for Madam Chen — including feeding her the intelligence that let her have Marcus's own estranged brother killed in a rival crew. Marcus refused to let it go; Chen had him executed rather than lose her mole or let the betrayal surface. The intruding consciousness now driving Maya is pulling her, piece by piece, toward finishing that hit.",
+          "objective_facts": [
+            "Marcus had one contract left unfinished when he died: killing Anthony Reyes.",
+            "Reyes has worked for years as Madam Chen's informant inside a rival crew, unbeknownst to that crew.",
+            "The intelligence Reyes fed Chen led directly to the death of Marcus's estranged brother.",
+            "Marcus's final known movements, before his execution, were toward Reyes's territory at the docks."
+          ],
+          "character_knowledge": {
+            "MAYA_LIN": {
+              "knows": [
+                "Her feet keep choosing the docks without her permission, and it isn't random."
+              ],
+              "hides": [
+                "The compulsion itself, unable to explain something she doesn't understand well enough to name."
+              ],
+              "believes_falsely": [
+                "She still treats the pull toward the docks as anxiety fixating on the site of her worst blackout, not as a destination someone else has chosen."
+              ]
+            },
+            "MARCUS_TAN": {
+              "knows": [
+                "Reyes's territory is close enough now that finishing this is only a matter of time and opportunity."
+              ],
+              "hides": [
+                "The specific plan and timeline from Maya, keeping her aware only of the pull, not the target."
+              ],
+              "believes_falsely": []
+            }
+          }
+        },
+        {
+          "label": "The Marriage",
+          "solution": "There is no affair and no betrayal of the heart — Maya is hiding escalating blackouts, violence, and fear from Daniel purely to protect him, certain that the truth would either terrify him or put him in danger. The lie is not about another man; it is about a dead one.",
+          "objective_facts": [
+            "Maya has experienced multiple blackout episodes since her surgery, each followed by unexplained injuries or missing time.",
+            "Maya has not told Daniel the truth about any of them.",
+            "Daniel has directly observed evidence of at least one of these episodes and one deliberate lie from Maya."
+          ],
+          "character_knowledge": {
+            "MAYA_LIN": {
+              "knows": [
+                "The knife lie was thin and Daniel didn't fully buy it, and each lie is costing her something with him she can't get back."
+              ],
+              "hides": [
+                "The real reason for the knife entirely, inventing a break-in that never happened."
+              ],
+              "believes_falsely": [
+                "She believes a plausible lie tonight buys her time to figure this out before she has to tell him anything true."
+              ]
+            },
+            "DANIEL_WOO": {
+              "knows": [
+                "His wife hid a weapon in their home and lied about why, and just now her voice stopped sounding like hers at all."
+              ],
+              "hides": [
+                "How frightened this last moment has left him, needing to see her reaction before he decides what to do."
+              ],
+              "believes_falsely": [
+                "He is beginning to suspect she's protecting someone else — an affair, a secret debt, anything more familiar than the truth."
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Clinic Cover-Up",
+          "solution": "The Clinic is a black-market transplant operation secretly financed by Madam Chen's syndicate through shell entities, performing off-the-books surgeries using organs harvested from the syndicate's own casualties — including Marcus Tan, whose heart went to Maya Lin. Detective Calloway's cold case on the harbor body is leading him, fact by fact, straight to its door.",
+          "objective_facts": [
+            "The Clinic performed Maya Lin's illegal heart transplant four weeks ago.",
+            "The harbor body shows surgical harvesting markers matching the Clinic's known procedures.",
+            "The Clinic is financially controlled by Madam Chen's syndicate, concealed behind shell companies.",
+            "Clinic staff have begun altering or destroying patient records since the harbor body was identified."
+          ],
+          "character_knowledge": {
+            "DET_CALLOWAY": {
+              "knows": [
+                "The shell company financing the Clinic routes through at least two more layers before it dead-ends — someone built this to be untraceable."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "He assumes the dead-end layering means organized crime for profit, not a specific syndicate's private operation."
+              ]
+            },
+            "MADAM_CHEN": {
+              "knows": [
+                "A detective is now pulling at the Clinic's financial threads."
+              ],
+              "hides": [
+                "This development from her own lieutenants, unwilling to show any sign of vulnerability while the ghost rumor is already destabilizing her."
+              ],
+              "believes_falsely": [
+                "She still believes the layering will hold long enough to outlast the investigation."
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "The Old Signal",
+      "theme": "Madam Chen sets a trap using a code only the real Quiet Man would recognize, luring Maya into danger she doesn't understand and pulling her closer to whatever unfinished business is driving her, while the clinic's surgeon is threatened into silence just as Calloway closes in with a warrant.",
+      "intro_note": "Daniel heard something wear his wife's face and speak in a voice that wasn't hers, and he hasn't stopped watching her since. Whatever answered him that night is still in there, and it isn't done.",
+      "outro_note": "Sora has spent weeks watching from doorways and rooftops, telling herself distance was enough. Tonight, standing outside the apartment where Maya Lin's light just went out, she stops telling herself that — and steps forward to knock.",
+      "sections": [
+        "Madam Chen, in the Teahouse, designs a test: an old recognition code only the true Quiet Man would answer to",
+        "Sora questions the plan aloud, uneasy about baiting a woman who may be entirely innocent",
+        "Chen dismisses the concern and sends the code quietly out through the underworld grapevine",
+        "At the Clinic, two of Chen's men pay the surgeon a visit that is polite in tone and unmistakable in intent",
+        "The surgeon, alone afterward, begins destroying the last records of Maya Lin's surgery",
+        "Detective Calloway, warrant paperwork finally strong enough, gets a judge's signature",
+        "Calloway briefs his partner on timing, aware the Clinic may already be spooked",
+        "At the Night Market, a quiet customer at Daniel's counter speaks the old code phrase like an ordinary order",
+        "Something in Maya goes rigid and still at the words, answering half-consciously before she can stop herself",
+        "Daniel, refilling a water glass nearby, sees his wife's face go blank and cold for the length of one sentence",
+        "That night, compelled, Maya leaves the apartment and walks to the Docks with a destination she didn't choose",
+        "Sora is already there, positioned per Chen's instructions, watching the trap she helped set close in",
+        "Chen's men close around Maya at the waterline; for a moment it looks like the confirmation everyone wanted",
+        "Sora steps out of the fog before it goes further, putting herself between Maya and the syndicate men without revealing why",
+        "Across town, Calloway's team arrives at the Clinic to find staff already mid-scramble, files half-shredded",
+        "Maya makes it home shaking, unable to explain to Daniel where she's been or why her hands still won't stop trembling",
+        "Cliffhanger: Sora stands outside the apartment building afterward, done watching from a distance, and walks toward the door"
+      ],
+      "section_words": [
+        null,
+        null,
+        {
+          "min": 110,
+          "max": 180,
+          "target": "120 to 160"
+        },
+        null,
+        {
+          "min": 110,
+          "max": 180,
+          "target": "120 to 160"
+        },
+        null,
+        null,
+        null,
+        {
+          "min": 100,
+          "max": 170,
+          "target": "110 to 150"
+        },
+        {
+          "min": 100,
+          "max": 170,
+          "target": "110 to 150"
+        },
+        null,
+        null,
+        {
+          "min": 120,
+          "max": 190,
+          "target": "130 to 170"
+        },
+        null,
+        null,
+        null,
+        {
+          "min": 140,
+          "max": 210,
+          "target": "150 to 190"
+        }
+      ],
+      "section_locations": [
+        "THE_TEAHOUSE",
+        "THE_TEAHOUSE",
+        "THE_TEAHOUSE",
+        "THE_CLINIC",
+        "THE_CLINIC",
+        "THE_PRECINCT",
+        "THE_PRECINCT",
+        "NIGHT_MARKET",
+        "NIGHT_MARKET",
+        "NIGHT_MARKET",
+        "THE_DOCKS",
+        "THE_DOCKS",
+        "THE_DOCKS",
+        "THE_DOCKS",
+        "THE_CLINIC",
+        "MAYAS_APARTMENT",
+        "MAYAS_APARTMENT"
+      ],
+      "case": [
+        {
+          "label": "The Ghost",
+          "solution": "Marcus Tan is dead — Madam Chen ordered his execution two years ago and his body was dumped in the harbor after his organs were secretly harvested through her own black-market Clinic. There is no resurrection: the 'Quiet Man sightings' are Maya Lin's body acting out Marcus's transplanted heart's cellular memory, amplified by his surviving consciousness, which is slowly seizing more control of her.",
+          "objective_facts": [
+            "Marcus Tan, the syndicate's 'Quiet Man,' was executed on Madam Chen's order roughly two years ago.",
+            "His organs, including his heart, were harvested through the Clinic before his body was dumped, unidentified, in the harbor.",
+            "Maya Lin received his heart in an illegal transplant four weeks ago.",
+            "Every reported 'sighting' of the Quiet Man since has occurred during one of Maya's blackouts."
+          ],
+          "character_knowledge": {
+            "MAYA_LIN": {
+              "knows": [
+                "A stranger's phrase at the restaurant counter pulled something out of her that answered on its own."
+              ],
+              "hides": [
+                "That she said anything strange at all — she barely remembers it and hopes Daniel misheard."
+              ],
+              "believes_falsely": [
+                "She tells herself it was a coincidence of words, not a test she failed to notice she was taking."
+              ]
+            },
+            "MARCUS_TAN": {
+              "knows": [
+                "He recognized the recognition code the instant it was spoken and answered it before Maya could stop him."
+              ],
+              "hides": [
+                "That answering was deliberate — he wants the syndicate to know he's still moving, still capable."
+              ],
+              "believes_falsely": []
+            },
+            "MADAM_CHEN": {
+              "knows": [
+                "The code went out and something answered it — the confirmation she needed that this is real."
+              ],
+              "hides": [
+                "From her own men at the docks, the last shred of doubt she still carries about what exactly they're confronting."
+              ],
+              "believes_falsely": [
+                "She still frames the answer as proof of an impersonator or a survivor, not a biological echo she has no name for."
+              ]
+            },
+            "SORA_KIM": {
+              "knows": [
+                "The code answered correctly, in cadence and content, in a way no impersonator could fake convincingly."
+              ],
+              "hides": [
+                "That watching it happen broke something loose in her she can no longer file as professional distance."
+              ],
+              "believes_falsely": [
+                "Standing in the fog tonight, she came closer than ever to believing Marcus is somehow, impossibly, still present — without grasping what 'present' actually means here."
+              ]
+            },
+            "DET_CALLOWAY": {
+              "knows": [
+                "The Clinic staff destroyed records the moment his warrant hit, confirming they had exactly what he suspected to hide."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "He still believes he's chasing a trafficking cover-up, with no idea the same building sits at the center of a live syndicate war over a woman he's never heard of."
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Vendetta",
+          "solution": "Marcus's last, uncompleted contract was a hit on Anthony Reyes, a lieutenant he'd discovered was secretly informing for Madam Chen — including feeding her the intelligence that let her have Marcus's own estranged brother killed in a rival crew. Marcus refused to let it go; Chen had him executed rather than lose her mole or let the betrayal surface. The intruding consciousness now driving Maya is pulling her, piece by piece, toward finishing that hit.",
+          "objective_facts": [
+            "Marcus had one contract left unfinished when he died: killing Anthony Reyes.",
+            "Reyes has worked for years as Madam Chen's informant inside a rival crew, unbeknownst to that crew.",
+            "The intelligence Reyes fed Chen led directly to the death of Marcus's estranged brother.",
+            "Marcus's final known movements, before his execution, were toward Reyes's territory at the docks."
+          ],
+          "character_knowledge": {
+            "MAYA_LIN": {
+              "knows": [
+                "Whatever answered the code tonight wanted to be found at the docks, specifically, and not anywhere else."
+              ],
+              "hides": [
+                "That she walked there on purpose in some sense she can't articulate, letting Daniel believe she simply got lost."
+              ],
+              "believes_falsely": [
+                "She still doesn't connect the pull toward the docks to any specific person or unfinished task."
+              ]
+            },
+            "MARCUS_TAN": {
+              "knows": [
+                "Being seen at the docks tonight moves him one step closer to a confrontation with Reyes, even if it wasn't the encounter he wanted."
+              ],
+              "hides": [
+                "His disappointment that Sora's interruption cost him the opening he'd hoped for."
+              ],
+              "believes_falsely": []
+            },
+            "MADAM_CHEN": {
+              "knows": [
+                "The trap confirmed the ghost is real and mobile, and that it went straight for Reyes's territory unprompted."
+              ],
+              "hides": [
+                "Still, from everyone, that this location wasn't random — that it points at exactly the secret she killed Marcus to protect."
+              ],
+              "believes_falsely": [
+                "She may read the docks encounter as territorial aggression against her generally, rather than as evidence the ghost is hunting Reyes specifically."
+              ]
+            },
+            "SORA_KIM": {
+              "knows": [
+                "The confrontation happened on Reyes's turf, which can't be coincidence given who Marcus's beating victim answered to."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "She still has no idea Reyes betrayed Marcus, or that Chen ordered the execution to protect that secret."
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Marriage",
+          "solution": "There is no affair and no betrayal of the heart — Maya is hiding escalating blackouts, violence, and fear from Daniel purely to protect him, certain that the truth would either terrify him or put him in danger. The lie is not about another man; it is about a dead one.",
+          "objective_facts": [
+            "Maya has experienced multiple blackout episodes since her surgery, each followed by unexplained injuries or missing time.",
+            "Maya has not told Daniel the truth about any of them.",
+            "Daniel has directly observed evidence of at least one of these episodes and one deliberate lie from Maya."
+          ],
+          "character_knowledge": {
+            "MAYA_LIN": {
+              "knows": [
+                "She came home tonight from somewhere she can't explain, shaking, with no story left that will hold."
+              ],
+              "hides": [
+                "Everything about the docks, the code, and the missing hours, offering Daniel only silence where a lie used to be."
+              ],
+              "believes_falsely": [
+                "She believes her silence tonight is safer than any explanation she could invent, even as she watches it costing her his trust outright."
+              ]
+            },
+            "DANIEL_WOO": {
+              "knows": [
+                "A stranger answered a phrase through his wife's mouth days ago, and tonight she came home unable to say where she'd been."
+              ],
+              "hides": [
+                "That he's started quietly documenting these incidents himself, dates and details, unsure yet what he'll do with them."
+              ],
+              "believes_falsely": [
+                "He is now torn between his old fear of an affair and a newer, stranger fear he can't name — but still not the truth."
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Clinic Cover-Up",
+          "solution": "The Clinic is a black-market transplant operation secretly financed by Madam Chen's syndicate through shell entities, performing off-the-books surgeries using organs harvested from the syndicate's own casualties — including Marcus Tan, whose heart went to Maya Lin. Detective Calloway's cold case on the harbor body is leading him, fact by fact, straight to its door.",
+          "objective_facts": [
+            "The Clinic performed Maya Lin's illegal heart transplant four weeks ago.",
+            "The harbor body shows surgical harvesting markers matching the Clinic's known procedures.",
+            "The Clinic is financially controlled by Madam Chen's syndicate, concealed behind shell companies.",
+            "Clinic staff have begun altering or destroying patient records since the harbor body was identified."
+          ],
+          "character_knowledge": {
+            "DET_CALLOWAY": {
+              "knows": [
+                "He arrived with a signed warrant to find the Clinic already mid-purge, confirming someone tipped them off or they've been running scared for days."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "He assumes internal panic over his own investigation caused the timing, unaware Chen's men were there first for an unrelated reason — silencing the surgeon."
+              ]
+            },
+            "MADAM_CHEN": {
+              "knows": [
+                "The surgeon has been warned into silence and the most incriminating records are gone."
+              ],
+              "hides": [
+                "That she ordered this personally, keeping her fingerprints off even the cleanup."
+              ],
+              "believes_falsely": [
+                "She believes the Clinic's exposure risk is now contained, unaware the police warrant landed the same night."
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "Recognition",
+      "theme": "MIDPOINT TURN — Sora corners Maya and the truth of the transplant breaks into the open for the first time, upending everything the syndicate believed and giving Maya's inner war a name, while Daniel finds undeniable proof of violence and the marriage cracks apart in public.",
+      "intro_note": "The code Madam Chen planted worked exactly as she intended — it pulled Maya to the docks in the dead of night, hands steady and certain in a way no schoolteacher's should be. Now Sora Kim is waiting there too, no longer chasing a rumor but a face she needs to see up close, while across the city a warrant with Detective Calloway's name on it finally clears a judge's desk.",
+      "outro_note": "Sora carries half a truth back to the teahouse, and Madam Chen listens to every word without once looking surprised — because somewhere behind her calm, practiced face, she has already decided what happens to a woman who carries a dead man's heart and doesn't yet understand which of them survives this. Across town, Daniel Woo packs a bag he has no intention of using to leave — he's staying, and he's done asking Maya nicely.",
+      "sections": [
+        "Chen Demands a Confirmed Answer (The Vendetta / The Borrowed Heart)",
+        "Maya Wakes to a Stranger's Bruises (The Borrowed Heart)",
+        "Daniel Confides in His Cousin at the Register (The Marriage)",
+        "Calloway Signs the Warrant (The Clinic Trail)",
+        "Sora Waits in the Fog (The Borrowed Heart)",
+        "A Text Pulls Maya Out the Door (The Borrowed Heart)",
+        "Sora Corners Maya on the Container Line (The Borrowed Heart)",
+        "The Tell (The Borrowed Heart)",
+        "What Sora Doesn't Say (The Vendetta)",
+        "The Surgeon Panics Over the Ledger (The Clinic Trail)",
+        "Calloway Moves (The Clinic Trail)",
+        "The Jacket in the Hamper (The Marriage)",
+        "Daniel Confronts Maya in Front of the Whole Market (The Marriage)",
+        "Sora Reports Back, Half the Truth (The Borrowed Heart / The Vendetta)",
+        "Marcus, Alone with Maya's Fear (The Borrowed Heart)",
+        "Chen's Silhouette on the Water (The Vendetta)",
+        "The Order Chen Won't Say Out Loud (Narrator Outro / The Vendetta)"
+      ],
+      "section_words": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 120,
+          "max": 200,
+          "target": "140 to 170"
+        },
+        null,
+        {
+          "min": 110,
+          "max": 190,
+          "target": "130 to 160"
+        },
+        {
+          "min": 120,
+          "max": 200,
+          "target": "140 to 170"
+        },
+        null,
+        {
+          "min": 130,
+          "max": 210,
+          "target": "150 to 180"
+        },
+        {
+          "min": 110,
+          "max": 190,
+          "target": "130 to 160"
+        },
+        null,
+        null,
+        {
+          "min": 130,
+          "max": 210,
+          "target": "150 to 180"
+        },
+        {
+          "min": 120,
+          "max": 200,
+          "target": "140 to 170"
+        },
+        null
+      ],
+      "section_locations": [
+        "THE_TEAHOUSE",
+        "MAYAS_APARTMENT",
+        "NIGHT_MARKET",
+        "THE_PRECINCT",
+        "THE_DOCKS",
+        "MAYAS_APARTMENT",
+        "THE_DOCKS",
+        "THE_DOCKS",
+        "THE_DOCKS",
+        "THE_CLINIC",
+        "THE_PRECINCT",
+        "MAYAS_APARTMENT",
+        "NIGHT_MARKET",
+        "THE_TEAHOUSE",
+        "MAYAS_APARTMENT",
+        "THE_DOCKS",
+        "THE_TEAHOUSE"
+      ],
+      "case": [
+        {
+          "label": "The Borrowed Heart",
+          "solution": "Maya's transplant heart came directly from Marcus Tan, the syndicate hitman known as 'the Quiet Man' — harvested at The Clinic after Madam Chen had him killed, then sold anonymously through a broker to Daniel, who never learned or asked whose heart he was buying. The tissue carries Marcus's trained reflexes, killing technique, and fragments of his buried consciousness, which intrude on Maya's body and mind with escalating force. There is no resurrection, no ghost — only a heart that never stopped remembering what its owner was made to do, slowly overwriting the woman now living around it.",
+          "objective_facts": [
+            "The heart transplanted into Maya was harvested from Marcus Tan's body at The Clinic after his death.",
+            "Maya's blackout episodes produce reflexes, tells, and killing technique unique to Marcus's documented methods.",
+            "Sora Kim recognizes a private physical signal — a two-finger tap against the collarbone — that only she and Marcus ever used, and Maya has now repeated it without ever being taught.",
+            "The Clinic falsified Marcus Tan's official cause of death and never reported the harvest."
+          ],
+          "character_knowledge": {
+            "MAYA_LIN": {
+              "knows": [
+                "She blacks out and wakes with skills, reflexes, and a cold clarity that aren't hers",
+                "She's been carrying a burner phone and a folding knife she never bought",
+                "Something inside her answered Sora's private signal before she consciously understood why she moved that way"
+              ],
+              "hides": [
+                "She's stopped trying to explain the blackouts to Daniel — she has no words that won't sound insane, and hiding it feels like protecting him from something worse than a lie"
+              ],
+              "believes_falsely": [
+                "Until Sora corners her, Maya still half-believes the blackouts are some kind of post-surgical trauma or panic response, not another person's memory"
+              ]
+            },
+            "MARCUS_TAN": {
+              "knows": [
+                "He recognizes Sora on sight, recognizes the docks, recognizes the unfinished business waiting for him"
+              ],
+              "hides": [
+                "He won't let Maya understand what he's really protecting Sora from, or why — that knowledge would only help her resist him"
+              ],
+              "believes_falsely": [
+                "He assumes Sora will either strike at him or fall in with him — he hasn't accounted for the fact that Sora is looking at Maya, not at him"
+              ]
+            },
+            "SORA_KIM": {
+              "knows": [
+                "She's just watched Maya produce the exact private tell only she and Marcus ever shared — this can't be coincidence or a con"
+              ],
+              "hides": [
+                "She hasn't told Chen what she's seen yet — she needs certainty before she hands a stranger's life to the woman who gives kill orders"
+              ],
+              "believes_falsely": [
+                "Sora still believes a rival syndicate killed Marcus, not Chen herself"
+              ]
+            },
+            "MADAM_CHEN": {
+              "knows": [
+                "Rumors of the Quiet Man's return are spreading through her own people faster than she can contain them",
+                "She's sent Sora to confirm, once and for all, what's really happening"
+              ],
+              "hides": [
+                "She hasn't told Sora or anyone in the syndicate the real reason Marcus died — she lets everyone believe a rival faction did it"
+              ],
+              "believes_falsely": [
+                "Until Sora's report lands, Chen still entertains that this could be a genuine resurrection or a rival's elaborate trick rather than a transplant"
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Marriage",
+          "solution": "Desperate when Maya's name never rose on the legal transplant list in time, Daniel paid an unlicensed broker in cash for a 'healthy match,' no questions asked — a decision he has never confessed to Maya, and one he still believes was simply an act of love. He has no idea the donor was a hitman; he only knows the price was too clean and the paperwork never existed. Since her recovery, Maya's escalating secrecy, blackouts, and now physical evidence of violence have convinced him she's hiding an affair — the only explanation his mind can hold onto rather than anything stranger.",
+          "objective_facts": [
+            "Daniel paid an unlicensed broker roughly forty thousand dollars in cash for Maya's transplant match, six weeks before her surgery.",
+            "Maya has never told Daniel about any blackout, the burner phone, or the folding knife.",
+            "A bloodstained jacket sleeve, carrying a blood type that isn't Maya's, has now been found in their apartment."
+          ],
+          "character_knowledge": {
+            "MAYA_LIN": {
+              "knows": [
+                "Daniel found blood on her jacket and she genuinely has no memory of how it got there"
+              ],
+              "hides": [
+                "She lets him believe she cut herself at the restaurant rather than admit she doesn't know"
+              ],
+              "believes_falsely": [
+                "She still believes she can contain this before Daniel finds something she truly can't explain away"
+              ]
+            },
+            "DANIEL_WOO": {
+              "knows": [
+                "There's blood on Maya's jacket that isn't hers, and her explanation doesn't match the stain"
+              ],
+              "hides": [
+                "He hasn't told her he had a friend at a lab test it quietly"
+              ],
+              "believes_falsely": [
+                "He's certain this is evidence of an affair turned violent — a jealous other man — not evidence Maya was near a killing"
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Clinic Trail",
+          "solution": "The Clinic has run a black-market organ pipeline for years behind the front of a legitimate outpatient surgery center, serving two masters — desperate buyers routed through underworld brokers, and Madam Chen's syndicate, which uses it to erase inconvenient bodies. Marcus Tan's heart was harvested there on Chen's order and, through the broker Daniel used, matched anonymously to Maya; the surgeon never disclosed, and was never asked, whose heart it truly was. Detective Calloway's fresh murder case, styled exactly on the old Quiet Man hits, has led him back through cold case files to the clinic's falsified paperwork on Marcus Tan's death.",
+          "objective_facts": [
+            "The Clinic falsified Marcus Tan's official cause of death and never reported the organ harvest.",
+            "The Clinic's internal billing shows an unregistered cash transaction matching the approximate date and amount of Daniel's payment.",
+            "Madam Chen has personally protected the clinic's lead surgeon from exposure for over a decade."
+          ],
+          "character_knowledge": {
+            "DET_CALLOWAY": {
+              "knows": [
+                "The clinic's paperwork on Marcus Tan's death was falsified",
+                "He finally has enough for a warrant"
+              ],
+              "hides": [
+                "He's kept the warrant's timing off the precinct radio to avoid a leak"
+              ],
+              "believes_falsely": [
+                "He assumes the falsified certificate points to a syndicate hit covered up, not to an organ harvest specifically"
+              ]
+            },
+            "MADAM_CHEN": {
+              "knows": [
+                "Calloway is closing in on the clinic with a warrant"
+              ],
+              "hides": [
+                "She hasn't told the surgeon how exposed he really is — she wants him controllable, not panicked"
+              ],
+              "believes_falsely": []
+            }
+          }
+        },
+        {
+          "label": "The Vendetta",
+          "solution": "Madam Chen's final order to Marcus Tan was a contract on Sora Kim, whom Chen had come to see as a liability. Marcus refused — the one order in his career he wouldn't carry out — and tried instead to get Sora out of the city. Chen treated the refusal as terminal disloyalty and had Marcus killed within two days, staging his death to look like the work of a rival syndicate faction, then let that lie stand for everyone, including Sora. The instinct driving Maya toward 'unfinished business' isn't cold revenge against a stranger — it's Marcus, through her, trying to finish protecting the one person he refused to kill, and to make Chen answer for what she did instead.",
+          "objective_facts": [
+            "Madam Chen's final order to Marcus Tan was a contract on Sora Kim.",
+            "Marcus never carried out that contract.",
+            "Marcus was killed on Chen's direct order within two days of refusing the contract.",
+            "Marcus's death was staged to implicate a rival syndicate faction."
+          ],
+          "character_knowledge": {
+            "MARCUS_TAN": {
+              "knows": [
+                "He was ordered to kill Sora and refused",
+                "He knows exactly who had him killed for that refusal"
+              ],
+              "hides": [
+                "He won't let this surface through Maya yet — too soon, and Sora could be dead before he's ready to protect her"
+              ],
+              "believes_falsely": []
+            },
+            "SORA_KIM": {
+              "knows": [
+                "Marcus disappeared, then turned up dead, officially blamed on a rival faction"
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "Sora believes to this day that a rival syndicate killed Marcus — she has never once suspected Chen"
+              ]
+            },
+            "MADAM_CHEN": {
+              "knows": [
+                "She ordered Marcus's death after he refused to kill Sora",
+                "She has hidden this from the entire syndicate, including Sora herself"
+              ],
+              "hides": [
+                "She lets everyone believe a rival faction killed Marcus"
+              ],
+              "believes_falsely": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "Two Truths",
+      "theme": "Madam Chen weighs whether to kill Maya or weaponize her now that the transplant truth is loose, Daniel demands answers Maya can no longer avoid giving, and Calloway's investigation collides head-on with the syndicate's own hunt, pushing every thread toward its climax.",
+      "intro_note": "The teahouse is quiet the way rooms go quiet before a verdict. Madam Chen has heard Sora's report, and now the only question left in her private parlor is not whether the ghost is real, but what to do with the woman wearing it. Across the city, Daniel Woo is done waiting for an explanation that makes sense — he wants the truth tonight, whatever shape it takes.",
+      "outro_note": "Madam Chen gives an order she doesn't raise her voice to give, and Sora Kim receives it the way she's received every order for six years — without a flicker, and without, this time, any intention of carrying it out cleanly. Meanwhile, in a file folder Calloway didn't expect to find anything in, a name surfaces that has no business being anywhere near a homicide investigation: Daniel Woo, cash buyer, six weeks before his wife's surgery. The net closing on Maya Lin is no longer coming from one direction — it's coming from every direction at once.",
+      "sections": [
+        "Chen Convenes Her Inner Circle (The Vendetta / The Borrowed Heart)",
+        "Maya Braces for Daniel's Questions (The Marriage)",
+        "Calloway Assembles the Raid Team (The Clinic Trail)",
+        "Sora Reports What She Left Out (The Vendetta)",
+        "Kill or Claim (The Vendetta / The Borrowed Heart)",
+        "Daniel Waits at Closing Time (The Marriage)",
+        "The Confession That Isn't Everything (The Marriage)",
+        "The Surgeon's Last Clean Morning (The Clinic Trail)",
+        "The Raid (The Clinic Trail)",
+        "Chen's People Arrive Too Late — Or Not Late Enough (The Clinic Trail / The Vendetta)",
+        "Calloway Finds the Gap in the Records (The Clinic Trail)",
+        "Marcus Feels the Net Closing (The Borrowed Heart)",
+        "Chen Gives the Order (The Vendetta)",
+        "Daniel Alone Among the Steam (The Marriage)",
+        "Sora's Warning, Unsent (The Vendetta)",
+        "Maya Feels Someone Else's Certainty (The Borrowed Heart)",
+        "The Net From Both Sides (Narrator Outro / The Clinic Trail / The Vendetta)"
+      ],
+      "section_words": [
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 130,
+          "max": 210,
+          "target": "150 to 180"
+        },
+        null,
+        null,
+        {
+          "min": 120,
+          "max": 200,
+          "target": "140 to 170"
+        },
+        null,
+        null,
+        {
+          "min": 130,
+          "max": 210,
+          "target": "150 to 180"
+        },
+        {
+          "min": 110,
+          "max": 190,
+          "target": "130 to 160"
+        },
+        {
+          "min": 100,
+          "max": 180,
+          "target": "120 to 150"
+        },
+        {
+          "min": 130,
+          "max": 210,
+          "target": "150 to 180"
+        },
+        {
+          "min": 120,
+          "max": 200,
+          "target": "140 to 170"
+        },
+        null,
+        null
+      ],
+      "section_locations": [
+        "THE_TEAHOUSE",
+        "MAYAS_APARTMENT",
+        "THE_PRECINCT",
+        "THE_DOCKS",
+        "THE_TEAHOUSE",
+        "NIGHT_MARKET",
+        "MAYAS_APARTMENT",
+        "THE_CLINIC",
+        "THE_CLINIC",
+        "THE_DOCKS",
+        "THE_PRECINCT",
+        "MAYAS_APARTMENT",
+        "THE_TEAHOUSE",
+        "NIGHT_MARKET",
+        "THE_DOCKS",
+        "MAYAS_APARTMENT",
+        "THE_DOCKS"
+      ],
+      "case": [
+        {
+          "label": "The Borrowed Heart",
+          "solution": "Maya's transplant heart came directly from Marcus Tan, the syndicate hitman known as 'the Quiet Man' — harvested at The Clinic after Madam Chen had him killed, then sold anonymously through a broker to Daniel, who never learned or asked whose heart he was buying. The tissue carries Marcus's trained reflexes, killing technique, and fragments of his buried consciousness, which intrude on Maya's body and mind with escalating force. There is no resurrection, no ghost — only a heart that never stopped remembering what its owner was made to do, slowly overwriting the woman now living around it.",
+          "objective_facts": [
+            "The heart transplanted into Maya was harvested from Marcus Tan's body at The Clinic after his death.",
+            "Maya's blackout episodes produce reflexes, tells, and killing technique unique to Marcus's documented methods.",
+            "Sora Kim recognizes a private physical signal — a two-finger tap against the collarbone — that only she and Marcus ever used, and Maya has now repeated it without ever being taught.",
+            "The Clinic falsified Marcus Tan's official cause of death and never reported the harvest."
+          ],
+          "character_knowledge": {
+            "MAYA_LIN": {
+              "knows": [
+                "She now knows for certain the heart came from a man the underworld called 'the Quiet Man' — Sora told her that much at the docks",
+                "Her blackouts aren't psychiatric — someone else is acting through her body"
+              ],
+              "hides": [
+                "She still hasn't told Daniel the donor's identity — only that the transplant itself wasn't legal"
+              ],
+              "believes_falsely": [
+                "She believes if she can learn enough about who Marcus was, she can reason with whatever's happening rather than actually lose to it"
+              ]
+            },
+            "MARCUS_TAN": {
+              "knows": [
+                "Chen now knows what Maya is — the timeline just accelerated"
+              ],
+              "hides": [
+                "He hides from Maya exactly how little time he believes they have before Chen moves"
+              ],
+              "believes_falsely": []
+            },
+            "MADAM_CHEN": {
+              "knows": [
+                "Sora has confirmed it — the ghost is Maya Lin, an ordinary woman carrying Marcus's heart, not Marcus reborn"
+              ],
+              "hides": [
+                "She hides from her own lieutenants that she's genuinely unsettled — a dead man's memory acting through a stranger isn't a threat her rulebook covers"
+              ],
+              "believes_falsely": [
+                "She assumes killing Maya will end this cleanly — she hasn't accounted for what that might do to the loyalty of people who once followed Marcus, namely Sora"
+              ]
+            },
+            "SORA_KIM": {
+              "knows": [
+                "She's confirmed the truth to Chen — the one person she most needed to keep it from"
+              ],
+              "hides": [
+                "She left out how much of Marcus's actual voice and mannerisms are still intact in Maya, afraid of what Chen will do with that detail"
+              ],
+              "believes_falsely": []
+            }
+          }
+        },
+        {
+          "label": "The Marriage",
+          "solution": "Desperate when Maya's name never rose on the legal transplant list in time, Daniel paid an unlicensed broker in cash for a 'healthy match,' no questions asked — a decision he has never confessed to Maya, and one he still believes was simply an act of love. He has no idea the donor was a hitman; he only knows the price was too clean and the paperwork never existed. Since her recovery, Maya's escalating secrecy, blackouts, and now physical evidence of violence have convinced him she's hiding an affair — the only explanation his mind can hold onto rather than anything stranger.",
+          "objective_facts": [
+            "Daniel paid an unlicensed broker roughly forty thousand dollars in cash for Maya's transplant match, six weeks before her surgery.",
+            "Maya has never told Daniel about any blackout, the burner phone, or the folding knife.",
+            "A bloodstained jacket sleeve, carrying a blood type that isn't Maya's, has now been found in their apartment."
+          ],
+          "character_knowledge": {
+            "MAYA_LIN": {
+              "knows": [
+                "Daniel isn't going to accept vague answers anymore"
+              ],
+              "hides": [
+                "She admits the transplant was illegal but still can't say the donor's name or what she's become capable of"
+              ],
+              "believes_falsely": [
+                "She hopes a partial truth will satisfy him enough to keep him uninvolved and safe"
+              ]
+            },
+            "DANIEL_WOO": {
+              "knows": [
+                "Maya has finally admitted to an illegal transplant"
+              ],
+              "hides": [
+                "He doesn't tell her he already has the blood test results — he's testing whether she'll offer the rest unprompted"
+              ],
+              "believes_falsely": [
+                "He assumes 'illegal transplant' is the whole secret, the worst of it — he has no framework yet for what's actually inside her"
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Clinic Trail",
+          "solution": "The Clinic has run a black-market organ pipeline for years behind the front of a legitimate outpatient surgery center, serving two masters — desperate buyers routed through underworld brokers, and Madam Chen's syndicate, which uses it to erase inconvenient bodies. Marcus Tan's heart was harvested there on Chen's order and, through the broker Daniel used, matched anonymously to Maya; the surgeon never disclosed, and was never asked, whose heart it truly was. Detective Calloway's fresh murder case, styled exactly on the old Quiet Man hits, has led him back through cold case files to the clinic's falsified paperwork on Marcus Tan's death.",
+          "objective_facts": [
+            "The Clinic falsified Marcus Tan's official cause of death and never reported the organ harvest.",
+            "The Clinic's internal billing shows an unregistered cash transaction matching the approximate date and amount of Daniel's payment.",
+            "Madam Chen has personally protected the clinic's lead surgeon from exposure for over a decade."
+          ],
+          "character_knowledge": {
+            "DET_CALLOWAY": {
+              "knows": [
+                "The raid confirms the clinic's harvest-and-sale pipeline",
+                "Someone tried to clear records before he arrived — meaning the syndicate already knew he was coming"
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "He assumes the tip-off about his warrant came from inside his own precinct, not from Chen's independent network"
+              ]
+            },
+            "MADAM_CHEN": {
+              "knows": [
+                "Calloway's raid is happening in real time and her people didn't finish clearing the most damning records"
+              ],
+              "hides": [
+                "She hasn't told the surgeon she now considers him a liability rather than an asset"
+              ],
+              "believes_falsely": []
+            },
+            "SORA_KIM": {
+              "knows": [
+                "She's ordered to intercept clinic records before Calloway's team arrives"
+              ],
+              "hides": [
+                "She stalls half a step longer than she needs to, giving the raid team the edge, without fully admitting to herself why"
+              ],
+              "believes_falsely": []
+            }
+          }
+        },
+        {
+          "label": "The Vendetta",
+          "solution": "Madam Chen's final order to Marcus Tan was a contract on Sora Kim, whom Chen had come to see as a liability. Marcus refused — the one order in his career he wouldn't carry out — and tried instead to get Sora out of the city. Chen treated the refusal as terminal disloyalty and had Marcus killed within two days, staging his death to look like the work of a rival syndicate faction, then let that lie stand for everyone, including Sora. The instinct driving Maya toward 'unfinished business' isn't cold revenge against a stranger — it's Marcus, through her, trying to finish protecting the one person he refused to kill, and to make Chen answer for what she did instead.",
+          "objective_facts": [
+            "Madam Chen's final order to Marcus Tan was a contract on Sora Kim.",
+            "Marcus never carried out that contract.",
+            "Marcus was killed on Chen's direct order within two days of refusing the contract.",
+            "Marcus's death was staged to implicate a rival syndicate faction."
+          ],
+          "character_knowledge": {
+            "MARCUS_TAN": {
+              "knows": [
+                "He can feel Chen closing in faster than he expected — his window to protect Sora and settle things is shrinking"
+              ],
+              "hides": [
+                "He still won't let the full truth surface through Maya — not yet"
+              ],
+              "believes_falsely": []
+            },
+            "MADAM_CHEN": {
+              "knows": [
+                "Deciding Maya's fate forces her to reckon with what happens if the truth of Marcus's death ever surfaces alongside the truth of the heart"
+              ],
+              "hides": [
+                "She still hides her role in Marcus's death from everyone, including Sora"
+              ],
+              "believes_falsely": []
+            },
+            "SORA_KIM": {
+              "knows": [
+                "Chen is being unusually decisive about wanting Maya eliminated quickly — faster than seems proportionate to the actual threat"
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "Sora starts to wonder, for the first time, whether Chen's urgency is about protecting the syndicate — or about something Chen doesn't want found"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "What Marcus Left Undone",
+      "theme": "The true target and reason behind the Quiet Man's death finally surfaces, dragging Maya to the edge of losing herself entirely to his vendetta, while the clinic cover-up unravels as the surgeon is forced to choose between the syndicate and the law.",
+      "intro_note": "The order is out, and it has a name on it now — Maya Lin's. Sora Kim drives to the docks not knowing yet whether she'll follow it or break it, and behind her, a clinic surgeon with nothing left to protect finally picks up the phone he's been afraid to touch for ten years. In a quiet apartment across town, Daniel packs nothing this time. He's not planning to be there when Maya gets back — he's planning to already be wherever she's going.",
+      "outro_note": "The truth is finally spoken aloud at the water's edge — not a killer's confession, but a dead man's, delivered in a schoolteacher's voice, naming exactly who Madam Chen ordered him to kill and exactly why she had him buried instead. Sora Kim doesn't move, doesn't speak, and doesn't warn anyone — which is its own kind of answer. And somewhere behind them, headlights swing off the access road and go dark: Daniel Woo has found the one address in this city he was never supposed to know.",
+      "sections": [
+        "Chen Prepares to Silence the Surgeon (The Clinic Trail)",
+        "The Surgeon Walks In Alone (The Clinic Trail)",
+        "Maya Loses an Hour She Can't Get Back (The Borrowed Heart)",
+        "Daniel Decides to Follow (The Marriage)",
+        "Sora Is Sent to Finish It (The Vendetta)",
+        "Marcus Speaks Through Maya's Mouth (The Vendetta / The Borrowed Heart)",
+        "The Truth About the Contract (The Vendetta)",
+        "Sora's Reckoning (The Vendetta)",
+        "Chen Learns the Surgeon Is Gone (The Clinic Trail)",
+        "Calloway Gets His Witness (The Clinic Trail)",
+        "What's Left of Maya (The Borrowed Heart)",
+        "Daniel Finds the Apartment Empty (The Marriage)",
+        "Sora's Choice (The Vendetta)",
+        "Chen Moves the War Forward (The Vendetta / The Borrowed Heart)",
+        "A Car Door Closes Somewhere Near the Water (The Marriage / The Borrowed Heart)",
+        "Daniel Arrives Where He Shouldn't (The Marriage / The Borrowed Heart)",
+        "One Heart, Two Wars, No Way Back (Narrator Outro)"
+      ],
+      "section_words": [
+        null,
+        null,
+        {
+          "min": 110,
+          "max": 190,
+          "target": "130 to 160"
+        },
+        {
+          "min": 120,
+          "max": 200,
+          "target": "140 to 170"
+        },
+        null,
+        null,
+        {
+          "min": 130,
+          "max": 210,
+          "target": "150 to 180"
+        },
+        {
+          "min": 110,
+          "max": 190,
+          "target": "130 to 160"
+        },
+        {
+          "min": 100,
+          "max": 180,
+          "target": "120 to 150"
+        },
+        null,
+        null,
+        {
+          "min": 110,
+          "max": 190,
+          "target": "130 to 160"
+        },
+        {
+          "min": 120,
+          "max": 200,
+          "target": "140 to 170"
+        },
+        null,
+        {
+          "min": 100,
+          "max": 180,
+          "target": "120 to 150"
+        },
+        null,
+        null
+      ],
+      "section_locations": [
+        "THE_TEAHOUSE",
+        "THE_PRECINCT",
+        "MAYAS_APARTMENT",
+        "NIGHT_MARKET",
+        "THE_DOCKS",
+        "THE_DOCKS",
+        "THE_DOCKS",
+        "THE_DOCKS",
+        "THE_TEAHOUSE",
+        "THE_PRECINCT",
+        "MAYAS_APARTMENT",
+        "NIGHT_MARKET",
+        "THE_DOCKS",
+        "THE_TEAHOUSE",
+        "THE_DOCKS",
+        "THE_DOCKS",
+        "THE_DOCKS"
+      ],
+      "case": [
+        {
+          "label": "The Borrowed Heart",
+          "solution": "Maya's transplant heart came directly from Marcus Tan, the syndicate hitman known as 'the Quiet Man' — harvested at The Clinic after Madam Chen had him killed, then sold anonymously through a broker to Daniel, who never learned or asked whose heart he was buying. The tissue carries Marcus's trained reflexes, killing technique, and fragments of his buried consciousness, which intrude on Maya's body and mind with escalating force. There is no resurrection, no ghost — only a heart that never stopped remembering what its owner was made to do, slowly overwriting the woman now living around it.",
+          "objective_facts": [
+            "The heart transplanted into Maya was harvested from Marcus Tan's body at The Clinic after his death.",
+            "Maya's blackout episodes produce reflexes, tells, and killing technique unique to Marcus's documented methods.",
+            "Sora Kim recognizes a private physical signal — a two-finger tap against the collarbone — that only she and Marcus ever used, and Maya has now repeated it without ever being taught.",
+            "The Clinic falsified Marcus Tan's official cause of death and never reported the harvest."
+          ],
+          "character_knowledge": {
+            "MAYA_LIN": {
+              "knows": [
+                "She now understands completely whose heart she carries and why",
+                "She can feel Marcus's control strengthening the closer they get to Chen"
+              ],
+              "hides": [
+                "She hasn't told Daniel any of this — there's no room left for partial truths, only silence"
+              ],
+              "believes_falsely": [
+                "She believes that once the truth is spoken aloud, Marcus's hold on her will loosen — she doesn't yet understand that finishing his business, not just revealing it, may be what he actually needs"
+              ]
+            },
+            "MARCUS_TAN": {
+              "knows": [
+                "The full truth of why Chen had him killed — Sora was the target he refused, and his death was the punishment",
+                "He intends, through Maya, to make sure Sora hears it from him before Chen can silence her too"
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "He assumes finishing this will free Maya — he has no evidence that's true, only the need to believe it"
+              ]
+            },
+            "MADAM_CHEN": {
+              "knows": [
+                "Her secret is no longer safely buried — Sora, and now Maya, know what she did"
+              ],
+              "hides": [
+                "She's working to control the narrative inside the syndicate, framing any accusation against her as the ghost story's final delusion"
+              ],
+              "believes_falsely": []
+            },
+            "SORA_KIM": {
+              "knows": [
+                "She has just heard the truth — Marcus died protecting her, on Chen's own order"
+              ],
+              "hides": [
+                "She gives nothing away while she decides what to do with it"
+              ],
+              "believes_falsely": []
+            }
+          }
+        },
+        {
+          "label": "The Marriage",
+          "solution": "Desperate when Maya's name never rose on the legal transplant list in time, Daniel paid an unlicensed broker in cash for a 'healthy match,' no questions asked — a decision he has never confessed to Maya, and one he still believes was simply an act of love. He has no idea the donor was a hitman; he only knows the price was too clean and the paperwork never existed. Since her recovery, Maya's escalating secrecy, blackouts, and now physical evidence of violence have convinced him she's hiding an affair — the only explanation his mind can hold onto rather than anything stranger.",
+          "objective_facts": [
+            "Daniel paid an unlicensed broker roughly forty thousand dollars in cash for Maya's transplant match, six weeks before her surgery.",
+            "Maya has never told Daniel about any blackout, the burner phone, or the folding knife.",
+            "A bloodstained jacket sleeve, carrying a blood type that isn't Maya's, has now been found in their apartment."
+          ],
+          "character_knowledge": {
+            "MAYA_LIN": {
+              "knows": [
+                "Daniel is close to calling the police himself if she disappears again without a word"
+              ],
+              "hides": [
+                "She still hasn't told him where she's really going tonight, or why — telling him means either losing him or endangering him"
+              ],
+              "believes_falsely": [
+                "She believes leaving without a word protects him — she hasn't considered that he might follow"
+              ]
+            },
+            "DANIEL_WOO": {
+              "knows": [
+                "Maya is preparing to leave again tonight, dressed and moving like someone he doesn't recognize"
+              ],
+              "hides": [
+                "He hasn't told her he intends to follow this time instead of waiting at home"
+              ],
+              "believes_falsely": [
+                "He believes that if he can just see where she goes, he'll finally understand — he has no idea what he's actually about to walk into"
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Clinic Trail",
+          "solution": "The Clinic has run a black-market organ pipeline for years behind the front of a legitimate outpatient surgery center, serving two masters — desperate buyers routed through underworld brokers, and Madam Chen's syndicate, which uses it to erase inconvenient bodies. Marcus Tan's heart was harvested there on Chen's order and, through the broker Daniel used, matched anonymously to Maya; the surgeon never disclosed, and was never asked, whose heart it truly was. Detective Calloway's fresh murder case, styled exactly on the old Quiet Man hits, has led him back through cold case files to the clinic's falsified paperwork on Marcus Tan's death.",
+          "objective_facts": [
+            "The Clinic falsified Marcus Tan's official cause of death and never reported the organ harvest.",
+            "The Clinic's internal billing shows an unregistered cash transaction matching the approximate date and amount of Daniel's payment.",
+            "Madam Chen has personally protected the clinic's lead surgeon from exposure for over a decade."
+          ],
+          "character_knowledge": {
+            "DET_CALLOWAY": {
+              "knows": [
+                "The surgeon has agreed to testify in exchange for protection",
+                "The pipeline leads directly into Madam Chen's network"
+              ],
+              "hides": [
+                "He's keeping the surgeon's cooperation secret from everyone, including his own captain, until the deal is locked"
+              ],
+              "believes_falsely": [
+                "He still has no idea Maya Lin is connected to any of this — his case is about the clinic and the syndicate, not about her"
+              ]
+            },
+            "MADAM_CHEN": {
+              "knows": [
+                "The surgeon is wavering and may be a liability she needs to handle before he talks"
+              ],
+              "hides": [
+                "She hasn't decided whether 'handling him' means intimidation or something final, and isn't sharing that calculus with Sora"
+              ],
+              "believes_falsely": []
+            }
+          }
+        },
+        {
+          "label": "The Vendetta",
+          "solution": "Madam Chen's final order to Marcus Tan was a contract on Sora Kim, whom Chen had come to see as a liability. Marcus refused — the one order in his career he wouldn't carry out — and tried instead to get Sora out of the city. Chen treated the refusal as terminal disloyalty and had Marcus killed within two days, staging his death to look like the work of a rival syndicate faction, then let that lie stand for everyone, including Sora. The instinct driving Maya toward 'unfinished business' isn't cold revenge against a stranger — it's Marcus, through her, trying to finish protecting the one person he refused to kill, and to make Chen answer for what she did instead.",
+          "objective_facts": [
+            "Madam Chen's final order to Marcus Tan was a contract on Sora Kim.",
+            "Marcus never carried out that contract.",
+            "Marcus was killed on Chen's direct order within two days of refusing the contract.",
+            "Marcus's death was staged to implicate a rival syndicate faction."
+          ],
+          "character_knowledge": {
+            "MAYA_LIN": {
+              "knows": [
+                "She now understands why Marcus is really here — not blind revenge, but an old, unfinished attempt to save Sora's life"
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "She believes that once this truth is spoken, Marcus will finally let her go — she has no way of knowing whether that's true or just what she needs to believe to keep fighting"
+              ]
+            },
+            "MARCUS_TAN": {
+              "knows": [
+                "He has finally said, through Maya, exactly what he was ordered to do and exactly why he refused"
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "He assumes finishing this will free Maya — he has no evidence that's true, only the need to believe it"
+              ]
+            },
+            "SORA_KIM": {
+              "knows": [
+                "By the end of this night, she has heard the truth — Marcus died protecting her, on Chen's own order"
+              ],
+              "hides": [
+                "She hides her intent to act on this from Chen, giving nothing away while she decides"
+              ],
+              "believes_falsely": []
+            },
+            "MADAM_CHEN": {
+              "knows": [
+                "Her secret is no longer safely buried"
+              ],
+              "hides": [
+                "She's still trying to control the narrative with the rest of the syndicate"
+              ],
+              "believes_falsely": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "One Heartbeat",
+      "theme": "FINALE — Maya's final confrontation with Madam Chen and Sora decides both the vendetta and the fate of the syndicate's war, the underworld learns the truth of what she really is, and she is left to face what's left of her marriage with no clean answers.",
+      "intro_note": "Reeling from the truth that Madam Chen ordered Marcus's death, Maya feels his hold on her surge past anything she's fought before, even as Dr. Reyes' decision to talk finally hands Calloway the warrant he's been chasing for weeks — two fuses now burning toward the same night at the same red door.",
+      "outro_note": "",
+      "sections": [
+        "Night Falls Early at the Teahouse — Madam Chen senses the myth she built starting to turn on her (Vendetta Thread / Resurrection Thread)",
+        "A Bag Half-Packed — Maya prepares to leave without saying where, and Daniel notices the silence more than the suitcase (Marriage Thread)",
+        "The Statement on the Table — Calloway reads Dr. Reyes' signed confession and calls in every favor he has left (Clinic Thread)",
+        "One More Lie at the Register — Daniel corners Maya at the restaurant with a question she won't answer honestly (Marriage Thread)",
+        "What Sora Already Suspects — Sora presses Chen with a question dressed up as loyalty (Vendetta Thread)",
+        "The Pull Toward the Water — nearing syndicate ground, Maya feels Marcus rise closer to the surface than ever before (Resurrection Thread)",
+        "Through the Red Door — Maya arrives at the Teahouse and the room realizes exactly who's come to see them (Vendetta Thread / Resurrection Thread)",
+        "Courtesy Cracking — cornered, Chen lets slip more of the truth about Marcus's death than she means to (Vendetta Thread)",
+        "The Blade Rises — Marcus surges for full control with Chen's life in Maya's hands (Resurrection Thread)",
+        "Two Voices, One Mouth — Maya fights for the last word in her own body (Resurrection Thread)",
+        "Sora Turns — faced with the truth of what Chen did, Sora chooses a side at last (Vendetta Thread)",
+        "Sirens Off the Water — Calloway's raid collides with the chaos already breaking inside the Teahouse (Clinic Thread / Vendetta Thread)",
+        "What the Syndicate Now Knows — word spreads through Chen's own people of exactly what she did, and what Maya really is (Vendetta Thread / Resurrection Thread)",
+        "The Empress Dethroned — Chen's grip on the syndicate breaks in the open, though not by a bullet (Vendetta Thread)",
+        "The Case Calloway Closes — the harbor body finally gets a name on paper, and a trail that never quite reaches a schoolteacher (Clinic Thread)",
+        "What's Left When the Lying Stops — Maya comes home to Daniel with nothing left to hide and no way to undo what he's already lost (Marriage Thread)",
+        "One Heartbeat — the narrator closes the season on a borrowed heart that has, finally and quietly, become her own (Resurrection Thread / Marriage Thread)"
+      ],
+      "section_words": [
+        null,
+        null,
+        null,
+        {
+          "min": 140,
+          "max": 210,
+          "target": "150 to 180"
+        },
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 140,
+          "max": 210,
+          "target": "150 to 180"
+        },
+        null,
+        {
+          "min": 140,
+          "max": 210,
+          "target": "150 to 180"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "section_locations": [
+        "THE_TEAHOUSE",
+        "MAYAS_APARTMENT",
+        "THE_PRECINCT",
+        "NIGHT_MARKET",
+        "THE_TEAHOUSE",
+        "THE_DOCKS",
+        "THE_TEAHOUSE",
+        "THE_TEAHOUSE",
+        "THE_TEAHOUSE",
+        "THE_TEAHOUSE",
+        "THE_TEAHOUSE",
+        "THE_DOCKS",
+        "THE_TEAHOUSE",
+        "THE_TEAHOUSE",
+        "THE_PRECINCT",
+        "MAYAS_APARTMENT",
+        null
+      ],
+      "case": [
+        {
+          "label": "The Quiet Man's Vendetta",
+          "solution": "Two years ago, Marcus Tan asked Madam Chen to release him from the syndicate so he could leave the life with Sora Kim. While preparing to leave, Marcus uncovered undeniable proof that Chen had murdered her own predecessor decades earlier to seize control of the organization. Chen had him ambushed and killed at the Docks that same week, then had the killing dressed up as a rival syndicate's retaliation so no one — least of all Sora — would ever look at her. The cellular memory living on in Maya's transplanted heart carries that unfinished intent forward: to make Chen answer for what she did, one way or another.",
+          "objective_facts": [
+            "Marcus Tan asked Madam Chen for release from the syndicate two years ago so he could leave with Sora Kim.",
+            "In the weeks before his death, Marcus found proof that Chen had murdered her own predecessor to take control of the organization.",
+            "Chen ordered Marcus killed at the Docks and had the killing staged to resemble a rival syndicate's hit.",
+            "No rival syndicate was ever involved in Marcus Tan's death."
+          ],
+          "character_knowledge": {
+            "MAYA_LIN": {
+              "knows": [
+                "That Marcus wanted to leave the syndicate for Sora before he died, and that Chen refused him.",
+                "That Chen ordered Marcus's death and let the underworld believe a rival did it."
+              ],
+              "hides": [
+                "From Daniel, that she has come to the Teahouse tonight to confront Chen directly — she tells him she's only meeting a specialist about her heart, to keep him out of a room she may not walk out of."
+              ],
+              "believes_falsely": [
+                "Until tonight, that letting Marcus's intent run its course to the end — Chen's death — is the only way to ever be free of him; the episode proves that finishing his vendetta would not release her, only complete his hold."
+              ]
+            },
+            "MARCUS_TAN": {
+              "knows": [
+                "The precise truth of his own murder — that Chen ordered it, and why."
+              ],
+              "hides": [
+                "That even seeing Chen answer for it would not give the body back to Maya; he does not tell her this, because it does not matter to him."
+              ],
+              "believes_falsely": [
+                "That finishing what Chen started will finally let him rest; in truth, what's left of him isn't capable of resting — only of wanting."
+              ]
+            },
+            "MADAM_CHEN": {
+              "knows": [
+                "That she ordered Marcus Tan's death and dressed it as a rival's hit to protect her own history from ever surfacing."
+              ],
+              "hides": [
+                "Her role in Marcus's death from Sora and from her own lieutenants — until tonight leaves her no room left to hide it."
+              ],
+              "believes_falsely": [
+                "That she could contain whatever was wearing Marcus's habits the same way she once controlled the man himself; she has never had to face someone who wants nothing she can offer or threaten."
+              ]
+            },
+            "SORA_KIM": {
+              "knows": [
+                "That Marcus asked to leave the life for her, and that he never got the chance."
+              ],
+              "hides": [
+                "Her growing suspicion, built over recent weeks, that Chen was responsible for his death — kept from Chen out of self-preservation."
+              ],
+              "believes_falsely": [
+                "Had let herself believe, because the alternative was unbearable, the official story that a rival syndicate killed him; tonight that belief finally breaks apart in front of her."
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Clinic's Ledger",
+          "solution": "Dr. Amara Reyes ran an off-the-books organ network out of the Clinic, harvesting viable organs from bodies delivered by Chen's syndicate — including Marcus Tan's, taken and matched to Maya within hours of his death — and falsifying every donor record to erase the trail. Cornered by Calloway's investigation, Reyes finally traded her ledgers and her testimony for a chance at leniency, handing him a paper trail that ties the Clinic, the harbor body, and Chen's operation together — though never to the woman who received the heart.",
+          "objective_facts": [
+            "Dr. Reyes' clinic harvested organs from bodies supplied by Madam Chen's syndicate without consent.",
+            "Marcus Tan's heart was extracted and transplanted into Maya within hours of his death.",
+            "Reyes falsified medical records listing Maya's donor as an anonymous accident victim.",
+            "Reyes provided Calloway with ledgers and testimony implicating the Clinic and Chen's syndicate."
+          ],
+          "character_knowledge": {
+            "MAYA_LIN": {
+              "knows": [
+                "That her heart came from the Clinic's black-market network, and that it was Marcus Tan's."
+              ],
+              "hides": [
+                "Her own identity as the transplant recipient from Calloway's investigation, to protect herself from being pulled into the case."
+              ],
+              "believes_falsely": [
+                "Had hoped the Clinic's exposure would end her ordeal outright; tonight makes clear the transplant's consequences don't end just because its source is uncovered."
+              ]
+            },
+            "DET_CALLOWAY": {
+              "knows": [
+                "That the Clinic ran an illegal organ network sourced from Chen's syndicate, and that the harbor John Doe's heart was taken and transplanted the same night he died."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "That the underworld's 'ghost' rumors are gang superstition and nothing more; he closes the case never once suspecting a living recipient is carrying more than a heartbeat."
+              ]
+            },
+            "MADAM_CHEN": {
+              "knows": [
+                "That she used the Clinic to profit from and dispose of the syndicate's dead, and held that arrangement over Reyes for years."
+              ],
+              "hides": [
+                "Her financial ties to the Clinic's organ trade from Calloway's investigation."
+              ],
+              "believes_falsely": [
+                "Believed Reyes' silence was permanently bought; she is wrong, and finds out too late to stop what Reyes has already handed over."
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Ghost of the Quiet Man",
+          "solution": "There is no resurrection. The heart beating in Maya's chest carries Marcus Tan's cellular memory — his reflexes, his violence, fragments of his intent — and that imprint has been slowly overtaking her own sense of self for months. What the syndicate fears as a dead man's return is, in fact, a living woman losing a war for her own body. Tonight decides who wins it.",
+          "objective_facts": [
+            "Marcus Tan is dead; no resurrection has occurred.",
+            "Cellular memory transferred with the transplanted heart produces involuntary reflexes and violent impulses in Maya.",
+            "The intruding persona intensifies under stress and in proximity to people and places tied to Marcus's former life."
+          ],
+          "character_knowledge": {
+            "MAYA_LIN": {
+              "knows": [
+                "That she is not possessed by a ghost — she is fighting cell-deep memory that isn't hers for control of her own hands."
+              ],
+              "hides": [
+                "How close she has come, in private, to losing that fight entirely — from Daniel, from Sora, from herself most nights."
+              ],
+              "believes_falsely": [
+                "Believed for months that no one would ever believe the truth even if she told it; tonight, for the first time, she has to prove it instead of hide it."
+              ]
+            },
+            "MARCUS_TAN": {
+              "knows": [
+                "That he is memory, not a man risen from the dead — and that the distinction has never mattered to what he wants."
+              ],
+              "hides": [
+                "The full extent of how close he has come to erasing her outright — he does not warn her when he is winning."
+              ],
+              "believes_falsely": []
+            },
+            "MADAM_CHEN": {
+              "knows": [
+                "That resurrection is not real, whatever her people whisper."
+              ],
+              "hides": [
+                "How badly her own composure has cracked in private at the idea that some piece of Marcus is truly in that room with her."
+              ],
+              "believes_falsely": [
+                "Had convinced herself the myth could be managed and turned to her advantage; tonight it walks through her own red door and she cannot manage it at all."
+              ]
+            },
+            "SORA_KIM": {
+              "knows": [
+                "That the reflexes and stance she's watched Maya use are unmistakably Marcus's own — she trained beside him long enough to know."
+              ],
+              "hides": [
+                "How much it costs her to stand in a room with something wearing his instincts and not call it him."
+              ],
+              "believes_falsely": [
+                "Had let herself hope, weeks ago, that some real piece of him had come back to her; tonight she finally accepts that he is simply gone, and Maya is not a substitute for grieving him."
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Marriage",
+          "solution": "Maya's months of lies were meant to protect Daniel from a truth too dangerous and strange to survive telling — but even now that the truth is out, understanding it hasn't undone the damage of what she hid or what she's shown herself capable of. There is no clean way back to who they were before the transplant.",
+          "objective_facts": [
+            "Maya concealed blackouts, a hidden weapon, and violent incidents from Daniel for months.",
+            "Daniel has since learned the true nature of the transplant and what it did to her.",
+            "Neither Maya nor Daniel has found a way to fully rebuild trust since the truth came out."
+          ],
+          "character_knowledge": {
+            "MAYA_LIN": {
+              "knows": [
+                "Everything she has cost this marriage by choosing silence over the truth, month after month."
+              ],
+              "hides": [
+                "Exactly how dangerous tonight will be, telling Daniel only that she has one more thing to settle — one last lie, even now, meant to spare him."
+              ],
+              "believes_falsely": [
+                "Wants to believe that surviving tonight will be enough to start rebuilding; the episode leaves that hope unresolved rather than answered."
+              ]
+            },
+            "DANIEL_WOO": {
+              "knows": [
+                "That Maya's blackouts and the violence he's found traces of are connected to the illegal transplant and to whatever survived inside the donor's heart."
+              ],
+              "hides": [
+                "His fear that he no longer knows how to love who she's become, holding onto the marriage anyway because he doesn't know how to stop."
+              ],
+              "believes_falsely": [
+                "Had believed that naming the truth out loud in recent weeks would be the hardest part, and that things could only get easier from there; tonight proves that understanding a wound doesn't close it."
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

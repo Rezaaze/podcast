@@ -1,0 +1,2195 @@
+{
+  "series_title": "Discharged, Cured",
+  "language": "English",
+  "mode": "drama",
+  "template": "soap_opera",
+  "writer_persona": "a showrunner for character-driven, relationship-first serial audio drama in the vein of prestige ensemble TV, blending true-crime investigative pacing with soap-opera intimacy",
+  "style_guidelines": [
+    "Every scene is filtered through exactly one character's knowledge at a time — never let dialogue reveal a fact that character's slice doesn't contain.",
+    "Cut between threads mid-episode the way a soap opera does — end a scene on tension and let the next scene open elsewhere before returning.",
+    "Let institutional power (political office, old money, legal muscle) apply pressure through implication and favors, not cartoonish villainy.",
+    "Keep dialogue naturalistic and interruption-prone; people talk over each other when guilty or scared.",
+    "The NARRATOR only orients time/place/who's present — it never explains motive or reveals what a scene's participants don't yet know."
+  ],
+  "voices": {
+    "NARRATOR": {
+      "voice": "Ryan",
+      "default_style": "calm, measured, a step removed from the action",
+      "description": "the show's narrator — orients the listener at the start of every scene (who, where, when), never a character in the story"
+    },
+    "ELIAS_CROWE": {
+      "voice": "Aiden",
+      "default_style": "quick, dry, a little restless — talks fastest when he's nervous",
+      "description": "Maya's longtime podcast producer and co-host, a lifelong local with no personal stake in Hollow Pines beyond the story itself; his blind spot is trusting official channels a beat too long."
+    },
+    "MAYA_PARK": {
+      "voice": "Sohee",
+      "default_style": "urgent, warm, speaks slow, deliberate, very clear English",
+      "description": "the podcast's lead investigator, who immigrated from Seoul with her mother at twelve and has spent her adult life chasing overlooked stories; she doesn't yet know how close Hollow Pines sits to her own family."
+    },
+    "DIANA_CHEN": {
+      "voice": "Vivian",
+      "default_style": "polished, controlled, speaks slow, deliberate, precise English — never raises her voice even under pressure",
+      "description": "a sitting state senator eyeing a run for governor, granddaughter of Hollow Pines' medical director; publicly a reform-minded pragmatist, privately desperate to keep her family's role in the asylum's history buried."
+    },
+    "MEI_TAM": {
+      "voice": "Serena",
+      "default_style": "frail, halting, chooses words with visible care, speaks slow, deliberate English",
+      "description": "a former Hollow Pines nurse, now in her eighties, who immigrated from Guangzhou in the 1960s; she has carried the diaries' secrets — and one secret bigger than the rest — for fifty years."
+    },
+    "DANIEL_CHEN": {
+      "voice": "Dylan",
+      "default_style": "guarded, thoughtful, speaks slow, deliberate English roughened by years abroad",
+      "description": "Diana Chen's son, an investigative journalist who spent much of his childhood with his father's family in Beijing before returning to the US; assigned to cover the same story as Maya, he's caught between loyalty to his mother and his own reporting instincts."
+    },
+    "TAO_WU": {
+      "voice": "Eric",
+      "default_style": "clipped, businesslike, speaks slow, deliberate English with a hard edge",
+      "description": "the Chen family's longtime fixer and attorney, born in Chengdu and educated in the US; ruthlessly protective of Diana's career, he's hiding a family connection of his own to what really happened at Hollow Pines."
+    }
+  },
+  "locations": {
+    "HOLLOW_PINES_RUINS": {
+      "name": "Hollow Pines Ruins",
+      "description": "The demolition site of the old asylum — half-collapsed brick wings exposed to daylight for the first time in decades, orange caution tape snapping in the wind over cracked linoleum floors."
+    },
+    "STATIC_HOUR_STUDIO": {
+      "name": "The Static Hour Studio",
+      "description": "The podcast's cramped studio above a print shop, walls shingled in cork and case photos, foam soundproofing panels sagging at the corners."
+    },
+    "RIVERSIDE_MEMORY_HOME": {
+      "name": "Riverside Memory Home",
+      "description": "Mei Tam's assisted-living facility, pastel-painted halls and floor-to-ceiling windows overlooking a slow brown river, the quiet broken only by carts and distant televisions."
+    },
+    "CHEN_ESTATE": {
+      "name": "The Chen Estate",
+      "description": "Diana Chen's family mansion behind manicured topiary hedges, security cameras tucked discreetly into the ivy, every window curtained even at noon."
+    },
+    "CAPITOL_OFFICE": {
+      "name": "The Capitol Office",
+      "description": "Diana Chen's office in the state capitol, marble floors and campaign banners, aides moving in practiced silence past a wall of framed photographs."
+    },
+    "WU_AND_ASSOCIATES": {
+      "name": "Wu & Associates",
+      "description": "Tao Wu's law office on the fortieth floor, glass and steel with floor-to-ceiling views of the city, not a single personal object on the desk."
+    },
+    "NIGHT_OWL_DINER": {
+      "name": "The Night Owl Diner",
+      "description": "A 24-hour diner with cracked red vinyl booths and a neon sign that stutters on one letter, where Maya and Elias meet sources who won't come to the studio."
+    },
+    "COUNTY_RECORDS_ARCHIVE": {
+      "name": "County Records Archive",
+      "description": "A fluorescent-lit municipal basement archive, rows of sagging steel shelving and the sweet-sour smell of decaying paper."
+    },
+    "HARBORVIEW_MEDICAL_FOUNDATION": {
+      "name": "Harborview Medical Foundation",
+      "description": "A glass-atrium hospital foundation built on Chen family philanthropy, sunlight pouring over a donor wall where the Chen name is engraved larger than any other."
+    },
+    "BLACKWATER_LAKE_HOUSE": {
+      "name": "Blackwater Lake House",
+      "description": "The Chen family's private lake retreat, a cedar cabin at the end of a gravel road, morning mist rising off still water and no cell signal for miles."
+    },
+    "ST_AGNES_CEMETERY": {
+      "name": "St. Agnes Cemetery",
+      "description": "An overgrown potter's field behind a shuttered chapel, rows of cracked stones bearing numbers instead of names."
+    },
+    "THE_LEDGER_NEWSROOM": {
+      "name": "The Ledger Newsroom",
+      "description": "The open-plan bullpen of the city's rival newspaper, muted televisions and deadline whiteboards, Daniel's desk closest to the door."
+    }
+  },
+  "format": {
+    "parts_per_section": 1,
+    "words_per_part_target": "300 to 500",
+    "words_per_part_min": 250,
+    "words_per_part_max": 550
+  },
+  "generation": {
+    "model": "claude-sonnet-5",
+    "use_beats": false
+  },
+  "audio": {
+    "api_url": "http://127.0.0.1:42003",
+    "default_style": "Speak clearly and with dramatic weight",
+    "target_lufs": -16.0,
+    "pause_between_chunks_ms": 250,
+    "pause_between_lines_ms": 700,
+    "pause_between_parts_ms": 3000,
+    "pause_between_episodes_ms": 6000,
+    "merge_anthology": false
+  },
+  "output_prefix": "ep",
+  "series_intro": "In 2026, a demolition crew clearing the last standing wing of Hollow Pines Asylum unearths a sealed 1970s time capsule: a nurse's diaries and a stack of Polaroids, each labeled with a patient's name and the words 'discharged cured.' None of those names appear in any public record after that year. A local true-crime podcast picks up the story expecting a forgotten tragedy — and instead finds that the people whose families built their lives on Hollow Pines being forgotten are still very much in power, and still very much watching.",
+  "series_outro": "By season's end, the illegal trials once buried inside Hollow Pines' walls are public knowledge, and the reckoning has begun — for the institution, for the Chen name, and for the people who spent fifty years making sure no one asked. Not every debt is paid: some of the vanished are named, some are not, and the question of who else knew, and stayed silent, is left for whoever picks up the story next.",
+  "episodes": [
+    {
+      "figure": "What the Ground Gave Up",
+      "theme": "The demolition crew's discovery of the sealed 1970s time capsule launches Maya and Elias's investigation into the 'Buried Patients' mystery and gives Maya a private, unsettling jolt of recognition at a family name among the 'discharged cured' Polaroids, while Senator Diana Chen's camp quietly logs the story as a nuisance to monitor.",
+      "intro_note": "",
+      "outro_note": "As Diana Chen quietly moves to get ahead of the story before it grows, Maya sits alone with her mother's strange, clipped silence still ringing on the line — and a Polaroid face she can no longer convince herself is just a coincidence.",
+      "sections": [
+        "Cold Open: The Wall Comes Down — a demolition crew breaks through Hollow Pines' last standing wing (Buried Patients)",
+        "What They Found — the foreman pries open a sealed capsule of diaries and Polaroids in front of a skeleton news crew (Buried Patients)",
+        "Breaking: The Buried Patients — Elias pitches the find to Maya as their next episode (Buried Patients)",
+        "Face in the Stack — alone with the Polaroids, Maya finds a name that stops her cold (The Name in the Photograph)",
+        "Nothing, Really — Maya brushes off Elias's question about her reaction (The Name in the Photograph)",
+        "A Nuisance Story — an aide flags the podcast's interest to Senator Diana Chen (The Chen Cover-Up)",
+        "Handle It Quietly — Diana calls Tao Wu and asks him to keep an eye on it (The Chen Cover-Up)",
+        "A Name He Already Knows — Tao Wu researches the story privately and recognizes something he says nothing about (The Chen Cover-Up)",
+        "Old Ledgers — Maya and Elias comb discharge records at the county archive (Buried Patients)",
+        "Too Many Blanks — the pattern of missing death certificates becomes impossible to explain away (Buried Patients)",
+        "A Name on a River View — elderly Mei Tam watches the demolition on the evening news, alone (The Name in the Photograph)",
+        "Numbers, Not Names — Maya and Elias find the unmarked graves behind the ruins (Buried Patients)",
+        "The Family Table — at Sunday dinner, Diana casually tests her son Daniel's reaction to 'an old story surfacing' (The Chen Cover-Up)",
+        "Legacy Wing — Daniel walks past the Chen name on the Harborview Medical Foundation donor wall, thinking nothing of it yet (The Chen Cover-Up)",
+        "The Diary They Don't Have Yet — Tao Wu tells Diana the capsule holds handwritten diaries, not just photographs (The Chen Cover-Up)",
+        "Just a Coincidence — Maya calls her mother with an offhand question about her grandmother and gets a strangely evasive answer (The Name in the Photograph)",
+        "First Move — Diana decides the campaign will get ahead of the story itself (The Chen Cover-Up, transition into Episode 2)"
+      ],
+      "section_words": [
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 130,
+          "max": 200,
+          "target": "140 to 170"
+        },
+        null,
+        {
+          "min": 130,
+          "max": 210,
+          "target": "150 to 180"
+        },
+        null,
+        null,
+        null,
+        {
+          "min": 140,
+          "max": 210,
+          "target": "150 to 180"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 120,
+          "max": 190,
+          "target": "130 to 160"
+        }
+      ],
+      "section_locations": [
+        "HOLLOW_PINES_RUINS",
+        "HOLLOW_PINES_RUINS",
+        "STATIC_HOUR_STUDIO",
+        "STATIC_HOUR_STUDIO",
+        null,
+        "CAPITOL_OFFICE",
+        null,
+        "WU_AND_ASSOCIATES",
+        "COUNTY_RECORDS_ARCHIVE",
+        null,
+        "RIVERSIDE_MEMORY_HOME",
+        "ST_AGNES_CEMETERY",
+        "CHEN_ESTATE",
+        "HARBORVIEW_MEDICAL_FOUNDATION",
+        "WU_AND_ASSOCIATES",
+        "STATIC_HOUR_STUDIO",
+        "CAPITOL_OFFICE"
+      ],
+      "case": [
+        {
+          "label": "The Buried Patients",
+          "solution": "In the early-to-mid 1970s, Hollow Pines Asylum's medical director, Dr. Walter Chen (Diana Chen's grandfather), ran unauthorized drug trials on institutionalized patients without their consent. Several patients died from trial complications or were left with severe, irreversible harm; to avoid scandal and liability, administrators falsified their charts as 'discharged cured' and quietly buried the dead in the unmarked potter's field at St. Agnes Cemetery, while a handful of survivors were dispersed under new identities so no one could trace them back. Nurse Mei Tam, then in her twenties, was ordered to help produce the false paperwork but instead kept a private diary of the true outcomes and secretly photographed the real patients as her own hidden record of conscience, sealing it all in a time capsule when the asylum was decommissioned in 1978.",
+          "objective_facts": [
+            "A sealed 1970s time capsule was uncovered during the 2026 demolition of Hollow Pines Asylum's final wing.",
+            "The capsule contains a nurse's diaries and Polaroids of patients logged as 'discharged cured' who never again appear in any public record.",
+            "St. Agnes Cemetery, behind the asylum grounds, contains rows of unmarked graves numbered rather than named.",
+            "Hollow Pines was decommissioned and sealed in 1978."
+          ],
+          "character_knowledge": {
+            "MAYA_PARK": {
+              "knows": [
+                "A sealed capsule of diaries and Polaroids was found in the demolished asylum wing.",
+                "The patients pictured don't match any public record after 1978."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "Assumes the record discrepancies are just poor 1970s institutional bookkeeping rather than deliberate falsification, because that's the simpler, less alarming explanation."
+              ]
+            },
+            "ELIAS_CROWE": {
+              "knows": [
+                "Same discovery facts as Maya",
+                "Has contacts at the county archive who might have relevant files."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "Assumes official channels — the archive, the health department — will hand over straightforward answers if approached politely and through the right person, a trust he hasn't yet had reason to doubt."
+              ]
+            },
+            "MEI_TAM": {
+              "knows": [
+                "The full truth of what happened at Hollow Pines and what became of the patients in the Polaroids."
+              ],
+              "hides": [
+                "The true fate of the patients and the diary's real purpose — she plans to downplay her own role if ever asked, to protect herself and others from what admitting the truth would cost."
+              ],
+              "believes_falsely": [
+                "Believes that if she stays quiet a little longer, the story will fade the way every prior close call has, since fifty years of silence have never once been seriously challenged."
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Chen Cover-Up",
+          "solution": "Diana Chen's grandfather, Dr. Walter Chen, authorized and covered up the illegal trials as Hollow Pines' medical director. The Chen family's subsequent fortune and philanthropic standing — including the Harborview Medical Foundation — were built substantially on money quietly diverted from a state-ordered victims' settlement fund that was never fully distributed, its final accounting sealed. Diana has known the broad strokes since her father told her before his death but has never confirmed the details, and Tao Wu has spent years making sure no record traces the settlement fund's disappearance back to the family.",
+          "objective_facts": [
+            "Dr. Walter Chen served as Hollow Pines' medical director from 1965 until its 1978 closure.",
+            "The Harborview Medical Foundation was endowed by the Chen family in 1979, one year after Hollow Pines closed.",
+            "A state-ordered victims' settlement fund tied to Hollow Pines' closure was never fully distributed, and its final accounting was sealed."
+          ],
+          "character_knowledge": {
+            "DIANA_CHEN": {
+              "knows": [
+                "Her grandfather ran Hollow Pines.",
+                "The family foundation was established the year after the asylum closed."
+              ],
+              "hides": [
+                "The settlement fund's disappearance, and that her 'reform pragmatist' public image sits atop money linked to victims who were never compensated — she frames the whole matter as ancient, irrelevant history whenever it comes up."
+              ],
+              "believes_falsely": [
+                "Believes the sealed settlement records can never be reopened and that Tao has permanently handled every loose end, underestimating how much physical evidence escaped their control decades ago."
+              ]
+            },
+            "TAO_WU": {
+              "knows": [
+                "Exactly how the settlement fund was redirected and buried in paperwork.",
+                "That a capsule of physical records from inside the asylum existed and was supposed to have been destroyed at decommissioning."
+              ],
+              "hides": [
+                "That Mei Tam's name is not new to him — he recognizes it immediately from his own family's history, though he says nothing to Diana about why."
+              ],
+              "believes_falsely": [
+                "Believes he can quietly contain this the way he's contained every prior inquiry, not yet grasping that surviving physical evidence is a fundamentally different problem than a rumor he can spin."
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "The Discharged List",
+      "theme": "Cross-referencing the Polaroid names against public records, Maya and Elias find that every listed patient either has no death certificate or vanishes from paperwork entirely, a trail that points them toward retired nurse Mei Tam and draws Tao Wu's first quiet inquiry into who's asking questions.",
+      "intro_note": "The time capsule is out of the ground and the story is already public: a nurse's diaries, Polaroids of patients erased from every record after 1978. Maya can't shake the name that jolted her, and hasn't told anyone why. Across town, Diana Chen has quietly asked Tao Wu to make the nuisance go away.",
+      "outro_note": "Mei Tam has shut the door on them once, but Maya knows they'll be back — and this time it won't be polite. Meanwhile Tao Wu, holding a background file with Maya's name on it, notices something in the dates that makes him read it a second time, and says nothing to anyone at all.",
+      "sections": [
+        "Recap the List — Maya and Elias cross-reference every Polaroid name against public records, one by one (Buried Patients)",
+        "Not One Certificate — the county archive confirms zero death certificates exist for any of the pictured patients (Buried Patients)",
+        "A Living Name — a records clerk mentions, almost in passing, that one Hollow Pines nurse still lives locally (Buried Patients)",
+        "The Only Lead Left — Maya and Elias agree their next move has to be Mei Tam herself (Buried Patients)",
+        "Still Nothing? — over diner coffee, Elias gently presses Maya about what's been distracting her (The Name in the Photograph)",
+        "A Text Unanswered — Maya tries her mother again and gets nothing back (The Name in the Photograph)",
+        "Whoever's Asking — Tao Wu quietly tasks an associate with identifying exactly who's behind The Static Hour (The Chen Cover-Up)",
+        "A File on Maya Park — Tao Wu reads the resulting background report and lingers on a detail he doesn't share (The Chen Cover-Up)",
+        "Optics — Diana's strategist frames the podcast as a PR risk worth getting ahead of (The Chen Cover-Up)",
+        "Two Reporters, One Story — Daniel is assigned the Hollow Pines story by his editor at The Ledger (The Chen Cover-Up)",
+        "Riverside — Maya and Elias arrive at the memory home requesting an interview and are turned away at the door (Buried Patients)",
+        "A Closed Door — alone after they leave, Mei Tam sits with how close that was (The Name in the Photograph)",
+        "The Long Way Home — frustrated at the diner, Elias insists the archive will eventually cooperate if they're patient (Buried Patients)",
+        "A Familiar Voice — Tao Wu tells Diana he's identified the reporters and recommends watching, not confronting, for now (The Chen Cover-Up)",
+        "What Mother Won't Say — Maya finally reaches her mother, who gives a partial, unsettling answer about the grandmother she never discusses (The Name in the Photograph)",
+        "Next Move — Maya and Elias decide Mei Tam is still the only way forward, and this time they won't take no for an answer (transition into Episode 3)"
+      ],
+      "section_words": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 110,
+          "max": 180,
+          "target": "120 to 150"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 120,
+          "max": 190,
+          "target": "130 to 160"
+        },
+        null,
+        {
+          "min": 130,
+          "max": 200,
+          "target": "140 to 170"
+        },
+        null,
+        null
+      ],
+      "section_locations": [
+        "STATIC_HOUR_STUDIO",
+        "COUNTY_RECORDS_ARCHIVE",
+        "COUNTY_RECORDS_ARCHIVE",
+        "STATIC_HOUR_STUDIO",
+        "NIGHT_OWL_DINER",
+        null,
+        "WU_AND_ASSOCIATES",
+        "WU_AND_ASSOCIATES",
+        "CAPITOL_OFFICE",
+        "THE_LEDGER_NEWSROOM",
+        "RIVERSIDE_MEMORY_HOME",
+        "RIVERSIDE_MEMORY_HOME",
+        "NIGHT_OWL_DINER",
+        "WU_AND_ASSOCIATES",
+        "STATIC_HOUR_STUDIO",
+        "STATIC_HOUR_STUDIO"
+      ],
+      "case": [
+        {
+          "label": "The Buried Patients",
+          "solution": "In the early-to-mid 1970s, Hollow Pines Asylum's medical director, Dr. Walter Chen (Diana Chen's grandfather), ran unauthorized drug trials on institutionalized patients without their consent. Several patients died from trial complications or were left with severe, irreversible harm; to avoid scandal and liability, administrators falsified their charts as 'discharged cured' and quietly buried the dead in the unmarked potter's field at St. Agnes Cemetery, while a handful of survivors were dispersed under new identities so no one could trace them back. Nurse Mei Tam, then in her twenties, was ordered to help produce the false paperwork but instead kept a private diary of the true outcomes and secretly photographed the real patients as her own hidden record of conscience, sealing it all in a time capsule when the asylum was decommissioned in 1978.",
+          "objective_facts": [
+            "A sealed 1970s time capsule was uncovered during the 2026 demolition of Hollow Pines Asylum's final wing.",
+            "The capsule contains a nurse's diaries and Polaroids of patients logged as 'discharged cured' who never again appear in any public record.",
+            "St. Agnes Cemetery, behind the asylum grounds, contains rows of unmarked graves numbered rather than named.",
+            "Hollow Pines was decommissioned and sealed in 1978.",
+            "No death certificate exists for any of the patients pictured in the Polaroids.",
+            "Mei Tam is the only Hollow Pines nurse from that era still living locally."
+          ],
+          "character_knowledge": {
+            "MAYA_PARK": {
+              "knows": [
+                "None of the discharged patients have a death certificate anywhere.",
+                "Mei Tam is the last living link to what actually happened."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "Still assumes the discrepancies trace back to sloppy record-keeping rather than a deliberate cover-up, though that assumption is getting harder to hold onto."
+              ]
+            },
+            "ELIAS_CROWE": {
+              "knows": [
+                "The same facts as Maya",
+                "The county won't easily release the sealed settlement file even when asked directly."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "Still assumes that persistence and politeness with the archive will eventually be rewarded with full cooperation — a hope the sealed file itself already contradicts."
+              ]
+            },
+            "MEI_TAM": {
+              "knows": [
+                "Reporters have come to her door asking about Hollow Pines by name, and she knows exactly why they'll be back."
+              ],
+              "hides": [
+                "Refused the interview and gave nothing away — protecting the same secret as before, now with reporters standing in front of her instead of a distant news story."
+              ],
+              "believes_falsely": [
+                "Believes turning them away once will be enough to end their interest, an old faith in a locked door that fifty years of quiet has never actually tested against someone this determined."
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Chen Cover-Up",
+          "solution": "Diana Chen's grandfather, Dr. Walter Chen, authorized and covered up the illegal trials as Hollow Pines' medical director. The Chen family's subsequent fortune and philanthropic standing — including the Harborview Medical Foundation — were built substantially on money quietly diverted from a state-ordered victims' settlement fund that was never fully distributed, its final accounting sealed. Diana has known the broad strokes since her father told her before his death but has never confirmed the details, and Tao Wu has spent years making sure no record traces the settlement fund's disappearance back to the family.",
+          "objective_facts": [
+            "Dr. Walter Chen served as Hollow Pines' medical director from 1965 until its 1978 closure.",
+            "The Harborview Medical Foundation was endowed by the Chen family in 1979, one year after Hollow Pines closed.",
+            "A state-ordered victims' settlement fund tied to Hollow Pines' closure was never fully distributed, and its final accounting was sealed.",
+            "Daniel Chen has been independently assigned to cover the Hollow Pines story by The Ledger."
+          ],
+          "character_knowledge": {
+            "DIANA_CHEN": {
+              "knows": [
+                "The podcast has been asking pointed questions at the county archive.",
+                "This is now an active risk to her campaign, not just background noise."
+              ],
+              "hides": [
+                "The settlement fund details, from everyone including her own strategists — and that this is far more personal to her than 'old history.'"
+              ],
+              "believes_falsely": [
+                "Believes Tao's quiet containment will hold, and starts to believe a friendly, on-record interview could neutralize the podcast entirely — underestimating how much the reporters already suspect."
+              ]
+            },
+            "TAO_WU": {
+              "knows": [
+                "The identities of both podcast reporters, from a background check he ordered.",
+                "Something in Maya Park's family history that catches his attention, though he hasn't confirmed what it means."
+              ],
+              "hides": [
+                "This early hunch about Maya from Diana entirely — he isn't yet sure if it matters, or is protecting his own reasons for wanting to know first."
+              ],
+              "believes_falsely": [
+                "Believes soft monitoring is still sufficient to contain this, not yet grasping how much physical evidence already exists outside anyone's control."
+              ]
+            },
+            "DANIEL_CHEN": {
+              "knows": [
+                "He's been assigned the Hollow Pines demolition story by his editor.",
+                "His family funds the Harborview Medical Foundation, established in 1979."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "Assumes his mother's family connection to Hollow Pines, if any, is purely generational philanthropy and goodwill — a naive read given who raised him and how carefully she controls every story about the family."
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Name in the Photograph",
+          "solution": "One of the 'discharged cured' patients quietly saved by Mei Tam — rather than left to die or vanish into the cover-up — was a young woman whose real name was close to 'Park,' whom Mei Tam smuggled out of Hollow Pines under a falsified transfer record and helped emigrate under a new identity. That woman was Maya's own grandmother: Maya's family exists only because Mei Tam broke protocol to save her, and the Polaroid Maya recognized shows a face with an unmistakable resemblance to Maya's mother.",
+          "objective_facts": [
+            "One Polaroid in the capsule is labeled with a name unsettlingly close to a name in Maya's own maternal family history.",
+            "Maya's mother has never discussed her own mother's early life before immigrating in detail."
+          ],
+          "character_knowledge": {
+            "MAYA_PARK": {
+              "knows": [
+                "The labeled name on the Polaroid is close to a name she's heard once from her mother.",
+                "Her mother reacted oddly, defensively, when pressed about her own mother's early life."
+              ],
+              "hides": [
+                "All of this from Elias — she brushes off her reaction rather than explain an unconfirmed suspicion that feels too large to say out loud."
+              ],
+              "believes_falsely": [
+                "Tells herself it's very likely coincidence, since the surname is common enough, because the alternative feels too enormous to sit with yet."
+              ]
+            },
+            "MEI_TAM": {
+              "knows": [
+                "Fifty years ago she falsified a transfer record to save one patient from being logged among the dead, and helped that woman leave under a new name."
+              ],
+              "hides": [
+                "This from everyone — it's the diary's biggest secret, deliberately never included even in the pages she's shown anyone, because admitting it means admitting she also knew about, and stayed silent on, the deaths of others."
+              ],
+              "believes_falsely": [
+                "Assumes the woman she saved never told her descendants anything about Hollow Pines, so no one alive could ever connect that rescue back to her."
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "A Friendly Visit",
+      "theme": "Diana Chen invites the podcast for a 'cooperative' on-record interview to get ahead of the story even as Tao Wu escalates his pressure behind closed doors, while rival journalist Daniel Chen — assigned the same story for The Ledger — meets Maya, and professional rivalry starts to blur into something more personal.",
+      "intro_note": "With every 'discharged cured' name vanishing from the public record after 1976, and Mei Tam agreeing — just barely — to see Maya in person, Diana Chen's office moves first: an invitation to sit down with the senator herself arrives before Maya can even ask for one.",
+      "outro_note": "Mei Tam agrees, almost in a whisper, to tell Maya more next time — not everything, she says, but more. Across town, before the county archive closes for the night, Tao Wu makes one last call to ask a favor that will never trace back to him.",
+      "sections": [
+        "Cold Open: Prepping for the Senator (Hollow Pines Trials / Chen Cover-up thread — Maya and Elias rehearse questions they suspect Diana will deflect)",
+        "Diana Rehearses Her Warmth (Chen Cover-up thread — Diana and an aide script exactly how much truth to give away)",
+        "Tao Wu Makes a Call (Chen Cover-up thread — a short, clipped instruction to someone about tomorrow's interview)",
+        "The Assignment (Maya and Daniel thread — Daniel's editor hands him the Hollow Pines story at The Ledger)",
+        "On the Capitol Steps (Maya and Daniel thread — Maya and Daniel meet for the first time, wary and curious in equal measure)",
+        "The Friendly Interview (Hollow Pines Trials / Chen Cover-up thread — Diana fields questions about her grandfather with practiced, unbroken calm)",
+        "From the Doorway (Maya and Daniel thread — Daniel watches his mother perform, uneasy in a way he can't name yet)",
+        "Coffee After, Guards Half Down (Maya and Daniel thread — a wary truce forms over diner coffee, something warmer flickering underneath)",
+        "Tao Wu Leans on an Old Contact (Chen Cover-up thread — Tao quietly tests how far his reach still extends into the county archive)",
+        "A Phone Call Mei Tam Doesn't Want (Hollow Pines Trials thread — Mei Tam is rattled by news the interview aired)",
+        "Elias Reviews the Tape (Chen Cover-up thread — Elias reads Diana's calm as candor, missing what it costs her to hold it)",
+        "Behind Closed Doors at the Estate (Chen Cover-up thread — Diana and Tao Wu debrief privately, her composure finally cracking an inch)",
+        "The Editor Wants More (Maya and Daniel thread — Daniel is pushed to dig harder on a family he isn't ready to expose)",
+        "A Name Maya Can't Let Go Of (The Familiar Name thread — Maya studies the 'G. Bishop' Polaroid alone, telling herself it's nothing)",
+        "An Uneasy Truce (Maya and Daniel thread — Maya and Daniel agree, unofficially, to trade what they each find)",
+        "What Tao Wu Keeps in the Drawer (Chen Cover-up thread — alone at night, Tao lingers over a file that isn't about the Chens at all)",
+        "Closing: The Studio Goes Dark (NARRATOR outro — Maya and Elias close the day already bracing for what Mei Tam might say next)"
+      ],
+      "section_words": [
+        null,
+        null,
+        {
+          "min": 140,
+          "max": 220,
+          "target": "160 to 190"
+        },
+        null,
+        null,
+        {
+          "min": 320,
+          "max": 600,
+          "target": "450 to 550"
+        },
+        {
+          "min": 140,
+          "max": 220,
+          "target": "150 to 180"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 140,
+          "max": 210,
+          "target": "150 to 180"
+        },
+        null,
+        {
+          "min": 140,
+          "max": 220,
+          "target": "150 to 190"
+        },
+        null
+      ],
+      "section_locations": [
+        "STATIC_HOUR_STUDIO",
+        "CAPITOL_OFFICE",
+        "WU_AND_ASSOCIATES",
+        "THE_LEDGER_NEWSROOM",
+        "CAPITOL_OFFICE",
+        null,
+        null,
+        "NIGHT_OWL_DINER",
+        "WU_AND_ASSOCIATES",
+        "RIVERSIDE_MEMORY_HOME",
+        "STATIC_HOUR_STUDIO",
+        "CHEN_ESTATE",
+        "THE_LEDGER_NEWSROOM",
+        "STATIC_HOUR_STUDIO",
+        "NIGHT_OWL_DINER",
+        "WU_AND_ASSOCIATES",
+        "STATIC_HOUR_STUDIO"
+      ],
+      "case": [
+        {
+          "label": "The Hollow Pines Trials",
+          "solution": "Between 1971 and 1976, Hollow Pines medical director Dr. Walter Chen (Diana Chen's grandfather) ran unauthorized psychoactive drug trials on institutionalized patients without consent, funded through a research grant later scrubbed from hospital records. Several patients died from adverse reactions and were buried anonymously in numbered graves at St. Agnes Cemetery, while their files were falsified to read 'discharged cured.' Nurse Mei Tam secretly smuggled a handful of surviving patients out of the facility before further doses could be given, providing them new identities at personal risk to herself; her diaries and Polaroids are her only proof, kept in case she was ever blamed for the disappearances.",
+          "objective_facts": [
+            "Between 1971 and 1976, Hollow Pines received an unlisted research grant later removed from public hospital ledgers.",
+            "Every 'discharged cured' patient's file lacks any forwarding address, next-of-kin signature, or follow-up record.",
+            "St. Agnes Cemetery holds a cluster of unmarked, numbered graves dated within the same five-year window.",
+            "Nurse Mei Tam's employment file shows two formal disciplinary warnings for 'unauthorized removal of patients from ward,' both later expunged."
+          ],
+          "character_knowledge": {
+            "MEI_TAM": {
+              "knows": [
+                "That patients were given experimental drugs without their consent and that some died from it"
+              ],
+              "hides": [
+                "That she personally falsified discharge paperwork to help at least one patient vanish and survive, out of fear of what admitting it — even now — would cost that survivor"
+              ],
+              "believes_falsely": [
+                "That staying vague with Maya keeps everyone safer, when her silence is actually letting Diana's version of events stand unchallenged"
+              ]
+            },
+            "DIANA_CHEN": {
+              "knows": [
+                "That her grandfather ran the trials and that the records were deliberately sealed"
+              ],
+              "hides": [
+                "That she has known this for over a decade and has personally directed its suppression, presenting herself to the podcast as merely 'curious' about the story"
+              ],
+              "believes_falsely": [
+                "That the story can still be fully contained if she manages the narrative early and visibly enough"
+              ]
+            },
+            "TAO_WU": {
+              "knows": [
+                "The full legal exposure the Chen family carries and the history of how it's been managed"
+              ],
+              "hides": [
+                "That he has quietly begun assembling a private file on Hollow Pines that goes beyond anything Diana asked him to gather"
+              ],
+              "believes_falsely": [
+                "That Mei Tam is the only meaningful loose thread left to manage"
+              ]
+            },
+            "MAYA_PARK": {
+              "knows": [
+                "The interview details and a growing, specific suspicion that Diana's calm is rehearsed rather than open"
+              ],
+              "hides": [
+                "That she hasn't yet told Elias about the family resemblance she keeps noticing in one of the Polaroids"
+              ],
+              "believes_falsely": [
+                "Nothing new this episode — her instincts are sharpening faster than her evidence"
+              ]
+            },
+            "ELIAS_CROWE": {
+              "knows": [
+                "The logistics and optics of the interview as it happened"
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "That Diana's willingness to sit for an on-record interview is a genuine act of transparency rather than containment"
+              ]
+            },
+            "DANIEL_CHEN": {
+              "knows": [
+                "That his mother's public calm during interviews is a performance he's watched his whole life"
+              ],
+              "hides": [
+                "That he suspects the family's involvement runs deeper than 'protecting the family name,' a suspicion he hasn't voiced to his editor or his mother"
+              ],
+              "believes_falsely": [
+                "That his mother is likely guilty of image management, not of burying an actual crime"
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Chen Cover-up",
+          "solution": "Diana Chen has known since her twenties that her grandfather ran the Hollow Pines trials, having found his private research notes as a young woman. She has spent her career and family fortune, executed through her longtime attorney Tao Wu, quietly sealing records, redirecting philanthropy toward the Chen name's public image, and applying legal and financial pressure to keep the history buried before it could derail her political ambitions.",
+          "objective_facts": [
+            "The Harborview Medical Foundation's founding donation in 1994 came directly from the same Chen family trust that once funded Hollow Pines.",
+            "Diana Chen's office sealed a routine records request related to Hollow Pines in 2019, citing 'family privacy,' years before the podcast existed.",
+            "Tao Wu has represented the Chen family exclusively for eleven years, with no other listed clients on public record."
+          ],
+          "character_knowledge": {
+            "DIANA_CHEN": {
+              "knows": [
+                "That she authorized Tao Wu's general instruction to 'handle' the growing interest in Hollow Pines"
+              ],
+              "hides": [
+                "The true depth of her personal fear — that this threatens not just her campaign but real legal liability"
+              ],
+              "believes_falsely": [
+                "That Tao Wu's methods remain firm but clean, not that he's already crossed lines she'd rather not know about"
+              ]
+            },
+            "TAO_WU": {
+              "knows": [
+                "Exactly how far his suppression work has gone, including which contacts he still has leverage over"
+              ],
+              "hides": [
+                "That some of what he's protecting now serves an interest of his own, separate from Diana's"
+              ],
+              "believes_falsely": []
+            },
+            "DANIEL_CHEN": {
+              "knows": [
+                "That Tao Wu has always quietly managed 'family matters' for as long as he can remember"
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "That Tao Wu's loyalty to the family is purely professional, not personal"
+              ]
+            },
+            "MAYA_PARK": {
+              "knows": [
+                "That the interview felt coordinated, even rehearsed, beyond normal political polish"
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "That Diana's team is running standard damage control, underestimating how far Tao Wu is willing to go"
+              ]
+            },
+            "ELIAS_CROWE": {
+              "knows": [
+                "The interview's surface-level optics"
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "That official channels like the senator's office operate in good faith by default"
+              ]
+            }
+          }
+        },
+        {
+          "label": "Maya and Daniel",
+          "solution": "Daniel took the Hollow Pines assignment believing it was routine local history until his editor mentioned the Chen family angle; he has not told his mother he's covering it, nor admitted to himself how much he already suspects she knows. His growing pull toward Maya complicates his ability to stay neutral, and he hasn't decided whether loyalty to his mother or to the story will win.",
+          "objective_facts": [
+            "The Ledger's editor assigned Daniel to the Hollow Pines story specifically because of his family's local prominence, not despite it.",
+            "Daniel has not disclosed his family connection to his editor.",
+            "Diana does not yet know Daniel is covering the story professionally."
+          ],
+          "character_knowledge": {
+            "DANIEL_CHEN": {
+              "knows": [
+                "That he's covering the same story as Maya and that something about her directness unsettles him in a good way"
+              ],
+              "hides": [
+                "From his editor, that his mother is the story's central figure; from Maya, how close to home this assignment actually sits"
+              ],
+              "believes_falsely": [
+                "That he can keep his reporting and his family loyalty in separate, manageable compartments"
+              ]
+            },
+            "MAYA_PARK": {
+              "knows": [
+                "That Daniel is covering the story for a rival outlet and shares her instincts about Diana's evasiveness"
+              ],
+              "hides": [
+                "Her own curiosity about him, wary of trusting anyone with the last name Chen"
+              ],
+              "believes_falsely": [
+                "That Daniel is likely more aligned with his mother's interests than his own conflicted instincts actually allow"
+              ]
+            },
+            "ELIAS_CROWE": {
+              "knows": [
+                "That Maya and Daniel have started talking, and that it isn't purely professional"
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "That Daniel is more likely a liability, or even a plant, than someone genuinely torn"
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Familiar Name",
+          "solution": "One of the 'discharged cured' Polaroids, labeled 'G. Bishop, admitted 1971,' shows Maya's great-aunt Grace Park — anglicized to Bishop on intake — whom the family always believed had simply 'gone back' after immigrating. She was institutionalized following a postpartum psychiatric episode and became one of the trial subjects; she is one of the patients Mei Tam secretly helped disappear into a new identity, and is still alive, estranged from her past for over fifty years. Maya does not yet know any of this — only that a name and a face keep catching on something she can't place.",
+          "objective_facts": [
+            "One of the 'discharged cured' Polaroids is labeled 'G. Bishop, admitted 1971.'",
+            "Maya's late grandmother had an older sister the family only ever described as having 'gone back to Korea' sometime in the early 1970s, with no contact after.",
+            "A faded photograph in Maya's mother's keepsake box bears a strong resemblance to the woman in the Polaroid."
+          ],
+          "character_knowledge": {
+            "MAYA_PARK": {
+              "knows": [
+                "That one Polaroid keeps drawing her back for reasons she can't fully articulate"
+              ],
+              "hides": [
+                "That she hasn't told anyone, including Elias, why the name feels familiar"
+              ],
+              "believes_falsely": [
+                "That it's probably coincidence, a resemblance her tired mind is inventing"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "Everything But a Name",
+      "theme": "Mei Tam's guarded first real conversation with Maya yields fragments of the truth about Hollow Pines' unauthorized drug trials without naming names, while Tao Wu's pressure on the county archive nearly costs Maya and Elias their strongest piece of physical evidence.",
+      "intro_note": "After Mei Tam's whispered promise to say more, and an unmarked favor called in at the county archive the night before, Maya returns to Riverside Memory Home ready to listen — unaware that the ledger she and Elias need most may already be gone.",
+      "outro_note": "Among the pages Elias managed to copy before the ledger vanished from the shelf is a name Maya doesn't recognize yet — but Elias does, engraved that very afternoon on a donor wall across town: the Harborview Medical Foundation, built on Chen family money, and signed once, long ago, by its founding medical director.",
+      "sections": [
+        "Returning to Riverside (Hollow Pines Trials thread — Maya arrives for the conversation Mei Tam promised)",
+        "Testing the Water (Hollow Pines Trials thread — Mei Tam probes how much Maya already knows before she'll say more)",
+        "What Was Done to People Who Couldn't Refuse (Hollow Pines Trials thread — Mei Tam describes the trials in careful, unnamed terms)",
+        "The Slip (Hollow Pines Trials thread — Mei Tam nearly says a name aloud, then stops herself)",
+        "A Routine Request (Chen Cover-up thread — Elias requests the sealed 1970s hospital ledger box at the county archive)",
+        "Word Travels Fast (Chen Cover-up thread — Tao Wu learns of the records request from a contact inside the archive)",
+        "One Phone Call (Chen Cover-up thread — Tao Wu quietly arranges for the box to disappear before Elias can access it)",
+        "Something's Off With the Clerk (Chen Cover-up thread — Elias notices sudden, unexplained delays in his request)",
+        "What Mei Tam Gave Her (Hollow Pines Trials / The Familiar Name thread — Maya tells Elias everything, including, for the first time, why the Polaroid won't leave her alone)",
+        "Racing the Clock (Chen Cover-up thread — Maya and Elias decide to get to the archive before the box is pulled for good)",
+        "The Box Isn't Where It Should Be (Chen Cover-up thread — a tense near-miss as the ledger appears to have already been moved)",
+        "Copies Made Just in Time (Chen Cover-up thread — Maya and Elias manage to photograph pages before the box is fully withdrawn)",
+        "Too Slow (Chen Cover-up thread — Tao Wu learns his favor didn't land in time, composure fraying underneath)",
+        "An Old Photograph, Alone (The Familiar Name thread — Mei Tam sits with something private after Maya leaves)",
+        "What Tao Wu Didn't Mention (Chen Cover-up thread — Diana senses, for the first time, that Tao Wu's control is slipping)",
+        "Everything But a Name (Hollow Pines Trials thread — Maya and Elias lay out what they now have, and what's still missing)",
+        "Closing: A Name on a Wall (NARRATOR outro — the day's last discovery waits just out of reach)"
+      ],
+      "section_words": [
+        null,
+        null,
+        null,
+        {
+          "min": 120,
+          "max": 200,
+          "target": "130 to 160"
+        },
+        null,
+        null,
+        {
+          "min": 130,
+          "max": 210,
+          "target": "140 to 170"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 130,
+          "max": 210,
+          "target": "140 to 170"
+        },
+        {
+          "min": 130,
+          "max": 210,
+          "target": "140 to 170"
+        },
+        null,
+        null,
+        null
+      ],
+      "section_locations": [
+        "RIVERSIDE_MEMORY_HOME",
+        null,
+        null,
+        null,
+        "COUNTY_RECORDS_ARCHIVE",
+        "WU_AND_ASSOCIATES",
+        null,
+        "COUNTY_RECORDS_ARCHIVE",
+        "STATIC_HOUR_STUDIO",
+        null,
+        "COUNTY_RECORDS_ARCHIVE",
+        null,
+        "WU_AND_ASSOCIATES",
+        "RIVERSIDE_MEMORY_HOME",
+        "CHEN_ESTATE",
+        "STATIC_HOUR_STUDIO",
+        null
+      ],
+      "case": [
+        {
+          "label": "The Hollow Pines Trials",
+          "solution": "Between 1971 and 1976, Hollow Pines medical director Dr. Walter Chen (Diana Chen's grandfather) ran unauthorized psychoactive drug trials on institutionalized patients without consent, funded through a research grant later scrubbed from hospital records. Several patients died from adverse reactions and were buried anonymously in numbered graves at St. Agnes Cemetery, while their files were falsified to read 'discharged cured.' Nurse Mei Tam secretly smuggled a handful of surviving patients out of the facility before further doses could be given, providing them new identities at personal risk to herself; her diaries and Polaroids are her only proof, kept in case she was ever blamed for the disappearances.",
+          "objective_facts": [
+            "Between 1971 and 1976, Hollow Pines received an unlisted research grant later removed from public hospital ledgers.",
+            "Every 'discharged cured' patient's file lacks any forwarding address, next-of-kin signature, or follow-up record.",
+            "St. Agnes Cemetery holds a cluster of unmarked, numbered graves dated within the same five-year window.",
+            "Nurse Mei Tam's employment file shows two formal disciplinary warnings for 'unauthorized removal of patients from ward,' both later expunged."
+          ],
+          "character_knowledge": {
+            "MEI_TAM": {
+              "knows": [
+                "That patients were given experimental drugs without consent and that some died from it — and she now says as much to Maya, in careful, unnamed terms"
+              ],
+              "hides": [
+                "The doctor's name, and her own role in falsifying at least one patient's exit paperwork to save a life"
+              ],
+              "believes_falsely": [
+                "That withholding the doctor's name protects the survivor she saved, when it's really just protecting the Chen name a little longer"
+              ]
+            },
+            "MAYA_PARK": {
+              "knows": [
+                "That the trials were real, unconsented, and fatal for some patients — though still without a name attached"
+              ],
+              "hides": [
+                "Nothing new, but for the first time she tells Elias about the Polaroid's resemblance to her own family"
+              ],
+              "believes_falsely": [
+                "That Mei Tam's silence is mainly about protecting the Chen family, when it's actually about protecting someone else entirely"
+              ]
+            },
+            "ELIAS_CROWE": {
+              "knows": [
+                "Everything Maya reports back from Mei Tam, secondhand"
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "That the county archive is a neutral, safe place to find proof — a belief about to be tested"
+              ]
+            },
+            "DIANA_CHEN": {
+              "knows": [
+                "That the podcast is now speaking directly with a former Hollow Pines nurse"
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "That Mei Tam, elderly and frail, is a contained risk rather than a witness holding hard evidence"
+              ]
+            },
+            "TAO_WU": {
+              "knows": [
+                "That Mei Tam is talking, and that the timeline for containment just shortened"
+              ],
+              "hides": [
+                "His own rising personal stake in what Mei Tam might eventually say"
+              ],
+              "believes_falsely": []
+            }
+          }
+        },
+        {
+          "label": "The Chen Cover-up",
+          "solution": "Diana Chen has known since her twenties that her grandfather ran the Hollow Pines trials, having found his private research notes as a young woman. She has spent her career and family fortune, executed through her longtime attorney Tao Wu, quietly sealing records, redirecting philanthropy toward the Chen name's public image, and applying legal and financial pressure to keep the history buried before it could derail her political ambitions.",
+          "objective_facts": [
+            "The Harborview Medical Foundation's founding donation in 1994 came directly from the same Chen family trust that once funded Hollow Pines.",
+            "Diana Chen's office sealed a routine records request related to Hollow Pines in 2019, citing 'family privacy,' years before the podcast existed.",
+            "Tao Wu has represented the Chen family exclusively for eleven years, with no other listed clients on public record."
+          ],
+          "character_knowledge": {
+            "TAO_WU": {
+              "knows": [
+                "Exactly which sealed ledger box poses the greatest risk, and arranges for it to be moved before Maya and Elias can access it"
+              ],
+              "hides": [
+                "From Diana, how close the effort actually came to failing, and how visibly rushed the move was"
+              ],
+              "believes_falsely": [
+                "That he had more time than he actually did, underestimating how quickly Maya and Elias would follow up"
+              ]
+            },
+            "DIANA_CHEN": {
+              "knows": [
+                "That she authorized Tao Wu's general instruction to 'handle' the archive risk without asking for specifics"
+              ],
+              "hides": [
+                "Her own deliberate refusal to ask exactly what 'handle it' means in practice"
+              ],
+              "believes_falsely": [
+                "That the near-miss at the archive means the situation is still fully containable"
+              ]
+            },
+            "MAYA_PARK": {
+              "knows": [
+                "That the archive clerk was acting strangely and that the ledger was almost withdrawn from access entirely"
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "That the delay was bureaucratic incompetence rather than deliberate, targeted interference"
+              ]
+            },
+            "ELIAS_CROWE": {
+              "knows": [
+                "The same suspicious delays Maya witnessed firsthand"
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "That institutions like the archive don't get quietly leaned on — a trust about to break"
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Familiar Name",
+          "solution": "One of the 'discharged cured' Polaroids, labeled 'G. Bishop, admitted 1971,' shows Maya's great-aunt Grace Park — anglicized to Bishop on intake — whom the family always believed had simply 'gone back' after immigrating. She was institutionalized following a postpartum psychiatric episode and became one of the trial subjects; she is one of the patients Mei Tam secretly helped disappear into a new identity, and is still alive, estranged from her past for over fifty years. Maya does not yet know any of this — only that a name and a face keep catching on something she can't place.",
+          "objective_facts": [
+            "One of the 'discharged cured' Polaroids is labeled 'G. Bishop, admitted 1971.'",
+            "Maya's late grandmother had an older sister the family only ever described as having 'gone back to Korea' sometime in the early 1970s, with no contact after.",
+            "A faded photograph in Maya's mother's keepsake box bears a strong resemblance to the woman in the Polaroid."
+          ],
+          "character_knowledge": {
+            "MAYA_PARK": {
+              "knows": [
+                "That she can no longer dismiss the resemblance as coincidence, and finally says so out loud to Elias"
+              ],
+              "hides": [
+                "That she still hasn't told her own mother she's chasing this"
+              ],
+              "believes_falsely": [
+                "That naming her suspicion aloud will make it easier to disprove, rather than harder to ignore"
+              ]
+            },
+            "ELIAS_CROWE": {
+              "knows": [
+                "For the first time, that Maya has a personal stake in this story beyond the investigation itself"
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "That this personal connection is more likely to compromise Maya's judgment than sharpen it"
+              ]
+            },
+            "MEI_TAM": {
+              "knows": [
+                "Something in what Maya described stirs a memory Mei Tam doesn't share"
+              ],
+              "hides": [
+                "Any outward reaction at all — she lets Maya leave believing nothing landed"
+              ],
+              "believes_falsely": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "The Chen Name on the Wall",
+      "theme": "A donor plaque at the Harborview Medical Foundation and a page from Mei Tam's diary collide to expose that Hollow Pines' medical director was Diana Chen's own grandfather — a fact her campaign has spent years burying — detonating the story publicly and forcing Daniel to choose between protecting his mother and following the truth.",
+      "intro_note": "Mei Tam gave Maya fragments of the truth about Hollow Pines' unauthorized trials but no names, and a quiet request from Tao Wu at the county archive nearly cost Maya and Elias their strongest piece of physical evidence before they caught the attempted removal in time.",
+      "outro_note": "The broadcast is out and the Chen name is public — but in a diner booth after the segment airs, Daniel tells Maya there's something in his own family's private archive that goes further than a grandfather's job title, something he hasn't decided whether to hand over; across town, Diana ends her call with Tao Wu with four words that mark a turn from quiet pressure to open war: 'No more soft touch.'",
+      "sections": [
+        "Cold Open: The Plaque — Maya notices a donor wall plaque naming Hollow Pines' 1968-75 medical director",
+        "Two Names, One Family — Maya and Elias cross-reference the plaque against Diana Chen's public genealogy",
+        "The Careful Nurse — Maya shows Mei Tam the plaque photo and watches her freeze",
+        "What the Old Nurse Keeps — alone, Mei Tam retrieves a hidden diary page she has never shown anyone",
+        "Assignment — Daniel's editor hands him the Harborview donor story, citing his family's ties to the foundation",
+        "Managing the Narrative — Diana is briefed that the Chen name is circulating around Hollow Pines",
+        "A Fixer's Instinct — Tao Wu learns of Maya's visit to Harborview and begins quiet countermeasures",
+        "Coffee and Suspicion — Maya shows Daniel the plaque photo at the diner and watches his reaction",
+        "Ask Your Mother — Daniel confronts Diana at the estate about his great-grandfather",
+        "The Diary Page — Mei Tam finally gives Maya a page naming Dr. Chen, and nothing more",
+        "Paper Trail — Elias verifies Edmund Chen's directorship dates against county filings",
+        "Green Light — Maya and Elias decide to air the finding; Elias hesitates and covers it",
+        "Contain It — Tao Wu warns Diana the story is about to break",
+        "The Broadcast — The Static Hour airs the segment naming Edmund Chen as Hollow Pines' director",
+        "The Phone Rings — Diana takes the fallout live, her composure cracking for the first time",
+        "What He Didn't Say — Daniel weighs his own paper's angle against protecting his mother",
+        "After the Broadcast — Maya and Daniel meet again; he hints he knows more than he's said"
+      ],
+      "section_words": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 120,
+          "max": 200,
+          "target": "140 to 170"
+        },
+        null,
+        null,
+        {
+          "min": 100,
+          "max": 180,
+          "target": "120 to 150"
+        },
+        null,
+        {
+          "min": 110,
+          "max": 190,
+          "target": "130 to 160"
+        },
+        null,
+        null
+      ],
+      "section_locations": [
+        "HARBORVIEW_MEDICAL_FOUNDATION",
+        "STATIC_HOUR_STUDIO",
+        "RIVERSIDE_MEMORY_HOME",
+        null,
+        "THE_LEDGER_NEWSROOM",
+        "CAPITOL_OFFICE",
+        "WU_AND_ASSOCIATES",
+        "NIGHT_OWL_DINER",
+        "CHEN_ESTATE",
+        "RIVERSIDE_MEMORY_HOME",
+        "COUNTY_RECORDS_ARCHIVE",
+        "STATIC_HOUR_STUDIO",
+        "WU_AND_ASSOCIATES",
+        "STATIC_HOUR_STUDIO",
+        "CAPITOL_OFFICE",
+        "THE_LEDGER_NEWSROOM",
+        "NIGHT_OWL_DINER"
+      ],
+      "case": [
+        {
+          "label": "The Buried Patients",
+          "solution": "Between 1971 and 1974, Hollow Pines' medical director Dr. Edmund Chen ran an unapproved psychiatric drug trial on institutionalized patients without their consent, quietly funded through the same charitable program that later became the Harborview Medical Foundation. Several patients died or were left permanently damaged; to avoid scandal, the hospital falsified their records as 'discharged cured' instead of documenting deaths or continued confinement. Nurse Mei Tam was ordered to administer the trial doses and help falsify the paperwork, but secretly kept a private diary and duplicate Polaroids as her own record of conscience — and quietly smuggled at least one patient out of the official system alive rather than let her disappear into a false discharge record.",
+          "objective_facts": [
+            "Hollow Pines admitted patients into an unapproved psychiatric drug trial between 1971 and 1974.",
+            "Patients who died or were severely harmed during the trial were recorded on official paperwork as 'discharged cured.'",
+            "Dr. Edmund Chen, Hollow Pines' medical director from 1968 to 1975, personally approved and oversaw the trial protocol.",
+            "Nurse Mei Tam was assigned to administer trial doses and falsify the resulting discharge paperwork.",
+            "The Chen family's charitable program — later reorganized as the Harborview Medical Foundation — funded the same research in the early 1970s.",
+            "At least one patient was not discharged or killed, but secretly removed from Hollow Pines' official system by Mei Tam and never returned to her family of record."
+          ],
+          "character_knowledge": {
+            "MEI_TAM": {
+              "knows": [
+                "The full extent of the unauthorized drug trial and her own role administering doses and falsifying paperwork.",
+                "That Dr. Edmund Chen personally ordered and oversaw the trial."
+              ],
+              "hides": [
+                "The worst details of her own complicity in falsifying records, out of shame and fear of prosecution even now.",
+                "That one of the 'discharged cured' patients was secretly smuggled out alive by her own hand — and who that patient was connected to."
+              ],
+              "believes_falsely": [
+                "That naming only Dr. Chen to Maya, without the rest, will be enough to satisfy the investigation and keep the bigger secret safely buried."
+              ]
+            },
+            "MAYA_PARK": {
+              "knows": [
+                "That Dr. Edmund Chen was Hollow Pines' medical director from 1968 to 1975.",
+                "That Mei Tam worked directly under Chen during the trial years."
+              ],
+              "hides": [
+                "Her private unease that Daniel might already know more than he's telling her, which she doesn't voice to keep him talking."
+              ],
+              "believes_falsely": [
+                "That the déjà vu she felt over the Polaroid names in the first week was just professional pattern-matching fatigue, not a real family connection."
+              ]
+            },
+            "ELIAS_CROWE": {
+              "knows": [
+                "The documentary trail confirming Edmund Chen's tenure as medical director matches the trial years."
+              ],
+              "hides": [
+                "His growing unease about how fast Maya wants to move, which he downplays to avoid seeming like he's losing his nerve."
+              ],
+              "believes_falsely": [
+                "That because the paper trail is now solid and 'official,' the story is safe to air without further institutional blowback."
+              ]
+            },
+            "DIANA_CHEN": {
+              "knows": [
+                "That her grandfather Edmund Chen ran the unauthorized trials, and that this is now becoming public.",
+                "The full mechanics of how her family has kept the archive sealed for decades."
+              ],
+              "hides": [
+                "That she has known the full truth for years, not just learned of it alongside the public.",
+                "Her direct role in keeping the story contained until now."
+              ],
+              "believes_falsely": [
+                "That she can still manage this crisis the way she has managed every prior threat to her career."
+              ]
+            },
+            "TAO_WU": {
+              "knows": [
+                "The full history of the Chen family's containment efforts regarding Hollow Pines.",
+                "That Maya visited Harborview and connected the Chen name to Edmund Chen."
+              ],
+              "hides": [
+                "His own family's personal connection to what happened at Hollow Pines, which he has never disclosed to Diana."
+              ],
+              "believes_falsely": [
+                "That his personal connection to Hollow Pines remains completely unknown and irrelevant to the current crisis."
+              ]
+            },
+            "DANIEL_CHEN": {
+              "knows": [
+                "That his great-grandfather Edmund Chen was Hollow Pines' medical director during the years in question."
+              ],
+              "hides": [
+                "His mounting suspicion that his mother has known this for far longer than she's letting on, which he isn't ready to say aloud."
+              ],
+              "believes_falsely": [
+                "That his father's old warning about an 'old scandal' was about politics or money, not medical experiments on patients."
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Chen Legacy",
+          "solution": "Diana Chen has known since her own father told her, before his death, that her grandfather Edmund Chen ran the unauthorized trials at Hollow Pines. She has spent her political career quietly ensuring the surviving records stayed sealed, using family fixer Tao Wu to manage every legal and archival risk, while publicly building her image on the same Chen family philanthropy that grew out of the tainted research funding.",
+          "objective_facts": [
+            "The Chen family's charitable foundation funded the reclassification and partial sealing of Hollow Pines' remaining paper archive in the 1980s.",
+            "Diana Chen personally lobbied to have Hollow Pines' surviving records moved outside the standard county retention schedule in the 1990s.",
+            "Tao Wu has represented the Chen family's legal interests in matters connected to Hollow Pines for more than a decade, predating the podcast's investigation."
+          ],
+          "character_knowledge": {
+            "DIANA_CHEN": {
+              "knows": [
+                "The full mechanics of how the family foundation funded the sealing of Hollow Pines' archive.",
+                "That the medical-director fact is about to go public."
+              ],
+              "hides": [
+                "That she personally lobbied to move the records outside standard retention schedules in the 1990s."
+              ],
+              "believes_falsely": [
+                "That a composed, 'shocked to learn this too' public posture will hold even as reporters dig further."
+              ]
+            },
+            "TAO_WU": {
+              "knows": [
+                "Every legal step taken over the past decade to protect the Chen family from Hollow Pines exposure."
+              ],
+              "hides": [
+                "That he advised and executed the archive-sealing strategy years before Diana's current campaign made it urgent."
+              ],
+              "believes_falsely": [
+                "That containment is still achievable now that the director's name is public."
+              ]
+            },
+            "DANIEL_CHEN": {
+              "knows": [
+                "That his family's foundation is connected to Hollow Pines through his great-grandfather."
+              ],
+              "hides": [
+                "That he hasn't yet told his editor how personally close this story now sits."
+              ],
+              "believes_falsely": [
+                "That his mother was as surprised by this revelation as he was."
+              ]
+            },
+            "MAYA_PARK": {
+              "knows": [
+                "The public fact that Edmund Chen directed Hollow Pines during the trial years."
+              ],
+              "hides": [
+                "Her suspicion that Diana Chen is more than an unwitting descendant, which she isn't ready to state on air without proof."
+              ],
+              "believes_falsely": [
+                "That Daniel's family loyalty won't slow down what he's willing to share with her."
+              ]
+            },
+            "ELIAS_CROWE": {
+              "knows": [
+                "The public fact and its timeline, cross-checked against county records."
+              ],
+              "hides": [
+                "His hope that if they're careful and 'fair,' the Chen family won't retaliate — which he hasn't said outright to Maya."
+              ],
+              "believes_falsely": [
+                "That going through proper channels will protect the show from legal reprisal."
+              ]
+            }
+          }
+        },
+        {
+          "label": "Maya's Blood",
+          "solution": "The patient Mei Tam secretly helped disappear from Hollow Pines' official system was Maya's great-aunt — her grandmother's older sister — sent to the asylum as a teenager and long presumed by the family to have died young back in Korea before they emigrated. In truth she survived, was hidden by Mei Tam, and was quietly relocated under a new identity; Maya does not yet consciously know the connection.",
+          "objective_facts": [
+            "One of the 'discharged cured' Polaroids bears a name that matches an entry in Maya's family register, where that relative is listed as having died young in Korea.",
+            "Maya's mother has never spoken about this relative, and believes she died in childhood before the family emigrated.",
+            "Mei Tam has anonymously funded a small care account connected to an unnamed woman for over four decades."
+          ],
+          "character_knowledge": {
+            "MAYA_PARK": {
+              "knows": [
+                "That one of the Polaroid names felt personally familiar to her from the first day of the investigation."
+              ],
+              "hides": [
+                "That the familiarity unsettled her enough that she hasn't mentioned it to Elias."
+              ],
+              "believes_falsely": [
+                "That the resemblance is coincidence or professional fatigue, not an actual family connection."
+              ]
+            },
+            "MEI_TAM": {
+              "knows": [
+                "The true identity of the patient she secretly helped disappear from Hollow Pines' system, and that patient's living descendants."
+              ],
+              "hides": [
+                "That patient's connection to Maya specifically — she has recognized Maya's face and name and said nothing."
+              ],
+              "believes_falsely": [
+                "That keeping silent a little longer still protects the survivor's chosen anonymity, rather than risking more harm."
+              ]
+            }
+          }
+        },
+        {
+          "label": "Divided Loyalties",
+          "solution": "Daniel's attraction to Maya and his professional rivalry with her are both genuine, but he has spent his journalism career deliberately steering away from any story that could touch his family — a habit rooted in half-heard childhood warnings from his father about an 'old scandal that must never come up.' His editor assigned him to the Hollow Pines story in part because of his family's ties to Harborview, intending to use his access, without fully telling him so.",
+          "objective_facts": [
+            "Daniel was assigned to the Hollow Pines story by his editor partly because of his family's historic ties to the Harborview Medical Foundation.",
+            "Daniel and Maya have met repeatedly to compare sources, and their professional contact has begun to develop into personal interest.",
+            "Daniel's father told him as a child that there was an 'old scandal' in the Chen family that must never come up, without ever specifying what it was."
+          ],
+          "character_knowledge": {
+            "DANIEL_CHEN": {
+              "knows": [
+                "That his feelings for Maya have moved past professional interest."
+              ],
+              "hides": [
+                "The depth of his family's exposure risk, which he downplays when they talk."
+              ],
+              "believes_falsely": [
+                "That he can keep reporting objectively despite his personal stake in the story."
+              ]
+            },
+            "MAYA_PARK": {
+              "knows": [
+                "That she's drawn to Daniel despite the conflict of interest."
+              ],
+              "hides": [
+                "Her suspicion that Daniel's family may be more complicit than he's willing to admit."
+              ],
+              "believes_falsely": [
+                "That Daniel's loyalty will ultimately land with the truth over his mother."
+              ]
+            },
+            "DIANA_CHEN": {
+              "knows": [
+                "That Daniel has been spending time with Maya outside of competing coverage."
+              ],
+              "hides": [
+                "Her plan to use that relationship, if needed, as leverage or a pressure point."
+              ],
+              "believes_falsely": [
+                "That Daniel's family loyalty will keep him from doing real damage to her."
+              ]
+            },
+            "TAO_WU": {
+              "knows": [
+                "That the Daniel-Maya relationship is a growing liability to contain."
+              ],
+              "hides": [
+                "His early planning for how to neutralize that liability if it becomes necessary."
+              ],
+              "believes_falsely": [
+                "That Daniel is still fundamentally more loyal to his family than to any story."
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "Damage Control",
+      "theme": "In the fallout of the exposure, Diana Chen and Tao Wu abandon quiet pressure for open warfare against the podcast, while Mei Tam, terrified by how close the story has come to her own hidden role in the cover-up, makes a choice that could protect or destroy what's left of the truth.",
+      "intro_note": "Edmund Chen's name is public, the story has aired, and Daniel left Maya with a warning that his own family's archive holds more than a job title — while across town, Diana told Tao Wu there would be no more soft touch.",
+      "outro_note": "Maya's calls to Riverside go straight to a staff line that won't confirm anything; when Elias finally reaches someone by pretending to be family, all they'll say is that Mei Tam 'had an incident' and can't take visitors — and no one will say whether the diary pages left the building before it happened.",
+      "sections": [
+        "The Statement — Diana holds a press conference framing the story as a politically motivated smear",
+        "Cease and Desist — Tao Wu drafts a legal threat against The Static Hour",
+        "The Letter Arrives — Maya and Elias receive it, and Elias wants to pull back",
+        "Pulled From the Story — Daniel's editor takes him off Hollow Pines coverage",
+        "New Restrictions — Riverside staff tell Mei Tam her visitors are being limited 'for her health'",
+        "Two Generals — Diana and Tao Wu strategize privately at the estate",
+        "A Nervous Source — a frightened Harborview employee meets Maya, offers a lead, then bolts",
+        "Quiet Removal — Harborview staff discreetly take the donor plaque down for 'renovation'",
+        "Sealed Again — Elias finds a new request to reclassify Hollow Pines' county records",
+        "Push or Protect — Maya and Elias argue over how far to keep pushing",
+        "Off the Record — Daniel calls Maya secretly, against his editor's orders",
+        "What's Left to Lose — Mei Tam decides to safeguard her remaining diary pages",
+        "The Fixer's Visit — Tao Wu visits Mei Tam himself",
+        "Doubling Down — Diana announces legal action, naming Maya directly",
+        "The Package — Mei Tam hides or sends the pages before staff can stop her",
+        "A Call That Doesn't Connect — Maya tries to reach Mei Tam and can't get through",
+        "Something's Wrong — word reaches Maya that something has happened at Riverside"
+      ],
+      "section_words": [
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 110,
+          "max": 190,
+          "target": "130 to 160"
+        },
+        null,
+        null,
+        {
+          "min": 100,
+          "max": 180,
+          "target": "120 to 150"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 120,
+          "max": 200,
+          "target": "140 to 170"
+        },
+        null,
+        {
+          "min": 100,
+          "max": 180,
+          "target": "120 to 150"
+        },
+        {
+          "min": 120,
+          "max": 200,
+          "target": "140 to 180"
+        }
+      ],
+      "section_locations": [
+        "CAPITOL_OFFICE",
+        "WU_AND_ASSOCIATES",
+        "STATIC_HOUR_STUDIO",
+        "THE_LEDGER_NEWSROOM",
+        "RIVERSIDE_MEMORY_HOME",
+        "CHEN_ESTATE",
+        "NIGHT_OWL_DINER",
+        "HARBORVIEW_MEDICAL_FOUNDATION",
+        "COUNTY_RECORDS_ARCHIVE",
+        "STATIC_HOUR_STUDIO",
+        "THE_LEDGER_NEWSROOM",
+        "RIVERSIDE_MEMORY_HOME",
+        "RIVERSIDE_MEMORY_HOME",
+        "CAPITOL_OFFICE",
+        "RIVERSIDE_MEMORY_HOME",
+        "STATIC_HOUR_STUDIO",
+        "NIGHT_OWL_DINER"
+      ],
+      "case": [
+        {
+          "label": "The Buried Patients",
+          "solution": "Between 1971 and 1974, Hollow Pines' medical director Dr. Edmund Chen ran an unapproved psychiatric drug trial on institutionalized patients without their consent, quietly funded through the same charitable program that later became the Harborview Medical Foundation. Several patients died or were left permanently damaged; to avoid scandal, the hospital falsified their records as 'discharged cured' instead of documenting deaths or continued confinement. Nurse Mei Tam was ordered to administer the trial doses and help falsify the paperwork, but secretly kept a private diary and duplicate Polaroids as her own record of conscience — and quietly smuggled at least one patient out of the official system alive rather than let her disappear into a false discharge record.",
+          "objective_facts": [
+            "Hollow Pines admitted patients into an unapproved psychiatric drug trial between 1971 and 1974.",
+            "Patients who died or were severely harmed during the trial were recorded on official paperwork as 'discharged cured.'",
+            "Dr. Edmund Chen, Hollow Pines' medical director from 1968 to 1975, personally approved and oversaw the trial protocol.",
+            "Nurse Mei Tam was assigned to administer trial doses and falsify the resulting discharge paperwork.",
+            "The Chen family's charitable program — later reorganized as the Harborview Medical Foundation — funded the same research in the early 1970s.",
+            "At least one patient was not discharged or killed, but secretly removed from Hollow Pines' official system by Mei Tam and never returned to her family of record."
+          ],
+          "character_knowledge": {
+            "MEI_TAM": {
+              "knows": [
+                "That her visitors are now being restricted by the facility 'for her health.'",
+                "That she needs to safeguard her remaining diary pages before someone takes them."
+              ],
+              "hides": [
+                "Where she has hidden or sent the remaining pages, even from facility staff she no longer trusts."
+              ],
+              "believes_falsely": [
+                "That getting the pages out of the building will keep them safe, whatever happens to her."
+              ]
+            },
+            "MAYA_PARK": {
+              "knows": [
+                "That Mei Tam's visitor access has suddenly been restricted.",
+                "That a legal threat has arrived aimed at silencing the show."
+              ],
+              "hides": [
+                "Her fear that pushing harder could put Mei Tam in real danger, which she doesn't say aloud to Elias."
+              ],
+              "believes_falsely": [
+                "That she still has time before whoever is behind the restrictions moves against Mei Tam directly."
+              ]
+            },
+            "ELIAS_CROWE": {
+              "knows": [
+                "The contents of the cease-and-desist letter and its legal weight."
+              ],
+              "hides": [
+                "That he wants to pause the investigation until the legal threat passes, which he's reluctant to say plainly to Maya."
+              ],
+              "believes_falsely": [
+                "That because the threat came through a lawyer and not a threat of violence, the situation is still under control."
+              ]
+            },
+            "DIANA_CHEN": {
+              "knows": [
+                "That the public exposure has forced her into open confrontation instead of quiet containment."
+              ],
+              "hides": [
+                "That she personally authorized Tao Wu to restrict Mei Tam's visitors at Riverside."
+              ],
+              "believes_falsely": [
+                "That isolating Mei Tam will keep the rest of the truth from surfacing before the election cycle turns over."
+              ]
+            },
+            "TAO_WU": {
+              "knows": [
+                "That Mei Tam is the single greatest remaining risk to the family's containment effort."
+              ],
+              "hides": [
+                "That his interest in silencing Mei Tam is personal as well as professional."
+              ],
+              "believes_falsely": [
+                "That Mei Tam, frightened and isolated, will stay quiet rather than act."
+              ]
+            },
+            "DANIEL_CHEN": {
+              "knows": [
+                "That his editor has pulled him off the story under pressure connected to his mother's camp."
+              ],
+              "hides": [
+                "That he is still feeding Maya information secretly, against his editor's direct order."
+              ],
+              "believes_falsely": [
+                "That helping Maya quietly won't be traced back to him."
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Chen Legacy",
+          "solution": "Diana Chen has known since her own father told her, before his death, that her grandfather Edmund Chen ran the unauthorized trials at Hollow Pines. She has spent her political career quietly ensuring the surviving records stayed sealed, using family fixer Tao Wu to manage every legal and archival risk, while publicly building her image on the same Chen family philanthropy that grew out of the tainted research funding.",
+          "objective_facts": [
+            "The Chen family's charitable foundation funded the reclassification and partial sealing of Hollow Pines' remaining paper archive in the 1980s.",
+            "Diana Chen personally lobbied to have Hollow Pines' surviving records moved outside the standard county retention schedule in the 1990s.",
+            "Tao Wu has represented the Chen family's legal interests in matters connected to Hollow Pines for more than a decade, predating the podcast's investigation."
+          ],
+          "character_knowledge": {
+            "DIANA_CHEN": {
+              "knows": [
+                "That the story has moved from a containable leak to an open public fight."
+              ],
+              "hides": [
+                "That she ordered the visitor restriction at Riverside through Tao Wu."
+              ],
+              "believes_falsely": [
+                "That an aggressive legal posture will discourage the show before it finds anything worse."
+              ]
+            },
+            "TAO_WU": {
+              "knows": [
+                "The details of every legal and archival lever still available to slow the story down."
+              ],
+              "hides": [
+                "That he is digging into Maya's personal background for leverage, not just researching the show."
+              ],
+              "believes_falsely": [
+                "That Diana doesn't need to know every measure he's taking on her behalf."
+              ]
+            },
+            "DANIEL_CHEN": {
+              "knows": [
+                "That the family foundation funded the reclassification of Hollow Pines' archive in the 1980s, once he finds the donation paperwork."
+              ],
+              "hides": [
+                "This discovery from his mother, uncertain what to do with it."
+              ],
+              "believes_falsely": [
+                "That finding the donation record is the worst of what he'll uncover about his family."
+              ]
+            },
+            "MAYA_PARK": {
+              "knows": [
+                "That a new request has been filed to reclassify Hollow Pines' remaining county records."
+              ],
+              "hides": [
+                "Her suspicion that this filing traces back to Tao Wu, which she can't yet prove."
+              ],
+              "believes_falsely": [
+                "That the show can outlast the legal pressure if they just keep reporting."
+              ]
+            },
+            "ELIAS_CROWE": {
+              "knows": [
+                "The existence of the new reclassification request at the county archive."
+              ],
+              "hides": [
+                "His fear that this is bigger than a local political scandal and further outside their control than he's told Maya."
+              ],
+              "believes_falsely": [
+                "That the legal system will ultimately side with the public record over private influence."
+              ]
+            }
+          }
+        },
+        {
+          "label": "Maya's Blood",
+          "solution": "The patient Mei Tam secretly helped disappear from Hollow Pines' official system was Maya's great-aunt — her grandmother's older sister — sent to the asylum as a teenager and long presumed by the family to have died young back in Korea before they emigrated. In truth she survived, was hidden by Mei Tam, and was quietly relocated under a new identity; Maya does not yet consciously know the connection.",
+          "objective_facts": [
+            "One of the 'discharged cured' Polaroids bears a name that matches an entry in Maya's family register, where that relative is listed as having died young in Korea.",
+            "Maya's mother has never spoken about this relative, and believes she died in childhood before the family emigrated.",
+            "Mei Tam has anonymously funded a small care account connected to an unnamed woman for over four decades."
+          ],
+          "character_knowledge": {
+            "MEI_TAM": {
+              "knows": [
+                "The true identity and fate of the patient she saved, and that patient's connection to Maya."
+              ],
+              "hides": [
+                "That the diary pages she's now trying to safeguard include the one page that would reveal that connection."
+              ],
+              "believes_falsely": [
+                "That she still has time to decide what to do with that page before anyone else finds it."
+              ]
+            },
+            "MAYA_PARK": {
+              "knows": [
+                "Nothing new this episode — her attention is consumed by the legal fight and Mei Tam's safety."
+              ],
+              "hides": [
+                "That she still hasn't told Elias about the unsettling familiarity she felt on day one."
+              ],
+              "believes_falsely": [
+                "That the feeling was coincidence, unrelated to the current crisis."
+              ]
+            }
+          }
+        },
+        {
+          "label": "Divided Loyalties",
+          "solution": "Daniel's attraction to Maya and his professional rivalry with her are both genuine, but he has spent his journalism career deliberately steering away from any story that could touch his family — a habit rooted in half-heard childhood warnings from his father about an 'old scandal that must never come up.' His editor assigned him to the Hollow Pines story in part because of his family's ties to Harborview, intending to use his access, without fully telling him so.",
+          "objective_facts": [
+            "Daniel was assigned to the Hollow Pines story by his editor partly because of his family's historic ties to the Harborview Medical Foundation.",
+            "Daniel and Maya have met repeatedly to compare sources, and their professional contact has begun to develop into personal interest.",
+            "Daniel's father told him as a child that there was an 'old scandal' in the Chen family that must never come up, without ever specifying what it was."
+          ],
+          "character_knowledge": {
+            "DANIEL_CHEN": {
+              "knows": [
+                "That helping Maya now carries real professional risk given his editor's order."
+              ],
+              "hides": [
+                "The extent of what he's shared with her from his mother and Tao Wu."
+              ],
+              "believes_falsely": [
+                "That he can protect both Maya and his mother by walking a careful middle line."
+              ]
+            },
+            "MAYA_PARK": {
+              "knows": [
+                "That Daniel is risking his job to keep feeding her information."
+              ],
+              "hides": [
+                "How much she's starting to rely on him, which complicates her objectivity."
+              ],
+              "believes_falsely": [
+                "That Daniel's help means he's already chosen the truth over his family, when he hasn't fully committed to that yet."
+              ]
+            },
+            "DIANA_CHEN": {
+              "knows": [
+                "That Daniel has continued contact with Maya despite being pulled from the story."
+              ],
+              "hides": [
+                "Her intention to use that continued contact against him if it becomes necessary."
+              ],
+              "believes_falsely": [
+                "That Daniel's loyalty to the family will ultimately override his relationship with Maya."
+              ]
+            },
+            "TAO_WU": {
+              "knows": [
+                "That Daniel is still in contact with Maya."
+              ],
+              "hides": [
+                "Surveillance or monitoring steps he's taken regarding Daniel's communications."
+              ],
+              "believes_falsely": [
+                "That Daniel is too conflict-averse to ever act directly against his mother's interests."
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "The Lake House",
+      "theme": "A tense confrontation at the Chen family's private lake retreat forces Daniel to reveal what he's uncovered about his family's decades of cover-up to Maya, while Mei Tam's diary finally names the one patient she helped disappear from Hollow Pines' records — and it isn't the name anyone expected.",
+      "intro_note": "Last time: with reporters camped outside Riverside Memory Home and Diana Chen's campaign in free fall, Mei Tam made the choice she'd avoided for fifty years — she agreed to let Maya read the diaries in full. Now, as the Chen family retreats to the one place they thought was safe, the ledger of who owes what is about to be opened on both sides of the story.",
+      "outro_note": "Maya calls her mother in Seoul with a name from Mei Tam's diary — Grace Sullivan — and hears a silence on the line that confirms the impossible: the grandmother who raised her may be one of Hollow Pines' vanished patients.",
+      "sections": [
+        "Cold open: mist rising over Blackwater Lake at dawn (Narrator orientation)",
+        "Diana and Tao review the crisis timeline over coffee at the lake house (The Chen Legacy)",
+        "Daniel arrives uninvited and confronts his mother about the foundation's origins (The Chen Legacy)",
+        "Static Hour Studio: Maya and Elias plan a follow-up visit to Mei Tam (The Buried Trials)",
+        "Riverside Memory Home: Mei Tam decides to finally open the real diary to Maya (The Buried Trials / Grace's Escape)",
+        "Lake house: Tao shows Diana a page of his father's ledger, in private (The Wu Debt)",
+        "Daniel overhears a fragment of the ledger conversation through a cracked door (The Wu Debt)",
+        "Riverside: Mei Tam reads aloud the entry naming Grace Sullivan for the first time (Grace's Escape)",
+        "County Records Archive: Elias finds the altered 1976 employment roster (The Wu Debt / The Buried Trials)",
+        "Lake house: Diana demands to know why Tao kept the ledger from her (The Chen Legacy / The Wu Debt)",
+        "Daniel corners Tao alone on the dock (The Wu Debt)",
+        "Tao admits what his father did — and what it cost him to keep quiet (The Wu Debt)",
+        "Riverside: Maya asks Mei Tam directly what became of Grace Sullivan (Grace's Escape)",
+        "Night Owl Diner: Daniel calls Maya to meet, unable to sit on what he's learned (The Wu Debt)",
+        "Night Owl Diner: Daniel and Maya trade what they each know — the ledger for the name Grace Sullivan (The Wu Debt / Grace's Escape)",
+        "Static Hour Studio, late night: Maya digs out an old family document with her grandmother's original name on it (Grace's Escape)",
+        "Static Hour Studio: Maya calls her mother in Seoul and asks about the name Grace Sullivan (Grace's Escape)"
+      ],
+      "section_words": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 120,
+          "max": 190,
+          "target": "130 to 160"
+        },
+        {
+          "min": 130,
+          "max": 200,
+          "target": "140 to 170"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 120,
+          "max": 190,
+          "target": "130 to 160"
+        },
+        null,
+        null,
+        {
+          "min": 110,
+          "max": 180,
+          "target": "120 to 150"
+        }
+      ],
+      "section_locations": [
+        "BLACKWATER_LAKE_HOUSE",
+        "BLACKWATER_LAKE_HOUSE",
+        "BLACKWATER_LAKE_HOUSE",
+        "STATIC_HOUR_STUDIO",
+        "RIVERSIDE_MEMORY_HOME",
+        "BLACKWATER_LAKE_HOUSE",
+        "BLACKWATER_LAKE_HOUSE",
+        "RIVERSIDE_MEMORY_HOME",
+        "COUNTY_RECORDS_ARCHIVE",
+        "BLACKWATER_LAKE_HOUSE",
+        "BLACKWATER_LAKE_HOUSE",
+        "BLACKWATER_LAKE_HOUSE",
+        "RIVERSIDE_MEMORY_HOME",
+        "NIGHT_OWL_DINER",
+        "NIGHT_OWL_DINER",
+        "STATIC_HOUR_STUDIO",
+        "STATIC_HOUR_STUDIO"
+      ],
+      "case": [
+        {
+          "label": "The Buried Trials",
+          "solution": "Between 1971 and 1976, Hollow Pines' medical director Dr. Arthur Chen ran unauthorized, unconsented psychiatric drug trials on institutionalized patients using an unapproved compound supplied off-book by a since-dissolved pharmaceutical benefactor. Several patients died or suffered permanent harm; staff falsified records marking them 'discharged cured' while quietly burying bodies in the numbered plots at St. Agnes. Nurse Mei Tam, ordered to help falsify documents, secretly kept a diary and Polaroids as insurance against being made a scapegoat.",
+          "objective_facts": [
+            "St. Agnes Cemetery's numbered potter's-field graves match burial dates within days of several patients' official 'discharge' dates.",
+            "The trial drug administered at Hollow Pines was never approved for psychiatric use and was supplied off-book by a now-defunct pharmaceutical benefactor tied to the Chen family's foundation.",
+            "Every 'discharged cured' file in the time capsule lacks a forwarding address, a receiving family signature, or any follow-up record required by state law at the time."
+          ],
+          "character_knowledge": {
+            "MEI_TAM": {
+              "knows": [
+                "The trial drug was administered without consent and several patients died from it",
+                "Multiple patients were buried at St. Agnes under falsified discharge paperwork"
+              ],
+              "hides": [
+                "The true number of patients whose records she personally helped falsify — higher than she's ever admitted, out of guilt and residual fear"
+              ],
+              "believes_falsely": [
+                "That naming Grace Sullivan now can only bring closure, not realizing how directly it will land on the person sitting across from her"
+              ]
+            },
+            "MAYA_PARK": {
+              "knows": [
+                "The documented pattern connecting the trial drug's supplier to the Chen foundation",
+                "That the falsified files uniformly lack any legitimate discharge paperwork"
+              ],
+              "hides": [
+                "Her mounting personal unease about the story from Elias, unwilling to name it until she's sure it's real"
+              ],
+              "believes_falsely": []
+            },
+            "ELIAS_CROWE": {
+              "knows": [
+                "Every publicly documented fact the podcast has aired so far about the trials and the foundation link"
+              ],
+              "hides": [
+                "His growing worry that Maya is distracted by something she won't tell him"
+              ],
+              "believes_falsely": [
+                "That Maya's distraction is professional burnout, not a personal stake in the story"
+              ]
+            },
+            "DIANA_CHEN": {
+              "knows": [
+                "That her grandfather personally ran the trials, confirmed since the foundation exposure"
+              ],
+              "hides": [
+                "The full extent of her family's decades-long legal effort to keep the archive sealed, even from Daniel"
+              ],
+              "believes_falsely": [
+                "That a carefully controlled statement can still contain the damage to her campaign"
+              ]
+            },
+            "TAO_WU": {
+              "knows": [
+                "The operational details of how the trials were run and covered up, now confirmed by his father's ledger"
+              ],
+              "hides": [
+                "The ledger's existence from Diana until he's cornered"
+              ],
+              "believes_falsely": [
+                "That continuing to protect the Chens is still the right call, even now"
+              ]
+            },
+            "DANIEL_CHEN": {
+              "knows": [
+                "The same public facts as Maya and Elias from his own reporting at The Ledger"
+              ],
+              "hides": [
+                "His suspicion that his mother's complicity runs deeper than she's admitted, from his own editor"
+              ],
+              "believes_falsely": [
+                "That his mother was as blindsided by the trials' scope as she's claimed to him"
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Chen Legacy Cover-up",
+          "solution": "Dr. Arthur Chen's estate quietly seeded the Harborview Medical Foundation within a year of Hollow Pines' closure, and for three decades the Chen family's attorneys — first through Tao Wu's father's old connections, then Tao Wu himself — repeatedly moved to seal or restrict the same box of Hollow Pines archive files. Diana learned the full scope only recently and chose containment over disclosure.",
+          "objective_facts": [
+            "The Harborview Medical Foundation's founding donation in 1977 came directly from Dr. Arthur Chen's personal estate within a year of Hollow Pines' closure.",
+            "County Records Archive access logs show repeated requests to seal or restrict the same box of Hollow Pines files across three separate decades, each filed by a different Chen-family attorney.",
+            "Diana Chen's gubernatorial campaign quietly hired a crisis PR firm the same week the podcast's 'Buried Patients' episode first aired."
+          ],
+          "character_knowledge": {
+            "DIANA_CHEN": {
+              "knows": [
+                "The foundation's origin in her grandfather's estate",
+                "That her legal team has repeatedly moved to seal the same archive box for decades"
+              ],
+              "hides": [
+                "The full pattern of those sealing requests from the public and from Daniel"
+              ],
+              "believes_falsely": [
+                "That Tao Wu has told her everything relevant to protecting her"
+              ]
+            },
+            "TAO_WU": {
+              "knows": [
+                "The archive-sealing pattern, some of it inherited directly from his father's old files"
+              ],
+              "hides": [
+                "His father's ledger from Diana until he's cornered at the dock"
+              ],
+              "believes_falsely": [
+                "That keeping the ledger from Diana protects them both, when it's already backfiring"
+              ]
+            },
+            "DANIEL_CHEN": {
+              "knows": [
+                "Fragments of the sealing pattern from his own archive digging at The Ledger"
+              ],
+              "hides": [
+                "His suspicion that Tao Wu, not just his grandfather, sits at the center of the cover-up"
+              ],
+              "believes_falsely": [
+                "That his mother personally ordered every one of the sealing requests herself"
+              ]
+            }
+          }
+        },
+        {
+          "label": "The Wu Debt",
+          "solution": "Tao Wu's father, Wu Jian, worked as an orderly under Dr. Arthur Chen at Hollow Pines and physically falsified several discharge records, helping bury patients at St. Agnes. When a 1976 state inspection nearly exposed the trials, Dr. Chen covered for Wu Jian in exchange for a $40,000 loan and a debt of loyalty Dr. Chen's family called in for two generations — binding Tao to protect the Chens at any cost.",
+          "objective_facts": [
+            "Wu Jian's employment record at Hollow Pines was altered in 1976 to remove his name from the ward roster during the exact week of a state inspection.",
+            "A private loan of $40,000 was recorded from Dr. Arthur Chen to Wu Jian's household within a month of the inspection closing without charges.",
+            "Tao Wu's father kept a handwritten ledger, found among his effects, listing every patient he helped 'process out' by name."
+          ],
+          "character_knowledge": {
+            "TAO_WU": {
+              "knows": [
+                "That his father falsified records and helped bury patients",
+                "That Dr. Chen's loan bought his father's silence and bound Tao's own loyalty ever since"
+              ],
+              "hides": [
+                "The ledger's existence from Diana until Daniel corners him"
+              ],
+              "believes_falsely": [
+                "That this debt is his alone to carry and can never be set down"
+              ]
+            },
+            "DIANA_CHEN": {
+              "knows": [],
+              "hides": [],
+              "believes_falsely": [
+                "That Tao Wu's loyalty to her family has always been purely professional, not a debt owed by his father"
+              ]
+            },
+            "DANIEL_CHEN": {
+              "knows": [
+                "A fragment overheard through the lake house door, later confirmed by Tao directly"
+              ],
+              "hides": [
+                "His suspicion from his mother while he verifies what he's heard"
+              ],
+              "believes_falsely": [
+                "Initially, that the ledger relates only to his own grandfather's actions, not Wu Jian's direct hand in the falsifications"
+              ]
+            },
+            "ELIAS_CROWE": {
+              "knows": [
+                "The objective fact of Wu Jian's altered 1976 employment roster, found in the archive"
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "That the altered record points to a random staffer, not yet connecting the surname to Tao Wu, the family's attorney"
+              ]
+            },
+            "MAYA_PARK": {
+              "knows": [
+                "The surname link between the altered roster and Tao Wu, once Elias calls her"
+              ],
+              "hides": [],
+              "believes_falsely": []
+            }
+          }
+        },
+        {
+          "label": "Grace's Escape",
+          "solution": "In 1974, patient Grace Sullivan — wrongly institutionalized by her own family after a postpartum psychotic break — was slated for the next round of trials. Mei Tam, unable to falsify another death, instead forged a death certificate, smuggled Grace out in a laundry van, and paid for a new identity and passage to Korea, where an old nursing-school contact sheltered her. Grace remarried there, had a daughter, and never told her the full truth. Maya is that daughter's child.",
+          "objective_facts": [
+            "No death certificate for a 'Grace Sullivan' exists in any state or county vital records office despite one being logged in Hollow Pines' internal file.",
+            "A 1974 laundry-service delivery log from Hollow Pines shows an unscheduled off-hours pickup the same night Grace Sullivan's file was closed.",
+            "Mei Tam's personal bank withdrawal records from early 1974 show a lump sum matching contemporary passage and document costs for international travel."
+          ],
+          "character_knowledge": {
+            "MEI_TAM": {
+              "knows": [
+                "That she forged Grace's death certificate and smuggled her out of Hollow Pines",
+                "That she paid for Grace's new papers and passage overseas"
+              ],
+              "hides": [
+                "That she lost contact with Grace after handing her off to her nursing-school contact and never confirmed Grace survived long-term"
+              ],
+              "believes_falsely": [
+                "That Grace either died anonymously or vanished with no surviving family to ever come looking"
+              ]
+            },
+            "MAYA_PARK": {
+              "knows": [
+                "Her grandmother's own account of leaving 'a bad place in America' before Maya was born, and an English first name the family never used"
+              ],
+              "hides": [
+                "Her growing suspicion that Grace Sullivan is her grandmother, from Mei Tam and Elias, until she can verify it herself"
+              ],
+              "believes_falsely": [
+                "That confirming the connection would be a private family matter, not something that pulls her into the same conspiracy she's investigating"
+              ]
+            },
+            "ELIAS_CROWE": {
+              "knows": [
+                "That Mei Tam's diary names a patient, Grace Sullivan, as one she personally helped 'discharge'"
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "That Grace Sullivan is just another name to trace, not realizing its significance to his own co-host"
+              ]
+            },
+            "DANIEL_CHEN": {
+              "knows": [
+                "The name Grace Sullivan, shared by Maya as a lead at the diner"
+              ],
+              "hides": [],
+              "believes_falsely": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "figure": "Discharged, Cured",
+      "theme": "The full truth of Hollow Pines — the illegal trials, the falsified discharges, and Mei Tam's own part in secretly saving one survivor tied directly to Maya's family — airs publicly, closing the season on which relationships survive the fallout and which parts of the cover-up remain unpunished.",
+      "intro_note": "Last time: Maya's mother's silence on the phone confirmed what the diary implied — Grace Sullivan, the patient Mei Tam smuggled out of Hollow Pines in 1974, was Maya's own grandmother. With Tao Wu's father's ledger surfacing and Diana Chen's campaign collapsing under the weight of her family's history, every thread the season has pulled at is about to meet in the same room.",
+      "outro_note": "",
+      "sections": [
+        "Cold open: Static Hour Studio on the morning the finale episode goes live (Narrator orientation)",
+        "Maya and Elias record their final lines before publishing (The Buried Trials)",
+        "Riverside Memory Home: Mei Tam listens to the episode air on a borrowed phone (The Buried Trials)",
+        "Capitol Office: Diana and Tao brace for the fallout as the episode drops (The Chen Legacy)",
+        "The Ledger Newsroom: Daniel files his own independent account, breaking from his mother's version (The Chen Legacy)",
+        "St. Agnes Cemetery: county workers begin matching numbered graves to names as the story spreads (The Buried Trials)",
+        "Capitol Office: the phones don't stop ringing; Diana decides to make a statement (The Chen Legacy)",
+        "Capitol Office: Tao confronts Diana over whether his father's name will be spoken aloud (The Wu Debt)",
+        "Diana's press statement: she steps back from the governor's race without a full confession (The Chen Legacy)",
+        "The Chen Estate: Daniel and Diana have the unguarded conversation they've avoided for years (The Chen Legacy)",
+        "Riverside Memory Home: Maya thanks Mei Tam in person for finally telling the truth (Grace's Escape)",
+        "Riverside Memory Home: Maya calls her mother again, this time with Mei Tam beside her (Grace's Escape)",
+        "Hollow Pines Ruins: a small marker is placed for the patients named so far (The Buried Trials)",
+        "St. Agnes Cemetery: Tao visits an unmarked grave alone, and leaves something behind (The Wu Debt)",
+        "Night Owl Diner: Daniel and Maya figure out what comes next, for the story and for them (Grace's Escape)",
+        "Static Hour Studio: Maya and Elias record a closing note about what's still unresolved (The Buried Trials)",
+        "Hollow Pines Ruins at dusk: the demolition finishes, and the ground is quiet for the first time in fifty years (Narrator closing)"
+      ],
+      "section_words": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 120,
+          "max": 190,
+          "target": "130 to 160"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 110,
+          "max": 180,
+          "target": "120 to 150"
+        },
+        null,
+        null,
+        {
+          "min": 100,
+          "max": 170,
+          "target": "110 to 140"
+        }
+      ],
+      "section_locations": [
+        "STATIC_HOUR_STUDIO",
+        "STATIC_HOUR_STUDIO",
+        "RIVERSIDE_MEMORY_HOME",
+        "CAPITOL_OFFICE",
+        "THE_LEDGER_NEWSROOM",
+        "ST_AGNES_CEMETERY",
+        "CAPITOL_OFFICE",
+        "CAPITOL_OFFICE",
+        "CAPITOL_OFFICE",
+        "CHEN_ESTATE",
+        "RIVERSIDE_MEMORY_HOME",
+        "RIVERSIDE_MEMORY_HOME",
+        "HOLLOW_PINES_RUINS",
+        "ST_AGNES_CEMETERY",
+        "NIGHT_OWL_DINER",
+        "STATIC_HOUR_STUDIO",
+        "HOLLOW_PINES_RUINS"
+      ],
+      "case": [
+        {
+          "label": "The Buried Trials",
+          "solution": "Between 1971 and 1976, Hollow Pines' medical director Dr. Arthur Chen ran unauthorized, unconsented psychiatric drug trials on institutionalized patients using an unapproved compound supplied off-book by a since-dissolved pharmaceutical benefactor. Several patients died or suffered permanent harm; staff falsified records marking them 'discharged cured' while quietly burying bodies in the numbered plots at St. Agnes. Nurse Mei Tam, ordered to help falsify documents, secretly kept a diary and Polaroids as insurance against being made a scapegoat.",
+          "objective_facts": [
+            "St. Agnes Cemetery's numbered potter's-field graves match burial dates within days of several patients' official 'discharge' dates.",
+            "The trial drug administered at Hollow Pines was never approved for psychiatric use and was supplied off-book by a now-defunct pharmaceutical benefactor tied to the Chen family's foundation.",
+            "Every 'discharged cured' file in the time capsule lacks a forwarding address, a receiving family signature, or any follow-up record required by state law at the time."
+          ],
+          "character_knowledge": {
+            "MEI_TAM": {
+              "knows": [
+                "The full scope of the trials and her own role in falsifying records, now spoken aloud publicly with Maya"
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "That she may still face consequences for what she was ordered to do under duress, a fear that lingers despite the relief of finally telling it"
+              ]
+            },
+            "MAYA_PARK": {
+              "knows": [
+                "The complete history of the trials, the cover-up, and her own family's place inside it"
+              ],
+              "hides": [],
+              "believes_falsely": []
+            },
+            "ELIAS_CROWE": {
+              "knows": [
+                "The complete story, including Maya's personal connection to it"
+              ],
+              "hides": [],
+              "believes_falsely": []
+            },
+            "DIANA_CHEN": {
+              "knows": [
+                "The full scope of her grandfather's trials and the decades of suppression that followed"
+              ],
+              "hides": [
+                "The full extent of her own legal team's suppression efforts, kept out of her public statement to protect what remains of her career"
+              ],
+              "believes_falsely": [
+                "That stepping back from the governor's race is enough to close this chapter for good"
+              ]
+            },
+            "TAO_WU": {
+              "knows": [
+                "The complete truth of the trials and his father's part in covering them up"
+              ],
+              "hides": [],
+              "believes_falsely": []
+            },
+            "DANIEL_CHEN": {
+              "knows": [
+                "The complete truth, published independently of his mother's framing"
+              ],
+              "hides": [],
+              "believes_falsely": []
+            }
+          }
+        },
+        {
+          "label": "The Chen Legacy Cover-up",
+          "solution": "Dr. Arthur Chen's estate quietly seeded the Harborview Medical Foundation within a year of Hollow Pines' closure, and for three decades the Chen family's attorneys — first through Tao Wu's father's old connections, then Tao Wu himself — repeatedly moved to seal or restrict the same box of Hollow Pines archive files. Diana learned the full scope only recently and chose containment over disclosure.",
+          "objective_facts": [
+            "The Harborview Medical Foundation's founding donation in 1977 came directly from Dr. Arthur Chen's personal estate within a year of Hollow Pines' closure.",
+            "County Records Archive access logs show repeated requests to seal or restrict the same box of Hollow Pines files across three separate decades, each filed by a different Chen-family attorney.",
+            "Diana Chen's gubernatorial campaign quietly hired a crisis PR firm the same week the podcast's 'Buried Patients' episode first aired."
+          ],
+          "character_knowledge": {
+            "DIANA_CHEN": {
+              "knows": [
+                "The complete history of her family's decades of suppression, including Tao's father's role in it"
+              ],
+              "hides": [
+                "The precise extent of her own legal team's actions, softened in her public statement"
+              ],
+              "believes_falsely": [
+                "That a generously framed partial truth still leaves room for some kind of political future"
+              ]
+            },
+            "TAO_WU": {
+              "knows": [
+                "The complete history, no longer hidden from Diana"
+              ],
+              "hides": [
+                "The specific personal details of his father's guilt, which he keeps out of the public record to protect his father's memory"
+              ],
+              "believes_falsely": []
+            },
+            "DANIEL_CHEN": {
+              "knows": [
+                "The complete history, confirmed directly by his mother and by Tao"
+              ],
+              "hides": [],
+              "believes_falsely": []
+            }
+          }
+        },
+        {
+          "label": "The Wu Debt",
+          "solution": "Tao Wu's father, Wu Jian, worked as an orderly under Dr. Arthur Chen at Hollow Pines and physically falsified several discharge records, helping bury patients at St. Agnes. When a 1976 state inspection nearly exposed the trials, Dr. Chen covered for Wu Jian in exchange for a $40,000 loan and a debt of loyalty Dr. Chen's family called in for two generations — binding Tao to protect the Chens at any cost.",
+          "objective_facts": [
+            "Wu Jian's employment record at Hollow Pines was altered in 1976 to remove his name from the ward roster during the exact week of a state inspection.",
+            "A private loan of $40,000 was recorded from Dr. Arthur Chen to Wu Jian's household within a month of the inspection closing without charges.",
+            "Tao Wu's father kept a handwritten ledger, found among his effects, listing every patient he helped 'process out' by name."
+          ],
+          "character_knowledge": {
+            "TAO_WU": {
+              "knows": [
+                "The complete truth of his father's role, now confirmed in his own public statement"
+              ],
+              "hides": [
+                "His father's exact name and specific actions, which he refuses to state publicly out of loyalty to his memory"
+              ],
+              "believes_falsely": []
+            },
+            "DIANA_CHEN": {
+              "knows": [
+                "The complete truth of the debt her grandfather created and her family called in for two generations"
+              ],
+              "hides": [],
+              "believes_falsely": []
+            },
+            "DANIEL_CHEN": {
+              "knows": [
+                "The complete truth, published as part of his independent account"
+              ],
+              "hides": [],
+              "believes_falsely": []
+            }
+          }
+        },
+        {
+          "label": "Grace's Escape",
+          "solution": "In 1974, patient Grace Sullivan — wrongly institutionalized by her own family after a postpartum psychotic break — was slated for the next round of trials. Mei Tam, unable to falsify another death, instead forged a death certificate, smuggled Grace out in a laundry van, and paid for a new identity and passage to Korea, where an old nursing-school contact sheltered her. Grace remarried there, had a daughter, and never told her the full truth. Maya is that daughter's child.",
+          "objective_facts": [
+            "No death certificate for a 'Grace Sullivan' exists in any state or county vital records office despite one being logged in Hollow Pines' internal file.",
+            "A 1974 laundry-service delivery log from Hollow Pines shows an unscheduled off-hours pickup the same night Grace Sullivan's file was closed.",
+            "Mei Tam's personal bank withdrawal records from early 1974 show a lump sum matching contemporary passage and document costs for international travel."
+          ],
+          "character_knowledge": {
+            "MEI_TAM": {
+              "knows": [
+                "That Grace survived, remarried in Korea, and that Maya is her direct granddaughter, confirmed by the phone call with Maya's mother"
+              ],
+              "hides": [],
+              "believes_falsely": []
+            },
+            "MAYA_PARK": {
+              "knows": [
+                "The complete truth of her grandmother's escape from Hollow Pines, confirmed by her mother and by Mei Tam directly"
+              ],
+              "hides": [],
+              "believes_falsely": []
+            },
+            "ELIAS_CROWE": {
+              "knows": [
+                "The complete personal significance of Grace Sullivan's story for Maya"
+              ],
+              "hides": [],
+              "believes_falsely": []
+            },
+            "DANIEL_CHEN": {
+              "knows": [
+                "The complete story and its personal weight for Maya"
+              ],
+              "hides": [],
+              "believes_falsely": []
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

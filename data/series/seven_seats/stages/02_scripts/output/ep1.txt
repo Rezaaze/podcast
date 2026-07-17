@@ -1,0 +1,561 @@
+--- PART 1 ---
+
+[NARRATOR]
+Halyard Cay is a speck of an island with one clinic, one ferry, and, as of this week, one hurricane bearing down on it. Hurricane Odette is six days out and strengthening, and the clinic's evacuation ferry has room for exactly six more people than it can comfortably carry. As the countdown starts, the staff who have kept this island's secrets for years — some of them for twenty-two years — will find that deciding who leaves and who stays means deciding whose truth finally gets told.
+
+[NARRATOR]
+Six days before landfall, the clinic's break room fills for a morning briefing. Dr. Theo Aldridge, director here for twenty-one years, stands at the front with a single sheet of paper. Nurse Mei Chen, his longest-serving ally on staff, leans against the counter near him.
+
+[DR_THEO_ALDRIDGE | style: measured, practiced calm]
+Odette's been upgraded. Category Two as of six this morning, and the forecasters aren't calling it done climbing.
+
+[NURSE_MEI_CHEN | style: flat, professional]
+Landfall window's still six days out?
+
+[DR_THEO_ALDRIDGE | style: measured]
+Six days. Give or take the usual wobble.
+
+[CAPTAIN_DANNY_SU | style: terse]
+And the ferry?
+
+[DR_THEO_ALDRIDGE | style: even, rehearsed]
+The ferry company confirmed it this morning. Six guaranteed seats for clinic patients and staff, if the last crossing has to happen before the roads flood out.
+
+[SFX: a folder of papers set down on a table]
+
+[JONAH_BRAMWELL | style: sharp, disbelieving]
+Six. For the whole clinic list.
+
+[DR_THEO_ALDRIDGE | style: calm, holding the room]
+Six guaranteed. That's not the ceiling on kindness, Jonah, that's the floor we're required to plan around. We triage the same way we always have — medical priority first, same protocol we've used every storm season I've been here.
+
+[DR_SOPHIE_KANG | style: careful, still new to the room]
+And if there are more than six who need it?
+
+[DR_THEO_ALDRIDGE | style: steady, unwavering]
+Then we do what this clinic has always done. We're fair about it. On paper, in practice, no exceptions made quietly for anyone.
+
+[NURSE_MEI_CHEN | style: quiet, watching him]
+That's always been the rule.
+
+[NARRATOR]
+Aldridge sets the seat-count memo down on the counter beside him. His hand trembles slightly against the paper — a small thing, gone as quickly as it appears. No one in the room seems to notice.
+
+[SFX: a door swinging open against its hinge, wind briefly gusting through]
+
+[CAPTAIN_DANNY_SU | style: clipped]
+I'll need the finalized numbers by the day after tomorrow if we're loading provisions around them.
+
+[DR_THEO_ALDRIDGE | style: measured, closing the meeting]
+You'll have them. Kimi's drafting the priority list this week — I'll want everyone's patient notes to her by tomorrow evening.
+
+[JONAH_BRAMWELL | style: low, half to himself]
+Six seats and a hurricane. Good week to be fair about something.
+
+[NARRATOR]
+The staff begin filing out, already recalculating who on the island might need a place on that list — and who might not make it onto the paper at all.
+
+--- PART 2 ---
+
+[NARRATOR]
+Later that morning, Dr. Aldridge's office at Halyard Cay Clinic. The staff meeting has broken up. Kimi Sato, the clinic's records administrator, has been asked to stay behind.
+
+[DR_THEO_ALDRIDGE | style: measured, direct]
+Kimi. Close the door a second.
+
+[KIMI_SATO | style: attentive, slightly wary]
+Is this about the seat count? I already flagged the storage room for extra blankets.
+
+[DR_THEO_ALDRIDGE | style: calm, deliberate]
+It's about the priority list. I want you to draft it this week. Who goes first if it comes down to six seats.
+
+[SFX: a manila folder set down on a desk]
+
+[KIMI_SATO | style: surprised, then pleased]
+Me? I mean — I do the charts, Theo, I'm not the one who decides who's sicker than who.
+
+[DR_THEO_ALDRIDGE | style: reassuring, practiced]
+You're not deciding anything. You're organizing what the doctors already flag — same protocol we've always used. Chronic conditions, mobility, dependency on equipment. You just put it on paper in the right order.
+
+[KIMI_SATO | style: settling into it, a little proud]
+Okay. Okay, I can do that. It's just numbers on a page, right.
+
+[DR_THEO_ALDRIDGE | style: even, unreadable]
+Just numbers on a page.
+
+[KIMI_SATO | style: thinking aloud, practical]
+I'll want to look at how it was handled before — is there a storm list on file from a past hurricane? Something to model the format on.
+
+[NARRATOR]
+For a moment, Dr. Aldridge doesn't answer.
+
+[DR_THEO_ALDRIDGE | style: voice catches for half a beat, then evens out fast]
+There's — nothing formal from that far back. Records were thinner then. Just build it fresh, off current charts. That's cleaner anyway.
+
+[KIMI_SATO | style: unbothered, already moving on]
+Fresh is fine. Less digging through old paper.
+
+[SFX: a two-way radio crackling briefly with a garbled weather update, then cutting off]
+
+[DR_THEO_ALDRIDGE | style: businesslike again]
+Have a draft to me by tomorrow evening. Mei can pull any chart you need flagged.
+
+[KIMI_SATO | style: warm, a little touched]
+I won't let you down. I know how much you trust the list to be fair.
+
+[DR_THEO_ALDRIDGE | style: quiet, almost to himself]
+Fair. Yes.
+
+[NARRATOR]
+Kimi gathers the folder and steps out, already thinking in categories and columns.
+
+--- PART 3 ---
+
+[NARRATOR]
+Later that same afternoon, the clinic's records office. Kimi Sato is already at her desk, and Mei Chen — the head nurse who runs the clinic floor — comes in with a request of her own.
+
+[NURSE_MEI_CHEN | style: brisk, businesslike]
+I need the storm binders pulled. Full protocol review, before Odette gets any closer — Aldridge wants everything current.
+
+[KIMI_SATO | style: helpful, a little distracted]
+Sure. Which years?
+
+[NURSE_MEI_CHEN | style: light, deliberately offhand]
+Go back twenty-two. Marisol onward. I want to see how the old capacity numbers stack up against what we're doing now.
+
+[KIMI_SATO | style: mild surprise]
+Twenty-two years? That's practically the bottom shelf.
+
+[NURSE_MEI_CHEN | style: even, unbothered]
+That's the point. Old weather, old paperwork. I'll pull it myself, you keep going on the list — you don't need to stop for this.
+
+[SFX: a rolling office chair braked to a stop]
+
+[KIMI_SATO | style: already turning back to her screen]
+If you say so. I'm still cross-checking this week's protocol anyway — Dr. Aldridge wants it to match what we've always used.
+
+[NARRATOR]
+Mei crosses to the archive shelves at the back of the office, out of Kimi's line of sight.
+
+[SFX: a metal file drawer sliding open on old runners]
+
+[NURSE_MEI_CHEN | style: muttering to herself, low]
+Marisol… intake, discharge…
+
+[SFX: a heavy cardboard box set down on a table]
+
+[NURSE_MEI_CHEN | style: quiet, controlled]
+Bed logs. Ferry manifest. 
+
+[NARRATOR]
+She works through the folders in order, setting each aside without opening it fully, until her hand stops on one tab near the bottom of the box.
+
+[NURSE_MEI_CHEN | style: barely audible]
+Sato, A.
+
+[NARRATOR]
+She doesn't open it. Not yet. She slides it back into the box, beneath the others, and glances once toward the front of the office, where Kimi is still bent over her own screen.
+
+[NURSE_MEI_CHEN | style: raising her voice slightly, back to brisk]
+Kimi — I've got what I need back here. Don't worry about the old boxes, I'll log them under my name.
+
+[KIMI_SATO | style: from across the room, easy]
+Whatever's easiest. I've got my hands full up here anyway.
+
+[NARRATOR]
+Mei closes the box and carries it toward her own office, the folder marked Sato, A. still resting exactly where she put it — unread, and undisturbed, for one more day.
+
+--- PART 4 ---
+
+[NARRATOR]
+The town dock, midmorning. Danny Su, who runs Halyard Cay's only ferry — inherited from his father — walks its length alone, checking lines before the storm gets any closer.
+
+[CAPTAIN_DANNY_SU | style: muttering, counting under his breath]
+Twelve. Fourteen benches, twelve if I keep the aisle clear for the stretcher mount.
+
+[SFX: a rope creaking taut against a dock cleat]
+
+[CAPTAIN_DANNY_SU | style: flat, working through numbers]
+Fourteen max on a calm crossing. Odette's not gonna be calm.
+
+[CAPTAIN_DANNY_SU | style: dry, to himself]
+And six of those go to the clinic before anybody else even lines up.
+
+[CAPTAIN_DANNY_SU | style: quieter, doing math]
+Six for them. Say ten more if I push it, no gear, everybody standing. That's not enough boat for this island.
+
+[SFX: a wave slapping hard against the hull]
+
+[CAPTAIN_DANNY_SU | style: firmer, testing the words]
+Engine's been running rough since Tuesday. Wouldn't take much to call it a fault.
+
+[CAPTAIN_DANNY_SU | style: rehearsing, low]
+"Lost a seat to a mechanical issue, safety call, nothing I could do." Coast Guard signs off on that every season.
+
+[CAPTAIN_DANNY_SU | style: uneasy, catching himself]
+One seat. Nobody counts that close.
+
+[NARRATOR]
+He glances toward the storage shed at the far end of the dock, then back to the hull, and keeps walking like he never looked at all.
+
+[CAPTAIN_DANNY_SU | style: businesslike, louder, for anyone listening]
+Bilge pump's fine. Lines are fine. I'll have her ready.
+
+[SFX: a metal hatch clanging shut]
+
+[CAPTAIN_DANNY_SU | style: to himself, quieter]
+Ready for six. Maybe seven if I'm lying to myself.
+
+[CAPTAIN_DANNY_SU | style: hardening, resolved]
+Peter's papers are already good. Nobody on this dock's gonna look twice at a name on a manifest.
+
+[CAPTAIN_DANNY_SU | style: bitter, half a laugh]
+One mechanical fault. One seat. Everybody still gets counted fair — just not the way they think.
+
+[NARRATOR]
+He runs his hand along the rail one last time, the number in his head fixed now, and heads up the dock without looking back at the shed.
+
+--- PART 5 ---
+
+[NARRATOR | style: neutral, grounded]
+The ferry shed sits at the end of the dock, its door chained but not locked. Inside, past crates of rope and spare parts, Danny Su's younger brother Marcus has been hiding for three weeks.
+
+[SFX: a heavy door sliding open on rusted track]
+
+[CAPTAIN_DANNY_SU | style: low, hurried]
+It's me. Stay down till I say.
+
+[SFX: a canvas bag set down on a wooden crate]
+
+[CAPTAIN_DANNY_SU | style: businesslike, gentle]
+Bread, water, the good batteries. Eat slow, it's got to last.
+
+[CAPTAIN_DANNY_SU | style: firm, protective]
+Anybody comes by, I'm doing gear checks. You don't cough, you don't move.
+
+[CAPTAIN_DANNY_SU | style: guarded]
+I said stay down.
+
+[CAPTAIN_DANNY_SU | style: quiet, resigned]
+Fine. Quick, then.
+
+[CAPTAIN_DANNY_SU | style: measured, reassuring | speed: 0.95]
+Storm hits in six days. Last crossing, you're on it.
+
+[CAPTAIN_DANNY_SU | style: steady, deflecting]
+Peter's papers. Nobody looks twice at a dead man's cousin's face when the boat's already loaded.
+
+[CAPTAIN_DANNY_SU | style: brisk, closing the subject]
+I've got numbers to work out. Seats, weight, all of it. Leave that part to me.
+
+[SFX: crates scraping as they're pushed back into place]
+
+[CAPTAIN_DANNY_SU | style: low, final]
+Lights off after dark. I'll come back tomorrow.
+
+--- PART 6 ---
+
+[NARRATOR]
+Later that afternoon, in Dr. Aldridge's cramped office at the clinic, Dr. Sophie Kang — the young physician three weeks into her rotation on Halyard Cay — knocks and lets herself in.
+
+[DR_SOPHIE_KANG | style: light, checking in]
+You wanted these countersigned before end of day? The supply requisitions.
+
+[DR_THEO_ALDRIDGE | style: distracted, courteous]
+Set them there. I'll get to them now, save you a trip back.
+
+[SFX: a pen scratching unevenly across paper]
+
+[DR_SOPHIE_KANG | style: careful, observing]
+Your hand.
+
+[DR_THEO_ALDRIDGE | style: mild, brushing past it]
+It's nothing. Cold pen. Cheap ink.
+
+[DR_SOPHIE_KANG | style: gentle but direct]
+Theo. Have you been sleeping? Since I got here you've looked like you're running on fumes.
+
+[DR_THEO_ALDRIDGE | style: measured, well-rehearsed]
+Six days to landfall and a seat list to finalize. Nobody on this island is sleeping well this week.
+
+[DR_SOPHIE_KANG | style: unconvinced but not pressing]
+That's not what I asked.
+
+[DR_THEO_ALDRIDGE | style: wry, deflecting]
+No. It isn't. But it's the honest answer I've got for you. Long hours, longer nights. The seat count doesn't write itself, and I'd rather lose sleep over it than get it wrong.
+
+[DR_SOPHIE_KANG | style: softening, taking it at face value]
+Fair enough. I just — you're the one who told me on my first day here that an exhausted doctor is a dangerous one. I figured I'd return the favor.
+
+[DR_THEO_ALDRIDGE | style: warm, genuine]
+Noted. And appreciated. Truly.
+
+[SFX: a desk drawer sliding shut]
+
+[DR_THEO_ALDRIDGE | style: shifting tone, brisk]
+Since you're here — walk me through the supply counts for the west wing. If Odette tracks the way they're saying, I want to know what we're short on before we're short on it.
+
+[DR_SOPHIE_KANG | style: falling into work mode]
+Saline's fine through the week. Oxygen's the one that worries me — we're not overstocked, and if Bramwell's case is any indication of what else is coming—
+
+[DR_THEO_ALDRIDGE | style: nodding, redirecting]
+Then start there. Get me a number by tomorrow morning. If we need to request more from the mainland depot, I want it on the record before the ferry schedule tightens any further.
+
+[DR_SOPHIE_KANG | style: already moving on, reassured]
+On it.
+
+[NARRATOR]
+Sophie gathers the signed forms and steps out, already thinking about oxygen counts instead of trembling hands.
+
+[DR_THEO_ALDRIDGE | style: alone, quiet]
+Tomorrow, then.
+
+--- PART 7 ---
+
+[NARRATOR]
+Evening has come down over Halyard Cay, and talk of the seat count has already reached the Saltbox Tavern, where a chalkboard by the door is filling with names for storm supplies. Danny Su, the ferry captain, leans against the bar rail with a handful of regulars, and near the door stands Jonah Bramwell, the young clinic paramedic and grandson of patient Otis Bramwell.
+
+[SFX: chalk scraping against a board]
+
+[CAPTAIN_DANNY_SU | style: easy, half-joking]
+Batteries, propane, and somebody already put down rope, which — good, because the stuff from the hardware store snaps if you sneeze on it.
+
+[CAPTAIN_DANNY_SU | style: shifting lighter to practical]
+What we haven't put up there yet is who actually needs help getting down to the dock. That's the list that matters.
+
+[JONAH_BRAMWELL | style: quiet, a little tired]
+My grandfather's on it, then. Otis goes through two tanks a day now. Wherever he sits, the tanks sit with him.
+
+[CAPTAIN_DANNY_SU | style: careful, sympathetic on the surface]
+Two tanks is a lot of deck space on a boat that's already tight.
+
+[JONAH_BRAMWELL | style: firm, protective]
+He's not getting left off a list because he takes up room, Danny.
+
+[CAPTAIN_DANNY_SU | style: quick, smoothing it over]
+Nobody said that. I'm just doing math out loud. Habit.
+
+[SFX: a glass set down hard on the bar]
+
+[JONAH_BRAMWELL | style: lower, half to himself]
+Everybody's doing math out loud this week.
+
+[CAPTAIN_DANNY_SU | style: light, changing the subject]
+Add candles to the board while you're standing there. We'll lose power before we lose the ferry.
+
+[NARRATOR]
+Jonah writes the word on the chalkboard without looking back at Danny.
+
+[JONAH_BRAMWELL | style: distracted, thinking aloud]
+Something's off with the paperwork this week. Numbers that don't quite square with what I've been carrying in and out of the clinic.
+
+[CAPTAIN_DANNY_SU | style: neutral, non-committal]
+Storm week. Everything's off.
+
+[JONAH_BRAMWELL | style: shrugging it away]
+Yeah. Probably just supplies running short everywhere at once. Not like it's got anything to do with the ferry.
+
+[NARRATOR]
+He says it easily, the way a man says something he's already decided not to worry about, and turns back to the chalkboard to add one more line to the list.
+
+--- PART 8 ---
+
+[NARRATOR]
+On the north end of Halyard Cay, the Sato house sits back from the shoreline road. Kimi Sato spends the evening boarding its windows alone.
+
+[SFX: a hammer driving a nail into wood]
+
+[KIMI_SATO | style: focused, a little winded]
+One more on this side and that's the kitchen done.
+
+[SFX: a hammer driving a nail into wood]
+
+[KIMI_SATO | style: quieter, to herself]
+Six seats. I keep saying it in my head and it still sounds like a typo.
+
+[KIMI_SATO | style: softening]
+Hi, Mom.
+
+[KIMI_SATO | style: rueful, gentle]
+You'd have opinions about me hammering plywood over your good curtains. I know.
+
+[KIMI_SATO | style: measured, remembering]
+Twenty-two years and I still check the radio the second anyone says "storm." Everyone always says the same thing about that night — the doctors couldn't get to you in time. No boat, no road, nothing anybody could've done.
+
+[KIMI_SATO | style: quiet, almost a question]
+I used to think I'd feel better once I stopped being the kid asking why. I don't feel better. I just stopped asking out loud.
+
+[SFX: wind gusting hard against the shutters]
+
+[KIMI_SATO | style: brisk, refocusing]
+Okay. Weather's not waiting for me to get sentimental.
+
+[SFX: a hammer driving a nail into wood]
+
+[KIMI_SATO | style: wry, tired]
+Funny — I spend all day now deciding who gets a seat on that ferry, and I still don't really know what it looked like the last time somebody had to decide it. Maybe I'll go through the archive properly, once the list's done. See how it used to work.
+
+[KIMI_SATO | style: firmer, businesslike]
+Theo would probably say don't borrow trouble before the storm's even close. He's not wrong.
+
+[KIMI_SATO | style: gentle, final]
+Last board, Mom. I'll bring the photo down before the surge gets anywhere near this side of the island, promise.
+
+[SFX: a hammer driving a nail into wood]
+
+[NARRATOR]
+Kimi steps back from the last shuttered window, the house dark and sealed behind her, no idea yet how close she has already come to her mother's real story.
+
+--- PART 9 ---
+
+[NARRATOR]
+Past ten at night, the clinic is dark except for one lamp in the records office. Alone at her desk, head nurse Mei Chen has pulled a file she has not let herself open in twenty-two years.
+
+[NURSE_MEI_CHEN | style: low, guarded, to herself]
+Same drawer. Same tab. S-A-T-O, twenty-two years back, and I still know exactly where it sits without looking.
+
+[SFX: a file drawer sliding shut]
+
+[NURSE_MEI_CHEN | style: bracing herself | speed: 0.9]
+Just open it, Mei. Read the line, close it, go home. That's all this is tonight.
+
+[SFX: a folder's brittle pages turning]
+
+[NURSE_MEI_CHEN | style: flat, private]
+"No bed capacity available." There it is. My own handwriting, twenty-two years younger than my hands are now.
+
+[NURSE_MEI_CHEN | style: quiet relief laced with unease]
+Still holding. No one's touched this drawer since I put it back the last time.
+
+[NURSE_MEI_CHEN | style: uneasy, quieter]
+She's three doors down right this week. Drafting a list off this same shelf, same protocol, and she says the word "protocol" like it's just a word.
+
+[NURSE_MEI_CHEN | style: tight]
+She doesn't know what protocol did to her mother. She doesn't know I'm the reason the story ends where it does.
+
+[NURSE_MEI_CHEN | style: steadying herself]
+Kimi's careful. That's what worries me. Careful people eventually look twice at things everyone else stopped looking at.
+
+[NURSE_MEI_CHEN | style: resolved, tired | speed: 0.95]
+Not tonight, though. Tonight it stays exactly where I put it in nineteen-ninety — one line, one shelf, one door I keep closed.
+
+[SFX: a folder closing, then a drawer sliding shut and latching]
+
+[NURSE_MEI_CHEN | style: barely audible]
+Twenty-two years. It can hold six more days.
+
+--- PART 10 ---
+
+[NARRATOR]
+Evening settles over the clinic. Sophie Kang finds Dr. Aldridge again, alone in his office, papers still spread across the desk.
+
+[DR_SOPHIE_KANG | style: gentle but deliberate]
+You're still here.
+
+[DR_THEO_ALDRIDGE | style: tired, guarded]
+Seat list doesn't draft itself.
+
+[DR_SOPHIE_KANG | style: careful, testing the ground]
+Theo. Earlier — your hand. And you've lost weight since I got here, I don't think anyone's said that to your face.
+
+[DR_THEO_ALDRIDGE | style: still, bracing]
+Three weeks and you're already counting my pounds.
+
+[DR_SOPHIE_KANG | style: pressing gently]
+I'm asking because I'm a doctor before I'm anything else on this island. If something's—
+
+[DR_THEO_ALDRIDGE | style: quiet, deflecting]
+Sophie.
+
+[NARRATOR]
+He says her name like a door closing, softly, but closing all the same.
+
+[DR_SOPHIE_KANG | style: hesitant, pulling back]
+I just — you'd tell someone. If it mattered.
+
+[DR_THEO_ALDRIDGE | style: measured, rehearsed calm]
+I've run this clinic through four hurricanes. I know what tired feels like. This is that, and only that.
+
+[NARRATOR]
+Sophie studies him a moment longer, then lets the question fold itself away, unopened.
+
+[DR_SOPHIE_KANG | style: relenting, softer]
+Okay. Get some sleep, at least. That much I can order.
+
+[DR_THEO_ALDRIDGE | style: faint, almost warm]
+Noted, Doctor.
+
+[NARRATOR]
+She gathers her folder and steps out, the door easing shut behind her.
+
+[SFX: office door clicking shut]
+
+[NARRATOR]
+Alone, Aldridge sits with the memo in front of him, listening to her footsteps fade down the hall.
+
+[DR_THEO_ALDRIDGE | style: private, released breath]
+Not tonight, then.
+
+[NARRATOR]
+He lets a long breath go, the kind he can only afford when no one is watching.
+
+[SFX: a long exhale, chair creaking as he leans back]
+
+[NARRATOR]
+Outside, the wind is picking up against the shutters, six days still standing between the island and Odette.
+
+[DR_THEO_ALDRIDGE | style: low, to himself]
+One more day.
+
+[NARRATOR]
+He turns back to the memo, the seat count unchanged, his secret still exactly where he left it.
+
+--- PART 11 ---
+
+[NARRATOR]
+Night falls over the clinic on the first day of the countdown. Six days remain until Hurricane Odette is projected to reach Halyard Cay, and the building empties out room by room.
+
+[NURSE_MEI_CHEN | style: tired, businesslike]
+Lights off in records, Kimi. I already checked the back door.
+
+[KIMI_SATO | style: light, unbothered]
+Copy that. I'll finish the seat draft in the morning — my eyes are done for tonight.
+
+[SFX: a filing cabinet drawer sliding shut]
+
+[DR_SOPHIE_KANG | style: quiet, still turning something over]
+Goodnight, Dr. Aldridge. Try to actually sleep.
+
+[DR_THEO_ALDRIDGE | style: warm, worn thin underneath]
+I'll try. Get some rest yourself, Dr. Kang. Long week ahead of us.
+
+[NARRATOR]
+Sophie leaves by the front entrance. Outside, the wind has picked up along the shore road, a first taste of what's coming.
+
+[SFX: a heavy door swinging shut, latch catching]
+
+[NARRATOR]
+Alone now, Aldridge walks the empty clinic hallway one more time, checking each room the way he has for twenty-five years.
+
+[DR_THEO_ALDRIDGE | style: to himself, low]
+Six seats.
+
+[NARRATOR]
+He stops at the corkboard by the front desk — bare tonight, waiting for the list that will decide who leaves this island and who stays behind.
+
+[DR_THEO_ALDRIDGE | style: quiet, unreadable]
+Same as it always is. Just numbers on a page.
+
+[SFX: a single pin pressed into corkboard]
+
+[NARRATOR]
+He sets an empty frame where the list will hang, squares it, and steps back. For a moment he simply stands there, one hand resting flat against the wall.
+
+[DR_THEO_ALDRIDGE | style: barely audible]
+Fair. It has to be fair.
+
+[NARRATOR]
+He switches off the last light and locks the door behind him. Somewhere out past the reef, Hurricane Odette keeps strengthening, indifferent to anything happening on land. Six days. Six seats. And on Halyard Cay tonight, every person carrying a secret still is.
+
+As the sun sets on the first day of the countdown, Jonah spots unfamiliar footprints in the sand near the ferry shed he can't explain — and in the clinic archive, Mei Chen quietly decides what to do about the page she already found, the one she was hoping wouldn't still be there.
+

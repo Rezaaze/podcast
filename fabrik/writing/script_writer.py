@@ -5,6 +5,7 @@ geschrieben, ein abgebrochener Lauf setzt bei der ersten fehlenden fort."""
 
 from __future__ import annotations
 
+import concurrent.futures
 import os
 import re
 import subprocess
@@ -17,6 +18,7 @@ from ..core.claude_cli import parse_json_response, run_claude_process
 from ..core.config import DEFAULTS
 from ..core.history import record_figure
 from ..core.paths import Series, template_dir
+from . import phrase_stats
 from .script_parser import ScriptFormatError, parse_drama_part
 
 TIMEOUT_SECONDS = 300   # max. Wartezeit pro Claude-Aufruf
@@ -37,6 +39,14 @@ WORD_COUNT_TOLERANCE = 15  # Untergrenze des Puffers um min/max — der effektiv
                            # Wert): ein fixer 15-Einheiten-Puffer liegt bei üblichen Minima
                            # (250+) innerhalb der normalen Zählschwankung des Modells, d.h.
                            # Retries scheiterten an Rauschen statt an echten Problemen.
+
+SECTION_PARALLEL_CAP = 4  # Obergrenze für gleichzeitig laufende 'claude'-Aufrufe INNERHALB
+                          # einer Episode, wenn Beats aktiv sind (siehe
+                          # _generate_sections_parallel() unten) — analog zu
+                          # BATCH_PARALLEL_CAP in create_series.py. Multipliziert sich mit
+                          # --jobs (mehrere Episoden gleichzeitig, siehe generate_episode.py):
+                          # bewusst nicht zu hoch, um nicht mehr gleichzeitige claude-Prozesse
+                          # zu starten als nötig (Rate-Limits, lokale Ressourcen).
 
 
 def word_count_tolerance(min_words: int) -> int:
@@ -243,15 +253,24 @@ def _build_single_case_block(case: dict) -> str:
                      "\n".join(f"  - {f}" for f in facts))
     knowledge = case.get("character_knowledge") or {}
     if knowledge:
+        # Format seit 17.07.2026: freier Fließtext pro Rolle statt drei separater Listen
+        # (knows/hides/believes_falsely) — weniger JSON-Verschachtelungstiefe bei der
+        # Generierung, ohne Downstream-Prompts zu verändern: hier wird ohnehin nur zu
+        # lesbarem Text reformatiert. Alt-Format (Objekt mit den drei Listen) bleibt
+        # unterstützt, damit vor dem Umbau generierte Serien unverändert funktionieren.
         know_lines = ["PER-CHARACTER KNOWLEDGE (the hard boundary — see rule below):"]
         for role, slice_ in knowledge.items():
-            know_lines.append(f"  [{role}]")
-            if slice_.get("knows"):
-                know_lines.append("    knows: " + "; ".join(slice_["knows"]))
-            if slice_.get("hides"):
-                know_lines.append("    hides (conceals/lies about): " + "; ".join(slice_["hides"]))
-            if slice_.get("believes_falsely"):
-                know_lines.append("    wrongly believes: " + "; ".join(slice_["believes_falsely"]))
+            if isinstance(slice_, str):
+                if slice_.strip():
+                    know_lines.append(f"  [{role}] {slice_.strip()}")
+            elif isinstance(slice_, dict):
+                know_lines.append(f"  [{role}]")
+                if slice_.get("knows"):
+                    know_lines.append("    knows: " + "; ".join(slice_["knows"]))
+                if slice_.get("hides"):
+                    know_lines.append("    hides (conceals/lies about): " + "; ".join(slice_["hides"]))
+                if slice_.get("believes_falsely"):
+                    know_lines.append("    wrongly believes: " + "; ".join(slice_["believes_falsely"]))
         parts.append("\n".join(know_lines))
     return "\n\n".join(parts)
 
@@ -300,8 +319,12 @@ def build_beats_prompt(episodes, ep_idx, cfg, previous_beats_text: str) -> str:
     sections_text = "\n".join(f"Scene {i+1}: {s}" for i, s in enumerate(sections))
     case_block = build_case_file_block(episode.get("case"))
     continuity = (
-        f"Beats of the PREVIOUS episode, for continuity (do not repeat these, "
-        f"build on where they leave off):\n\n{previous_beats_text}\n"
+        f"Beats of ALL previous episodes, in order — this is the CANONICAL RECORD of what "
+        f"has already happened in this season. Treat it as settled fact: nothing below may "
+        f"be discovered 'for the first time' again, re-run, or contradicted; do not repeat "
+        f"these beats. This episode continues from the EXACT end-state of the most recent "
+        f"episode below (characters stay where they were, arrests/reveals/decisions stand):"
+        f"\n\n{previous_beats_text}\n"
         if previous_beats_text else
         "(this is the first episode with beats — no previous-episode continuity to draw on)\n"
     )
@@ -317,7 +340,10 @@ def build_beats_prompt(episodes, ep_idx, cfg, previous_beats_text: str) -> str:
         f"For EACH scene, write 3 to 6 short, plain-language beats: what happens, who "
         f"lies or hides something and to whom, what shifts, what the audience learns that "
         f"a character does not know. NO dialogue lines, NO acting/style directions, NO "
-        f"prose — just the bare logical/emotional beats, one numbered sentence each.\n\n"
+        f"prose — just the bare logical/emotional beats, one numbered sentence each.\n"
+        f"Scene 1's first beat must state explicitly how much time has passed since the "
+        f"previous episode (or since the season's start, for episode 1) — this keeps the "
+        f"season's timeline consistent across episodes.\n\n"
         f"Output ONLY the beats, one block per scene, in this exact format:\n\n"
         f"--- SCENE 1 ---\n1. ...\n2. ...\n\n--- SCENE 2 ---\n1. ...\n\n"
         f"Write exactly {len(sections)} scene block(s), matching the scenes listed above "
@@ -364,16 +390,24 @@ def generate_beats(series: Series, ep_idx: int, episodes, force: bool, cfg: dict
         with open(beats_file, "r", encoding="utf-8") as f:
             return parse_beats(f.read(), expected_scenes)
 
-    # Beats der vorigen Folge als Kontinuität — falls die Datei (noch) nicht
-    # existiert (z.B. paralleler Lauf via --jobs>1, oder use_beats erst ab
-    # dieser Folge aktiv), wird das nicht als Fehler behandelt, sondern als
-    # "kein Kontinuitätskontext diesen Lauf" (siehe docs/beat-layer-design.md).
+    # Beats ALLER vorherigen Folgen als Staffel-Gedächtnis — nicht nur die der
+    # direkten Vorgängerin. Die 12-Serien-Analyse (17.07.2026) zeigte, warum
+    # das nötig ist: mit nur EINER Episode Rückblick vergaß das Finale, was in
+    # Ep8/9 schon passiert war (the_understudy: Klimax zweimal, mit
+    # entgegengesetztem Ausgang; drei Finali spulten frühere Episoden zurück).
+    # Beat-Sheets sind klein (~1-2 KB/Episode), das volle Gedächtnis einer
+    # 10-Folgen-Staffel kostet nur wenige tausend Tokens. Fehlende Dateien
+    # (paralleler Lauf via --jobs>1, use_beats erst ab dieser Folge aktiv)
+    # sind wie bisher kein Fehler, nur weniger Kontext diesen Lauf.
     previous_beats_text = ""
     if ep_idx > 0:
-        prev_beats_file = series.beats_file(cfg["prefix"], ep_idx)
-        if os.path.exists(prev_beats_file):
-            with open(prev_beats_file, "r", encoding="utf-8") as f:
-                previous_beats_text = f.read()
+        blocks = []
+        for prev_idx in range(1, ep_idx + 1):
+            prev_beats_file = series.beats_file(cfg["prefix"], prev_idx)
+            if os.path.exists(prev_beats_file):
+                with open(prev_beats_file, "r", encoding="utf-8") as f:
+                    blocks.append(f"===== EPISODE {prev_idx} BEATS =====\n{f.read().strip()}")
+        previous_beats_text = "\n\n".join(blocks)
 
     print(f"\n  Beats generieren ({len(sections)} Szene(n)) ...")
     prompt = build_beats_prompt(episodes, ep_idx, cfg, previous_beats_text)
@@ -507,6 +541,13 @@ def build_section_prompt(template, data, episodes, ep_idx, section_idx,
             f"{context}\n"
         )
 
+    # Phrasen-Wächter (fabrik/writing/phrase_stats.py): bereits überstrapazierte
+    # Formulierungen der Staffel als explizites Verbot — von generate_episode()
+    # einmal pro Episode aus den vorhandenen Skripten berechnet (cfg-Feld),
+    # leer bei Episode 1 / narration ohne Auffälligkeiten.
+    if cfg.get("avoid_block"):
+        prompt += f"\n\n{cfg['avoid_block']}\n"
+
     markers = "\n".join(f"--- PART {n} ---" for n in parts)
     prompt += (
         f"\n\nNow write ONLY Section {section_idx + 1}: \"{section_title}\".\n"
@@ -578,6 +619,63 @@ def extract_parts(output, expected_parts) -> list[tuple[int, str]]:
     return [(num, parts[num]) for num in expected_parts if num in parts]
 
 
+_LEAK_BOOKKEEPING_RE = re.compile(r'\b(?:thread|storyline)\b|\bscene\s+(?:\d+|one|two|three|'
+                                  r'four|five|six|seven|eight|nine|ten|eleven|twelve)\b', re.IGNORECASE)
+_LEAK_BADNESS = 40  # Gewicht eines Leaks im badness-Vergleich der Fallback-Auswahl
+
+# Regieanweisungs-Heuristik: ein eigenständiger Satz in 3. Person Präsens
+# ("He signs the audit request without hesitation.", "Marcus looks at Elias."),
+# der als Fließtext in einer Sprecherzeile gelandet ist und beim Vertonen
+# mitgesprochen würde. Bewusst eng gefasst (kurz, Punkt am Ende, kein
+# Ich/Du, typisches Regie-Verb) und NUR eine Warnung — im Dialog sind
+# 3.-Person-Sätze legal ("She knows. She's always known.").
+_STAGE_DIRECTION_RE = re.compile(
+    r'^(?:[A-Z][a-z]+|He|She|They)\s+'
+    r'(?:looks?|glances?|turns?|nods?|signs?|walks?|steps?|stares?|reaches?|picks?|sets?|'
+    r'puts?|opens?|closes?|hands?|slides?|pushes?|pulls?|leans?|rises?|sits?|stands?|'
+    r'exits?|enters?|pauses?|hesitates?)\b[^.!?]{0,80}[.]$'
+)
+
+
+def find_narrator_leaks(items, case_labels) -> list[str]:
+    """NARRATOR-Zeilen, die interne Buchhaltung hörbar machen: wörtliche
+    case-Thread-Labels ('The Captain's Ledger thread continues' — 22x in einer
+    analysierten Produktion, teils spoilernd wie 'Frame-Up') oder Meta-Wörter
+    wie 'thread'/'Scene Eleven'. items ist das parse_drama_part()-Ergebnis."""
+    leaks = []
+    labels = [l for l in (case_labels or []) if l and len(l) >= 4]
+    for item in items:
+        if item.kind != "speech" or item.speaker != "NARRATOR":
+            continue
+        text = item.text or ""
+        low = text.lower()
+        for label in labels:
+            if label.lower() in low:
+                leaks.append(f"NARRATOR speaks the internal thread label \"{label}\" aloud: "
+                             f"\"{text[:90]}\"")
+                break
+        else:
+            m = _LEAK_BOOKKEEPING_RE.search(text)
+            if m:
+                leaks.append(f"NARRATOR speaks internal bookkeeping (\"{m.group(0)}\") aloud: "
+                             f"\"{text[:90]}\"")
+    return leaks
+
+
+def warn_stage_directions(items, part_label: str) -> None:
+    """Konsolen-Warnung (kein Retry) für mutmaßliche Regieanweisungen, die als
+    Sprechtext mitvertont würden — entstehen, wenn das Modell eine nackte
+    Prosazeile unter das vorherige Sprecher-Tag schreibt (script_parser.py
+    hängt Fließtext an die laufende Sprecherzeile an, statt zu erroren)."""
+    for item in items:
+        if item.kind != "speech":
+            continue
+        for sentence in re.split(r'(?<=[.!?])\s+', item.text or ""):
+            if _STAGE_DIRECTION_RE.match(sentence.strip()):
+                print(f"  ⚠️  {part_label}: mögliche Regieanweisung im Sprechtext von "
+                      f"[{item.speaker}] — würde mitgesprochen: \"{sentence.strip()[:80]}\"")
+
+
 def validate_parts(parts, expected_parts, cfg) -> tuple[bool, str, list[str], bool, int]:
     """Prüft ob alle erwarteten Parts vorhanden und im Längenbudget liegen;
     im Drama-Modus zusätzlich, ob jeder Part sauber parsebar ist (nur bekannte
@@ -637,12 +735,30 @@ def validate_parts(parts, expected_parts, cfg) -> tuple[bool, str, list[str], bo
 
         if cfg["mode"] == "drama":
             try:
-                parse_drama_part(text, voices=cfg["voices"], part_label=f"PART {num}")
+                items = parse_drama_part(text, voices=cfg["voices"], part_label=f"PART {num}")
             except ScriptFormatError as e:
                 ok = False
                 fallback_safe = False
                 console = console or f"Part {num} hat ein Formatproblem: {e}"
                 detail.append(f"Part {num}: FORMAT ERROR — {e}")
+            else:
+                # TTS-Hazard 1 (Fehler, retryable, fallback-sicher): NARRATOR
+                # liest interne Thread-Labels/Buchhaltung vor. Wie TOO SHORT
+                # blockiert das nie eine Episode (Fallback bleibt möglich),
+                # erhöht aber badness, damit ein leak-freier Versuch gewinnt.
+                leaks = find_narrator_leaks(items, cfg.get("case_labels"))
+                if leaks:
+                    ok = False
+                    badness += _LEAK_BADNESS * len(leaks)
+                    console = console or (f"Part {num}: NARRATOR liest interne "
+                                          f"Buchhaltung vor ({len(leaks)}x)")
+                    for leak in leaks:
+                        detail.append(f"Part {num}: NARRATOR LEAK — {leak} — the NARRATOR "
+                                      f"must never say thread labels, the word 'thread', or "
+                                      f"scene numbers aloud; describe the story itself instead")
+                # TTS-Hazard 2 (nur Warnung): mutmaßliche Regieanweisung im
+                # Sprechtext — zu unscharf für einen Retry, aber sichtbar machen.
+                warn_stage_directions(items, f"PART {num}")
 
     return ok, console, detail, fallback_safe, badness
 
@@ -871,10 +987,10 @@ CASE FILE this episode was supposed to follow (the authoritative source of who k
 NOT what the characters actually said, just the plan):
 {case_block}
 
-The script below was written SECTION BY SECTION, each section seeing only the immediately
+{context_block}The script below was written SECTION BY SECTION, each section seeing only the immediately
 preceding section as context (never the whole episode at once) — so a character can drift
 outside their knowledge slice without anyone "deciding" to break the rule. Check ONLY these
-two things in the ACTUAL SCRIPT TEXT (not the case file above):
+three things in the ACTUAL SCRIPT TEXT (not the case file above):
 
 1. KNOWLEDGE VIOLATIONS: does any character say, imply, or visibly act on something outside
    their own knowledge slice for a thread they're involved in? A character who "hides"
@@ -884,6 +1000,10 @@ two things in the ACTUAL SCRIPT TEXT (not the case file above):
 2. PREMATURE SOLUTION: does any line state or unambiguously reveal a thread's "solution"
    before it is meant to surface — unless this episode is explicitly the one where that
    thread resolves?
+3. FACT CONSISTENCY: do any names, ages, dates, places, counts, or elapsed-time statements
+   in the script contradict the case file's objective_facts, contradict each other within
+   the episode, or contradict the previous-episode state shown above (if any)? Flag each
+   concrete mismatch (e.g. a person, sum, or duration stated two different ways).
 
 Respond ONLY with valid JSON, no markdown fences, exactly:
 {{"issues": [{{"part": <integer — the PART number the problem is IN, from its "--- PART N ---" marker>, "problem": "one short, specific sentence describing the problem, quoting or paraphrasing the offending line so it can be found and fixed"}}]}}
@@ -896,8 +1016,28 @@ SCRIPT TEXT:
 """
 
 
+def build_review_context_block(series: Series, ep_idx: int, episode: dict, cfg: dict) -> str:
+    """Cross-Episode-Kontext für das Skript-Review: Beats der Vorepisode (falls
+    vorhanden) + intro_note (Stand nach der Vorepisode). Ohne diesen Kontext
+    kann das Review Brüche gegenüber früheren Episoden strukturell nicht sehen
+    — es kannte bisher nur case-File + eigenes Skript."""
+    blocks = []
+    if ep_idx > 0:
+        prev_beats_file = series.beats_file(cfg["prefix"], ep_idx)
+        if os.path.exists(prev_beats_file):
+            with open(prev_beats_file, "r", encoding="utf-8") as f:
+                blocks.append(f"BEATS OF THE PREVIOUS EPISODE (episode {ep_idx} — settled "
+                              f"events this episode must not contradict or re-run):\n{f.read().strip()}")
+    intro_note = episode.get("intro_note")
+    if intro_note:
+        blocks.append(f"STATE OF THE STORY entering this episode (from the season plan):\n{intro_note}")
+    if not blocks:
+        return ""
+    return "\n\n".join(blocks) + "\n\n"
+
+
 def review_episode_script(episode: dict, position: int, total: int, script_text: str, model: str,
-                           effort: Optional[str] = None):
+                           effort: Optional[str] = None, context_block: str = ""):
     """Nachträglicher Konsistenz-Check EINER fertigen Episode gegen ihr eigenes
     case-File: prüft im tatsächlich geschriebenen Skripttext (nicht nur im Plan),
     ob eine Figur etwas außerhalb ihres Wissens-Slices verrät oder eine
@@ -926,6 +1066,7 @@ def review_episode_script(episode: dict, position: int, total: int, script_text:
     prompt = EPISODE_REVIEW_PROMPT.format(
         position=position, total=total, theme=episode.get("theme", ""),
         case_block=build_case_file_block(case), script_text=script_text,
+        context_block=context_block,
     )
     timeout = compute_review_timeout(script_text)
     argv = ["claude", "-p", prompt, "--output-format", "text", "--model", model, "--tools", ""]
@@ -1149,6 +1290,78 @@ def apply_episode_fixes(series: Series, ep_idx: int, episode: dict, cfg: dict, i
     return fixed
 
 
+def _generate_sections_parallel(template, data, episodes, ep_idx, previous_content, cfg,
+                                beats, num_sections, output_file, existing_parts, pending):
+    """Schreibt mehrere Sections EINER Episode parallel — nur wenn Beats aktiv sind und JEDE
+    Section in `pending` beats-abgedeckt ist (Aufrufer prüft das, siehe generate_episode()).
+
+    Die Beat-Schicht (siehe build_section_prompt()) ersetzt für beats-abgedeckte Sections den
+    'vorherige Section'-Kontext durch die feste Beats-Übersicht der ganzen Folge — anders als
+    im bisherigen sequenziellen Pfad braucht der Prompt einer Section damit NICHT mehr den
+    frisch geschriebenen Text der vorangehenden Section, die Sections sind also unabhängig
+    genug für parallele claude-Aufrufe (I/O-bound, siehe run_claude_process() — die Zeit geht
+    fast komplett im Warten auf die Antwort drauf, nicht in lokaler CPU-Arbeit).
+
+    pending: Liste von (sec_idx, section_title, section_parts) — alle noch fehlenden Sections
+    dieser Episode. previous_content ist dabei EIN fester Schnappschuss (der Stand vor diesem
+    Batch) statt wie im sequenziellen Pfad nach jeder Section fortzuschreiben — betrifft nur
+    {{VOCAB_NOTES}} in build_section_prompt() (Beats-abgedeckte Sections nutzen previous_content
+    sonst nirgends), ein rein unterstützender Kontext, kein struktureller Verlust.
+
+    WICHTIG — Schreibreihenfolge: podcast_maker.py parst Skripte rein positional über
+    re.split(r'--- PART \\d+ ---', content), NICHT nummer-bewusst. Ergebnisse werden daher NIE
+    in Fertigstellungsreihenfolge in die Datei geschrieben, sondern erst vollständig gesammelt
+    und dann strikt aufsteigend nach Section-/Part-Nummer angehängt, egal welcher Worker
+    zuerst fertig wird.
+
+    Gibt True zurück, wenn alle Sections erfolgreich geschrieben wurden, sonst False (dann hat
+    der Aufrufer wie im sequenziellen Pfad abzubrechen)."""
+    max_workers = max(1, min(len(pending), SECTION_PARALLEL_CAP))
+    print(f"\n  Beats aktiv: {len(pending)} verbleibende Section(s) parallel generieren "
+          f"({max_workers} gleichzeitig) ...")
+
+    def _write_section(sec_idx, section_title, section_parts):
+        section_cfg = resolve_section_cfg(cfg, episodes[ep_idx], sec_idx)
+        prompt = build_section_prompt(
+            template, data, episodes, ep_idx, sec_idx, previous_content, section_cfg,
+            beats=beats,
+        )
+        parts = call_claude_with_retry(prompt, section_parts, section_cfg)
+        return sec_idx, section_title, section_parts, parts
+
+    results = {}
+    all_ok = True
+    with concurrent.futures.ThreadPoolExecutor(max_workers=max_workers) as pool:
+        futures = {
+            pool.submit(_write_section, sec_idx, section_title, section_parts): sec_idx
+            for sec_idx, section_title, section_parts in pending
+        }
+        for future in concurrent.futures.as_completed(futures):
+            sec_idx, section_title, section_parts, parts = future.result()
+            if parts is None:
+                print(f"  Section {sec_idx+1} endgültig fehlgeschlagen.")
+                all_ok = False
+                continue
+            results[sec_idx] = (section_title, section_parts, parts)
+            words = sum(count_length(t, cfg["mode"]) for _, t in parts)
+            print(f"  ✓ Section {sec_idx+1}/{num_sections} (\"{section_title}\") fertig "
+                  f"(~{words} Einheiten, Parts {section_parts[0]}–{section_parts[-1]})")
+
+    if not all_ok:
+        print(f"  Mindestens eine Section endgültig fehlgeschlagen. Abbruch.")
+        print(f"  Tipp: Skript erneut starten — fertige Sections werden übersprungen.")
+        return False
+
+    with open(output_file, "a", encoding="utf-8") as f:
+        for sec_idx in sorted(results):
+            _section_title, _section_parts, parts = results[sec_idx]
+            for num, text in parts:
+                f.write(f"--- PART {num} ---\n\n{text}\n\n")
+                existing_parts.add(num)
+
+    return True
+
+
 def generate_episode(series: Series, ep_idx, template, data, episodes, force, cfg,
                      skip_review: bool = False, fix_review: bool = False,
                      beats_pregenerated: bool = False) -> bool:
@@ -1161,6 +1374,32 @@ def generate_episode(series: Series, ep_idx, template, data, episodes, force, cf
     num_sections = len(sections)
     output_file = series.script_file(cfg["prefix"], episode_num)
     series.ensure_dirs()
+
+    # Episoden-lokale cfg-Anreicherung (Kopie — cfg wird über Episoden geteilt):
+    # - case_labels: Thread-Labels dieser Episode für den NARRATOR-Leak-Check
+    #   in validate_parts() (gilt auch für repair_part über apply_episode_fixes).
+    # - avoid_block: Phrasen-Wächter aus den Skripten der ANDEREN, bereits
+    #   geschriebenen Episoden (Tics wie 'barely audible' 57x/Staffel).
+    case = episodes[ep_idx].get("case")
+    threads = case if isinstance(case, list) else ([case] if case else [])
+    case_labels = [t.get("label") for t in threads
+                   if isinstance(t, dict) and t.get("label")]
+    other_texts = []
+    for n in range(1, len(episodes) + 1):
+        if n == episode_num:
+            continue
+        other_file = series.script_file(cfg["prefix"], n)
+        if os.path.exists(other_file):
+            with open(other_file, "r", encoding="utf-8") as f:
+                other_texts.append(f.read())
+    avoid_block = ""
+    if other_texts:
+        protected = phrase_stats.name_words(data)
+        avoid_block = phrase_stats.build_avoid_block(
+            phrase_stats.overused_phrases(other_texts, exclude_words=protected),
+            phrase_stats.overused_styles(other_texts),
+        )
+    cfg = {**cfg, "case_labels": case_labels, "avoid_block": avoid_block}
 
     print(f"\n{'='*55}")
     print(f"Episode {episode_num}: {figure}")
@@ -1230,41 +1469,61 @@ def generate_episode(series: Series, ep_idx, template, data, episodes, force, cf
     if existing_parts and not force:
         print(f"  Gefundene Parts in Datei: {sorted(existing_parts)} — überspringe fertige Sections.")
 
+    pending = []
     for sec_idx, section_title in enumerate(sections):
         section_parts = section_part_numbers(sec_idx, cfg["parts_per_section"])
-
         # Section überspringen wenn alle Parts bereits vorhanden
         if all(p in existing_parts for p in section_parts):
             print(f"\n  Section {sec_idx+1}/{num_sections}: \"{section_title}\" — bereits vorhanden, übersprungen ✓")
             continue
+        pending.append((sec_idx, section_title, section_parts))
 
-        section_cfg = resolve_section_cfg(cfg, episodes[ep_idx], sec_idx)
+    # Parallelisierung nur, wenn Beats aktiv sind UND JEDE verbleibende Section beats-
+    # abgedeckt ist (siehe _generate_sections_parallel()'s Docstring) — bei einer Mischung
+    # (z.B. eine Szene ohne eigenen Beat-Eintrag) bleibt es beim bisherigen sequenziellen
+    # Pfad, der für diese Section den echten previous_content-Kontext der direkt
+    # vorangehenden Section braucht, welcher sich nur SERIELL sinnvoll aufbauen lässt.
+    all_beats_covered = bool(beats) and all((sec_idx + 1) in beats for sec_idx, _, _ in pending)
 
-        print(f"\n  Section {sec_idx+1}/{num_sections}: \"{section_title}\"")
-        print(f"  → Generiere Part {section_parts[0]} bis Part {section_parts[-1]} "
-              f"({section_cfg['min_words']}-{section_cfg['max_words']} Einheiten/Part) ...")
-
-        prompt = build_section_prompt(
-            template, data, episodes, ep_idx, sec_idx, previous_content, section_cfg,
-            beats=beats,
-        )
-
-        parts = call_claude_with_retry(prompt, section_parts, section_cfg)
-        if parts is None:
-            print(f"  Section {sec_idx+1} endgültig fehlgeschlagen. Abbruch.")
-            print(f"  Tipp: Skript erneut starten — fertige Sections werden übersprungen.")
+    if pending and all_beats_covered and len(pending) > 1:
+        if not _generate_sections_parallel(template, data, episodes, ep_idx, previous_content,
+                                           cfg, beats, num_sections, output_file,
+                                           existing_parts, pending):
             return False
+        # previous_content/existing_parts neu aus der Datei laden — die Parts kamen ggf. in
+        # Fertigstellungs- statt Section-Reihenfolge zurück (von _generate_sections_parallel()
+        # schon sortiert geschrieben), hier nur für die Wortzahl-Zusammenfassung unten und
+        # den nachfolgenden Episoden-Review gebraucht.
+        existing_parts, previous_content = read_existing_parts(output_file)
+    else:
+        for sec_idx, section_title, section_parts in pending:
+            section_cfg = resolve_section_cfg(cfg, episodes[ep_idx], sec_idx)
 
-        # Sofort in Datei schreiben
-        with open(output_file, "a", encoding="utf-8") as f:
-            for num, text in parts:
-                block = f"--- PART {num} ---\n\n{text}\n\n"
-                f.write(block)
-                previous_content += block
-                existing_parts.add(num)
+            print(f"\n  Section {sec_idx+1}/{num_sections}: \"{section_title}\"")
+            print(f"  → Generiere Part {section_parts[0]} bis Part {section_parts[-1]} "
+                  f"({section_cfg['min_words']}-{section_cfg['max_words']} Einheiten/Part) ...")
 
-        words = sum(count_length(t, cfg["mode"]) for _, t in parts)
-        print(f"  ✓ Parts {section_parts[0]}–{section_parts[-1]} gespeichert (~{words} Einheiten)")
+            prompt = build_section_prompt(
+                template, data, episodes, ep_idx, sec_idx, previous_content, section_cfg,
+                beats=beats,
+            )
+
+            parts = call_claude_with_retry(prompt, section_parts, section_cfg)
+            if parts is None:
+                print(f"  Section {sec_idx+1} endgültig fehlgeschlagen. Abbruch.")
+                print(f"  Tipp: Skript erneut starten — fertige Sections werden übersprungen.")
+                return False
+
+            # Sofort in Datei schreiben
+            with open(output_file, "a", encoding="utf-8") as f:
+                for num, text in parts:
+                    block = f"--- PART {num} ---\n\n{text}\n\n"
+                    f.write(block)
+                    previous_content += block
+                    existing_parts.add(num)
+
+            words = sum(count_length(t, cfg["mode"]) for _, t in parts)
+            print(f"  ✓ Parts {section_parts[0]}–{section_parts[-1]} gespeichert (~{words} Einheiten)")
 
     total_words = count_length(previous_content, cfg["mode"])
     print(f"\n  Fertig: {os.path.basename(output_file)} (~{total_words} Einheiten total)")
@@ -1300,10 +1559,14 @@ def generate_episode(series: Series, ep_idx, template, data, episodes, force, cf
                       f"{os.path.basename(review_file)} übernommen — kein erneutes Erst-Review.")
                 issues = cached_issues
             else:
-                print(f"\n  Episoden-Review (Wissens-Verstöße/Spoiler-Leaks im fertigen Skript) ...")
+                print(f"\n  Episoden-Review (Wissens-Verstöße/Spoiler-Leaks/Fakten im fertigen Skript) ...")
+                # review_model statt light_model: die 12-Serien-Analyse zeigte
+                # das light_model als Reviewer praktisch blind (Details:
+                # DEFAULTS['review_model'] in fabrik/core/config.py).
+                review_context = build_review_context_block(series, ep_idx, episodes[ep_idx], cfg)
                 issues = review_episode_script(episodes[ep_idx], episode_num, len(episodes),
-                                               previous_content, cfg.get("light_model", cfg["model"]),
-                                               effort=cfg.get("effort"))
+                                               previous_content, cfg.get("review_model", cfg["model"]),
+                                               effort=cfg.get("effort"), context_block=review_context)
 
             if issues and fix_review:
                 fixable = [i for i in issues if i.get("part") is not None]
@@ -1323,15 +1586,31 @@ def generate_episode(series: Series, ep_idx, template, data, episodes, force, cf
                         print(f"  {fixed}/{len(fixable)} Part(s) repariert — Review erneut, um den Fix zu bestätigen ...")
                         with open(output_file, "r", encoding="utf-8") as f:
                             updated_text = f.read()
+                        review_context = build_review_context_block(series, ep_idx, episodes[ep_idx], cfg)
                         reviewed_again = review_episode_script(episodes[ep_idx], episode_num, len(episodes),
-                                                               updated_text, cfg.get("light_model", cfg["model"]),
-                                                               effort=cfg.get("effort"))
+                                                               updated_text, cfg.get("review_model", cfg["model"]),
+                                                               effort=cfg.get("effort"), context_block=review_context)
                         if reviewed_again is not None:
                             issues = reviewed_again
                         else:
+                            # Die Parts SIND repariert, nur die Bestätigung fehlt — wir wissen
+                            # also nicht, ob die Befunde noch gelten. Bis 17.07.2026 blieben
+                            # hier die ursprünglichen Befunde stehen und wurden unten in die
+                            # REVIEW.txt geschrieben: mit frischem Zeitstempel, aber Zitaten
+                            # aus dem VOR-Reparatur-Text. In Produktion belegt (seven_seats
+                            # ep3/ep4): die REVIEW.txt war neuer als das Skript und meldete
+                            # fünf Sätze, die im Text nicht mehr vorkamen. Das ist nicht nur
+                            # verwirrend — parse_review_file() liest die Datei ZURÜCK, ein
+                            # späterer --fix-Lauf hätte diese Geister-Befunde aus dem Cache
+                            # geholt und repair_part() mit einem längst behobenen Problem auf
+                            # einen bereits korrekten Part losgelassen. None statt der alten
+                            # Befunde: dieselbe Disziplin wie überall sonst hier (None = "wissen
+                            # wir nicht" -> keine REVIEW.txt -> der nächste Lauf reviewt frisch).
                             print(f"  ⚠️  Bestätigungs-Review nach der Reparatur fehlgeschlagen — die "
-                                  f"ursprünglichen Befunde bleiben als offen protokolliert (die betroffenen "
-                                  f"Parts wurden aber schon repariert, ggf. jetzt schon behoben).")
+                                  f"Parts wurden repariert, aber nicht erneut geprüft. Es wird KEINE "
+                                  f"REVIEW.txt geschrieben (die alten Befunde zitieren Text, den es "
+                                  f"nach der Reparatur nicht mehr gibt) — ein erneuter Lauf reviewt frisch.")
+                            issues = None
 
             if issues is None:
                 # Review-Lauf selbst fehlgeschlagen (Timeout/API-Fehler/unauswertbar) — NICHT als

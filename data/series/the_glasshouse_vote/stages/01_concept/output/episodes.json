@@ -1,0 +1,1138 @@
+{
+  "series_title": "The Glasshouse Vote",
+  "language": "English",
+  "mode": "drama",
+  "template": "soap_opera",
+  "writer_persona": "a showrunner for character-driven, relationship-first serial drama in the vein of prestige ensemble television, specializing in slow-burn secrets inside close-knit communities",
+  "style_guidelines": [
+    "Keep the sale vote itself perpetually on a knife's edge — it is never fully cancelled and never simply resolved until the plot forces the issue.",
+    "Every scene should meaningfully serve one or two threads at most; avoid info-dumping across the whole ensemble in a single conversation.",
+    "Let each character's dialogue carry their specific evasions, half-truths, and tells, strictly bounded by what that character actually knows in that thread.",
+    "Anchor secrets in small, concrete physical objects — a seed tin, a forged invoice, an expired passport, mismatched steel bracing — rather than abstract exposition.",
+    "Treat the greenhouse itself as a character: its plants, light, and structural condition should quietly mirror the emotional and literal pressure building underneath it.",
+    "Escalate cliffhangers gradually across the season — early episodes should end on unease and suspicion, later ones on genuine shock and irreversible consequence."
+  ],
+  "voices": {
+    "NARRATOR": {
+      "voice": "Ryan",
+      "default_style": "calm, measured, a step removed from the action",
+      "description": "the show's narrator — orients the listener at the start of every scene (who, where, when), never a character in the story"
+    },
+    "MEI_LIN_CASTELLAN": {
+      "voice": "Vivian",
+      "default_style": "warm but guarded, every word measured before it's spoken; speaks slow, deliberate, clear English with only a faint trace of an accent from a childhood spent between two languages",
+      "description": "seventy-one, board chair of the Castellan Glasshouse Cooperative and granddaughter of one of its founding families; has spent her adult life quietly steering every renovation, survey, and repair away from the greenhouse's southeast corner pier, and has never told anyone why — not even her own son"
+    },
+    "DECLAN_FARRAY": {
+      "voice": "Aiden",
+      "default_style": "affable, reassuring, the kind of steady voice people trust with their money — which is exactly the problem",
+      "description": "fifty-four, the co-op's treasurer for the past six years; genial and well-liked, quietly drowning under his son's debts and the fabricated invoices he's used to cover what he's taken from the reserve fund"
+    },
+    "SOO_JIN_PARK": {
+      "voice": "Sohee",
+      "default_style": "polite and careful in public, quick to change the subject, warmth that thins under pressure",
+      "description": "twenty-nine, came from Korea on a caregiver visa to look after her great-aunt and never left; has spent five years living as the woman she once cared for, terrified that any real scrutiny of unit 4G will cost her both her home and her legal standing"
+    },
+    "AIKO_TANAKA": {
+      "voice": "Ono_Anna",
+      "default_style": "practical, dry-humored, hands always busy; speaks fluent, unhurried English worn smooth by decades in the building, with a faint Chinese cadence still under it",
+      "description": "sixty-three, the building's longtime superintendent, immigrated in her twenties and has quietly kept the co-op running ever since; carries alone the guilt of an unpermitted repair job from fifteen years ago and what it eventually cost one of the residents she loved most"
+    },
+    "LIWEI_CASTELLAN": {
+      "voice": "Dylan",
+      "default_style": "eager, a little too polished, trying hard to sound like he belongs in a boardroom",
+      "description": "thirty-four, Mei-Lin's estranged son, spent his twenties in real estate finance in Beijing before a failed venture sent him home; is pushing hardest for the sale to save his own business, with no idea how much his own family's silence is standing in the way"
+    },
+    "IGGY_CHEN": {
+      "voice": "Eric",
+      "default_style": "clipped, confident, professionally friendly; a Sichuan accent still audible under the polish of a career spent closing deals",
+      "description": "thirty-eight, acquisitions liaison for the Halloran Group and, unknown to most residents, grew up two blocks from this exact building; treats the co-op's endless delays as small-town dysfunction, never suspecting how much they're actually concealing"
+    }
+  },
+  "locations": {
+    "THE_GLASSHOUSE": {
+      "name": "The Glasshouse",
+      "description": "the century-old rooftop greenhouse itself — iron-ribbed glass panes gone slightly warped with age, dense rows of potted citrus and orchids, sunlight fractured into moving patterns across a worn brick floor."
+    },
+    "LOBBY": {
+      "name": "The Lobby",
+      "description": "the building's ground-floor entrance — cracked marble tile, a bank of brass mailboxes, and a cork bulletin board layered with decades of taped-over co-op notices."
+    },
+    "FARRAY_OFFICE": {
+      "name": "The Co-op Office",
+      "description": "a cramped basement records room lined with steel filing cabinets and a single flickering fluorescent tube, ledgers stacked in uneven towers on a folding table."
+    },
+    "UNIT_4G": {
+      "name": "Unit 4G",
+      "description": "a small, immaculately kept apartment frozen in another decade — lace curtains, a wall of old photographs, and a calendar still marked in a dead woman's handwriting."
+    },
+    "SUPER_WORKSHOP": {
+      "name": "The Super's Workshop",
+      "description": "a low-ceilinged basement workroom crowded with salvaged pipe, coiled wire, and shelves of mismatched hardware, lit by a single bare bulb over a workbench."
+    },
+    "CASTELLAN_APARTMENT": {
+      "name": "The Castellan Apartment",
+      "description": "a formal, dimly lit top-floor apartment thick with the smell of jasmine tea, its walls crowded with framed portraits of four generations of the same family."
+    },
+    "CORNER_DINER": {
+      "name": "The Corner Diner",
+      "description": "a narrow, brightly lit diner across the street with red vinyl booths and a window seat that gives a clear view of the building's front steps, where residents gather to talk when they don't want to be overheard at home."
+    }
+  },
+  "format": {
+    "parts_per_section": 1,
+    "words_per_part_target": "300 to 500",
+    "words_per_part_min": 250,
+    "words_per_part_max": 550
+  },
+  "generation": {
+    "model": "claude-sonnet-5"
+  },
+  "audio": {
+    "api_url": "http://127.0.0.1:42003",
+    "default_style": "Speak clearly and with dramatic weight",
+    "target_lufs": -16.0,
+    "pause_between_chunks_ms": 250,
+    "pause_between_lines_ms": 700,
+    "pause_between_parts_ms": 3000,
+    "pause_between_episodes_ms": 6000,
+    "merge_anthology": false
+  },
+  "output_prefix": "ep",
+  "series_intro": "Above a century-old apartment block, a glasshouse cooperative has survived wars, blackouts, and three generations of tenants who tended it like family. Now a developer is offering more money than the building has ever seen — and all it takes to close the deal is one routine inspection. But every time the vote to sell comes up, something gets in the way: a lost signature, a scheduling conflict, a sudden objection from the chair. This is the story of seven people who share a roof, a vote, and nothing else they're willing to admit out loud — and of a greenhouse that has been quietly keeping their secrets for exactly as long as it's been keeping them warm.",
+  "series_outro": "By the time the vote finally happens, the cooperative is no longer the one that first heard Halloran's offer. Aiko's cover-up and the truss collapse that followed it are out in the open, and the building has had to decide, painfully, what forgiveness costs. Declan's years of doctored ledgers are exposed and a slow restitution begins. Soo-Jin's borrowed name is known now too — not to the world, but to the people who matter, who choose to protect her rather than report her. What no one outside the Castellan family learns is what waits inside the southeast pier, sealed there since 1923. Mei-Lin still carries that alone at season's end — though her son, turning an old seed tin over in his hands, has started to ask the kind of questions she can no longer fully deflect.",
+  "episodes": [
+    {
+      "figure": "A Fortune on the Roof",
+      "theme": "The century-old Castellan Glasshouse Cooperative receives a stunning buyout offer from the Halloran Group, and as the ensemble gathers to vote, board chair Mei-Lin Castellan quietly manufactures a procedural delay while Declan Farray, Soo-Jin Park, and Aiko Tanaka each react to the news with more dread than excitement.",
+      "intro_note": "",
+      "outro_note": "The vote is postponed again — this time by only a week, blamed on a missing quorum signature nobody can quite explain. But in four separate rooms across the building, four people already know a week will not be nearly long enough.",
+      "sections": [
+        "Lobby: a courier delivers Halloran's offer letter, and word spreads through the mailboxes before the board even opens it",
+        "The Glasshouse: the co-op gathers among the citrus rows for an emergency meeting; the number on the table stuns everyone into silence",
+        "Castellan Apartment: Mei-Lin alone with the offer, her eyes drifting instinctively toward the direction of the southeast pier",
+        "Co-op Office: Declan reviews the reserve fund ledger before the meeting, sweating over numbers only he understands",
+        "Unit 4G: Soo-Jin hears the news secondhand and immediately thinks of paperwork, not money",
+        "Super's Workshop: Aiko runs a hand along a familiar weld on the northwest truss, calculating how much time she has left",
+        "Corner Diner: Liwei meets Iggy Chen for the first time in person, eager to prove the co-op will move fast",
+        "The Glasshouse: the vote reconvenes and Mei-Lin raises a procedural objection that stalls the count",
+        "Lobby: the meeting breaks up in confused murmurs, and four people go home carrying four different kinds of dread"
+      ],
+      "section_words": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 140,
+          "max": 200,
+          "target": "150 to 180"
+        }
+      ],
+      "section_locations": [
+        "LOBBY",
+        "THE_GLASSHOUSE",
+        "CASTELLAN_APARTMENT",
+        "FARRAY_OFFICE",
+        "UNIT_4G",
+        "SUPER_WORKSHOP",
+        "CORNER_DINER",
+        "THE_GLASSHOUSE",
+        "LOBBY"
+      ],
+      "case": [
+        {
+          "label": "The Founder's Rest",
+          "character_knowledge": {
+            "MEI_LIN_CASTELLAN": "Mei-Lin knows exactly why the greenhouse can never be surveyed properly, though she reveals nothing of it — to her board she frames her objection tonight as simple procedural caution, a chair being careful with a huge decision, and privately she is already calculating how many more weeks of careful caution she has left in her before someone stops believing it's caution at all."
+          },
+          "solution": "In October 1923, during the rushed construction of the rooftop glasshouse, laborer Kwok-Wing Lai fell into the wet concrete pour of the southeast corner support pier and died. Crew foreman Otto Brandt, bribed by the building's original owner to avoid costly delays, labor unrest, and immigration scrutiny of undocumented Chinese laborers, had the body sealed inside the pier rather than reported, and falsified the payroll log to show Lai as simply 'discharged.' Decades later, Lai's sister — Mei-Lin Castellan's grandmother — learned the truth from a dying former crew member's letter and spent the rest of her life as the greenhouse's unofficial guardian, quietly steering every renovation and survey away from that corner. Mei-Lin inherited both the guardianship and the secret, and has never told anyone, including her own son Liwei.",
+          "objective_facts": [
+            "The greenhouse's southeast corner support pier was poured in a single rushed night in October 1923, unlike the other three piers, which the original builder's ledger shows took a full week each.",
+            "Crew foreman Otto Brandt's 1923 payroll records list laborer Kwok-Wing Lai as 'discharged' the same week the southeast pier was completed, with no further employment or immigration record of him found afterward.",
+            "A 1961 letter from a former crew member to Mei-Lin's grandmother, hidden inside a false-bottomed seed tin in the greenhouse potting shed, describes what happened to Kwok-Wing Lai.",
+            "Ground-penetrating radar or structural coring at the southeast pier, as required by the developer's due-diligence survey, would almost certainly detect human remains."
+          ]
+        },
+        {
+          "label": "The Missing Dues",
+          "character_knowledge": {
+            "DECLAN_FARRAY": "Declan understands better than anyone what a sale actually means: outside accountants, a full audit, eyes on every invoice he's touched in six years. He says all the right reassuring things about the co-op's finances being 'in good shape' at the meeting, while privately he is already rehearsing which files to move first and which he might still have time to quietly replace."
+          },
+          "solution": "Over the six years since becoming treasurer, Declan Farray has diverted roughly $3,000-4,000 a month from the co-op's maintenance reserve fund — more than $240,000 in total — to cover his adult son Bryan's gambling debts and, more recently, threats from the people Bryan owes money to. Declan has hidden the shortfall behind fictitious repair invoices from a contractor that no longer exists, and has aggressively lobbied the board to delay any professional facilities audit, knowing a real estate sale would trigger exactly the kind of scrutiny that would expose the doctored books within days.",
+          "objective_facts": [
+            "The co-op's reserve fund shows $241,500 less than the total of all dues collected and interest accrued since Declan Farray became treasurer six years ago.",
+            "Three invoices in the co-op's files — for a boiler replacement, roof membrane repair, and elevator motor service — list a contractor, Vance Municipal Services, that dissolved as a business four years ago and never performed the listed work.",
+            "Declan Farray's son Bryan has an active collections judgment against him, and Declan's personal bank statements show a documented pattern of cash withdrawals matching dates shortly after co-op dues deposits clear.",
+            "Any third-party financial audit tied to the developer's acquisition due diligence would cross-reference invoices against contractor licensing records within its first week."
+          ]
+        },
+        {
+          "label": "The Borrowed Name",
+          "character_knowledge": {
+            "SOO_JIN_PARK": "Soo-Jin hears 'sale' and thinks only of the word 'shareholder' — of forms, notaries, a name that isn't hers being asked to appear in person somewhere she can't make it appear. She tells the neighbor who brings her the news that she's simply tired tonight, deflecting warmly, and privately begins running through how many years it's been since anyone actually looked at Yoon Hee-ja's face."
+          },
+          "solution": "The rightful shareholder of Unit 4G, Yoon Hee-ja, died five years ago. Her grandniece, Soo-Jin Park, had moved in two years earlier on a caregiver visa to look after her, and — terrified of losing both her home and her immigration standing with no other family in the country — never reported the death. She has been forging Yoon Hee-ja's signature on co-op ballots, maintenance requests, and an expired lease renewal ever since, and pays dues from an account still nominally in her aunt's name. A shareholder-identity verification, which Halloran's legal team requires before any sale can close, would immediately expose that 'Yoon Hee-ja' has not appeared in person, aged, or renewed identification in five years.",
+          "objective_facts": [
+            "Yoon Hee-ja's death certificate, filed with the city five years ago, has never been submitted to the co-op board or recorded in its shareholder registry.",
+            "Signatures on the last five years of annual meeting ballots attributed to Yoon Hee-ja show handwriting inconsistent with her notarized 1998 share certificate signature.",
+            "Yoon Hee-ja's driver's license and passport both expired within eight months of her death and were never renewed.",
+            "Halloran's acquisition contract requires notarized in-person identity verification of every shareholder of record before closing."
+          ]
+        },
+        {
+          "label": "The Quiet Fix",
+          "character_knowledge": {
+            "AIKO_TANAKA": "Aiko knows precisely which corner of this building would not survive a professional structural inspection, because she is the one who patched it. At the meeting she keeps her hands busy and her opinions vague, and afterward heads straight for the workshop, already listing which tools she'll need before anyone official ever sets foot near that truss."
+          },
+          "solution": "Fifteen years ago, a summer storm cracked two of the glasshouse's original cast-iron roof trusses. Superintendent Aiko Tanaka, under pressure from a board that couldn't afford a permitted structural repair, welded and braced the trusses herself using mismatched salvaged steel and never filed for the required city permit or follow-up inspection. The patch held for years but weakened over time; six years ago a section of glazing and truss brace gave way during a co-op gathering, badly injuring Yoon Hee-ja and contributing to the decline in her health that led to her death the following year. Aiko has quietly monitored and re-shored the same corner ever since, terrified an inspection will expose both her original unpermitted repair and her role in Yoon Hee-ja's injury.",
+          "objective_facts": [
+            "City permit records show no structural permit was ever filed for glasshouse roof truss repairs, despite co-op meeting minutes from fifteen years ago approving emergency truss repair funds.",
+            "The welds and steel bracing on the northwest and north trusses do not match the original 1923 cast-iron specifications and show non-professional fabrication marks.",
+            "A co-op incident report from six years ago documents a partial glazing and truss collapse during a spring gathering that injured Yoon Hee-ja, requiring hospitalization.",
+            "Aiko Tanaka has purchased replacement bracing hardware for the same northwest truss section three times in the past six years, each time without an accompanying work order or board approval."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "Every Reason to Wait",
+      "theme": "With the vote rescheduled, Liwei Castellan pushes his mother and the co-op to move faster on the developer's behalf, unaware his own family's silence is the biggest obstacle, while Declan volunteers to 'streamline' the co-op's financial paperwork before any outside eyes can look too closely.",
+      "intro_note": "A week has bought Mei-Lin almost nothing — the developer is patient, but her own son is not, and he has started asking why his mother, of all people, seems to be the one slowing everything down.",
+      "outro_note": "Liwei has found a dusty folder in the co-op office marked simply 'ARCHIVE — PRE-1970,' with no idea what's inside it or why his mother goes still the moment he mentions it at dinner. And in the basement, alone with the ledgers he's just volunteered to 'streamline,' Declan Farray realizes for the first time that fixing the books might mean someone actually reads them.",
+      "sections": [
+        "Castellan Apartment: Liwei presses his mother over jasmine tea about why the board keeps stalling, certain it's simply old-fashioned caution",
+        "The Co-op Office: at a hastily called finance sub-committee, Declan volunteers to organize and 'streamline' the co-op's records ahead of any due-diligence request",
+        "The Glasshouse: Mei-Lin walks the rows alone at dusk, lingering near the southeast pier under the pretense of checking the citrus",
+        "Corner Diner: Liwei meets Iggy again, promising the co-op will have everything Halloran needs within the month",
+        "Super's Workshop: Aiko quietly begins re-shoring the northwest truss with salvaged brackets, working later than usual",
+        "Unit 4G: Soo-Jin studies old identification documents by lamplight, trying to remember exactly how her aunt used to sign her name",
+        "Lobby: residents trade theories on the bulletin board about why the vote keeps slipping, none of them close to the truth",
+        "Co-op Office: alone after hours, Declan pulls the Vance Municipal Services invoices and studies them like a man studying a lie he's about to have to tell better",
+        "Castellan Apartment: Liwei, digging through a storage closet for meeting minutes, surfaces a folder marked 'ARCHIVE — PRE-1970' and asks his mother, offhand, what's in it"
+      ],
+      "section_words": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 150,
+          "max": 210,
+          "target": "160 to 190"
+        },
+        null
+      ],
+      "section_locations": [
+        "CASTELLAN_APARTMENT",
+        "FARRAY_OFFICE",
+        "THE_GLASSHOUSE",
+        "CORNER_DINER",
+        "SUPER_WORKSHOP",
+        "UNIT_4G",
+        "LOBBY",
+        "FARRAY_OFFICE",
+        "CASTELLAN_APARTMENT"
+      ],
+      "case": [
+        {
+          "label": "The Founder's Rest",
+          "character_knowledge": {
+            "MEI_LIN_CASTELLAN": "Mei-Lin deflects Liwei's questions about the pace of the sale with talk of 'due diligence' and 'protecting the co-op's interests,' true things that are not her real reason. When he stumbles onto the pre-1970 archive folder she keeps her voice light and changes the subject fast, telling herself she isn't lying to her son so much as sparing him something he was never meant to carry.",
+            "LIWEI_CASTELLAN": "Liwei genuinely believes his mother's caution is generational — an old woman's sentimental attachment to a building she grew up in, nothing more — and it frustrates him that she won't just trust the numbers. He has no idea the archive folder he's just found by accident touches anything real; to him it's paperwork, a curiosity, a name he'll ask about again when he has time."
+          },
+          "solution": "In October 1923, during the rushed construction of the rooftop glasshouse, laborer Kwok-Wing Lai fell into the wet concrete pour of the southeast corner support pier and died. Crew foreman Otto Brandt, bribed by the building's original owner to avoid costly delays, labor unrest, and immigration scrutiny of undocumented Chinese laborers, had the body sealed inside the pier rather than reported, and falsified the payroll log to show Lai as simply 'discharged.' Decades later, Lai's sister — Mei-Lin Castellan's grandmother — learned the truth from a dying former crew member's letter and spent the rest of her life as the greenhouse's unofficial guardian, quietly steering every renovation and survey away from that corner. Mei-Lin inherited both the guardianship and the secret, and has never told anyone, including her own son Liwei.",
+          "objective_facts": [
+            "The greenhouse's southeast corner support pier was poured in a single rushed night in October 1923, unlike the other three piers, which the original builder's ledger shows took a full week each.",
+            "Crew foreman Otto Brandt's 1923 payroll records list laborer Kwok-Wing Lai as 'discharged' the same week the southeast pier was completed, with no further employment or immigration record of him found afterward.",
+            "A 1961 letter from a former crew member to Mei-Lin's grandmother, hidden inside a false-bottomed seed tin in the greenhouse potting shed, describes what happened to Kwok-Wing Lai.",
+            "Ground-penetrating radar or structural coring at the southeast pier, as required by the developer's due-diligence survey, would almost certainly detect human remains."
+          ]
+        },
+        {
+          "label": "The Missing Dues",
+          "character_knowledge": {
+            "DECLAN_FARRAY": "Declan frames volunteering to 'streamline' the records as helpfulness, and the board takes him at his word. Alone with the Vance Municipal Services invoices, he knows exactly how thin they are and starts drafting a story — a contractor who went under, records lost in the transition — good enough to survive a glance, though he isn't yet sure it will survive an audit."
+          },
+          "solution": "Over the six years since becoming treasurer, Declan Farray has diverted roughly $3,000-4,000 a month from the co-op's maintenance reserve fund — more than $240,000 in total — to cover his adult son Bryan's gambling debts and, more recently, threats from the people Bryan owes money to. Declan has hidden the shortfall behind fictitious repair invoices from a contractor that no longer exists, and has aggressively lobbied the board to delay any professional facilities audit, knowing a real estate sale would trigger exactly the kind of scrutiny that would expose the doctored books within days.",
+          "objective_facts": [
+            "The co-op's reserve fund shows $241,500 less than the total of all dues collected and interest accrued since Declan Farray became treasurer six years ago.",
+            "Three invoices in the co-op's files — for a boiler replacement, roof membrane repair, and elevator motor service — list a contractor, Vance Municipal Services, that dissolved as a business four years ago and never performed the listed work.",
+            "Declan Farray's son Bryan has an active collections judgment against him, and Declan's personal bank statements show a documented pattern of cash withdrawals matching dates shortly after co-op dues deposits clear.",
+            "Any third-party financial audit tied to the developer's acquisition due diligence would cross-reference invoices against contractor licensing records within its first week."
+          ]
+        },
+        {
+          "label": "The Borrowed Name",
+          "character_knowledge": {
+            "SOO_JIN_PARK": "Soo-Jin knows the sale means paperwork will eventually need a signature that matches an identity she's been forging for years, and she spends the evening practicing her aunt's handwriting from an old grocery list, telling herself she still has time before anyone asks for anything notarized."
+          },
+          "solution": "The rightful shareholder of Unit 4G, Yoon Hee-ja, died five years ago. Her grandniece, Soo-Jin Park, had moved in two years earlier on a caregiver visa to look after her, and — terrified of losing both her home and her immigration standing with no other family in the country — never reported the death. She has been forging Yoon Hee-ja's signature on co-op ballots, maintenance requests, and an expired lease renewal ever since, and pays dues from an account still nominally in her aunt's name. A shareholder-identity verification, which Halloran's legal team requires before any sale can close, would immediately expose that 'Yoon Hee-ja' has not appeared in person, aged, or renewed identification in five years.",
+          "objective_facts": [
+            "Yoon Hee-ja's death certificate, filed with the city five years ago, has never been submitted to the co-op board or recorded in its shareholder registry.",
+            "Signatures on the last five years of annual meeting ballots attributed to Yoon Hee-ja show handwriting inconsistent with her notarized 1998 share certificate signature.",
+            "Yoon Hee-ja's driver's license and passport both expired within eight months of her death and were never renewed.",
+            "Halloran's acquisition contract requires notarized in-person identity verification of every shareholder of record before closing."
+          ]
+        },
+        {
+          "label": "The Quiet Fix",
+          "character_knowledge": {
+            "AIKO_TANAKA": "Aiko has decided the safest move is to make her old repair look less like an old repair — new brackets over old welds, done quietly, after hours, before anyone with a clipboard comes near it. She tells no one on the board what she's doing, reasoning that a fix nobody asked about can't become a confession."
+          },
+          "solution": "Fifteen years ago, a summer storm cracked two of the glasshouse's original cast-iron roof trusses. Superintendent Aiko Tanaka, under pressure from a board that couldn't afford a permitted structural repair, welded and braced the trusses herself using mismatched salvaged steel and never filed for the required city permit or follow-up inspection. The patch held for years but weakened over time; six years ago a section of glazing and truss brace gave way during a co-op gathering, badly injuring Yoon Hee-ja and contributing to the decline in her health that led to her death the following year. Aiko has quietly monitored and re-shored the same corner ever since, terrified an inspection will expose both her original unpermitted repair and her role in Yoon Hee-ja's injury.",
+          "objective_facts": [
+            "City permit records show no structural permit was ever filed for glasshouse roof truss repairs, despite co-op meeting minutes from fifteen years ago approving emergency truss repair funds.",
+            "The welds and steel bracing on the northwest and north trusses do not match the original 1923 cast-iron specifications and show non-professional fabrication marks.",
+            "A co-op incident report from six years ago documents a partial glazing and truss collapse during a spring gathering that injured Yoon Hee-ja, requiring hospitalization.",
+            "Aiko Tanaka has purchased replacement bracing hardware for the same northwest truss section three times in the past six years, each time without an accompanying work order or board approval."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "The First Walk-Through",
+      "theme": "Halloran's acquisitions liaison Iggy Chen requests an informal walk-through of the greenhouse ahead of a full survey, sending Aiko into a quiet scramble to re-shore the northwest truss and Mei-Lin scrambling to keep the tour away from the southeast corner pier.",
+      "intro_note": "The 'streamlined' paperwork Declan promised has bought a little goodwill, and Halloran wants to see the greenhouse itself before anything more formal — a friendly walk-through, Iggy calls it, nothing to worry about.",
+      "outro_note": "The walk-through ends without incident — almost. As Iggy leaves, he pauses at the office door, flipping back through a maintenance log that doesn't quite add up to him. He says nothing. Not yet. But he takes a photo of the page before he goes.",
+      "sections": [
+        "Lobby: Iggy arrives early with a clipboard and an easy smile, asking Mei-Lin for 'just a look around, nothing official'",
+        "Super's Workshop: Aiko scrambles to finish bracing the northwest truss before the tour reaches it, hands shaking for the first time in years",
+        "The Glasshouse: Mei-Lin plans a walking route through the citrus rows designed to keep Iggy's attention anywhere but the southeast corner",
+        "Co-op Office: Declan intercepts Iggy on the way up with a folder of tidied paperwork, trying to keep him talking downstairs a little longer",
+        "The Glasshouse: the walk-through itself — Mei-Lin's practiced small talk, Aiko's last-minute repositioning of a potted tree to block the pier, Iggy's easy, unsuspecting curiosity",
+        "Unit 4G: in the background of the day's tension, Soo-Jin receives an email from Halloran's legal team requesting shareholder identification within thirty days",
+        "Corner Diner: Liwei and Iggy debrief afterward over coffee, Liwei thrilled at how well it went, Iggy noncommittal",
+        "Super's Workshop: back underground, Aiko exhales for the first time all day, only to notice Iggy lingering a beat too long near the office maintenance logs on his way out",
+        "The Glasshouse: Mei-Lin alone at dusk, watching the greenhouse empty out, unsure whether she just bought a reprieve or only postponed the moment someone finally looks too closely"
+      ],
+      "section_words": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 130,
+          "max": 190,
+          "target": "140 to 170"
+        },
+        null
+      ],
+      "section_locations": [
+        "LOBBY",
+        "SUPER_WORKSHOP",
+        "THE_GLASSHOUSE",
+        "FARRAY_OFFICE",
+        "THE_GLASSHOUSE",
+        "UNIT_4G",
+        "CORNER_DINER",
+        "FARRAY_OFFICE",
+        "THE_GLASSHOUSE"
+      ],
+      "case": [
+        {
+          "label": "The Founder's Rest",
+          "character_knowledge": {
+            "MEI_LIN_CASTELLAN": "Mei-Lin has rehearsed this walk-through in her head a dozen times, and she executes it flawlessly — warm anecdotes about the citrus, a story about the original ironwork, anything to keep Iggy's feet moving and his eyes up. She tells him the southeast corner is 'the oldest and most fragile part of the room, best admired from a distance,' which is true in a way she needs him to never fully understand.",
+            "IGGY_CHEN": "Iggy finds the whole building charmingly eccentric — an old chairwoman a little too attached to her plants, a super who seems oddly protective of a corner of iron and glass — and reads none of it as anything but small-cooperative sentimentality. He leaves satisfied, filing the visit as a formality successfully completed."
+          },
+          "solution": "In October 1923, during the rushed construction of the rooftop glasshouse, laborer Kwok-Wing Lai fell into the wet concrete pour of the southeast corner support pier and died. Crew foreman Otto Brandt, bribed by the building's original owner to avoid costly delays, labor unrest, and immigration scrutiny of undocumented Chinese laborers, had the body sealed inside the pier rather than reported, and falsified the payroll log to show Lai as simply 'discharged.' Decades later, Lai's sister — Mei-Lin Castellan's grandmother — learned the truth from a dying former crew member's letter and spent the rest of her life as the greenhouse's unofficial guardian, quietly steering every renovation and survey away from that corner. Mei-Lin inherited both the guardianship and the secret, and has never told anyone, including her own son Liwei.",
+          "objective_facts": [
+            "The greenhouse's southeast corner support pier was poured in a single rushed night in October 1923, unlike the other three piers, which the original builder's ledger shows took a full week each.",
+            "Crew foreman Otto Brandt's 1923 payroll records list laborer Kwok-Wing Lai as 'discharged' the same week the southeast pier was completed, with no further employment or immigration record of him found afterward.",
+            "A 1961 letter from a former crew member to Mei-Lin's grandmother, hidden inside a false-bottomed seed tin in the greenhouse potting shed, describes what happened to Kwok-Wing Lai.",
+            "Ground-penetrating radar or structural coring at the southeast pier, as required by the developer's due-diligence survey, would almost certainly detect human remains."
+          ]
+        },
+        {
+          "label": "The Missing Dues",
+          "character_knowledge": {
+            "DECLAN_FARRAY": "Declan uses the walk-through as cover to keep Iggy occupied downstairs with tidied files, steering him away from anything older than two years. He believes his 'streamlining' has bought him real time, not realizing Iggy has already photographed a page he meant to have replaced by now."
+          },
+          "solution": "Over the six years since becoming treasurer, Declan Farray has diverted roughly $3,000-4,000 a month from the co-op's maintenance reserve fund — more than $240,000 in total — to cover his adult son Bryan's gambling debts and, more recently, threats from the people Bryan owes money to. Declan has hidden the shortfall behind fictitious repair invoices from a contractor that no longer exists, and has aggressively lobbied the board to delay any professional facilities audit, knowing a real estate sale would trigger exactly the kind of scrutiny that would expose the doctored books within days.",
+          "objective_facts": [
+            "The co-op's reserve fund shows $241,500 less than the total of all dues collected and interest accrued since Declan Farray became treasurer six years ago.",
+            "Three invoices in the co-op's files — for a boiler replacement, roof membrane repair, and elevator motor service — list a contractor, Vance Municipal Services, that dissolved as a business four years ago and never performed the listed work.",
+            "Declan Farray's son Bryan has an active collections judgment against him, and Declan's personal bank statements show a documented pattern of cash withdrawals matching dates shortly after co-op dues deposits clear.",
+            "Any third-party financial audit tied to the developer's acquisition due diligence would cross-reference invoices against contractor licensing records within its first week."
+          ]
+        },
+        {
+          "label": "The Borrowed Name",
+          "character_knowledge": {
+            "SOO_JIN_PARK": "The thirty-day deadline for shareholder identification lands on Soo-Jin like a countdown she can no longer pretend isn't real. She has no plan yet beyond delay, and spends the evening quietly rehearsing excuses — a lost passport, a slow mail system — that she knows won't hold up to a notary's scrutiny."
+          },
+          "solution": "The rightful shareholder of Unit 4G, Yoon Hee-ja, died five years ago. Her grandniece, Soo-Jin Park, had moved in two years earlier on a caregiver visa to look after her, and — terrified of losing both her home and her immigration standing with no other family in the country — never reported the death. She has been forging Yoon Hee-ja's signature on co-op ballots, maintenance requests, and an expired lease renewal ever since, and pays dues from an account still nominally in her aunt's name. A shareholder-identity verification, which Halloran's legal team requires before any sale can close, would immediately expose that 'Yoon Hee-ja' has not appeared in person, aged, or renewed identification in five years.",
+          "objective_facts": [
+            "Yoon Hee-ja's death certificate, filed with the city five years ago, has never been submitted to the co-op board or recorded in its shareholder registry.",
+            "Signatures on the last five years of annual meeting ballots attributed to Yoon Hee-ja show handwriting inconsistent with her notarized 1998 share certificate signature.",
+            "Yoon Hee-ja's driver's license and passport both expired within eight months of her death and were never renewed.",
+            "Halloran's acquisition contract requires notarized in-person identity verification of every shareholder of record before closing."
+          ]
+        },
+        {
+          "label": "The Quiet Fix",
+          "character_knowledge": {
+            "AIKO_TANAKA": "Aiko gets the new bracing finished with less than an hour to spare and spends the entire walk-through positioning herself and a potted lemon tree between Iggy and the worst of the old welds. Watching him linger over the maintenance log afterward, she can't tell if it's nothing or the first thread of something starting to come loose.",
+            "IGGY_CHEN": "Iggy doesn't yet suspect anything about the greenhouse's structure — the bracing looks tidy enough to his untrained eye — but a discrepancy in the maintenance log's dates has snagged his professional instincts in a way he can't quite name yet, and he photographs the page purely out of habit, the kind that has caught him useful things before."
+          },
+          "solution": "Fifteen years ago, a summer storm cracked two of the glasshouse's original cast-iron roof trusses. Superintendent Aiko Tanaka, under pressure from a board that couldn't afford a permitted structural repair, welded and braced the trusses herself using mismatched salvaged steel and never filed for the required city permit or follow-up inspection. The patch held for years but weakened over time; six years ago a section of glazing and truss brace gave way during a co-op gathering, badly injuring Yoon Hee-ja and contributing to the decline in her health that led to her death the following year. Aiko has quietly monitored and re-shored the same corner ever since, terrified an inspection will expose both her original unpermitted repair and her role in Yoon Hee-ja's injury.",
+          "objective_facts": [
+            "City permit records show no structural permit was ever filed for glasshouse roof truss repairs, despite co-op meeting minutes from fifteen years ago approving emergency truss repair funds.",
+            "The welds and steel bracing on the northwest and north trusses do not match the original 1923 cast-iron specifications and show non-professional fabrication marks.",
+            "A co-op incident report from six years ago documents a partial glazing and truss collapse during a spring gathering that injured Yoon Hee-ja, requiring hospitalization.",
+            "Aiko Tanaka has purchased replacement bracing hardware for the same northwest truss section three times in the past six years, each time without an accompanying work order or board approval."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "Paper Trails",
+      "theme": "A minor discrepancy in the co-op's maintenance records catches Iggy's attention, forcing Declan to fabricate a bigger cover story on the fly, while Soo-Jin is rattled when Halloran's legal team requests updated identification from every shareholder of record.",
+      "intro_note": "After the first informal walk-through, the greenhouse held its secrets a little longer — but the paperwork behind it is starting to move faster than anyone controlling it.",
+      "outro_note": "Between a board notice nobody can ignore and a cover story that's starting to fray, two people in this building are quietly running out of road at the same time — and neither of them knows it yet.",
+      "sections": [
+        "The Co-op Office — Declan reviews Iggy's audit notes alone and finds a flagged invoice (The Missing Dues)",
+        "The Lobby — Iggy asks Declan a casual question about Vance Municipal Services (The Missing Dues)",
+        "Unit 4G — Soo-Jin receives Halloran's identity-verification letter (The Borrowed Name)",
+        "The Corner Diner — Soo-Jin downplays her worry to Aiko as ordinary paperwork stress (The Borrowed Name)",
+        "The Glasshouse — Aiko checks the northwest truss while Mei-Lin lingers near the southeast pier (The Quiet Fix / The Founder's Rest)",
+        "The Castellan Apartment — Liwei pushes his mother to speed up the paperwork, puzzled by her evasiveness (The Founder's Rest)",
+        "The Co-op Office — Declan invents a bigger cover story about a defunct contractor (The Missing Dues)",
+        "The Lobby — A board notice about mandatory shareholder ID verification goes up, and residents murmur (The Borrowed Name)",
+        "Unit 4G — Alone, Soo-Jin studies her aunt's old documents, calculating what she can still produce (The Borrowed Name)"
+      ],
+      "section_words": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 110,
+          "max": 200,
+          "target": "120 to 170"
+        },
+        null,
+        null
+      ],
+      "section_locations": [
+        "FARRAY_OFFICE",
+        "LOBBY",
+        "UNIT_4G",
+        "CORNER_DINER",
+        "THE_GLASSHOUSE",
+        "CASTELLAN_APARTMENT",
+        "FARRAY_OFFICE",
+        "LOBBY",
+        "UNIT_4G"
+      ],
+      "case": [
+        {
+          "label": "The Founder's Rest",
+          "character_knowledge": {
+            "MEI_LIN_CASTELLAN": "As Halloran's process grinds toward more formal document requests, Mei-Lin grows newly anxious and deflects Liwei's questions about older archives by insisting they're 'not organized,' never lying outright, just controlling access; she tells no one why the southeast pier matters to her.",
+            "LIWEI_CASTELLAN": "Liwei has no idea what he's brushing against; he reads his mother's cagey behavior as sentimental overprotectiveness about the building's history, grows mildly frustrated, and pushes for digitizing the archive to speed things up — unaware that's the very thing that could expose her."
+          },
+          "solution": "In October 1923, during the rushed construction of the rooftop glasshouse, laborer Kwok-Wing Lai fell into the wet concrete pour of the southeast corner support pier and died. Crew foreman Otto Brandt, bribed by the building's original owner to avoid costly delays, labor unrest, and immigration scrutiny of undocumented Chinese laborers, had the body sealed inside the pier rather than reported, and falsified the payroll log to show Lai as simply 'discharged.' Decades later, Lai's sister — Mei-Lin Castellan's grandmother — learned the truth from a dying former crew member's letter and spent the rest of her life as the greenhouse's unofficial guardian, quietly steering every renovation and survey away from that corner. Mei-Lin inherited both the guardianship and the secret, and has never told anyone, including her own son Liwei.",
+          "objective_facts": [
+            "The greenhouse's southeast corner support pier was poured in a single rushed night in October 1923, unlike the other three piers, which the original builder's ledger shows took a full week each.",
+            "Crew foreman Otto Brandt's 1923 payroll records list laborer Kwok-Wing Lai as 'discharged' the same week the southeast pier was completed, with no further employment or immigration record of him found afterward.",
+            "A 1961 letter from a former crew member to Mei-Lin's grandmother, hidden inside a false-bottomed seed tin in the greenhouse potting shed, describes what happened to Kwok-Wing Lai.",
+            "Ground-penetrating radar or structural coring at the southeast pier, as required by the developer's due-diligence survey, would almost certainly detect human remains."
+          ]
+        },
+        {
+          "label": "The Missing Dues",
+          "character_knowledge": {
+            "DECLAN_FARRAY": "Rattled that Iggy has flagged one of his fabricated Vance Municipal invoices, Declan invents a more elaborate story about a 'verbal agreement' with the now-dissolved contractor, privately aware the excuse is thin and won't survive real scrutiny.",
+            "IGGY_CHEN": "Iggy doesn't suspect fraud; he reads the anomaly as sloppy record-keeping typical of an old co-op, logs it as a minor compliance flag, and plans to request the contractor's licensing paperwork next — with no idea he's about to unravel a crime.",
+            "MEI_LIN_CASTELLAN": "Mei-Lin notices Declan seems more anxious than usual about the books but assumes it's just the stress of the sale, with no suspicion of the true scale of what he's hiding."
+          },
+          "solution": "Over the six years since becoming treasurer, Declan Farray has diverted roughly $3,000-4,000 a month from the co-op's maintenance reserve fund — more than $240,000 in total — to cover his adult son Bryan's gambling debts and, more recently, threats from the people Bryan owes money to. Declan has hidden the shortfall behind fictitious repair invoices from a contractor that no longer exists, and has aggressively lobbied the board to delay any professional facilities audit, knowing a real estate sale would trigger exactly the kind of scrutiny that would expose the doctored books within days.",
+          "objective_facts": [
+            "The co-op's reserve fund shows $241,500 less than the total of all dues collected and interest accrued since Declan Farray became treasurer six years ago.",
+            "Three invoices in the co-op's files — for a boiler replacement, roof membrane repair, and elevator motor service — list a contractor, Vance Municipal Services, that dissolved as a business four years ago and never performed the listed work.",
+            "Declan Farray's son Bryan has an active collections judgment against him, and Declan's personal bank statements show a documented pattern of cash withdrawals matching dates shortly after co-op dues deposits clear.",
+            "Any third-party financial audit tied to the developer's acquisition due diligence would cross-reference invoices against contractor licensing records within its first week."
+          ]
+        },
+        {
+          "label": "The Borrowed Name",
+          "character_knowledge": {
+            "SOO_JIN_PARK": "The identity-verification letter throws Soo-Jin into private panic — she has nothing that would survive real scrutiny as 'Yoon Hee-ja' — and she downplays her fear to Aiko as general worry about paperwork while she quietly weighs stalling, forging, or fleeing.",
+            "AIKO_TANAKA": "Aiko notices Soo-Jin is more rattled than the letter alone explains but chalks it up to the general anxiety many newer residents feel around immigration paperwork, offering reassurance without understanding what's actually being asked of her.",
+            "MEI_LIN_CASTELLAN": "As board chair, Mei-Lin forwarded the identity-verification requirement to every shareholder without registering anything unusual about Yoon Hee-ja's file specifically — to her it's routine.",
+            "IGGY_CHEN": "Iggy is pushing the ID verification as standard due-diligence procedure across all shareholders and has no particular suspicion yet about Unit 4G."
+          },
+          "solution": "The rightful shareholder of Unit 4G, Yoon Hee-ja, died five years ago. Her grandniece, Soo-Jin Park, had moved in two years earlier on a caregiver visa to look after her, and — terrified of losing both her home and her immigration standing with no other family in the country — never reported the death. She has been forging Yoon Hee-ja's signature on co-op ballots, maintenance requests, and an expired lease renewal ever since, and pays dues from an account still nominally in her aunt's name. A shareholder-identity verification, which Halloran's legal team requires before any sale can close, would immediately expose that 'Yoon Hee-ja' has not appeared in person, aged, or renewed identification in five years.",
+          "objective_facts": [
+            "Yoon Hee-ja's death certificate, filed with the city five years ago, has never been submitted to the co-op board or recorded in its shareholder registry.",
+            "Signatures on the last five years of annual meeting ballots attributed to Yoon Hee-ja show handwriting inconsistent with her notarized 1998 share certificate signature.",
+            "Yoon Hee-ja's driver's license and passport both expired within eight months of her death and were never renewed.",
+            "Halloran's acquisition contract requires notarized in-person identity verification of every shareholder of record before closing."
+          ]
+        },
+        {
+          "label": "The Quiet Fix",
+          "character_knowledge": {
+            "AIKO_TANAKA": "Aiko keeps quietly reinforcing the same northwest truss section she patched years ago, growing more anxious as the sale advances and a real inspection edges closer to the roof — she has told no one the corner's true history."
+          },
+          "solution": "Fifteen years ago, a summer storm cracked two of the glasshouse's original cast-iron roof trusses. Superintendent Aiko Tanaka, under pressure from a board that couldn't afford a permitted structural repair, welded and braced the trusses herself using mismatched salvaged steel and never filed for the required city permit or follow-up inspection. The patch held for years but weakened over time; six years ago a section of glazing and truss brace gave way during a co-op gathering, badly injuring Yoon Hee-ja and contributing to the decline in her health that led to her death the following year. Aiko has quietly monitored and re-shored the same corner ever since, terrified an inspection will expose both her original unpermitted repair and her role in Yoon Hee-ja's injury.",
+          "objective_facts": [
+            "City permit records show no structural permit was ever filed for glasshouse roof truss repairs, despite co-op meeting minutes from fifteen years ago approving emergency truss repair funds.",
+            "The welds and steel bracing on the northwest and north trusses do not match the original 1923 cast-iron specifications and show non-professional fabrication marks.",
+            "A co-op incident report from six years ago documents a partial glazing and truss collapse during a spring gathering that injured Yoon Hee-ja, requiring hospitalization.",
+            "Aiko Tanaka has purchased replacement bracing hardware for the same northwest truss section three times in the past six years, each time without an accompanying work order or board approval."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "What the Ledger Won't Say",
+      "theme": "Liwei volunteers to assemble the shareholder and maintenance archive for Halloran's legal team, unknowingly moving closer to both his mother's oldest secret and Soo-Jin's most guarded one, while an old resident's offhand story about 'the night the roof came down' puts Aiko on edge.",
+      "intro_note": "The board notice is up, the letters are out, and the paper trail Declan and Soo-Jin both feared is finally starting to move — straight toward the one Castellan who doesn't yet know what he's looking for.",
+      "outro_note": "Liwei has found a signature that doesn't quite match, a truss that doesn't quite explain itself, and a mother who won't quite meet his eyes — three small cracks nobody else has noticed yet, all pointing at once toward the same reckoning.",
+      "sections": [
+        "The Lobby — Liwei offers to assemble the full shareholder and maintenance archive for Halloran's legal team (ensemble)",
+        "The Castellan Apartment — Mei-Lin's poorly hidden alarm as she tries to steer Liwei away from the oldest boxes (The Founder's Rest)",
+        "The Co-op Office — Declan realizes the archive project will put his invoices under a family member's eyes, not just Iggy's (The Missing Dues)",
+        "The Corner Diner — An old-timer's story about 'the night the roof came down' rattles Aiko in front of the others (The Quiet Fix)",
+        "The Super's Workshop — Aiko reviews her private notes on the truss repair, weighing whether to speak before someone else finds it (The Quiet Fix)",
+        "Unit 4G — Liwei visits Soo-Jin to collect her shareholder documents, growing closer to her and to her secret (The Borrowed Name)",
+        "The Glasshouse — Mei-Lin alone at the potting shed, checking that the seed tin is still safely hidden (The Founder's Rest)",
+        "The Co-op Office — Sorting old ledgers, Liwei mentions an odd invoice date to Declan, who scrambles to explain it away (The Missing Dues)",
+        "The Lobby — Cross-referencing shareholder signatures, Liwei notices an inconsistency in Yoon Hee-ja's file (The Borrowed Name)"
+      ],
+      "section_words": [
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 110,
+          "max": 200,
+          "target": "120 to 170"
+        },
+        null,
+        {
+          "min": 100,
+          "max": 190,
+          "target": "110 to 160"
+        },
+        null,
+        null
+      ],
+      "section_locations": [
+        "LOBBY",
+        "CASTELLAN_APARTMENT",
+        "FARRAY_OFFICE",
+        "CORNER_DINER",
+        "SUPER_WORKSHOP",
+        "UNIT_4G",
+        "THE_GLASSHOUSE",
+        "FARRAY_OFFICE",
+        "LOBBY"
+      ],
+      "case": [
+        {
+          "label": "The Founder's Rest",
+          "character_knowledge": {
+            "MEI_LIN_CASTELLAN": "Mei-Lin panics quietly as Liwei volunteers to dig through the co-op's full historical archive, steering him toward only recent files by citing 'sensitive tenant information,' then slipping away to check that the seed tin is still safely hidden — still telling no one the truth.",
+            "LIWEI_CASTELLAN": "Liwei has no idea what he's brushing against; he reads his mother's redirection as overprotectiveness about 'the old stuff,' organizes the archive with growing curiosity about the building's early history, and remains unaware of what he might find."
+          },
+          "solution": "In October 1923, during the rushed construction of the rooftop glasshouse, laborer Kwok-Wing Lai fell into the wet concrete pour of the southeast corner support pier and died. Crew foreman Otto Brandt, bribed by the building's original owner to avoid costly delays, labor unrest, and immigration scrutiny of undocumented Chinese laborers, had the body sealed inside the pier rather than reported, and falsified the payroll log to show Lai as simply 'discharged.' Decades later, Lai's sister — Mei-Lin Castellan's grandmother — learned the truth from a dying former crew member's letter and spent the rest of her life as the greenhouse's unofficial guardian, quietly steering every renovation and survey away from that corner. Mei-Lin inherited both the guardianship and the secret, and has never told anyone, including her own son Liwei.",
+          "objective_facts": [
+            "The greenhouse's southeast corner support pier was poured in a single rushed night in October 1923, unlike the other three piers, which the original builder's ledger shows took a full week each.",
+            "Crew foreman Otto Brandt's 1923 payroll records list laborer Kwok-Wing Lai as 'discharged' the same week the southeast pier was completed, with no further employment or immigration record of him found afterward.",
+            "A 1961 letter from a former crew member to Mei-Lin's grandmother, hidden inside a false-bottomed seed tin in the greenhouse potting shed, describes what happened to Kwok-Wing Lai.",
+            "Ground-penetrating radar or structural coring at the southeast pier, as required by the developer's due-diligence survey, would almost certainly detect human remains."
+          ]
+        },
+        {
+          "label": "The Missing Dues",
+          "character_knowledge": {
+            "DECLAN_FARRAY": "Declan is quietly panicking that Liwei's organizing project will put his fabricated Vance Municipal invoices in front of a family member's eyes, not just Iggy's, and starts looking for ways to quietly pull or 'misplace' the most incriminating documents before Liwei reaches them.",
+            "LIWEI_CASTELLAN": "While sorting, Liwei notices an invoice date that doesn't line up with a board meeting minute and mentions it to Declan as a casual nitpick, with zero suspicion — unaware he's touched the edge of the fraud."
+          },
+          "solution": "Over the six years since becoming treasurer, Declan Farray has diverted roughly $3,000-4,000 a month from the co-op's maintenance reserve fund — more than $240,000 in total — to cover his adult son Bryan's gambling debts and, more recently, threats from the people Bryan owes money to. Declan has hidden the shortfall behind fictitious repair invoices from a contractor that no longer exists, and has aggressively lobbied the board to delay any professional facilities audit, knowing a real estate sale would trigger exactly the kind of scrutiny that would expose the doctored books within days.",
+          "objective_facts": [
+            "The co-op's reserve fund shows $241,500 less than the total of all dues collected and interest accrued since Declan Farray became treasurer six years ago.",
+            "Three invoices in the co-op's files — for a boiler replacement, roof membrane repair, and elevator motor service — list a contractor, Vance Municipal Services, that dissolved as a business four years ago and never performed the listed work.",
+            "Declan Farray's son Bryan has an active collections judgment against him, and Declan's personal bank statements show a documented pattern of cash withdrawals matching dates shortly after co-op dues deposits clear.",
+            "Any third-party financial audit tied to the developer's acquisition due diligence would cross-reference invoices against contractor licensing records within its first week."
+          ]
+        },
+        {
+          "label": "The Borrowed Name",
+          "character_knowledge": {
+            "SOO_JIN_PARK": "Soo-Jin hands over what documents she can when Liwei asks for her shareholder file, growing anxious as their closeness deepens and she realizes she's letting someone she's starting to care about get closer to the one thing that could ruin her.",
+            "LIWEI_CASTELLAN": "Cross-referencing signature dates, Liwei notices that 'Yoon Hee-ja's' handwriting looks different across a few years and the dates feel slightly off, but assumes it's just an elderly hand shaking with age — a small puzzle he can't quite let go of, not yet suspicion."
+          },
+          "solution": "The rightful shareholder of Unit 4G, Yoon Hee-ja, died five years ago. Her grandniece, Soo-Jin Park, had moved in two years earlier on a caregiver visa to look after her, and — terrified of losing both her home and her immigration standing with no other family in the country — never reported the death. She has been forging Yoon Hee-ja's signature on co-op ballots, maintenance requests, and an expired lease renewal ever since, and pays dues from an account still nominally in her aunt's name. A shareholder-identity verification, which Halloran's legal team requires before any sale can close, would immediately expose that 'Yoon Hee-ja' has not appeared in person, aged, or renewed identification in five years.",
+          "objective_facts": [
+            "Yoon Hee-ja's death certificate, filed with the city five years ago, has never been submitted to the co-op board or recorded in its shareholder registry.",
+            "Signatures on the last five years of annual meeting ballots attributed to Yoon Hee-ja show handwriting inconsistent with her notarized 1998 share certificate signature.",
+            "Yoon Hee-ja's driver's license and passport both expired within eight months of her death and were never renewed.",
+            "Halloran's acquisition contract requires notarized in-person identity verification of every shareholder of record before closing."
+          ]
+        },
+        {
+          "label": "The Quiet Fix",
+          "character_knowledge": {
+            "AIKO_TANAKA": "An old-timer's fireside story about 'the night the roof came down' cuts closer to the truth than Aiko would like in front of others; alone afterward, she reviews her own hidden notes on the northwest truss, weighing whether to reinforce it once more or finally tell someone before an inspection finds it first."
+          },
+          "solution": "Fifteen years ago, a summer storm cracked two of the glasshouse's original cast-iron roof trusses. Superintendent Aiko Tanaka, under pressure from a board that couldn't afford a permitted structural repair, welded and braced the trusses herself using mismatched salvaged steel and never filed for the required city permit or follow-up inspection. The patch held for years but weakened over time; six years ago a section of glazing and truss brace gave way during a co-op gathering, badly injuring Yoon Hee-ja and contributing to the decline in her health that led to her death the following year. Aiko has quietly monitored and re-shored the same corner ever since, terrified an inspection will expose both her original unpermitted repair and her role in Yoon Hee-ja's injury.",
+          "objective_facts": [
+            "City permit records show no structural permit was ever filed for glasshouse roof truss repairs, despite co-op meeting minutes from fifteen years ago approving emergency truss repair funds.",
+            "The welds and steel bracing on the northwest and north trusses do not match the original 1923 cast-iron specifications and show non-professional fabrication marks.",
+            "A co-op incident report from six years ago documents a partial glazing and truss collapse during a spring gathering that injured Yoon Hee-ja, requiring hospitalization.",
+            "Aiko Tanaka has purchased replacement bracing hardware for the same northwest truss section three times in the past six years, each time without an accompanying work order or board approval."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "The Coring Test",
+      "theme": "Halloran schedules a structural coring test at the southeast pier for the following week, throwing Mei-Lin into open panic and pushing Aiko to consider confessing to the board before the inspectors find her work first, while Declan's fabricated invoices begin to unravel under Iggy's scrutiny.",
+      "intro_note": "A mismatched signature, an odd invoice date, a story about a roof that once came down — Liwei has noticed three small cracks and connected none of them. Now Halloran is about to force the issue in the one place no one has been allowed to look too closely.",
+      "outro_note": "The coring drill is scheduled for dawn, and for the first time in her life, Mei-Lin Castellan has run out of ways to stop it.",
+      "sections": [
+        "The Lobby — Iggy formally announces the coring test scheduled at the southeast pier for next week (ensemble)",
+        "The Castellan Apartment — Mei-Lin's private panic as she considers her dwindling options (The Founder's Rest)",
+        "The Glasshouse — Mei-Lin at the pier itself, nearly telling Liwei before stopping herself (The Founder's Rest)",
+        "The Super's Workshop — Aiko wrestles with whether to confess to the board before inspectors find the truss first (The Quiet Fix)",
+        "The Co-op Office — Iggy's cross-check unravels Declan's cover story further (The Missing Dues)",
+        "The Corner Diner — Soo-Jin and Aiko cross paths, each privately bracing for her own secret to surface (The Borrowed Name / The Quiet Fix)",
+        "The Lobby — Mei-Lin's procedural objection to the test schedule meets open resistance from Liwei (The Founder's Rest)",
+        "Unit 4G — Soo-Jin, desperate as scrutiny tightens across the building, weighs increasingly drastic options (The Borrowed Name)",
+        "The Glasshouse — Alone at night, Mei-Lin faces the pier with no options left before dawn (The Founder's Rest)"
+      ],
+      "section_words": [
+        null,
+        {
+          "min": 110,
+          "max": 200,
+          "target": "120 to 170"
+        },
+        null,
+        null,
+        {
+          "min": 110,
+          "max": 200,
+          "target": "120 to 170"
+        },
+        null,
+        null,
+        null,
+        null
+      ],
+      "section_locations": [
+        "LOBBY",
+        "CASTELLAN_APARTMENT",
+        "THE_GLASSHOUSE",
+        "SUPER_WORKSHOP",
+        "FARRAY_OFFICE",
+        "CORNER_DINER",
+        "LOBBY",
+        "UNIT_4G",
+        "THE_GLASSHOUSE"
+      ],
+      "case": [
+        {
+          "label": "The Founder's Rest",
+          "character_knowledge": {
+            "MEI_LIN_CASTELLAN": "Mei-Lin reels when the coring test is scheduled for the exact pier she's spent her life protecting; she searches for any procedural or legal delay left to use, and for the first time seriously considers letting the truth surface rather than manufacture another excuse — but still can't bring herself to say anything, not even to Liwei.",
+            "LIWEI_CASTELLAN": "Liwei sees his mother's objection to the coring schedule as just another delay tactic from someone who's dragged her feet on every step of the sale, growing openly frustrated with her, still with no idea there's an actual reason behind it."
+          },
+          "solution": "In October 1923, during the rushed construction of the rooftop glasshouse, laborer Kwok-Wing Lai fell into the wet concrete pour of the southeast corner support pier and died. Crew foreman Otto Brandt, bribed by the building's original owner to avoid costly delays, labor unrest, and immigration scrutiny of undocumented Chinese laborers, had the body sealed inside the pier rather than reported, and falsified the payroll log to show Lai as simply 'discharged.' Decades later, Lai's sister — Mei-Lin Castellan's grandmother — learned the truth from a dying former crew member's letter and spent the rest of her life as the greenhouse's unofficial guardian, quietly steering every renovation and survey away from that corner. Mei-Lin inherited both the guardianship and the secret, and has never told anyone, including her own son Liwei.",
+          "objective_facts": [
+            "The greenhouse's southeast corner support pier was poured in a single rushed night in October 1923, unlike the other three piers, which the original builder's ledger shows took a full week each.",
+            "Crew foreman Otto Brandt's 1923 payroll records list laborer Kwok-Wing Lai as 'discharged' the same week the southeast pier was completed, with no further employment or immigration record of him found afterward.",
+            "A 1961 letter from a former crew member to Mei-Lin's grandmother, hidden inside a false-bottomed seed tin in the greenhouse potting shed, describes what happened to Kwok-Wing Lai.",
+            "Ground-penetrating radar or structural coring at the southeast pier, as required by the developer's due-diligence survey, would almost certainly detect human remains."
+          ]
+        },
+        {
+          "label": "The Missing Dues",
+          "character_knowledge": {
+            "DECLAN_FARRAY": "Declan watches his cover story for the Vance Municipal invoices unravel further as Iggy cross-checks contractor licensing records and finds nothing; he's now improvising increasingly implausible explanations and quietly bracing for the story to collapse within days.",
+            "IGGY_CHEN": "Iggy confirms Vance Municipal Services dissolved years before the invoiced work was supposedly done and starts to suspect Declan specifically rather than general sloppiness, though he hasn't voiced this to anyone yet."
+          },
+          "solution": "Over the six years since becoming treasurer, Declan Farray has diverted roughly $3,000-4,000 a month from the co-op's maintenance reserve fund — more than $240,000 in total — to cover his adult son Bryan's gambling debts and, more recently, threats from the people Bryan owes money to. Declan has hidden the shortfall behind fictitious repair invoices from a contractor that no longer exists, and has aggressively lobbied the board to delay any professional facilities audit, knowing a real estate sale would trigger exactly the kind of scrutiny that would expose the doctored books within days.",
+          "objective_facts": [
+            "The co-op's reserve fund shows $241,500 less than the total of all dues collected and interest accrued since Declan Farray became treasurer six years ago.",
+            "Three invoices in the co-op's files — for a boiler replacement, roof membrane repair, and elevator motor service — list a contractor, Vance Municipal Services, that dissolved as a business four years ago and never performed the listed work.",
+            "Declan Farray's son Bryan has an active collections judgment against him, and Declan's personal bank statements show a documented pattern of cash withdrawals matching dates shortly after co-op dues deposits clear.",
+            "Any third-party financial audit tied to the developer's acquisition due diligence would cross-reference invoices against contractor licensing records within its first week."
+          ]
+        },
+        {
+          "label": "The Borrowed Name",
+          "character_knowledge": {
+            "SOO_JIN_PARK": "Soo-Jin feels the walls closing in as the sale accelerates and scrutiny intensifies across the building, privately weighing increasingly desperate options — from finally telling someone to simply disappearing — without yet doing either.",
+            "LIWEI_CASTELLAN": "Liwei still doesn't consciously suspect Soo-Jin of anything specific, but the small signature and date inconsistency from before keeps nagging at the back of his mind as he works through the sale's mounting paperwork pressure."
+          },
+          "solution": "The rightful shareholder of Unit 4G, Yoon Hee-ja, died five years ago. Her grandniece, Soo-Jin Park, had moved in two years earlier on a caregiver visa to look after her, and — terrified of losing both her home and her immigration standing with no other family in the country — never reported the death. She has been forging Yoon Hee-ja's signature on co-op ballots, maintenance requests, and an expired lease renewal ever since, and pays dues from an account still nominally in her aunt's name. A shareholder-identity verification, which Halloran's legal team requires before any sale can close, would immediately expose that 'Yoon Hee-ja' has not appeared in person, aged, or renewed identification in five years.",
+          "objective_facts": [
+            "Yoon Hee-ja's death certificate, filed with the city five years ago, has never been submitted to the co-op board or recorded in its shareholder registry.",
+            "Signatures on the last five years of annual meeting ballots attributed to Yoon Hee-ja show handwriting inconsistent with her notarized 1998 share certificate signature.",
+            "Yoon Hee-ja's driver's license and passport both expired within eight months of her death and were never renewed.",
+            "Halloran's acquisition contract requires notarized in-person identity verification of every shareholder of record before closing."
+          ]
+        },
+        {
+          "label": "The Quiet Fix",
+          "character_knowledge": {
+            "AIKO_TANAKA": "Aiko knows the coring test will eventually mean a real structural inspection of the roof, not just the pier, and seriously considers getting ahead of it by confessing to the board about the unpermitted truss repair before an inspector finds it and makes it look worse than it is — but she hasn't worked up the nerve yet."
+          },
+          "solution": "Fifteen years ago, a summer storm cracked two of the glasshouse's original cast-iron roof trusses. Superintendent Aiko Tanaka, under pressure from a board that couldn't afford a permitted structural repair, welded and braced the trusses herself using mismatched salvaged steel and never filed for the required city permit or follow-up inspection. The patch held for years but weakened over time; six years ago a section of glazing and truss brace gave way during a co-op gathering, badly injuring Yoon Hee-ja and contributing to the decline in her health that led to her death the following year. Aiko has quietly monitored and re-shored the same corner ever since, terrified an inspection will expose both her original unpermitted repair and her role in Yoon Hee-ja's injury.",
+          "objective_facts": [
+            "City permit records show no structural permit was ever filed for glasshouse roof truss repairs, despite co-op meeting minutes from fifteen years ago approving emergency truss repair funds.",
+            "The welds and steel bracing on the northwest and north trusses do not match the original 1923 cast-iron specifications and show non-professional fabrication marks.",
+            "A co-op incident report from six years ago documents a partial glazing and truss collapse during a spring gathering that injured Yoon Hee-ja, requiring hospitalization.",
+            "Aiko Tanaka has purchased replacement bracing hardware for the same northwest truss section three times in the past six years, each time without an accompanying work order or board approval."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "The Name in the File",
+      "theme": "Finalizing the shareholder registry, Liwei discovers that 'Yoon Hee-ja' hasn't been seen in five years and confronts Soo-Jin directly, shattering their growing closeness and throwing the entire vote into crisis as the truth of who really lives in 4G threatens to reach the board — and Halloran — before anyone is ready.",
+      "intro_note": "With the coring test looming and Declan's paperwork already fraying under scrutiny, Liwei buries himself in the one task he thinks he can control: finishing the shareholder archive for Halloran's lawyers. He doesn't expect it to lead anywhere near his own building's oldest secrets — or the woman down the hall he's started falling for.",
+      "outro_note": "Liwei sits alone with the completed shareholder file open on his laptop, one line still blank where Yoon Hee-ja's current identification should go — and no idea yet that finishing it will force a choice bigger than any he's made all season. Down the hall, Soo-Jin packs nothing and unpacks nothing, waiting to learn whether the man she trusted will protect her or hand her file to a stranger from Halloran.",
+      "sections": [
+        "Cross-Referencing the Registry",
+        "A Casual Question in the Lobby",
+        "Tea in 4G",
+        "The Treasurer's New Story",
+        "Cracks in the Corner",
+        "The Confrontation",
+        "What Aiko Already Knew",
+        "The Weight of the File",
+        "A Mother Who Doesn't Know Yet"
+      ],
+      "section_words": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 150,
+          "max": 230,
+          "target": "170 to 200"
+        },
+        null,
+        null,
+        null
+      ],
+      "section_locations": [
+        "FARRAY_OFFICE",
+        "LOBBY",
+        "UNIT_4G",
+        "CORNER_DINER",
+        "THE_GLASSHOUSE",
+        "UNIT_4G",
+        "SUPER_WORKSHOP",
+        "FARRAY_OFFICE",
+        "CASTELLAN_APARTMENT"
+      ],
+      "case": [
+        {
+          "label": "The Founder's Rest",
+          "character_knowledge": {
+            "MEI_LIN_CASTELLAN": "She knows the southeast pier's history in full and has begun quietly panicking as the coring test date approaches; she deflects Liwei's growing interest in the archive by keeping certain older ledgers and a heavy old seed tin out of the boxes she hands him, telling herself she just needs a little more time.",
+            "LIWEI_CASTELLAN": "While assembling the shareholder and maintenance archive for Halloran's legal team, he's noticed the southeast pier has no recorded inspection or repair history going back decades, which strikes him as odd but not yet alarming — he assumes it's bureaucratic sloppiness, not a fact anyone is actively protecting."
+          },
+          "solution": "In October 1923, during the rushed construction of the rooftop glasshouse, laborer Kwok-Wing Lai fell into the wet concrete pour of the southeast corner support pier and died. Crew foreman Otto Brandt, bribed by the building's original owner to avoid costly delays, labor unrest, and immigration scrutiny of undocumented Chinese laborers, had the body sealed inside the pier rather than reported, and falsified the payroll log to show Lai as simply 'discharged.' Decades later, Lai's sister — Mei-Lin Castellan's grandmother — learned the truth from a dying former crew member's letter and spent the rest of her life as the greenhouse's unofficial guardian, quietly steering every renovation and survey away from that corner. Mei-Lin inherited both the guardianship and the secret, and has never told anyone, including her own son Liwei.",
+          "objective_facts": [
+            "The greenhouse's southeast corner support pier was poured in a single rushed night in October 1923, unlike the other three piers, which the original builder's ledger shows took a full week each.",
+            "Crew foreman Otto Brandt's 1923 payroll records list laborer Kwok-Wing Lai as 'discharged' the same week the southeast pier was completed, with no further employment or immigration record of him found afterward.",
+            "A 1961 letter from a former crew member to Mei-Lin's grandmother, hidden inside a false-bottomed seed tin in the greenhouse potting shed, describes what happened to Kwok-Wing Lai.",
+            "Ground-penetrating radar or structural coring at the southeast pier, as required by the developer's due-diligence survey, would almost certainly detect human remains."
+          ]
+        },
+        {
+          "label": "The Missing Dues",
+          "character_knowledge": {
+            "DECLAN_FARRAY": "Knows Iggy is asking sharper questions about the boiler, roof, and elevator invoices, and has begun quietly assembling a story that Vance Municipal Services was a subcontractor working under a different registered name — buying himself time while digging the lie deeper.",
+            "IGGY_CHEN": "Has cross-checked one invoice against public contractor licensing and found no match, and privately suspects financial irregularities, though he still reads it as small-scale co-op mismanagement rather than deliberate theft.",
+            "MEI_LIN_CASTELLAN": "Senses Declan's nervousness at board meetings and privately worries the books won't survive real scrutiny, but chooses not to press him — she has her own reasons not to invite anyone auditing anything too closely."
+          },
+          "solution": "Over the six years since becoming treasurer, Declan Farray has diverted roughly $3,000-4,000 a month from the co-op's maintenance reserve fund — more than $240,000 in total — to cover his adult son Bryan's gambling debts and, more recently, threats from the people Bryan owes money to. Declan has hidden the shortfall behind fictitious repair invoices from a contractor that no longer exists, and has aggressively lobbied the board to delay any professional facilities audit, knowing a real estate sale would trigger exactly the kind of scrutiny that would expose the doctored books within days.",
+          "objective_facts": [
+            "The co-op's reserve fund shows $241,500 less than the total of all dues collected and interest accrued since Declan Farray became treasurer six years ago.",
+            "Three invoices in the co-op's files — for a boiler replacement, roof membrane repair, and elevator motor service — list a contractor, Vance Municipal Services, that dissolved as a business four years ago and never performed the listed work.",
+            "Declan Farray's son Bryan has an active collections judgment against him, and Declan's personal bank statements show a documented pattern of cash withdrawals matching dates shortly after co-op dues deposits clear.",
+            "Any third-party financial audit tied to the developer's acquisition due diligence would cross-reference invoices against contractor licensing records within its first week."
+          ]
+        },
+        {
+          "label": "The Borrowed Name",
+          "character_knowledge": {
+            "LIWEI_CASTELLAN": "Cross-referencing five years of ballots against ID records for the legal team, he finds that Yoon Hee-ja's driver's license expired years ago and was never renewed, and that her signature has subtly drifted — when he raises it with Soo-Jin directly, her panicked, contradictory answers make clear the woman he's grown close to isn't who the paperwork says she is.",
+            "SOO_JIN_PARK": "Has dreaded this exact conversation for years; cornered by Liwei, she finally admits her great-aunt died five years ago and she's been living under her name ever since, terrified he'll report her to Halloran's legal team or the board and end both her home and her legal status in one stroke.",
+            "AIKO_TANAKA": "Has quietly suspected the truth about 4G for at least a year — a woman that age doesn't simply stop aging in photographs — but has said nothing out of old guilt over what happened to the real Yoon Hee-ja on her watch, and becomes the first person Soo-Jin turns to once Liwei knows."
+          },
+          "solution": "The rightful shareholder of Unit 4G, Yoon Hee-ja, died five years ago. Her grandniece, Soo-Jin Park, had moved in two years earlier on a caregiver visa to look after her, and — terrified of losing both her home and her immigration standing with no other family in the country — never reported the death. She has been forging Yoon Hee-ja's signature on co-op ballots, maintenance requests, and an expired lease renewal ever since, and pays dues from an account still nominally in her aunt's name. A shareholder-identity verification, which Halloran's legal team requires before any sale can close, would immediately expose that 'Yoon Hee-ja' has not appeared in person, aged, or renewed identification in five years.",
+          "objective_facts": [
+            "Yoon Hee-ja's death certificate, filed with the city five years ago, has never been submitted to the co-op board or recorded in its shareholder registry.",
+            "Signatures on the last five years of annual meeting ballots attributed to Yoon Hee-ja show handwriting inconsistent with her notarized 1998 share certificate signature.",
+            "Yoon Hee-ja's driver's license and passport both expired within eight months of her death and were never renewed.",
+            "Halloran's acquisition contract requires notarized in-person identity verification of every shareholder of record before closing."
+          ]
+        },
+        {
+          "label": "The Quiet Fix",
+          "character_knowledge": {
+            "AIKO_TANAKA": "Dreads the coring test's structural report, since a full inspection could easily lead surveyors to also flag the northwest truss bracing; she's begun quietly stockpiling proper materials, torn between repairing it in secret one more time or finally telling the board herself.",
+            "DECLAN_FARRAY": "Has noticed Aiko buying unusual quantities of steel bracing again and jokes about it at a board meeting, with no idea it's connected to anything more than routine maintenance."
+          },
+          "solution": "Fifteen years ago, a summer storm cracked two of the glasshouse's original cast-iron roof trusses. Superintendent Aiko Tanaka, under pressure from a board that couldn't afford a permitted structural repair, welded and braced the trusses herself using mismatched salvaged steel and never filed for the required city permit or follow-up inspection. The patch held for years but weakened over time; six years ago a section of glazing and truss brace gave way during a co-op gathering, badly injuring Yoon Hee-ja and contributing to the decline in her health that led to her death the following year. Aiko has quietly monitored and re-shored the same corner ever since, terrified an inspection will expose both her original unpermitted repair and her role in Yoon Hee-ja's injury.",
+          "objective_facts": [
+            "City permit records show no structural permit was ever filed for glasshouse roof truss repairs, despite co-op meeting minutes from fifteen years ago approving emergency truss repair funds.",
+            "The welds and steel bracing on the northwest and north trusses do not match the original 1923 cast-iron specifications and show non-professional fabrication marks.",
+            "A co-op incident report from six years ago documents a partial glazing and truss collapse during a spring gathering that injured Yoon Hee-ja, requiring hospitalization.",
+            "Aiko Tanaka has purchased replacement bracing hardware for the same northwest truss section three times in the past six years, each time without an accompanying work order or board approval."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "Damage Control",
+      "theme": "The board convenes an emergency session as Soo-Jin's status becomes an open secret among the residents, Declan's financial cover story collapses under Iggy's audit, and Mei-Lin, desperate to postpone the coring test one more time, makes a choice that puts her own deepest secret at real risk of discovery.",
+      "intro_note": "By morning, what happened in 4G is no longer just between Liwei and Soo-Jin — someone talked, or guessed, and the building is humming with half-versions of the truth. With Declan's invoices already fraying and the coring test only days away, the co-op has more secrets straining at once than it has ever had to hold.",
+      "outro_note": "The false hazard claim buys a few days of delay — but it also draws a city safety inspector who wants to examine the southeast corner in person, on Mei-Lin's own terms this time, not Halloran's. For the first time in her life, the woman who has spent five decades keeping people away from that pier has invited someone closer to it than she ever meant to.",
+      "sections": [
+        "The Emergency Session Is Called",
+        "The Audit Lands",
+        "A Favor at the Pier",
+        "Packing a Bag",
+        "The Board Convenes",
+        "Two Lies to Carry",
+        "Up the Chain",
+        "Whispers on the Stairs",
+        "The Inspector Halloran Didn't Send"
+      ],
+      "section_words": [
+        null,
+        null,
+        null,
+        {
+          "min": 150,
+          "max": 230,
+          "target": "160 to 190"
+        },
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "section_locations": [
+        "LOBBY",
+        "FARRAY_OFFICE",
+        "THE_GLASSHOUSE",
+        "UNIT_4G",
+        "FARRAY_OFFICE",
+        "SUPER_WORKSHOP",
+        "CORNER_DINER",
+        "LOBBY",
+        "THE_GLASSHOUSE"
+      ],
+      "case": [
+        {
+          "label": "The Founder's Rest",
+          "character_knowledge": {
+            "MEI_LIN_CASTELLAN": "In her panic over the approaching coring test, she asks Aiko to falsely flag a hazard near the southeast pier to delay the survey again; she tells herself it's a small lie to buy time and refuses to let herself think past that.",
+            "LIWEI_CASTELLAN": "Consumed by the fallout with Soo-Jin and the board crisis, he hasn't connected his mother's sudden insistence on postponing the coring test to anything beyond her usual caution, though her intensity this time briefly makes him wonder what she's actually so afraid of.",
+            "AIKO_TANAKA": "Agrees to back Mei-Lin's fabricated hazard claim out of decades of loyalty, but the request unsettles her — Mei-Lin has never before asked her to lie about that specific corner, and Aiko can't shake the feeling there's something there Mei-Lin has never told her."
+          },
+          "solution": "In October 1923, during the rushed construction of the rooftop glasshouse, laborer Kwok-Wing Lai fell into the wet concrete pour of the southeast corner support pier and died. Crew foreman Otto Brandt, bribed by the building's original owner to avoid costly delays, labor unrest, and immigration scrutiny of undocumented Chinese laborers, had the body sealed inside the pier rather than reported, and falsified the payroll log to show Lai as simply 'discharged.' Decades later, Lai's sister — Mei-Lin Castellan's grandmother — learned the truth from a dying former crew member's letter and spent the rest of her life as the greenhouse's unofficial guardian, quietly steering every renovation and survey away from that corner. Mei-Lin inherited both the guardianship and the secret, and has never told anyone, including her own son Liwei.",
+          "objective_facts": [
+            "The greenhouse's southeast corner support pier was poured in a single rushed night in October 1923, unlike the other three piers, which the original builder's ledger shows took a full week each.",
+            "Crew foreman Otto Brandt's 1923 payroll records list laborer Kwok-Wing Lai as 'discharged' the same week the southeast pier was completed, with no further employment or immigration record of him found afterward.",
+            "A 1961 letter from a former crew member to Mei-Lin's grandmother, hidden inside a false-bottomed seed tin in the greenhouse potting shed, describes what happened to Kwok-Wing Lai.",
+            "Ground-penetrating radar or structural coring at the southeast pier, as required by the developer's due-diligence survey, would almost certainly detect human remains."
+          ]
+        },
+        {
+          "label": "The Missing Dues",
+          "character_knowledge": {
+            "DECLAN_FARRAY": "His Vance Municipal Services story falls apart when Iggy produces the company's dissolution paperwork in front of him; cornered, he admits the invoices are false but still tries to frame it as a one-time desperate mistake rather than six years of ongoing theft.",
+            "IGGY_CHEN": "Now has documented proof of fabricated invoices and reports the discrepancy up the chain at Halloran, treating it as a serious compliance issue that could delay or jeopardize the acquisition, not mere co-op incompetence.",
+            "MEI_LIN_CASTELLAN": "Learns of Declan's exposure at the emergency session and, torn between genuine sympathy and her own need to keep everyone's attention away from other matters, argues for handling it internally rather than looping in Halloran further."
+          },
+          "solution": "Over the six years since becoming treasurer, Declan Farray has diverted roughly $3,000-4,000 a month from the co-op's maintenance reserve fund — more than $240,000 in total — to cover his adult son Bryan's gambling debts and, more recently, threats from the people Bryan owes money to. Declan has hidden the shortfall behind fictitious repair invoices from a contractor that no longer exists, and has aggressively lobbied the board to delay any professional facilities audit, knowing a real estate sale would trigger exactly the kind of scrutiny that would expose the doctored books within days.",
+          "objective_facts": [
+            "The co-op's reserve fund shows $241,500 less than the total of all dues collected and interest accrued since Declan Farray became treasurer six years ago.",
+            "Three invoices in the co-op's files — for a boiler replacement, roof membrane repair, and elevator motor service — list a contractor, Vance Municipal Services, that dissolved as a business four years ago and never performed the listed work.",
+            "Declan Farray's son Bryan has an active collections judgment against him, and Declan's personal bank statements show a documented pattern of cash withdrawals matching dates shortly after co-op dues deposits clear.",
+            "Any third-party financial audit tied to the developer's acquisition due diligence would cross-reference invoices against contractor licensing records within its first week."
+          ]
+        },
+        {
+          "label": "The Borrowed Name",
+          "character_knowledge": {
+            "SOO_JIN_PARK": "With Liwei's silence not yet a promise and rumors already moving through the building, she starts quietly packing a bag, certain that exposure and deportation are now only a matter of time.",
+            "LIWEI_CASTELLAN": "Hasn't told the board or Halloran's legal team what he knows, unable to reconcile the woman he has feelings for with the fraud the paperwork describes, and increasingly aware that his silence is itself now a kind of complicity.",
+            "AIKO_TANAKA": "Has told a couple of the oldest residents enough of the truth to keep them from calling anyone official, calling in decades of trust to buy Soo-Jin a little more time."
+          },
+          "solution": "The rightful shareholder of Unit 4G, Yoon Hee-ja, died five years ago. Her grandniece, Soo-Jin Park, had moved in two years earlier on a caregiver visa to look after her, and — terrified of losing both her home and her immigration standing with no other family in the country — never reported the death. She has been forging Yoon Hee-ja's signature on co-op ballots, maintenance requests, and an expired lease renewal ever since, and pays dues from an account still nominally in her aunt's name. A shareholder-identity verification, which Halloran's legal team requires before any sale can close, would immediately expose that 'Yoon Hee-ja' has not appeared in person, aged, or renewed identification in five years.",
+          "objective_facts": [
+            "Yoon Hee-ja's death certificate, filed with the city five years ago, has never been submitted to the co-op board or recorded in its shareholder registry.",
+            "Signatures on the last five years of annual meeting ballots attributed to Yoon Hee-ja show handwriting inconsistent with her notarized 1998 share certificate signature.",
+            "Yoon Hee-ja's driver's license and passport both expired within eight months of her death and were never renewed.",
+            "Halloran's acquisition contract requires notarized in-person identity verification of every shareholder of record before closing."
+          ]
+        },
+        {
+          "label": "The Quiet Fix",
+          "character_knowledge": {
+            "AIKO_TANAKA": "Torn between her own unraveling secret and the favor Mei-Lin has just asked of her, she finds herself dangerously overextended, propping up two different lies at once with the coring test still bearing down on all of them.",
+            "DECLAN_FARRAY": "Distracted by his own exposure, barely registers Aiko's mounting stress, though he does notice she looks like she hasn't slept in days."
+          },
+          "solution": "Fifteen years ago, a summer storm cracked two of the glasshouse's original cast-iron roof trusses. Superintendent Aiko Tanaka, under pressure from a board that couldn't afford a permitted structural repair, welded and braced the trusses herself using mismatched salvaged steel and never filed for the required city permit or follow-up inspection. The patch held for years but weakened over time; six years ago a section of glazing and truss brace gave way during a co-op gathering, badly injuring Yoon Hee-ja and contributing to the decline in her health that led to her death the following year. Aiko has quietly monitored and re-shored the same corner ever since, terrified an inspection will expose both her original unpermitted repair and her role in Yoon Hee-ja's injury.",
+          "objective_facts": [
+            "City permit records show no structural permit was ever filed for glasshouse roof truss repairs, despite co-op meeting minutes from fifteen years ago approving emergency truss repair funds.",
+            "The welds and steel bracing on the northwest and north trusses do not match the original 1923 cast-iron specifications and show non-professional fabrication marks.",
+            "A co-op incident report from six years ago documents a partial glazing and truss collapse during a spring gathering that injured Yoon Hee-ja, requiring hospitalization.",
+            "Aiko Tanaka has purchased replacement bracing hardware for the same northwest truss section three times in the past six years, each time without an accompanying work order or board approval."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "The Night Before the Drill",
+      "theme": "With the coring test set for dawn, Aiko finally tells Declan and the board the true history of the northwest truss and her role in Yoon Hee-ja's long-ago injury, while Mei-Lin, alone at the southeast pier, must decide whether to let the truth out or try one last time to bury it.",
+      "intro_note": "The city inspector Mei-Lin's hazard claim summoned has cleared the building for the drill at dawn — no delay this time. With hours left before the coring test reaches the corner she's spent her life guarding, the co-op braces itself, and Aiko decides she can't carry her own secret one more night without saying it out loud first.",
+      "outro_note": "Somewhere below her, the co-op is still absorbing everything Aiko admitted tonight — and still has no idea what Mei-Lin is standing beside in the dark. Upstairs, a battered seed tin sits on Liwei's windowsill, unopened, while down at the pier his mother makes her choice one more time, alone, with the drill only hours away.",
+      "sections": [
+        "The Night Before",
+        "Aiko Asks for the Room",
+        "What the Truss Really Holds",
+        "The Name She Didn't Expect",
+        "Declan's Turn",
+        "Alone at the Pier",
+        "The Tin in the Shed",
+        "Waiting for Dawn",
+        "Before First Light"
+      ],
+      "section_words": [
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 150,
+          "max": 230,
+          "target": "160 to 190"
+        },
+        {
+          "min": 150,
+          "max": 220,
+          "target": "160 to 200"
+        },
+        null,
+        null,
+        {
+          "min": 150,
+          "max": 220,
+          "target": "150 to 190"
+        }
+      ],
+      "section_locations": [
+        "THE_GLASSHOUSE",
+        "FARRAY_OFFICE",
+        "SUPER_WORKSHOP",
+        "SUPER_WORKSHOP",
+        "FARRAY_OFFICE",
+        "THE_GLASSHOUSE",
+        "THE_GLASSHOUSE",
+        "CORNER_DINER",
+        "THE_GLASSHOUSE"
+      ],
+      "case": [
+        {
+          "label": "The Founder's Rest",
+          "character_knowledge": {
+            "MEI_LIN_CASTELLAN": "Standing alone at the southeast pier after the board session, she comes closer than she has in decades to telling someone — anyone — what's sealed inside it, but ultimately decides, again, to protect the family's century-old silence for one more night.",
+            "LIWEI_CASTELLAN": "While helping clear out the old potting shed shelves after the meeting, he finds a battered, unusually heavy seed tin tucked behind a row of clay pots and pockets it to ask his mother about later, not yet realizing what it might hold."
+          },
+          "solution": "In October 1923, during the rushed construction of the rooftop glasshouse, laborer Kwok-Wing Lai fell into the wet concrete pour of the southeast corner support pier and died. Crew foreman Otto Brandt, bribed by the building's original owner to avoid costly delays, labor unrest, and immigration scrutiny of undocumented Chinese laborers, had the body sealed inside the pier rather than reported, and falsified the payroll log to show Lai as simply 'discharged.' Decades later, Lai's sister — Mei-Lin Castellan's grandmother — learned the truth from a dying former crew member's letter and spent the rest of her life as the greenhouse's unofficial guardian, quietly steering every renovation and survey away from that corner. Mei-Lin inherited both the guardianship and the secret, and has never told anyone, including her own son Liwei.",
+          "objective_facts": [
+            "The greenhouse's southeast corner support pier was poured in a single rushed night in October 1923, unlike the other three piers, which the original builder's ledger shows took a full week each.",
+            "Crew foreman Otto Brandt's 1923 payroll records list laborer Kwok-Wing Lai as 'discharged' the same week the southeast pier was completed, with no further employment or immigration record of him found afterward.",
+            "A 1961 letter from a former crew member to Mei-Lin's grandmother, hidden inside a false-bottomed seed tin in the greenhouse potting shed, describes what happened to Kwok-Wing Lai.",
+            "Ground-penetrating radar or structural coring at the southeast pier, as required by the developer's due-diligence survey, would almost certainly detect human remains."
+          ]
+        },
+        {
+          "label": "The Missing Dues",
+          "character_knowledge": {
+            "DECLAN_FARRAY": "Admits to the board, in the same meeting, that the missing reserve funds go back the full six years of his term and were used to cover his son Bryan's gambling debts, not a single lapse as he'd first claimed.",
+            "MEI_LIN_CASTELLAN": "Notes privately that the board's mercy for Aiko tonight may not extend as far for Declan, whose deception ran longer and touched money rather than grief.",
+            "IGGY_CHEN": "Not present for the internal confession, but has already forwarded his audit findings to Halloran's compliance office, unaware the co-op is now confronting the truth on its own terms before he can force the issue."
+          },
+          "solution": "Over the six years since becoming treasurer, Declan Farray has diverted roughly $3,000-4,000 a month from the co-op's maintenance reserve fund — more than $240,000 in total — to cover his adult son Bryan's gambling debts and, more recently, threats from the people Bryan owes money to. Declan has hidden the shortfall behind fictitious repair invoices from a contractor that no longer exists, and has aggressively lobbied the board to delay any professional facilities audit, knowing a real estate sale would trigger exactly the kind of scrutiny that would expose the doctored books within days.",
+          "objective_facts": [
+            "The co-op's reserve fund shows $241,500 less than the total of all dues collected and interest accrued since Declan Farray became treasurer six years ago.",
+            "Three invoices in the co-op's files — for a boiler replacement, roof membrane repair, and elevator motor service — list a contractor, Vance Municipal Services, that dissolved as a business four years ago and never performed the listed work.",
+            "Declan Farray's son Bryan has an active collections judgment against him, and Declan's personal bank statements show a documented pattern of cash withdrawals matching dates shortly after co-op dues deposits clear.",
+            "Any third-party financial audit tied to the developer's acquisition due diligence would cross-reference invoices against contractor licensing records within its first week."
+          ]
+        },
+        {
+          "label": "The Borrowed Name",
+          "character_knowledge": {
+            "SOO_JIN_PARK": "Hearing Aiko describe her great-aunt's injury and decline in detail for the first time gives her a fuller, harder truth to carry than the one she's lived with for five years, and for a moment the shame of her forged signature feels almost small beside it.",
+            "LIWEI_CASTELLAN": "The night's revelations about Yoon Hee-ja's real fate make him look at Soo-Jin differently — less as a fraud to expose and more as someone who inherited a debt of guilt that was never hers to carry alone — though he still hasn't decided what to do about the shareholder file.",
+            "AIKO_TANAKA": "Finally says to Soo-Jin's face what she's carried alone for years — that she is, in part, responsible for what happened to the woman Soo-Jin loved — and finds a strange, painful relief in a confession that costs her nothing left to lose."
+          },
+          "solution": "The rightful shareholder of Unit 4G, Yoon Hee-ja, died five years ago. Her grandniece, Soo-Jin Park, had moved in two years earlier on a caregiver visa to look after her, and — terrified of losing both her home and her immigration standing with no other family in the country — never reported the death. She has been forging Yoon Hee-ja's signature on co-op ballots, maintenance requests, and an expired lease renewal ever since, and pays dues from an account still nominally in her aunt's name. A shareholder-identity verification, which Halloran's legal team requires before any sale can close, would immediately expose that 'Yoon Hee-ja' has not appeared in person, aged, or renewed identification in five years.",
+          "objective_facts": [
+            "Yoon Hee-ja's death certificate, filed with the city five years ago, has never been submitted to the co-op board or recorded in its shareholder registry.",
+            "Signatures on the last five years of annual meeting ballots attributed to Yoon Hee-ja show handwriting inconsistent with her notarized 1998 share certificate signature.",
+            "Yoon Hee-ja's driver's license and passport both expired within eight months of her death and were never renewed.",
+            "Halloran's acquisition contract requires notarized in-person identity verification of every shareholder of record before closing."
+          ]
+        },
+        {
+          "label": "The Quiet Fix",
+          "character_knowledge": {
+            "AIKO_TANAKA": "Finally tells Declan and the board everything — the unpermitted weld job fifteen years ago, the mismatched salvaged steel, and that it was her failed repair that gave way six years ago and injured Yoon Hee-ja, contributing to the decline that led to her death; saying it aloud is both the confession she's owed everyone and the first time she's said Yoon Hee-ja's name in front of Soo-Jin.",
+            "DECLAN_FARRAY": "Hearing Aiko's confession first strips away his last excuse for hiding his own theft, and he tells the board the fuller truth about the reserve fund and Bryan's debts before anyone can ask him to.",
+            "MEI_LIN_CASTELLAN": "Sits through Aiko's confession as chair, praising her courage in front of the board, all while privately aware she is about to walk upstairs and make the opposite choice about her own far older secret.",
+            "LIWEI_CASTELLAN": "Watching Aiko lay her guilt bare for everyone to see, he starts to wonder, for the first time, why his own mother reacts so strangely to any conversation about that one corner of the greenhouse — a thought he can't yet put into words."
+          },
+          "solution": "Fifteen years ago, a summer storm cracked two of the glasshouse's original cast-iron roof trusses. Superintendent Aiko Tanaka, under pressure from a board that couldn't afford a permitted structural repair, welded and braced the trusses herself using mismatched salvaged steel and never filed for the required city permit or follow-up inspection. The patch held for years but weakened over time; six years ago a section of glazing and truss brace gave way during a co-op gathering, badly injuring Yoon Hee-ja and contributing to the decline in her health that led to her death the following year. Aiko has quietly monitored and re-shored the same corner ever since, terrified an inspection will expose both her original unpermitted repair and her role in Yoon Hee-ja's injury.",
+          "objective_facts": [
+            "City permit records show no structural permit was ever filed for glasshouse roof truss repairs, despite co-op meeting minutes from fifteen years ago approving emergency truss repair funds.",
+            "The welds and steel bracing on the northwest and north trusses do not match the original 1923 cast-iron specifications and show non-professional fabrication marks.",
+            "A co-op incident report from six years ago documents a partial glazing and truss collapse during a spring gathering that injured Yoon Hee-ja, requiring hospitalization.",
+            "Aiko Tanaka has purchased replacement bracing hardware for the same northwest truss section three times in the past six years, each time without an accompanying work order or board approval."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "What the Roof Remembers",
+      "theme": "On the morning of the vote, the cooperative reckons openly with Aiko's cover-up, Declan's debts, and Soo-Jin's borrowed name and chooses, messily and imperfectly, what kind of family they still want to be — while Mei-Lin's oldest secret, and what waits inside the southeast pier, remains buried, known only to her and, perhaps, to the son now watching her a little too closely.",
+      "intro_note": "Aiko has told Declan and the board the truth about the northwest truss and what it cost Yoon Hee-ja. At the southeast pier, alone in the dark, Mei-Lin has a choice to make before the drill crews arrive at dawn — and the sun is already coming up.",
+      "outro_note": "",
+      "sections": [
+        "Dawn at the Lobby",
+        "The Coring Test That Wasn't",
+        "The Workshop Reckoning",
+        "The Ledger Laid Bare",
+        "Unit 4G Opens Its Door",
+        "The Vote",
+        "After the Vote",
+        "The Seed Tin",
+        "What the Roof Remembers"
+      ],
+      "section_words": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 130,
+          "max": 200,
+          "target": "150 to 180"
+        }
+      ],
+      "section_locations": [
+        "LOBBY",
+        "THE_GLASSHOUSE",
+        "SUPER_WORKSHOP",
+        "FARRAY_OFFICE",
+        "UNIT_4G",
+        "THE_GLASSHOUSE",
+        "CORNER_DINER",
+        "CASTELLAN_APARTMENT",
+        "THE_GLASSHOUSE"
+      ],
+      "case": [
+        {
+          "label": "The Founder's Rest",
+          "character_knowledge": {
+            "MEI_LIN_CASTELLAN": "At the pier before dawn, she chooses one more time to protect the family's oldest secret — but instead of another delay, she offers Iggy something real: a preservation clause that spares the historic glasshouse structure entirely, folding her need to guard that corner into a deal that reads, to everyone else, as sentiment for old iron and glass. She tells no one, including Liwei, what the clause is truly for.",
+            "LIWEI_CASTELLAN": "Cleaning out a shelf in the potting shed for the survey crew, he finds a battered seed tin with a false bottom and an old letter tucked inside it, written in a hand he doesn't recognize, mentioning a name — Lai — that means nothing to him yet. He doesn't understand what he's holding, but he knows his mother's face changed the moment she saw it in his hands, and he starts asking questions she won't fully answer.",
+            "AIKO_TANAKA": "In the wake of her own confession, she notices — not for the first time, but more sharply now — that Mei-Lin has spent thirty years steering every repair crew away from the southeast corner, and wonders, without yet asking, whether the chair's silence has always run deeper than a chair's usual caution."
+          },
+          "solution": "In October 1923, during the rushed construction of the rooftop glasshouse, laborer Kwok-Wing Lai fell into the wet concrete pour of the southeast corner support pier and died. Crew foreman Otto Brandt, bribed by the building's original owner to avoid costly delays, labor unrest, and immigration scrutiny of undocumented Chinese laborers, had the body sealed inside the pier rather than reported, and falsified the payroll log to show Lai as simply 'discharged.' Decades later, Lai's sister — Mei-Lin Castellan's grandmother — learned the truth from a dying former crew member's letter and spent the rest of her life as the greenhouse's unofficial guardian, quietly steering every renovation and survey away from that corner. Mei-Lin inherited both the guardianship and the secret, and has never told anyone, including her own son Liwei.",
+          "objective_facts": [
+            "The greenhouse's southeast corner support pier was poured in a single rushed night in October 1923, unlike the other three piers, which the original builder's ledger shows took a full week each.",
+            "Crew foreman Otto Brandt's 1923 payroll records list laborer Kwok-Wing Lai as 'discharged' the same week the southeast pier was completed, with no further employment or immigration record of him found afterward.",
+            "A 1961 letter from a former crew member to Mei-Lin's grandmother, hidden inside a false-bottomed seed tin in the greenhouse potting shed, describes what happened to Kwok-Wing Lai.",
+            "Ground-penetrating radar or structural coring at the southeast pier, as required by the developer's due-diligence survey, would almost certainly detect human remains."
+          ]
+        },
+        {
+          "label": "The Missing Dues",
+          "character_knowledge": {
+            "DECLAN_FARRAY": "He tells the emergency board session everything — the fabricated Vance Municipal invoices, Bryan's debts, six years of skimmed dues — before Iggy's audit can finish doing it for him. He asks the board to let him make it right rather than hand it to the police, and means it, though he knows that's not entirely his choice to make.",
+            "LIWEI_CASTELLAN": "Having pieced together the invoice discrepancies himself over the past weeks, he pushes the board toward a binding repayment plan instead of prosecution, partly out of genuine belief in second chances and partly because a criminal case would drag Halloran's due diligence — and everyone's secrets — into a courtroom he doesn't want.",
+            "MEI_LIN_CASTELLAN": "As chair, she steers the board toward restitution over ruin, aware that a scandal loud enough to involve outside authorities is a scandal loud enough to bring outside surveyors crawling over every inch of the roof, including the one corner she cannot afford them to reach."
+          },
+          "solution": "Over the six years since becoming treasurer, Declan Farray has diverted roughly $3,000-4,000 a month from the co-op's maintenance reserve fund — more than $240,000 in total — to cover his adult son Bryan's gambling debts and, more recently, threats from the people Bryan owes money to. Declan has hidden the shortfall behind fictitious repair invoices from a contractor that no longer exists, and has aggressively lobbied the board to delay any professional facilities audit, knowing a real estate sale would trigger exactly the kind of scrutiny that would expose the doctored books within days.",
+          "objective_facts": [
+            "The co-op's reserve fund shows $241,500 less than the total of all dues collected and interest accrued since Declan Farray became treasurer six years ago.",
+            "Three invoices in the co-op's files — for a boiler replacement, roof membrane repair, and elevator motor service — list a contractor, Vance Municipal Services, that dissolved as a business four years ago and never performed the listed work.",
+            "Declan Farray's son Bryan has an active collections judgment against him, and Declan's personal bank statements show a documented pattern of cash withdrawals matching dates shortly after co-op dues deposits clear.",
+            "Any third-party financial audit tied to the developer's acquisition due diligence would cross-reference invoices against contractor licensing records within its first week."
+          ]
+        },
+        {
+          "label": "The Borrowed Name",
+          "character_knowledge": {
+            "SOO_JIN_PARK": "She finally says it plainly to the people gathered in her aunt's front room — that Yoon Hee-ja died five years ago, that she forged the signatures, that she was afraid of losing the only home and legal foothold she had. She doesn't ask for forgiveness so much as brace for whatever comes next.",
+            "LIWEI_CASTELLAN": "He's known the truth since the file room, and today he makes his choice plain: he argues for shielding her from Halloran's identity verification rather than exposing her to it, and asks her, quietly, to let him actually help this time instead of just knowing.",
+            "MEI_LIN_CASTELLAN": "She proposes the board quietly reclassify the shareholding through a small internal transfer rather than trigger Halloran's outside notarization requirement — a fix she can offer with real conviction, since burying an inconvenient truth to protect this building is a skill she has had a great deal of practice with.",
+            "AIKO_TANAKA": "Having loved Yoon Hee-ja like family, she is the first to say Soo-Jin should stay, and the loudest — her grief for the aunt folding easily into fierce, protective loyalty toward the niece who never stopped tending her."
+          },
+          "solution": "The rightful shareholder of Unit 4G, Yoon Hee-ja, died five years ago. Her grandniece, Soo-Jin Park, had moved in two years earlier on a caregiver visa to look after her, and — terrified of losing both her home and her immigration standing with no other family in the country — never reported the death. She has been forging Yoon Hee-ja's signature on co-op ballots, maintenance requests, and an expired lease renewal ever since, and pays dues from an account still nominally in her aunt's name. A shareholder-identity verification, which Halloran's legal team requires before any sale can close, would immediately expose that 'Yoon Hee-ja' has not appeared in person, aged, or renewed identification in five years.",
+          "objective_facts": [
+            "Yoon Hee-ja's death certificate, filed with the city five years ago, has never been submitted to the co-op board or recorded in its shareholder registry.",
+            "Signatures on the last five years of annual meeting ballots attributed to Yoon Hee-ja show handwriting inconsistent with her notarized 1998 share certificate signature.",
+            "Yoon Hee-ja's driver's license and passport both expired within eight months of her death and were never renewed.",
+            "Halloran's acquisition contract requires notarized in-person identity verification of every shareholder of record before closing."
+          ]
+        },
+        {
+          "label": "The Quiet Fix",
+          "character_knowledge": {
+            "AIKO_TANAKA": "She stands in her own workshop and tells the board everything — the unpermitted welds fifteen years ago, the collapse six years ago, the guilt she has carried for what happened to Yoon Hee-ja ever since — and accepts whatever judgment follows, including the possibility of losing the only job she's held in this country for thirty years.",
+            "DECLAN_FARRAY": "As treasurer, damaged as his own standing now is, he's the one who calculates what a permitted retrofit will actually cost and argues the co-op owes Aiko the chance to help fix what she broke rather than simply firing the person who has kept the building running for three decades.",
+            "MEI_LIN_CASTELLAN": "She votes, as chair, for Aiko to keep her position under a supervised, fully permitted repair plan — genuine mercy for a woman she's trusted for years, though she's also acutely aware that a superintendent who owes the board her job is a superintendent who won't ask twice why one corner still isn't on the repair schedule.",
+            "SOO_JIN_PARK": "Hearing at last the real reason behind her great-aunt's fall, she's furious and grieving in the same breath — but when the vote comes to keep Aiko on, she doesn't oppose it, telling Aiko only that Yoon Hee-ja was never someone who believed in throwing people away."
+          },
+          "solution": "Fifteen years ago, a summer storm cracked two of the glasshouse's original cast-iron roof trusses. Superintendent Aiko Tanaka, under pressure from a board that couldn't afford a permitted structural repair, welded and braced the trusses herself using mismatched salvaged steel and never filed for the required city permit or follow-up inspection. The patch held for years but weakened over time; six years ago a section of glazing and truss brace gave way during a co-op gathering, badly injuring Yoon Hee-ja and contributing to the decline in her health that led to her death the following year. Aiko has quietly monitored and re-shored the same corner ever since, terrified an inspection will expose both her original unpermitted repair and her role in Yoon Hee-ja's injury.",
+          "objective_facts": [
+            "City permit records show no structural permit was ever filed for glasshouse roof truss repairs, despite co-op meeting minutes from fifteen years ago approving emergency truss repair funds.",
+            "The welds and steel bracing on the northwest and north trusses do not match the original 1923 cast-iron specifications and show non-professional fabrication marks.",
+            "A co-op incident report from six years ago documents a partial glazing and truss collapse during a spring gathering that injured Yoon Hee-ja, requiring hospitalization.",
+            "Aiko Tanaka has purchased replacement bracing hardware for the same northwest truss section three times in the past six years, each time without an accompanying work order or board approval."
+          ]
+        }
+      ]
+    }
+  ]
+}

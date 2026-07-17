@@ -1,0 +1,95 @@
+--- PART 1 ---
+
+[NURSE_ADA_KIRWIN | style: flat, controlled fury]
+Mrs. Hale's sister sent this back, Doctor. Stamped "address unknown."
+
+[NARRATOR]
+The clinic apothecary. Past midnight.
+
+[NURSE_ADA_KIRWIN | style: measured, unwavering]
+She never came home. Not once. Not for a single Sunday.
+
+[DR_JONAS_WYCLIFFE | style: caught off guard]
+Nurse Kirwin, this isn't the hour—
+
+[NURSE_ADA_KIRWIN | style: pressing]
+Where did she go, Doctor?
+
+[DR_JONAS_WYCLIFFE | style: forcing calm]
+I couldn't say offhand. Not without the file.
+
+[NURSE_ADA_KIRWIN | style: quiet, watching him]
+You signed her discharge yourself. Your own hand.
+
+[DR_JONAS_WYCLIFFE | style: stalling]
+Discharges pass through many hands, Nurse.
+
+[NURSE_ADA_KIRWIN | style: unblinking, softer]
+Your hand's stopped on that bottle, Doctor.
+
+[DR_JONAS_WYCLIFFE | style: forcing movement, too careful]
+It's carbolic. I was reaching for carbolic.
+
+[NURSE_ADA_KIRWIN | style: cold, final]
+I didn't ask what it was. I asked where she went.
+
+--- PART 2 ---
+
+[DR_JONAS_WYCLIFFE | style: forced calm, too smooth]
+Patients often lodge with family during convalescence.
+
+[DR_JONAS_WYCLIFFE | style: manufacturing detail on the spot]
+Mrs. Hale went to a cousin. In Leeds.
+
+[NURSE_ADA_KIRWIN | style: flat, procedural]
+No cousin appears in her admission file.
+
+[NURSE_ADA_KIRWIN | style: pressing, quiet]
+Not one line. Not one name.
+
+[DR_JONAS_WYCLIFFE | style: silence, caught | speed: 0.9]
+Files are incomplete. That's not evidence of anything.
+
+[DR_JONAS_WYCLIFFE | style: shifting to authority, warning]
+Questioning Dr. Moorhouse's protocol isn't your place, Nurse Kirwin.
+
+[DR_JONAS_WYCLIFFE | style: voice cracking on the word | speed: 0.95]
+It could cost you this position.
+
+[NURSE_ADA_KIRWIN | style: steady, unmoved]
+You said "protocol" like it hurt to say.
+
+[NURSE_ADA_KIRWIN | style: cold, final]
+I'm not frightened, Doctor. I'm still asking.
+
+[DR_JONAS_WYCLIFFE | style: bottle set down hard]
+Then ask somewhere else.
+
+--- PART 3 ---
+
+[NURSE_ADA_KIRWIN | style: hushed, measured | speed: 0.95]
+Bed four. Bed five. Bed six.
+[NURSE_ADA_KIRWIN | style: hushed]
+Names against numbers. Chart tight in my fist.
+[NURSE_ADA_KIRWIN | style: hushed, wary]
+Gaslight turned low. Good. No one to see me.
+[NURSE_ADA_KIRWIN | style: quiet]
+Cell nine. Marked vacated.
+[NURSE_ADA_KIRWIN | style: barely audible, uneasy]
+Then why does the iron slot still show a shadow moving?
+[NURSE_ADA_KIRWIN | style: breath catching]
+An empty room doesn't breathe.
+[SFX: chain dragging across stone]
+[NURSE_ADA_KIRWIN | style: quiet, dread rising | speed: 0.9]
+Someone dragged that chain. Someone's still wearing it.
+[NURSE_ADA_KIRWIN | style: trembling, grasping for an explanation]
+Could be a mix-up. Wrong patient, wrong bed.
+[NURSE_ADA_KIRWIN | style: low, unable to believe her own excuse]
+Charts don't lie like that. People do.
+[NURSE_ADA_KIRWIN | style: steadying herself | speed: 0.9]
+I've counted every other door tonight. This is the last one.
+[NURSE_ADA_KIRWIN | style: barely a whisper | speed: 0.85]
+My hand's on the bolt.
+[NURSE_ADA_KIRWIN | style: hushed, half-hoping, half-terrified]
+Mrs. Hale?
+

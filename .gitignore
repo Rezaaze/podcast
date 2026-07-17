@@ -31,3 +31,17 @@ cloud/.tracked_instances.json
 cloud/.race_instance_ids
 # Lock-Datei des nebenläufigen figure_history-Zugriffs.
 data/*.lock
+
+# Laufzeit-Zustand der Cockpit-Steuerung (webui/launcher.py, maschinenlokal):
+# gemerkte PIDs der gestarteten Cockpits + deren Logs.
+webui/.launcher_state.json
+webui/.launcher_logs/
+
+# Slot-Lock-Dateien der systemweiten Claude-Aufruf-Zählsemaphore
+# (fabrik/core/claude_cli.py) — rein flüchtiger Laufzeit-Zustand.
+data/.claude_slots/
+
+# Batch-Checkpoints von create_series.py (fabrik/cli/create_series.py) — flüchtiger
+# Zwischenspeicher für Skeleton/Batches während der Serien-Erzeugung, wird bei
+# vollem Erfolg automatisch gelöscht.
+data/.create_series_staging/

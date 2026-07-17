@@ -25,6 +25,24 @@ app = Flask(__name__)
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 jobs = JobRegistry()
 
+# Mehrere Cockpits parallel: die "aktive Serie" darf dann nicht mehr global über
+# data/series/LATEST laufen (die Instanzen würden sich gegenseitig umbiegen —
+# besonders beim Anlegen, wo eine Schwester-Instanz LATEST überschreibt, bevor
+# diese ihren frischen Slug zurückgelesen hat). Zwei Umgebungsvariablen:
+#   WEBUI_SERIES=<slug>  -> isoliert UND fest auf diesen (existierenden) Slug
+#                           gepinnt; der Umschalter im UI ist gesperrt.
+#   WEBUI_ISOLATED=1     -> isoliert, aber nicht gepinnt: für den Fall "Serie
+#                           erst hier anlegen und dann weiterarbeiten" (4 leere
+#                           Cockpits, jedes legt seine eigene Serie an).
+# Isoliert heißt: die aktive Serie lebt pro Prozess im Speicher (_active) und
+# diese Instanz schreibt den globalen LATEST NIE. Ohne beide Variablen bleibt
+# alles beim alten, LATEST-gestützten Verhalten (Ein-Cockpit-Betrieb).
+PINNED_SERIES = os.environ.get("WEBUI_SERIES") or None
+ISOLATED = bool(PINNED_SERIES) or os.environ.get("WEBUI_ISOLATED") == "1"
+# Aktive Serie DIESER Instanz (nur relevant im isolierten Betrieb; sonst bleibt
+# LATEST die Quelle). Startwert: der Pin bzw. der aktuelle LATEST als Hinweis.
+_active = {"slug": PINNED_SERIES or read_latest_slug()}
+
 
 @app.get("/")
 def index():
@@ -56,17 +74,31 @@ def api_pf_series_list():
             "merge_anthology": data.get("audio", {}).get("merge_anthology", True),
             "use_beats": data.get("generation", {}).get("use_beats", False),
         })
-    return jsonify(series=series, active=read_latest_slug())
+    if PINNED_SERIES and series_dir_for(PINNED_SERIES):
+        active = PINNED_SERIES
+    elif ISOLATED:
+        active = _active["slug"]  # per-Instanz-Speicher; kann None sein (noch nichts angelegt)
+    else:
+        active = read_latest_slug()
+    return jsonify(series=series, active=active, pinned=PINNED_SERIES, isolated=ISOLATED)
 
 
 @app.post("/api/pf/series/active")
 def api_pf_series_set_active():
-    """Setzt series/LATEST — macht die WebUI-Auswahl zum Standard, den auch
-    generate_episode.py/podcast_maker.py/batch.py ohne --series verwenden."""
+    """Wählt die aktive Serie. Ein-Cockpit-Betrieb (nicht isoliert): schreibt
+    series/LATEST, damit auch CLI-Läufe ohne --series dieselbe Serie sehen.
+    Isolierter Betrieb (WEBUI_SERIES/WEBUI_ISOLATED): merkt sich die Serie nur
+    im Prozess-Speicher und fasst den globalen LATEST NIE an — sonst würden
+    parallele Cockpits sich gegenseitig den Default umbiegen. Gepinnt: no-op."""
     body = request.get_json(silent=True) or {}
     slug = body.get("slug", "")
     if not series_dir_for(slug):
         return jsonify(error=f"Unbekannte Serie: {slug}"), 400
+    if PINNED_SERIES:
+        return ("", 204)  # fest gepinnt — Auswahl unveränderlich
+    if ISOLATED:
+        _active["slug"] = slug  # nur Prozess-Speicher, kein LATEST-Write
+        return ("", 204)
     write_latest_slug(slug)
     return ("", 204)
 
@@ -202,10 +234,8 @@ def api_pf_series_discard():
 def api_status_tts():
     port = tts_control.get_tts_port()
     running_commands = jobs.snapshot()
-    starting = any(
-        running_commands.get(cid, {}).get("state") == "running"
-        for cid in ("pf_tts_start", "pf_podcast_maker", "pf_batch")
-    )
+    starting = status.any_command_running(
+        running_commands, "pf_tts_start", "pf_podcast_maker", "pf_batch")
     listening = tts_control.is_port_listening(port)
     return jsonify(port=port, listening=listening, starting=starting and not listening)
 
@@ -369,4 +399,15 @@ if __name__ == "__main__":
     # PORT: von Tooling/Preview-Harnesses gesetzt (Vorrang, falls vorhanden).
     # WEBUI_PORT: eigener Override für den manuellen Start. Sonst Default 5151.
     port = int(os.environ.get("PORT") or os.environ.get("WEBUI_PORT", 5151))
+    if PINNED_SERIES:
+        if series_dir_for(PINNED_SERIES):
+            print(f"WEBUI_SERIES={PINNED_SERIES}: Cockpit fest auf diese Serie "
+                  f"genagelt (LATEST wird von dieser Instanz nicht verändert).")
+        else:
+            print(f"⚠️  WEBUI_SERIES={PINNED_SERIES}: Serie nicht gefunden unter "
+                  f"data/series/ — Pinning ignoriert, Fallback auf LATEST.")
+    elif ISOLATED:
+        print("WEBUI_ISOLATED=1: aktive Serie pro Instanz (Prozess-Speicher), "
+              "globaler LATEST wird nicht verändert — für Parallelbetrieb "
+              "mehrerer Cockpits, die je eine eigene Serie anlegen.")
     app.run(host="127.0.0.1", port=port, threaded=True, debug=False)

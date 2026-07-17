@@ -1,0 +1,1007 @@
+--- PART 1 ---
+
+[NARRATOR]
+Previously on Amity Hollow: Jonah's team traced the checkpoint's ghost paper trail back to a ridge marked empty on every public map, where Old Chen — the reclusive engineer who's lived off-grid there for years — met them with a dread he couldn't hide. Beneath a false slab of rock, they found the hatch he'd clearly known about all along.
+[NARRATOR]
+Now, at the ridge, night has fallen. The hatch stands open. Jonah Reese, Wei Zhou, Yuna Cho, and Old Chen gather around its mouth.
+
+[JONAH_REESE | style: low, controlled]
+One at a time. Wei, you're behind me. Yuna, behind him.
+
+[WEI_ZHOU | style: tight, focused]
+Copy.
+
+[SFX: a metal hatch groaning as it's pushed back]
+
+[NARRATOR]
+Jonah steps down first, headlamp cutting a narrow cone into total black.
+
+[JONAH_REESE | style: quiet, testing the dark]
+Careful — first few steps are steeper than they look.
+
+[SFX: boots ringing on metal stair treads]
+
+[NARRATOR]
+The stairwell is cut straight into the rock, no scaffolding, no seams — carved to last.
+
+[WEI_ZHOU | style: murmuring, almost to himself]
+This isn't a maintenance shaft. Look at the tool marks. Somebody bored this on purpose, deep.
+
+[YUNA_CHO | style: even, professional]
+Keep moving. We don't know how far down it goes.
+
+[NARRATOR]
+Old Chen remains at the surface, one hand braced on the hatch frame, radio clipped to his collar.
+
+[OLD_CHEN | style: hoarse, holding something back]
+I'll stay topside. Patch me in — I'll walk you through what I can from up here.
+
+[JONAH_REESE | style: measured, not pushing]
+Understood. Channel two, open line.
+
+[SFX: a radio click and a low static hiss]
+
+[NARRATOR]
+The team continues down. The drone's thermal reading suggested a shallow structure — this stairwell keeps going.
+
+[WEI_ZHOU | style: counting under his breath, uneasy]
+That's past the depth the exhaust reading gave us. Way past.
+
+[JONAH_REESE | style: firm, final]
+Radio silence from here unless it's essential. I want ears on that stairwell, not chatter.
+
+[YUNA_CHO | style: flat, unreadable]
+Understood.
+
+[SFX: footsteps continuing down stone stairs, echo lengthening]
+
+[NARRATOR]
+The air changes as they descend — still, cool, untouched, the particular silence of a space sealed and forgotten rather than simply unused.
+
+[JONAH_REESE | style: barely above a whisper]
+Somebody built this to disappear.
+
+[NARRATOR]
+Above, at the hatch, Old Chen stares down into the dark his own team has just walked into, and says nothing at all.
+
+--- PART 2 ---
+
+[NARRATOR]
+The stairwell empties into an atrium so vast the team's headlamps can't find its far wall. Jonah, Wei Zhou, and Yuna stand at the threshold, breath held.
+
+[JONAH_REESE | style: low, controlled]
+Hold here. Everyone hold.
+
+[SFX: a boot scuffing to a stop on bare concrete]
+
+[WEI_ZHOU | style: quiet, awed]
+Jonah. Look at the walls.
+
+[JONAH_REESE | style: measured, scanning]
+I see them.
+
+[NARRATOR]
+Rows of monitor banks line both walls, screens dark, stacked floor to ceiling, running the length of the chamber.
+
+[WEI_ZHOU | style: methodical, unsettled]
+That's not a handful of security feeds. That's — hundreds. Maybe more. You don't wire hundreds of screens into a shelter.
+
+[YUNA_CHO | style: careful, neutral]
+Emergency shelters monitor exits. Weather. Structural stress.
+
+[WEI_ZHOU | style: pressing, quiet]
+Not like this. Not banked like a control room. This was built to watch something continuously. Not to check on it once in a while.
+
+[JONAH_REESE | style: flat, taking it in]
+Look up.
+
+[NARRATOR]
+The pillars overhead rise well past a single story, vanishing into headlamp-thin light before the ceiling shows itself at all.
+
+[WEI_ZHOU | style: half to himself]
+That's not shelter-grade concrete. That's — permanent. Somebody poured this to outlast decades, not to outlast one bad winter.
+
+[JONAH_REESE | style: hard, deliberate]
+Civil defense doesn't build like this. Nobody on a government line item pours pillars three stories tall for a bunker nobody's supposed to need twice.
+
+[WEI_ZHOU | style: certain, unsettled]
+I've read every shelter blueprint in the state archive prepping for this case. None of them look like this. Not the layout, not the scale. Nothing.
+
+[SFX: a metal panel creaking faintly under a hand's weight]
+
+[JONAH_REESE | style: quiet, grim]
+Careful.
+
+[WEI_ZHOU | style: apologetic, distracted]
+Sorry. Just — testing it.
+
+[NARRATOR]
+Yuna moves a few steps ahead, headlamp sweeping the dead screens, saying nothing.
+
+[JONAH_REESE | style: watching her, even]
+Yuna. You've been quiet.
+
+[YUNA_CHO | style: composed, deflecting]
+I'm looking. Same as you.
+
+[JONAH_REESE | style: pointed, still even]
+This kind of money. This kind of build. That's not a contractor cutting corners on a government budget. That's somebody with reasons to spend more than they had to.
+
+[WEI_ZHOU | style: low, agreeing]
+Somebody who wanted this to last.
+
+[JONAH_REESE | style: cold, resolved]
+Or somebody who wanted this to work.
+
+[NARRATOR]
+No one answers him. The dark screens stretch on ahead, waiting.
+
+--- PART 3 ---
+
+[NARRATOR]
+Still the bunker atrium, headlamps cutting cones through the dark. Yuna Cho, the government liaison assigned to get the team into the restricted zone, steps ahead of the others.
+
+[YUNA_CHO | style: hesitant, testing the words as she says them]
+Wait. I think I know this place.
+
+[JONAH_REESE | style: sharp, immediately alert]
+Know it how.
+
+[YUNA_CHO | style: careful, downplaying]
+There was a briefing. Months ago, before any of this had a name. Someone put a floor plan in front of me for maybe ninety seconds. I didn't think I'd retained any of it.
+
+[WEI_ZHOU | style: skeptical]
+Ninety seconds, and you're about to walk us through a facility the size of a stadium.
+
+[YUNA_CHO | style: defensive, quick]
+I'm not saying I have it memorized. I'm saying the shape of this room — the pillar spacing, the way the stairwell dumps you out here instead of into a corridor — it matches something. It's not nothing.
+
+[SFX: a laminated folder or map case unzipping]
+
+[JONAH_REESE | style: measured, weighing it]
+Matches something from a government file.
+
+[YUNA_CHO | style: even, holding the lie steady]
+That's the only kind of file I'd have access to, Agent Reese.
+
+[NARRATOR]
+A beat. Jonah studies her before he answers.
+
+[JONAH_REESE | style: guarded]
+Fine. You lead. Slowly.
+
+[YUNA_CHO | style: quieter, almost to herself]
+There should be a junction ahead. Left takes you deeper, right dead-ends. I think.
+
+[WEI_ZHOU | style: low, half to Jonah]
+"I think." Comforting.
+
+[NARRATOR]
+Yuna moves off first, her light sweeping the pillars like she's counting them without meaning to.
+
+[YUNA_CHO | style: distant, focused]
+This way. I remember this part.
+
+[SFX: footsteps on bare concrete, receding]
+
+[NARRATOR]
+She doesn't say where the ninety seconds came from, or who was standing across the table when she saw it. Only that she was told, at the time, it was storage.
+
+[JONAH_REESE | style: quiet, to Wei Zhou, falling back a step]
+Keep your light on the walls. Not on her.
+
+[WEI_ZHOU | style: dry]
+Copy that.
+
+[NARRATOR]
+The team follows the liaison deeper into rock that was never meant to be found.
+
+--- PART 4 ---
+
+[NARRATOR]
+Still in the atrium, the team waits on Jonah's word before committing to Yuna's route.
+He studies her a moment longer than the question requires.
+
+[JONAH_REESE | style: measured, testing]
+Say that again. The blueprints — where exactly did you see them.
+
+[YUNA_CHO | style: light, offhand]
+I told you. A liaison packet, months back. Half the pages were redacted. I didn't think it mattered until I was standing in it.
+
+[JONAH_REESE | style: flat, unconvinced]
+You didn't mention any of that this morning. When I asked if you'd been briefed on layout.
+
+[YUNA_CHO | style: quick, deflecting]
+Because it didn't feel real until now. You don't flag every scrap of paper that crosses your desk, do you.
+
+[WEI_ZHOU | style: impatient, low]
+Jonah. Whatever the source, we don't have a better map. This place could swallow a day if we split up guessing.
+
+[SFX: a loose ceiling panel ticking as it cools]
+
+[NARRATOR]
+Jonah's headlamp sweeps the pillars once, then settles back on Yuna.
+
+[JONAH_REESE | style: quiet, to himself, deciding]
+Fine. You lead.
+
+[YUNA_CHO | style: careful relief]
+That's — good. I can get us to the main corridor from here.
+
+[JONAH_REESE | style: even, giving nothing away]
+Straight lines only. Anything that doesn't match what you told me, I want to hear it the second you notice.
+
+[YUNA_CHO | style: steady, practiced]
+Of course.
+
+[NARRATOR]
+He doesn't tell her what he's already noticed — that her uncertainty this morning has hardened into a memory too precise for something half-redacted.
+
+[JONAH_REESE | style: internal, clipped, almost inaudible]
+Blueprints don't teach you where a hallway bends before you've walked it.
+
+[WEI_ZHOU | style: focused, moving]
+This way, then. Before the light on these headlamps decides for us.
+
+[SFX: boots scuffing over grit and old concrete dust]
+
+[NARRATOR]
+Jonah falls in a half-step behind Yuna, close enough to watch her, far enough that she won't feel it.
+
+[JONAH_REESE | style: private, resolved]
+Every wrong turn you don't make is a question I'm keeping.
+
+[NARRATOR]
+He says none of it aloud. For now, her knowledge is worth more to him than his suspicion — and she reads his silence as trust, not surveillance, as the team moves deeper into the dark beyond the atrium's last dead screen.
+
+--- PART 5 ---
+
+[NARRATOR]
+The atrium narrows into a side corridor. Wei Zhou has broken off from the group, his light sweeping low walls that keep going.
+
+[WEI_ZHOU | style: focused, muttering to himself]
+Jonah. You're gonna want to see this.
+
+[SFX: footsteps on concrete, quickening]
+
+[JONAH_REESE | style: alert]
+Talk to me.
+
+[WEI_ZHOU | style: uneasy]
+Doors. A whole row of them. Reinforced, sealed — and there's a window in each one. Small, like—
+
+He stops walking.
+
+[WEI_ZHOU | style: quieter]
+Like you'd look in, not out.
+
+[SFX: a gloved hand tapping twice against thick metal]
+
+[JONAH_REESE | style: measured, guarded]
+Evac shelters don't have viewing windows.
+
+[WEI_ZHOU]
+No. And there's no evac signage anywhere. No arrows, no "assembly point," nothing. Just this.
+
+He runs his light over a panel beside the door.
+
+[WEI_ZHOU | style: clinical, masking unease]
+Control panel's on the outside. Whoever built this didn't want the door opened from in there.
+
+[YUNA_CHO | style: careful, arriving]
+How far does it go?
+
+[WEI_ZHOU | style: low]
+Farther than my light reaches. I count eleven from here and the corridor just — keeps going.
+
+[SFX: a distant metallic groan, structural, brief]
+
+[JONAH_REESE | style: tight]
+Everyone stay together. Wei, walk the near wall, call out anything you see.
+
+[WEI_ZHOU]
+Copy.
+
+[NARRATOR]
+He moves along the row, headlamp catching door after identical door.
+
+[WEI_ZHOU | style: reading off, controlled]
+Panel. Window. Panel. Window. Same spacing every time. This isn't improvised — somebody drew this up on purpose.
+
+[YUNA_CHO | style: quiet, watching him rather than the doors]
+It does look — deliberate.
+
+[JONAH_REESE | style: to himself, barely audible]
+Deliberate for what.
+
+[WEI_ZHOU | style: stopping, tense]
+Jonah.
+
+[SFX: a single footstep, then silence]
+
+[WEI_ZHOU]
+This one's got frost on the glass. Like something in there's still cold.
+
+[JONAH_REESE | style: sharp, decisive]
+Don't touch the panel. Nobody touches anything till we know what we're looking at.
+
+[WEI_ZHOU | style: shaken but steady]
+Wasn't planning to.
+
+[NARRATOR]
+The three of them stand at the mouth of the row, the corridor stretching dark and identical ahead of them, door after door after door.
+
+--- PART 6 ---
+
+[NARRATOR]
+Still the observation corridor, chamber doors stretching into the dark. Jonah Reese and Wei Zhou move along the row together, Yuna Cho a few steps behind.
+
+[JONAH_REESE | style: measured, quietly wound tight]
+Look at the windows. Every single one faces in.
+
+[WEI_ZHOU | style: methodical, unsettled under it]
+Not out. If this were a shelter, you'd want visibility outward — see the corridor, see who's coming. These only let you see what's inside the room.
+
+[SFX: a gloved hand tapping twice against reinforced glass]
+
+[JONAH_REESE | style: low, testing the thought aloud]
+So somebody standing where we're standing was never meant to check on the corridor. They were meant to check on the person in there.
+
+[WEI_ZHOU | style: flat, working through the wiring]
+Panel's the same story. There's no release lever on this side — I've been looking. It's a lock control, and a feed line running up into the wall. That's not fail-safe engineering. That's a monitoring rig.
+
+[JONAH_REESE | style: careful, disliking his own conclusion]
+Monitoring rig behind a door rated to hold. That's not for keeping bad air out.
+
+[WEI_ZHOU | style: quiet]
+That's for keeping something in.
+
+A beat. Neither of them says the word.
+
+[JONAH_REESE | style: even, but the certainty landing hard]
+This was never a shelter, Wei. Whatever they called it on paper — this was built to watch people. Room after room of it.
+
+[WEI_ZHOU | style: low]
+Built, or turned into that. Either way — nobody designs an evacuation site with a window like a fish tank.
+
+[NARRATOR]
+Yuna Cho stands a few steps back, silent, her headlamp fixed on the nearest door.
+
+[JONAH_REESE | style: turning to include her, testing]
+Yuna. Anything about this in whatever you were shown?
+
+[YUNA_CHO | style: even, carefully unbothered]
+Corridors, mostly. Nothing about what went on inside the rooms. I told you — I only had the layout.
+
+[JONAH_REESE | style: neutral, but filing it away]
+Convenient, what gets left off a blueprint.
+
+[YUNA_CHO | style: light, deflecting]
+You'd know better than me how these things get redacted.
+
+[NARRATOR]
+She says nothing more. Ahead, the corridor continues, chamber after chamber, the same locked silence behind every door.
+
+--- PART 7 ---
+
+[NARRATOR]
+The observation corridor, moments later. Jonah stops at the third door in the row, his light catching something bolted beside the frame.
+
+[JONAH_REESE | style: flat, controlled dread]
+There's a plaque here.
+
+[WEI_ZHOU | style: alert, quickening]
+Read it.
+
+[JONAH_REESE | style: careful, precise]
+"Doyle, Grace." That's a name off the town rolls. I pulled the resident list myself before we came down.
+
+[SFX: a gloved hand brushing dust off a metal plaque]
+
+[WEI_ZHOU | style: tense]
+Under it?
+
+[JONAH_REESE | style: quiet, unsettled]
+A code. "SUBJ-088. STATUS: CLOSED — NON-RET." That's it. No date past that I can find.
+
+[YUNA_CHO | style: careful, too even]
+Could be maintenance shorthand. Facilities like this, they log everything. Doesn't have to mean what it sounds like.
+
+[JONAH_REESE | style: not buying it, but not pushing yet]
+Non-ret. Non-returned. Tell me another way to read that.
+
+[WEI_ZHOU | style: clipped, working]
+I'm not reading it. I'm documenting it.
+
+[SFX: a phone camera shutter click, twice]
+
+[WEI_ZHOU | style: steady, methodical]
+Angle on the name, angle on the code. Chain of custody starts now, whatever this turns out to be.
+
+[JONAH_REESE | style: hardening]
+Good. Because I don't think Grace Doyle is the only one.
+
+[YUNA_CHO | style: neutral, watching]
+You want to walk the whole row.
+
+[JONAH_REESE | style: decisive]
+Every door. Every plaque. If there's a pattern, I want it before we're another hundred feet in, not after.
+
+[WEI_ZHOU | style: already moving]
+I'll take this side. Call out if either of you finds another name.
+
+[JONAH_REESE | style: low, to himself but audible]
+"Closed." Like a file. Not like a person.
+
+[SFX: boots on concrete, several steps receding]
+
+[NARRATOR]
+Wei Zhou moves off alone down the row, his light sweeping door after identical door, the numbers climbing steadily into the dark ahead of him.
+
+--- PART 8 ---
+
+[NARRATOR]
+Back in the observation corridor, Wei Zhou — the team's audio forensics analyst — moves alone past the others, his flashlight sweeping door after door.
+
+[WEI_ZHOU | style: focused, methodical]
+Nothing here. Nothing here.
+
+[SFX: a flashlight beam clicking across a metal door frame]
+
+[WEI_ZHOU | style: reading under his breath]
+Chamber forty-one. Chamber forty-two.
+
+[NARRATOR]
+He stops.
+
+[WEI_ZHOU | style: voice catching, barely audible]
+Zhang.
+
+[SFX: a hand pressing flat against a metal door]
+
+[WEI_ZHOU | style: reading again, slower, like he's hoping to be wrong]
+Zhang. Status code — same as the others.
+
+[NARRATOR]
+His hand stays against the door frame, still.
+
+[WEI_ZHOU | style: whispering to himself, shaken]
+No. No, that's — that's a common name. It doesn't mean —
+
+[NARRATOR]
+He doesn't finish the sentence.
+
+[WEI_ZHOU | style: forcing composure, voice flat]
+Jonah! Nothing down this stretch. I'm coming back.
+
+[NARRATOR]
+He steps away from the chamber before either of them can see his face.
+
+[WEI_ZHOU | style: quiet, to himself, unsteady]
+Not yet. Not yet.
+
+--- PART 9 ---
+
+[NARRATOR]
+Still inside the chamber corridor, Wei Zhou draws Jonah a few steps back, out of Yuna's earshot near the doorway.
+
+[WEI_ZHOU | style: low, urgent, forcing the words out]
+Jonah. Before we go any further — there's something you need to know. That voice on the Zhang household logs.
+
+[JONAH_REESE | style: guarded, already bracing]
+The one flagged as unidentified female.
+
+[WEI_ZHOU | style: quiet, ashamed]
+It's not unidentified. Not to me. I ran a waveform comparison against an old family recording. Off the books, nobody signed off on it. It's my cousin. Lian.
+
+[SFX: a data tablet clicking off]
+
+[JONAH_REESE | style: flat, absorbing a blow]
+Your cousin lived in Amity Hollow.
+
+[WEI_ZHOU | style: fast now that it's out]
+Married name. Zhang. I didn't say anything because the second I do, I'm off this case — conflict of interest, reassigned, and then I've got nothing. No access, no answers. I filed for the raw audio twice, both times through channels, both times denied. I thought if I just kept pushing quietly —
+
+[JONAH_REESE | style: cutting in, controlled]
+You'd find her yourself. Before anyone stopped you.
+
+[WEI_ZHOU]
+Yes.
+
+[JONAH_REESE | style: measured, tired underneath it]
+How long.
+
+[WEI_ZHOU | style: barely audible]
+Since the first week.
+
+[SFX: footsteps shifting on concrete, someone stepping back]
+
+[JONAH_REESE | style: quiet, not quite anger]
+So for the entire time I've been trusting your read on every piece of audio in this investigation, you've had a name in your head you never gave me.
+
+[WEI_ZHOU | style: pleading, careful]
+I gave you everything else. Every log, every match — I never buried the work, Jonah. Just the reason I was looking so hard.
+
+[JONAH_REESE | style: cold calm, deciding something]
+That's not a small line to draw, Wei.
+
+[WEI_ZHOU]
+I know.
+
+[JONAH_REESE | style: heavy pause, resigned]
+Does she have a chamber back there.
+
+[WEI_ZHOU | style: voice breaking slightly]
+I found it already. I hadn't said that part yet either.
+
+[SFX: a heavy door groaning faintly further down the corridor]
+
+[JONAH_REESE | style: sharp, refocusing]
+Show me. And Wei — nothing else. Not one more thing you're sitting on.
+
+[WEI_ZHOU | style: subdued]
+There's nothing else. I swear it.
+
+[NARRATOR]
+Jonah says nothing more, filing this beside every other detail that no longer adds up — and turns back toward the row of sealed doors, Wei Zhou a half-step behind him.
+
+--- PART 10 ---
+
+[NARRATOR]
+Above ground, inside the mobile unit's Trauma Safe Room, Dr. Mei Lin — the child psychologist assigned to work with the investigation's sole witness — sits across a low table from Milo, the boy found alone in Amity Hollow.
+[NARRATOR]
+It is the same hour the team descends below the ridge; up here, the boy has a box of crayons and a fresh sheet of paper.
+
+[DR_MEI_LIN | style: soft, unhurried]
+You don't have to talk. You can just draw, if that's easier today.
+
+[NARRATOR]
+Milo doesn't answer. He picks a gray crayon and begins.
+
+[SFX: crayon dragging in short, firm strokes across paper]
+
+[DR_MEI_LIN | style: gently observing]
+That's a lot of lines already. Straight ones. Are those... walls?
+
+[MILO | style: flat, distant]
+Doors.
+
+[DR_MEI_LIN | style: careful, encouraging]
+Doors. Okay. How many doors, do you think?
+
+[MILO | style: quiet, mechanical]
+All of them.
+
+[NARRATOR]
+He keeps drawing — a long corridor, doors evenly spaced down both sides, each marked with a small square in the corner.
+
+[DR_MEI_LIN | style: masking surprise, still gentle]
+That's very precise, Milo. You're being so careful with the spacing.
+
+[MILO | style: barely audible]
+It has to be even. It's always even.
+
+[DR_MEI_LIN | style: measured, professional]
+Okay. That's okay. Sometimes when things feel frightening, our minds like to make them neat. Organized. It can feel safer that way.
+
+[NARRATOR]
+She reaches for her notepad, careful not to break his rhythm.
+
+[SFX: a pen clicking once]
+
+[DR_MEI_LIN | style: murmured, half to herself]
+Repetition of a corridor motif — third time now. Could be a coping structure. Could be —
+
+[NARRATOR]
+She stops herself before finishing the thought out loud.
+
+[DR_MEI_LIN | style: warm, redirecting]
+Milo, can you tell me what's behind one of the doors?
+
+[NARRATOR]
+He stops drawing. For a long moment he only looks at the page.
+
+[MILO | style: small, careful]
+I don't know. I never got to open one.
+
+[DR_MEI_LIN | style: soft]
+That's alright. You don't have to know that.
+
+[NARRATOR]
+He picks the crayon back up and adds a small square to the very last door on the page — identical to all the others.
+
+[DR_MEI_LIN | style: quiet, writing]
+New development. Flagging for the file.
+
+[NARRATOR]
+She doesn't know yet that the boy hasn't drawn a metaphor. He's drawn a map.
+
+--- PART 11 ---
+
+[NARRATOR]
+Below the ridge, Wei Zhou crouches at the chamber row, radio in hand. Above at the hatch, Old Chen waits alone with the static.
+
+[WEI_ZHOU | style: focused, reading carefully]
+Chen, you still on this channel? I've got a designator here, need your ears on it.
+
+[OLD_CHEN | style: gravelly, distant]
+I'm here. Go ahead.
+
+[WEI_ZHOU | style: level, methodical]
+Chamber marked C-dash-one-one-dash-R. Little hyphen, then a letter after the number block. That mean anything to you?
+
+[OLD_CHEN | style: long pause, then quiet]
+Say it again.
+
+[WEI_ZHOU | style: patient]
+C, one one, R. Repeats down the row — C-one-two-R, C-one-three-R. Same pattern, just the middle number climbing.
+
+[SFX: radio static crackling faintly]
+
+[OLD_CHEN | style: hollow, far away]
+That's mine.
+
+[JONAH_REESE | style: leaning toward the radio, curious]
+Yours how? You built the numbering?
+
+[OLD_CHEN | style: flat, forcing steadiness]
+Nineteen eighty-eight. We didn't have room designations from any manual, so I made one up. Section letter, chamber number, then a tail letter for the wing. R was always the residential wing. I picked it because it was easy to say over a bad radio line. Nobody's used that system in decades. Nobody but me even remembers it exists.
+
+[WEI_ZHOU | style: taken aback, then careful]
+So whoever's running this place now — they kept your original scheme. Didn't rebuild it, didn't modernize it. Just kept building on top of what you left.
+
+[OLD_CHEN | style: strained, almost to himself]
+Didn't think anyone would still be reading my handwriting.
+
+[JONAH_REESE | style: reassuring, missing the undertone]
+That's good, actually. If the numbering's yours, you can probably tell us how the wings connect faster than we can map it ourselves.
+
+[OLD_CHEN | style: distant, not quite answering]
+Probably.
+
+[WEI_ZHOU | style: gentle, noticing the silence stretch]
+Chen. You okay on your end?
+
+[OLD_CHEN | style: too quick, covering]
+Fine. Just — cold air moving through the hatch. Give me a minute.
+
+[SFX: a metal hatch cover creaking under wind]
+
+[NARRATOR]
+Below, the team takes his silence for static. Above, Old Chen sits with a system he built decades ago, and a number climbing wing by wing toward a name he has not let himself say.
+
+[JONAH_REESE | style: already moving on, brisk]
+Copy that. Wei, keep logging the row — plaques first, panel wiring after. We'll need Chen's memory for the deeper sections once we're through this corridor.
+
+[WEI_ZHOU | style: steady]
+Understood.
+
+[NARRATOR]
+The radio channel stays open, carrying nothing now but the faint hush of wind at the hatch mouth, and a man above ground bracing for what his own design might still hold below.
+
+--- PART 12 ---
+
+[NARRATOR]
+Still deep in the chamber corridor, Jonah keys the radio, Old Chen's voice crackling in from the hatch above.
+
+[SFX: radio static crackle]
+
+[OLD_CHEN | style: flat, resolved]
+I'm coming down.
+
+[JONAH_REESE | style: firm, cautious]
+Chen, no. You stay put. We don't know what's structurally sound past that atrium, and you're — 
+
+[OLD_CHEN | style: cutting him off, quiet]
+Say it. Old.
+
+[JONAH_REESE | style: measured]
+I was going to say unprotected. No suit, no gear beyond a headlamp. I need you at that hatch in case we need a fast way out.
+
+[OLD_CHEN | style: unmoved]
+You need someone who knows what's down there. That's not going to be Wei Zhou reading a wiring diagram he's never seen before. It's going to be me.
+
+[JONAH_REESE | style: pressing]
+You gave us the numbering system over the radio just fine from up top. I don't need you standing in it.
+
+[OLD_CHEN | style: low, almost to himself]
+Some of it you don't get over a radio.
+
+[JONAH_REESE | style: wary]
+Meaning what.
+
+[OLD_CHEN | style: guarded, deflecting]
+Meaning concrete like this, poured the way I poured it — there are things only my hands will remember. Junctions. Load points. Places that look sealed and aren't. You want me useful, you don't want me forty feet above you shouting directions blind.
+
+[NARRATOR]
+A pause stretches over the open channel, static filling the silence where Chen doesn't explain further.
+
+[JONAH_REESE | style: exhaling, reluctant]
+If anything down here isn't stable, I'm sending you back up. No argument.
+
+[OLD_CHEN | style: already moving]
+Understood.
+
+[SFX: a heavy metal hatch groaning open]
+
+[NARRATOR]
+Footsteps begin their slow descent, the old stairwell swallowing the sound almost as fast as it's made.
+
+[JONAH_REESE | style: to himself, uneasy]
+He knows something he's not saying.
+
+[NARRATOR]
+Below, the team waits at the mouth of the corridor, headlamps steady on the dark stretching past them, unaware of what's walking down to meet them.
+
+--- PART 13 ---
+
+[NARRATOR]
+Deep beneath the ridge, in the corridor of sealed chambers, Old Chen — the retired engineer who once built this place — moves ahead of Jonah and Wei Zhou like a man retracing his own footprints.
+
+[OLD_CHEN | style: flat, procedural, guarding something]
+Left here. It bends left before it bends right — I remember thinking that was a stupid way to run a corridor.
+
+[JONAH_REESE | style: watching him closely]
+You're not even checking the doors anymore.
+
+[OLD_CHEN | style: clipped]
+I don't need to check the ones I already know.
+
+[SFX: boots on concrete, a slower pace than before]
+
+[WEI_ZHOU | style: quiet, uneasy]
+He's not reading the plaques. He's just... walking past them.
+
+[NARRATOR]
+Then, without warning, Old Chen stops.
+
+[SFX: a single footstep, then silence]
+
+[OLD_CHEN | style: very still]
+Here.
+
+[JONAH_REESE | style: cautious]
+Chen?
+
+[NARRATOR]
+His headlamp settles on a plaque beside a sealed door, and holds there.
+
+[OLD_CHEN | style: barely audible]
+Iris Chen.
+
+[WEI_ZHOU | style: careful]
+Same status code as the others. "Study concluded, subject not returned."
+
+[JONAH_REESE | style: measured]
+Chen. Same last name as you.
+
+[NARRATOR]
+Old Chen doesn't answer. His hand comes up, slow, and presses flat against the door — not searching for a release, not testing the seal. Just resting there.
+
+[JONAH_REESE | style: gentler now]
+Talk to me.
+
+[OLD_CHEN | style: voice failing, then catching itself]
+It's a common name. Chen.
+
+[WEI_ZHOU | style: unsure whether to push]
+Sure. It's common.
+
+[NARRATOR]
+The composure he's carried since the tent, since the hatch, since every mile down that stairwell — it goes first in his shoulders, then in his breath.
+
+[OLD_CHEN | style: almost to himself]
+Study concluded.
+
+[JONAH_REESE | style: low, watching him break]
+Chen. Whatever this is — say it.
+
+[NARRATOR]
+He doesn't. Not yet. He only stands with his palm against the cold steel, eleven years of silence pressing up against a single sealed door, while Jonah and Wei Zhou wait for a name neither of them yet understands he's already grieving.
+
+--- PART 14 ---
+
+[NARRATOR]
+Still in the observation corridor. Old Chen steps back from Iris's chamber and draws Jonah a few feet away from the others, his voice dropped almost to nothing.
+
+[OLD_CHEN | style: hollow, forcing the words out | speed: 0.9]
+Jonah. Come here a second. Just you.
+
+[JONAH_REESE | style: careful, quiet]
+Chen, you don't look right. Talk to me.
+
+[SFX: a hand pressing flat against rough concrete]
+
+[OLD_CHEN | style: barely holding it together]
+That name on the plaque. Iris. She was my granddaughter.
+
+[JONAH_REESE | style: stunned, gentle]
+Your—
+
+[OLD_CHEN | style: hollow]
+Eleven years. She went off for what she thought was some paid study. Never came home. I never said her name to another living soul since. Not to the sheriff. Not to anybody.
+
+[JONAH_REESE | style: measured, steadying himself]
+Chen. This whole facility. You said you helped build it.
+
+[OLD_CHEN | style: guilt breaking through]
+The original shelter, yes. Nineteen eighty-eight. Every stairwell, every numbering system down here — mine. I drew it to keep people safe. I didn't build the thing it turned into. But I put the bones in the ground it's standing on, and I never once asked what they did with it after.
+
+[JONAH_REESE | style: quiet]
+You could have said something. Any time in eleven years.
+
+[OLD_CHEN | style: raw]
+And say what? That my own work maybe swallowed my granddaughter? I told myself — if I ever found proof, dragging this place into the light would be justice for her. That's what I told myself walking down those stairs today.
+
+[OLD_CHEN | style: voice cracking, almost a whisper]
+Hearing it out loud now — Christ, Jonah, it sounds so thin. Like something I made up so I could keep sleeping at night.
+
+[JONAH_REESE | style: gentle, careful]
+It's not nothing. You're telling me now. That matters.
+
+[OLD_CHEN | style: hollow, distant]
+Does it. She's still not walking out of that chamber.
+
+[NARRATOR]
+Jonah says nothing more, only rests a hand on the older man's shoulder — reading the confession as the last piece falling into place, not yet seeing the harder edge settling behind Chen's eyes.
+
+--- PART 15 ---
+
+[NARRATOR]
+Still in the chamber corridor, minutes after Chen's confession to Jonah. Yuna Cho has drifted back toward a dead monitor bank at the corridor's edge, a few feet of shadow between herself and the others.
+
+[SFX: a soft double-beep chirping in an earpiece]
+
+[YUNA_CHO | style: still, listening, giving nothing away]
+(barely audible) Copy.
+
+[NARRATOR]
+The burst is short, coded, gone in seconds. Her face doesn't move.
+
+[YUNA_CHO | style: quiet, to herself, controlled]
+Contain the investigation. That's what they said this morning. Contain.
+
+[YUNA_CHO | style: same, colder]
+Not "contain the investigators." Not that.
+
+[NARRATOR]
+She lets a beat pass before she straightens, resetting her posture into something the others would recognize.
+
+[WEI_ZHOU | style: passing by, mild concern]
+You good? You went quiet.
+
+[YUNA_CHO | style: easy, practiced]
+Bad reception down here. Static in my ear for a second.
+
+[WEI_ZHOU | style: already moving on, distracted]
+Yeah. Everything's static down here.
+
+[NARRATOR]
+He walks on toward the others without waiting for more. Yuna watches him go.
+
+[YUNA_CHO | style: low, private, almost pleading with herself]
+I can still manage this. Get them to the corridor, keep it slow, keep it clean — nobody has to know what "contain" means yet.
+
+[YUNA_CHO | style: same, quieter, less convinced]
+I decide how this goes. Not them.
+
+[NARRATOR]
+Down the passage, Jonah's voice carries, calling the group back together after Chen's confession.
+
+[JONAH_REESE | style: raised, gathering the team]
+Yuna — we need you up here. You said you know the way from this point.
+
+[NARRATOR]
+She fixes her expression before she moves, the walk back to them unhurried, unreadable.
+
+[YUNA_CHO | style: composed, helpful]
+Coming. I think I know exactly where this corridor lets out.
+
+[NARRATOR]
+She says it like an offer. Only she knows it's already a direction someone else chose for her.
+
+--- PART 16 ---
+
+[NARRATOR]
+Deeper in the chamber corridor, the team regroups. Wei Zhou is quiet, still turned inward from what he just told Jonah. Yuna moves ahead, scanning the walls like she's counting doors only she can read.
+
+[YUNA_CHO | style: brisk, confident]
+This way. There's a service junction up ahead — it cuts straight past the rest of the chambers.
+
+[JONAH_REESE | style: even, testing]
+You said you weren't sure the blueprints were even real.
+
+[YUNA_CHO | style: light, deflecting]
+I wasn't. Until I was standing in it. Muscle memory, I guess.
+
+[SFX: a heavy steel door groaning open on old hinges]
+
+[NARRATOR]
+The corridor narrows, then opens onto a single reinforced door, wider and thicker than any of the chamber entries behind them.
+
+[YUNA_CHO | style: steady, urging]
+That's it. That's the fastest way to the control room. Everything routes through there.
+
+[WEI_ZHOU | style: distracted, quiet]
+Fastest according to what.
+
+[YUNA_CHO | style: smooth, quick]
+According to the layout. You want to keep checking every door back there instead?
+
+[JONAH_REESE | style: measured, weighing]
+No. We keep moving.
+
+[NARRATOR]
+Jonah studies her a beat too long before he says it, the words landing more like a decision than agreement.
+
+[WEI_ZHOU | style: flat, still elsewhere]
+Fine by me.
+
+[JONAH_REESE | style: low, private]
+Wei. You good?
+
+[WEI_ZHOU | style: quiet, unconvincing]
+I'm fine. Let's just find whatever's back there.
+
+[NARRATOR]
+Jonah lets it go, filing it with everything else he isn't saying out loud.
+
+[YUNA_CHO | style: businesslike, moving forward]
+Panel's on the left. Give me a second.
+
+[SFX: a keypad chirping, three short tones]
+
+[NARRATOR]
+She works the panel with a fluency that doesn't match someone recalling a memory from a briefing years old.
+
+[JONAH_REESE | style: quiet, careful]
+You've done that before.
+
+[YUNA_CHO | style: light, too fast]
+Standard configuration. They're all the same.
+
+[NARRATOR]
+The door shudders, then begins to draw back, the gap widening into darkness beyond.
+
+[WEI_ZHOU | style: low, half to himself]
+Doesn't feel like a way out.
+
+[YUNA_CHO | style: firm, final]
+It's not. It's the way in.
+
+[NARRATOR]
+She steps through first, and after a moment, the two men follow, none of them seeing what waits for them at the threshold ahead.
+
+--- PART 17 ---
+
+[NARRATOR]
+Deep beneath the ridge, the team stands before a reinforced door marked with the numbering Old Chen once designed decades ago. Chen has just spoken his granddaughter Iris's name aloud for the first time in eleven years; Wei Zhou has finally told Jonah about his cousin Lian. Yuna insists this door is the fastest way to the control room.
+
+[OLD_CHEN | style: hollow, focused]
+That's my numbering. Sequence three, sub-block C. I stamped these plates myself.
+
+[JONAH_REESE | style: guarded]
+And you're sure this leads to a control room, not another row of chambers.
+
+[YUNA_CHO | style: rehearsed calm]
+It's the fastest way through. Trust me on this one.
+
+[WEI_ZHOU | style: murmured, distant]
+Lian never had a chance to see any of this.
+
+[JONAH_REESE | style: alert]
+Wei. Look at the corridor.
+
+[SFX: a low electrical hum pulsing through a row of overhead fixtures]
+
+[OLD_CHEN | style: unsettled]
+Those weren't red a minute ago.
+
+[YUNA_CHO | style: masking panic]
+It's just old wiring. Keep moving.
+
+[SFX: a heavy mechanical groan, distant, metal grinding against metal]
+
+[NARRATOR]
+One by one, down the length of the corridor, the lights shift from white to red. And beneath the hum, low and distant, something vast begins to seal shut around them.
+

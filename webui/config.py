@@ -25,6 +25,8 @@ VISUALS_RELPATH = os.path.join(pf_paths.STAGE_VISUALS, "output")
 CHARACTERS_RELPATH = os.path.join(VISUALS_RELPATH, "characters")
 LOCATIONS_RELPATH = os.path.join(VISUALS_RELPATH, "locations")
 THUMBNAILS_RELPATH = os.path.join(VISUALS_RELPATH, "thumbnails")
+SFX_PLAN_RELPATH = os.path.join(SCRIPTS_RELPATH, "SFX_PLAN.json")
+SFX_ONESHOTS_RELPATH = os.path.join(OUTPUT_RELPATH, "sfx", "oneshots")
 
 
 def series_root_dir():
@@ -150,6 +152,9 @@ COMMANDS = {
             ("flag", "template", "--template"),
             ("flag", "minutes", "--minutes"),
             ("flag", "locations", "--locations"),
+            # --fix: Review-Befunde UND Kanon-Drift (check_case_drift) automatisch
+            # reparieren lassen — CLI-Default ist aus, Checkbox sendet das Flag.
+            ("boolflag", "fix", "--fix"),
         ],
         "kind": "line",
     },
@@ -174,7 +179,7 @@ COMMANDS = {
         "args_schema": [
             ("positional_required", "episode"),
             ("boolflag", "force", "--force"),
-            ("boolflag", "fix", "--fix"),
+            ("boolflag_off", "fix", "--no-fix"),  # --fix ist CLI-Default; Checkbox abwaehlen haengt --no-fix an
             ("flag", "jobs", "--jobs"),
             ("flag", "series", "--series"),
         ],
@@ -188,12 +193,29 @@ COMMANDS = {
         "fixed_args": ["all"],
         "args_schema": [
             ("boolflag", "force", "--force"),
-            ("boolflag", "fix", "--fix"),
+            ("boolflag_off", "fix", "--no-fix"),  # --fix ist CLI-Default; Checkbox abwaehlen haengt --no-fix an
             ("flag", "jobs", "--jobs"),
             ("flag", "series", "--series"),
         ],
         "kind": "line",
         "poll_checkpoints": True,
+    },
+    "pf_generate_episode_all_scripts": {
+        "label": "Alle Skripte generieren (ohne Vertonen)",
+        "cwd": PF_DIR,
+        "interpreter": lambda: sys.executable,
+        "module": "fabrik.cli.generate_episode",
+        "fixed_args": ["all", "--no-audio"],
+        "args_schema": [
+            ("boolflag", "force", "--force"),
+            ("boolflag_off", "fix", "--no-fix"),  # --fix ist CLI-Default; Checkbox abwaehlen haengt --no-fix an
+            ("flag", "jobs", "--jobs"),
+            ("flag", "series", "--series"),
+        ],
+        "kind": "line",
+        # BEWUSST NICHT in AUTO_TTS_COMMANDS: --no-audio stoppt vor batch, es wird
+        # kein TTS-Server angefasst. So laufen mehrere Cockpits (je eine Serie)
+        # parallel, ohne sich um den einen lokalen Qwen3-Prozess zu prügeln.
     },
     "pf_generate_episode_check": {
         "label": "episodes.json validieren",

@@ -18,6 +18,12 @@ umgebaut (Branch `mwp-umbau`) — Plan und Task-Stand in
 `docs/mwp-umbau-plan.md`. Vor Arbeit an Pfaden in `fabrik/` dort den
 Phasen-Stand prüfen.
 
+**⚠️ Geplanter Folge-Umbau:** Stage 01 (`create_series.py`) wird in drei
+Teilstages zerlegt (Kanon / Staffelbogen / Episoden), um 227 Zeilen Prüfcode
+zu LÖSCHEN statt weitere hinzuzufügen — Begründung, Datenlage und Task-Stand
+in `docs/konzept-stage-umbau.md`. Vor Änderungen an `create_series.py` oder
+am `sections`-Schema dort nachsehen.
+
 ## Layout
 
 Getrennt nach Laufzeitumgebung und Kopplung, nicht nach Thema:
@@ -96,6 +102,7 @@ cd cloud && ./rent.sh && ./status.sh   # ./stop.sh ./resume.sh ./destroy.sh
 | Template-Anatomie, die 6 Formate, Accent-Casting, NARRATOR-Regel | `templates/CLAUDE.md` |
 | Beat-Layer-Design-Begründung | `docs/beat-layer-design.md` |
 | MWP-Umbau (Plan, Ziel-Layout, Task-Stand) | `docs/mwp-umbau-plan.md` |
+| Konzept-Stage zerlegen (01a Kanon / 01b Bogen / 01c Episoden), Check-Abbau | `docs/konzept-stage-umbau.md` |
 
 ## Top-Gotchas (gelten überall)
 

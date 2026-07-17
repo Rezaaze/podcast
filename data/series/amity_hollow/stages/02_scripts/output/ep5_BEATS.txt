@@ -1,0 +1,118 @@
+--- SCENE 1 ---
+1. Night has fully settled over Field Ops, generators humming instead of daylight voices.
+2. The team is gathered around the console despite Jonah never having announced the stand-down order to them.
+3. The mood in the tent carries a charge of unspoken urgency none of them can fully explain to each other.
+4. The audience understands what the team doesn't: a forty-eight-hour clock is already running out beneath this meeting.
+
+--- SCENE 2 ---
+1. Jonah tells the team they need to move on the checkpoint again, tonight, before Old Chen's warning cools into nothing.
+2. He frames the urgency around Chen's slip of an engineer's term, not around the deadline he's still keeping to himself.
+3. He watches the group's faces for hesitation and finds none, which steadies something anxious in him.
+4. He privately weighs how much runway he's burning by not naming the forty-eight hours out loud.
+5. The audience recognizes he's spending the team's trust on a partial truth to buy speed.
+
+--- SCENE 3 ---
+1. Wei Zhou announces he's broken into the checkpoint's private badge network overnight.
+2. He explains the badge system doesn't run through any government registry he can find.
+3. He states plainly that it traces to a private contractor rather than the Department of Defense.
+4. Jonah presses for the contractor's name, and Wei Zhou admits he hasn't isolated it yet, only that it's not who they expected.
+5. The revelation sharpens the room's sense that something deliberately shielded sits behind that fence.
+
+--- SCENE 4 ---
+1. Yuna argues hard against moving on the checkpoint tonight, citing procedure and risk to the case's legal standing.
+2. Her reasoning sounds practiced at first, the same caution the team has heard from her before.
+3. Under Jonah's pushback, her arguments start contradicting each other in small, telling ways.
+4. Wei Zhou notices the crack but says nothing, still holding his own suspicion of her in reserve.
+5. Jonah overrules her, and she backs down faster than her initial resistance would suggest.
+6. The audience senses her objection was never really about procedure.
+
+--- SCENE 5 ---
+1. Old Chen appears at the tent's edge, offering to guide the team down a service road himself.
+2. He tells them it's a road he designed decades ago, when the facility was still government-run.
+3. He frames the offer as simple local knowledge, nothing more.
+4. Jonah accepts without pushing on how a caretaker would know a road no map shows.
+5. The audience understands Chen is finally acting on the decision he made alone in his cabin.
+
+--- SCENE 6 ---
+1. In the Trauma Safe Room, Mei Lin works with Milo, gentler than before after his reaction to "ridge."
+2. She uses the word "checkpoint" in an otherwise soft, unrelated question.
+3. Milo goes agitated immediately, more visibly upset than the ridge moment produced.
+4. He refuses to explain the reaction, offering no drawing or words to soften it.
+5. Mei Lin logs it as escalating trauma, still not reading it as recognition of something real.
+6. The audience understands the word landed because Milo has encountered the checkpoint himself, not because of abstract fear.
+
+--- SCENE 7 ---
+1. The team moves through the dark along Chen's old service road, following his lead in near silence.
+2. Yuna stays near the back of the group, quieter than her usual position in the field.
+3. Wei Zhou keeps the Zhao tablet against his body, unwilling to leave it in the tent even for this.
+4. Jonah counts the hours in his head without saying the number to anyone beside him.
+5. The team reaches sight of the checkpoint fence from an angle the guards don't watch.
+
+--- SCENE 8 ---
+1. At the checkpoint, Wei Zhou uses his access into the badge network to kill the perimeter cameras.
+2. Jonah forces the gate open while the cameras stay dark.
+3. The team moves through faster than their last visit, no guards yet aware of the breach.
+4. Old Chen hangs back near the fence line rather than entering with the others.
+5. The audience notes Chen's hesitation without yet knowing exactly what he's avoiding.
+
+--- SCENE 9 ---
+1. Inside the guard office, the team finds a terminal running the badge system Wei Zhou hacked remotely.
+2. The registration on screen names Meridian Sentry Services as the operator, not any government body.
+3. Jonah recognizes the name means the checkpoint was never military at all.
+4. Wei Zhou searches further and confirms Meridian Sentry Services is listed as a subsidiary entity, though whose remains unclear on this screen.
+5. The find reframes everything the team assumed about who has been stonewalling them.
+
+--- SCENE 10 ---
+1. Jonah searches a locked cabinet and pulls out a supply manifest.
+2. The manifest lists bulk shipments of a smart-home hub model.
+3. Wei Zhou confirms the model matches exactly what's installed in every Amity Hollow home.
+4. Jonah understands this ties the checkpoint's operator directly to the town's devices for the first time with hard paper proof.
+5. The team moves to photograph and secure the manifest as evidence.
+
+--- SCENE 11 ---
+1. In the scramble to document the room, Yuna is caught trying to slip the manifest itself into her own bag rather than photograph it.
+2. Jonah sees her hand close around the papers a half-second before she can hide the motion.
+3. She freezes, the practiced calm from earlier completely gone from her face.
+4. The audience recognizes this as the exact document that would tie Halcyon Vantage to Amity Hollow's homes.
+
+--- SCENE 12 ---
+1. Jonah pulls Yuna aside and confronts her in a low, furious voice so the others won't hear.
+2. He asks her directly why she was taking the one piece of evidence that matters most.
+3. She deflects, framing it as protecting the document from getting lost or damaged in the chaos.
+4. She never actually denies that she meant to take it, only reframes her intent.
+5. Jonah doesn't tell her what he already suspects from the second phone he saw days ago, choosing to keep watching instead of showing his hand.
+6. The audience sees both of them holding back more than they're saying to each other.
+
+--- SCENE 13 ---
+1. While the confrontation plays out, Wei Zhou works alone at a second terminal, running the manifest's serial numbers.
+2. He finds a hub serial number that matches, exactly, the model installed in his cousin Lian's household.
+3. He goes still, the case's usual clinical distance gone for a moment.
+4. He says nothing to Jonah or Yuna, folding the match away as quietly as everything else he's been hiding.
+5. The audience now holds three separate secrets converging on this one room, none of the characters aware how many others are also hiding something.
+
+--- SCENE 14 ---
+1. Back at the Mobile Forensics Unit, the team reviews a fresh thermal drone pass taken during the checkpoint raid.
+2. The imaging shows active ventilation exhaust venting from a site marked as undeveloped land on every public zoning map.
+3. Jonah connects it to the manifest and the badge system as further proof of something built and hidden beneath the ridge.
+4. Wei Zhou notes the vent as a single point, not yet grasping it likely marks only a fraction of what's below.
+5. The team marks the coordinates as their next target.
+
+--- SCENE 15 ---
+1. Old Chen leans over the drone map as the team discusses the vent site's coordinates.
+2. He goes very still, recognizing the exact location without needing to be told what it connects to.
+3. He says nothing about why the spot means something to him personally.
+4. Internally, he understands this is the site tied to what happened to Iris, though he still doesn't say her name.
+5. The audience recognizes the moment his private guilt and the team's investigation have finally converged on the same ground.
+
+--- SCENE 16 ---
+1. Following the vent coordinates, the team pushes further along the ridge under Chen's continued guidance.
+2. They come upon a hatch cut directly into the rock, concealed well enough to pass unnoticed from any trail.
+3. Jonah examines the hatch and confirms it aligns with both the thermal vent and the badge system's mapped perimeter.
+4. Old Chen stands apart from the group, recognizing construction details in the hatch that only its original builder would know.
+5. The team prepares to open it, none of them aware of how much this specific spot already means to the man guiding them.
+
+--- SCENE 17 ---
+1. The narrator closes on the hatch standing open in the dark, a passage now available to the team.
+2. Old Chen's face is held in focus, calm on the surface but carrying the weight of decades of silence.
+3. The audience understands he already knows, or fears he knows, exactly what waits below.
+4. The episode ends before anyone steps through, the threshold itself the final image.

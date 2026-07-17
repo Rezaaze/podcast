@@ -120,6 +120,27 @@ def unique_slug(title: str) -> str:
     return slug
 
 
+def reserve_unique_series(title: str) -> "Series":
+    """Wie unique_slug(), aber ATOMAR: legt den Wurzelordner mit exist_ok=False
+    an — der leere Ordner IST die Reservierung. Schließt die TOCTOU-Lücke, wenn
+    mehrere create_series gleichzeitig laufen (mehrere Cockpits parallel): zwei
+    Läufe mit demselben Titel wählen sonst denselben Slug (list_series() sieht
+    einen reservierten, noch episodes.json-losen Ordner nicht) und der zweite
+    überschreibt die episodes.json des ersten. Hier gewinnt der erste mkdir den
+    Slug, der zweite bekommt FileExistsError und rückt eine Nummer weiter."""
+    base = slugify(title)
+    slug = base
+    counter = 2
+    while True:
+        root = os.path.join(SERIES_ROOT, slug)
+        try:
+            os.makedirs(root, exist_ok=False)
+            return Series(slug)
+        except FileExistsError:
+            slug = f"{base}_{counter}"
+            counter += 1
+
+
 def read_latest() -> str | None:
     try:
         with open(LATEST_FILE, "r", encoding="utf-8") as f:

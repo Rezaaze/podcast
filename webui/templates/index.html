@@ -37,7 +37,8 @@
         <option value="{{ t.slug }}" data-locations="{{ 1 if t.supports_locations else 0 }}"{{ " selected" if t.slug == "narration" }}>{{ t.slug }}{% if t.description %} — {{ t.description }}{% endif %}</option>
         {% endfor %}
       </select>
-      <button class="run-btn primary" data-command="pf_create_series" data-param-topic="pf-topic" data-param-episodes="pf-episodes" data-param-template="pf-template" data-param-minutes="pf-minutes" data-param-locations="pf-locations">Serie erstellen</button>
+      <label title="Inhalts-Review-Befunde und Kanon-Drift (abweichende case-Fakten zwischen Episoden) automatisch reparieren lassen (--fix)"><input type="checkbox" id="pf-create-fix" checked> Auto-Fix</label>
+      <button class="run-btn primary" data-command="pf_create_series" data-param-topic="pf-topic" data-param-episodes="pf-episodes" data-param-template="pf-template" data-param-minutes="pf-minutes" data-param-locations="pf-locations" data-param-fix="pf-create-fix">Serie erstellen</button>
     </div>
     <div class="copy-block" id="pf-series-review" hidden>
       <label>Neue Serie prüfen — behalten oder verwerfen?</label>
@@ -83,6 +84,12 @@
       <button class="run-btn primary" data-command="pf_generate_episode_all" data-param-fix="pf-fix-review">▶ Alles generieren + vertonen + Anthologie</button>
     </div>
     <div class="action-row">
+      <button class="run-btn" data-command="pf_generate_episode_all_scripts" data-param-fix="pf-fix-review" data-param-jobs="pf-jobs">▶ Alle Skripte generieren (ohne Vertonen)</button>
+      <label for="pf-jobs">parallele Jobs:</label>
+      <input type="number" id="pf-jobs" min="1" max="8" value="2" style="width:3.5em">
+    </div>
+    <p class="hint">Für Parallelbetrieb: läuft Beats → Skripte → Review → SFX-Plan und <strong>stoppt vor der Vertonung</strong>. Fasst den lokalen TTS-Server nicht an — so können mehrere Cockpits (je eine Serie, per <code>WEBUI_SERIES</code> festgenagelt, eigener <code>WEBUI_PORT</code>) gleichzeitig laufen, ohne sich zu behindern. <code>parallele Jobs</code> pro Cockpit niedrig halten (2), damit 4 Instanzen die <code>claude</code>-Rate-Limits nicht sprengen.</p>
+    <div class="action-row">
       <label><input type="checkbox" id="pf-merge-anthology" checked> Episoden am Ende zu einer Anthologie zusammenfügen</label>
     </div>
     <p class="hint">Ausschalten, wenn die Episoden eigenständig bleiben sollen (z.B. Serien-Formate wie soap_opera) — dann bleibt es bei den einzelnen Episoden-MP3s ohne <code>ANTHOLOGY_COMPLETE.mp3</code>.</p>
@@ -101,7 +108,7 @@
     </div>
     <p class="hint">Nur bei case-basierten Templates (crime_drama/soap_opera) wirksam: plant pro Folge in einem Klartext-Durchgang, was in jeder Szene passiert (inkl. Wissens-Verstoß-Prüfung auf den Beats), bevor der eigentliche Dialog geschrieben wird — schließt die Kontinuitätslücke zwischen Sections. Siehe <code>docs/beat-layer-design.md</code>.</p>
     <div class="action-row">
-      <label><input type="checkbox" id="pf-fix-review"> Wissens-Verstöße/Spoiler-Leaks nach dem Schreiben prüfen und automatisch reparieren (<code>--fix</code>)</label>
+      <label><input type="checkbox" id="pf-fix-review" checked> Wissens-Verstöße/Spoiler-Leaks/Fakten nach dem Schreiben prüfen und automatisch reparieren (Standard an; abwählen = <code>--no-fix</code>)</label>
     </div>
     <p class="hint">Nur bei case-basierten Templates (crime_drama/soap_opera) wirksam: prüft jede fertige Episode gegen ihr eigenes case-File und schreibt betroffene Parts gezielt neu. Ergebnis pro Episode in <code>&lt;prefix&gt;N_REVIEW.txt</code>.</p>
     <div class="action-row folder-row">

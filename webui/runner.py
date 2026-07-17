@@ -11,13 +11,51 @@ import json
 import os
 import queue
 import re
-import signal
 import subprocess
 import threading
 import time
 import uuid
 
+import psutil
+
 from config import AUTO_TTS_COMMANDS, COMMANDS, current_series_dir, series_dir_for, OUTPUT_RELPATH
+
+
+def _process_tree(pid: int) -> list:
+    """Elternprozess + ALLE Nachkommen, rekursiv über die echte Eltern-Kind-Beziehung
+    im Betriebssystem ermittelt (psutil), NICHT über Prozessgruppen-Mitgliedschaft.
+
+    Grund: fabrik/core/claude_cli.py::run_claude_process startet jeden claude-Aufruf
+    bewusst in einer EIGENEN Prozessgruppe (start_new_session=True), damit ein interner
+    Timeout-Kill dort gezielt nur claude + seine Kindprozesse trifft, nie den
+    aufrufenden Python-Prozess selbst (siehe dessen Docstring). Das heißt aber: ein
+    laufender claude-Aufruf hängt NICHT mehr automatisch an der Prozessgruppe von
+    create_series.py/generate_episode.py — ein reines os.killpg() auf die Gruppe des
+    Jobs würde einen gerade laufenden claude-Unterprozess beim Abbrechen übersehen und
+    im Hintergrund weiterlaufen lassen. Die rekursive Kindprozess-Suche über psutil
+    findet ihn trotzdem, weil sie der echten Prozess-Hierarchie folgt statt der
+    Gruppen-Zugehörigkeit."""
+    try:
+        parent = psutil.Process(pid)
+    except psutil.NoSuchProcess:
+        return []
+    try:
+        children = parent.children(recursive=True)
+    except psutil.NoSuchProcess:
+        children = []
+    return [parent, *children]
+
+
+def _signal_tree(pid: int, hard: bool = False):
+    """Schickt SIGTERM (hard=False) oder SIGKILL (hard=True) an pid + alle
+    Nachkommen (siehe _process_tree). Einzelne bereits verschwundene oder
+    unzugängliche Prozesse werden stillschweigend übersprungen — das Gesamtbild
+    (möglichst viel vom Baum beenden) ist wichtiger als ein einzelner Fehlschlag."""
+    for proc in _process_tree(pid):
+        try:
+            proc.kill() if hard else proc.terminate()
+        except (psutil.NoSuchProcess, psutil.AccessDenied):
+            pass
 
 STEP_RE = re.compile(r"^\s*▶\s*Schritt\s+(\d+)\s*:\s*(.+)$")
 # batch.py: "[2/5] Starte: figur2.txt → Figur2_FULL_EPISODE.mp3" bzw.
@@ -85,18 +123,42 @@ def build_argv(command_id: str, params: dict) -> tuple[list[str] | None, str | N
             cli_flag = entry[2]
             if value:
                 argv.append(cli_flag)
+        elif kind == "boolflag_off":
+            # Invertierte Checkbox für CLI-Flags mit Default AN (z.B. --fix seit
+            # 17.07.2026): Checkbox angehakt = Default gilt (nichts anhängen),
+            # ABGEWÄHLT = Abschalt-Flag (z.B. --no-fix) anhängen.
+            #
+            # FEHLENDER Schlüssel ist NICHT dasselbe wie "abgewählt" (Bugfix
+            # 17.07.2026): schickt ein Client das Feld gar nicht mit, gilt der
+            # CLI-Default, es wird nichts angehängt. Vorher hängte `if not value`
+            # auch bei value=None das Abschalt-Flag an — ein Browser-Tab mit dem
+            # HTML von VOR der Einführung von `data-param-fix` (Template-Edits
+            # greifen erst beim Reload, siehe webui/CLAUDE.md) schickte 'fix'
+            # nicht mit und schaltete damit die Reparatur still ab, obwohl die
+            # Checkbox sichtbar angehakt war. Ergebnis in Produktion: drei frisch
+            # erzeugte Serien mit zusammen 42 korrekt geflaggten, aber nie
+            # applizierten Review-Befunden — der Default war de facto invertiert.
+            # Gegenprobe: {'fix': True} -> kein Flag, {'fix': False} -> --no-fix,
+            # {} -> kein Flag (vorher: --no-fix).
+            cli_flag = entry[2]
+            if name in (params or {}) and not value:
+                argv.append(cli_flag)
 
     return argv, cmd["cwd"]
 
 
 class Job:
     def __init__(self, job_id: str, command_id: str, argv: list[str] | None, cwd: str | None, kind: str,
-                 checkpoints_dir: str | None = None):
+                 checkpoints_dir: str | None = None, series: str | None = None):
         self.job_id = job_id
         self.command_id = command_id
         self.argv = argv
         self.cwd = cwd
         self.kind = kind
+        # Nur für snapshot()/die WebUI-Anzeige (welche Serie läuft gerade
+        # unter diesem Kommando) — die eigentliche Serien-Auflösung für den
+        # Subprozess passiert längst über argv (--series-Flag).
+        self.series = series
         # series/<slug>/output/.checkpoints — vorab aufgelöst (statt im
         # Polling-Thread zu raten), da mehrere Serien parallel existieren
         # können und "podcast_output/" seit der Serien-Migration nicht mehr
@@ -221,13 +283,13 @@ class Job:
             self.state = "error"
             self._log(f"❌ Interner Fehler beim Lesen der Job-Ausgabe: {exc}")
             if self.process.poll() is None:
-                try:
-                    if os.name != "nt":
-                        os.killpg(os.getpgid(self.process.pid), signal.SIGTERM)
-                    else:
+                if os.name != "nt":
+                    _signal_tree(self.process.pid)
+                else:
+                    try:
                         self.process.terminate()
-                except (ProcessLookupError, PermissionError, OSError):
-                    pass
+                    except (ProcessLookupError, OSError):
+                        pass
             self.returncode = self.process.poll()
         finally:
             if checkpoint_thread:
@@ -277,19 +339,37 @@ MAX_RETAINED_JOBS = 100  # verhindert unbegrenztes Wachstum von _jobs über die 
 KILL_ESCALATE_SECONDS = 5  # SIGTERM -> SIGKILL-Frist für Prozessbäume, die SIGTERM ignorieren
 
 
+_TTS_LOCK_KEY = "__tts__"  # ein gemeinsamer Schlüssel für ALLE AUTO_TTS_COMMANDS
+
+
+def _lock_key(command_id: str, params: dict) -> str:
+    """Eindeutigkeits-Schlüssel für die 'läuft bereits'-Sperre.
+
+    AUTO_TTS_COMMANDS teilen sich den EINEN lokalen TTS-Prozess (Pinokio/
+    Qwen3) — tts_control.start_tts()/stop_tts() sind nicht Refcount-fähig,
+    zwei gleichzeitige TTS-gebundene Jobs würden sich gegenseitig den Server
+    unter den Füßen wegziehen (Job A beendet, stoppt TTS, während Job B noch
+    synthetisiert). Alle Mitglieder von AUTO_TTS_COMMANDS teilen sich deshalb
+    EINEN gemeinsamen Schlüssel (nicht command_id-spezifisch — sonst könnten
+    z.B. pf_batch und pf_podcast_maker trotzdem gleichzeitig laufen), GLOBAL
+    über alle Serien.
+
+    Alle anderen pf_*-Kommandos (Skripte schreiben, Bild-Prompts, Cover,
+    Thumbnails, SFX-Plan, ...) sind reine `claude`-CLI-Aufrufe pro Serie ohne
+    geteilte Ressource — der Schlüssel wird zusätzlich nach 'series'
+    aufgeschlüsselt, damit z.B. zwei Serien gleichzeitig Skripte schreiben
+    können, statt sich global zu blockieren."""
+    if command_id in AUTO_TTS_COMMANDS:
+        return _TTS_LOCK_KEY
+    series = (params or {}).get("series") or ""
+    return f"{command_id}::{series}" if series else command_id
+
+
 class JobRegistry:
     def __init__(self):
         self._jobs: dict[str, Job] = {}
-        self._running_by_command: dict[str, str] = {}
+        self._running_by_key: dict[str, str] = {}
         self._lock = threading.Lock()
-
-    def is_running(self, command_id: str) -> bool:
-        with self._lock:
-            job_id = self._running_by_command.get(command_id)
-            if not job_id:
-                return False
-            job = self._jobs.get(job_id)
-            return bool(job and job.state == "running")
 
     def start(self, command_id: str, params: dict) -> str:
         argv, cwd = build_argv(command_id, params)
@@ -301,20 +381,35 @@ class JobRegistry:
             series_dir = series_dir_for((params or {}).get("series")) or current_series_dir()
             if series_dir:
                 checkpoints_dir = os.path.join(series_dir, OUTPUT_RELPATH, ".checkpoints")
-        job = Job(job_id, command_id, argv, cwd, kind, checkpoints_dir=checkpoints_dir)
+        job = Job(job_id, command_id, argv, cwd, kind, checkpoints_dir=checkpoints_dir,
+                 series=(params or {}).get("series"))
 
         # Check-and-register muss ATOMAR sein (ein Lock-Block, nicht
         # is_running() + separater with-Block) — sonst können zwei parallele
-        # Requests für dieselbe command_id beide die Prüfung passieren, bevor
+        # Requests für denselben lock_key beide die Prüfung passieren, bevor
         # eine von beiden sich einträgt, und zwei Subprozesse für denselben
         # Slot spawnen.
+        lock_key = _lock_key(command_id, params)
         with self._lock:
-            running_id = self._running_by_command.get(command_id)
+            running_id = self._running_by_key.get(lock_key)
             running_job = self._jobs.get(running_id) if running_id else None
             if running_job and running_job.state == "running":
-                raise ValidationError(f"'{command_id}' läuft bereits")
+                series = (params or {}).get("series")
+                is_series_scoped = lock_key == f"{command_id}::{series}"
+                if is_series_scoped:
+                    detail = f" für Serie '{series}'"
+                elif running_job.command_id != command_id:
+                    # Globale Sperre (z.B. TTS), aber ein ANDERES Kommando
+                    # hält sie gerade — sonst klingt die Meldung wie ein
+                    # Selbst-Konflikt, obwohl z.B. pf_batch pf_podcast_maker
+                    # blockiert (geteilter lokaler TTS-Prozess).
+                    detail = (f" (blockiert durch '{running_job.command_id}'"
+                             f"{f' für Serie {running_job.series!r}' if running_job.series else ''})")
+                else:
+                    detail = ""
+                raise ValidationError(f"'{command_id}' läuft bereits{detail}")
             self._jobs[job_id] = job
-            self._running_by_command[command_id] = job_id
+            self._running_by_key[lock_key] = job_id
             self._prune_locked()
 
         thread = threading.Thread(target=job.run, daemon=True)
@@ -340,28 +435,15 @@ class JobRegistry:
     def get(self, job_id: str) -> Job | None:
         return self._jobs.get(job_id)
 
-    @staticmethod
-    def _signal_process_group(process: subprocess.Popen, sig: int):
-        """Schickt sig an die ganze Prozessgruppe (siehe start_new_session in
-        _run_subprocess — batch.py/generate_episode.py starten selbst wieder
-        Subprozesse, ein Signal nur an den direkten Kindprozess ließe die
-        Enkel weiterlaufen). Fällt auf den einzelnen Prozess zurück, wenn die
-        Gruppe nicht (mehr) ansprechbar ist. Nur für os.name != "nt" — unter
-        Windows gibt es keine Prozessgruppen-Signale, siehe kill()."""
-        try:
-            os.killpg(os.getpgid(process.pid), sig)
-        except (ProcessLookupError, PermissionError, OSError):
-            try:
-                process.terminate()
-            except (ProcessLookupError, OSError):
-                pass
-
     def kill(self, job_id: str) -> bool:
         job = self._jobs.get(job_id)
         if not job or not job.process:
             return False
         if os.name != "nt":
-            self._signal_process_group(job.process, signal.SIGTERM)
+            # Rekursiver Tree-Kill statt Prozessgruppe (siehe _process_tree):
+            # erreicht auch verschachtelte claude-Aufrufe, die sich bewusst in
+            # eine eigene Gruppe ausgeklinkt haben.
+            _signal_tree(job.process.pid)
         else:
             job.process.terminate()
 
@@ -369,7 +451,11 @@ class JobRegistry:
             time.sleep(KILL_ESCALATE_SECONDS)
             if job.process.poll() is None:
                 if os.name != "nt":
-                    self._signal_process_group(job.process, signal.SIGKILL)
+                    # Baum neu ermitteln statt den von oben wiederzuverwenden —
+                    # zwischenzeitlich könnten neue Kindprozesse entstanden sein,
+                    # und bereits beendete sind ohnehin kein Problem (siehe
+                    # _signal_tree's NoSuchProcess-Handling).
+                    _signal_tree(job.process.pid, hard=True)
                 else:
                     try:
                         job.process.kill()
@@ -380,13 +466,24 @@ class JobRegistry:
         return True
 
     def snapshot(self) -> dict:
+        """Läuft aktuell etwas, geschlüsselt nach `_lock_key()` — bei
+        AUTO_TTS_COMMANDS ist das schlicht der command_id (global, wie
+        bisher; bestehende Leser wie status.py greifen unverändert per
+        `running_commands.get("pf_batch", ...)` darauf zu). Bei allen
+        anderen pf_*-Kommandos ist der Schlüssel `"<command_id>::<series>"`
+        — mehrere Serien können also gleichzeitig unter demselben
+        command_id auftauchen; jeder Eintrag trägt zusätzlich `command_id`/
+        `series`, damit die WebUI pro Button UND pro Serie den richtigen
+        Lauf erkennt (`app.js::syncRunningJobs`)."""
         with self._lock:
             result = {}
-            for command_id, job_id in self._running_by_command.items():
+            for lock_key, job_id in self._running_by_key.items():
                 job = self._jobs.get(job_id)
                 if job:
-                    result[command_id] = {
+                    result[lock_key] = {
                         "job_id": job_id,
+                        "command_id": job.command_id,
+                        "series": job.series,
                         "state": job.state,
                         "started_at": job.started_at,
                     }

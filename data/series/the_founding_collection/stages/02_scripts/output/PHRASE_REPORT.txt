@@ -1,0 +1,36 @@
+Phrasen-Frequenz-Report (deterministisch, fabrik/writing/phrase_stats.py)
+Episoden ausgewertet: 1, 2, 3, 4, 5, 6, 7, 8
+
+Wiederholte Phrasen (>= 6x über die Staffel):
+    10x  "forty seven lots"
+     9x  "in front of"
+     9x  "for fifty years"
+     8x  "nineteen thirty eight"
+     8x  "a moment longer"
+     7x  "nineteen fifty one"
+     7x  "for a moment"
+     7x  "neither of them"
+     7x  "that's not a"
+     6x  "every one of them"
+     6x  "i'm not going to"
+     6x  "house's chief appraiser"
+     6x  "not until i"
+     6x  "thank you for"
+     6x  "side by side"
+     6x  "a long moment"
+     6x  "fifty years and"
+     6x  "in this room"
+     6x  "at a time"
+
+Style-Einheitston (>= 25x als style/tone/emotion-Wort):
+   101x  style "quiet"
+    42x  style "careful"
+    38x  style "herself"
+    34x  style "measured"
+    34x  style "low"
+    32x  style "almost"
+    32x  style "steady"
+    30x  style "gentle"
+    27x  style "even"
+    25x  style "testing"
+    25x  style "guarded"

@@ -1,0 +1,3 @@
+1 Hinweis(e):
+
+- Part 2: Nora says comparable lots 11 and 20 were 'appraised at roughly sixty percent less' than the suspect lot 14, but the case file states the forged entry was inflated by ~60% above the true value — meaning an unaltered comparable lot should be about 37-38% less than the inflated figure, not 60% less; the math doesn't match the case file's inflation rate.

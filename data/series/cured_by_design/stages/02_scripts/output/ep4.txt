@@ -1,0 +1,939 @@
+--- PART 1 ---
+
+[NARRATOR]
+Previously on Cured by Design: Ethan buried the page naming his own family before anyone else could read it. Then, in the middle of the night, Dr. Pike called Mira, whispering that someone had just been at his door.
+
+[NARRATOR]
+Now. Dr. Harold Pike's apartment, a modest walk-up, early evening. He is returning home alone after a long day at the archive.
+
+[SFX: a key scraping uselessly against a splintered door frame]
+
+[DR_HAROLD_PIKE | style: confused, cautious]
+That's — no. No, that's not right.
+
+[DR_HAROLD_PIKE | style: quiet alarm]
+The lock's been forced. Someone's pried the whole plate loose.
+
+[SFX: a door creaking open slowly on damaged hinges]
+
+[DR_HAROLD_PIKE | style: barely a whisper]
+Hello? Is — is anyone here?
+
+[NARRATOR]
+He steps inside. Nothing greets him but silence and the hum of an old refrigerator.
+
+[DR_HAROLD_PIKE | style: cataloguing, tense]
+Television's here. Radio's here. Nobody touched the — nobody wants what an old man owns.
+
+[SFX: a drawer sliding fully open, empty, hitting its stop]
+
+[DR_HAROLD_PIKE | style: dawning dread]
+Just this one. Just my desk. Emptied clean and — everything else in this room, untouched.
+
+[DR_HAROLD_PIKE | style: shaken, thinking aloud]
+A thief takes what he can sell. A thief doesn't leave the silver candlesticks sitting right there on the shelf.
+
+[DR_HAROLD_PIKE | style: grim recognition, low]
+This isn't a thief. This is a message. I know this method — I've seen it before, decades back. Quiet men, in and out, taking exactly what they came for and nothing more.
+
+[DR_HAROLD_PIKE | style: mounting panic]
+The break-in at the storage unit. Same hand. Same — same patience. They're not done with me.
+
+[SFX: papers rustling as a trembling hand gathers scattered sheets off the floor]
+
+[DR_HAROLD_PIKE | style: frightened, decisive]
+No police. Police ask questions I can't answer without answering worse ones.
+
+[SFX: a rotary-style phone receiver lifted, buttons pressed unsteadily]
+
+[NARRATOR]
+He dials the number on the card Mira gave him weeks ago, the one he swore he'd only use if it truly mattered.
+
+[DR_HAROLD_PIKE | style: hushed, urgent, voice cracking]
+Miss Kwon — it's Pike. Someone was in my apartment. My drawer — they took papers, they took — please, you have to — I don't know who else to call.
+
+[DR_HAROLD_PIKE | style: trailing into fear, quieter]
+I don't know who else is safe to call.
+
+--- PART 2 ---
+
+[NARRATOR]
+The war room, a converted storage room behind the studio, later that same night. Mira Kwon, the podcast's host, and Ethan Cole, her co-host, are closing out the day's notes when the studio line rings.
+
+[SFX: office phone ringing]
+
+[MIRA_KWON | style: alert, business-like]
+Podcast line, this is Mira.
+
+[DR_HAROLD_PIKE | style: shaking, breathless, phone quality | speed: 1.15]
+Mira — it's Harold. Someone's been in my apartment.
+
+[MIRA_KWON | style: instantly serious]
+Slow down for me. Are you hurt? Are you safe right now, this second?
+
+[DR_HAROLD_PIKE | style: shaking]
+I'm on the stairwell landing. I didn't want to go back inside to wait for you.
+
+[ETHAN_COLE | style: low, tense]
+Put him on speaker, Mira.
+
+[SFX: speakerphone click]
+
+[DR_HAROLD_PIKE | style: shaking, breathless]
+The lock was forced. Just one drawer in my desk — emptied. Nothing else touched. Not the television, not the wallet sitting right there on the counter.
+
+[MIRA_KWON | style: careful, steady]
+That's not a burglary, Harold. That's someone who knew exactly what they wanted.
+
+[DR_HAROLD_PIKE | style: frightened, certain]
+It's the same as before. The same kind of quiet men who used to come round the back office. They know what they're after, and they know I'm the one holding it.
+
+[ETHAN_COLE | style: distracted, tense underneath]
+He's not wrong about the pattern. Whatever they're after, they've stopped being subtle about wanting it.
+
+[MIRA_KWON | style: firm, decisive]
+Harold, listen to me. You are not spending tonight in that apartment. Pack a bag — small, whatever you can carry in one hand — and wait where there are people around until we're there.
+
+[DR_HAROLD_PIKE | style: relieved, unsteady]
+You'll come get me yourselves?
+
+[MIRA_KWON | style: firm]
+We're leaving right now.
+
+[ETHAN_COLE | style: relieved, quick]
+I'll drive. Better than sitting here waiting on someone else to make this decision for us.
+
+[MIRA_KWON | style: measured, private]
+Don't say anything to the others yet — not until he's somewhere settled. I don't want this getting ahead of us before we've even moved him.
+
+[ETHAN_COLE | style: agreeing, low]
+Agreed. Fewer people who know where, the better, at least tonight.
+
+[MIRA_KWON | style: to Pike, warmer, phone]
+Harold, stay on the line with me. We're already walking out the door.
+
+[DR_HAROLD_PIKE | style: shaky, grateful]
+Thank you. I didn't know who else I could call.
+
+[SFX: car keys grabbed off a hook]
+
+[NARRATOR]
+They cut the studio lights and head out, already splitting the drive between them, the exact place he'll spend the night still unsettled.
+
+--- PART 3 ---
+
+[NARRATOR]
+A converted hunting cabin an hour outside the city, borrowed from a source who owes Mira a favor. Night has nearly fallen. Mira Kwon and Ethan Cole bring Dr. Harold Pike inside, a bag clutched to his chest.
+
+[ETHAN_COLE | style: clipped, task-focused]
+Windows are old but the frames are solid. I'll check the latches.
+
+[MIRA_KWON | style: gentle, low]
+Dr. Pike. Come sit down. You don't have to stand by the door.
+
+[DR_HAROLD_PIKE | style: shaky, distracted, speed: 0.9]
+I'm fine standing. I'd rather see who comes up the path.
+
+[SFX: a window latch being tested and clicking shut]
+
+[ETHAN_COLE | style: matter-of-fact]
+That one's secure. Kitchen window next.
+
+[DR_HAROLD_PIKE | style: quiet, gripping the bag]
+Check the back door twice. People think once is enough. It isn't.
+
+[MIRA_KWON | style: soft reassurance]
+This is just for tonight, maybe a few nights. Somewhere they don't know to look.
+
+[DR_HAROLD_PIKE | style: tired, wary]
+And how long before they know to look here.
+
+[MIRA_KWON | style: honest, careful]
+I don't have an answer for that. I wish I did.
+
+[SFX: a deadbolt sliding into place]
+
+[ETHAN_COLE | style: brisk, moving on]
+Back door's solid too. I'll take the couch by the window tonight.
+
+[DR_HAROLD_PIKE | style: barely audible]
+Somebody should. I don't sleep well with an open room behind me.
+
+[MIRA_KWON | style: warm, quiet]
+Let's get you settled. There's a bed in the back, and tea if you want it.
+
+[DR_HAROLD_PIKE | style: a little steadier, grateful]
+Tea. Yes. Thank you.
+
+He sits, finally, the bag still in his lap.
+
+[DR_HAROLD_PIKE | style: reflective, guarded]
+You two didn't have to come get me yourselves. Could have sent someone.
+
+[MIRA_KWON | style: firm, sincere]
+We weren't going to send someone.
+
+[DR_HAROLD_PIKE | style: almost a whisper]
+No. I suppose you weren't.
+
+[ETHAN_COLE | style: even, redirecting]
+Get some rest if you can. I'll be right out here.
+
+[DR_HAROLD_PIKE | style: settling, exhausted]
+I'll try.
+
+[NARRATOR]
+Outside, the last light drains from the tree line. Inside, no one says how long "temporary" might actually last.
+
+--- PART 4 ---
+
+[NARRATOR]
+Later that same evening. Senator Delia Marsh's downtown office — the senator whose family's rise into public life the podcast has been quietly circling.
+
+[NARRATOR]
+An intercom line crackles at her desk.
+
+[SFX: intercom buzzer, short]
+
+[SENATOR_DELIA_MARSH | style: brisk, mid-paperwork]
+Whatever it is, it can wait until after the transit vote. I told you — no interruptions before seven.
+
+[NARRATOR]
+Her assistant's voice comes through the speaker: a man downstairs, no appointment, no name given, insisting only that the senator will want to see him.
+
+[SENATOR_DELIA_MARSH | style: measured, a beat slower than before]
+No name. And you're telling me this because he said so, not because you recognized him.
+
+[SENATOR_DELIA_MARSH | style: quieter, something tightening]
+Of course he did. That's exactly the kind of thing people like that say.
+
+[NARRATOR]
+She sets her pen down.
+
+[SFX: a pen set down firmly on a desk]
+
+[SENATOR_DELIA_MARSH | style: controlled, giving instructions]
+Push everything back. The Whitfield call, the committee memo — all of it. I don't care what excuse you give them. And hold every other line until I say otherwise.
+
+[NARRATOR]
+A pause before she speaks again, straightening files that don't need straightening.
+
+[SENATOR_DELIA_MARSH | style: low, almost to herself | speed: 0.9]
+Nobody with something legitimate to ask refuses to give a name.
+
+[SENATOR_DELIA_MARSH | style: steadying herself, quieter still]
+Whitfield's people don't operate that way. My donors don't operate that way. There's exactly one kind of visitor who does.
+
+[NARRATOR]
+She doesn't move for a moment, the office suddenly too quiet for a building full of staff on the other side of the door.
+
+[SENATOR_DELIA_MARSH | style: gathering composure, controlled | speed: 0.95]
+Fine. Fine — we won't make him wait either. That's never done anyone any favors.
+
+[SFX: an office chair rolling back slightly]
+
+[SENATOR_DELIA_MARSH | style: flat, decisive, into the intercom]
+Send him up.
+
+[NARRATOR]
+She folds her hands on the desk, spine straight, and waits for the door — already certain, before it opens, that whatever this is, it isn't routine.
+
+--- PART 5 ---
+
+[NARRATOR]
+The Senator's Bloodline. Marsh's private office, moments later. Victor Lane, a corporate-security fixer whose firm has served her family for decades, is shown in alone.
+
+[VICTOR_LANE | style: unhurried, pleasant]
+Senator. Thank you for making the time.
+
+[SENATOR_DELIA_MARSH | style: guarded, professional]
+My assistant said you wouldn't give a name. That's not how people normally get in here.
+
+[VICTOR_LANE | style: calm, faintly amused]
+I've never needed to give one. Not with your family.
+
+[SENATOR_DELIA_MARSH | style: controlled]
+That's supposed to reassure me.
+
+[VICTOR_LANE | style: measured]
+It's supposed to remind you. My firm has been quietly useful to your family for a long time. Your father's time, and before that. We don't advertise it. You've never had to ask.
+
+[SENATOR_DELIA_MARSH | style: sharp]
+Get to the point.
+
+[VICTOR_LANE | style: even, almost gentle]
+The podcast. Two amateurs with a microphone and a stolen film reel, chasing a story that doesn't concern you. It would be a simple thing for your office to say so, publicly, this week.
+
+[SENATOR_DELIA_MARSH | style: cold]
+And if my office doesn't say so.
+
+[VICTOR_LANE | style: unbothered]
+Then continued cooperation becomes harder to arrange. Things that have been quiet stay quiet because people keep their end of long understandings.
+
+[SENATOR_DELIA_MARSH | style: rising, demanding]
+Say what you mean, Victor. What exactly do you think you have on me?
+
+[VICTOR_LANE | style: soft, deliberate]
+I didn't say I had anything on you, Senator.
+
+[SFX: a desk drawer closing softly]
+
+[VICTOR_LANE | style: quiet, pointed]
+I said your family. There's a difference, until suddenly there isn't.
+
+[SENATOR_DELIA_MARSH | style: shaken, trying to hide it]
+My family has nothing to do with some hospital forty years before I was born.
+
+[VICTOR_LANE | style: mild, watching her]
+Forty-some years. Your grandmother's years, if I'm not mistaken.
+
+[NARRATOR]
+Marsh says nothing. Victor lets the silence do what he came to do.
+
+[VICTOR_LANE | style: standing, unhurried]
+Think about the statement, Senator. Think about it carefully.
+
+[SFX: office door opening, then closing]
+
+[NARRATOR]
+Alone now, Marsh sits very still, aware of how little she actually knows about the woman in the photograph on her own shelf.
+
+--- PART 6 ---
+
+[NARRATOR]
+Senator Marsh's office, moments after Victor Lane has gone. She's alone now with three generations of family photographs.
+
+[SENATOR_DELIA_MARSH | style: quiet, controlled falling apart]
+Impolite to ask. That's what they always said.
+
+[SFX: a desk drawer sliding open]
+
+[SENATOR_DELIA_MARSH | style: murmuring to herself]
+Grandmother Diane. Nineteen seventy-four. That's the earliest photograph anyone has of you. Not a baby picture. Not a school photo. A woman already grown, already smiling for a camera like she'd rehearsed it.
+
+[SENATOR_DELIA_MARSH | style: bitter, low]
+"Impolite to ask." My father said that to me once, when I was nine, and I never asked again. Not once. Thirty years of not asking.
+
+[SENATOR_DELIA_MARSH | style: shaken, quieter]
+I used to think that was grace. Old-world manners. A woman who'd earned her privacy.
+
+[SENATOR_DELIA_MARSH | style: harder, cold realization]
+Now it just sounds like a door somebody built and told us all to stop knocking on.
+
+[SFX: a framed photograph being picked up off a shelf]
+
+[SENATOR_DELIA_MARSH | style: searching, almost pleading with the image]
+What am I supposed to see in your face, Diane? Everyone always said I had your eyes. Nobody ever said where you got them from.
+
+[SENATOR_DELIA_MARSH | style: unsteady]
+He didn't even threaten me. He just — stood there. Let the silence do it. And it worked, didn't it. Because there's a hole where my family's history should be, and I've spent my whole life calling that hole "privacy."
+
+[SENATOR_DELIA_MARSH | style: firmer, trying to reassert control]
+No. I'm not doing this. Not tonight. I have a statement to approve and a campaign that doesn't stop because a man in a good suit made me feel small in my own office.
+
+[SENATOR_DELIA_MARSH | style: quiet, undercutting her own resolve]
+I'm not doing this tonight.
+
+[SFX: the photograph set back down on the shelf, glass tapping wood]
+
+[NARRATOR]
+She holds that thought only a moment before letting it go, unwilling yet to follow where it leads.
+
+--- PART 7 ---
+
+[NARRATOR]
+The safe house, later that same night. The Silencing Campaign continues. Pike has calmed enough to sit, a canvas bag still on his lap.
+
+[DR_HAROLD_PIKE | style: quiet, deliberate]
+There's something I didn't show you in the car.
+
+[MIRA_KWON | style: gentle, attentive]
+Okay.
+
+[SFX: a small zipper being pulled open]
+
+[DR_HAROLD_PIKE | style: careful, protective]
+I never let this out of my sight. Not once, in fifty years. Not even tonight, when they had their hands on everything else in that drawer.
+
+[ETHAN_COLE | style: cautious]
+What is it, Harold?
+
+[DR_HAROLD_PIKE | style: low, tired]
+A notebook. Mine. Not the hospital's.
+
+[MIRA_KWON | style: careful]
+What's in it?
+
+[DR_HAROLD_PIKE | style: heavy]
+Names. People I logged off the books, because someone told me to, and I did what I was told, God forgive me. Patients who came in under one name and left under another. Staff who signed things and made sure nobody ever saw them sign.
+
+[MIRA_KWON | style: quiet urgency]
+Harold — that's not a footnote. That's the spine of everything we've been trying to prove.
+
+[DR_HAROLD_PIKE | style: hesitant]
+I know what it is. That's why I never wrote it anywhere they could find it.
+
+[SFX: a notebook set down on a wooden table]
+
+[ETHAN_COLE | style: watching closely, controlled]
+May I look?
+
+[DR_HAROLD_PIKE | style: reluctant, testing]
+In a minute. Let me say this first.
+
+[MIRA_KWON | style: steady]
+Take your time.
+
+[DR_HAROLD_PIKE | style: trembling but resolved]
+There are names in there I've never said out loud. Not to my wife, not to a priest, not to anyone. I told myself silence was mercy. Tonight I'm not so sure it wasn't cowardice.
+
+[MIRA_KWON | style: soft, not pushing]
+Nobody's asking you to say all of it tonight.
+
+[DR_HAROLD_PIKE | style: quiet, decisive]
+No. But I'm done deciding what to protect people from. That decision cost me thirty years of sleep.
+
+He slides the notebook across.
+
+[SFX: a notebook sliding across a wooden table]
+
+[ETHAN_COLE | style: measured, but tight]
+Thank you, Harold. You didn't have to do that tonight.
+
+[DR_HAROLD_PIKE | style: dry, weary]
+They already broke my lock once looking for less. I'd rather it be in your hands than under my mattress.
+
+[MIRA_KWON | style: firm, grateful]
+It'll stay safe. I promise you that much.
+
+[NARRATOR]
+Ethan doesn't open it yet. He only looks at the cover, and at his own hands resting beside it.
+
+--- PART 8 ---
+
+[NARRATOR]
+The podcast studio, early evening. Thread shift: The Senator's Bloodline. Mira Kwon and Ethan Cole are mid-broadcast when a statement from Senator Delia Marsh's office lands on the studio's monitors.
+
+[MIRA_KWON | style: mid-broadcast energy, then faltering]
+—and that's the shape of what we're tracking this week. Ethan, before we go to break, I want to flag something that just came in—
+
+[ETHAN_COLE | style: professional, reading off-screen]
+It's a statement. From Senator Marsh's office. Just now.
+
+[SFX: a notification chime, sharp and short]
+
+[MIRA_KWON | style: guarded, reading in real time]
+"The Senator's office continues to monitor certain independent media productions whose sourcing and motives have not been transparently disclosed to the public."
+
+[ETHAN_COLE | style: careful, neutral]
+Doesn't name us.
+
+[MIRA_KWON | style: flat]
+Doesn't have to.
+
+[ETHAN_COLE | style: measured]
+Three weeks ago her office called us "a valuable public conversation." That's the exact phrase. I have it saved.
+
+[MIRA_KWON | style: tight, controlled]
+And now we're an undisclosed motive.
+
+[NARRATOR]
+The statement arrives as the studio is already absorbing separate pressure — two sponsors quietly pulled their spots earlier that afternoon.
+
+[MIRA_KWON | style: low, half to herself]
+Today, of all days.
+
+[ETHAN_COLE | style: gentle but firm]
+We don't editorialize on air about this. Not yet.
+
+[MIRA_KWON | style: sharp, restrained]
+I'm not asking to editorialize. I'm asking what changed.
+
+[ETHAN_COLE | style: measured, guarded]
+I don't know.
+
+[MIRA_KWON | style: quiet, pointed]
+Neither do I. That's what bothers me.
+
+[NARRATOR]
+On air, Mira steadies her voice for the listeners waiting through the pause.
+
+[MIRA_KWON | style: composed, broadcast voice returning]
+We'll have more on this after the break — including a statement that just reached us from Senator Marsh's office. Stay with us.
+
+[SFX: a studio monitor clicking to standby]
+
+[ETHAN_COLE | style: low, once the mic is dead]
+That wording — "not transparently disclosed." That's not a press aide. That's legal language. Someone wrote that to be quoted.
+
+[MIRA_KWON | style: cold certainty settling in]
+She didn't stumble into this, Ethan. Somebody handed her that sentence.
+
+[ETHAN_COLE | style: careful, withholding]
+Maybe.
+
+[MIRA_KWON | style: staring at the screen, unmoving]
+Six weeks of neutral. Then this, the same week as the break-in. That's not a coincidence I'm willing to write off.
+
+--- PART 9 ---
+
+[NARRATOR]
+The War Room, the podcast's production studio, still mid-broadcast. Mira and Ethan are live when Senator Marsh's office publishes its statement.
+
+[SFX: a phone buzzing hard against the desk, three short bursts]
+
+[MIRA_KWON | style: broadcast voice, easy and practiced]
+—and that's where the timeline stood as of last week. We'll have more on the notebook discovery in a—
+
+[ETHAN_COLE | style: low, reading off a screen]
+Mira.
+
+[MIRA_KWON | style: reading live, caught off guard]
+"The office of Senator Delia Marsh questions the credibility and motivations of this podcast's ongoing series." That just came in. On air. While we're sitting here.
+
+[ETHAN_COLE | style: measured, broadcast-calm]
+Our listeners should hear it exactly as we're hearing it. We've requested comment from the Senator's office for weeks. Tonight, instead of a conversation, they've chosen a statement.
+
+[MIRA_KWON | style: sharper, steadying herself]
+We stand by every claim in this series. All of it documented. We'll leave that there for tonight.
+
+[SFX: a studio fader clunking down]
+
+[NARRATOR]
+Off air, seconds later, the two alone at the desk.
+
+[MIRA_KWON | style: low, furious]
+She had weeks to say nothing. She picks tonight — right when we're one document away from confirming the trust.
+
+[ETHAN_COLE | style: careful, even]
+Maybe it's timing.
+
+[MIRA_KWON | style: flat, certain]
+It's not timing. That's not a woman flinching on instinct, Ethan. That's a message. Somebody handed her those exact words and told her when to release them.
+
+[ETHAN_COLE | style: quiet]
+You think Lane reached her.
+
+[MIRA_KWON]
+I think somebody reached her. I don't much care whose name is on the letterhead.
+
+[ETHAN_COLE | style: guarded, agreeing a beat too fast]
+Then we don't back off. We just don't hand anyone something sloppy to point at.
+
+[MIRA_KWON | style: watching him]
+That's not what I said.
+
+[ETHAN_COLE | style: smooth, recovering]
+I know. I'm agreeing with you.
+
+[NARRATOR]
+Mira holds his eyes a moment longer than the silence requires, then looks back down at her notes.
+
+--- PART 10 ---
+
+[NARRATOR]
+The archive vault, later that day. The Senator's Bloodline thread resumes. Mira and Ethan, the podcast's two hosts, comb through financial ledgers pulled from the Ashcroft estate's public filings.
+
+[MIRA_KWON | style: focused, methodical]
+Ashcroft's estate paperwork goes back further than I thought. Look at this — a recurring line item, same amount, same month, every year starting in 1974.
+
+[ETHAN_COLE | style: careful, controlled]
+Recipient?
+
+[MIRA_KWON | style: quiet intensity]
+Coded as a family trust disbursement. No name on the ledger itself, just an account number. But the routing history ties back to the Marsh household.
+
+[SFX: a folder of papers set down firmly on a table]
+
+[ETHAN_COLE | style: measured, giving nothing away]
+Eleven years of payments, then it just stops?
+
+[MIRA_KWON]
+1985. Cuts off clean, like someone closed the account or the arrangement just... expired.
+
+[DR_HAROLD_PIKE | style: rasping, thoughtful]
+Ashcroft's estate paying a private family for over a decade. That's not a gift. That's an obligation.
+
+[MIRA_KWON | style: rising urgency]
+Now watch this. Diane Marsh's marriage certificate — the earliest paper trail on her, anywhere — is dated April, 1974.
+
+[ETHAN_COLE | style: flat, testing the ground]
+Same year the payments start.
+
+[MIRA_KWON]
+Same year. Same month, almost. I laid the dates side by side twice because I didn't want to see it and then I saw it anyway.
+
+[SFX: a pen tapping twice against a desk]
+
+[DR_HAROLD_PIKE | style: low, uneasy]
+Eleven years is a long time to keep paying for something that's supposed to be finished.
+
+[MIRA_KWON | style: restrained, disciplined]
+It's the strongest thing we've got. But I'm not calling it proven. Not on air, not anywhere, until there's a second document that ties the account number to an actual name.
+
+[ETHAN_COLE | style: even, deliberately unreadable]
+That's fair. A number on a ledger isn't a person.
+
+[MIRA_KWON | style: pointed]
+You've gone quiet. You know this trust?
+
+[ETHAN_COLE | style: guarded, smooth]
+I know Ashcroft-linked money moved through half a dozen shell arrangements back then. Doesn't surprise me one more surfaces. Doesn't mean I know where it lands.
+
+[MIRA_KWON | style: accepting, moving on]
+Fair enough. We log it as the strongest lead we have on Marsh and keep digging for the name.
+
+[SFX: a folder zipped shut]
+
+[NARRATOR]
+Ethan says nothing more. Whatever this ledger is, it sits too close to the name he's spent the whole investigation keeping buried — and he lets Mira log it and move on without adding a word that might bring her any closer to it.
+
+--- PART 11 ---
+
+[NARRATOR]
+The safe house, later that night. Ethan has gone to check the perimeter. Mira sits alone with Pike, the borrowed nurse who once worked the asylum's back office.
+
+[MIRA_KWON | style: gentle, unhurried]
+You don't have to keep the brave face up. Not with me.
+
+[DR_HAROLD_PIKE | style: the calm cracking]
+Is that what you think I've been wearing. A face.
+
+[MIRA_KWON | style: careful]
+I think you've been holding it together for our sake.
+
+[DR_HAROLD_PIKE | style: quiet, trembling]
+Every sound tonight. The pipes settling. A car door two streets over. My hands won't stop.
+
+[SFX: a teacup set down unsteadily on a wooden table]
+
+[DR_HAROLD_PIKE | style: raw]
+I keep thinking about that drawer. How clean it was. Like they were telling me they could've taken anything. Taken me.
+
+[MIRA_KWON | style: soft]
+You could still walk away, Harold. Nobody here would think less of you.
+
+[DR_HAROLD_PIKE | style: weary honesty]
+I've thought about it. God help me, I have. Packing a bag, going somewhere with no forwarding address. Letting the names stay buried where I put them forty years ago.
+
+[MIRA_KWON | style: gentle, curious]
+Then why haven't you.
+
+[DR_HAROLD_PIKE | style: distant, quiet resolve]
+Because some things matter more than an old man's comfort. That's all I can give you tonight.
+
+[MIRA_KWON | style: patient, not pushing]
+That's enough.
+
+[DR_HAROLD_PIKE | style: barely audible]
+Is it.
+
+[MIRA_KWON | style: warm, steady]
+It tells me you're not staying out of stubbornness. There's a reason underneath it. I'm not going to dig for it.
+
+[DR_HAROLD_PIKE | style: grateful, tired]
+Not many people leave a silence alone like that.
+
+[MIRA_KWON | style: quiet]
+I've learned the hard way what happens when you push someone before they're ready.
+
+[DR_HAROLD_PIKE | style: faint, almost a smile]
+Then we understand each other.
+
+[SFX: a floorboard creaking softly overhead]
+
+[DR_HAROLD_PIKE | style: flinching, low]
+See. That's what I mean.
+
+[MIRA_KWON | style: reassuring, firm]
+That's just Ethan on the stairs. You're safe here tonight.
+
+[DR_HAROLD_PIKE | style: exhaling, unconvinced but calmer]
+Tonight. I'll take tonight.
+
+[NARRATOR]
+Pike wraps both hands around the cooling cup and says nothing more. Mira lets the quiet hold, unwilling to be the one who breaks it first.
+
+--- PART 12 ---
+
+[NARRATOR]
+Senator Marsh's office, later that same evening. Alone now, with the door locked.
+
+[SENATOR_DELIA_MARSH | style: quiet, bracing herself]
+Just read it again. That's all. Just once more.
+
+[SFX: a desk drawer sliding open]
+
+[SENATOR_DELIA_MARSH | style: low, reading to herself]
+"No birth registration located prior to 1974 marriage filing." I know that part. I've known that part for weeks.
+
+[SENATOR_DELIA_MARSH | style: quieter, unsettled | speed: 0.9]
+"No school records under any variant spelling. No immigration file matching description or estimated age of arrival."
+
+[SENATOR_DELIA_MARSH | style: trying to sound reasonable]
+People lost papers. Fires, floods, wars — records go missing for a hundred boring reasons that have nothing to do with —
+
+[SFX: pages turning quickly]
+
+[SENATOR_DELIA_MARSH | style: voice catching]
+"Trust disbursement records, Ashcroft estate, first entry dated within four months of the marriage certificate."
+
+[SENATOR_DELIA_MARSH | style: barely audible]
+Four months.
+
+[SENATOR_DELIA_MARSH | style: firmer, forcing composure | speed: 1.05]
+Coincidence. Families like ours had money moving in a hundred directions back then. Trusts, gifts, nothing sinister about a — about a gift to a new bride.
+
+[SENATOR_DELIA_MARSH | style: quiet, honest with herself]
+Except I never asked what the gift was for. And nobody ever offered to tell me.
+
+[NARRATOR]
+She sets the report down, then picks it up again.
+
+[SENATOR_DELIA_MARSH | style: almost pleading with the page]
+Tell me it stops with her. Tell me it's just Grandma Diane, one strange arrangement, one family, one — one isolated thing.
+
+[SENATOR_DELIA_MARSH | style: hollow]
+It doesn't say that. It doesn't say anything. That's the whole problem — it only ever tells me what isn't there.
+
+[SFX: a chair creaking as she sits back]
+
+[SENATOR_DELIA_MARSH | style: steadying herself, private resolve]
+Not larger than that. It can't be larger than that. It's her story. Just hers.
+
+[SENATOR_DELIA_MARSH | style: tired, decisive | speed: 0.95]
+Nobody sees this. Not staff, not counsel, not — not anyone. Not until I understand what I'm actually holding.
+
+[SFX: a drawer closing and a small lock clicking]
+
+[NARRATOR]
+The report goes back into the drawer, out of sight, but not out of mind.
+
+--- PART 13 ---
+
+[NARRATOR]
+A parking garage, several levels underground, sometime past midnight. The Silencing Campaign continues — Victor Lane meets a local contact away from any camera.
+
+[SFX: a car door closing, echoing through concrete]
+
+[VICTOR_LANE | style: flat, controlled]
+You said you'd call before you moved. Not after.
+
+[VICTOR_LANE | style: listening, unimpressed]
+Two hours ago. And you're only telling me now the old man had somewhere already picked out.
+
+[VICTOR_LANE | style: cold amusement]
+Interesting. Somebody planned ahead for him.
+
+[VICTOR_LANE | style: businesslike]
+No. The client wants eyes on it, nothing more. No approach, no contact. Just watch the building, log who comes and goes.
+
+[VICTOR_LANE | style: dismissive]
+It changes nothing about the timeline. He didn't run far enough to matter.
+
+[VICTOR_LANE | style: quiet warning]
+Don't use his name again. Not on this line, not anywhere I can hear it.
+
+[SFX: footsteps receding, a second car door]
+
+[NARRATOR]
+Lane pockets the phone and walks back toward the ramp, unhurried, already thinking three moves ahead.
+
+--- PART 14 ---
+
+[NARRATOR | style: measured, neutral]
+Night, the safe house. Mira, Ethan, and Pike settle into a rotation at the windows, watching a street none of them fully trust.
+
+[MIRA_KWON | style: low, alert]
+You take the front, I'll take the back first. We swap in two hours.
+
+[ETHAN_COLE | style: quiet, deliberate]
+I'll take the late one. Give you both a proper stretch of sleep.
+
+[MIRA_KWON | style: wary]
+You sure? Nobody's sleeping much anyway.
+
+[ETHAN_COLE | style: flat, controlled]
+I'm sure.
+
+[SFX: a branch scraping against a windowpane]
+
+[MIRA_KWON | style: sharp intake, tense]
+That's just the tree.
+
+[DR_HAROLD_PIKE | style: shaky, half-joking]
+Tell that to my heart.
+
+[NARRATOR | style: measured, neutral]
+An hour passes. Mira drifts back to the same window twice, though nothing outside has changed.
+
+[MIRA_KWON | style: muttering, self-aware]
+Third time checking the same corner. Get it together, Kwon.
+
+[DR_HAROLD_PIKE | style: gentle, observant]
+You don't have to pretend for me. I've been frightened a long time now. I know what it looks like on someone else's face.
+
+[MIRA_KWON | style: quiet, honest]
+Is it that obvious?
+
+[DR_HAROLD_PIKE | style: soft]
+Only to someone who's wearing it too.
+
+[NARRATOR | style: measured, neutral]
+Ethan stands apart near the hallway, arms crossed, watching the street without seeming to watch it.
+
+[ETHAN_COLE | style: distant, guarded]
+Anyone want coffee? I'm making a pot regardless.
+
+[MIRA_KWON | style: dry, tired]
+At this hour, sure. Why not.
+
+[NARRATOR | style: measured, neutral]
+Pike watches the two of them move through the small rituals of watchfulness — checking locks, refilling cups, trading places at the glass.
+
+[DR_HAROLD_PIKE | style: quiet, steadier]
+You two take this seriously. Every lock, every window. It helps, more than you'd think.
+
+[MIRA_KWON | style: firm, warm]
+We're not letting anything happen to you, Harold.
+
+[DR_HAROLD_PIKE | style: rueful]
+You say that like it's simple.
+
+[MIRA_KWON | style: tight]
+Nothing about this has been simple. Doesn't mean I don't intend to keep the promise.
+
+[SFX: a car engine idling somewhere down the street, then fading]
+
+[ETHAN_COLE | style: too quick, tense]
+Just passing through.
+
+[MIRA_KWON | style: watching him carefully]
+You always this jumpy on a stakeout?
+
+[ETHAN_COLE | style: forced calm]
+Only when the stakes are this specific.
+
+[NARRATOR | style: measured, neutral]
+No one says the word aloud, but it sits in the room with them anyway — the sense of being watched from somewhere just past the edge of the streetlight, and the long hours still left before morning.
+
+--- PART 15 ---
+
+[NARRATOR]
+A diner near the studio, that same evening. Senator Marsh's Bloodline continues — Delia Marsh sits alone in a back booth, a cap pulled low, watching Mira and Ethan two tables away.
+
+[SENATOR_DELIA_MARSH | style: quiet, watchful]
+(internal, murmured)
+Just coffee. Just watching.
+
+[SFX: a mug set down on a formica tabletop]
+
+[SENATOR_DELIA_MARSH | style: guarded, listening]
+(to herself)
+She doesn't even know what she's asking for yet.
+
+[NARRATOR]
+Mira laughs at something Ethan says. Marsh's hand tightens around the mug.
+
+[SENATOR_DELIA_MARSH | style: torn, half-rising]
+I could just — walk over. Say one true thing. One.
+
+[SFX: a chair leg scraping slightly against tile]
+
+[SENATOR_DELIA_MARSH | style: faltering, quieter]
+And say what. "My grandmother might be one of your case files"?
+
+[NARRATOR]
+She sits back down before she's fully stood.
+
+[SENATOR_DELIA_MARSH | style: resigned, steadying herself]
+Not here. Not like this. Not before I even know what's true.
+
+[SFX: a few coins placed on the table]
+
+[NARRATOR]
+She rises, collar up, and slips toward the door without a glance back.
+
+[SENATOR_DELIA_MARSH | style: barely audible, walking away]
+Some other time. If there is one.
+
+--- PART 16 ---
+
+[NARRATOR]
+Back in the war room, the studio lights dimmed to their night setting. Ethan and Mira faced the whiteboard, Marsh's statement pulled up on the screen between them.
+
+[MIRA_KWON | style: restless, arguing a case]
+She called us unreliable, Ethan. In writing. That's not neutrality anymore, that's a shot across the bow, and I think we shoot back.
+
+[ETHAN_COLE | style: careful, reasoning it out]
+Shoot back with what? The trust disbursement isn't locked yet. Mira wants one more document before she'll even say it out loud, and you want to put it on air tonight?
+
+[MIRA_KWON]
+I want to name the pattern. Not the family, not yet — just say the statement doesn't hold up next to what we've already published. That's defensible.
+
+[ETHAN_COLE | style: pressing, more urgent than the argument requires]
+Defensible to who? Pike's in a borrowed apartment because someone already decided we're worth breaking a lock for. You push harder on Marsh, you don't know what that provokes next, or who it lands on.
+
+[MIRA_KWON | style: quieter, but not backing down]
+Caution hasn't protected him, Ethan. It bought us a night in a safe house and a notebook he's terrified to have handed over. Sitting still isn't the safe option here, it just feels like one.
+
+[SFX: a marker set down hard on the metal tray under the whiteboard]
+
+[ETHAN_COLE | style: exhaling, conceding ground he doesn't want to give]
+Fine. Then we go partial. We answer the statement — say it's a deflection, say the record speaks for itself — but the trust stays out of it until you've got that second document. No names, no numbers.
+
+[MIRA_KWON | style: weighing it, reluctant]
+Partial. Not silence, not everything.
+
+[ETHAN_COLE]
+Not everything. Not yet.
+
+[MIRA_KWON | style: half a beat softer]
+Okay. Draft the response tonight, I'll have it ready to post by morning.
+
+[NARRATOR]
+Ethan nodded and turned back to his screen, already typing.
+
+[ETHAN_COLE | style: to himself, barely audible]
+Not yet.
+
+[NARRATOR]
+He didn't say what he meant by it, and Mira, already reaching for her coat, didn't ask. Relief moved through him quiet and unearned, the kind that comes from buying time he told himself was for someone else.
+
+--- PART 17 ---
+
+[NARRATOR]
+The safe house, near midnight. The Inside Plant: Ethan slips outside alone, phone in hand, away from the others.
+
+[SFX: a screen door easing shut]
+
+[ETHAN_COLE | style: low, tense]
+This is Ethan.
+
+[ETHAN_COLE | style: guarded, quiet]
+The family arrangement. I know exactly what that means.
+
+[ETHAN_COLE | style: controlled, urgent | speed: 1.1]
+Not over this phone. Don't call this number again.
+
+[SFX: a phone call ending, a soft beep]
+
+[NARRATOR]
+Inside, Mira looks up as he steps back through the door.
+
+[MIRA_KWON | style: watchful]
+Everything okay out there?
+
+[ETHAN_COLE | style: forcing casual]
+Wrong number. Someone's idea of a joke, this late.
+
+[MIRA_KWON | style: quiet, searching]
+You've been jumpy all night.
+
+[ETHAN_COLE | style: tight, quick]
+It's the break-in. Same as everyone.
+
+[NARRATOR]
+She lets it go, folding it into the exhaustion pressing on all of them tonight — the one secret in the room she has no way yet of seeing.
+The safe house holds, for now. But by morning, three of the team's personal accounts will show login attempts from cities none of them have ever visited. And Mira, checking the perimeter once more before dawn, notices Ethan has slipped outside again, taking a call he won't explain — his hands unsteady when he comes back in.
+

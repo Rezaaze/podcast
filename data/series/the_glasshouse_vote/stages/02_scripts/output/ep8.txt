@@ -1,0 +1,458 @@
+--- PART 1 ---
+
+[NARRATOR]
+Previously on The Glasshouse Vote: Liwei learned the truth behind Soo-Jin's papers, and said nothing to anyone but her. Iggy Chen kept pulling at the thread of Declan's invoices. And in the small hours before dawn, Mei-Lin Castellan stood alone at the southeast pier with a fear she has never spoken aloud to a living soul.
+[NARRATOR]
+By early afternoon at the Castellan Glasshouse Cooperative, a single notice pinned to the office door has the whole building talking — an emergency board session, called for that same afternoon, over what it names only as "a compliance matter."
+
+[DECLAN_FARRAY | style: hollowed out, trying to sound unbothered]
+Compliance matter. That's all it says. No name attached.
+[SFX: a door easing shut down the hall]
+[DECLAN_FARRAY | style: hollowed out, trying to sound unbothered]
+It doesn't need a name. I already know whose.
+
+[NARRATOR]
+Down the corridor, Mei-Lin Castellan — the co-op's board chair — catches her son Liwei before he reaches the elevator, the notice still in her hand.
+
+[MEI_LIN_CASTELLAN | style: clipped, unusually urgent]
+Liwei. Whatever you had planned at the glasshouse today, it waits. This session comes first.
+[LIWEI_CASTELLAN | style: distracted, only half here]
+The compliance thing? Fine. I'll be there.
+[MEI_LIN_CASTELLAN | style: clipped, unusually urgent]
+Not "fine." Before anything else today. I need you to hear me on this.
+[SFX: a phone buzzing once against a tabletop]
+[LIWEI_CASTELLAN | style: distracted, only half here]
+I heard you the first time.
+[MEI_LIN_CASTELLAN | style: pressing harder than the moment seems to call for]
+Then say it back to me. Nothing at that pier today. Nothing with the crew, nothing with the survey. Whatever it is, it can sit one more afternoon.
+
+[NARRATOR]
+Something in her voice makes Liwei actually look at her.
+
+[LIWEI_CASTELLAN | style: caught off guard, studying her]
+You've said that a hundred times about that corner. You've never said it like that.
+[MEI_LIN_CASTELLAN | style: recovering, brisk]
+Because a hundred times, nobody was about to sit in a room and take this co-op apart. Two o'clock, Liwei. Don't be late.
+
+[NARRATOR]
+She's already moving toward the stairs before he can answer.
+
+[LIWEI_CASTELLAN | style: quietly unsettled, almost to himself]
+What are you so afraid I'll find out there.
+
+[NARRATOR]
+But the question doesn't hold. Soo-Jin's silence since last night is louder than anything his mother could be hiding, and by the time the elevator doors close, he's already let it go.
+
+--- PART 2 ---
+
+[NARRATOR]
+The co-op office, mid-morning. Iggy's report finishes printing, addressed to Declan, and lands in the tray.
+
+[SFX: an office printer finishing a page, paper settling into the tray]
+
+[NARRATOR]
+Across the hall, in the treasurer's office, Declan reads the same report on his own screen.
+
+[DECLAN_FARRAY | style: flat, cornered]
+No employment record. Anywhere. Of course there isn't.
+
+[DECLAN_FARRAY | style: bitter, quiet fury]
+I made her up. I kept billing a company that stopped existing four years ago, and I never once checked whether anyone would check.
+
+[SFX: a mouse clicking rapidly, then stopping]
+
+[DECLAN_FARRAY | style: hollow, testing the idea]
+I could just — not go this afternoon. Say I'm ill.
+
+[DECLAN_FARRAY | style: sharper, correcting himself]
+No. An empty chair says it louder than I ever could.
+
+[NARRATOR]
+Down the corridor, Liwei catches sight of the notice pinned by the elevator.
+
+[LIWEI_CASTELLAN | style: distant, only half-reading]
+"Compliance matter." Fine. Whatever it is, it'll keep an hour.
+
+[NARRATOR]
+Mei-Lin passes him there, her thoughts clearly somewhere else entirely, and doesn't slow down.
+
+[MEI_LIN_CASTELLAN | style: unusually sharp]
+Just — be at the two o'clock session, Liwei. All of you. No excuses.
+
+[LIWEI_CASTELLAN | style: startled out of his own thoughts]
+Mother, it's a maintenance report. What's got you—
+
+[MEI_LIN_CASTELLAN | style: clipped, already walking on]
+Two o'clock. That's all.
+
+[NARRATOR]
+She's gone before he can finish the question, something in the brevity of it not sitting right.
+
+[LIWEI_CASTELLAN | style: quietly puzzled]
+That wasn't about some maintenance report. That was about something else entirely.
+
+[NARRATOR]
+But Soo-Jin's silence from the night before crowds back in, and the thought has nowhere to land.
+
+[LIWEI_CASTELLAN | style: to himself, resigned]
+Not now. I don't have room for one more thing today.
+
+[NARRATOR]
+Back at his desk, Declan opens the bottom drawer, the ledger inside it heavier in his hands than it has ever felt.
+
+[DECLAN_FARRAY | style: numb, final]
+Six years of it in here. And it was never going to matter whether I locked this drawer or not.
+
+[SFX: a metal drawer sliding shut, the click of a small lock turning]
+
+[NARRATOR]
+He sits back, the report still glowing on the screen, and waits for the afternoon to arrive.
+
+--- PART 3 ---
+
+[NARRATOR]
+Before the emergency session, Mei-Lin Castellan finds Aiko Tanaka at the southeast pier, where the coring crew has already staged its equipment for tomorrow.
+
+[MEI_LIN_CASTELLAN | style: carefully casual]
+They're set up early. I didn't expect the trucks until tomorrow morning.
+
+[AIKO_TANAKA | style: businesslike]
+Foreman wanted a head start. Says the drill rig takes an hour just to level.
+
+[SFX: a metal equipment case being set down on concrete]
+
+[MEI_LIN_CASTELLAN | style: measured, testing the ground]
+Aiko. I need you to look at something for me before they start.
+
+[AIKO_TANAKA | style: neutral]
+Look at what.
+
+[MEI_LIN_CASTELLAN | style: controlled, deliberate]
+The footing along this corner. I want you to flag it — a crack, unsafe ground, whatever you find that holds up. Enough to push the crew back another day.
+
+[AIKO_TANAKA | style: a beat too still]
+You want me to write up a hazard that isn't there.
+
+[MEI_LIN_CASTELLAN | style: firm but quiet]
+I want you to write up a hazard. What you find is what you find.
+
+[AIKO_TANAKA | style: weighing it]
+Mei-Lin. In fifteen years you've never once asked me to put my name on a lie about this pier specifically. Every other stall, you handled yourself — a scheduling call, a permit that needed 'more review.' This is different.
+
+[MEI_LIN_CASTELLAN | style: tight, evasive]
+It's one more day. That's all I'm asking for.
+
+[AIKO_TANAKA | style: searching her face]
+One more day for what.
+
+[MEI_LIN_CASTELLAN | style: closing the door on the question]
+For the board to have its head on straight before strangers start drilling into the building. That's all this is.
+
+[NARRATOR]
+Aiko studies her a moment longer, the question she isn't asking sitting plainly on her face.
+
+[AIKO_TANAKA | style: resigned, loyal despite herself]
+Alright. I'll find something. A hairline in the footing, unstable base — something that'll hold up to a look, not a real inspection.
+
+[MEI_LIN_CASTELLAN | style: relief she doesn't let show]
+Thank you.
+
+[AIKO_TANAKA | style: flat, pointed]
+Don't thank me yet. Thank me if nobody asks me twice why it's this corner and not any of the other three.
+
+[NARRATOR]
+Mei-Lin says nothing to that, and Aiko doesn't wait for an answer she already suspects isn't coming.
+
+[SFX: a clipboard snapping shut]
+
+[AIKO_TANAKA | style: businesslike again, masking unease]
+I'll file it with the office before the session starts. Crew won't touch the rig till it clears.
+
+[NARRATOR]
+Aiko walks off toward the equipment, the false report already forming in her mind — one more thing she now carries that isn't, strictly speaking, hers to carry.
+
+--- PART 4 ---
+
+[NARRATOR]
+Unit 4G, the same afternoon. Soo-Jin Park is alone, the door locked, the television off.
+
+[SOO_JIN_PARK | style: hollow, moving fast]
+Passport. Bank card. The winter coat, not the good one.
+
+[SFX: a zipper dragged open on a canvas bag]
+
+[SOO_JIN_PARK | style: brittle, talking to fill the silence]
+Two days. Maybe three, if Aiko's friends keep their mouths shut that long.
+
+[SOO_JIN_PARK | style: catching herself, wary]
+"Something with 4G." That's what they're calling it now. Not even my name anymore. Just a number on a door.
+
+[SFX: a drawer sliding open]
+
+[SOO_JIN_PARK | style: unsteady]
+Her license. Her passport, expired since — 
+
+I don't know what I'm doing. Keeping them or burning them.
+
+[SOO_JIN_PARK | style: tight, deciding]
+On top. Where I can see them.
+
+[SFX: a phone buzzing once against a wooden nightstand]
+
+[SOO_JIN_PARK | style: sharp hope, then flat]
+Liwei —
+
+[SOO_JIN_PARK | style: crushed, quiet resolve]
+Just a delivery notification. Of course.
+
+[SOO_JIN_PARK | style: exhausted, staring at the bag]
+Half full. That's as far as I get.
+
+[SOO_JIN_PARK | style: barely holding it together]
+I can't leave before I know what he's going to do. I can't stay if he's already decided.
+
+[NARRATOR]
+She sits on the edge of the bed, the bag open beside her, and waits for a call that hasn't come.
+
+--- PART 5 ---
+
+[NARRATOR]
+The emergency session gathers in the co-op office, not the glasshouse — folding chairs pulled tight around the old conference table. Mei-Lin chairs it. Declan sits apart from the others, hands folded like a man already rehearsing an apology.
+
+[IGGY_CHEN | style: crisp, procedural]
+Vance Municipal Services dissolved four years ago. Every invoice on file is dated well after that. There's no business license, no tax filing, no forwarding address. And the assistant named on two of these — a Robert Hale — doesn't exist in any employment record I can find. Anywhere.
+
+[DECLAN_FARRAY | style: throat tight, cornered]
+I can explain the paperwork.
+
+[IGGY_CHEN | style: level, unhurried]
+Please do.
+
+[SFX: a manila folder dropped flat on a table]
+
+[DECLAN_FARRAY | style: voice cracking under composure]
+It was — one bad stretch. Bryan needed help, and I told myself I'd make it right before anyone noticed. I never meant for it to become — I didn't invent all of it. Just the once. To cover a gap.
+
+[LIWEI_CASTELLAN | style: stunned, sitting forward]
+Once? Declan, these invoices go back years.
+
+[DECLAN_FARRAY | style: pleading, small]
+It got away from me. That's all this is. A man who made one bad call and kept digging.
+
+[NARRATOR]
+Around the table, murmurs rise — disbelief tangled with something close to relief, several board members already reaching for the smaller, easier version of what they've just heard.
+
+[AIKO_TANAKA | style: careful, not unkind]
+Declan. We've trusted you with the books for six years.
+
+[DECLAN_FARRAY | style: barely audible]
+I know what I did.
+
+[MEI_LIN_CASTELLAN | style: measured, taking control of the room]
+Iggy, I'd like us to think carefully before this goes any further up your chain. Declan has served this building a long time. Whatever happened here, I believe it can be handled inside this room.
+
+[IGGY_CHEN | style: pleasant, but unmoving]
+I understand the instinct. But you should know — my office already has a copy of the dissolution paperwork. This isn't something I can simply set down.
+
+[MEI_LIN_CASTELLAN | style: firmer now, edged]
+No one's asking you to set it down. I'm asking that a co-op matter stay a co-op matter, at least until we understand the full shape of it ourselves.
+
+[IGGY_CHEN | style: mild, deliberate]
+I hear you, Mei-Lin. I'll say only this — Halloran doesn't walk away from a building over one bad accountant. But they don't walk into one blind, either. This stopped being internal the moment I opened that file.
+
+[NARRATOR]
+Declan says nothing more. Around him, the board keeps talking — about damage, about optics, about a single mistake — no one yet asking the harder question of how long, and how much.
+
+--- PART 6 ---
+
+[NARRATOR]
+Late afternoon, the glasshouse potting shed. Aiko Tanaka, the building's superintendent for decades, files the last of the paperwork on a hazard that does not exist.
+
+[AIKO_TANAKA | style: flat, going through motions]
+Southeast corner. Cracked footing, crew access restricted pending review.
+
+[AIKO_TANAKA | style: muttering, self-directed]
+Signed, dated, done.
+
+[NARRATOR]
+She crosses into the glasshouse itself, toward the northwest truss — the hairline crack she noticed days ago, still there, still hers alone.
+
+[SFX: a metal stepladder unfolding and locking into place]
+
+[AIKO_TANAKA | style: grim, appraising]
+Still moving. Not fast. But moving.
+
+[AIKO_TANAKA | style: tired, arguing with herself]
+Fifteen years I've kept this one quiet. One more season, that's all I ever ask it.
+
+[NARRATOR]
+She runs a thumb along the old weld, then climbs down, the weight of the day finally catching up with her.
+
+[AIKO_TANAKA | style: wry, bitter]
+Two lies now. Mine, and hers.
+
+[AIKO_TANAKA | style: low urgency, thinking aloud]
+And if anyone with eyes looks hard at both corners on the same afternoon — I don't have a story big enough to cover both.
+
+[NARRATOR]
+She sits on the edge of a potting bench, staring at nothing in particular.
+
+[AIKO_TANAKA | style: careful, almost afraid to ask it]
+Why that corner, Mei-Lin. Out of the whole building. Why that one, always that one.
+
+[AIKO_TANAKA | style: firmer, shutting the door on it]
+No. Not my question to ask. Fifteen years of not asking, I'm not starting today.
+
+[NARRATOR]
+She stands, pushing the thought down the way she's pushed down worse.
+
+[AIKO_TANAKA | style: exhausted, resolute]
+I've got one secret keeping me up at night already. I don't have room to carry someone else's.
+
+[SFX: a heavy workshop door swinging shut and a padlock clicking closed]
+
+[NARRATOR]
+She tests the lock twice, out of habit rather than doubt, then walks back toward the residence wing.
+
+[AIKO_TANAKA | style: quietly wrung out, to no one]
+Tomorrow. Just get through tomorrow.
+
+[NARRATOR]
+Behind her, the glasshouse dims into evening, the two damaged corners of the building sitting less than forty feet apart, each one holding a truth the other has never been told.
+
+--- PART 7 ---
+
+[NARRATOR | style: neutral]
+Later that afternoon, in the cramped office Halloran has set up two floors below the co-op's own — Iggy Chen, the developer's man on this deal, sits alone with the audit in front of him.
+
+[IGGY_CHEN | style: clipped, professional]
+Subject line. Castellan Glasshouse — reserve fund discrepancy, contractor verification failure.
+
+[SFX: a laptop keyboard clicking steadily]
+
+[IGGY_CHEN | style: dictating, precise]
+Attached: licensing search confirming Vance Municipal Services dissolved as a registered entity four years prior to the earliest invoice date submitted by treasurer Declan Farray. No employment record exists for the named site assistant under any variation of the name provided.
+
+[IGGY_CHEN | style: harder, decisive]
+This is not administrative sloppiness. This is fabricated documentation used to conceal a fund shortfall currently estimated north of two hundred thousand dollars. Recommend legal review before any further disbursement milestones are approved.
+
+[NARRATOR | style: neutral]
+He pauses, scrolling back through his notes from the morning, and adds one more line before he lets himself reconsider it.
+
+[IGGY_CHEN | style: offhand, half to himself]
+Additional note — the structural coring survey scheduled for today was postponed a second time, per a hazard report filed this morning by building staff, citing a cracked support near the southeast pier.
+
+[IGGY_CHEN | style: dry, unbothered]
+No reason to read into it. Old building, old excuses. Though I'll admit, it's an interesting corner to keep finding reasons not to look at.
+
+[SFX: a mouse click]
+
+[NARRATOR | style: neutral]
+He attaches the audit file, the licensing printout, and a scanned copy of the hazard notice, then sends the memo up the chain to Halloran's senior counsel.
+
+[IGGY_CHEN | style: quietly satisfied]
+That'll get someone's attention.
+
+[NARRATOR | style: neutral]
+Across the city, in a glass-walled office far removed from any greenhouse, the memo lands in an inbox and sits, unread, for the rest of the afternoon.
+
+[NARRATOR | style: neutral, forward-leaning]
+It will not stay unread for long. Within days, someone at Halloran will decide the co-op's excuses are worth a much closer look — and that whoever they send won't be asking about the invoices alone.
+
+--- PART 8 ---
+
+[NARRATOR]
+Evening in the stairwell between the fourth and fifth floors. Word of Declan's audit and the trouble in 4G has scattered through the building all day, and Aiko, the superintendent who has spent decades holding this place together, catches two of the oldest residents on their way down before they can carry it any further.
+
+[AIKO_TANAKA | style: firm, low-key urgency]
+You're heading to see Mrs. Park downstairs, aren't you. About what you heard.
+
+[AIKO_TANAKA | style: measured, careful]
+Before you say a word to anyone — building management, the police, anyone outside these walls — I need you to hear something from me first.
+
+[SFX: two sets of footsteps stopping on a stair landing]
+
+[AIKO_TANAKA | style: lowering her guard slightly, confiding]
+Soo-Jin isn't who half this building thinks she's pretending to be for fun. She's scared. Genuinely scared. If this gets called in before anyone understands the whole picture, you won't be helping her — you'll be ending something for her that can't be undone.
+
+[AIKO_TANAKA | style: quiet appeal, calling in old trust]
+I've never asked either of you for anything in fifteen years of fixing what breaks in this building. I'm asking now. Give it a few days before you repeat any of it further than this stairwell.
+
+[NARRATOR]
+The two residents exchange a look, unconvinced but unwilling to argue with a woman who has never once asked them for a favor. They nod, slowly, and continue down without another word. Aiko doesn't move until they're gone.
+
+[NARRATOR]
+A few steps above, unseen, Liwei has stopped on the landing, close enough to have caught the last of it.
+
+[LIWEI_CASTELLAN | style: shaken, half to himself]
+"A few days." That's what you're buying her. A few days.
+
+[AIKO_TANAKA | style: startled, then resigned]
+Liwei. How much of that did you hear.
+
+[LIWEI_CASTELLAN | style: hollow, realizing something]
+Enough. Enough to know the building's already talking, whether I say anything or not.
+
+[AIKO_TANAKA | style: steady, watching him closely]
+Then you understand better than most people in this building what's actually at stake right now.
+
+[LIWEI_CASTELLAN | style: quietly unsettled]
+I thought staying quiet meant I hadn't decided anything yet. I don't think that's true anymore.
+
+[NARRATOR]
+Aiko says nothing further, only holds his gaze a moment before continuing down the stairs, leaving Liwei alone on the landing with what he's just admitted to himself.
+
+--- PART 9 ---
+
+[NARRATOR]
+Morning, the glasshouse. Not Halloran's crew this time — a city safety inspector, sent because of the hazard report Aiko filed on the southeast pier.
+
+[MEI_LIN_CASTELLAN | style: forcing composure]
+I was told this would be a paperwork review. A form, someone signing off from an office.
+
+[AIKO_TANAKA | style: low-grade panic held tight]
+That's what I filed for. A form. Not — this.
+
+[NARRATOR]
+The inspector crouches at the base of the pier, tracing the crack Mei-Lin found days ago, and asks how long it's been there.
+
+[MEI_LIN_CASTELLAN | style: too fast]
+Months. Maybe longer. Settling, that's all, the whole building settles.
+
+[AIKO_TANAKA | style: catching herself before she over-explains]
+It's — cosmetic. Surface-level. I wouldn't have flagged it if I thought otherwise.
+
+[NARRATOR]
+The inspector doesn't look up, just asks whether anyone's opened this pier before — cored it, patched it, touched the concrete itself.
+
+[MEI_LIN_CASTELLAN | style: the question landing wrong]
+No. Never. Not this one.
+
+[AIKO_TANAKA | style: quick, covering]
+Not on my watch, no.
+
+[SFX: a metal tool case unlatching]
+
+[NARRATOR]
+The inspector opens a case and lifts out a slim probe, the kind meant to test how deep a crack really runs.
+
+[AIKO_TANAKA | style: barely audible, only to herself]
+I asked for a delay. Not for someone to actually look.
+
+[MEI_LIN_CASTELLAN | style: watching the probe, still outwardly steady]
+Is that — necessary, for a surface crack?
+
+[NARRATOR]
+The inspector says it's routine, nothing to worry about, and lines the probe up against the seam in the concrete.
+
+[AIKO_TANAKA | style: to Mei-Lin, under her breath, urgent]
+Mei-Lin.
+
+[MEI_LIN_CASTELLAN | style: not moving, eyes on the pier]
+I know.
+
+[SFX: a probe tapping once against stone]
+
+[NARRATOR]
+For the first time in over a hundred years, someone is testing the southeast corner in person — not because Halloran sent them, and not on Mei-Lin's terms at all.
+

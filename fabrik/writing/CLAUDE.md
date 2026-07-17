@@ -17,6 +17,26 @@ die ganze Episode/Serie — episodenübergreifende Kontinuität läuft komplett
 über `intro_note`/`outro_note`/`theme`/`case`. Diese Lücke schließen
 Episode-Review (nachträglich) und Beat-Layer (vorab), siehe unten.
 
+**TTS-Hazard-Checks in `validate_parts()` (17.07.2026):** zusätzlich zum
+Format-Parse laufen zwei Checks aus der 12-Serien-Analyse: (1)
+`find_narrator_leaks()` — NARRATOR-Zeilen, die case-Thread-Labels, das Wort
+"thread"/"storyline" oder Szenennummern hörbar aussprechen (in Produktion
+15-43 Leaks/Serie, teils spoilernd) = retryable Fehler, fallback-sicher,
+erhöht badness (`_LEAK_BADNESS`); braucht `cfg["case_labels"]`, das
+`generate_episode()` pro Episode in eine cfg-KOPIE injiziert. (2)
+`warn_stage_directions()` — mutmaßliche 3.-Person-Regieanweisungen im
+Sprechtext ("He signs the form.") = NUR Konsolen-Warnung (False-Positive-
+Risiko im Dialog); entstehen, weil `script_parser.py` Fließtext nach einer
+Sprecherzeile an deren Text ANHÄNGT statt zu erroren.
+
+**Phrasen-Wächter (`phrase_stats.py`, stdlib-only, 17.07.2026):** zählt
+3-5-Wort-n-Gramme + Style-Wörter über die bereits geschriebenen Episoden
+("barely audible" 57x, style "quiet" 193x in Produktion). `generate_episode()`
+baut daraus `cfg["avoid_block"]` (Eigennamen via `name_words(data)`
+ausgenommen — Figuren/Orte MÜSSEN wiederkehren), `build_section_prompt()`
+hängt ihn an; `generate_episode.py all` schreibt zusätzlich
+`PHRASE_REPORT.txt` als Review-Gate neben die Skripte.
+
 ## Wortbudget pro PART
 
 - `format.words_per_part_min/max`, gemessen sprachneutral via
@@ -69,7 +89,12 @@ leaken, selbst bei sauberem Plan.
   Skripttext, gated auf `episode.get("case")` (nicht `mode`!): plain
   narration/language_course haben keinen case und werden übersprungen;
   media_analysis hat einen und wird geprüft. Liefert strukturiert
-  `{"issues": [{"part": N, "problem": "..."}]}`.
+  `{"issues": [{"part": N, "problem": "..."}]}`. Läuft seit 17.07.2026 auf
+  `cfg["review_model"]` (Default = großes Schreibmodell, siehe
+  fabrik/core/CLAUDE.md) und prüft drei Dinge (Wissens-Verstöße, Spoiler,
+  **Fakten-Konsistenz** — Namen/Daten/Zeiten gegen objective_facts und
+  gegeneinander); `build_review_context_block()` gibt Beats der Vorepisode
+  + intro_note als Cross-Episode-Kontext mit.
 - Timeout skaliert mit Skriptlänge (`compute_review_timeout`, 300–1200s).
 - **`None` vs. `[]`-Disziplin:** bei jedem Fehlschlag (Timeout/API/
   unparsebar) kommt `None` zurück — dann darf KEIN `<prefix>N_REVIEW.txt`
@@ -101,8 +126,13 @@ Volle Design-Begründung: `docs/beat-layer-design.md`.
 
 - `generate_beats()`: EIN Claude-Call sieht alle Section-Einzeiler +
   `case`-Block (`build_case_file_block()`, unverändert wiederverwendet) +
-  Beats-Text der *vorherigen Episode*, liefert 3–6 Beats pro Szene in
-  `--- SCENE N ---`-Blöcken → `parse_beats()` →
+  **die Beats ALLER vorherigen Episoden** (Staffel-Gedächtnis, seit
+  17.07.2026 — vorher nur die direkte Vorgängerin, weshalb Finali frühere
+  Episoden "vergaßen": the_understudy hatte den Klimax zweimal mit
+  entgegengesetztem Ausgang). Beat-Sheets sind klein (~1-2 KB/Episode).
+  Szene 1 muss zusätzlich einen expliziten Zeit-Beat enthalten (wie viel
+  Zeit seit der Vorepisode verging — gegen Zeitachsen-Drift). Liefert 3–6
+  Beats pro Szene in `--- SCENE N ---`-Blöcken → `parse_beats()` →
   `stages/02_scripts/output/<prefix>N_BEATS.txt`.
 - Resume = einfacher Existenz-Check (kein inkrementelles Schema wie bei
   PART-Dateien — ein Call erzeugt die ganze Datei, nichts zu resumen).
@@ -133,7 +163,25 @@ Paket, weil sie von claude-CLI-Pfad-CLIs (kein venv) importiert werden und
 
 - `character_library.py` / `location_library.py` / `sfx_library.py` —
   serienübergreifende Wiederverwendung von Porträts, Orts-Hintergründen
-  und SFX-Assets (`data/sfx_library/`).
+  und SFX-Assets (`data/sfx_library/`). Alle drei: exakter Hash-Treffer
+  zuerst, sonst Fuzzy per Wortmengen-Überlappung (Jaccard) — bewusst kein
+  API-Call/Embeddings, stdlib-only. **Belastbarkeitsgrenze** (16.07.2026,
+  echte Produktionsdaten über 11 Serien geprüft): bei Charakteren/Orten
+  bleibt Fuzzy praktisch wirkungslos (0 Aliase trotz 21 bzw. 36 Einträgen),
+  weil Beschreibungen lang/plot-reich sind (Ø 39 Wörter bei Charakteren) und
+  Wortüberlappung dadurch selbst bei echten Archetyp-Duplikaten sehr niedrig
+  bleibt (~0.20–0.24) — in derselben Score-Spanne liegen aber auch klare
+  FALSE POSITIVES (zwei Rollen, die nur eine Ethnizitäts-Formulierung teilen).
+  `character_library.py::_archetype_clause()` vergleicht deshalb nur den Teil
+  vor dem ersten ';' (Archetyp statt Plot-Rückblende, 97% der Beschreibungen
+  haben dieses Muster) — verbessert die Signalqualität, OHNE
+  `SIMILARITY_THRESHOLD` zu senken (kein sicherer Trennwert zwischen echtem
+  Treffer und Zufallsüberlappung gefunden). Für Orte gibt es kein
+  vergleichbares Trenner-Muster (nur primär-visueller Text, das Problem ist
+  lexikalische Vielfalt, keine Wortmengen-Metrik löst das ohne Embeddings).
+  Statt automatisch zu raten: `fabrik/cli/library_audit.py` listet
+  Near-Miss-Kandidaten unterhalb der Produktiv-Schwelle auf (characters/
+  locations/sfx) — reine Anzeige, der Mensch entscheidet beim Lesen.
 - `elevenlabs_backend.py` — ElevenLabs SFX/Ambience-Generierung (urllib,
   `ELEVENLABS_API_KEY`), genutzt von sfx_assets/location_ambience.
 - `image_backends.py` — OpenAI-Bildgenerierung (urllib, `OPENAI_API_KEY`),

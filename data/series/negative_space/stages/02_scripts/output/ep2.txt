@@ -1,0 +1,819 @@
+--- PART 1 ---
+
+[NARRATOR | style: measured, reflective]
+Previously on Negative Space: a hard drive arrived at the precinct with no sender and no record of its delivery — twelve photographs of twelve families, each one already gone. Ethan Voss spent that first night alone at his kitchen table, laying the images edge to edge, until he found what the drive wanted him to find — the same shadow, the same distance, standing at the border of every frame, in every year, in every city.
+
+[NARRATOR | style: measured, reflective]
+He told no one. Not Marcus. Not Lina. He told himself, only, that it wasn't nothing.
+
+[NARRATOR | style: calm, procedural]
+Five days have passed since that first night.
+
+[NARRATOR | style: calm, procedural]
+There has been no breakthrough in that time. No confession, no chase, no single document that changes everything. What there has been is slower than that, and quieter — a request form filed here, a records office called there, a certificate requested under a case number that does not yet officially exist. This is what confirmation looks like before it becomes proof: not a discovery, but an accumulation.
+
+[SFX: a manila folder set down on a desk]
+
+[NARRATOR | style: calm, procedural]
+Somewhere in the city's records offices, in county archives two counties over, in a filing cabinet no one has opened in years, twelve names are waiting to be matched against twelve deaths already ruled closed. Each match will not feel like a discovery. It will feel like checking a box someone else already checked, a long time ago, when there was no reason yet to look twice.
+
+[NARRATOR | style: measured, quieter]
+And while that work goes on, unglamorous and unwitnessed, the person who built this pattern in the first place has not paused for a moment. He has not gone into hiding. He has not slowed down. He has kept teaching, kept smiling, kept measuring — the same patience that built twelve trophies now simply watching to see how long it takes one careful young man to count them.
+
+[NARRATOR | style: measured, quieter]
+Five days of files. Twelve names. And a tally, growing one certificate at a time, in the private ledger of a man who still believes he's the only one keeping count.
+
+--- PART 2 ---
+
+[NARRATOR]
+Five days after the drive reached the precinct, forensics analyst Ethan Voss stays past shift change again, the lab emptied out around him.
+[NARRATOR]
+Same desk, same stack, twelve families waiting on twelve manila folders.
+
+[ETHAN_VOSS | style: low, methodical, talking himself through it]
+Certificate seven. Rebecca Aldous. Cause of death: fall, stairwell, unwitnessed. Manner: accidental.
+
+[SFX: a folder closing softly, paper on paper]
+
+[ETHAN_VOSS | style: flat, reciting]
+Ruled unconnected to any open case. Same as six. Same as five.
+
+[ETHAN_VOSS | style: quieter, to himself]
+Seven for seven.
+
+[NARRATOR]
+He keeps the tally on a legal pad, not in the system — a private column no case number touches yet.
+
+[ETHAN_VOSS | style: measured, but something tightening underneath]
+Eight through twelve are Han's students. That's not in question anymore. What's in question is why every single one of these reads clean.
+
+[ETHAN_VOSS | style: dry, almost arguing with the file]
+A fall. A gas leak. A car off a wet road. Different counties, different years, different medical examiners — and not one of them flagged for anything beyond what's on the form.
+
+[SFX: a desk drawer opening]
+
+[ETHAN_VOSS | style: careful, checking himself]
+That's not a pattern by itself. Grief clusters people. Accidents happen to families who take the same class.
+
+[ETHAN_VOSS | style: lower, more honest]
+Eleven years apart, though. That's not a coincidence anymore, that's a shape.
+
+[NARRATOR]
+He doesn't say the next thought out loud — that a shape needs a hand to draw it. Not yet.
+
+[ETHAN_VOSS | style: resolved, quieter still]
+I haven't told Marcus how many I've closed the loop on. I keep telling myself I will, once I know what I'm actually looking at.
+
+[ETHAN_VOSS | style: firmer, decision landing]
+Enough of that. Twelve confirmed, zero flagged elsewhere — that's not a hunch anymore, that's a case.
+
+[SFX: a rubber stamp pressed down once]
+
+[ETHAN_VOSS | style: quiet, final]
+Today. I log it today.
+
+[NARRATOR]
+He squares the stack, checks the clock, and reaches for his terminal — the tally finally about to become paperwork.
+
+--- PART 3 ---
+
+[NARRATOR]
+The forensics lab, late afternoon. Ethan sits alone at his terminal, opening a new case file for the first time.
+
+[ETHAN_VOSS | style: quiet, deliberate]
+Case type: pattern review. Status: active.
+
+[SFX: keyboard clicking, a few sharp strokes]
+
+[ETHAN_VOSS | style: muttering to himself]
+Assigned investigator...
+
+He pauses, cursor hovering over the field. He types his own name and nothing else.
+
+[ETHAN_VOSS | style: low, almost apologetic]
+Just for now.
+
+[SFX: a soft mouse click, then silence]
+
+[NARRATOR]
+Down the hall, at the shared terminal, Marcus scrolls through the day's new case numbers.
+
+[MARCUS_TANG | style: casual, scanning]
+New pattern review... case seven-two-one...
+
+He stops scrolling. His eyes narrow slightly at the screen.
+
+[MARCUS_TANG | style: flat, controlled]
+Sole investigator: Voss.
+
+He says nothing else. He doesn't call out, doesn't walk down the hall. He just sits there a moment, jaw tight, looking at a case number that should have had his name on it too — the same case he pulled prints for, cross-referenced addresses for, stayed late for.
+
+[MARCUS_TANG | style: barely audible, to himself]
+Right.
+
+[SFX: a chair rolling back an inch on tile]
+
+[NARRATOR]
+He closes the window. Says nothing to anyone.
+
+Ethan, still at his own desk, doesn't see any of it. He leans back, rubs his eyes, tells himself it's temporary — that he'll loop Marcus in properly once he has something solid, once the shape of it stops feeling like something he needs to hold alone a little longer.
+
+[ETHAN_VOSS | style: quiet, unconvinced by his own reasoning]
+Just until it's clean.
+
+[NARRATOR]
+He doesn't ask himself what "clean" is supposed to mean. He doesn't ask what it's already cost.
+
+--- PART 4 ---
+
+[NARRATOR]
+Still at his desk, hours into the same quiet stretch. Ethan cross-references storage rentals near the families' old addresses.
+
+[ETHAN_VOSS | style: flat, focused, muttering to himself]
+Riverside Self-Storage, unit forty-one. Leased... eleven months ago. Cash deposit.
+
+[SFX: a mouse click, then keyboard tapping]
+
+[ETHAN_VOSS | style: half to himself, scanning]
+Lessee name...
+
+[ETHAN_VOSS | style: the words catch in his throat, quiet]
+Arthur Voss.
+
+[ETHAN_VOSS | style: still, unsettled]
+Voss.
+
+[NARRATOR]
+He sits with that a moment before reaching for the keyboard again.
+
+[ETHAN_VOSS | style: low, trying to talk himself down]
+Arthur Voss. Not Ethan. Not — it's not even close, it's a coincidence, common enough name—
+
+[SFX: keyboard tapping, faster]
+
+[ETHAN_VOSS | style: reading aloud, clipped]
+City registry. Voter rolls. Utilities. Search: Arthur Voss.
+
+[SFX: a soft notification chime]
+
+[ETHAN_VOSS | style: quieter now, a little thrown]
+No match. No verified resident by that name, anywhere in the system.
+
+[NARRATOR]
+He leans back from the screen.
+
+[ETHAN_VOSS | style: rationalizing, almost convincing himself]
+Fake name on a storage lease isn't exactly a shock. People use fake names to rent units all the time. Cash-only unit, no ID check worth the paper — that's not a signature, that's just... how these places work.
+
+[ETHAN_VOSS | style: still a little too fast, still a little too quiet]
+It's a family name. Half the phone book's got a Voss in it somewhere. Doesn't mean anything.
+
+[NARRATOR]
+He says it again, softer, like repetition might settle it.
+
+[ETHAN_VOSS | style: barely audible]
+Doesn't mean anything.
+
+[SFX: a mouse click]
+
+[NARRATOR]
+He minimizes the record, opens the next certificate in the stack, and doesn't flag the name to anyone — not in the case file, not to Marcus, not even in his own notes. The screen moves on. He does not.
+
+--- PART 5 ---
+
+[NARRATOR]
+Evening, Han's Camera Shop — Ethan's first photography teacher, closing up alone.
+Trophy Rooms thread.
+
+[SFX: shop blinds being pulled down, slats clacking]
+
+[MR_HAN | style: unhurried, quietly pleased]
+There we are. Closed a little early tonight.
+
+[SFX: door sign flipped, small bell chime]
+
+[MR_HAN | style: to himself, almost fond]
+Six days. I gave him eight, in my head. Maybe nine, if he got distracted by the girlfriend, or the partner, the way young men do.
+
+[MR_HAN | style: measured, admiring]
+But no. Certificate by certificate. He's careful. He doesn't skip a name because it's inconvenient.
+
+[SFX: cash register drawer sliding open]
+
+[MR_HAN | style: soft, counting under his breath]
+Twelve families on that drive, and he'll find every one of them before he lets himself stop. That's not luck. That's temperament.
+
+[MR_HAN | style: quiet, reflective]
+Patience like that used to be common. Now it's rare enough to notice. Rare enough to watch.
+
+[SFX: register drawer sliding shut]
+
+[MR_HAN | style: dry, almost amused]
+Marcus heard something about a reporter, poking around the old cases. Asking the kind of questions that don't go anywhere on their own.
+
+[MR_HAN | style: dismissive, light]
+A young woman with a notebook and no evidence. They come and go every few years. They ask the neighbors things, they get tired, they move on to something that pays better.
+
+[MR_HAN | style: quiet, certain]
+She isn't the one worth losing sleep over.
+
+[SFX: a single light switch clicking off]
+
+[MR_HAN | style: gentle, almost tender]
+No. He is. Ethan Voss, counting his certificates, one careful confirmation at a time.
+
+[MR_HAN | style: soft, closing the thought]
+Let him take his six days. Let him take sixty, if he needs them. I've waited longer for less patient men.
+
+[SFX: shop's back door closing, bolt turning]
+
+--- PART 6 ---
+
+[NARRATOR]
+Later that same afternoon, back at the forensics lab. Mei Chen — the data analyst who's been quietly tracing the drive's hidden GPS trails — has offered to turn twelve scattered dates into something the whole team can actually look at.
+
+[MEI_CHEN | style: focused, thinking out loud]
+Okay. If I plot cause of death against location, and location against year, I want to see if this is random or if it's — clumped.
+
+[SFX: a printer spitting out a page]
+
+[MEI_CHEN | style: quiet realization]
+It's clumped.
+
+[MARCUS_TANG | style: distracted, going through the motions]
+Clumped how.
+
+[MEI_CHEN | style: measured, laying it out]
+Three of these are within six blocks of each other, different years. Then nothing in that neighborhood for a while, then it picks back up two districts over. It's not spread evenly. It moves.
+
+[MARCUS_TANG | style: half-listening]
+Moves like a commute.
+
+[MEI_CHEN | style: careful, not overselling it]
+Or like somebody who doesn't stay in one part of the city too long. I don't want to say that out loud like it's a conclusion. It's a shape. Shapes can be coincidence.
+
+[SFX: a marker cap clicking off]
+
+[MEI_CHEN | style: steady, marking the board]
+Here's the one that isn't a shape, though. Earliest date we've confirmed, against the most recent photograph on the drive. That's not a season. That's not even a few years.
+
+[MARCUS_TANG | style: pulled back in, uneasy]
+How far.
+
+[MEI_CHEN | style: flat, letting the number land]
+Call it a decade. Maybe a little more. I'm being conservative.
+
+[MARCUS_TANG | style: low, more to himself]
+That's not a spree. That's a — habit.
+
+[MEI_CHEN | style: gentle correction]
+I'd stick with "pattern" until somebody with a badge says otherwise.
+
+[NARRATOR]
+Mei glances up from the board.
+
+[MEI_CHEN | style: mild, checking in]
+You've been on your phone for ten minutes and you haven't asked me a single question about the map.
+
+[MARCUS_TANG | style: quickly covering]
+Just tired. Didn't sleep great.
+
+[MEI_CHEN | style: accepting, but not quite convinced]
+Get some sleep, then. This map isn't going anywhere — it's just going to keep getting worse the longer we look at it.
+
+[SFX: a thumbtack pressed into corkboard]
+
+[NARRATOR]
+She steps back to look at the board as a whole — dates, districts, a decade stretched thin across a city that thought each of these losses stood alone.
+
+--- PART 7 ---
+
+[NARRATOR]
+Thread change. We return to Lina Cho — Ethan's girlfriend, a crime-beat journalist — on the waterside promenade at dusk, five days into the same stretch of quiet confirmations.
+
+[NARRATOR]
+She's chosen the crowd on purpose: joggers, food carts, a hundred strangers moving too fast to notice one more.
+
+[LINA_CHO | style: casual, unhurried, mask firmly on]
+Nice night for it.
+
+[SFX: a bicycle bell passing close, then receding]
+
+[NARRATOR]
+A man in a windbreaker falls into step beside her for exactly the length of the railing, then peels away toward the water.
+
+[SFX: a manila envelope sliding across a metal railing]
+
+[LINA_CHO | style: quiet, controlled | speed: 0.95]
+Same terms as always. Nothing about where this came from, not even to me if it ever comes up.
+
+[NARRATOR]
+No answer comes, only a nod she catches from the corner of her eye before he's gone into the crowd.
+
+[LINA_CHO | style: exhaling, private]
+Good enough.
+
+[NARRATOR]
+Later, in the quiet of her apartment, the envelope sits on her kitchen table until she can't stand looking at it anymore.
+
+[SFX: a letter opener slitting paper cleanly]
+
+[LINA_CHO | style: focused, reading under her breath]
+Sealed file, case number redacted at the top — that's new — and a family name I know cold. I've had this name pinned to my board for three weeks.
+
+[NARRATOR]
+She flips to the second page, and her hand stills over a line of text she reads twice.
+
+[LINA_CHO | style: a beat of unease creeping in, quieter]
+Cause listed as accidental. Ruled unrelated. That phrasing — I've seen that exact phrasing somewhere else this week. I just can't place where.
+
+[LINA_CHO | style: pushing the thought down, deliberately steady]
+Not tonight. I'll sit with it, cross-check the dates tomorrow when my head's clearer, figure out what it actually connects to before I go anywhere near a decision about who sees it.
+
+[NARRATOR]
+She slides the file into the drawer beneath her research, unaware how close its edges already sit to the case number Ethan logged three days ago under his name alone.
+
+--- PART 8 ---
+
+[NARRATOR]
+Lina's apartment, later that same night. Her bedroom door is shut against the rest of the apartment — and against Ethan, still awake somewhere on the other side of it.
+
+[SFX: a door clicking shut softly]
+
+[LINA_CHO | style: quiet, focused]
+Okay.
+
+[SFX: a pushpin pressed into corkboard]
+
+[LINA_CHO | style: murmuring to herself]
+Riverside cluster. You go there.
+
+[SFX: a length of string being pulled taut]
+
+[NARRATOR]
+She steps back from the board, the new file now tied by red string to two others already pinned there.
+
+[LINA_CHO | style: unsettled, low]
+Three. That's three now that don't sit right.
+
+[LINA_CHO | style: quieter, thinking out loud]
+Same six-month window. Same nothing-to-see-here ruling. Same—
+
+She trails off, eyes tracking the string back and forth between photographs.
+
+[LINA_CHO | style: barely audible]
+—same shape.
+
+[NARRATOR]
+She doesn't yet know how closely this shape mirrors the one sitting in a case file two floors below her, at the precinct, under a different name.
+
+[LINA_CHO | style: guarded, arguing with herself]
+If I give this to him, he asks where it came from. And then what. I tell him it's a source I can't name, and he — what, just accepts that? From me?
+
+[LINA_CHO | style: quieter, more honest]
+Or I hold it. One more week. Get one more piece before I bring him anything worth burning a source over.
+
+[NARRATOR]
+It is the same calculation she made a week ago, and the week before that.
+
+[LINA_CHO | style: flat, aware of herself]
+"Not yet" is starting to sound like a decision, not a delay.
+
+She glances at the board again — at how little space is left between the strings.
+
+[LINA_CHO | style: hardening, pushing the doubt down]
+One more week.
+
+[SFX: a corkboard pin tapped once, firmly, into place]
+
+[NARRATOR]
+She turns off the desk lamp, leaving the board glowing faintly in the dark long after she's gone to bed — three families, one string apart, and closer than she knows to a fourth file already open under her boyfriend's name.
+
+--- PART 9 ---
+
+[NARRATOR]
+Ethan and Lina's apartment, that same evening. The workday behind them, dinner half-cleared from the table.
+
+[ETHAN_VOSS | style: relaxed, teasing]
+You're going to wear a groove in that phone screen.
+
+[LINA_CHO | style: light, quick recovery]
+Sorry. Sorry — I'm not even looking at anything, I just keep checking out of habit.
+
+[SFX: a phone set face-down on a wooden table]
+
+[ETHAN_VOSS | style: gentle, not pushing]
+Everything okay? You've had that thing in your hand since we sat down.
+
+[LINA_CHO | style: casual, well-practiced]
+It's a source thing. Somebody who's skittish about how we talk, when we talk — I have to be available on their schedule or they go quiet for a week. It's tedious, not interesting.
+
+[ETHAN_VOSS | style: warm, a little wry]
+The mysterious unnamed source. You know I've stopped even asking who it is.
+
+[LINA_CHO | style: soft, deflecting with affection]
+Good. Keep not asking. It's better for both of us.
+
+[ETHAN_VOSS | style: amused]
+Is that a threat or a compliment.
+
+[LINA_CHO | style: teasing back]
+Take it however keeps you from bothering me about it.
+
+[SFX: a fork set down against a plate]
+
+[ETHAN_VOSS | style: quieter, sincere]
+I just — you've had that look this week. The one where you're somewhere else even when you're right here.
+
+[LINA_CHO | style: careful, gentle]
+It's a good story, Ethan. Maybe the best one I've had in years. I just can't talk about it yet, and that makes me a little insufferable at home. I know.
+
+[ETHAN_VOSS | style: soft, reassured]
+You're not insufferable. Distracted, maybe. Insufferable was the group chat thing in March.
+
+[LINA_CHO | style: laughing, relieved]
+That was one time.
+
+[ETHAN_VOSS | style: content, settling]
+Twice. But who's counting.
+
+[SFX: a couch cushion shifting as someone leans back]
+
+[NARRATOR]
+A quiet stretch passes between them, the kind that needs no words.
+
+[LINA_CHO | style: low, genuine]
+I like this. Just — sitting here, not being anywhere else for a minute.
+
+[ETHAN_VOSS | style: low, matching her]
+Me too.
+
+[LINA_CHO | style: quiet, almost to herself]
+When this story's done, I'll tell you everything. I promise.
+
+[ETHAN_VOSS | style: content, unaware]
+No rush. I trust you.
+
+[NARRATOR]
+He means it completely. He has no reason yet not to.
+
+--- PART 10 ---
+
+[NARRATOR]
+Across town, after hours: the Cho family print shop, run by Lina's parents — the quiet debt behind it something she still doesn't know is real.
+[NARRATOR]
+A different thread now, no link yet to anything Ethan is working tonight.
+
+[SFX: shop door chime]
+
+[LINA_CHO | style: light, unbothered]
+Dad, I brought your spare keys back. Whose car's out front? Don't recognize it.
+
+[LINA_CHO | style: noting details, journalist habit]
+Grey suit, not a printer rep. Clipboard, city seal stamped right on the cover. Doesn't even glance at the prints in the window.
+
+[SFX: a folder shut quickly on the counter]
+
+[LINA_CHO | style: caught off guard]
+Oh — sorry, didn't mean to interrupt.
+
+[LINA_CHO | style: quieter, half to herself]
+He just nodded at me. Didn't even give his name.
+
+[LINA_CHO | style: half to herself, uneasy]
+And Dad's voice has gone flat. Careful. Like he's reading off a script.
+
+[SFX: an office door pulled shut, voices muffled behind it]
+
+[LINA_CHO | style: shrugging, unaware]
+Steering him straight back to the office. Lease stuff, probably — he hates when I hover over the books.
+
+[LINA_CHO | style: softer, letting it go]
+He'd tell me if it were anything. He always does.
+
+[LINA_CHO | style: moving on, warmer]
+I'll leave the keys on the counter. Might swing by Mom's after — see what she's making for dinner.
+
+--- PART 11 ---
+
+[NARRATOR]
+Later that same evening, at Lina's apartment. Still the Shop's Ledger thread — she calls her mother to ask about the man she saw at the shop.
+
+[SFX: a phone ringing twice, then picking up]
+
+[LINA_CHO | style: casual, setting down keys]
+Hey, Uma, it's me. So I stopped by the shop around closing and there was some guy in a gray coat, carrying a folder, talking to Appa way in the back. Looked pretty official for a random Tuesday. Everything okay?
+
+[LINA_CHO | style: listening]
+Mm-hm.
+
+[LINA_CHO | style: caught off guard by how fast that came]
+Oh — that's it? He just... comes by sometimes?
+
+[LINA_CHO | style: pressing gently]
+It's just, I've never actually seen him in person before. Isn't it usually mail? A notice taped to the register, that kind of thing.
+
+[LINA_CHO | style: half-convinced, wanting to believe it]
+Okay. I mean, you'd know better than me. You're the one who deals with the lease stuff, not me.
+
+[LINA_CHO | style: noticing something, quieter]
+You said that really fast, though. Like you already had it loaded up.
+
+[LINA_CHO | style: backing off, warm]
+No — forget it, I said forget it. It's fine. Appa just looked tense when I walked in, and I probably read too much into it.
+
+[SFX: a kettle starting to whistle in the background, then cutting off]
+
+[LINA_CHO | style: distracted by the kettle, then refocusing]
+Hold on — okay, I'm back. Anyway. Did you actually go see Dr. Park on Tuesday, or did the waiting room win again?
+
+[LINA_CHO | style: exasperated affection]
+Uma. "It smells like antiseptic" is not a reason to skip a doctor's appointment. That's what clinics smell like. That's the whole point.
+
+[LINA_CHO | style: fond, tired]
+Fine. I'll come by Saturday and walk you there myself if I have to sit in that chair and glare at you the entire time.
+
+[LINA_CHO | style: softening, sincere]
+Get some rest tonight, okay? Don't stay up watching the shop numbers again. Love you, Uma.
+
+[SFX: a phone call ending with a soft beep]
+
+--- PART 12 ---
+
+[NARRATOR]
+Saturday morning, Han's Camera Shop — the elderly repairman who gave Ethan his first photography lessons years ago is opening for a new family's turn at his free weekend class.
+
+[MR_HAN | style: warm, unhurried]
+Hold it steady against your ribs, not out at arm's length. There. You feel that? Camera's an extension of the body, not a thing you're pointing at the world.
+
+[SFX: a camera shutter clicking twice]
+
+[MR_HAN | style: gently curious]
+Good. Now — you said you're heading somewhere for the summer? A lake house, was it?
+
+[MR_HAN | style: warm, unhurried]
+Three weeks. That's generous. Your husband's idea or yours?
+
+[MR_HAN | style: light, encouraging]
+Smart. Man who plans ahead. And you're there most weekends already, or just the once a year?
+
+[MR_HAN | style: warm, unhurried]
+Every other weekend, then. That's a good rhythm — gives you time to actually learn the light instead of just chasing it.
+
+[SFX: a shop bell above the door]
+
+[MR_HAN | style: easy, familiar]
+Frank. Early for you.
+
+[MR_HAN | style: dry, amused]
+"Sleep" — he says I could teach this lesson in my sleep by now. How many families is it, Frank, twenty? Thirty?
+
+[MR_HAN | style: light, deflecting]
+I don't count. I just teach the one in front of me. Now —
+
+[MR_HAN | style: warm, unhurried]
+— aperture. This little ring here. Turn it and watch what happens to the background.
+
+[SFX: a lens aperture ring clicking through stops]
+
+[MR_HAN | style: gently pleased]
+There. See how the room falls away behind her and she's the only thing that's sharp? That's the whole trick of it. Everything else goes soft. Only what matters stays in focus.
+
+[MR_HAN | style: warm, unhurried]
+Try it on your daughter. Get her laughing first — the honest ones always come when they're not posing for it.
+
+[SFX: a camera shutter clicking three times]
+
+[MR_HAN | style: quiet satisfaction]
+Beautiful. You've got a good eye already. This is going to be an easy few weeks.
+
+[MR_HAN | style: warm, closing]
+Same time next Saturday? Bring the lake house pictures if you get any before then — I'd like to see where you're headed.
+
+--- PART 13 ---
+
+[NARRATOR]
+Later that afternoon, Ethan stops by Han's Camera Shop — the same shop where families have taken their first photography lessons for decades.
+He's come with a question about old lesson records, nothing more.
+
+[ETHAN_VOSS | style: casual, low-key]
+Mr. Han. Got a minute? I'm chasing down some paperwork — a few families who might've taken lessons here a while back.
+
+[MR_HAN | style: warm, unhurried]
+Ethan. Always a minute for you. Come on back, the light's better near the darkroom — my eyes aren't what they were out front.
+
+[SFX: a shop bell settling as the door swings shut]
+
+[MR_HAN | style: warm, unhurried]
+Which families are we talking about?
+
+[ETHAN_VOSS | style: methodical]
+A handful of names, mostly. I can leave you the list. Any chance you kept sign-up sheets, receipts, anything with dates?
+
+[MR_HAN | style: thoughtful, easy]
+Some of it. I'm better with faces than paper, I'll admit — but I remember most everyone who's sat at that workbench. Lovely people, usually. Parents wanting to learn something with their kids before the kids stop wanting to learn anything with them.
+
+[ETHAN_VOSS | style: light, prompting]
+Any of them ever mention travel? Trips coming up, that kind of thing?
+
+[MR_HAN | style: fond, deflecting gently]
+Everyone mentions travel eventually. Vacations, visits to grandparents. It's the kind of shop where people talk while they wait for prints. I couldn't tell you which family said what — not with any confidence.
+
+[SFX: a drawer sliding open on its track]
+
+[MR_HAN | style: warm, unhurried]
+Here — this is as close as I've got. A few old sign-in sheets. Dates, first names mostly. I was never much of a record-keeper.
+
+[ETHAN_VOSS | style: appreciative]
+This helps more than you'd think. Thanks for digging it out.
+
+[MR_HAN | style: gentle, closing]
+Anything for you, Ethan. You were one of my better students, you know. Patient hands. I always thought that mattered more than people give it credit for.
+
+[NARRATOR]
+Ethan leaves with a folder of half-legible sign-in sheets and a warm impression of an old teacher — the shop sliding further down his list of concerns rather than up.
+He doesn't know how much he just walked past.
+
+--- PART 14 ---
+
+[NARRATOR]
+The rooftop bar again, later that same week. Ethan, Marcus, and Mei — his lab partner and their forensic data analyst — gather after hours, drinks half-finished, the mood thinner than usual.
+
+[MARCUS_TANG | style: light, but with an edge underneath]
+So I'm scrolling the queue this morning, and there's a shiny new case number. Twelve photographs, one shadow, all mine to read about secondhand. Funny how that works.
+
+[ETHAN_VOSS | style: caught off guard, trying to sound reasonable]
+It's not — I wasn't trying to cut you out. I just wanted to be sure before I looped anyone in officially.
+
+[MARCUS_TANG | style: flat, unimpressed]
+Sure about what, exactly. The pattern, or who gets their name on it.
+
+[SFX: ice shifting in a glass set down harder than necessary]
+
+[ETHAN_VOSS | style: defensive, quieter]
+That's not fair.
+
+[MARCUS_TANG | style: forcing lightness back over something raw]
+No, it's fine. It's your drive. Your kitchen table. Your twelve photographs. I just usually find out these things before the queue does.
+
+[MEI_CHEN | style: careful, trying to smooth it]
+Okay — Marcus, come on. He's been buried in death certificates all week, it's not some conspiracy.
+
+[MARCUS_TANG | style: shrugging it off too quickly]
+I didn't say conspiracy. I said funny.
+
+[NARRATOR]
+A silence stretches, the kind that used to fill easily and now doesn't.
+
+[ETHAN_VOSS | style: trying to reset, awkward]
+Look — once I've got the full picture, you're the first name I add. I promise.
+
+[MARCUS_TANG | style: quiet, almost to himself]
+Yeah. You said that about the last one too.
+
+[MEI_CHEN | style: watching him, puzzled and a little worried]
+Marcus—
+
+[MARCUS_TANG | style: too fast, covering]
+Forget it. Long week. I'm being an idiot about a case number.
+
+[NARRATOR]
+Mei studies him a beat longer than the joke deserves, certain now that something is sitting behind his eyes that has nothing to do with case numbers at all — though she couldn't begin to guess what.
+
+[ETHAN_VOSS | style: relieved to let it drop, too readily]
+Another round, then. On me.
+
+[MARCUS_TANG | style: forced warmth returning]
+Now that's the correct move.
+
+[NARRATOR]
+The laughter that follows is real enough, and loud enough, to almost cover the thing none of them said out loud. Almost.
+
+[SFX: a glass bottle clinking against three others in a quick toast]
+
+[MEI_CHEN | style: lighter, changing the subject on purpose]
+Okay, before we all get sentimental — has anyone actually slept this week?
+
+[ETHAN_VOSS | style: tired laugh]
+Define sleep.
+
+[NARRATOR]
+The conversation moves on, easy again on the surface. But the space where Marcus's name should have been on that case file doesn't close so easily — not for him, and not, quietly, for Mei either.
+
+--- PART 15 ---
+
+[NARRATOR]
+The forensics lab, the next morning. Ethan, Marcus, and Mei are still at it — this time with an older file pulled from a records request that took four days to clear.
+
+[MEI_CHEN | style: focused, reading off a screen]
+Accident report, county archive, digitized last year. Single-vehicle, embankment road, whole family. Cause of death: exposure and impact injuries. Ruled non-suspicious.
+
+[MARCUS_TANG | style: flat, still a little cold from last night]
+Which family.
+
+[MEI_CHEN | style: steady]
+Matches print six. The one with the two kids on the dock.
+
+[SFX: a folder set down hard on a desk]
+
+[ETHAN_VOSS | style: quiet, doing math under his breath]
+Give me the date again.
+
+[MEI_CHEN | style: reading]
+March, eleven years ago this spring.
+
+[ETHAN_VOSS | style: slowing down, almost to himself]
+And the newest print — the one with the EXIF stamp from four months back.
+
+[MEI_CHEN | style: careful]
+Four months. So from that report to now —
+
+[MARCUS_TANG | style: doing the subtraction, tone shifting]
+Eleven years. Give or take a season.
+
+[NARRATOR]
+No one speaks for a moment.
+
+[MEI_CHEN | style: subdued]
+I've never worked anything that old. Not even close.
+
+[MARCUS_TANG | style: low, the earlier edge gone]
+Neither have I.
+
+[ETHAN_VOSS | style: measured, but something underneath it]
+Eleven years means this isn't a spree. It's not somebody who snapped once and got sloppy enough to leave us photographs. It's somebody who's been doing this since before some of these kids were even born.
+
+[MARCUS_TANG | style: quiet]
+And never slowed down.
+
+[ETHAN_VOSS | style: firm, flagging it for the record]
+I want that in the file. Not just "confirmed accidental, unrelated." I want the span noted — first known incident to most recent, eleven years, minimum. Whoever put this drive together didn't stumble into a pattern. They're sitting on top of one.
+
+[MEI_CHEN | style: hesitant]
+Ethan — that's not a person losing control. That's a person with a system.
+
+[ETHAN_VOSS | style: level, not quite letting himself finish the thought]
+I know what it sounds like.
+
+[NARRATOR]
+He doesn't say the rest out loud — that a system run this long, this cleanly, isn't something you stop by accident. He writes the number down instead: eleven years, and adds it to the file under his name alone.
+
+--- PART 16 ---
+
+[NARRATOR]
+Later that night, in her apartment across town, Detective Yuki Sato sits alone at her kitchen table — the homicide detective who closed one of the accidental deaths years ago.
+
+[NARRATOR]
+Away from her desk, off the record, she opens a binder she hasn't touched since the ruling.
+
+[SFX: a binder's rings clicking open]
+
+[DET_YUKI_SATO | style: quiet, self-interrogating]
+Blunt force, consistent with a fall. Consistent with. That's not the same as caused by.
+
+[DET_YUKI_SATO | style: reading aloud to herself, flat]
+No forced entry. No defensive wounds. Case closed, insufficient basis for further investigation.
+
+[DET_YUKI_SATO | style: slower, doubt creeping in]
+I signed that. I signed that because the basis wasn't there yet.
+
+[SFX: a page turning]
+
+[DET_YUKI_SATO | style: barely audible]
+The bruising pattern on the mother. I called it consistent with the stairs.
+
+[DET_YUKI_SATO | style: harder on herself now]
+I never asked what else it was consistent with.
+
+[DET_YUKI_SATO | style: still, resolved but private]
+Not tonight. Not yet. But I'm not closing this drawer again until I know.
+
+[NARRATOR]
+She doesn't reach for her phone. She doesn't call it in. She sits with the binder open, alone, longer than she meant to.
+
+--- PART 17 ---
+
+[NARRATOR]
+Five days. Eleven years. Those are the only numbers that matter this week, and by Friday evening, everyone circling this case has done the arithmetic in private.
+
+[NARRATOR]
+Ethan has his tally, family by family, each one accidental, each one unconnected, each one now impossible to call a coincidence. Mei has her map, the dots spreading wider than anyone expected, a decade of quiet repetition laid out in pins and string. Marcus has his silence, and the shape of what it's costing him, though he hasn't said the words out loud to anyone — not yet. Yuki has a binder she was never supposed to open again, and a piece of evidence she's starting to look at differently than she did the year she closed it.
+
+[NARRATOR]
+Lina has an envelope pinned to a corkboard behind a locked door, and a family's name she recognizes from two directions at once, though she still hasn't told the one person closest to both of them.
+
+[NARRATOR]
+And across town, in a shop with a red light behind the darkroom curtain and a bell that rings warm and welcoming over the door, a new family is learning how to hold a camera steady. He is patient with them. He is kind to them. He asks, gently, about their weekends, their routines, their plans for the summer — the way he always does, the way he has for longer than anyone in that shop has thought to count.
+
+[NARRATOR]
+The last death certificate Ethan pulls this week is dated eleven years before the first. Same shadow at the edge of the frame. Same distance from the lens. Same patient stillness, across more than a decade of families who never saw it coming until it was already too late to matter.
+
+[NARRATOR]
+Across town, the Cho print shop's landlord stops asking politely. He tells Lina's father he has five days.
+
+[NARRATOR]
+Five days for one family to find money that isn't there. Eleven years for another kind of family, scattered across the city's accident reports, to finally start adding up to something that looks like a pattern instead of grief.
+
+[NARRATOR]
+Everyone in this case is now carrying a certainty they haven't said aloud. The only question left is how much longer the quiet can hold before one of them breaks it.
+

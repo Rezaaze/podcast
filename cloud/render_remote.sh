@@ -174,7 +174,14 @@ echo "=== audio.backend/api_url in der REMOTE-Kopie auf gradio/127.0.0.1:7860 um
 # Pinokio/Qwen3-Server, Port 42003, ohne manuelles Umschalten vor jedem
 # Cloud-Lauf). "backend" wird IMMER auf "gradio" gezwungen, unabhängig vom
 # lokalen Wert -- dieser Workflow rendert remote ausschließlich gegen die
-# Qwen3-TTS-Gradio-App der Instanz.
+# Qwen3-TTS-Gradio-App der Instanz. chunk_concurrency nur per setdefault --
+# eine explizit in der episodes.json gesetzte Serie-eigene Batch-Größe soll
+# nicht überschrieben werden -- Default 32 statt der in cloud/README.md
+# gemessenen 40: bei echten Skript-Chunks (bis chunk_max_chars: 350, länger
+# als die kurzen Testsätze der README-Messung) kam es auf einer 32GB RTX
+# 5090 bei 40 wiederholt zu CUDA-OOM (live beobachtet, 16.07., discharged_
+# cured Ep5-8) -- Batch-Fehler fallen zwar automatisch auf einzelne
+# generate_chunk()-Calls zurück (siehe tts_backends.py), kosten aber Zeit.
 ssh "${SSH_OPTS[@]}" "$USERHOST" "python3 -c \"
 import json
 path = '${REMOTE_ROOT}/data/series/${SERIES}/${EPISODES_RELPATH}'
@@ -183,6 +190,7 @@ with open(path) as f:
 audio = data.setdefault('audio', {})
 audio['backend'] = 'gradio'
 audio['api_url'] = 'http://127.0.0.1:7860'
+audio.setdefault('chunk_concurrency', 32)
 with open(path, 'w') as f:
     json.dump(data, f, ensure_ascii=False, indent=1)
 \""

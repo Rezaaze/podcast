@@ -1,0 +1,99 @@
+--- PART 1 ---
+
+[NURSE_ADA_KIRWIN | style: flat, accusing, controlled anger]
+This isn't her hand, Doctor.
+
+[NARRATOR]
+Moorhouse's private clinic. The operating theatre, after hours.
+
+[NURSE_ADA_KIRWIN | style: pressing, procedural]
+I dressed that woman's wounds for six weeks.
+I know her writing.
+
+[DR_JONAS_WYCLIFFE | style: caught off guard, frozen]
+I'm sorry?
+
+[NURSE_ADA_KIRWIN | style: cold, deliberate]
+Mrs. Hale's discharge form.
+Look at the loop on the H.
+That is not how she signs her name.
+
+[DR_JONAS_WYCLIFFE | style: stalling, voice tightening]
+Nurse Kirwin, I'm in the middle of—
+
+[NURSE_ADA_KIRWIN | style: unmoving, quiet fury]
+You countersigned it.
+So tell me whose hand that is.
+
+[DR_JONAS_WYCLIFFE | style: barely holding it together]
+I don't know what you think you've found.
+
+[NURSE_ADA_KIRWIN | style: steady, unblinking]
+I think you do, Doctor.
+That's why you haven't put the scalpel down.
+
+--- PART 2 ---
+
+[DR_JONAS_WYCLIFFE | style: forced calm, unsteady]
+A clerical error. That's all.
+
+[DR_JONAS_WYCLIFFE | style: backpedaling]
+My hand. I had fever that week.
+
+[NURSE_ADA_KIRWIN | style: measured, guarded]
+Fever doesn't loop a letter like that twice.
+
+[DR_JONAS_WYCLIFFE | style: thinning, cornered]
+I copied it. From an earlier form.
+
+[NURSE_ADA_KIRWIN | style: flat, unyielding]
+Which form, Doctor?
+
+[DR_ELIAS_MOORHOUSE | style: warm, unsettlingly calibrated]
+Nurse Kirwin. Such thoroughness.
+
+[DR_ELIAS_MOORHOUSE | style: warm, unsettlingly calibrated]
+Six weeks at that woman's bedside, and you still notice this.
+
+[NURSE_ADA_KIRWIN | style: steady, pressing]
+The signature isn't hers, Doctor Moorhouse.
+
+[DR_ELIAS_MOORHOUSE | style: smooth, reassuring]
+I heard. Let me look.
+
+[SFX: paper sliding off a metal tray]
+
+[DR_ELIAS_MOORHOUSE | style: composed, final]
+I'll explain everything. In good time.
+
+[NURSE_ADA_KIRWIN | style: quiet, suspicious]
+And until then?
+
+[DR_ELIAS_MOORHOUSE | style: warm, closing the door on the topic]
+Until then, rest easy. You've done fine work tonight.
+
+--- PART 3 ---
+
+[NURSE_ADA_KIRWIN | style: hushed, focused]
+Nobody locks this door. That's the first mistake.
+
+[NURSE_ADA_KIRWIN | style: methodical]
+One file. Just one more file.
+
+[NURSE_ADA_KIRWIN | style: reading under breath, tense]
+Discharged. Family transfer. Same as Mrs. Hale.
+
+[NURSE_ADA_KIRWIN | style: quiet realization dawning]
+That loop on the "H." I've seen it before.
+
+[NURSE_ADA_KIRWIN | style: colder, steadier]
+Eight months ago. Same hand. Same lie.
+
+[NURSE_ADA_KIRWIN | style: barely audible, shaken]
+So it isn't one form. It's a habit.
+
+[NURSE_ADA_KIRWIN | style: low, urgent]
+How many women did he—
+
+[SFX: door hinge creaking open]
+

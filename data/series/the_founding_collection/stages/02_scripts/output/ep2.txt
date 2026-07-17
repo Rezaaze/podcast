@@ -1,0 +1,616 @@
+--- PART 1 ---
+
+[NARRATOR]
+Previously on The Founding Collection: during a routine insurance re-appraisal, Nora Vantry found a signature in the 1951 ledger that didn't match Augustin Vantry's hand — and an appraisal sum that didn't match the numbers around it. She said nothing to Julian right away, wanting to be certain before she brought it to him.
+
+[NARRATOR]
+This morning, Nora is finally ready. In the private study above the gallery, she waits for her husband, the auction house's CEO, with two documents laid flat on the desk between them.
+
+[NORA_VANTRY | style: measured, deliberately calm]
+Sit down. I want to show you something, and I want you to actually look before you say anything.
+
+[JULIAN_VANTRY | style: mildly amused, distracted]
+That's an ominous way to start a Tuesday.
+
+[NORA_VANTRY | style: steady, focused]
+This is the 1951 ledger. Lot forty-one, the celadon vase. Now look at the signature.
+
+[SFX: paper sliding across a wooden desk]
+
+[JULIAN_VANTRY | style: casual, half-listening]
+Augustin's. Same as every other page.
+
+[NORA_VANTRY | style: quiet insistence]
+Look closer, Julian. The T. The way it closes. Now compare it to this one — same ledger, four pages earlier.
+
+[JULIAN_VANTRY | style: growing attention]
+...
+
+[NORA_VANTRY | style: careful, precise]
+It's not the same hand. And the appraisal sum on forty-one is nearly sixty percent higher than anything comparable from that year. I checked three other pieces from the same acquisition lot. None of them jump like that.
+
+[NARRATOR]
+Julian goes still in a way that surprises her — not the dismissal she braced for, but something closer to recognition.
+
+[NORA_VANTRY | style: watching him, uncertain]
+Julian. Say something.
+
+[JULIAN_VANTRY | style: tight, controlled]
+I'm looking at it.
+
+[NORA_VANTRY | style: probing gently]
+You've been somewhere else for weeks. Is this — is this part of that?
+
+[JULIAN_VANTRY | style: deflecting, too fast]
+No. No, this is just — it's a lot to take in.
+
+[NARRATOR]
+He doesn't meet her eyes when he says it.
+
+[JULIAN_VANTRY | style: careful, measured]
+Don't bring this to my mother yet. Not until we know what we're actually looking at. I don't want her upset over something that might be nothing.
+
+[NORA_VANTRY | style: relieved, softening]
+Caution, not secrecy. Okay. I can live with that.
+
+[NARRATOR]
+She doesn't mention the hotel receipt still folded in her coat pocket. He doesn't mention Anna Lin's name, though it's already sitting somewhere behind his eyes. Two silences, sharing one table.
+
+--- PART 2 ---
+
+[NARRATOR]
+The next morning, in the archive room beneath the auction house, Julian Vantry sits alone with the same ledger his wife showed him the night before.
+
+[NARRATOR]
+He has told his mother he's only confirming routine insurance paperwork.
+
+[SFX: a heavy ledger book thudding shut, then reopening]
+
+[JULIAN_VANTRY | style: quiet, methodical]
+Lot fourteen. Lot fifteen.
+
+[JULIAN_VANTRY | style: quiet, methodical]
+Compare against the '38 partnership file.
+
+[SFX: pages turning, brisk]
+
+[JULIAN_VANTRY | style: low, to himself]
+That's not the same hand.
+
+[NARRATOR]
+He sets the two pages side by side, the way Nora did for him.
+
+[JULIAN_VANTRY | style: tight, controlled]
+Fourteen. Nineteen. Twenty-two.
+
+[JULIAN_VANTRY | style: tight, controlled]
+Twenty-two's the same signature as fourteen. It shouldn't be.
+
+[NARRATOR]
+He works through the ledger page by page, cross-checking it against older Vantry correspondence from the same decade.
+
+[SFX: a folder of loose papers dropped onto a desk]
+
+[JULIAN_VANTRY | style: quiet, unsettled]
+There's more of them.
+
+[JULIAN_VANTRY | style: quiet, unsettled]
+Nora only found the one. There's — there's a dozen at least.
+
+[NARRATOR]
+He stops, hand flat on the page, and makes himself say the safer word first.
+
+[JULIAN_VANTRY | style: rehearsed, unconvincing]
+A re-transcription. Someone recopied a damaged page, that's all. Clerks did that.
+
+[JULIAN_VANTRY | style: rehearsed, unconvincing]
+Clerks recopy things.
+
+[NARRATOR]
+He doesn't let himself finish the other word.
+
+[SFX: a chair creaking as he leans back]
+
+[JULIAN_VANTRY | style: barely holding it together]
+A dozen entries, though. That's not one water-damaged page — that's most of a drawer.
+
+[NARRATOR]
+He stops himself again.
+
+[JULIAN_VANTRY | style: measured, forcing calm]
+It still has to be transcription. Somebody redid a whole batch at once, a fire, damp, something — there has to be a reason that isn't—
+
+[NARRATOR]
+He doesn't finish that sentence either.
+
+[JULIAN_VANTRY | style: measured, forcing calm]
+I can't be the one reading this wrong. I need someone who actually knows appraisal law, not a CEO with a hunch.
+
+[NARRATOR]
+He closes the ledger, but doesn't put it back.
+
+[JULIAN_VANTRY | style: quiet, decided]
+Not Nora again. Not yet. Someone outside the house.
+
+[SFX: the ledger book closing, latch clicking]
+
+[NARRATOR]
+He already has a name in mind — the outside appraiser currently reassessing the collection for the family's insurer.
+
+--- PART 3 ---
+
+[NARRATOR]
+Later that afternoon, in the auction house's main gallery, Marguerite Vantry — chair of the house, Julian's mother — stands before the newly uncrated pieces of the Founding Collection. Julian finds her there, still carrying the ledger pages from the archive in his mind.
+
+[MARGUERITE_VANTRY | style: warm, proud]
+Come look at this glaze, Julian. Augustin had an eye nobody in this business has matched since. Forty-seven lots, and he never got a single one wrong.
+
+[SFX: a porcelain lid being set back down on its stand]
+
+[JULIAN_VANTRY | style: distracted, forcing lightness]
+He had good instincts. I'll give him that.
+
+[MARGUERITE_VANTRY | style: reflective]
+Instincts. He built this house out of nothing but instincts and nerve, and not one person has ever had cause to doubt his word on a single lot.
+
+[JULIAN_VANTRY | style: quiet, almost testing the water]
+Mother — has anyone ever gone back through the old appraisal ledgers? Really gone through them, page by page?
+
+[MARGUERITE_VANTRY | style: amused, dismissive]
+Why would they need to? The provenance has stood for eighty-five years. Some things don't need re-litigating.
+
+[NARRATOR]
+Julian holds the question a moment longer, then lets it go.
+
+[JULIAN_VANTRY | style: careful, private beat]
+No reason. Just curious.
+
+[SFX: a glass display case swinging shut]
+
+[NARRATOR]
+He watches her run a hand along the case, certain in a way he no longer trusts himself to be.
+
+[JULIAN_VANTRY | style: internal, resolved | speed: 0.95]
+Not yet. Not until I know what I'm actually looking at.
+
+[NARRATOR]
+He decides, in that moment, to keep working the ledgers alone — and to bring in Anna Lin quietly, off the record, rather than open a file through the house's own appraisal office.
+
+[MARGUERITE_VANTRY | style: casual, offhand]
+Oh — Marcus Tang called again this morning. Wants a second meeting. Persistent man.
+
+[JULIAN_VANTRY | style: half-listening]
+Marcus Tang. Right. I'll look at the calendar.
+
+[MARGUERITE_VANTRY | style: light, unbothered]
+No urgency. I told him we'd see.
+
+[NARRATOR]
+Julian nods, already elsewhere, his mother's words passing through him without landing — his attention still on a page of numbers three rooms away.
+
+--- PART 4 ---
+
+[NARRATOR]
+The waterfront, after dark. Julian Vantry stands near the end of an empty pier, away from the auction house and anyone who might mention this to his wife or his mother.
+
+[NARRATOR]
+He's waiting for Anna Lin, the independent appraiser brought in to reassess the Founding Collection, who arrives a few minutes later with her coat collar up against the wind.
+
+[JULIAN_VANTRY | style: guarded, keeping his voice low]
+Thank you for coming out here. I know it's strange.
+
+[ANNA_LIN | style: cautious, professional]
+Off the insurer's record, you said. That's the part that's strange, Mr. Vantry.
+
+[JULIAN_VANTRY | style: measured]
+Julian's fine. And yes. This isn't a formal question. It's mine, not the house's.
+
+[SFX: a folder clasp clicking open]
+
+[JULIAN_VANTRY | style: quiet, watching her face]
+These are copies. From the 1951 ledger. I want your eyes on them, not your firm's.
+
+[ANNA_LIN | style: focused, flipping pages]
+You want an opinion I can't put my name to.
+
+[JULIAN_VANTRY | style: low]
+I want to know if I'm seeing something or inventing it.
+
+[NARRATOR]
+Anna studies the pages for a long moment before she speaks again.
+
+[ANNA_LIN | style: careful, weighing each word]
+These sums. Compared to comparable pieces from the same period — they're high. Higher than rounding accounts for. Higher than a correction would explain.
+
+[JULIAN_VANTRY | style: tight]
+How much higher.
+
+[ANNA_LIN | style: measured, reluctant]
+I'd want more examples before I'd put a number to it. But it isn't nothing, Julian.
+
+[NARRATOR]
+She holds one page closer to the dock light, running a finger just beside the signature.
+
+[ANNA_LIN | style: quiet, almost to herself]
+The ink here sits unevenly. As if it's laid over something else. I'm not going to say what.
+
+[SFX: a boat horn, distant, out on the water]
+
+[JULIAN_VANTRY | style: barely holding it together]
+You don't have to say it. I think I already know what you're not saying.
+
+[ANNA_LIN | style: gentle but firm]
+Then we agree I haven't said it.
+
+[JULIAN_VANTRY | style: quiet, urgent]
+I need this kept between us. For now. Until I understand how far it goes.
+
+[ANNA_LIN | style: measured]
+Professional discretion. That's all this is.
+
+[NARRATOR]
+She says it plainly, telling herself it's true, not yet seeing how far this will pull her.
+
+[JULIAN_VANTRY | style: subdued]
+Thank you.
+
+[ANNA_LIN | style: quiet]
+Don't thank me yet. Thank me when you know what you're asking me to keep quiet about.
+
+[NARRATOR]
+Neither of them mentions what else they're each carrying alone tonight — he a marriage he isn't protecting the way he thinks, she a notebook of her own family's fragments, still sitting untouched by anything on this page.
+
+--- PART 5 ---
+
+[NARRATOR]
+At the Vantry Auction House, evening settles over the courtyard. In his workshop doorway stands Simon Lin, the house's restorer for over fifty years, watching Anna Lin cross the stones, back from wherever she's been all afternoon.
+
+[SFX: a workshop door easing further open on its hinges]
+
+[SIMON_LIN | style: quiet, watchful]
+Long day.
+
+[ANNA_LIN | style: distracted, still elsewhere]
+Long everything, lately.
+
+[NARRATOR]
+She doesn't stop walking at first. Simon studies the set of her shoulders, the furrow she isn't aware she's wearing.
+
+[SIMON_LIN | style: gentle, testing the water]
+You look like a woman who found something she didn't expect.
+
+[ANNA_LIN | style: caught, recovering quickly]
+Just numbers not behaving the way numbers should. Occupational hazard.
+
+[NARRATOR]
+She stops now, turns back toward him, and something in her face makes him wonder — not for the first time — how much closer she already is than she knows.
+
+[SIMON_LIN | style: light, careful]
+Numbers usually behave, in my experience. It's the people who wrote them you have to watch.
+
+[ANNA_LIN | style: a short, tired laugh]
+That's either very wise or very unsettling.
+
+[NARRATOR]
+He almost tells her. The shape of it rises in him the way it has a hundred times before, and he lets it pass, the way he always does.
+
+[ANNA_LIN | style: shifting, professional again]
+Actually — since I'm here. There's a mark on the underside of lot twelve, the blue-and-white jar. A little ridge in the glaze near the foot ring. I can't tell if it's original firing or repair work.
+
+[SIMON_LIN | style: settling into the familiar, craftsman's tone]
+Repair. You can feel where the glaze doesn't quite match the pull of the brush around it — original firing runs with the wheel, a repair fights it a little. That one was reset sometime in the sixties, before my time here, but after my father's.
+
+[ANNA_LIN | style: genuinely grateful]
+That's exactly what I needed. You always know exactly what I'm asking before I finish asking it.
+
+[SIMON_LIN | style: even, giving nothing away]
+Fifty years in one room teaches you to listen close.
+
+[NARRATOR]
+She thanks him again and crosses toward the main house, already turning something else over in her mind. Simon stays in the doorway a long moment after she's gone, the courtyard emptying into evening around him.
+
+[SFX: a single set of footsteps fading across stone]
+
+[SIMON_LIN | style: barely audible, to no one]
+Not yet.
+
+--- PART 6 ---
+
+[NARRATOR]
+The auction house has gone quiet for the night. Below the galleries, in his workshop, Simon Lin is alone again, the same room where Anna asked her question hours before.
+
+[SIMON_LIN | style: quiet, weary, alone]
+Everyone's gone home. Good.
+
+[SFX: a wooden drawer sliding open, something metal scraping against wood]
+
+[SIMON_LIN | style: careful, private]
+Still where I left it. Fifty years, and it's exactly where I left it.
+
+[SIMON_LIN | style: hushed, reading]
+"Lin Wei-Chen. Full partner. Let this ledger bear his signature as long as the house stands." Your words, Ba. Not mine.
+
+[SFX: a thin stack of paper being set down on a wooden table]
+
+[SIMON_LIN | style: low, aching]
+You wrote that in '38. I've kept it in a drawer since before she was born. Since before I was born, most of it.
+
+[SIMON_LIN | style: softer, tender]
+Here. Next to you now. Look at that.
+
+[SIMON_LIN | style: quiet wonder, guarded underneath]
+Same chin. Same way of holding her mouth when she's deciding whether to trust someone. She doesn't know she does that. Your mother had that exact same look, Ba. Every day of her life.
+
+[SIMON_LIN | style: rehearsing under his breath, testing the words]
+"Anna. There's something I should have told you the day you walked in."
+
+[SIMON_LIN | style: cutting himself off, bitter]
+No. Not like that. Never like that.
+
+[SIMON_LIN | style: tightening, worried]
+She stood three feet from me today asking about a restoration mark, and I answered her like a stranger. Like I've answered every question in this room for fifty years. Truthful. Useless.
+
+[SIMON_LIN | style: apprehensive, quieter]
+It used to feel like time didn't move down here. Now every week somebody else is looking where I've spent my whole life making sure nobody looked. Nora with her glasses and her ledgers. Anna with her clean eyes and her questions that aren't really about porcelain, whether she knows it or not.
+
+[SIMON_LIN | style: barely audible, afraid]
+I don't know anymore if I'm keeping this, Ba, or just watching it get away from me a little at a time.
+
+[SIMON_LIN | style: resolved, but heavy | speed: 0.95]
+Not tonight, though. Not like this. Not with everyone still guessing instead of asking.
+
+[SFX: paper being gathered, a small box lid closing softly]
+
+[SIMON_LIN | style: flat, practiced]
+Away it goes. Same as always.
+
+[SFX: the drawer sliding shut, a latch settling into place]
+
+[NARRATOR]
+He turns off the workshop light and climbs the stairs alone, carrying nothing anyone else can see.
+
+--- PART 7 ---
+
+[NARRATOR]
+Across the harbor, in the glass offices of Meridian Auctions, Marcus Tang — owner of the auction house that rivals the Vantrys, and a man two years into a plan no one at that family has yet noticed — sits alone with a folder of financial records spread across his desk.
+
+[MARCUS_TANG | style: quiet, methodical]
+Three cousins signed over. All three remaining mortgage notes traced and confirmed. Harrow Pacific holds two of them outright, Kestrel Group holds the third.
+
+[SFX: a folder closing firmly]
+
+[MARCUS_TANG | style: decisive, cold]
+Then the quiet phase is finished. Every note the Vantrys still owe is already mine — bought outright, every one of them. Now it's leverage, not paperwork. Called in, one by one, before the month is out.
+
+[NARRATOR]
+A single sheet already sits on top of the stack — confirmation that the first call-in went out that morning, routed through the shell company and nothing else.
+
+[MARCUS_TANG | style: low satisfaction]
+Nothing with my name on it. Nothing with Meridian's name on it either. Exactly as it should be.
+
+[MARCUS_TANG | style: sharp, warning]
+No one at that house hears the word Meridian anywhere near their mortgage. Not Marguerite, not her son, not anyone who might carry it back to her. The moment either of them sees my hand in this, whatever leverage I've built disappears with it.
+
+[NARRATOR]
+He sets the folder aside and looks out toward the Vantry Auction House across the water.
+
+[MARCUS_TANG | style: quiet, private]
+My grandfather stood somewhere like this once, after Augustin Vantry took a bid out from under him with numbers Wing-Ho always swore were wrong. He never got the chance to prove it. He only wrote it down — every figure, every suspicion — and left it for someone else to finish.
+
+[MARCUS_TANG | style: resolved]
+I intend to finish it. Quietly. Patiently. And this time, with the numbers on my side before anyone else even knows there's a question to ask.
+
+[NARRATOR]
+He has no way of knowing the note he just ordered called in will reach a young couple's kitchen table across the harbor within days — tied to a debt neither of them has spoken of to the other.
+
+--- PART 8 ---
+
+[NARRATOR]
+Later that evening, in the study at the Vantry house, Marguerite finds her son Julian still bent over papers from the archive.
+
+[NARRATOR]
+Two nights after mentioning Marcus Tang so lightly at dinner, she brings his name up again, in the same easy tone.
+
+[MARGUERITE_VANTRY | style: light, conversational]
+Marcus Tang's office rang again today. He's asked for a second meeting.
+
+[JULIAN_VANTRY | style: distracted, eyes still on the page]
+Did he say what about?
+
+[MARGUERITE_VANTRY | style: breezy, a shade too practiced]
+No. Ordinary interest, I expect. Men like Marcus always want to know what's for sale before anyone's decided to sell it.
+
+[SFX: a folder closing]
+
+[JULIAN_VANTRY | style: tired, waving it off]
+He's wanted a meeting since spring, Mother. It's nothing worth losing sleep over. Tell his people you're busy.
+
+[MARGUERITE_VANTRY | style: forcing lightness]
+I usually do. Though he doesn't usually call back quite this quickly.
+
+[JULIAN_VANTRY | style: half-present]
+He likes to circle. You said so yourself.
+
+[MARGUERITE_VANTRY | style: probing, still casual on the surface]
+I did. You've had the archive to yourself for two days now, though. That's a great deal of insurance paperwork.
+
+[JULIAN_VANTRY | style: quick, careful]
+Old inventory records. They don't cross-reference themselves.
+
+[MARGUERITE_VANTRY | style: mild curiosity]
+For the museum loan, you mean?
+
+[JULIAN_VANTRY | style: cautious]
+Yes. They want provenance back to the beginning. It's slow, that's all.
+
+[MARGUERITE_VANTRY | style: fond, certain]
+The beginning. Well — you know that story as well as anyone in this house by now. Better than I do, probably, and I've told it a thousand times.
+
+[JULIAN_VANTRY | style: careful, not quite meeting it]
+Something like that.
+
+[SFX: a glass set down on a side table]
+
+[MARGUERITE_VANTRY | style: warmer, changing the subject]
+Go home, Julian. Nora's waiting, and you look like you haven't slept.
+
+[JULIAN_VANTRY | style: already back in the papers]
+Soon. I just want to finish this page.
+
+[MARGUERITE_VANTRY | style: measured, a flicker of something under the calm]
+He doesn't usually ask twice this soon. Marcus.
+
+[JULIAN_VANTRY | style: not really hearing her]
+Mm. Tell him whatever keeps him pleasant for another month. I don't have room in my head for him right now.
+
+[MARGUERITE_VANTRY | style: composed again, brisk]
+No. I don't suppose you do. Goodnight, darling.
+
+[JULIAN_VANTRY | style: distracted]
+Goodnight.
+
+[NARRATOR]
+She leaves the study without saying anything further, and he doesn't look up to notice that she's gone.
+
+--- PART 9 ---
+
+[NARRATOR]
+Past midnight at the Vantry house, Nora waits in the kitchen for Julian, who has just come from his hours with Anna Lin at the waterfront — a meeting she knows nothing about.
+
+[SFX: a front door closing softly]
+
+[JULIAN_VANTRY | style: tired, careful]
+You didn't have to wait up.
+
+[NORA_VANTRY | style: quiet, direct]
+Where were you. It's past midnight.
+
+[JULIAN_VANTRY | style: evasive, rehearsed]
+The appraisal file. There's more to cross-check than I thought — it took longer than I planned.
+
+[NORA_VANTRY | style: watching him closely]
+Cross-check with who, Julian. You didn't take the ledger to the office.
+
+[JULIAN_VANTRY | style: too fast, deflecting]
+Someone who knows the collection better than I do. It's not — it's nothing you need tonight.
+
+[NORA_VANTRY | style: guarded, testing]
+You've been saying "nothing" a lot lately, Julian. For someone with nothing to hide, you're awfully careful about which names you use.
+
+[JULIAN_VANTRY | style: strained, avoiding]
+Nora— It's complicated. I'll explain when I can.
+
+[NORA_VANTRY | style: cutting him off, quiet]
+I'm not asking again tonight, Julian. I'm tired, and so are you.
+
+[JULIAN_VANTRY | style: relieved, quiet]
+Come to bed. Please.
+
+[NORA_VANTRY | style: quietly resolved]
+Go on up. I'll lock the door behind me.
+
+[SFX: footsteps ascending a staircase]
+
+[NORA_VANTRY | style: alone, almost to herself]
+Not once. He never even said her name.
+
+--- PART 10 ---
+
+[NARRATOR]
+Later that night, in her guest room at the house, Anna Lin spreads her official appraisal notes beside a private notebook of her own — one that has nothing to do with the Vantry collection.
+
+[ANNA_LIN | style: quiet, absorbed, talking herself through it | speed: 0.95]
+Lot four. Lot eleven. Lot nineteen.
+
+[SFX: paper sliding across a wooden desk]
+
+[ANNA_LIN | style: focused, almost muttering]
+Same hesitation in the pen stroke. Right at the base of the signature, like it's sitting on top of something instead of under it.
+
+[ANNA_LIN | style: careful, professional]
+Not a shadow. Not the light. An erasure.
+
+[SFX: a magnifying loupe set down on glass]
+
+[ANNA_LIN | style: methodical]
+Cross-reference. Nineteen thirty-eight partnership file, lot four — the signature doesn't sit right against what's recorded in the fifty-one ledger. Different weight. Different hand, maybe, underneath the one that's showing.
+
+[ANNA_LIN | style: quieter, more careful]
+Eleven. Same. Nineteen. Same.
+
+[ANNA_LIN | style: steady, keeping her own certainty in check]
+I'm not going to say the word. Not yet. Not until I've seen the physical page, not a copy.
+
+[ANNA_LIN | style: dry, self-correcting]
+But three entries that all show the same kind of alteration, in the same year, done by the same hand — that isn't drift. That isn't a clerk being careless in nineteen fifty-one.
+
+[ANNA_LIN | style: low, professional resolve]
+That's a pattern. And patterns are made on purpose.
+
+[SFX: a pen set down on the desk]
+
+[NARRATOR]
+She closes the ledger copies and reaches, almost without thinking, for the notebook beside them — the one that isn't part of the job.
+
+[ANNA_LIN | style: soft, unguarded, a private thought spoken aloud]
+Lin Wei-Chen.
+
+[SFX: a notebook page turning]
+
+[ANNA_LIN | style: fond, distant, thinking of something else entirely]
+Great-grandfather. A name and a bad business deal, that's all Dad ever gave me. No dates that line up with anything. No paperwork.
+
+[ANNA_LIN | style: a small private laugh at herself]
+Funny, working a job with this much paper and still not having a single page of my own family's.
+
+[ANNA_LIN | style: brisk, shifting back to work, the two names sitting an inch apart on the desk without touching]
+Tomorrow. I ask Julian for the original nineteen thirty-eight file. Not the copy. If something was changed once, I want to see what it looked like before.
+
+[NARRATOR]
+She closes both notebooks for the night, sets them side by side on the desk, and turns off the lamp — one page still open between them.
+
+--- PART 11 ---
+
+[NARRATOR]
+Past midnight, the Vantry house at Esmond Harbor stands dark and quiet, though nothing under its roof has settled tonight — three separate searches for the truth moving forward in three different rooms, none of them yet aware how close the others run.
+
+[NARRATOR]
+In the master bedroom, Julian lies awake beside Nora, both pretending to be closer to sleep than they are.
+
+[JULIAN_VANTRY | style: quiet, careful]
+Get some rest. Tomorrow's a long day at the house.
+
+[NORA_VANTRY | style: soft, watchful]
+You too.
+
+[NARRATOR]
+Nora says nothing else, filing the omission away with all the others, telling herself she'll go to Marguerite soon and finally say some of what she's been carrying alone.
+
+[SFX: a lamp switch clicking off]
+
+[NARRATOR]
+Across town, in a private office above Meridian Auctions, Marcus Tang is still at his desk when his assistant returns with a single confirmation — the Vantry family's mortgage debt has changed hands again tonight, quietly, through a company that carries no name anyone in that house would recognize.
+
+[MARCUS_TANG | style: low, controlled satisfaction]
+Confirmed. No trace back to Meridian, not yet, not until I say so. My grandfather never got the chance to prove what he suspected about that man's fortune. This time, someone finishes it.
+
+[NARRATOR]
+Upstairs at the Vantry house, Marguerite sleeps soundly in the room she has slept in for fifty years, still certain of the story she has told just as long, unaware it is being quietly tested tonight from three separate directions at once.
+
+[NARRATOR]
+In the workshop below, Simon Lin is the last light left burning in the whole house.
+
+[NARRATOR]
+He locks the old photograph and the correspondence back into their drawer exactly as he has for decades, though tonight his hands move a little faster than they used to.
+
+[SIMON_LIN | style: barely audible, to himself]
+Not much longer. One way or another.
+
+[SFX: a workshop light switch, then a key turning in a small lock]
+
+[NARRATOR]
+He climbs the stairs in the dark, the fear that he is finally running out of time keeping pace with him the whole way up, step after step, into a house that still believes itself safe.
+
+[NARRATOR]
+By nightfall, Julian carries a secret he can't yet explain, Simon holds a truth he still won't speak, and in a lawyer's office across town, Marcus Tang has already begun quietly buying pieces of the Vantry family's future.
+

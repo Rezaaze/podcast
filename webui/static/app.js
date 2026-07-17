@@ -82,7 +82,28 @@
 
   // ---------- Status polling ----------
   function stateLabel(state) {
-    return { ready: "fertig", partial: "teilweise", running: "läuft", missing: "offen" }[state] || state;
+    return { ready: "fertig", partial: "teilweise", running: "läuft", missing: "offen", none: "–" }[state] || state;
+  }
+
+  // ---------- Pro-Episode-Übersicht: alle Dimensionen an einem Ort ----------
+  // Vorher standen Skript/Audio in der Episode-Karte, Thumbnails/Highlights/SFX
+  // (falls überhaupt sichtbar) verstreut in eigenen Serien-weiten Aggregat-
+  // Karten — "was fehlt noch zu Folge N" ließ sich nicht auf einen Blick
+  // beantworten. Jetzt: EINE Karte pro Episode mit allen Dimensionen, deren
+  // Randfarbe den schlechtesten Einzelzustand zeigt.
+  const EP_STATE_RANK = { missing: 0, partial: 1, running: 2, ready: 3, none: 3 };
+  function worstEpState(states) {
+    const relevant = states.filter(s => s && s !== "none");
+    if (relevant.some(s => s === "running")) return "running";
+    if (!relevant.length) return "missing";
+    return relevant.reduce((worst, s) => EP_STATE_RANK[s] < EP_STATE_RANK[worst] ? s : worst);
+  }
+  function episodeDetailLine(ep, isDrama) {
+    const parts = [`Skript ${stateLabel(ep.script_state)}`, `Audio ${stateLabel(ep.audio_state)}`,
+                   `Thumb ${stateLabel(ep.thumbnail_state)}`];
+    if (ep.highlights_state !== "none") parts.push(`Highlights ${stateLabel(ep.highlights_state)}`);
+    if (isDrama && ep.sfx_state && ep.sfx_state !== "none") parts.push(`SFX ${stateLabel(ep.sfx_state)}`);
+    return parts.join(" · ");
   }
 
   function card(label, value, state) {
@@ -138,6 +159,9 @@
   const introUploadBtn = document.getElementById("pf-intro-upload-btn");
   const introRemoveBtn = document.getElementById("pf-intro-remove-btn");
   let seriesList = [];
+  // WEBUI_SERIES: ist diese Instanz an eine Serie genagelt, ist der Umschalter
+  // fix auf sie gesetzt und gesperrt (jedes Cockpit = ein stabiles Fenster).
+  let pinnedSeries = null;
 
   function currentSeriesSlug() {
     return seriesSelect.value || null;
@@ -148,11 +172,17 @@
     const data = await res.json();
     const list = data.series || [];
     seriesList = list;
-    const want = preferSlug || seriesSelect.value || data.active || (list[0] && list[0].slug);
+    pinnedSeries = (data.pinned && list.some(s => s.slug === data.pinned)) ? data.pinned : null;
+    const want = pinnedSeries || preferSlug || seriesSelect.value || data.active || (list[0] && list[0].slug);
     seriesSelect.innerHTML = list.length
       ? list.map(s => `<option value="${s.slug}">${s.title} (${s.slug}) — ${s.template}</option>`).join("")
       : `<option value="">(keine Serie vorhanden)</option>`;
     if (want && list.some(s => s.slug === want)) seriesSelect.value = want;
+    if (pinnedSeries) {
+      seriesSelect.value = pinnedSeries;
+      seriesSelect.disabled = true;
+      seriesSelect.title = `Auf ${pinnedSeries} genagelt (WEBUI_SERIES)`;
+    }
     updateSeriesSelectTitle();
     updateMergeAnthologyCheckbox();
     updateUseBeatsCheckbox();
@@ -254,9 +284,10 @@
     syncLocationsVisibility();
   }
 
-  async function showSeriesReview() {
-    const data = await (await fetch("/api/pf/series")).json();
-    const slug = data.active;
+  async function showSeriesReview(preferSlug) {
+    // preferSlug = der von create_series.py durchgereichte Slug DIESES Laufs;
+    // Fallback auf active (Ein-Cockpit-Betrieb, wo LATEST verlässlich ist).
+    const slug = preferSlug || (await (await fetch("/api/pf/series")).json()).active;
     if (!slug) return;
     reviewSlug = slug;
     // Dropdown auf die frische Serie stellen, damit Status/Folgeschritte sie zeigen.
@@ -319,6 +350,10 @@
     document.getElementById("pf-character-blocks").innerHTML = "";
     await setActiveSeries(seriesSelect.value);
     refreshPfStatus().catch(console.error);
+    // Button-Sperren sind serienabhängig (siehe syncRunningJobs) — beim
+    // Serienwechsel sofort neu bewerten, statt bis zu 4s auf den nächsten
+    // Poll-Tick zu warten.
+    syncRunningJobs().catch(console.error);
   });
 
   if (mergeAnthologyCheckbox) {
@@ -357,9 +392,11 @@
     let html = "";
     html += card("Serie", s.series_title ? `${s.series_title} · ${s.template || s.mode}` : "—", s.series_title ? "ready" : "missing");
     html += card("Episoden", s.episode_count, s.episode_count ? "ready" : "missing");
+    const isDramaSeries = s.mode === "drama";
     (s.episodes || []).forEach(ep => {
-      html += card(`Ep. ${ep.index}: ${ep.figure}`, `Skript ${stateLabel(ep.script_state)} · Audio ${stateLabel(ep.audio_state)}`,
-        ep.audio_state === "running" ? "running" : (ep.script_state === "ready" && ep.audio_state === "ready" ? "ready" : "partial"));
+      const states = [ep.script_state, ep.audio_state, ep.thumbnail_state, ep.highlights_state];
+      if (isDramaSeries) states.push(ep.sfx_state);
+      html += card(`Ep. ${ep.index}: ${ep.figure}`, episodeDetailLine(ep, isDramaSeries), worstEpState(states));
     });
     const failedEps = s.failed_episodes || [];
     if (failedEps.length) {
@@ -378,10 +415,16 @@
       html += card("Szenen-Orte", `${locs.images}/${locs.keys} Bilder`,
         locs.images >= locs.keys ? "ready" : (locs.images || locs.prompts_ready ? "partial" : "missing"));
     }
-    const thumbs = s.thumbnails || {};
-    if (thumbs.total) {
-      html += card("Episoden-Thumbnails", `${thumbs.ready}/${thumbs.total}`,
-        thumbs.ready >= thumbs.total ? "ready" : (thumbs.ready ? "partial" : "missing"));
+    // Thumbnails/Highlights stehen jetzt im Detail jeder Episode-Karte oben
+    // (siehe episodeDetailLine) — keine eigene Aggregat-Karte mehr nötig, das
+    // war vorher die einzige Stelle, an der man Thumbnail-Fortschritt sah,
+    // ohne zu wissen, WELCHE Episode konkret fehlt.
+    const sfx = s.sfx;
+    if (sfx && sfx.plan_exists) {
+      html += card("Sounddesign", `${sfx.episodes_ready}/${sfx.episodes_with_cues} Episode(n) mit SFX fertig`,
+        sfx.episodes_ready >= sfx.episodes_with_cues ? "ready" : (sfx.episodes_ready ? "partial" : "missing"));
+    } else if (isDramaSeries) {
+      html += card("Sounddesign", "kein SFX-Plan — 'sfx_plan' ausführen", "missing");
     }
     html += card("Archiv", `${s.archive_count} Serie(n)`, s.archive_count ? "ready" : "missing");
     container.innerHTML = html;
@@ -532,6 +575,12 @@
     // "Episode 2/5" aus batch.py-Zeilen — wird mit dem Chunk-Fortschritt
     // des Checkpoint-Pollings zu einer Anzeige kombiniert.
     let episodePhase = "";
+    // Von create_series.py durchgereichter Slug DIESES Laufs (Marker-Zeile) —
+    // bei parallelen Cockpits die einzige verlässliche Quelle, welche Serie
+    // gerade angelegt wurde (der globale LATEST wäre von einer Schwester-
+    // Instanz überschrieben). Bei SSE-Reconnect wird der Puffer neu gestreamt,
+    // die Marker-Zeile also erneut gesehen — reine Zuweisung, idempotent.
+    let createdSlug = null;
 
     const es = new EventSource(`/api/stream/${jobId}`);
     currentEventSource = es;
@@ -543,6 +592,8 @@
     };
     es.addEventListener("log", (ev) => {
       const payload = JSON.parse(ev.data);
+      const m = /^PF_CREATED_SERIES=(\S+)$/.exec(payload.line.trim());
+      if (m) createdSlug = m[1];
       logOutput.textContent += payload.line + "\n";
       logOutput.scrollTop = logOutput.scrollHeight;
     });
@@ -570,11 +621,15 @@
       if (btn) btn.disabled = false;
       playChime(payload.returncode === 0);
       if (payload.returncode === 0 && (commandId === "pf_create_series" || commandId === "pf_import_story")) {
-        // Beide legen series/<slug>/ neu an und setzen series/LATEST selbst
-        // — Dropdown neu laden und die frische Serie übernehmen.
-        loadSeriesList().then(() => {
+        // Beide legen series/<slug>/ neu an. Statt den globalen LATEST
+        // zurückzulesen (bei parallelen Cockpits von einer Schwester-Instanz
+        // überschrieben) die frische Serie am durchgereichten Slug festmachen
+        // und als aktive Serie DIESER Instanz übernehmen (setActiveSeries
+        // schreibt im isolierten Betrieb nur den Prozess-Speicher).
+        loadSeriesList(createdSlug || undefined).then(async () => {
+          if (createdSlug) await setActiveSeries(createdSlug);
           refreshStatus();
-          if (commandId === "pf_create_series") showSeriesReview().catch(console.error);
+          if (commandId === "pf_create_series") showSeriesReview(createdSlug).catch(console.error);
         }).catch(console.error);
       } else {
         refreshStatus();
@@ -643,17 +698,25 @@
     } catch {
       return;
     }
-    const running = Object.entries(snap)
-      .filter(([, job]) => job.state === "running")
-      .sort((a, b) => b[1].started_at - a[1].started_at);
-    const runningIds = new Set(running.map(([cid]) => cid));
+    // snap ist nach runner.py::_lock_key() geschlüsselt: TTS-gebundene
+    // Kommandos (globaler Lock, geteilter lokaler TTS-Prozess) haben den
+    // Schlüssel == command_id; alle anderen pf_*-Kommandos "<command_id>::
+    // <series>" — mehrere Serien können also gleichzeitig unter demselben
+    // command_id laufen. Ein Button wird nur dann gesperrt, wenn der Job
+    // global ist (kein "::" im Schlüssel) ODER seine Serie mit der gerade
+    // ausgewählten übereinstimmt.
+    const currentSeries = currentSeriesSlug();
+    const running = Object.entries(snap).filter(([, job]) => job.state === "running");
     document.querySelectorAll(".run-btn").forEach(b => {
-      b.disabled = runningIds.has(b.dataset.command);
+      const cid = b.dataset.command;
+      b.disabled = running.some(([key, job]) =>
+        job.command_id === cid && (!key.includes("::") || job.series === currentSeries));
     });
-    if (reattach && running.length && !currentJobId) {
-      const [cid, job] = running[0];
-      const btn = document.querySelector(`.run-btn[data-command="${cid}"]`);
-      attachStream(job.job_id, cid, btn);
+    const sorted = running.slice().sort((a, b) => b[1].started_at - a[1].started_at);
+    if (reattach && sorted.length && !currentJobId) {
+      const [, job] = sorted[0];
+      const btn = document.querySelector(`.run-btn[data-command="${job.command_id}"]`);
+      attachStream(job.job_id, job.command_id, btn);
       setLogOpen(true);
     }
   }

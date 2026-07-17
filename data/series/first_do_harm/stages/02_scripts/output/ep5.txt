@@ -1,0 +1,110 @@
+--- PART 1 ---
+
+[NURSE_ADA_KIRWIN | style: flat, unflinching]
+How many, Dr. Moorhouse?
+
+[NARRATOR]
+The ward office. Wycliffe's confession still hangs in the air.
+
+[NURSE_ADA_KIRWIN | style: pressing, procedural]
+How many women are behind that wall?
+
+[DR_ELIAS_MOORHOUSE | style: calm, unbothered]
+Enough to matter.
+
+[DR_ELIAS_MOORHOUSE | style: dry, almost bored]
+And not enough to stop.
+
+[SFX: pen set down on wood desk]
+
+[NURSE_ADA_KIRWIN | style: quiet, stunned]
+Say that again.
+
+[DR_ELIAS_MOORHOUSE | style: mild, dismissive]
+You heard me the first time, Nurse Kirwin.
+
+[DR_JONAS_WYCLIFFE | style: barely audible, shaken]
+He isn't even afraid.
+
+[NURSE_ADA_KIRWIN | style: steady, forcing composure]
+You should be.
+
+[DR_ELIAS_MOORHOUSE | style: pleasant, chilling]
+Should I.
+
+[DR_ELIAS_MOORHOUSE | style: light, already moving on]
+Close the door on your way to bed, Nurse.
+
+--- PART 2 ---
+
+[DR_ELIAS_MOORHOUSE | style: calm, almost fond]
+Walk with me, Nurse Kirwin.
+
+[SFX: instrument tray clinks]
+
+[DR_ELIAS_MOORHOUSE | style: measured, lecturing]
+Every table in this room has taught me something.
+
+[DR_ELIAS_MOORHOUSE | style: reasonable, unhurried]
+Medicine has always asked for names no one wants spoken aloud.
+
+[DR_ELIAS_MOORHOUSE | style: quiet certainty]
+The women behind that wall paid the same price surgeons have always asked.
+
+[DR_ELIAS_MOORHOUSE | style: wistful]
+Mine will simply cost less than most, in time.
+
+[NURSE_ADA_KIRWIN | style: steady, guarded]
+You believe that. You actually believe that.
+
+[DR_ELIAS_MOORHOUSE | style: unwavering]
+I know it, the way I know this scalpel is sharp.
+
+[DR_ELIAS_MOORHOUSE | style: cold, almost gentle]
+History will remember my results long after your name is dust.
+
+[NURSE_ADA_KIRWIN | style: flat, controlled | speed: 0.95]
+It will remember what I wrote down first.
+
+[DR_ELIAS_MOORHOUSE | style: amused, untouched]
+Paper burns, Nurse Kirwin. Results don't.
+
+--- PART 3 ---
+
+[DR_JONAS_WYCLIFFE | style: forcing calm]
+An inspector's letter. Addressed to us both.
+
+[DR_ELIAS_MOORHOUSE | style: unbothered, reading]
+"Irregularities in ward records." How quaint.
+
+[SFX: paper unfolding]
+
+[DR_JONAS_WYCLIFFE | style: masking relief]
+Irregularities. Not... anything worse.
+
+[DR_ELIAS_MOORHOUSE | style: measured, amused]
+Worse would require a body they could name, Jonas.
+
+[NURSE_ADA_KIRWIN | style: sharp, disbelieving]
+You just told me the names. I heard you.
+
+[DR_ELIAS_MOORHOUSE | style: cool]
+You heard a nurse's word against a founding surgeon's signature.
+
+[DR_JONAS_WYCLIFFE | style: quiet, guilty]
+The board will want figures. I can... manage figures.
+
+[DR_ELIAS_MOORHOUSE | style: dry]
+Manage them the way you've managed everything else.
+
+He signs the audit request without hesitation.
+
+[DR_ELIAS_MOORHOUSE | style: calm, already rehearsing]
+An audit only finds what I decide to leave it.
+
+[NURSE_ADA_KIRWIN | style: cold, steady]
+And if it finds the ground behind the wall—
+
+[DR_ELIAS_MOORHOUSE | style: pleasant, final]
+Then I'll simply have a very good explanation ready.
+

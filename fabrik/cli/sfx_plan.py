@@ -74,6 +74,14 @@ PLACEMENTS = ("before", "under")
 DEFAULT_PLACEMENT = "under"   # = das alte Verhalten (Cue auf dem Zeilenstart)
 DEFAULT_GAIN = 0.35           # = Lolfis bisheriges ONESHOT_SFX_VOLUME
 MIN_GAIN, MAX_GAIN = 0.05, 1.0
+# 0.5 ist das tatsächliche Minimum der ElevenLabs Sound-Generation-API (hart
+# abgelehnt: 400 "invalid_generation_settings" unter 0.5s) — lag hier bis
+# 16.07.2026 bei 0.2, der Prompt unten empfahl sogar aktiv 0.2-0.4s für kurze
+# Kontaktgeräusche, was bei der Generierung zuverlässig fehlschlug (Beleg:
+# "mouse_click" mit geplanten 0.4s/0.3s). elevenlabs_backend.py klemmt
+# sicherheitshalber zusätzlich auf API-Ebene (deckt auch ältere, schon
+# geschriebene Pläne ab, ohne Neu-Planung) — dieser Wert verhindert, dass
+# neue Pläne das Problem überhaupt erst wieder einplanen.
 MIN_ASSET_SECONDS, MAX_ASSET_SECONDS = 0.5, 10.0
 MAX_KEPT_CUES_PER_PART = 5    # Dichte-Bremse: mehr als das klingt nach Hörspiel-Karaoke
 CONTEXT_CHARS = 70            # Kontextzeile vor/nach dem Cue im Prompt
@@ -303,10 +311,18 @@ def build_prompt(data, cues, existing_palette, feedback=None):
         f"MATERIAL and the SPACE — \"heavy wooden door creaking slowly open in an "
         f"empty stone hallway, close, no music\" beats \"door creak\". No music, no "
         f"speech, no voices in any asset.\n"
-        f"   - duration_s: {MIN_ASSET_SECONDS}-{MAX_ASSET_SECONDS} seconds. Keep hits short (0.5-2s); only "
-        f"sustained textures (rain, engine, crowd) need more.\n"
+        f"   - duration_s: a NUMBER (not a string) between {MIN_ASSET_SECONDS} and "
+        f"{MAX_ASSET_SECONDS} seconds ({MIN_ASSET_SECONDS}s is the generation API's own "
+        f"hard minimum, it rejects anything shorter). A single instant contact sound (a "
+        f"fork set down, a pen tapped once, a page turned) still runs short — use "
+        f"{MIN_ASSET_SECONDS}s for those, do not invent an even shorter value. Most other "
+        f"hits run 0.5-2s; only sustained textures (rain, engine, crowd) need more.\n"
         f"   Aim for as FEW new assets as the material honestly allows.\n\n"
-        f"B) Annotate EVERY cue index above (this episode's cues only). For each cue:\n"
+        f"B) Annotate EVERY cue index above (this episode's cues only). Use the exact "
+        f"[N] number printed before each cue above as its 'id' — these are series-wide "
+        f"numbers, NOT a 0-based count for this episode, so for this episode they run "
+        f"from {cues[0]['id']} to {cues[-1]['id']}. Copy them as-is, never renumber "
+        f"from 0. For each cue:\n"
         f"   - keep: false if it is not actually an audible event. The writer cues "
         f"things that are not sounds — held beats, tension, silence, a character "
         f"breathing or exhaling, emotional states, anything the voice actor already "
@@ -329,12 +345,16 @@ def build_prompt(data, cues, existing_palette, feedback=None):
         f"sharp foreground event 0.4-0.6, a normal event 0.25-0.4, a background "
         f"texture 0.1-0.2. The voice must always stay clearly on top.\n\n"
         f"Answer ONLY with JSON in exactly this shape (one cues entry per index "
-        f"above, none missing, none invented; 'palette' holds only the NEW assets "
-        f"and may be empty if the existing palette covers everything):\n"
+        f"above, none missing, none invented, ids copied verbatim from the [N] "
+        f"markers above — this example uses THIS episode's real first ids "
+        f"({cues[0]['id']}, {cues[0]['id'] + 1}) so you can see the expected range, "
+        f"do not reuse these exact numbers unless they are actually in your list; "
+        f"'palette' holds only the NEW assets and may be empty if the existing "
+        f"palette covers everything):\n"
         f'{{"palette": [{{"key": "door_creak_slow", "prompt": "...", "duration_s": 1.5}}], '
-        f'"cues": [{{"id": 0, "keep": true, "asset_key": "door_creak_slow", '
+        f'"cues": [{{"id": {cues[0]["id"]}, "keep": true, "asset_key": "door_creak_slow", '
         f'"placement": "before", "gain": 0.4}}, '
-        f'{{"id": 1, "keep": false, "why": "not an audible event"}}]}}'
+        f'{{"id": {cues[0]["id"] + 1}, "keep": false, "why": "not an audible event"}}]}}'
     )
     if feedback:
         prompt += (
@@ -380,6 +400,14 @@ def validate_plan(parsed, cues, existing_keys=()):
         if not isinstance(asset.get("prompt"), str) or not asset["prompt"].strip():
             errors.append(f"Palette '{key}': 'prompt' must be a non-empty string.")
         dur = asset.get("duration_s")
+        if isinstance(dur, str):
+            # Manche Antworten schreiben "0.3" statt 0.3 — ein reiner Formatfehler,
+            # den write_plan() ohnehin per float() glattzieht; hier schon tolerieren
+            # spart einen Retry, der inhaltlich nichts zu korrigieren hätte.
+            try:
+                dur = float(dur.rstrip("s").strip())
+            except ValueError:
+                dur = None
         if not isinstance(dur, (int, float)) or not (MIN_ASSET_SECONDS <= dur <= MAX_ASSET_SECONDS):
             errors.append(f"Palette '{key}': 'duration_s' must be a number "
                           f"{MIN_ASSET_SECONDS}-{MAX_ASSET_SECONDS}.")

@@ -1,0 +1,961 @@
+--- PART 1 ---
+
+[NARRATOR]
+Previously on Discharged, Cured: Mei Tam, a former Hollow Pines nurse, promised Maya one more conversation before turning her away. Elias called in a quiet favor to get eyes on a sealed county archive box the night before. Neither of them yet knows if that ledger will still be there when they arrive.
+
+[NARRATOR]
+Riverside Memory Home, midmorning. Maya Park returns to the visitors' lounge, where Mei Tam is already waiting.
+
+[MEI_TAM | style: flat, watchful]
+You came back.
+
+[MAYA_PARK | style: careful, low-key]
+You said you would talk. I believe people when they say that.
+
+[MEI_TAM | style: dry]
+Most people who say it don't mean it. Sit somewhere the girls at the desk can't hear us.
+
+[NARRATOR]
+Mei Tam leads her to a corner table away from the common area, out of earshot of staff and other residents.
+
+[SFX: two chair legs scraping against tile as they're pulled out]
+
+[MAYA_PARK | style: quiet, observant]
+This is different from last time.
+
+[MEI_TAM | style: guarded, not warm]
+Is it.
+
+[MAYA_PARK | style: measured]
+Last time you didn't want me past the front desk.
+
+[MEI_TAM | style: clipped]
+I decided some things overnight. That's all you need to know about it.
+
+[NARRATOR]
+Maya lets the change pass without pressing on it.
+
+[MAYA_PARK | style: even]
+Okay.
+
+[MEI_TAM | style: firm, laying down terms]
+Before you ask anything — I decide what gets said today. Not you. If I stop, I stop, and you don't push. If I say a thing and take it back, it's taken back. You write nothing down while I'm talking.
+
+[MAYA_PARK | style: steady]
+No recorder. No notebook. I can remember what matters.
+
+[MEI_TAM | style: testing]
+That's not an answer to what I said.
+
+[MAYA_PARK | style: honest]
+It's the only answer I've got. I'm not walking out of here with less than I came in with. But I'll play it your way, however slow that is.
+
+[NARRATOR]
+Mei Tam studies her for a long moment before easing back in her chair, just slightly.
+
+[MEI_TAM | style: measured, giving an inch]
+Slow is the only way this happens at all. You understand that now?
+
+[MAYA_PARK | style: quiet]
+I understand it's the only way you'll let it happen. That's enough for me today.
+
+[NARRATOR]
+Mei Tam nods once, folding her hands on the table, and lets the silence settle before she speaks again.
+
+--- PART 2 ---
+
+[NARRATOR]
+Riverside Memory Home, the same private corner. Mei Tam has just laid down her terms — she decides what gets said, and when.
+
+[MEI_TAM | style: measured, testing]
+Before I say one more word. Tell me what you think you already know.
+
+[MAYA_PARK | style: careful, deliberate]
+Between nineteen seventy-one and seventy-six, patients left Hollow Pines marked "discharged, cured." Not one of those files has a forwarding address. No next of kin signed for them. No follow-up, ever.
+
+[MEI_TAM | style: unreadable, listening]
+Go on.
+
+[MAYA_PARK | style: steady]
+There's a grant that funded something at the hospital in those years. It's not in any public ledger anymore — it was there, and then it wasn't.
+
+[MEI_TAM]
+Anywhere else that grant went, before it went nowhere.
+
+[MAYA_PARK | style: measured]
+St. Agnes. A cluster of graves, unmarked, just numbers. All from that same five-year window.
+
+[SFX: a teacup set down carefully on a saucer]
+
+[MEI_TAM | style: quiet, giving nothing away]
+You've been busy.
+
+[MAYA_PARK | style: even, holding the line]
+I've been careful. There's a difference.
+
+[MEI_TAM | style: probing]
+Is there. Careful people usually stop before the cemetery.
+
+[MAYA_PARK]
+I stopped there because that's where the facts stopped. I'm not going to guess past what I can prove.
+
+[MEI_TAM | style: sharpening]
+And what do you think happened to the ones who never made it into that ground. The ones who just — went.
+
+[MAYA_PARK | style: honest, not overreaching]
+I don't know. That's the part I can't put together. Records don't explain absence. They just confirm it.
+
+[MEI_TAM | style: still watching her closely]
+Why does a young reporter care what happened to people who'd be in their eighties now, if they're anywhere at all.
+
+[MAYA_PARK | style: quiet, sincere]
+Because somebody decided their lives were small enough to erase. And nobody's ever had to answer for that.
+
+[NARRATOR]
+A long moment passes. Mei Tam studies her, longer than the question requires.
+
+[MEI_TAM | style: almost to herself]
+That's not the answer I expected.
+
+[MAYA_PARK]
+What answer did you expect?
+
+[MEI_TAM | style: dry, guarded again]
+Something about a story. A byline. You didn't give me either.
+
+[SFX: a walker's wheels rolling past in a distant hallway]
+
+[MEI_TAM | style: quieter, deciding something]
+You know enough to have earned a little more. Not everything. Don't ask me for everything.
+
+[MAYA_PARK | style: careful, grateful]
+I won't. I just want what's true.
+
+[MEI_TAM | style: measured, final for this beat]
+Then sit still, and let me choose the words. That's the only way this goes anywhere at all.
+
+--- PART 3 ---
+
+[NARRATOR]
+Riverside Memory Home, the same quiet corner. Mei Tam has been speaking for several minutes now, choosing every word before she lets it out.
+
+[MEI_TAM | style: flat, deliberate | speed: 0.9]
+There were people in that ward who couldn't sign their own name to a form, let alone understand what was being asked of them.
+
+[MEI_TAM | style: flat, deliberate]
+And still, things were given to them. Put in their arms. Without anyone asking if that was all right.
+
+[MAYA_PARK | style: quiet, careful]
+Given by who.
+
+[MEI_TAM | style: unmoved]
+By whoever held the tray that day. That's not the part that matters.
+
+[MAYA_PARK | style: pressing gently]
+It matters to me.
+
+[MEI_TAM | style: cool, immovable]
+It matters to you because you want a face. I'm not giving you a face.
+
+[NARRATOR]
+A pause. Mei Tam looks toward the window, not at Maya, before she goes on.
+
+[MEI_TAM | style: lower, harder to hear]
+Some of them didn't wake up right afterward. Some of them didn't wake up at all.
+
+[MAYA_PARK | style: careful, barely above a breath]
+How many.
+
+[MEI_TAM | style: measured, closed]
+Enough that I stopped counting on purpose. Counting felt like it made me part of it.
+
+[MAYA_PARK | style: steady, pushing once]
+Whose decision was it. Whose name was on the order.
+
+[NARRATOR]
+Mei Tam's hands fold in her lap, still.
+
+[MEI_TAM | style: calm, deflecting cleanly]
+Orders in a place like that don't come with signatures you get to keep. Paper went missing faster than people did.
+
+[MAYA_PARK | style: quiet, testing]
+Someone signed the grant that paid for it, though. Someone always does.
+
+[MEI_TAM | style: unbothered, redirecting]
+Then go find their ledger, if it still exists. I emptied bedpans. I didn't read budgets.
+
+[NARRATOR]
+Maya studies her a long moment, then lets it go.
+
+[MAYA_PARK | style: gentle, conceding]
+Okay.
+
+[MEI_TAM | style: faintly surprised, wary]
+Okay?
+
+[MAYA_PARK | style: even, sincere]
+You've told me more today than anyone has in three months of asking. I'm not going to spend it all trying to push past what you won't say.
+
+[NARRATOR]
+Something in Mei Tam's shoulders loosens, just slightly.
+
+[MEI_TAM | style: almost to herself]
+Good. Because I wasn't going to give it to you anyway.
+
+[MAYA_PARK | style: soft]
+I believe you.
+
+[NARRATOR]
+Outside the window, an aide wheels a cart past in the hallway, its wheel catching once on an uneven tile.
+
+[SFX: a cart wheel catching and rattling once against a raised tile edge]
+
+[MEI_TAM | style: distracted by the sound, recovering]
+That wheel needs oiling. Someone's complained about it for a year.
+
+[MAYA_PARK | style: quiet, watching her]
+Mrs. Tam. The people who didn't come back — where did they go?
+
+--- PART 4 ---
+
+[NARRATOR]
+Riverside Memory Home, the same corner, the same afternoon. Maya Park and Mei Tam sit close, the conversation still unfinished.
+
+[MAYA_PARK | style: gentle, careful]
+The ones who never came back. What happened to them?
+
+[MEI_TAM | style: guarded, then faltering]
+Some of them—
+
+[MEI_TAM | style: catching herself, half a syllable swallowed]
+Wa—
+
+[SFX: a sharp, dry cough]
+
+[MEI_TAM | style: recovering, brisk]
+Excuse me. My throat.
+
+[MAYA_PARK | style: still, patient]
+Take your time.
+
+[NARRATOR]
+Maya doesn't move. She lets the silence sit.
+
+[MEI_TAM | style: closing off, final]
+I misspoke. There's nothing more for today.
+
+[MAYA_PARK | style: soft, not pushing]
+Of course.
+
+[NARRATOR]
+Mei Tam folds her hands, done. Maya rises, thanks her, and lets herself be walked to the door — the almost-word still sitting in her chest like a held breath.
+
+[MEI_TAM | style: internal, quiet, to herself once alone]
+Not his name. Not hers. Not yet.
+
+[NARRATOR]
+Outside, Maya pulls out her phone before she's even reached the parking lot.
+
+--- PART 5 ---
+
+[NARRATOR]
+The county archive, downtown, that same afternoon. A different thread now — Elias Crowe, Maya's producer, working the paper trail alone while she sits with Mei Tam.
+
+[SFX: a heavy stamp coming down on paper]
+
+[ELIAS_CROWE | style: brisk, businesslike]
+I need to request access to a sealed box. Nineteen seventy-one through seventy-six, Hollow Pines Sanitarium, administrative and financial records.
+
+[NARRATOR]
+The clerk behind the counter, unnamed, unremarkable, takes the form without looking up twice.
+
+[ELIAS_CROWE | style: casual, filling time]
+Sealed boxes always take this long to process, or is that just the paperwork talking?
+
+[SFX: a drawer of index cards sliding open]
+
+[ELIAS_CROWE | style: mildly curious]
+Ballpark. A week? Two?
+
+[NARRATOR]
+The clerk checks a ledger of their own, unhurried.
+
+[ELIAS_CROWE | style: satisfied, relaxed]
+Whatever the normal timeline is. I'm not in a rush. I just want it in the system.
+
+[NARRATOR]
+Elias steps outside, phone already to his ear, Maya on the other end.
+
+[ELIAS_CROWE | style: energized, thinking out loud]
+Okay, so — I just filed for the box. Grant records, financials, the whole sealed run from the seventies. If there's a name attached to any of this on paper, that's where it's going to live.
+
+[ELIAS_CROWE | style: warm, a little proud of himself]
+I know, I know. But think about it — Mei Tam won't say a name, fine. She doesn't have to. If the money's in that box, the money has a signature.
+
+[ELIAS_CROWE | style: reassuring, confident]
+No, it's completely routine. I filled out a form, a woman filed it in a drawer, that's it. Nobody even blinked. This isn't the kind of place where anybody's watching what gets requested.
+
+[SFX: a car door shutting]
+
+[ELIAS_CROWE | style: easy, winding down]
+I'll check back in a few days. Could be nothing in there but budget line items and nobody's initials. But it's the first thing all week that isn't just her voice telling us what she remembers. This is the first thing we could actually put in front of somebody.
+
+[NARRATOR]
+He starts the engine, in no hurry at all — a man who has no reason yet to believe the request will not simply wait its turn.
+
+[ELIAS_CROWE | style: light, closing the call]
+Call me the second she says anything else. I'll be at the office.
+
+--- PART 6 ---
+
+[NARRATOR]
+Across town, in the private office behind Diana Chen's campaign headquarters, sits Tao Wu — the Chen family's longtime attorney and fixer. His phone rings on the desk.
+
+[SFX: a phone vibrating hard against a wooden desk]
+
+[TAO_WU | style: even, controlled]
+Wu.
+
+[TAO_WU | style: listening, still]
+Say the number again.
+
+[TAO_WU | style: quiet, deliberate]
+Four-C. You're certain it's four-C, not four-D.
+
+[TAO_WU | style: measured]
+That's not nothing. That's a specific box, from a specific run of years.
+
+[TAO_WU | style: probing, careful]
+Who filed it. A name.
+
+[TAO_WU | style: flat]
+Crowe. The producer. Not Park herself.
+
+[TAO_WU | style: pressing]
+And how did it come in — a walk-in request, or something filed ahead of time.
+
+[TAO_WU | style: listening]
+Standard form, logged this morning. Nothing flagged on their end.
+
+[TAO_WU | style: sharper]
+On whose end, then. Yours.
+
+[TAO_WU | style: quiet]
+Go on.
+
+[TAO_WU | style: unreadable]
+So staff already had eyes on them before today. That's useful. That's not nothing.
+
+[TAO_WU | style: businesslike]
+How long does a request like that normally sit before it's pulled and handed over.
+
+[TAO_WU | style: calculating]
+A day. Maybe less if someone's impatient.
+
+[TAO_WU | style: cool, closing off]
+You don't need to know why it matters. You need to know it matters.
+
+[TAO_WU | style: controlled warmth, transactional]
+You'll be looked after, same as always. I just need it slow. Not stopped — slow doesn't raise questions. Stopped does.
+
+[TAO_WU | style: firm]
+I'll call you back within the hour. Don't log anything else about this conversation.
+
+[SFX: a phone set down on a desk, harder than necessary]
+
+[NARRATOR]
+Tao sits alone for a moment, the number already fixed in his mind.
+
+[TAO_WU | style: to himself, low]
+Four-C.
+
+[TAO_WU | style: private, unreadable]
+Of course it's four-C.
+
+[NARRATOR]
+He checks the time, then reaches for his coat before the second hand finishes its turn.
+
+--- PART 7 ---
+
+[NARRATOR]
+Chen Cover-up thread. Tao Wu's office, that same afternoon.
+
+[TAO_WU | style: clipped, controlled]
+It's box eleven-forty. County archive, Hollow Pines series. I need it pulled from public access today.
+
+[TAO_WU | style: precise, unhurried]
+Log it under review. No reason attached. If anyone asks, it's routine.
+
+[SFX: a pen clicking shut]
+
+[TAO_WU | style: quieter, almost to himself]
+Nothing on paper connects it to me. Keep it that way.
+
+[NARRATOR]
+He ends the call, checks the clock, and allows himself a small measure of satisfaction.
+
+[TAO_WU | style: dry, self-assured]
+A day. Maybe more. That's plenty of runway.
+
+[NARRATOR]
+He considers calling Diana, then decides against it.
+
+[TAO_WU | style: flat, decisive]
+She doesn't need the details. Just the outcome.
+
+[SFX: a phone being set face-down on a desk]
+
+[NARRATOR]
+He leans back, already moving on to the next problem, unaware the request he's racing has already been filed — and logged — hours before his call.
+
+--- PART 8 ---
+
+[NARRATOR]
+The county archive, that same afternoon. Elias Crowe, Maya's producer, returns to the request desk to check on the sealed ledger box he filed for that morning.
+
+[ELIAS_CROWE | style: friendly, easy]
+Hey again. Elias Crowe — I put in a request this morning for a box out of the sealed collection. Nineteen-seventies hospital records. Just checking where it's at.
+
+[SFX: a keyboard clacking briefly]
+
+[ELIAS_CROWE | style: casual, expectant]
+Should still be same-day, right? That's what the form said.
+
+[NARRATOR]
+The clerk hesitates before answering.
+
+[ELIAS_CROWE | style: puzzled, gentle]
+Everything okay?
+
+[SFX: a drawer sliding shut]
+
+[ELIAS_CROWE | style: patient but pressing]
+It says "under review." What does that mean, exactly? Review by who?
+
+[ELIAS_CROWE | style: still light, slightly firmer]
+Okay — is that a today thing, or a next-week thing? I've got a deadline I'm working around.
+
+[ELIAS_CROWE | style: skeptical, probing]
+Huh. It didn't say that on the form this morning. Nobody mentioned a review process.
+
+[ELIAS_CROWE | style: dry, testing]
+Sure, I get it, paperwork. I just — this is the first sealed box I've ever pulled that got "reviewed" the same day I asked for it.
+
+[NARRATOR]
+The clerk offers nothing further, eyes on the counter rather than on Elias.
+
+[ELIAS_CROWE | style: resigned, still polite]
+Alright. I'll check back tomorrow, then.
+
+[NARRATOR]
+Elias steps outside and calls Maya from the archive steps.
+
+[SFX: a phone dialing]
+
+[ELIAS_CROWE | style: thinking out loud, mildly amused]
+Hey, it's me. So — weird thing. I put in for that ledger box this morning, no issue, and now it's suddenly "under review," and the clerk won't tell me what that means or how long.
+
+[ELIAS_CROWE | style: shrugging it off, but not fully]
+No, no red flags exactly. It's probably just some backlog thing, understaffed office, you know how these places are. I just wanted you to know it's not moving as fast as I told you it would.
+
+[ELIAS_CROWE | style: warmer, refocusing]
+Anyway — how'd it go with Mei Tam? Did she let you in this time?
+
+--- PART 9 ---
+
+[NARRATOR]
+Back at the studio, early evening. Maya has just gotten off the phone with Elias about the archive delay — now she turns to what Mei Tam told her that morning.
+
+[MAYA_PARK | style: quiet, deliberate]
+She said it wasn't guessing anymore. Patients were given something they never agreed to take.
+
+[ELIAS_CROWE | style: leaning in, sharpening]
+Given by who? Did she say a name?
+
+[MAYA_PARK | style: careful]
+No. She wouldn't. But she said some of them didn't survive it, Elias. She said that part plainly.
+
+[ELIAS_CROWE | style: low whistle, energized]
+That's — okay. That's the thing. That's the first time anyone inside that building has confirmed people died.
+
+[MAYA_PARK | style: flat, cautious]
+Confirmed without a name attached to it. Which means we still can't print it.
+
+[ELIAS_CROWE | style: already moving ahead]
+We don't need to print it yet. We need it on record. We need —
+
+[MAYA_PARK | style: cutting in, quieter]
+There's something else.
+
+[ELIAS_CROWE | style: stopping]
+Okay.
+
+[MAYA_PARK | style: hesitant, testing the words]
+The Polaroid. "G. Bishop." I've looked at it maybe fifty times now, and I keep telling myself it's nothing.
+
+[ELIAS_CROWE | style: gentle prompt]
+But.
+
+[MAYA_PARK | style: barely above a murmur]
+But my mother has a photo in a box at home. An older sister my grandmother never talked about. Family just said she "went back." Nobody ever said back to where.
+
+[ELIAS_CROWE | style: careful, surprised]
+Maya. That's — how long have you been sitting on this?
+
+[MAYA_PARK | style: guilty, quick]
+Since the first week. I didn't log it. I didn't tell you. I kept telling myself it was a coincidence I didn't need to bring into the room.
+
+[ELIAS_CROWE | style: measured, still processing]
+That's not a coincidence you just decide not to mention.
+
+[MAYA_PARK | style: defensive but tired]
+I know that. I'm telling you now.
+
+[SFX: a mug set down carefully on a table]
+
+[ELIAS_CROWE | style: quiet, unsure himself]
+I don't know if this makes you the best person to be running point on this, or the only one who'd ever notice it in the first place.
+
+[MAYA_PARK | style: steady, almost too steady]
+It makes me the one who isn't going to stop until I know which.
+
+[NARRATOR]
+Neither says what they're both now thinking — that whatever Maya finds next will have to be handled more carefully than anything before it.
+
+--- PART 10 ---
+
+[NARRATOR]
+The Chen Cover-up thread returns. Same afternoon, the podcast's cramped studio office — Maya Park and Elias Crowe, comparing what they each learned in the last hour.
+
+[ELIAS_CROWE | style: puzzled, thinking out loud]
+The clerk wouldn't give me a straight answer. "Under review." That's not a phrase anyone used when I filed the request.
+
+[MAYA_PARK | style: quiet, calculating]
+Under review since when?
+
+[ELIAS_CROWE]
+That's the thing. Since basically the moment I filed it. Same day.
+
+[MAYA_PARK | style: still, something clicking into place]
+Same day I sat across from an eighty-year-old woman who almost said a name out loud.
+
+[ELIAS_CROWE | style: careful]
+You think those two things are connected.
+
+[MAYA_PARK]
+I think I don't believe in that many coincidences in one afternoon.
+
+[SFX: a rolling chair pushed back from a desk]
+
+[ELIAS_CROWE | style: standing, decisive]
+So we don't wait for it to clear normally.
+
+[MAYA_PARK | style: already reaching for her bag]
+No. We go now.
+
+[ELIAS_CROWE | style: worried under the momentum]
+If someone leaned on that box today, waiting a week means there might not be a box left to look at.
+
+[MAYA_PARK]
+Then we're not waiting a week. We're not waiting an hour.
+
+[ELIAS_CROWE | style: half a laugh, no humor in it]
+You say that like the archive's just going to hand it over because we showed up in person.
+
+[MAYA_PARK | style: flat, focused]
+No. But a clerk stalling a phone request is a different animal than two reporters standing at the counter.
+
+[ELIAS_CROWE]
+Fair.
+
+[MAYA_PARK | style: quieter, almost to herself]
+And I'd rather see it fail in person than imagine it failing from here.
+
+[ELIAS_CROWE | style: catching something in how she said that]
+You okay?
+
+[MAYA_PARK | style: brushing past it, moving]
+I'm fine. Let's go before I have time to think about it.
+
+[NARRATOR]
+Neither names what — or who — might be behind the delay. Only that the day has started to feel like it's running out.
+
+[SFX: a door swinging open, a bag strap snapping onto a shoulder]
+
+[ELIAS_CROWE | style: already at the door]
+Car's out front.
+
+[MAYA_PARK]
+Drive fast.
+
+--- PART 11 ---
+
+[NARRATOR]
+The county archive, that same afternoon. Chen Cover-up thread. Maya and Elias reach the records desk before the ledger box can be pulled from public access.
+
+[ELIAS_CROWE | style: brisk, official]
+We're here for the Hollow Pines box. Ledger series, seventy-one to seventy-six. I filed the request yesterday, it should be logged under my name.
+
+[NARRATOR]
+The clerk checks a list without meeting his eyes.
+
+[ELIAS_CROWE | style: confused, then firmer]
+"Under review"? There's no under-review step, I read the whole intake process. You told me two days, tops.
+
+[MAYA_PARK | style: quiet, watching closely]
+Elias.
+
+[NARRATOR]
+Maya keeps her voice low, her eyes on the clerk's hands, not his face.
+
+[MAYA_PARK | style: even, deliberately calm]
+Look at me. Someone called about this box. Today, maybe yesterday. Am I wrong?
+
+[NARRATOR]
+The clerk says nothing, which is its own kind of answer.
+
+[ELIAS_CROWE | style: pressing, edge of frustration]
+I have a formal request number. That guarantees access under your own posted policy. You can pull it up right now if you want to argue with me about it.
+
+[MAYA_PARK | style: soft, reading the room]
+He's not going to argue with you. Look at him — he's deciding something.
+
+[NARRATOR]
+A long pause stretches across the desk.
+
+[ELIAS_CROWE | style: quieter now, almost pleading]
+We're not asking you to break a rule. We're asking you to follow the one that's already written down. Whatever's happening upstairs isn't your problem to carry.
+
+[MAYA_PARK | style: steady, direct]
+If that box leaves this floor before we see it, it's gone. You know that better than we do.
+
+[NARRATOR]
+The clerk's fingers tighten on the edge of the counter, caught between two instructions that don't agree with each other.
+
+[SFX: a metal drawer sliding shut somewhere behind the counter]
+
+[ELIAS_CROWE | style: low, urgent]
+Please. Five minutes. That's all we're asking for.
+
+[NARRATOR]
+Neither Maya nor Elias moves, waiting on a decision that hasn't come yet.
+
+--- PART 12 ---
+
+[NARRATOR]
+The county archive, minutes later. Chen Cover-up thread continues: the clerk relents, and Maya and Elias get a narrow window before the ledger box is formally withdrawn.
+
+[ELIAS_CROWE | style: low, urgent]
+Two minutes. She says two minutes, supervised, and then it goes back behind the desk whether we're done or not.
+
+[MAYA_PARK | style: fast, focused]
+Then we don't talk, we shoot. You take the left half, I'll take the right. Photograph everything, sort it later.
+
+[SFX: a cardboard box lid lifted off, brittle paper shifting]
+
+[ELIAS_CROWE | style: quiet, rapid]
+Grant correspondence, 1971 through '74. No signature block on this one — just an account number.
+
+[SFX: camera phone shutter clicks, rapid succession]
+
+[MAYA_PARK | style: murmuring to herself]
+Come on, come on — there. "Funding source: private, non-hospital." That's the line. That's the line that isn't supposed to exist anymore.
+
+[SFX: camera phone shutter clicks, rapid succession]
+
+[ELIAS_CROWE | style: tight]
+She's watching the clock behind us. I can feel it.
+
+[MAYA_PARK | style: steady, refusing to rush]
+Then let her watch. Keep going.
+
+[ELIAS_CROWE | style: reading fast, clipped]
+Ledger entry, June '73 — grant renewal denied, "program discontinued effective immediately," no explanation attached. And then nothing. No closing report. It just stops.
+
+[MAYA_PARK | style: low]
+Because whatever happened next, nobody wanted it on paper.
+
+[SFX: a door latch clicking somewhere down the corridor]
+
+[ELIAS_CROWE | style: sharp, urgent]
+That's her. She's coming back.
+
+[MAYA_PARK | style: rushed but controlled]
+One more page. One more —
+
+[SFX: camera phone shutter click]
+
+[MAYA_PARK | style: exhaling, satisfied but wary]
+Got it. Close it up.
+
+[NARRATOR]
+The clerk returns and closes the box without a word, sliding it beneath the counter as a small paper seal goes across the lid.
+
+[SFX: a paper seal being smoothed flat against cardboard]
+
+[ELIAS_CROWE | style: careful, testing the air]
+Thank you. We appreciate you making the time.
+
+[MAYA_PARK | style: quiet, once they're clear of the desk]
+She wouldn't look at either of us by the end. She knew exactly what she was letting us see.
+
+[ELIAS_CROWE | style: subdued]
+And exactly how close it came to not happening.
+
+[MAYA_PARK | style: grim, resolved]
+No name yet. But a grant that isn't supposed to exist, and a program that vanished without a report. That's not nothing.
+
+[ELIAS_CROWE | style: low]
+It's not everything either. Let's get out of here before somebody decides two minutes was a mistake.
+
+--- PART 13 ---
+
+[NARRATOR]
+Later that afternoon. Tao Wu, in his office across town, takes a call from his contact at the county archive.
+
+[TAO_WU | style: clipped, expecting good news]
+Tell me it's sealed.
+
+[TAO_WU | style: the smile fading fast]
+Supervised access. What does that mean, supervised access —
+
+[TAO_WU | style: quiet, controlled fury]
+You told me this morning. You told me I had until end of day.
+
+[SFX: a pen set down hard on a desk]
+
+[TAO_WU | style: forcing calm]
+How long were they in the room with it.
+
+[TAO_WU | style: doing math out loud, low]
+Twenty minutes. Ledger box that size — that's enough for the front third. Maybe half, if they knew what they were looking for.
+
+[TAO_WU | style: to himself, brittle]
+They knew what they were looking for.
+
+[NARRATOR]
+He ends the call without another word.
+
+[TAO_WU | style: alone now, the mask slipping]
+Late. Not wrong. Late.
+
+[SFX: a chair creaking as he sits back slowly]
+
+[TAO_WU | style: resolute, already rebuilding the story he'll tell]
+Diana doesn't need the minutes. She needs the box handled. It's handled.
+
+[NARRATOR]
+He picks up the phone again — this time, to call her.
+
+--- PART 14 ---
+
+[NARRATOR]
+Riverside Memory Home, minutes later. Mei Tam, alone now in her room, the door closed against the hallway.
+
+[SFX: a wooden drawer sliding open slowly]
+
+[MEI_TAM | style: quiet, unguarded, alone]
+Still here. After everything.
+
+[MEI_TAM | style: soft, private]
+That girl's questions. The way she said "gone back." Like it was nothing. Like it was true.
+
+[NARRATOR]
+She holds a small, faded photograph, edges worn soft from handling over many years.
+
+[MEI_TAM | style: barely a whisper, aching]
+You'd be an old woman now too. If anyone let you be.
+
+[MEI_TAM | style: guarded again, deciding]
+No. Not tonight. Not to her. Not yet.
+
+[SFX: a photograph being tucked back inside a folded cloth]
+
+[MEI_TAM | style: firm, closing herself off]
+She has enough to chew on. Let her chew.
+
+[NARRATOR]
+Her hands aren't steady as she returns the photograph to the drawer, further back than before.
+
+[SFX: the drawer easing shut, softer than it opened]
+
+[MEI_TAM | style: resigned, final]
+Fifty years I've kept a face out of a file. One more night won't kill me.
+
+--- PART 15 ---
+
+[NARRATOR]
+Diana Chen's private office, early evening. The state senator meets with Tao Wu, her family's longtime attorney and fixer, for an update on the archive situation.
+
+[DIANA_CHEN | style: brisk, expecting good news]
+Tell me the box is handled.
+
+[TAO_WU | style: measured, controlled]
+It's handled. The withdrawal went through. Nobody outside our own people got a real look at anything that matters.
+
+[SFX: a glass set down on a wooden desk]
+
+[DIANA_CHEN | style: satisfied, already moving on]
+Good. That's one thing off the list this week.
+
+[TAO_WU | style: even, a shade too smooth]
+One thing off the list.
+
+[DIANA_CHEN | style: noticing something, slower]
+You said that like you were reading it off a card.
+
+[TAO_WU | style: light, deflecting]
+Long day. I've said some version of it four times since noon — to you, to a very tired mirror, to anyone who'd sit still long enough.
+
+[DIANA_CHEN | style: probing gently]
+"Nobody got a real look at anything that matters." That's not quite the same as nobody got a look at all.
+
+[TAO_WU | style: composed, quick correction]
+Semantics. The reporters filed a request. Requests sit for weeks at that archive, you know how the office runs. There was nothing left for them to find by the time it would have mattered.
+
+[DIANA_CHEN | style: quiet, weighing him]
+That's not exactly what I asked.
+
+[TAO_WU | style: steady, a beat too still]
+It's the answer that matters, Diana.
+
+[DIANA_CHEN | style: measured, letting it go, half-distracted]
+...Fine. What's next on the calendar — the Foundation gala, or is Marcus still fighting me on the guest list?
+
+[TAO_WU | style: relieved, already moving]
+The gala. I'll have the list to you by morning. Nothing else on the archive needs your attention.
+
+[DIANA_CHEN | style: still half elsewhere]
+Nothing else.
+
+[TAO_WU | style: firm, closing the door on it]
+Nothing else.
+
+[DIANA_CHEN | style: quiet, almost to herself]
+Nothing else.
+
+--- PART 16 ---
+
+[NARRATOR]
+Back at the studio, evening. Maya and Elias spread photographs and notes across the table between them — the Hollow Pines thread again, everything gathered in one place.
+
+[ELIAS_CROWE | style: methodical, tired]
+Say it back to me. All of it, in order.
+
+[MAYA_PARK | style: measured]
+Mei Tam confirms unconsented drugging. Confirms deaths. The ledger shows an unlisted grant, money that funded something nobody wanted on the books later.
+
+[ELIAS_CROWE]
+And the discharge files.
+
+[MAYA_PARK]
+Every one of them "cured." No forwarding address, no next of kin, nothing. That's not paperwork sloppiness. That's a pattern.
+
+[ELIAS_CROWE | style: exhaling, frustrated]
+It's everything but a name.
+
+[MAYA_PARK]
+It's everything but a name.
+
+[ELIAS_CROWE | style: careful, not quite meeting her eyes]
+Can I say something, and you not take it the wrong way.
+
+[MAYA_PARK | style: guarded]
+Depends on the something.
+
+[ELIAS_CROWE]
+The Polaroid. What you told me. It's — it's a lot, Maya. I keep turning it over and it worries me more than I want to admit.
+
+[MAYA_PARK | style: firm, a little defensive]
+It doesn't cloud anything. If anything it's the opposite. I see that face and every detail sharpens. I notice things I would've skimmed past before.
+
+[ELIAS_CROWE]
+I believe that you believe that.
+
+[MAYA_PARK | style: dry]
+That's not the same as agreeing with me.
+
+[ELIAS_CROWE]
+No. It's not.
+
+[NARRATOR]
+A pause sits between them, neither pushing further.
+
+[MAYA_PARK | style: quieter]
+I can't prove it to you yet. I know that.
+
+[ELIAS_CROWE | style: gentler]
+You don't have to prove it tonight. Just — keep telling me. Don't sit on the next thing.
+
+[MAYA_PARK]
+Deal.
+
+[ELIAS_CROWE | style: refocusing]
+Okay. So where's the thread that actually moves.
+
+[MAYA_PARK]
+Mei Tam. She started a name and swallowed it. I've been turning that half-second over since I left her room.
+
+[ELIAS_CROWE]
+A cough isn't nothing, coming from her. She doesn't fumble like that.
+
+[MAYA_PARK]
+She doesn't. Which means there's a name sitting right behind her teeth, and she's decided — for now — that we don't get it.
+
+[ELIAS_CROWE | style: resolved]
+Then that's the loose thread. Everything else is context. That's the one that unravels it.
+
+[MAYA_PARK]
+We go back to her. Sooner, not later — before she has time to build the wall back up.
+
+[ELIAS_CROWE]
+Tomorrow, if she'll see us.
+
+[MAYA_PARK | style: steady]
+She'll see us. She let me in once already. She wants to say it. Something in her wants to say it.
+
+[NARRATOR]
+Outside the studio window, the light has gone from evening into full dark.
+
+[ELIAS_CROWE | style: low]
+Everything but a name, Maya. That's the whole episode in four words.
+
+[MAYA_PARK]
+Then let's go get the fifth.
+
+--- PART 17 ---
+
+[NARRATOR | style: low, measured]
+By evening, the studio holds three kinds of proof, and not one of them carries a name.
+
+[NARRATOR]
+A recorder full of Mei Tam's careful non-answers. A stack of photographed ledger pages, ink faded but legible. And a Polaroid that Maya still hasn't shown her mother.
+
+[SFX: photographs being squared into a stack on a wooden table]
+
+[NARRATOR | style: quiet, deliberate]
+Across town, the box sits sealed in a records room no reporter will get back into tonight, its status changed on a form no one outside the archive will ever read. What Maya and Elias managed to copy of it is already spread across a table under bright light — captured, but not yet read closely enough to be understood.
+
+[NARRATOR]
+Thirty miles east, past a chain-link fence at St. Agnes Cemetery, a row of numbered stones waits in the grass, unclaimed since the winter they were set. No one has walked that row in years. Tonight, for the first time, someone is looking for it on a map.
+
+[NARRATOR]
+In Riverside Memory Home, a syllable Mei Tam swallowed an hour ago is still sitting where she left it — in the silence after a cough that wasn't one.
+
+[NARRATOR | style: steady, gathering weight]
+Every thread this podcast is pulling on tonight ends at the same missing word. Not a grant number. Not a box number. Not a diagnosis on a falsified chart. A name.
+
+[NARRATOR]
+Across town, on the second floor of the Harborview Medical Foundation, the lobby lights are still on.
+
+[SFX: a heavy glass door swinging shut, latch catching]
+
+[NARRATOR | style: quiet, this lands hard]
+Among the pages Elias copied before that ledger vanished from its shelf is a name neither of them has placed yet. It sits one floor below where they're standing, engraved on the donor wall behind that glass door — the Harborview Medical Foundation, built on Chen family money, and signed once, long ago, by its founding medical director.
+
+[NARRATOR]
+Neither of them has made the connection. Not yet.
+
+[NARRATOR | style: final, unresolved]
+Somewhere between a nurse's near-slip and a name carved in brass, the story is close enough now to reach out and touch. For tonight, it stays just out of reach.
+

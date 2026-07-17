@@ -1,0 +1,957 @@
+--- PART 1 ---
+
+[NARRATOR]
+Previously on Amity Hollow: forensic analyst Wei Zhou began recovering corrupted security footage from the night forty-one residents vanished. Buried inside the damaged files, something began to surface — a shape investigators hadn't put there.
+
+[NARRATOR]
+Now, dawn breaks over the Mobile Forensics Unit, a cramped trailer parked at the edge of the village. Screens hum after a night nobody meant to spend awake.
+
+[SFX: a chair creaking as someone shifts forward]
+
+[NARRATOR]
+On the main monitor, a progress bar crawls toward completion. The last corrupted file is almost rendered.
+
+[WEI_ZHOU | style: flat exhaustion]
+Sixty-four percent.
+
+[JONAH_REESE | style: rubbing at tired eyes]
+You said that ten minutes ago.
+
+[WEI_ZHOU | style: dry, not looking up]
+It lied to both of us, then.
+
+[NARRATOR]
+The frame resolves in blocks, static giving way to shape, pixel by pixel.
+
+[SFX: a soft electronic chime as a process completes]
+
+[JONAH_REESE | style: leaning in, low]
+Is that —
+
+[WEI_ZHOU | style: quiet, focused]
+Hold on. Let it finish clearing.
+
+[NARRATOR]
+The last of the noise falls away. What's left on the screen is unmistakable.
+
+[JONAH_REESE | style: barely a whisper, unsettled]
+That's it. That's the exact thing.
+
+[WEI_ZHOU | style: careful, controlled]
+Same lines. Same proportions.
+
+[JONAH_REESE | style: harder edge now, urgent]
+That's the kid's drawing. That's Milo's symbol.
+
+[NARRATOR]
+Neither man has said it aloud, but both are looking at the same walls in their heads — covered floor to ceiling with a child's crayon marks, now staring back at them out of ruined security footage.
+
+[WEI_ZHOU | style: measured, almost to himself]
+It's not on top of the image. It's inside it. Underneath the corruption.
+
+[JONAH_REESE | style: tight, trying to stay procedural]
+Underneath. Meaning what — someone put it there.
+
+[WEI_ZHOU | style: cautious, not committing yet]
+Meaning I need to look closer before I say anything more than that.
+
+[NARRATOR]
+Outside, the first grey light is only just reaching the treeline. Inside the trailer, nobody is thinking about sleep anymore.
+
+[JONAH_REESE | style: standing, decisive]
+Get the others up. All of them. Now.
+
+--- PART 2 ---
+
+[NARRATOR]
+Still the Mobile Forensics Unit, minutes later. Jonah Reese, Mei Lin, and Yuna Cho gather around Wei Zhou's monitor.
+
+[WEI_ZHOU | style: clinical, controlled]
+Okay. Everyone look here, not at the picture — at what's under it.
+
+[JONAH_REESE | style: alert, focused]
+Under it. Meaning what.
+
+[WEI_ZHOU | style: measured, explaining]
+Meaning that symbol isn't just corruption resolving into an image. It's a watermark. Something deliberately hidden inside the file's data, layer by layer, so it only surfaces once the footage is fully decoded.
+
+[DR_MEI_LIN | style: quiet, uneasy]
+Hidden how? Like a stamp?
+
+[WEI_ZHOU | style: patient, precise]
+Closer to a signature woven into the noise itself. You could play this file a hundred times and never see it, unless you know exactly how to unpack the corruption. It's not random damage. Random damage doesn't reconstruct into something this consistent.
+
+[SFX: a mouse click, then a soft digital chime]
+
+[WEI_ZHOU | style: even, factual]
+Watch. I'm rewinding the render.
+
+[YUNA_CHO | style: careful, watching]
+It's just static again.
+
+[WEI_ZHOU | style: quiet emphasis]
+Right. Static — until the decode finishes. Then it locks into place. Same shape, same orientation, every time.
+
+[JONAH_REESE | style: low, intent]
+Someone put that there on purpose.
+
+[WEI_ZHOU | style: flat, clinical]
+That's what the pattern says. I can't tell you who, or why. Only that it isn't an accident of corrupted footage. Someone with access to the encoding process embedded this before the file ever broke down.
+
+[DR_MEI_LIN | style: tight, careful]
+And it's the same as what Milo's been drawing.
+
+[WEI_ZHOU | style: even, deliberately neutral]
+Same as what you've shown me, yes.
+
+[JONAH_REESE | style: quiet, weighing it]
+So we're not looking at damaged evidence anymore. We're looking at a message somebody wanted found.
+
+[WEI_ZHOU | style: steady, unreadable]
+That's the technical read, yes.
+
+[NARRATOR]
+Wei Zhou's voice stays level, giving away nothing of what the shape might mean to him.
+
+[YUNA_CHO | style: brisk, changing the subject]
+If that's confirmed, this changes what we tell command by tonight.
+
+[JONAH_REESE | style: firm, already moving past her]
+It changes more than that. This is the first real design behind any of it. Not chaos. Somebody built this.
+
+--- PART 3 ---
+
+[NARRATOR]
+Same unit, minutes later. The symbol still glows on the main screen. Jonah has not moved from it.
+
+[JONAH_REESE | style: measured, guarded]
+Before we call this anything — walk me through why it's not just corruption. Compression artifacts make shapes all the time. People see faces in static.
+
+[WEI_ZHOU | style: clinical, patient]
+Because corruption is random. This isn't. Same stroke weight, same proportions, same placement relative to frame edge — across a file that was garbage forty minutes ago.
+
+[JONAH_REESE | style: pressing, careful]
+Random can still repeat. Give me the number that rules that out.
+
+[WEI_ZHOU | style: clinical, patient]
+The recovery algorithm doesn't generate shapes, Jonah. It reconstructs what's already encoded in the data. If the pattern resolves this cleanly, it was placed there. Deliberately. Before the corruption ever happened.
+
+[JONAH_REESE | style: wary, low]
+"Deliberately." That's a big word for a first pass.
+
+[WEI_ZHOU | style: tight, controlled]
+It's the accurate word. I can run it through a second decoder if you want a number instead of my judgment.
+
+[JONAH_REESE | style: measured, guarded]
+I want both. I've built a theory on a hunch before and watched it fall apart in front of people who trusted me. I'm not doing that again — not on this one.
+
+[SFX: a chair creaking as Wei Zhou shifts his weight]
+
+[WEI_ZHOU | style: clinical, patience thinning]
+Understood. I'll run the second pass tonight, independent codebase, no shared assumptions. If it still resolves the same shape, that's as close to certain as this kind of data gets.
+
+[JONAH_REESE | style: quieter, conceding]
+That's all I'm asking for. Not because I doubt you.
+
+[WEI_ZHOU | style: even, clipped]
+I know why you're asking.
+
+[NARRATOR]
+A short silence. Neither man explains what the shape has stirred in him.
+
+[JONAH_REESE | style: careful, testing]
+You've gone quiet on me. That's usually when you're annoyed.
+
+[WEI_ZHOU | style: flat, deflecting]
+I'm tired. It's been a long night and I still have two files to run.
+
+[JONAH_REESE | style: measured, guarded]
+Fair enough. Second pass — soon as you have it, I want to be the first call.
+
+[WEI_ZHOU | style: clinical, patient]
+You will be.
+
+[NARRATOR]
+Jonah studies the frozen symbol a moment longer before turning away. Wei Zhou stays seated, eyes fixed on the screen after the door closes behind him.
+
+--- PART 4 ---
+
+[NARRATOR]
+The Trauma Safe Room, mid-morning. Dr. Mei Lin sits again with Milo, the boy found alone in Amity Hollow — this time, she leaves the questions behind.
+
+[DR_MEI_LIN | style: soft, unhurried]
+Cloudy again today. Third day in a row.
+
+[DR_MEI_LIN | style: gentle, conversational]
+I always think grey skies make a room feel smaller. Cozier, maybe. Or just smaller.
+
+[SFX: a chair creaking softly as someone shifts weight]
+
+[DR_MEI_LIN | style: calm, observational]
+You've got more paper than yesterday. I like that blue one, on the top. The color's nice.
+
+[DR_MEI_LIN | style: light, unbothered]
+I used to draw when I was your age. Never very well. My mother said my horses looked like dogs.
+
+[NARRATOR]
+Milo doesn't speak. But his eyes move — from the papers, to her hands, to her face, and stay there a moment longer than they have before.
+
+[DR_MEI_LIN | style: warm, easy]
+There's a vending machine down the hall that only has orange juice left. Every other button's empty. Someone really likes apple juice around here, I guess.
+
+[DR_MEI_LIN | style: quiet, thinking aloud]
+Funny what people take without thinking about who's left after.
+
+[NARRATOR]
+She lets the silence sit. No pen, no notepad in her hands — just her voice, low and even, filling the room without asking anything of him.
+
+[DR_MEI_LIN | style: soft, almost to herself]
+I don't need you to tell me anything today, Milo. I just like sitting here with you.
+
+[NARRATOR]
+His shoulders, drawn tight since she sat down, ease by some small fraction. Mei Lin notices it the way she notices most things — carefully, and files it as progress.
+
+[DR_MEI_LIN | style: quietly pleased, private]
+There. That's new.
+
+[NARRATOR]
+She doesn't know that what has shifted in him isn't comfort. It's attention — the boy tracking every word for what it might mean, listening for what she knows and doesn't.
+
+[DR_MEI_LIN | style: gentle, closing]
+We'll sit a little longer, then I'll let you have your paper back. No rush today.
+
+[NARRATOR]
+Milo says nothing. He never does. But behind his stillness, something in him is counting — how close, how far, how much longer until the path she's walking leads exactly where he needs it to.
+
+--- PART 5 ---
+
+[NARRATOR]
+The Trauma Safe Room, mid-morning. Mei Lin sits across from Milo at the low table, paper and pencils between them.
+
+[DR_MEI_LIN | style: soft, unhurried]
+You can draw whatever you want today. There's no right one.
+
+[SFX: pencil scratching steadily on paper]
+
+[DR_MEI_LIN | style: gentle, observing]
+Take your time. I'm right here.
+
+[NARRATOR]
+Milo bends over the page, drawing the same interlocking symbol he has drawn every session since he arrived.
+
+[DR_MEI_LIN | style: quiet, to herself]
+Same lines. Same pressure, even.
+
+[NARRATOR]
+He pauses at the last stroke, adds one small mark at the symbol's edge, then sets the pencil down.
+
+[DR_MEI_LIN | style: casual, gentle]
+All finished?
+
+[NARRATOR]
+Milo nods once and folds his hands in his lap, still, the way he always does when a drawing is done.
+
+[DR_MEI_LIN | style: warm, encouraging]
+It's a good one. Thank you for sharing it with me.
+
+[NARRATOR]
+She reaches for the page to set it with the others, and stops.
+
+[DR_MEI_LIN | style: low, almost a murmur]
+Wait.
+
+[SFX: paper sliding across a table]
+
+[DR_MEI_LIN | style: careful, examining]
+There's — this little line here, off the corner. That wasn't in the others.
+
+[NARRATOR]
+She turns the page toward the window light, studying the new mark.
+
+[DR_MEI_LIN | style: thinking aloud, quiet]
+Could be nothing. Hand slipped. Pencil caught the edge of the paper.
+
+[NARRATOR]
+But the mark is straight, evenly weighted, closed off cleanly at both ends — nothing like a slip.
+
+[DR_MEI_LIN | style: uncertain, self-questioning]
+That's not a slip. That's placed.
+
+[NARRATOR]
+She glances at Milo. He sits exactly as still as before, eyes down, giving nothing away.
+
+[DR_MEI_LIN | style: gentle, testing]
+Milo — this little piece here, at the edge. Did you mean to add that?
+
+[NARRATOR]
+He doesn't answer. He never does. But his eyes lift, just slightly, to the page in her hands, then back down.
+
+[DR_MEI_LIN | style: quiet, weighing it]
+Okay. Okay, that's fine. You don't have to tell me.
+
+[NARRATOR]
+She sets the drawing on top of the others, then slides it back out and looks at it once more before she lets it go.
+
+[DR_MEI_LIN | style: low, private]
+One variation. Once. Could be anything. I'll watch for it again before I write it down as something.
+
+[NARRATOR]
+She tucks the page into the folder, unaware that for Milo, the mark was never a slip at all — it was a signal, placed exactly where he meant it to be found.
+
+--- PART 6 ---
+
+[NARRATOR]
+Field Ops Tent, mid-morning. The Yuna's Double Life thread returns — Jonah finds Yuna at the folding table, laptop open, coffee going cold beside her.
+
+[JONAH_REESE | style: businesslike, focused]
+I need ownership and access records for the restricted land past the ridge. Whoever holds that lease, I want names.
+
+[YUNA_CHO | style: easy, helpful]
+Military land requests go through a different channel — it's not something I can just query. Could take days, maybe longer, depending who's holding the file this week.
+
+[JONAH_REESE | style: mildly frustrated]
+Days. We've got forty-one people missing and a symbol showing up inside our own footage.
+
+[YUNA_CHO | style: reasonable, quick]
+I know. Which is why I'd start with the civilian zoning database instead — it's already networked, I can pull it in an hour. Property lines, easements, anyone who's filed near that boundary. It might get you halfway to what you actually need without the wait.
+
+[JONAH_REESE | style: considering]
+Halfway isn't the lease holder.
+
+[YUNA_CHO | style: warm, persuasive]
+No. But it's a place to stand while the other request crawls through channels I don't control. I'll submit the military records today — I promise you that. I just don't want you sitting on your hands for a week when there's a faster door right here.
+
+[SFX: laptop keys clicking in a quick burst]
+
+[JONAH_REESE]
+Fine. Start with zoning. But I want that other request in today, not next week.
+
+[YUNA_CHO | style: light, reassuring]
+Today. You have my word.
+
+[NARRATOR]
+Jonah turns back toward the monitors, satisfied. Yuna watches him go before returning to her screen.
+
+[YUNA_CHO | style: quiet, to herself, controlled]
+Just buying a little room to breathe. That's all this is.
+
+[SFX: tent flap rustling as it falls closed]
+
+[NARRATOR]
+She opens a new window, minimizes it fast when a shadow crosses the tent wall — Wei Zhou, passing outside, not looking in.
+
+[YUNA_CHO | style: barely audible, tense]
+Not yet. Not yet.
+
+[NARRATOR]
+She exhales, squares her shoulders, and pulls up the zoning database exactly as promised — technically true, carefully incomplete.
+
+--- PART 7 ---
+
+[NARRATOR]
+Amity Hollow Square, mid-morning. Jonah walks the empty houses alone, retracing the first sweep the team ran the night the village emptied.
+
+[SFX: dry porch boards creaking underfoot]
+
+[JONAH_REESE | style: low, methodical]
+Table, chair, table, chair. Nobody grabbed a coat. Nobody grabbed a phone.
+
+[JONAH_REESE | style: quieter, to himself]
+Nobody grabbed anything.
+
+[NARRATOR]
+On a porch two houses down, a small speaker crackles — still powered, still listening.
+
+[SFX: baby monitor static crackling, faint and continuous]
+
+[JONAH_REESE | style: alert, low]
+Huh.
+
+[JONAH_REESE | style: careful, deliberate]
+Baby monitor. Still on.
+
+[JONAH_REESE | style: dry, half to himself]
+Three weeks. Nobody unplugged it. Nobody's battery even died.
+
+[SFX: a plastic device clicking as a button is pressed]
+
+[JONAH_REESE | style: focused]
+Come on. Give me a timestamp.
+
+[NARRATOR]
+He crouches over the display, scrolling through a log no one thought to check.
+
+[JONAH_REESE | style: murmuring, working it out]
+Local storage — twelve hours, looped. Whatever it caught that night, it's already recorded over itself twice by now.
+
+[JONAH_REESE | style: flat, mildly frustrated]
+Of course.
+
+[SFX: a two-way radio clicking on]
+
+[JONAH_REESE | style: even, procedural]
+Wei, it's Jonah. Got a second one — baby monitor, porch on the east side of the square. Local buffer's overwritten, but check if it ever synced to a cloud account before the outage.
+
+[WEI_ZHOU | style: calm, slightly tired]
+Copy that. Bag it and tag the address — I'll pull it after I finish the render logs.
+
+[JONAH_REESE | style: matter-of-fact]
+It's not urgent. Long shot. Probably just somebody's kid slept through the whole thing on a monitor nobody checked twice.
+
+[WEI_ZHOU | style: dry]
+Nothing's a long shot anymore, not after this morning.
+
+[JONAH_REESE | style: half a laugh, no humor in it]
+Fair.
+
+[NARRATOR]
+He wraps the device in an evidence bag and sets it beside the porch step, marking the house number in his notebook.
+
+[JONAH_REESE | style: quiet, almost to the monitor itself]
+Whatever you heard. Somebody's going to make you say it eventually.
+
+[SFX: a car door closing in the distance]
+
+[NARRATOR]
+He straightens, glancing once more down the empty row of houses before heading back toward the unit.
+
+--- PART 8 ---
+
+[NARRATOR]
+Later that morning, back in the Mobile Forensics Unit. Wei Zhou works alone at his station, two new files queued on the recovery pipeline.
+
+[WEI_ZHOU | style: focused, muttering to himself]
+Come on. Come on, finish.
+
+[SFX: a progress chime, soft double tone]
+
+[WEI_ZHOU | style: sitting up sharply]
+No. No, that's not—
+
+[WEI_ZHOU | style: quiet disbelief | speed: 0.95]
+That's the same mark. That's the exact same mark.
+
+[NARRATOR]
+He pulls up the second file beside the first, both recovered from opposite ends of the village.
+
+[WEI_ZHOU | style: rapid, thinking aloud]
+Camera four was mounted on the grain silo, north edge. This one's from the Hendricks' porch cam, south edge, almost half a mile apart. Different hardware, different corruption pattern, different everything—
+
+[WEI_ZHOU | style: hushed]
+—and the same watermark, sitting in the same relative position in the frame.
+
+[SFX: a keyboard clatter, quick and uneven]
+
+[WEI_ZHOU | style: to himself, tight]
+That's not one bad actor with a laptop hunched over a single camera. That's not how you'd do it by hand. Not twice, not this clean.
+
+[NARRATOR]
+He leans back, rubbing his eyes, working through what the placement means.
+
+[WEI_ZHOU | style: measured, forcing calm]
+Somebody with access to every device in this village, walking file to file, embedding it manually. Meticulous. Patient.
+
+[WEI_ZHOU | style: low, unsettled]
+Or arrogant enough not to care if we found it.
+
+[NARRATOR]
+He checks the timestamp on both recoveries against his log, then reaches for his radio.
+
+[WEI_ZHOU | style: clipped, professional again]
+Jonah. Mei Lin. You need to see this now.
+
+[SFX: a radio handset clicking off]
+
+[WEI_ZHOU | style: quiet, to the empty room]
+Three for three.
+
+[NARRATOR]
+He stares at the two frames side by side a moment longer before saving them to the case file, the symbol staring back from both corners of the screen.
+
+--- PART 9 ---
+
+[NARRATOR]
+The Last House, midmorning. Jonah and Mei Lin bring the recovered footage here, to compare it against the walls Milo has covered in the same shape, over and over.
+
+[JONAH_REESE | style: focused, low]
+Hold it here. Same height as the one on the far wall.
+
+[DR_MEI_LIN | style: quiet, careful]
+Turn it a little. There — level with that one by the window.
+
+[SFX: a laptop lid creaking open]
+
+[JONAH_REESE | style: measured]
+Okay. Freeze on this frame.
+
+[DR_MEI_LIN | style: low, studying]
+That's — Jonah, that's not similar. That's the same mark.
+
+[JONAH_REESE | style: quiet intensity]
+Same three lines through the center. Same broken circle.
+
+[DR_MEI_LIN]
+Same angle on the tail, even. Look — the way it hooks left instead of down.
+
+[JONAH_REESE | style: barely audible]
+Every one of his drawings does that hook.
+
+[DR_MEI_LIN | style: shaken, trying to stay clinical]
+I've had him draw this fourteen times since we started. Fourteen times, same hook.
+
+[JONAH_REESE | style: steady, building certainty]
+That's not memory drift. That's not a kid's hand wandering. That's precision.
+
+[DR_MEI_LIN | style: quieter, unsettled]
+I read it as repetition compulsion. Reliving something. I didn't think—
+
+[JONAH_REESE]
+Think what?
+
+[DR_MEI_LIN | style: careful, choosing words]
+I didn't think to ask whether he was copying something, instead of remembering it.
+
+[JONAH_REESE | style: hardening]
+Somebody put this in the footage on purpose, Mei. Buried in files across three parts of the village. And this boy has it memorized down to the hook on the tail.
+
+[DR_MEI_LIN | style: soft, defensive of him]
+He's ten. He didn't do this to himself.
+
+[JONAH_REESE | style: flat, certain]
+Nobody's saying he did. Somebody used this as a signature. A message, maybe. Something they wanted found.
+
+[DR_MEI_LIN | style: still staring at the screen]
+Or a warning.
+
+[JONAH_REESE]
+Either way, it's not random. Somebody wanted us looking exactly here.
+
+[SFX: a chair leg scraping against the floorboards]
+
+[DR_MEI_LIN | style: distracted, half to herself]
+He added something new yesterday. A small mark at the edge. I almost didn't note it.
+
+[JONAH_REESE | style: sharpening]
+Show me later. Side by side with this.
+
+[DR_MEI_LIN | style: quiet]
+I will.
+
+[NARRATOR]
+Neither of them considers that the symbol might have come from Milo before it ever reached the footage — only that he has somehow seen what was done to his village, stroke for identical stroke.
+
+--- PART 10 ---
+
+[NARRATOR]
+Field Ops Tent, midday. Jonah finds Yuna at the folding table, the liaison who has been managing the team's access to the restricted zone.
+
+[JONAH_REESE | style: casual but pointed]
+Before I put in the formal request — who actually holds the lease on that land? Whoever the tenant is, that's who I need to talk to.
+
+[YUNA_CHO | style: fluent, composed]
+It's held under a private commercial lease, pre-dates most of the current zoning framework. Those older agreements route through a regional administrative office rather than a single named company — it's mostly a paperwork relic at this point.
+
+[JONAH_REESE | style: listening, slightly skeptical]
+So there's no name on it. Just an office.
+
+[YUNA_CHO | style: even, practiced]
+There's a name, technically. It's the kind of shell structure a lot of legacy defense-adjacent leases use — holding entities, not operators. I'd have to dig to find who's actually behind it day to day.
+
+[JONAH_REESE]
+You said yesterday you were already digging.
+
+[YUNA_CHO | style: barely a beat, smooth recovery]
+I am. These things move slow — multiple layers of custodianship, some of it sealed under the original military designation. I don't want to hand you a name that turns out to be a shell of a shell.
+
+[JONAH_REESE | style: quiet, turning it over]
+Huh.
+
+[YUNA_CHO]
+What?
+
+[JONAH_REESE | style: careful, not accusing yet]
+Nothing. It's just — that's a pretty clean answer for something you're still 'looking into.'
+
+[YUNA_CHO | style: a laugh, light, controlled]
+I've done this job a long time, Jonah. I know how to explain a bad system fast. Doesn't mean I have all of it yet.
+
+[JONAH_REESE | style: letting it go, but not really]
+Fair enough. Let me know when you get a name.
+
+[NARRATOR]
+He turns back to his notes. Yuna watches him a moment too long before looking away.
+
+[YUNA_CHO | style: to herself, low]
+Too smooth. Slow down.
+
+[SFX: a laptop lid closing]
+
+[JONAH_REESE | style: not looking up, thoughtful]
+You always this fast with the paperwork excuses, or is this one special?
+
+[YUNA_CHO | style: measured, giving nothing]
+Every zone's special until you've filed for it twice.
+
+[NARRATOR]
+Jonah doesn't answer. He writes something down, and doesn't show her what it is.
+
+--- PART 11 ---
+
+[NARRATOR]
+Night, the Mobile Forensics Unit, hours after the others have gone. Wei Zhou, the signals analyst, works alone at the bank of monitors.
+
+[SFX: a metal folding chair creaking under shifted weight]
+
+[WEI_ZHOU | style: quiet, focused]
+Okay. Just the map. Just look at the map.
+
+[WEI_ZHOU | style: murmuring to himself]
+Three recovered files. Camera four, camera eleven, camera nineteen.
+
+[SFX: soft keyboard clatter, a few quick keystrokes]
+
+[WEI_ZHOU | style: low, tight]
+Fourteen Birch Lane.
+
+[WEI_ZHOU | style: barely audible]
+Come on. Show me something.
+
+[NARRATOR]
+He drags the pin across the village grid, watching it hover near the northeast corner.
+
+[WEI_ZHOU | style: flat, disappointed]
+Nothing. None of them are close.
+
+[WEI_ZHOU | style: quieter, almost to himself]
+Nearest is camera four, and that's still four houses down.
+
+[SFX: a mouse click, then the soft hum of a monitor going idle]
+
+[WEI_ZHOU | style: tired, private]
+No answer. Not yes, not no. Just... nothing.
+
+[NARRATOR]
+He leans back, eyes on the dark window rather than the screen.
+
+[WEI_ZHOU | style: hushed, almost hoping]
+They knew those woods better than anyone. If it took people by the trailhead first, working outward—
+
+[WEI_ZHOU | style: catching himself, quieter]
+—maybe that bought them time. Maybe.
+
+[WEI_ZHOU | style: firmer, self-correcting]
+You don't know that. You don't know anything yet.
+
+[NARRATOR]
+He pulls a small photo from his jacket pocket, sets it face-down beside the keyboard without looking at it directly.
+
+[WEI_ZHOU | style: steady, quiet]
+Not tonight. Just — not yet.
+
+[SFX: a laptop lid closing]
+
+[NARRATOR]
+Footsteps sound from the trailer's far end.
+
+[JONAH_REESE | style: half-asleep, mildly surprised, from off]
+Wei? Thought you called it hours ago.
+
+[WEI_ZHOU | style: composed, quick recovery]
+Recalibrating the decode thresholds. Didn't want drift going into tomorrow's batch.
+
+[JONAH_REESE | style: tired, unquestioning]
+Good instinct. Don't burn yourself out on it.
+
+[WEI_ZHOU | style: even, practiced]
+Almost done. Go back to sleep.
+
+[NARRATOR]
+Jonah's footsteps fade. Wei Zhou slides the photo back into his pocket, unseen.
+
+--- PART 12 ---
+
+[NARRATOR]
+The trauma safe room, well after hours. Mei Lin, the child psychologist assigned to Milo, sits alone with her notes and a single lamp.
+
+[DR_MEI_LIN | style: quiet, methodical]
+Session four. Subject remains non-verbal. Affect flat, consistent with prior sessions.
+
+[SFX: a pen tapping against a notepad, three times]
+
+[DR_MEI_LIN | style: hesitant, thinking aloud]
+Consistent. That's the word I keep writing. Consistent.
+
+[DR_MEI_LIN | style: low, private]
+Children who've been through what he's been through — they don't stay consistent. They spike. They flinch at the wrong sound, cry at the wrong hour, forget their own name for a second and then remember too fast. Milo doesn't spike. He holds.
+
+[SFX: a page turning]
+
+[DR_MEI_LIN | style: careful, building an argument with herself]
+Today. I gave him the associative exercise — weather, the room, nothing that could touch it. And he tracked me. Not like a boy retreating into himself. Like a boy listening for something specific.
+
+[DR_MEI_LIN | style: quieter, uneasy]
+I wrote "improved engagement" in the chart. That's not what I saw. What I saw was a boy checking whether I'd said the right thing yet.
+
+[SFX: a chair creaking as she leans back]
+
+[DR_MEI_LIN | style: firmer, trying to talk herself down]
+He's ten. He watched something happen to everyone he's ever known. Of course he's controlled. Control is a defense. I've built a career on that sentence.
+
+[DR_MEI_LIN | style: soft, unconvinced]
+But the drawing today wasn't a defense. It was the same symbol, stroke for stroke — and then one new mark, placed exactly where a careless hand would never place it by accident.
+
+[SFX: pencil scratching briefly on paper]
+
+[DR_MEI_LIN | style: murmuring, almost to Milo]
+What are you being careful about, Milo.
+
+[DR_MEI_LIN | style: professional again, catching herself]
+No. That's not a clinical question. That's a suspicion. And I have no protocol for writing down a suspicion.
+
+[SFX: the notepad closing]
+
+[DR_MEI_LIN | style: resolved but troubled]
+I won't say it in the morning briefing. Not yet. Not with nothing but a feeling and a pencil mark. If I'm wrong, I've called a traumatized child a liar in front of the whole team. If I'm right —
+
+[DR_MEI_LIN | style: barely audible]
+— I don't know yet what I'm right about.
+
+[NARRATOR]
+She sits a while longer under the single lamp, the closed notepad untouched beside her, the doubt already further along than she's willing to admit.
+
+--- PART 13 ---
+
+[NARRATOR]
+Ridge trailhead, mid-morning. The Vanishing Signal thread. Jonah Reese returns alone to the spot where the boot prints stopped — the same treeline no one has explained since the first sweep.
+
+[SFX: boots crunching over dry brush]
+
+[JONAH_REESE | style: low, talking himself through it]
+Prints stop here. Just — stop. Like they walked into the trees and stopped existing.
+
+[JONAH_REESE | style: methodical, half to himself]
+Unless something covered what came next.
+
+[SFX: branches being dragged and snapped aside]
+
+[JONAH_REESE | style: sharpening with focus]
+That's not deadfall. That's stacked.
+
+[SFX: a handheld recorder clicking on]
+
+[JONAH_REESE | style: clipped, procedural, recording]
+Forensics log, Reese. Treeline above the north ridge. Removing brush that's been deliberately arranged over — 
+
+[JONAH_REESE | style: quieter, surprised despite himself]
+— a road. There's a road under this.
+
+[SFX: gravel shifting underfoot]
+
+[JONAH_REESE | style: crouching, tracing with his hand]
+Packed gravel. Old, but maintained. Somebody's still driving this.
+
+[JONAH_REESE | style: rising urgency, still recording]
+Width's narrow — single vehicle. Cut wide enough for a truck, not a car. Runs straight up-slope, away from the village.
+
+He walks a short distance, boots finding the compacted track easier than the open ground.
+
+[SFX: footsteps changing rhythm, faster on harder ground]
+
+[JONAH_REESE | style: to himself, grim]
+No brush this thick just grows over a fire road by accident. Someone wanted this looking like nothing.
+
+[JONAH_REESE | style: flat, working it out loud]
+So the prints didn't vanish. They walked onto a road that was never supposed to be found. Which means whatever's up that slope — there's a way in. And a way out.
+
+[JONAH_REESE | style: quieter, the guilt surfacing]
+I had a case once where I stood in front of a road just like this and told myself I was seeing things. Not doing that again.
+
+He turns the recorder off before it catches the rest of that thought.
+
+[SFX: recorder clicking off]
+
+[JONAH_REESE | style: decisive, already moving]
+This goes to Yuna first. She's the one who can tell me what's actually up there — before I put a theory in front of the whole team that I can't back up.
+
+[NARRATOR]
+He starts back down toward camp, the hidden road behind him, already rehearsing exactly how he's going to ask.
+
+--- PART 14 ---
+
+[NARRATOR]
+The field ops tent, dusk. Jonah returns from the trailhead. Yuna is at the folding table, still working the same stack of forms from before.
+
+[JONAH_REESE | style: still catching his breath, energized]
+Found something. Up past the trailhead — there's a maintenance road. Somebody buried it under brush on purpose, it's not on any map I've—
+
+[YUNA_CHO | style: too quick, already moving past it]
+Probably legacy infrastructure. Old fire access, that kind of thing turns up around military buffers all the time.
+
+[SFX: a folder snapping shut]
+
+[JONAH_REESE | style: slowing down, watching her]
+I hadn't even said where it went yet.
+
+[YUNA_CHO | style: recovering, brisk]
+You said trailhead, ridge, treeline — I've read every map of this perimeter twice. It's not exactly a mystery which direction anything up there goes.
+
+[JONAH_REESE | style: quiet, testing]
+It goes toward the zone, Yuna. Straight line.
+
+[YUNA_CHO | style: measured, deflecting]
+Right. Which is exactly why we should loop this into the access request instead of you free-climbing brush lines on your own. If there's a road, it needs paperwork before it needs footprints on it.
+
+[JONAH_REESE | style: dry, not letting it drop]
+That's a fast jump. From "old fire access" to "let's file paperwork" in about four seconds.
+
+[YUNA_CHO | style: forcing calm]
+It's called doing my job, Jonah. You want the road searched properly, or you want another chain-of-custody problem when this actually matters?
+
+[SFX: a metal folding chair leg scraping on tent flooring]
+
+[JONAH_REESE | style: even, deliberate]
+I didn't say I wanted to search it alone. I said I found it. You looked like you wanted me to stop talking before I finished the sentence.
+
+[YUNA_CHO | style: brittle laugh, covering]
+I looked like someone with eleven open requests and a headache. Don't read a seminar into it.
+
+[NARRATOR]
+A pause. Yuna returns to her papers, pen moving a beat faster than it needs to.
+
+[JONAH_REESE | style: low, to himself but not quite]
+Sure.
+
+[NARRATOR]
+He doesn't push further — not yet. He turns and steps back out of the tent flap into the last of the light.
+
+[YUNA_CHO | style: barely audible, alone]
+Stupid. Stupid, stupid—
+
+[SFX: pen tapping twice against the table, then stopping abruptly]
+
+[NARRATOR]
+Yuna sits very still for a moment, composing her face before anyone else can walk in and see it slip.
+
+--- PART 15 ---
+
+[NARRATOR]
+Mobile Forensics Unit, later that morning. Jonah has brought word of the maintenance road to the full team — Wei Zhou, Mei Lin, and Yuna gather around the monitor bank.
+
+[JONAH_REESE | style: focused, decisive]
+So that's the road. It runs straight from the treeline into the restricted zone. We stop pretending the prints vanished into thin air.
+
+[WEI_ZHOU | style: steady, practical]
+If it's graded and maintained, someone's been using it recently. That's not old infrastructure. That's active.
+
+[DR_MEI_LIN | style: quiet but firm]
+And it lines up with everything else — the watermark, the symbol on Milo's walls. It all points the same direction now.
+
+[JONAH_REESE | style: measured]
+Which means we need to walk it. Today, if we can.
+
+[YUNA_CHO | style: composed, already recalibrating]
+You'll need clearance past the treeline. That land's under lease — access isn't automatic just because it's adjacent to an active search.
+
+[JONAH_REESE | style: pressing, careful]
+Then get us the clearance. Whatever paperwork that takes.
+
+[YUNA_CHO | style: smooth, helpful]
+I can handle it. Honestly, it'll move faster if I take it directly instead of routing it through the standard request queue — I know who to call.
+
+[WEI_ZHOU | style: relieved]
+That would save us a full day, easily.
+
+[YUNA_CHO | style: light, efficient]
+Give me a few hours. I'll have something by tonight.
+
+[DR_MEI_LIN | style: grateful]
+Thank you, Yuna. Genuinely.
+
+[NARRATOR]
+Wei Zhou returns to his monitors. Mei Lin gathers her folder to head back toward the last house. Jonah lingers.
+
+[JONAH_REESE | style: even, but watching closely]
+You always know who to call.
+
+[YUNA_CHO | style: light, unbothered on the surface]
+It's the job. Somebody has to know the phone numbers.
+
+[JONAH_REESE | style: quiet, unreadable]
+Sure.
+
+[NARRATOR]
+He doesn't push further. He simply watches her a moment longer than the conversation requires before turning back to the monitors.
+
+[YUNA_CHO | style: internal, tight]
+That's fine. That's normal. He's just tired.
+
+[NARRATOR]
+She busies herself with her tablet, already drafting a message that has nothing to do with paperwork.
+
+--- PART 16 ---
+
+[NARRATOR]
+Meanwhile, at the Last House, midday. The investigators have stepped into the hallway to compare notes, leaving Milo alone in the front room with a forgotten tablet still glowing on the table.
+[NARRATOR]
+Its screen sits paused on the recovered footage, the hidden symbol frozen mid-frame — and beside it, propped against the window glass, one of Milo's own drawings, curling slightly at the corner.
+
+[SFX: a chair sliding closer to the window]
+
+[MILO | style: barely above a whisper]
+Three lines out from center.
+
+[MILO | style: barely above a whisper]
+Same as mine. Exactly the same.
+
+[MILO | style: barely above a whisper]
+Same number of lines. Same angle. Same everything.
+
+[MILO | style: quiet, focused]
+I drew it again this morning. And yesterday.
+
+[MILO | style: barely above a whisper, almost to himself]
+It won't stop until it's right.
+
+[MILO | style: barely above a whisper]
+Has to be exactly right.
+
+[SFX: footsteps climbing the porch steps outside]
+
+[SFX: a tablet turned face-down against the wood table]
+
+[DR_MEI_LIN | style: gentle, checking in]
+Milo? I'm sorry — I didn't mean to leave you sitting here alone so long.
+
+[DR_MEI_LIN | style: gentle, curious]
+Did you move this? It was on the desk.
+
+[DR_MEI_LIN | style: soft, patient]
+Would you like to draw again, or just sit here with me a while?
+
+[DR_MEI_LIN | style: soft, resigned]
+All right. We'll just sit, then.
+
+--- PART 17 ---
+
+[NARRATOR]
+Night has fully fallen over the field ops tent. Camp noise has thinned to almost nothing — a generator humming somewhere behind the supply crates, Wei Zhou asleep on a cot, Mei Lin's notebook finally closed beside her cold tea. Jonah stays up alone at the folding table, turning the day's discovery of the maintenance road over in his mind, while across the tent Yuna quietly gathers her jacket.
+
+[YUNA_CHO | style: casual, practiced]
+I'm stepping out. Still need to get the district office's signature squared away before tomorrow's access request goes in.
+
+[JONAH_REESE | style: quiet, measuring]
+This late.
+
+[YUNA_CHO | style: light, unbothered]
+Paperwork doesn't keep office hours, Jonah. You of all people should know that.
+
+[SFX: tent flap unzipping]
+
+[JONAH_REESE | style: barely audible]
+Every night this week. Same hour, same excuse, same door.
+
+[SFX: footsteps receding into gravel and brush]
+
+[NARRATOR]
+He doesn't call after her. He doesn't rise from the table. For the first time since the investigation began, Jonah lets himself watch her go — past the generator, past the last lit tent, all the way to where the treeline swallows her flashlight beam whole. He says nothing. He simply watches, and doesn't look away, the question of where she really goes each night finally too loud in his mind to ignore any longer.
+

@@ -1,0 +1,957 @@
+--- PART 1 ---
+
+[NARRATOR]
+Previously on Cured by Design: the Polaroids from the time capsule matched a name nobody expected — Senator Delia Marsh's own family. In a cluttered third-floor apartment, retired records orderly Dr. Harold Pike finally agreed to talk, on one condition — that Mira and Ethan come back more than once.
+
+[NARRATOR]
+Before dawn, in the podcast's War Room, Mira Kwon's phone won't stop buzzing on the desk beside her untouched coffee.
+
+[MIRA_KWON | style: stunned, quiet]
+No, no, no, no—
+
+[SFX: a phone buzzing rapidly against a wooden desk]
+
+[MIRA_KWON | style: barely holding it together]
+That's not — that's not me. That's not my voice.
+
+[NARRATOR]
+The studio door opens. Ethan Cole, Mira's co-host and the show's steady public face, finds her still in yesterday's clothes, staring at the screen.
+
+[ETHAN_COLE | style: concerned, careful]
+Hey. Hey, what happened?
+
+[MIRA_KWON | style: flat, trying to sound composed | speed: 1.1]
+I'm fine. Look at this.
+
+[NARRATOR]
+She turns the phone toward him. On it, a video of her — or something wearing her face — speaks in a voice that isn't quite hers.
+
+[ETHAN_COLE | style: going quiet, unsettled]
+Play it again.
+
+[SFX: a phone video replaying, tinny audio]
+
+[MIRA_KWON | style: forcing calm]
+It's already got — I don't know, thousands of shares. Comments calling us liars. Calling me a liar.
+
+[ETHAN_COLE | style: measured, guarded]
+The mouth movements are almost right. Almost.
+
+[MIRA_KWON | style: sharp, defensive]
+I said I'm fine, Ethan.
+
+[NARRATOR]
+Her hands are shaking. She folds them into her lap where he can't see.
+
+[ETHAN_COLE | style: gentle but firm]
+Okay. Okay. We don't post anything yet. Not until we know who made this.
+
+[MIRA_KWON | style: reluctant agreement]
+Agreed. If we react before we understand it, we just hand them a second story.
+
+[ETHAN_COLE | style: thoughtful, quiet]
+Right after the Marsh episode. That's — that's a specific window.
+
+[MIRA_KWON | style: careful, not quite saying it]
+Specific. Yeah.
+
+[NARRATOR]
+Neither says the word timing again. It sits between them anyway, louder than the silence.
+
+[ETHAN_COLE | style: steady, closing the moment]
+We hold. No statement, no comment, nothing live. Just — we watch, and we work.
+
+[MIRA_KWON | style: exhausted, resolved]
+Watch and work. Fine.
+
+[NARRATOR]
+Mira sets the phone face-down on the desk. Neither of them touches it again.
+
+--- PART 2 ---
+
+[NARRATOR]
+The podcast studio, later that morning. Mira and Ethan sit across the same microphones they've shared for three seasons, about to record a statement on the video overnight.
+
+[MIRA_KWON | style: tight, controlled]
+Okay. Let's just say it. Say the word "fake" and move on.
+
+[ETHAN_COLE | style: calm, deliberate]
+Say it, sure. But we don't need to describe how good it looks. That just tells people to go watch it again.
+
+[MIRA_KWON | style: pushing back, quiet frustration]
+Ethan, people are already watching it again. If we don't say how convincing it is, we look like we're hiding something.
+
+[ETHAN_COLE | style: measured, careful]
+Or we look like we're not panicking. There's a difference between transparency and feeding the fire.
+
+[SFX: a chair creaking as someone shifts weight]
+
+[MIRA_KWON | style: flat, testing him]
+You've barely looked at me since I sat down.
+
+[ETHAN_COLE | style: too smooth, recovering]
+I'm looking at the script. We've got maybe forty seconds before this stops sounding careful and starts sounding scared.
+
+[NARRATOR]
+Mira studies him a moment longer, then lets it go, reading his caution as nerves rather than anything more.
+
+[MIRA_KWON | style: resigned]
+Fine. Your wording. But I want "fabricated" in there. Not "unverified." Fabricated.
+
+[ETHAN_COLE | style: conceding, quiet relief]
+Fabricated works.
+
+[NARRATOR]
+They run the statement once, low and even, careful in a way that sounds almost rehearsed.
+
+[MIRA_KWON | style: on-mic, composed]
+Listeners — a video circulating online this week uses fabricated audio and video to impersonate one of us. We're aware of it, we're looking into its origin, and we'll share what we learn when we can confirm it.
+
+[ETHAN_COLE | style: on-mic, warm but clipped]
+In the meantime, nothing in that video came from this show, and nothing about our reporting has changed.
+
+[NARRATOR]
+The recording light clicks off.
+
+[SFX: a soft electronic click, recording light switching off]
+
+[MIRA_KWON | style: uneasy, half to herself]
+That felt thin.
+
+[ETHAN_COLE | style: quiet, distracted]
+It felt safe.
+
+[NARRATOR]
+Neither one says the word neither can stop thinking — that the timing of the video lines up too neatly with something the show has already published. Mira gathers her notes for the drive across town, back to the one witness still willing to talk.
+
+--- PART 3 ---
+
+[NARRATOR]
+Pike's apartment, the following afternoon. Mira Kwon and Ethan Cole return, a list of discharge names between them and the door already unlatched.
+
+[DR_HAROLD_PIKE | style: cautiously warmer than last visit]
+You came back. Most people don't come back.
+
+[MIRA_KWON | style: gentle, professional]
+We said we would.
+
+[DR_HAROLD_PIKE | style: dry, resigned]
+People say a lot of things. Sit. I put the chain off the door for you, that's as much hospitality as you're getting.
+
+[SFX: a door chain sliding and settling against wood]
+
+[ETHAN_COLE | style: easy, disarming]
+Chain's more than we got last time. We'll take it.
+
+[MIRA_KWON | style: businesslike, careful]
+Mr. Pike, I want to read you some names. Just tell me if they're familiar. Rosalind Farr.
+
+[DR_HAROLD_PIKE | style: quiet, remembering]
+Typed her discharge myself. Never saw her face. They didn't bring the patients down to records, you understand. Just the paperwork.
+
+[MIRA_KWON | style: steady]
+Bertram Cole. No relation, far as we know. Thomas Idry. Grace Whitfield.
+
+[DR_HAROLD_PIKE | style: nodding slowly, half to himself]
+Whitfield. Yes. Whitfield I remember because the file came down twice. Once wrong, once corrected. I typed the correction myself and never asked why.
+
+[ETHAN_COLE | style: level, taking notes]
+You just signed what came down.
+
+[DR_HAROLD_PIKE | style: flat, a little ashamed]
+I signed what came down. That was the job. Somebody above decides, somebody below types. I was below.
+
+[MIRA_KWON | style: leaning in, careful not to push too hard]
+Who decided? Whose instructions were you following?
+
+[DR_HAROLD_PIKE | style: guarded, choosing words slowly]
+Nobody said a name to me. Not once, in five years. Everyone just called him the Director. That's all he ever was to us. The Director wants this discharged. The Director wants that file closed. You didn't ask which director. There was only ever the one.
+
+[NARRATOR]
+Ethan writes the phrase down without looking up.
+
+[ETHAN_COLE | style: carefully neutral, betraying nothing]
+The Director. Got it.
+
+[MIRA_KWON | style: quiet, encouraging]
+Did anyone ever use a name in front of you? Even once, by accident?
+
+[DR_HAROLD_PIKE | style: sudden, closing off]
+No. And I think that's enough files for today.
+
+[SFX: a teacup set down hard on a saucer]
+
+[DR_HAROLD_PIKE | style: forcing lightness, deflecting]
+You want tea before you go? I only have the one kind. Never learned to like the fancy stuff.
+
+[MIRA_KWON | style: matching his shift, easing off]
+Tea's fine, Mr. Pike.
+
+[NARRATOR]
+Neither of them presses further. Pike busies himself at the counter, and the subject of the Director does not come up again this visit.
+
+--- PART 4 ---
+
+[NARRATOR]
+The War Room, that same night. Mira Kwon, the podcast's lead investigator, sits with Eleanor Voss's decoded shorthand spread across the table, Ethan Cole beside her.
+
+[MIRA_KWON | style: focused, typing fast]
+Pike said "the Director." Just that. No name. So if Eleanor ever wrote it down herself—
+
+[SFX: a laptop keyboard clacking rapidly]
+
+[MIRA_KWON | style: muttering to herself]
+Come on. Come on.
+
+[NARRATOR]
+She runs the word through Eleanor's cipher key, cross-checking a page flagged weeks ago as unresolved.
+
+[MIRA_KWON | style: sudden, sharp intake]
+Ethan.
+
+[ETHAN_COLE | style: mild, leaning in]
+What.
+
+[MIRA_KWON | style: reading, voice rising with excitement]
+"The Director ordered all admission photographs destroyed. I did not comply. I photographed what remained before the order reached the ward."
+
+[MIRA_KWON | style: breathless]
+She wrote it. In her own hand. "The Director." Not initials this time — the actual title, spelled out.
+
+[ETHAN_COLE | style: carefully even]
+Read it again.
+
+[NARRATOR]
+Mira does, slower, and Ethan listens without moving, his eyes fixed on the page rather than on her.
+
+[ETHAN_COLE | style: neutral, controlled]
+That lines up with what Pike said. Same phrase. Same authority structure.
+
+[MIRA_KWON | style: energized]
+It's not just lining up, Ethan — it's the same person giving Pike his orders and giving Eleanor hers. Two separate sources, same title. That's corroboration. That's the strongest thing we've had all season.
+
+[ETHAN_COLE | style: measured]
+We should log it properly before we start celebrating. Flag it for the next decoding pass, see if there's more shorthand around it we're missing.
+
+[MIRA_KWON | style: already moving]
+Agreed. I'll tag it now.
+
+[SFX: a folder being set down on a table]
+
+[NARRATOR]
+Mira enters the page into the shared archive, then checks her watch.
+
+[MIRA_KWON | style: distracted, gathering her phone]
+I need to call the archivist about the vault access before he leaves for the night. Can you finish logging the surrounding pages? Shouldn't take long.
+
+[ETHAN_COLE | style: casual]
+Go. I've got it.
+
+[NARRATOR]
+Mira steps out of the room, phone already to her ear, leaving the physical page and the open archive terminal with Ethan.
+
+[MIRA_KWON | style: offscreen, fading]
+Hi — yes, it's Mira again, sorry to catch you this late—
+
+[NARRATOR]
+The door swings shut behind her.
+
+[SFX: a door clicking shut]
+
+--- PART 5 ---
+
+[NARRATOR]
+The war room again, but the thread shifts — this is the Inside Plant now. Ethan is alone with the newly logged page, the rest of the team gone for the night.
+
+[ETHAN_COLE | style: quiet, methodical]
+Two more lines Mira didn't finish. Might as well.
+
+[SFX: pen tapping steadily against a legal pad]
+
+[ETHAN_COLE | style: focused, murmuring to himself]
+Cross the loop, drop the tail... that's not one letter. It's two.
+
+[ETHAN_COLE | style: voice flattening]
+W. A.
+
+[ETHAN_COLE | style: barely audible, still]
+Same slant every time it repeats. Same shape as the monogram on the cufflinks in my mother's cedar box.
+
+[ETHAN_COLE | style: quiet, final]
+There's no other reading. There never was, really. I just hadn't let myself finish the sentence.
+
+[SFX: a chair creaking as he sits back heavily]
+
+[ETHAN_COLE | style: controlled, almost rehearsed]
+Okay. Okay.
+
+[ETHAN_COLE | style: low, decisive]
+This page — the full page — goes under "background, asylum architecture." Nobody searches that tag.
+
+[SFX: keyboard keys clicking in a short burst]
+
+[ETHAN_COLE | style: tight, self-justifying]
+"The Director" stays visible upstream. That's still true. I haven't erased anything. I've just... filed it correctly.
+
+[NARRATOR]
+Footsteps in the hallway. Ethan closes the laptop and straightens the desk before Mira's key turns in the lock.
+
+--- PART 6 ---
+
+[NARRATOR]
+Later that morning, away from the War Room. Mira meets a security researcher she's used before, in a booth at a diner two blocks from the studio — the kind of meeting neither of them puts on a calendar. Coffee's gone cold in front of her; she hasn't touched it.
+[NARRATOR]
+The Silencing Campaign continues. Mira is alone; the contact across from her doesn't appear on the show and isn't named on it, either.
+
+[MIRA_KWON | style: low, urgent, keeping her voice down]
+Walk me through it. Frame by frame, like you said. I want to know exactly what I'm looking at before I say a single word to anyone else.
+
+[SFX: a laptop turned around on the table]
+
+[MIRA_KWON | style: listening, jaw tightening]
+Professional tools. Not something scraped together in someone's bedroom in an afternoon.
+
+[MIRA_KWON | style: pressing, quiet]
+So this isn't a troll with a grudge and a download. Someone paid real money for this. Someone who's done it before.
+
+[MIRA_KWON | style: turning it over]
+A data center, not someone's garage. That's not cheap, and it's not fast either — this took planning.
+
+[MIRA_KWON | style: absorbing it, careful]
+A specific server. You traced the upload that far already —
+
+[MIRA_KWON | style: testing the limit]
+But not who's sitting behind it. Not yet.
+
+[MIRA_KWON | style: resolute]
+Then find out. That's what I'm paying you for.
+
+[MIRA_KWON | style: firm, decisive]
+Keep going. Quietly. I don't want whoever built this knowing we're pulling on that thread, and honestly — I don't want it getting back to my own team yet either, not until there's a name attached to it. The second this looks like we're digging, it disappears.
+
+[SFX: a mug set down hard on the table]
+
+[MIRA_KWON | style: lower, almost to herself]
+Professional. Funded. Timed. That's not a coincidence, that's a plan.
+
+[MIRA_KWON | style: standing, businesslike, masking how unsettled she is]
+Thank you. Really. The moment you have anything on that server, you call me — I don't care what time it is. I'll pick up.
+
+[NARRATOR]
+She leaves cash on the table and doesn't glance back at the screen. Whatever careful, hedged version of this she gives the team later, to herself she's already stopped calling it random.
+
+--- PART 7 ---
+
+[NARRATOR]
+Victor Lane's office, a converted floor above a logistics firm no one questions. Victor Lane — the fixer running the campaign against the podcast — studies a wall of screens tracking the video's spread.
+
+[VICTOR_LANE | style: calm, satisfied]
+Forty-one thousand shares in six hours. Engagement curve's still climbing. That's not viral by accident, that's viral by design.
+
+[SFX: a mouse click, soft]
+
+[VICTOR_LANE | style: measured, addressing someone off to the side]
+You want to know how we called the Marsh episode nine days out. Before it aired. Before we could've read a transcript.
+
+[VICTOR_LANE | style: cool, closing the subject]
+That's not a question I answer in a room with more than one person in it. Somebody upstream did their job. That's all you need to carry forward.
+
+[SFX: a folder set down on a glass desk]
+
+[VICTOR_LANE | style: brisk, businesslike]
+Digital phase held them where we want them — rattled, distracted, arguing with each other instead of chasing records. Now we tighten it. Sponsors next. Every partner with a logo on that show gets a call this week. Not threats. Just... concern. Liability language. Let them talk themselves out of the relationship.
+
+[VICTOR_LANE | style: dry, almost amused]
+People don't need to be told to be afraid of their own board meetings. They do that part for us.
+
+[SFX: a chair creaking as someone shifts weight]
+
+[VICTOR_LANE | style: flat, dismissive of urgency]
+No. Nothing physical. Not yet. Reputational pressure folds shows like this one nine times out of ten — cut the money, cut the nerve, the story dies from neglect. We don't escalate what we haven't had to.
+
+[VICTOR_LANE | style: firm, final]
+Client wants patience over noise. So we're patient. Loudly, if that makes sense to you — patient in a way everyone in that studio can feel.
+
+[SFX: a door opening briefly, muffled hallway sound, then closing]
+
+[VICTOR_LANE | style: quietly confident, almost to himself]
+Nine days early and they still don't know why. That's the whole game, right there.
+
+[NARRATOR]
+He turns back to the screens, the numbers still climbing, and says nothing further before the meeting ends.
+
+--- PART 8 ---
+
+[NARRATOR]
+Later that morning, back at the podcast studio. The Silencing Campaign continues — a call comes in from one of the show's longtime sponsors.
+
+[NARRATOR]
+Mira takes it on speaker; Ethan listens beside her.
+
+[SFX: a phone buzzing and clattering on a desk before being picked up]
+
+[MIRA_KWON | style: professional, guarded]
+This is Mira.
+
+[MIRA_KWON | style: flat, listening]
+Hi, Carol. Yeah, I figured you'd call.
+
+[MIRA_KWON | style: tightening, controlled]
+No — I understand. I do. But "pause" until when, exactly?
+
+[MIRA_KWON | style: sharper, pushing back]
+We didn't make that video, Carol. Someone made it to look like us.
+
+[MIRA_KWON | style: frustrated, restrained]
+I hear you. "Optics." Sure.
+
+[ETHAN_COLE | style: warm, smoothing it over]
+Carol, it's Ethan — let me jump in for a second.
+
+[ETHAN_COLE | style: measured, reassuring]
+We completely understand the caution. Nobody wants to be associated with something unverified.
+
+[ETHAN_COLE | style: calm, diplomatic]
+What if we send over a written statement today — timeline, what we know, what we're doing about it. Something you can point to internally.
+
+[ETHAN_COLE | style: gently closing]
+That work for now? Good. We'll have it to you by end of day.
+
+[SFX: a phone call ending with a soft click]
+
+[MIRA_KWON | style: incredulous, low]
+"Pause the partnership." Like we did something.
+
+[ETHAN_COLE | style: even, careful]
+She's not wrong to be nervous. It's a liability question for her, not a loyalty one.
+
+[MIRA_KWON | style: building heat]
+It's not a liability question, Ethan, it's exactly what someone wanted to happen. Video goes out, sponsors get spooked, money dries up, show gets quieter. That's not a coincidence, that's a design.
+
+[MIRA_KWON | style: certain, unsettled]
+This is what a coordinated attack looks like from the inside. Not headlines. Phone calls like that one.
+
+[ETHAN_COLE | style: quiet, agreeing — a beat too careful]
+Yeah. No, you're — you're right.
+
+[NARRATOR]
+Ethan doesn't say anything more. Mira doesn't notice how long the silence after his answer runs.
+
+--- PART 9 ---
+
+[NARRATOR]
+Back at the War Room, midday. The Inside Plant thread returns — Mira opens the shared archive to pull the diary page decoded the night before.
+
+[MIRA_KWON | style: focused, scanning]
+Okay, page forty-one, the Director reference, I want to cross-tag it before we forget which — 
+
+[MIRA_KWON | style: puzzled]
+That's strange.
+
+[ETHAN_COLE | style: casual, half-listening]
+What's strange?
+
+[MIRA_KWON | style: distracted, still searching]
+It's not here. It was logged last night, I watched you tag it myself, and now it's just — gone from the folder.
+
+[SFX: rapid keyboard clicking]
+
+[MIRA_KWON | style: mildly frustrated]
+Let me check the tag history.
+
+[NARRATOR]
+A short pause while Mira works the system.
+
+[MIRA_KWON | style: reading aloud, slightly annoyed]
+It says the entry was moved. Last night. But it doesn't show who moved it, the field's just blank.
+
+[ETHAN_COLE | style: even, unbothered]
+Probably the sync again. That tagging system's glitched on us before — remember when the Pike transcript duplicated itself into three folders?
+
+[MIRA_KWON | style: sighing]
+Yeah. God, I hoped they'd fixed that.
+
+[ETHAN_COLE | style: reassuring]
+I'll shoot the vendor an email, tell them it's happening again. In the meantime I'm sure it's sitting in some orphan directory somewhere.
+
+[MIRA_KWON | style: resigned]
+Fine. It's probably nothing. I just don't love not being able to find the one page that finally corroborates Pike.
+
+[ETHAN_COLE | style: light, deflecting]
+It'll turn up. These things always do.
+
+[MIRA_KWON | style: already moving on]
+Yeah. Okay — I've got the sponsor call in twenty, can you pull the incorporation search results before then? I want to look at the redacted years again.
+
+[ETHAN_COLE | style: agreeable]
+Already got them queued up.
+
+[SFX: a folder of papers dropped onto a desk]
+
+[MIRA_KWON | style: businesslike]
+Great. Let's focus on that instead — the Director reference isn't going anywhere. It's decoded, it's ours, even if the file's being annoying about where it lives.
+
+[NARRATOR]
+Mira turns her attention to the desk of loose papers, the missing page already fading from her mind as the next task takes over.
+
+--- PART 10 ---
+
+[NARRATOR]
+The Archive Vault, city records annex, midafternoon. Mira and Ethan comb state incorporation filings for any asylum director whose surname starts with "A."
+
+[SFX: a heavy binder dropped onto a table]
+
+[MIRA_KWON | style: focused, scanning]
+Nineteen seventy-two is here. Seventy-three. Seventy-five just... isn't.
+
+[ETHAN_COLE | style: casual, unhurried]
+Redacted, or missing?
+
+[MIRA_KWON | style: frustrated]
+Missing. No folder, no placeholder, nothing. Same with most of seventy-four.
+
+[ETHAN_COLE | style: careful, steering]
+State archives lose whole years all the time. Budget cuts, water damage, you name it.
+
+[MIRA_KWON | style: dry]
+Convenient years to lose, though.
+
+[SFX: pages flipping rapidly]
+
+[MIRA_KWON | style: rising interest]
+Okay — director of record, seventy-one through seventy-two. "A. Ferris." That's an A.
+
+[ETHAN_COLE | style: measured, dismissive]
+Ferris ran the west wing, though, didn't he? Administrative, not clinical.
+
+[MIRA_KWON | style: considering]
+Maybe. Still going on the list.
+
+[ETHAN_COLE | style: gently redirecting]
+There's a board minutes packet from seventy-three in the side box. Might be faster to start there — smaller, easier to search.
+
+[MIRA_KWON | style: agreeable, distracted]
+Sure. You take that, I'll keep going on the licensing filings.
+
+[SFX: a metal box lid creaking open]
+
+[ETHAN_COLE | style: flat, private]
+(quietly, to himself)
+Nothing in here with a full name attached. Good.
+
+[MIRA_KWON | style: half to herself]
+There's an "Aldous" on a insurance rider from seventy-six. No first name, just the initial. "A. Aldous."
+
+[ETHAN_COLE | style: neutral]
+Worth a note. Doesn't mean much without a title next to it.
+
+[MIRA_KWON | style: tired but determined]
+None of this means much without a title next to it. That's the problem.
+
+[SFX: a chair leg scraping on concrete]
+
+[MIRA_KWON | style: stretching, weary]
+Three names. Ferris, Aldous, and a half-legible signature that might say "Ashby." None of them confirmed, none of them tied to a title.
+
+[ETHAN_COLE | style: reassuring, calm]
+It's a start. Better than where we were this morning.
+
+[MIRA_KWON | style: resolved]
+It's a start I don't trust yet. I want to see these against personnel records before I say any of them out loud on air.
+
+[ETHAN_COLE | style: agreeable]
+Agreed. Nobody gets named until we're sure.
+
+[NARRATOR]
+They leave the vault with three unconfirmed initials and no title to anchor any of them — closer, still short, and Ethan makes certain it stays that way.
+
+--- PART 11 ---
+
+[NARRATOR]
+Pike's apartment again, a follow-up visit. Mira Kwon and Ethan Cole sit across from the retired records orderly, notebooks open.
+
+[MIRA_KWON | style: warm but careful]
+You said last time everyone just called him "the Director." Never a name.
+
+[DR_HAROLD_PIKE | style: guarded, tired]
+That's right. That's what we called him.
+
+[MIRA_KWON | style: gentle, coaxing]
+I'm not asking you to put anything in writing, Dr. Pike. I just want to understand who I'm even looking for.
+
+[DR_HAROLD_PIKE | style: hesitant]
+You're looking for a man who's been dead a long time, Miss Kwon. Looking won't change what he did.
+
+[MIRA_KWON | style: quiet, patient]
+Maybe not. But it might change what happens to the people whose names are still in those files.
+
+[DR_HAROLD_PIKE | style: long pause, uneasy]
+His name was...
+
+[DR_HAROLD_PIKE | style: catching himself, breath tightening]
+Ash—
+
+[SFX: a ceramic mug set down hard on a wooden table]
+
+[DR_HAROLD_PIKE | style: shaken, low]
+No. No, I've said enough. More than enough already.
+
+[ETHAN_COLE | style: even, controlled, betraying nothing]
+Nobody's asking you to say more than you're comfortable with, Dr. Pike.
+
+[DR_HAROLD_PIKE | style: hands trembling, voice tight]
+You don't understand. Some names, once you say them out loud, they don't go back in the box.
+
+[MIRA_KWON | style: soft, reassuring]
+Okay. Okay, we'll leave it there for today.
+
+[DR_HAROLD_PIKE | style: quiet, almost to himself]
+I signed those papers. I never asked what happened after. Man convinces himself that makes him innocent.
+
+[MIRA_KWON | style: careful, not pushing]
+Nobody's calling you guilty, Dr. Pike.
+
+[DR_HAROLD_PIKE | style: bitter, small laugh]
+Not yet, maybe.
+
+[NARRATOR]
+A silence settles over the room. Pike looks toward the door, as though checking it's still locked.
+
+[DR_HAROLD_PIKE | style: firm, closing the subject]
+I think that's all for today.
+
+[MIRA_KWON | style: gentle]
+Of course. Thank you for your time.
+
+[NARRATOR]
+Outside on the landing, the door shuts behind them.
+
+[MIRA_KWON | style: frustrated but low-voiced]
+Did you hear that? He almost had it out.
+
+[ETHAN_COLE | style: measured, careful]
+He stopped himself. Whatever that name is, it scares him more than we understand.
+
+[MIRA_KWON | style: thoughtful, quiet]
+It starts with "Ash." That's something.
+
+[ETHAN_COLE | style: flat, controlled]
+It's a fragment. Could be anything.
+
+[MIRA_KWON | style: resolved]
+It's not anything. It's a thread. And I intend to pull it.
+
+[NARRATOR]
+They start down the stairwell, Mira already reaching for her phone, Ethan a half-step behind her, saying nothing at all.
+
+--- PART 12 ---
+
+[NARRATOR]
+Podcast studio, evening. The Silencing Campaign thread continues — Mira and Ethan, alone at the console after the day's calls.
+
+[MIRA_KWON | style: tense, controlled]
+Three sponsors this week. Three. And every single one uses the same word — "pause."
+
+[ETHAN_COLE | style: measured, guarded]
+Pause isn't cancel.
+
+[MIRA_KWON | style: sharp, frustrated]
+It's cancel with better manners, Ethan. We put out ninety seconds of hedging and hoped it would go away. It's not going away.
+
+[ETHAN_COLE | style: careful, reasoning]
+We don't know who's behind it yet. If we name it — call it a professional job, targeted, funded — we're telling whoever made that video we're scared and we're guessing. That's not strength, that's a target painted on our backs.
+
+[MIRA_KWON | style: barely holding it together]
+And staying quiet is what, protection? Look at what quiet has bought us so far. Sponsors bailing. Listeners in the comments asking if I actually said those things. Somebody built a version of my voice saying things I never said, Ethan, and our answer was a mumbled non-denial.
+
+[SFX: a mug set down hard on the console]
+
+[ETHAN_COLE | style: low, steady]
+I'm not saying stay quiet forever. I'm saying we don't know the shape of what we're provoking. Strategic patience isn't the same as hiding.
+
+[MIRA_KWON | style: cutting]
+Strategic patience is a phrase people use when they're afraid of a decision. I've seen you use it three times this week.
+
+[ETHAN_COLE | style: quiet, wounded]
+That's not fair.
+
+[MIRA_KWON | style: softening slightly, still firm]
+Maybe not. But tell me the vague statement bought us anything. Tell me one sponsor call that went better because we didn't say the word "deepfake" out loud.
+
+[ETHAN_COLE | style: long pause, resigned]
+...No.
+
+[MIRA_KWON | style: resolute]
+Then we stop dodging. Next episode, we name it. Professionally rendered, deliberately timed, aimed at us specifically. We describe exactly how convincing it is, so nobody mistakes it for some kid with software. We let the audience see it clearly, because right now the silence is doing more damage than the truth could.
+
+[ETHAN_COLE | style: reluctant, still uneasy]
+Fine. We do it directly. Next episode.
+
+[MIRA_KWON | style: relieved, tired]
+Thank you.
+
+[NARRATOR]
+Ethan nods, and says nothing more — the agreement made, the hesitation underneath it left unspoken.
+
+--- PART 13 ---
+
+[NARRATOR]
+A parking garage beneath the city, several levels down, concrete and fluorescent light. The Silencing Campaign continues — Victor Lane meets the contractor running surveillance on the podcast's studio.
+
+[SFX: a car door closing, echoing off concrete]
+
+[VICTOR_LANE | style: clipped, businesslike]
+Walk me through it again. Slowly. I want the whole week.
+
+[VICTOR_LANE | style: listening, unreadable]
+Good. Entry points, staff rotation, the security windows on the studio door — all confirmed, nothing assumed?
+
+[VICTOR_LANE | style: flat]
+Then we hold. Monitoring only. Nobody goes near the building, nobody near the cars, nothing beyond watching. Is that understood.
+
+[VICTOR_LANE | style: measured, cold]
+You're asking if you should prepare for something more. That depends on how the sponsors react first. Not before.
+
+[VICTOR_LANE | style: dismissive, final]
+You don't need a name for this. You don't need a reason. You need the schedule to stay accurate and the reports to keep coming.
+
+[SFX: footsteps receding across concrete, unhurried]
+
+[NARRATOR]
+Victor climbs into his car and pulls away, leaving the contractor's question about what comes next unanswered — by design, not oversight.
+
+--- PART 14 ---
+
+[NARRATOR]
+Late evening in the War Room. The team has gone home. Only Mira and Ethan remain, the corkboard timeline half-rebuilt between them.
+
+[SFX: a marker cap clicking off]
+
+[MIRA_KWON | style: focused, tired]
+If Pike gives us one more discharge name, I want the whole February batch mapped before we go back.
+
+[ETHAN_COLE | style: quiet, watching her]
+You've redrawn that line three times.
+
+[MIRA_KWON | style: dry, half-smiling]
+Because it keeps not matching the archive. Something's off with the dates.
+
+[SFX: a marker squeaking faintly against the whiteboard]
+
+[ETHAN_COLE | style: hesitant, the words arriving before he means them to]
+About the page that went missing—
+
+[MIRA_KWON | style: alert, still holding the marker]
+Yeah?
+
+[NARRATOR]
+He hesitates, the name rising and receding behind his eyes.
+
+[ETHAN_COLE | style: caught, retreating]
+I keep thinking about it. That's all.
+
+[MIRA_KWON | style: patient, waiting him out]
+Thinking what.
+
+[ETHAN_COLE | style: measured, forcing the words into something safer]
+Whether it's the syncing again. Whether we should just stop trusting the archive and start keeping paper copies of everything, going forward.
+
+[MIRA_KWON | style: considering, letting it pass]
+Maybe. It's not the first time that folder's glitched on us.
+
+[NARRATOR]
+He exhales, the moment closing over like water.
+
+[ETHAN_COLE | style: casual, deliberately changing course]
+Did the sponsor call back? About the pause?
+
+[MIRA_KWON | style: matter-of-fact, capping the marker]
+Not yet. I told their guy we'd have a statement by Friday. He didn't sound thrilled.
+
+[ETHAN_COLE | style: neutral, steady]
+We'll get there.
+
+[MIRA_KWON | style: light, unaware anything shifted]
+You okay? You've had that face all night.
+
+[ETHAN_COLE | style: careful, a practiced calm]
+Long week.
+
+[NARRATOR]
+Mira nods, turning back to the board, tracing a line between two names that still won't align.
+
+[MIRA_KWON | style: absorbed, half to herself]
+February. It has to be February.
+
+[NARRATOR]
+Ethan watches her work, the unsaid name sitting behind his teeth long after she's stopped looking at him.
+
+[SFX: a chair creaking as he leans back]
+
+[ETHAN_COLE | style: barely audible, almost to himself]
+Not tonight.
+
+--- PART 15 ---
+
+[NARRATOR]
+Nineteen seventy-six. The sealed ward, after lights-out. Eleanor Voss, night nurse, alone at a metal desk with a single lamp.
+
+[SFX: a desk lamp chain clicking, then a soft electrical hum]
+
+[ELEANOR_VOSS | style: quiet, methodical]
+Ten forty-two. Wing C, quiet. Patient rounds complete.
+
+[ELEANOR_VOSS | style: quiet, methodical]
+Today: two admission photographs requested for destruction. I did not destroy them.
+
+[SFX: a pen scratching steadily on paper]
+
+[ELEANOR_VOSS | style: measured, growing tense]
+Order given by Dr. Warren Ashcroft. Director.
+
+[ELEANOR_VOSS | style: barely a whisper | speed: 0.9]
+Warren Ashcroft.
+
+[NARRATOR]
+She writes the name once, in full, in her own hand.
+
+[ELEANOR_VOSS | style: low, deliberate]
+There. Written. Just once, so I know I didn't imagine him.
+
+[SFX: pages turning, then a smaller notebook being opened]
+
+[ELEANOR_VOSS | style: focused, private]
+Now the other book. His name doesn't get to live where anyone could find it.
+
+[ELEANOR_VOSS | style: murmuring to herself, working]
+W... A... the long stroke under, the way I do the sevens.
+
+[SFX: a pen scratching, slower, more careful]
+
+[ELEANOR_VOSS | style: quiet, resolute]
+There. Now it says nothing to anyone who isn't me.
+
+[ELEANOR_VOSS | style: reflective, quiet]
+If I disappear before this is finished — and some nights I think that's exactly what's being planned — this page still has to say his name. Even if I can't.
+
+[ELEANOR_VOSS | style: firm, controlled]
+Not his title. Not "the Director." Him. Warren Ashcroft ordered it. Warren Ashcroft signed for it. Somewhere in these pages, that has to survive, however small I have to make it.
+
+[NARRATOR]
+She closes the notebook and crosses the room.
+
+[SFX: a floorboard creaking, then a soft scrape of wood against wood]
+
+[ELEANOR_VOSS | style: hushed, practiced]
+Same place. Under the loose board, behind the pipe. Nobody looks where the plumbing looks broken.
+
+[SFX: the floorboard settling back into place]
+
+[ELEANOR_VOSS | style: quiet, almost to herself]
+English would be faster. English would also get me fired. Or worse.
+
+[ELEANOR_VOSS | style: soft, wondering]
+I keep thinking someone's going to need this page someday. Not me — someone after me. Someone who reads slower than I write.
+
+[ELEANOR_VOSS | style: tired but steady]
+Whoever you are. I'm sorry it's in code. I'm not sorry I wrote it down.
+
+[NARRATOR]
+She turns off the lamp. The ward goes dark around her.
+
+[SFX: the desk lamp chain clicking off]
+
+--- PART 16 ---
+
+[NARRATOR]
+War Room, later that evening. The team gathers around the archive table — Mira, Ethan, and their producer — to decide whether the Director reference airs tonight.
+
+[MIRA_KWON | style: resolute, edged with anger]
+If we pull back now, whoever made that video wins. That's the whole point of it — scare us into silence.
+
+[ETHAN_COLE | style: measured, careful]
+Nobody's talking about silence. I'm talking about one more pass at verification before we put a title like "Director" on the air.
+
+[MIRA_KWON | style: firm]
+We have Pike calling him that on tape. We have Eleanor's diary using the same word, independently, forty years apart. That's not a guess, Ethan, that's corroboration.
+
+[ETHAN_COLE | style: quiet, guarded | speed: 0.95]
+I know what it looks like. I just don't want us naming a title we can't fully back if someone comes after it.
+
+[MIRA_KWON | style: pointed]
+We're not naming a person. We're naming a role somebody in that building held. That's defensible.
+
+[SFX: a marker cap snapping onto a whiteboard pen]
+
+[NARRATOR]
+Their producer sets the pen down, waiting.
+
+[ETHAN_COLE | style: reluctant, resigned]
+Fine. The title only. No surname, no speculation past what Pike and the diary actually give us.
+
+[MIRA_KWON | style: settling, satisfied]
+That's all I'm asking for. We say "the Director" existed, we say he gave the orders, and we let the audience sit with that.
+
+[ETHAN_COLE | style: flat, controlled]
+And if the video comes back at us harder because of it?
+
+[MIRA_KWON | style: steady]
+Then it comes back at us for telling the truth. I can live with that a lot easier than backing off.
+
+[NARRATOR]
+Ethan doesn't answer right away. He looks at the archive folder still open on the table — the fuller page, the one only he has read, sitting one drawer over from the version Mira means to air.
+
+[ETHAN_COLE | style: low, almost to himself]
+Alright. The Director. Nothing more than that tonight.
+
+[MIRA_KWON | style: brisk, moving into work mode]
+Good. Let's get levels set before either of us loses our nerve.
+
+[SFX: a microphone stand being adjusted, metal scraping softly]
+
+[NARRATOR]
+They pull their chairs to the mics. Mira scans her notes one last time; Ethan straightens the folder without opening it again.
+
+[MIRA_KWON | style: focused, quieter now]
+Ready when you are.
+
+[ETHAN_COLE | style: composed, giving nothing away]
+Ready.
+
+[NARRATOR]
+The red light comes on. Two people say yes to the same sentence tonight, for reasons neither one says out loud.
+
+--- PART 17 ---
+
+[NARRATOR]
+Later that night, the War Room. Recording finished, the team gone — only Mira and Ethan remain among the boards and files.
+
+[MIRA_KWON | style: measured, direct]
+Before you go — the page. The one Pike's mention finally decoded. It was logged Tuesday night, and by Wednesday morning it wasn't there.
+
+[ETHAN_COLE | style: calm, rehearsed]
+I know. I looked too. I think it's the sync again — remember when the transcript tags scrambled themselves back in March?
+
+[MIRA_KWON | style: wary but softening]
+That was different. That was the whole folder, not one page.
+
+[ETHAN_COLE | style: reasonable, unhurried]
+Same system, same bad habits. I'll flag it to whoever built the thing. It's not the first time something's moved on its own.
+
+[MIRA_KWON | style: tired, letting it go]
+Fine. I'll stop chasing ghosts in our own software. I just don't like not knowing where things end up.
+
+[ETHAN_COLE | style: gentle]
+Neither do I. Go home, Mira. I'll lock up.
+
+[NARRATOR]
+Ethan leaves, telling himself the missing page was never truly found — only misplaced, by no one at all. Alone, Mira locks up the War Room for the night.
+
+[SFX: a phone buzzing hard against a metal desk]
+
+[MIRA_KWON | style: startled, then wary]
+Unknown number. This late—
+
+[DR_HAROLD_PIKE | style: a frightened whisper, breath shaking | speed: 0.85]
+Miss Kwon. Someone was just at my door.
+

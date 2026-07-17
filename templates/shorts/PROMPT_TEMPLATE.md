@@ -65,7 +65,8 @@ Tag rules:
 {{STYLE_TAG_RULE}}
 - "speed" is optional (0.5–2.0) for pacing (hesitation, urgency, a controlled/rehearsed delivery).
 - Sound effects go on their own line as [SFX: short description in English]. Never spoken — they never appear in the podcast MP3; a later step generates each sound and mixes it into the video render. Use AT MOST 2 per episode, only where a single sound genuinely lands a beat (a door, a phone buzzing). Cue ONLY what a microphone would actually pick up — never a held beat, tension, silence, or a character breathing/exhaling: those are not sounds. Never rely on SFX for orientation.
-- NEVER write stage directions, camera notes, or any other meta text outside this tag system.
+- NEVER write stage directions, camera notes, or any other meta text outside this tag system. That includes bare third-person action sentences dropped between lines of dialogue ("He signs the form without hesitation." / "Marcus looks at Elias.") — the TTS reads EVERYTHING under a speaker tag aloud in that character's voice, so a stray action sentence gets spoken as dialogue. If an action matters, let a character react to it in speech, cue it as [SFX: ...] if it makes a sound, or give it to the NARRATOR at a scene cut.
+- Every speaking character in a part must have their own tag with their own role name — never put another person's words (a receptionist, a reporter, a bartender) under a main character's tag; if someone has no role in the cast list, keep them non-speaking (one-sided phone calls, NARRATOR paraphrase).
 
 HOOK-FIRST OPENING (PART 1 only — this rule outranks everything else):
 The episode opens MID-CONFLICT. The very first spoken line is the hook: an accusation, a revelation, a dangerous question, a line clearly said to the wrong person — delivered by a CHARACTER, not the narrator. No greeting, no scene-setting, no easing in. If the first line would not stop a stranger mid-scroll, it is the wrong line.

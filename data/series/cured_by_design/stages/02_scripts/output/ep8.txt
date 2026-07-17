@@ -1,0 +1,744 @@
+--- PART 1 ---
+
+[NARRATOR]
+Previously on Cured by Design: Mira Kwon confirmed what she once refused to believe — her co-host, Ethan Cole, is Julian Wexford's grandson, and has known it since before the podcast began. She has not told him she knows. Senator Delia Marsh agreed, for the first time, to appear on the other side of the microphone. And on an unlisted line, Victor Lane gave Ethan his final order.
+
+[NARRATOR | style: measured, neutral]
+Tonight, the season ends the only way it can: live. From an encrypted bunker two floors beneath the city, a podcast that began with a stranger's Polaroids goes out to whoever is still listening.
+
+[NARRATOR]
+All season, the pressure has built from different directions — a records orderly breaking forty years of silence, a senator's family history, a security firm's quiet campaign to make a podcast disappear, and a co-host who has spent months steering the story away from himself. Tonight, none of it can wait any longer.
+
+[NARRATOR]
+By airtime, every one of them will be in the same room, or listening to it happen. The host who found the file first. The man who has been managing it from the inside. The senator with something to say on the record. The fixer who still believes tonight can be contained.
+
+[NARRATOR]
+Whether that containment holds — whether the feed survives the hour intact, whether the room stays as full as it starts — that isn't the narrator's to say yet.
+
+[NARRATOR | style: quiet, final]
+This is the last broadcast of the season. Everything that follows happens live.
+
+--- PART 2 ---
+
+[NARRATOR]
+The broadcast bunker, ninety minutes before airtime. Mira Kwon and Ethan Cole run final checks at the console, alone except for the sound of their own equipment.
+
+[MIRA_KWON | style: brisk, focused]
+Levels on channel two are still hot. Can you pull it down before Delia's mic goes live?
+
+[ETHAN_COLE | style: easy, competent]
+Already on it. Backup feed's synced too, in case the primary drops mid-broadcast.
+
+[SFX: a fader clicking into place]
+
+[MIRA_KWON | style: even, deliberately casual]
+Good. I don't want a single dead second tonight.
+
+[NARRATOR]
+Nearby, on a side table, Mira has laid out two items within easy reach: an archive photograph and a sealed court filing.
+
+[MIRA_KWON | style: quiet, private]
+(to herself)
+Not yet. When it's time.
+
+[ETHAN_COLE | style: routine, checklist tone]
+Marsh's car just left the hotel. She's coming alone — no staff, no security detail.
+
+[MIRA_KWON | style: neutral, watching him]
+Alone. That's either very brave or very stupid.
+
+[ETHAN_COLE | style: light, unaware]
+With her, I'd guess brave.
+
+[NARRATOR]
+A producer's voice comes through the talkback speaker.
+
+[VICTOR_LANE | style: distant, filtered through speaker, brief]
+Confirming Senator Marsh, ETA twenty-two minutes. She's a go for the second block.
+
+[MIRA_KWON | style: sharp, all business]
+Copy that. Tell security to walk her straight to the desk, no detours.
+
+[SFX: a switch toggling on the console]
+
+[NARRATOR]
+Ethan leans over the board, adjusting a cable run, and Mira lets her eyes drop to his hands.
+
+[MIRA_KWON | style: internal, careful, almost clinical]
+(quiet, to herself)
+Steady. They're always steady.
+
+[NARRATOR]
+She watches the practiced ease of his fingers over the switches — the same hands that, for months, nudged her research away from a name she now knows by heart.
+
+[ETHAN_COLE | style: warm, unaware]
+You've been staring at that board for ten minutes. It's not going to fail on us.
+
+[MIRA_KWON | style: composed, giving nothing away]
+Just making sure everything's exactly where it needs to be.
+
+[ETHAN_COLE | style: light]
+It is. We're ready.
+
+[MIRA_KWON | style: cold resolve, barely beneath the surface]
+(to herself)
+We are.
+
+[NARRATOR]
+She glances once more at the photograph on the side table, then back at the man beside her, and says nothing else.
+
+--- PART 3 ---
+
+[NARRATOR]
+Across the city, in a glass-walled office emptied of everyone but the people he trusts, Victor Lane — the fixer running the campaign to bury the podcast — prepares for the same broadcast from the other side.
+
+[SFX: a phone set down hard on a glass desk]
+
+[VICTOR_LANE | style: clipped, commanding]
+Parking level, sub-two. That's the only door they haven't reinforced. You go in fifteen minutes before air, not before.
+
+[VICTOR_LANE | style: measured, cold]
+No badges, no faces on their cameras. If you're not through in ninety seconds, you're not through tonight.
+
+[SFX: a folder slapping shut]
+
+[VICTOR_LANE | style: guarded]
+And nothing about tonight's staffing goes upstairs. Leadership hears it worked. They don't hear how.
+
+[VICTOR_LANE | style: flat, testing patience]
+Ethan. Anyone.
+
+[SFX: a chair creaking as he shifts forward]
+
+[VICTOR_LANE | style: barely contained frustration]
+Four hours of silence isn't logistics, that's a man who's stopped answering his handler. Try the backup line. Try it again in five minutes if it goes nowhere.
+
+[VICTOR_LANE | style: deciding, hard]
+We don't wait for him to surface. The garage attempt runs on schedule regardless — Ethan or no Ethan. He's supposed to be a second lever, not the only one.
+
+[VICTOR_LANE | style: quiet, almost to himself]
+If that door holds and he holds, this dies in a bunker basement before it ever reaches a country. It doesn't need to be clean. It just needs to end before they say the word "live."
+
+[SFX: a drawer closing]
+
+[VICTOR_LANE | style: cold, final]
+Go. Now. I want confirmation the second you're inside — not after.
+
+[NARRATOR]
+The room clears around him, footsteps receding down a corridor built to keep this exact kind of exit unremarkable — while somewhere across town, a bunker door he's never seen is already being checked twice.
+
+--- PART 4 ---
+
+[NARRATOR]
+The broadcast bunker, forty minutes to air. Senator Delia Marsh — the rising political star who has agreed, for the first time on record, to speak about her own family — arrives alone, no aides, no car idling outside.
+
+[MIRA_KWON | style: warm, a little startled]
+You walked in the front. I had a whole plan for the service elevator.
+
+[SENATOR_DELIA_MARSH | style: composed, quietly resolved]
+I didn't want an escort tonight. Felt wrong, showing up to say this with people carrying my bags.
+
+[ETHAN_COLE | style: easy, professional]
+Senator. Good, you're early — let me get you settled before we lock the run of show.
+
+[SENATOR_DELIA_MARSH | style: measured]
+Please.
+
+[NARRATOR]
+Ethan leads her past the control desk toward the second chair, his manner unchanged, unhurried — a man walking a guest through a segment he's run a hundred times.
+
+[ETHAN_COLE | style: steady, rehearsed]
+You'll come in after the second break. Mira sets you up, you take it from there — nobody's going to cut you off, nobody's going to soften it after the fact. Whatever you say goes out exactly as you say it.
+
+[SENATOR_DELIA_MARSH | style: level]
+That's the part I needed to hear.
+
+[ETHAN_COLE | style: light]
+Headset's a little loose on the left, we'll fix that. Water's there if your mouth goes dry — mine always does.
+
+[SENATOR_DELIA_MARSH | style: dry, almost amused]
+Comforting.
+
+[NARRATOR]
+He checks her mic level, taps the desk twice out of habit, moves on to the next thing on his list. Marsh watches him go — then catches Mira, across the room, watching the two of them with an attention that has nothing to do with audio levels.
+
+[SENATOR_DELIA_MARSH | style: quiet, direct, just to Mira]
+You're staring.
+
+[MIRA_KWON | style: recovering fast, light]
+Occupational hazard. Long night.
+
+[SENATOR_DELIA_MARSH | style: unconvinced but letting it go]
+Longer for some of us than others, I think.
+
+[NARRATOR]
+Mira says nothing further. She lets the senator take her seat, lets the headset settle, lets the room fill in around her — Ethan back at the console, Marsh reading over her own notes one last time.
+
+[SFX: a heavy door sealing shut with a pneumatic hiss]
+
+[NARRATOR]
+The bunker door closes behind the last arrival. For the first time all season, everyone who matters tonight is standing in the same room.
+
+--- PART 5 ---
+
+[NARRATOR]
+Ashgrove Sanatorium, October 1979. The records office, after hours. Nurse Eleanor Voss — whose diaries and photographs will one day become the podcast's central evidence — sits alone at her desk.
+
+[ELEANOR_VOSS | style: quiet, deliberate, no longer whispering even on the page | speed: 0.9]
+No cipher tonight. I've kept this in code for three years because I thought code would keep me safe. It didn't. So I'll write it plain, once, and let it stand as itself.
+
+[ELEANOR_VOSS | style: measured, factual, the fear held very still underneath]
+Dr. Julian Wexford runs a program on the sealed ward. He calls it Threshold. I have seen what it does. Patients go in as themselves and come out someone else — quiet, agreeable, finished. He erases what was there and builds something new in its place, and then he sends them out into the world wearing a stranger's calm.
+
+[SFX: a pen set down hard on a metal desk]
+
+[ELEANOR_VOSS | style: steady, almost gentle]
+I have watched him do it to people with names. I have written the names down elsewhere, where they'll keep. Here I only need to say that it happened, and that I was the one who charted it while it was happening, because someone had to.
+
+[ELEANOR_VOSS | style: quieter, the composure starting to cost her]
+I expect I won't get the chance to say this out loud to anyone. I've asked too many questions in the wrong hallways this month. I don't think Wexford has told me directly that he knows, but I don't think he needs to. So I'm not writing this for a conversation I'm not going to get to have. I'm writing it for whoever opens this instead of me.
+
+[ELEANOR_VOSS | style: resolved, warmer than the rest]
+I'm going to put these pages where they won't be looked for. Not a safe, not a file — somewhere further out, somewhere that waits. I have to trust that whoever finds them will know what to do with them. That they'll know who to believe and who not to, without me standing there to point.
+
+[ELEANOR_VOSS | style: soft, almost a private joke with no one]
+I hope that's not naive of me. I've been called worse tonight.
+
+[ELEANOR_VOSS | style: suddenly careful, listening]
+I hear —
+
+[SFX: footsteps approaching down a tiled corridor, unhurried]
+
+--- PART 6 ---
+
+[NARRATOR]
+Ten o'clock, two levels below street level. The broadcast goes live for the first time tonight — Mira Kwon and Ethan Cole at the desk, Senator Delia Marsh seated just off-mic, waiting on her cue.
+
+[SFX: an on-air light clicking on]
+
+[MIRA_KWON | style: composed, calibrated for broadcast]
+Good evening. If you've been with us since episode one, you already know what this show has been chasing. Tonight, we finish the chase.
+
+[ETHAN_COLE | style: warm, easy, professional broadcast voice]
+Seven episodes ago this was a shoebox nobody wanted to open. Tonight it's forty-one names, a subbasement that never made it onto a single blueprint, and a diary about to speak for itself, in its own words, for the first time in almost fifty years.
+
+[MIRA_KWON | style: measured, giving nothing away]
+We're not handing you the whole hour in the first five minutes. Some of what's coming tonight deserves to land in order, not as a headline. But before we're off the air, you'll know exactly what Ashgrove Sanatorium built, and who it built it for.
+
+[MIRA_KWON | style: direct to the audience, quietly forceful]
+Every name that surfaces tonight is still alive. Some of them raised you, employed you, funded the school you went to. If that turns out to be true for you, listening right now — you already knew it before I said it.
+
+[ETHAN_COLE | style: steady, practiced, unaware]
+Board's green across the desk. Levels are clean. Whatever happens in the next hour, it goes out exactly as it happens — no delay, no cut.
+
+[MIRA_KWON | style: quiet aside, almost to herself]
+No cut. That's the idea.
+
+[NARRATOR]
+Across town, in the safe house that has sheltered him for three days, Dr. Harold Pike — the former Ashgrove records orderly, the season's last living witness — listens through a kitchen radio turned low, his own decoded list on the table in front of him.
+
+[DR_HAROLD_PIKE | style: low, to himself, unsteady]
+Forty-one. She's got forty-one. I logged forty-two.
+
+[DR_HAROLD_PIKE | style: quieter, uncertain]
+One of them I never wrote down for her. Not tonight. Not yet.
+
+[NARRATOR]
+Back in the bunker, the broadcast continues — Marsh silent in her chair, Ethan running his checklist, Mira watching the clock, and without seeming to, watching him.
+
+[MIRA_KWON | style: composed, to the room, off-mic]
+We open with the Senator. Everything else waits its turn.
+
+[ETHAN_COLE | style: easy, unaware]
+Copy that. Cueing her mic now.
+
+[SFX: a fader clicking up on the console]
+
+--- PART 7 ---
+
+[NARRATOR]
+The parking garage beneath the bunker, same hour. Two of Victor Lane's men test the access door while the broadcast runs one floor up.
+
+[SFX: a crowbar working against a metal door frame]
+
+[SFX: an alarm klaxon, short and sharp]
+
+[NARRATOR]
+Bunker security responds before the door gives. The men are gone before anyone reaches the ramp.
+
+[SFX: tires screeching away on concrete]
+
+[NARRATOR]
+Upstairs, mid-broadcast, a folded index card slides across the console to Mira, unseen by the audience.
+
+[MIRA_KWON | style: composed, reading ahead)]
+— and that's the shape of what the records show. We'll come back to the intake numbers in a moment.
+
+[MIRA_KWON | style: flat, internal, barely audible under the desk mic | speed: 0.9]
+Garage door. Stopped in time.
+
+[NARRATOR]
+She does not look toward the hallway. She does not slow the pacing of her voice.
+
+[MIRA_KWON | style: measured, unshaken on the surface]
+Before we go further — a quick word on tonight's format, then straight into the next segment.
+
+[NARRATOR]
+Whoever sent those men has stopped thinking in weeks and started thinking in minutes. Mira reads the desperation correctly, and decides the broadcast will not slow down to acknowledge it.
+
+--- PART 8 ---
+
+[NARRATOR]
+Live, in the bunker, the broadcast several minutes old. Senator Delia Marsh takes the guest chair across from Mira and Ethan, the rest of the team listening from their stations.
+[NARRATOR]
+For the next few minutes the thread belongs to her family's history, not to the network trying to bury it.
+
+[MIRA_KWON | style: measured, on-air calm]
+Senator, thank you for coming here tonight instead of somewhere with your name already on the letterhead.
+
+[SENATOR_DELIA_MARSH | style: composed, resolute]
+I didn't want a podium, Mira. I wanted a microphone, and nobody editing me afterward.
+
+[MIRA_KWON | style: careful, giving her the floor]
+Then it's yours. Whenever you're ready.
+
+[SFX: a chair adjusting under weight]
+
+[SENATOR_DELIA_MARSH | style: steady, unhurried]
+My grandmother was a patient at Ashgrove Sanatorium. Admitted in the nineteen sixties, discharged in nineteen eighty-one as cured. Six weeks later, she married into my family.
+
+[SENATOR_DELIA_MARSH | style: level, refusing to soften it]
+For years I thought that timing was a coincidence. It wasn't. She was placed. Chosen, processed, and handed to the Marsh name like an asset transferred on paper, and my family's entire rise was built on top of her.
+
+[SFX: a photograph set down on the desk]
+
+[SENATOR_DELIA_MARSH | style: quieter, precise]
+There's a photograph. A young woman with my grandmother's jaw, my grandmother's exact stillness, labeled with nothing but an Ashgrove intake number instead of a name. I've held it. I know it's her.
+
+[ETHAN_COLE | style: tight, throat controlled]
+Senator — that's an extraordinary claim to put on air without legal review first.
+
+[SENATOR_DELIA_MARSH | style: firm, cutting through]
+Without someone clearing it for me, you mean. I know exactly what I'm doing, Ethan.
+
+[MIRA_KWON | style: quiet, watching Ethan closely]
+Let her finish.
+
+[SENATOR_DELIA_MARSH | style: unwavering]
+The birth record doesn't exist where it should. The marriage record does. So does the trust that funded my family two years later, drafted by the same firm that filed a name change that same year — for another family entirely.
+
+[SENATOR_DELIA_MARSH | style: quiet, final]
+I'm not asking anyone to forgive what my family built on her. I'm telling you it was built on her. That's the whole statement. I won't be walking any of it back — tonight or ever.
+
+[MIRA_KWON | style: even, closing the segment]
+Thank you, Senator. That's on the record now, in your own voice.
+
+--- PART 9 ---
+
+[NARRATOR]
+The bunker, seconds after Marsh's testimony ends. The desk mics are still hot.
+
+[NARRATOR]
+Mira's eyes move from the senator to the console beside her.
+
+[MIRA_KWON | style: even, controlled]
+Thank you, Senator. We're going to take thirty seconds before the next segment.
+
+[NARRATOR]
+Off air, she watches Ethan's hand on the fader.
+
+[SFX: a fader knob ticking faintly under a shaking hand]
+
+[ETHAN_COLE | style: forcing calm, quiet]
+Levels are fine. I've got it.
+
+[NARRATOR]
+He presses his palm flat against the desk to still it.
+
+[MIRA_KWON | style: barely audible, to herself]
+You heard every word of that, didn't you.
+
+[ETHAN_COLE | style: too quick]
+Course I did. Good segment.
+
+[NARRATOR]
+Mira doesn't answer. She turns her chair three inches toward him — not enough for the room to notice, enough for him to.
+
+[ETHAN_COLE | style: breath catching]
+Mira—
+
+[MIRA_KWON | style: flat, final]
+Thirty seconds, everyone.
+
+[NARRATOR]
+He looks at her face and understands, all at once, that the season is over.
+
+--- PART 10 ---
+
+[NARRATOR]
+Victor Lane's office, minutes later. The garage attempt has failed. Lane is alone now with only his most trusted people left in the room.
+
+[VICTOR_LANE | style: clipped, controlled]
+Say it again. Slowly.
+
+[VICTOR_LANE | style: cold]
+The door held. They're still broadcasting. I heard that part.
+
+[SFX: a phone set down hard on a desk]
+
+[VICTOR_LANE | style: low, final]
+Then we're done pretending tonight was ever about the door.
+
+[VICTOR_LANE | style: quiet command]
+Everyone outside this room — leadership, the retainer accounts, all of it — hears nothing from me until I decide what they hear. Understood.
+
+[VICTOR_LANE | style: measured, giving orders]
+Start moving. Shell accounts, the rendering server, anything with our name breathing near it. I want it gone before sunrise, not explained.
+
+[VICTOR_LANE | style: flat]
+We are not fighting this in public. We are not fighting this at all. Tonight we disappear.
+
+[NARRATOR]
+He waits until the others have stepped out before making the call himself.
+
+[SFX: a single dial tone, then a connecting click]
+
+[VICTOR_LANE | style: even, private]
+It's me. Not through the usual line — this one only.
+
+[VICTOR_LANE | style: quiet, precise]
+Tell him nothing's changed. The instruction stands exactly as I gave it. Keep the broadcast from finishing intact. Whatever it takes.
+
+[VICTOR_LANE | style: pointed]
+No. He doesn't need to know about the door. He doesn't need to know about any of it. He needs one thing in his head tonight, and that's the order.
+
+[VICTOR_LANE | style: cold, dismissive]
+What I decide to do with the rest of this — that's mine. Not his. Not yet.
+
+[SFX: the call disconnecting]
+
+[NARRATOR]
+Alone again, Lane allows himself something close to certainty.
+
+[VICTOR_LANE | style: to himself, low]
+A broadcast that never finishes is a broadcast nobody can quote. He'll do it. He's done harder things than this for us.
+
+[VICTOR_LANE | style: hardening]
+He has to.
+
+--- PART 11 ---
+
+[NARRATOR]
+Back in the bunker, the broadcast continues live, moments after Senator Marsh's testimony. Mira Kwon sits across the console from Ethan Cole, her co-host.
+
+[MIRA_KWON | style: calm, deliberate, departing from script | speed: 0.95]
+Before we move to tonight's final segment, I want to stop here for a moment. Off the plan we rehearsed.
+
+[ETHAN_COLE | style: light, professional, unsuspecting]
+Mira, we've got the capsule segment queued—
+
+[MIRA_KWON | style: steady, unhurried]
+This won't take long. I want to talk about a name. Wexford.
+
+[SFX: a chair leg scraping slightly against the floor]
+
+[ETHAN_COLE | style: forced casual, thinning]
+That's Pike's story, the director. We covered that in episode two.
+
+[MIRA_KWON | style: quiet, precise, no anger yet]
+There's a sealed filing from 1981. A name changed from Wexford to Cole. Three years after Ashgrove closed.
+
+[ETHAN_COLE | style: silence held too long, then flat]
+...
+
+[MIRA_KWON | style: gentle but unmovable]
+I have a photograph too. A boy standing outside the sanatorium gates. I put it next to a photo from your mother's house, Ethan. Feature for feature. It's you.
+
+[NARRATOR]
+In the control room, the rest of the team goes still, headsets forgotten, eyes fixed on the two hosts.
+
+[MIRA_KWON | style: clear, on the record now]
+Julian Wexford was your grandfather. You've known it the entire season. Every lead that pointed toward your family's name — you moved us off it. Three times, at least.
+
+[ETHAN_COLE | style: breaking, quiet, finally honest]
+Yes.
+
+[NARRATOR]
+The word lands into open air, unscripted, unedited, heard by everyone still listening.
+
+[ETHAN_COLE | style: hollowed out, no performance left]
+I've known since before we recorded episode one. I steered you away from him every time I could.
+
+[MIRA_KWON | style: even, watching him]
+Say the rest. While the feed is still yours to speak into.
+
+[ETHAN_COLE | style: barely holding, honest]
+I don't know how to be on either side of this desk anymore.
+
+[NARRATOR]
+No one in the room moves to cut the signal. For the first time all season, Ethan Cole has stopped protecting anything at all.
+
+--- PART 12 ---
+
+[NARRATOR | style: neutral, measured]
+The broadcast bunker, seconds after Mira's words go out over open air. Ethan Cole's microphone is still live. No one has moved to cut it.
+
+[ETHAN_COLE | style: hollow, controlled | speed: 0.9]
+Say it again. Say my name again, so it's on the record and not just — not just something you thought and never told me.
+
+[MIRA_KWON | style: steady, unflinching]
+Ethan Cole. Grandson of Julian Wexford. You've known since before this podcast had a name.
+
+[ETHAN_COLE | style: quiet, unraveling]
+Four months before we recorded episode one. A call from a number I never wrote down, and a voice that told me exactly what to protect. Every lead I steered you off of — the blueprints, the discharge list, the name-change filing — I moved you off of on purpose. All season. Sitting right next to you.
+
+[MIRA_KWON | style: calm, giving him room]
+I've known for weeks, Ethan. I could have pulled you off this desk before tonight. I didn't. I wanted you here, live, when it came out — so it couldn't be quietly buried the way everything at Ashgrove got buried. I'm not cutting your mic. This is still your voice. Use it.
+
+[SFX: a hand landing flat on the mixing console]
+
+[NARRATOR | style: neutral, measured]
+His hand finds the master fader and stays there.
+
+[ETHAN_COLE | style: strained, fighting himself]
+He told me — keep it from finishing, whatever it takes. That was the whole instruction. Nothing about after. Nothing about what I'm supposed to be once it's done. Half of me is still standing in Victor's office hearing that sentence.
+
+[MIRA_KWON | style: low, steady]
+There's no version tonight where you kill this feed and still get to be both of them, Ethan. The grandson protecting the family name, and the co-host who found the truth with me. You don't get to keep both.
+
+[ETHAN_COLE | style: desperate, quiet]
+I know that. I've known it since the second you looked at me like that on air. I just wanted five more seconds where it wasn't true yet.
+
+[SFX: a patch cable pulled halfway from the board, then eased back into the jack]
+
+[NARRATOR | style: neutral, measured]
+His fingers close around the cable. He doesn't pull it free.
+
+[ETHAN_COLE | style: exhausted, resigned]
+I'm not doing it. I'm not killing the feed.
+
+[MIRA_KWON | style: quiet, resolute]
+Then let it run. All of it — Eleanor's words too.
+
+[ETHAN_COLE | style: barely audible]
+All of it.
+
+--- PART 13 ---
+
+[NARRATOR]
+Back in the bunker, the broadcast is still live. Ethan Cole has not moved from the console. The team turns, together, to the season's final segment.
+
+[MIRA_KWON | style: quiet, resolved]
+We're not stopping there. There's one more voice this season needs you to hear. Not mine.
+
+[MIRA_KWON | style: measured, reading]
+This is from a diary sealed in 1979. The nurse who wrote it never signed her name to anything after this page. Her name was Eleanor Voss.
+
+[SFX: paper unfolding]
+
+[MIRA_KWON | style: steady, giving space to the words]
+"I'm done writing in code. If you're reading this, it means I didn't get to say it out loud myself, so I'll say it now, plainly, for whoever comes looking. Dr. Julian Wexford runs a program on the sealed ward. He calls it Threshold. I've watched him take people apart and hand back something that looks like a person but answers to a different name. I don't know how many. I know I'll be stopped before I can tell anyone who matters. I'm leaving this where it will outlast him."
+
+[DR_HAROLD_PIKE | style: alone, listening, voice breaking softly]
+She's naming them. She's naming the ones I logged.
+
+[MIRA_KWON | style: unhurried, laying it out]
+Alongside the diary, we have the Polaroids recovered from the same capsule. Each one stamped on the back with a three-letter code. We had that code independently confirmed — it matches Ashgrove's internal patient intake numbers. Not press photos. Not family photos. Intake photos.
+
+[SENATOR_DELIA_MARSH | style: quiet]
+Patients being catalogued like inventory.
+
+[MIRA_KWON | style: even]
+And the blueprints. Ashgrove's original architectural plans, cross-checked against every public floor plan and fire inspection filed for that building between 1965 and 1979. There is a subbasement wing in the original plans. It appears in none of the public filings.
+
+[DR_HAROLD_PIKE | style: hushed, from the safe house]
+The ward with no windows. I walked past that door for four years and told myself it was storage.
+
+[MIRA_KWON | style: gentle, closing the diary]
+Eleanor wrote one more line before the entry stops. "I don't know who will find this. I have to trust that whoever does will already know who to believe." 
+
+[MIRA_KWON | style: quiet, direct to the mic]
+Eleanor — we found it. And we're telling them everything.
+
+[SFX: a desk microphone stand settling as Mira leans back]
+
+[NARRATOR]
+For the first time since 1979, Eleanor Voss's name enters the public record, spoken aloud instead of buried in a personnel file that simply stops.
+
+--- PART 14 ---
+
+[NARRATOR]
+Victor Lane's office, the same hour, feed still open on a muted monitor. The Silencing Campaign returns — the garage attempt has failed, and the broadcast is still running.
+
+[VICTOR_LANE | style: flat, controlled]
+Turn the volume back up.
+
+[SFX: a phone handset set down hard on a desk]
+
+[VICTOR_LANE | style: measured, giving orders]
+It's still live. Full runtime. Nothing dropped.
+
+[VICTOR_LANE | style: cold, deciding]
+Then we're done arguing about it. We go dark. Tonight. Everything visible, gone by morning.
+
+[VICTOR_LANE | style: quiet, addressing the room]
+The retainer accounts close. The shell filings lapse on their own schedule — don't rush them, don't touch them, let them look ordinary. The rendering contractor gets paid out in full and never hears from us again.
+
+[VICTOR_LANE | style: firm]
+Anyone who spoke to Pike's building, anyone who was ever near that parking level — you were never part of this firm. Say it that plainly if it ever comes up. It won't come up.
+
+[VICTOR_LANE | style: careful, controlling the frame]
+Upstairs doesn't need tonight's numbers. Upstairs needs to hear that we made a decision, not that we lost. Send it that way.
+
+[VICTOR_LANE | style: distant, to himself]
+There's a difference between the two, even if I'm the only one in the building who still believes it tonight.
+
+[SFX: a laptop lid closing]
+
+[VICTOR_LANE | style: clipped]
+Cole.
+
+[VICTOR_LANE | style: cold, closing the subject]
+No. Nothing further on Cole. Whatever he did or didn't do in that room, it's his to carry now. He's not on tonight's ledger. He's not on any ledger after tonight.
+
+[VICTOR_LANE | style: quiet, final]
+We're not looking for him. We're not calling him. If he surfaces, he surfaces on his own.
+
+[SFX: a door opening, then footsteps receding down a corridor]
+
+[VICTOR_LANE | style: alone, low, unreadable]
+Dark isn't gone. Dark is just a room nobody's checked yet.
+
+[SFX: office lights switching off with a hard click]
+
+[NARRATOR]
+One by one, the desks empty. By the time the corridor lights cut out, there is nothing left in the office to prove it was ever occupied at all.
+
+--- PART 15 ---
+
+[NARRATOR]
+The parking garage beneath the bunker, minutes after Marsh's testimony went out over the feed. Mira Kwon, the broadcast's host, comes down alone to look for Ethan Cole, her co-host.
+
+[MIRA_KWON | style: steady, bracing herself]
+Ethan?
+
+[SFX: footsteps on concrete, echoing]
+
+[MIRA_KWON | style: quieter, searching]
+His spot's empty.
+
+[NARRATOR]
+The space where Ethan's car was parked holds nothing now but a rectangle of clean concrete, darker than the oil-stained ground around it.
+
+[MIRA_KWON | style: flat, cataloguing]
+No car. No badge on the hook.
+
+[SFX: a metal badge hook swinging, empty, tapping the wall]
+
+[MIRA_KWON | style: barely audible]
+No note.
+
+[NARRATOR]
+She checks the security desk log herself rather than call it in — one name, one exit time, nothing else.
+
+[MIRA_KWON | style: to herself, hollow]
+Out at 9:52. Before Marsh even finished.
+
+[MIRA_KWON | style: harder, working it through]
+He had his hand on it. I watched him stop.
+
+[MIRA_KWON | style: quieter]
+And then he still ran.
+
+[SFX: a car alarm chirping once, far off, unrelated, fading]
+
+[MIRA_KWON | style: bitter, almost a laugh]
+Coward's honest. That's a new one.
+
+[NARRATOR]
+She stands a moment longer in the gap where the confrontation should have happened, the one she'd built all night toward — Ethan across the desk, answering for it in front of the whole country.
+
+[MIRA_KWON | style: quiet, unresolved]
+He didn't kill the feed. He didn't stay for it either.
+
+[MIRA_KWON | style: steadying, turning back toward the stairs]
+Both true. Neither one enough.
+
+[NARRATOR]
+She takes one photo of the empty space with her phone — not for the broadcast, not for anyone — before heading back up to the team still waiting on her upstairs.
+
+[MIRA_KWON | style: to herself, final]
+Wherever you are. This isn't over because you left.
+
+[SFX: a heavy door closing behind her, latching]
+
+--- PART 16 ---
+
+[NARRATOR]
+Back in the bunker, the broadcast board still glowing red for "off air." The team stands scattered instead of at their stations — the adrenaline gone, nothing left to hold it up. Senator Delia Marsh has not left the room.
+
+[SFX: a headset dropped onto a desk]
+
+[MIRA_KWON | style: hollowed out, still steady]
+Nobody move the archive box. Not tonight. I want it exactly where it is when the lawyers come asking what we aired and when.
+
+[SENATOR_DELIA_MARSH | style: quiet, unflinching]
+Nobody's touching your box, Mira. I just said my grandmother's name on live radio. I think the box is the least of what's fragile in this room.
+
+[MIRA_KWON | style: gentle but direct]
+It's not fragile. It's done. You can't un-say it. I know that's not comfort right now.
+
+[SENATOR_DELIA_MARSH | style: tired honesty]
+It isn't. I don't know what's left of my career tomorrow morning. I'm not going to stand here and tell you I do, or that I've made peace with not knowing.
+
+[MIRA_KWON | style: low, careful]
+Then don't. You don't owe anyone peace tonight.
+
+[NARRATOR]
+A patched-in line crackles from the safe house — Dr. Harold Pike, the retired orderly whose names finally went on record tonight, listening now not as a hidden source but as one more person in the room.
+
+[SFX: a phone line clicking onto speaker]
+
+[DR_HAROLD_PIKE | style: shaky, disbelieving relief]
+I heard all of it. Every word. Forty years I kept those names in a drawer, and tonight they just — went out into the air like it was nothing.
+
+[MIRA_KWON | style: leveling with him]
+It wasn't nothing, Dr. Pike. It's the reason any of this holds up. I owe you that part being right.
+
+[DR_HAROLD_PIKE | style: quiet]
+Feels strange, being thanked for something I should've said decades ago.
+
+[MIRA_KWON | style: steady, deciding to say it all]
+Since we're saying things late — there's more you should both hear from me, not the broadcast. Someone tried the parking garage door tonight, during the segment. Security stopped it. And Ethan — Ethan Cole is Julian Wexford's grandson. He's been steering us away from his own family all season. I've known since before the broadcast started. I didn't tell any of you.
+
+[SENATOR_DELIA_MARSH | style: stunned]
+You carried all of that alone, tonight, while I was reading my grandmother's name into a microphone.
+
+[MIRA_KWON | style: plain, no self-pity]
+I did. I think it's over now — whatever they were trying to do to stop us, they can't undo what already went out. That has to count for something.
+
+[SFX: a door closing somewhere down the corridor]
+
+[NARRATOR]
+No one answers her. The truth is aired, Marsh's choice is made and irreversible, Ethan is gone from the building — and what remains standing is only the room itself, and the four of them left inside it.
+
+--- PART 17 ---
+
+[NARRATOR]
+By morning, the country has what Ashgrove tried for forty years to keep sealed. Project Threshold. Eleanor Voss's name, spoken instead of buried. The Marsh family's true history, no longer a rumor but a record.
+
+[NARRATOR]
+Ethan Cole has not resurfaced. No statement, no arrest, no body. Only the fact of a man who chose not to finish what he was sent to do, and then chose to disappear before anyone could ask him what that choice cost him.
+
+[NARRATOR]
+Victor Lane's network has gone quiet, not gone. Its offices empty, its retainers unpaid, its structure erased from anything that can be traced. Whether that silence means defeat or simply patience, no one broadcasting tonight can yet say.
+
+[NARRATOR]
+Senator Delia Marsh has not resigned. She has not been asked to. Her testimony sits on the public record where she put it, and what it will cost her, or spare her, remains entirely unwritten.
+
+[NARRATOR]
+And Mira Kwon is still at her desk. The story she chased alone for a season now belongs to everyone who heard it. What she carries forward from the man who sat beside her every night, she has not yet said aloud, on air or off.
+
+[NARRATOR]
+The capsule is open. The record is public. What comes next is no longer hers alone to tell.
+

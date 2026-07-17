@@ -1,0 +1,26 @@
+Phrasen-Frequenz-Report (deterministisch, fabrik/writing/phrase_stats.py)
+Episoden ausgewertet: 1, 2, 3, 4, 5, 6
+
+Wiederholte Phrasen (>= 6x über die Staffel):
+    18x  "twenty two years"
+     8x  "on halyard cay"
+     8x  "in front of"
+     6x  "twenty two years and"
+     6x  "no bed capacity available"
+     6x  "for a moment"
+     6x  "and steps out"
+     6x  "on this island"
+     6x  "i need to"
+     6x  "sits alone at"
+     6x  "i'm not asking"
+     6x  "an hour ago"
+
+Style-Einheitston (>= 25x als style/tone/emotion-Wort):
+    59x  style "quiet"
+    34x  style "low"
+    31x  style "measured"
+    31x  style "flat"
+    29x  style "steady"
+    29x  style "himself"
+    28x  style "herself"
+    25x  style "careful"

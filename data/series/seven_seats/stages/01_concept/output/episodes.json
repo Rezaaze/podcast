@@ -1,0 +1,1112 @@
+{
+  "series_title": "Seven Seats",
+  "language": "English",
+  "mode": "drama",
+  "template": "soap_opera",
+  "writer_persona": "a showrunner for character-driven, relationship-first serial drama in the vein of prestige ensemble TV, fusing small-town medical drama with disaster-countdown tension",
+  "style_guidelines": [
+    "Every scene should feel like it's racing a clock — reference the storm's approach (wind, tide, radio chatter, shutters going up) even in scenes that are really about a private lie.",
+    "Let characters talk past each other: two people in the same scene are often having two different conversations because one of them doesn't know what the other knows.",
+    "Keep dialogue plain and functional under pressure — these are exhausted, practical people, not people who monologue; let subtext carry the weight instead of speeches.",
+    "The NARRATOR only orients (who, where, when) — it never explains a character's hidden motive or confirms a rumor; let the audience infer from what's said and withheld.",
+    "Escalate physically as well as emotionally across the season — boarded windows, emptying shelves, a shrinking supply list — so the hurricane's arrival is felt, not just announced."
+  ],
+  "voices": {
+    "NARRATOR": {
+      "voice": "Ryan",
+      "default_style": "calm, measured, a step removed from the action",
+      "description": "the show's narrator — orients the listener at the start of every scene (who, where, when), never a character in the story"
+    },
+    "DR_THEO_ALDRIDGE": {
+      "voice": "Aiden",
+      "default_style": "weary, deliberate authority; a doctor's calm that's starting to crack at the edges",
+      "description": "clinic director for 25 years, island-born; the man every family on Halyard Cay trusts with their lives, carrying a decision from Hurricane Marisol twenty-two years ago and a diagnosis he hasn't spoken aloud to a single person on the island"
+    },
+    "NURSE_MEI_CHEN": {
+      "voice": "Serena",
+      "default_style": "brisk, practical, speaks slow and very clear English; warmth she rations carefully",
+      "description": "head nurse who emigrated from Guangzhou at nineteen to train as an ER nurse and has run the clinic floor for fifteen years; Aldridge's most loyal ally, and the only other living person who knows exactly what she once changed in Aiko Sato's chart"
+    },
+    "DR_SOPHIE_KANG": {
+      "voice": "Sohee",
+      "default_style": "earnest, quick, speaks clear deliberate English with a Chinese-inflected lilt",
+      "description": "a locum physician from Yanbian, an ethnic-Korean community in northeast China, three weeks into a residency-elective rotation on Halyard Cay; sharp-eyed and new enough to the clinic to notice what everyone else has stopped seeing"
+    },
+    "CAPTAIN_DANNY_SU": {
+      "voice": "Dylan",
+      "default_style": "gruff, clipped, speaks slow and very clear English",
+      "description": "runs the island's only ferry, inherited from his immigrant father; fiercely protective of family in ways that are starting to put strangers at risk"
+    },
+    "KIMI_SATO": {
+      "voice": "Ono_Anna",
+      "default_style": "efficient, guarded, speaks careful clear English with a faint Chinese lilt",
+      "description": "clinic records administrator, daughter of a Japanese father raised in Shanghai's Japanese expatriate community and an island mother; spent her early childhood in mainland China with her father before the family settled on Halyard Cay, leaving a trace of that accent in her English — assigned to draft this week's evacuation priority list without knowing her own mother's name is already buried inside the clinic's oldest file"
+    },
+    "JONAH_BRAMWELL": {
+      "voice": "Eric",
+      "default_style": "warm, restless energy, speaks slow and clear English with a trace of his mother's Chinese accent",
+      "description": "young paramedic and grandson of patient Otis Bramwell, raised on the island since his family opened its restaurant when he was a boy — a restaurant built on his Chinese-born mother's recipes and the language he grew up hearing at home; protective of his grandfather and increasingly suspicious that the clinic's tidy paperwork doesn't match what he's seeing on the ground"
+    }
+  },
+  "locations": {
+    "THE_CLINIC": {
+      "name": "The Clinic",
+      "description": "A single-story clinic with peeling teal paint and a wall of mismatched supply shelves, buzzing fluorescent lights fighting a rattling window air conditioner, and a hand-drawn hurricane tracking map taped crooked beside the door"
+    },
+    "THE_DOCK": {
+      "name": "The Ferry Dock",
+      "description": "A weathered wooden pier where the rusted evacuation ferry strains against its ropes, gulls wheeling low under a bruised gray sky heavy with the coming storm"
+    },
+    "THE_FERRY_SHED": {
+      "name": "The Ferry Shed",
+      "description": "A cramped, salt-rusted storage shed at the end of the dock, stacked with coiled rope and diesel drums, one bare bulb swinging over a cot hidden behind the crates"
+    },
+    "SALTBOX_TAVERN": {
+      "name": "The Saltbox Tavern",
+      "description": "The island's one bar, all warped wood paneling and sagging string lights, a chalkboard storm-supply list scrawled and rewritten daily behind a bar top slick with spilled rum"
+    },
+    "THE_SATO_HOUSE": {
+      "name": "The Sato House",
+      "description": "A small clapboard house on the hill above town, sun-faded shutters half-boarded for the storm, and an old photograph of Aiko Sato watching from the mantel through the screen door"
+    }
+  },
+  "format": {
+    "parts_per_section": 1,
+    "words_per_part_target": "300 to 500",
+    "words_per_part_min": 250,
+    "words_per_part_max": 550
+  },
+  "generation": {
+    "model": "claude-sonnet-5"
+  },
+  "audio": {
+    "api_url": "http://127.0.0.1:42003",
+    "default_style": "Speak clearly and with dramatic weight",
+    "target_lufs": -16.0,
+    "pause_between_chunks_ms": 250,
+    "pause_between_lines_ms": 700,
+    "pause_between_parts_ms": 3000,
+    "pause_between_episodes_ms": 6000,
+    "merge_anthology": false
+  },
+  "output_prefix": "ep",
+  "series_intro": "Halyard Cay is a speck of an island with one clinic, one ferry, and, as of this week, one hurricane bearing down on it. Hurricane Odette is seven days out and strengthening, and the clinic's evacuation ferry has room for exactly six more people than it can comfortably carry. As the countdown starts, the staff who have kept this island's secrets for years — some of them for twenty-two years — will find that deciding who leaves and who stays means deciding whose truth finally gets told.",
+  "series_outro": "Hurricane Odette makes landfall, the ferry casts off, and Halyard Cay is left to ride out the storm with fewer secrets than it started the week with. The truth of the Marisol List is out for good — Aldridge's role, Mei Chen's altered file, Kessler's decades-buried order — but what it costs Kimi and Theo Aldridge personally is left unresolved, a wound the season doesn't try to close. Danny's lie about the ferry's capacity is exposed and paid for, and Otis Bramwell keeps his seat. Aldridge's diagnosis remains exactly what it was the day Sophie found the letter: undecided, unresolved, and now no longer his alone to carry.",
+  "episodes": [
+    {
+      "figure": "Six Seats",
+      "theme": "As Hurricane Odette strengthens and Dr. Aldridge announces the ferry has only six guaranteed seats, Kimi Sato is assigned to draft the priority list, Mei Chen quietly pulls twenty-two-year-old storm records under a bureaucratic pretext, Danny Su begins stockpiling supplies in the ferry shed to hide his brother Marcus, and Sophie Kang notices her mentor's unexplained exhaustion — planting the Marisol List, Danny's Ferry, and Aldridge's Diagnosis threads without naming what any of them are really hiding.",
+      "intro_note": "",
+      "outro_note": "As the sun sets on the first day of the countdown, Jonah spots unfamiliar footprints in the sand near the ferry shed he can't explain — and in the clinic archive, Mei Chen finds the exact page she was hoping wouldn't still be there.",
+      "sections": [
+        "Category Two and Climbing — Aldridge gathers the clinic staff to announce Odette's track and the ferry's six guaranteed seats",
+        "The Priority List — Kimi is handed the job of drafting this week's evacuation priority list",
+        "Old Weather — Mei Chen requests the clinic's twenty-two-year-old storm records under cover of routine protocol review",
+        "Ropes and Diesel — Danny inspects the ferry at the dock, calculating how many bodies it can really carry",
+        "The Shed — Danny slips supplies to Marcus, hidden behind the crates in the ferry shed",
+        "A Doctor's Hands — Sophie notices Aldridge's unsteady grip and asks if he's sleeping",
+        "Chalkboard Countdown — at the Saltbox Tavern, the storm-supply list grows and talk turns to Otis Bramwell's oxygen tanks",
+        "Her Mother's House — Kimi boards up the windows of the Sato house beneath her mother Aiko's watching photograph",
+        "The File — alone after hours, Mei Chen sits with the altered file she hasn't opened in years",
+        "What Sophie Didn't Ask — Sophie almost presses Aldridge about his health, then lets it go",
+        "Six Days Left — the clinic locks up for the night as Odette strengthens offshore"
+      ],
+      "section_words": [
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 130,
+          "max": 200,
+          "target": "140 to 170"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "section_locations": [
+        "THE_CLINIC",
+        "THE_CLINIC",
+        "THE_CLINIC",
+        "THE_DOCK",
+        "THE_FERRY_SHED",
+        "THE_CLINIC",
+        "SALTBOX_TAVERN",
+        "THE_SATO_HOUSE",
+        "THE_CLINIC",
+        "THE_CLINIC",
+        "THE_DOCK"
+      ],
+      "case": [
+        {
+          "label": "The Marisol List",
+          "character_knowledge": {
+            "DR_THEO_ALDRIDGE": {
+              "knows": [
+                "He struck Aiko Sato from the original Hurricane Marisol evacuation list at Walter Kessler's order and replaced her with Kessler's nephew.",
+                "Aiko Sato died in the storm as a direct result of that swap."
+              ],
+              "hides": [
+                "That he was ever involved in the swap at all — to everyone on the island, including Kimi, it is simply an old tragedy no one caused."
+              ],
+              "believes_falsely": [
+                "That with Kessler dead and the file long altered, the truth is safely buried and drafting this week's list is just another ordinary task."
+              ]
+            },
+            "NURSE_MEI_CHEN": {
+              "knows": [
+                "She personally rewrote Aiko Sato's file after the storm to read 'no bed capacity available.'",
+                "Aldridge's exact role in the original swap."
+              ],
+              "hides": [
+                "That she altered any clinic record, ever — she treats her interest in the old archive as routine housekeeping."
+              ],
+              "believes_falsely": [
+                "That Kimi has no reason to ever go looking closely at her own mother's twenty-two-year-old chart."
+              ]
+            },
+            "KIMI_SATO": {
+              "knows": [
+                "Her mother Aiko died during Hurricane Marisol when she was twelve.",
+                "She has been assigned to draft this week's evacuation priority list."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "That no doctor could reach her mother in time during the storm — the story she has carried and accepted for twenty-two years."
+              ]
+            }
+          },
+          "solution": "Twenty-two years ago, Hurricane Marisol forced the clinic to choose who took the last six seats on the evacuation ferry. Young Dr. Theo Aldridge, then a junior physician, was pressured by the clinic's founding director, Walter Kessler, into striking severe asthmatic patient Aiko Sato from the evacuation list and replacing her with Kessler's own nephew, who had a non-urgent leg fracture. Aiko Sato died during the storm from a respiratory attack with no doctor able to reach her. Nurse Mei Chen, then a young ER nurse, witnessed the swapped list and afterward helped Aldridge alter Aiko Sato's official clinic file to read 'no bed capacity available' rather than record the swap, protecting him after Kessler died within the year and could no longer share the blame. Aldridge has spent twenty-two years being scrupulously fair on paper about triage as unspoken penance — the very fairness Kimi Sato, Aiko's daughter, now trusts completely as the clinic's records administrator.",
+          "objective_facts": [
+            "Twenty-two years ago, Hurricane Marisol struck Halyard Cay and the clinic's evacuation ferry had only six open seats when the storm surge cut off later crossings.",
+            "Aiko Sato, a severe asthmatic patient, was on the original evacuation list compiled by then-junior physician Theo Aldridge.",
+            "The clinic's founding director, Walter Kessler, ordered Aiko Sato's name struck from the list and replaced with his own nephew's, who had a non-urgent leg fracture.",
+            "Aiko Sato died during Hurricane Marisol from a respiratory attack after being left behind.",
+            "Nurse Mei Chen altered Aiko Sato's clinic file after the storm to state 'no bed capacity available' rather than recording the list swap.",
+            "Walter Kessler died eight months after Hurricane Marisol and never faced any consequence for the decision.",
+            "Kimi Sato, Aiko's daughter, was twelve years old when her mother died and has believed for twenty-two years that no doctor could reach her mother in time."
+          ]
+        },
+        {
+          "label": "Danny's Ferry",
+          "character_knowledge": {
+            "CAPTAIN_DANNY_SU": {
+              "knows": [
+                "His younger brother Marcus is hiding in the ferry shed after skipping bail on the mainland.",
+                "He intends to get Marcus aboard the final ferry using their late cousin Peter's identification."
+              ],
+              "hides": [
+                "Marcus's presence from everyone on the island, framing his shed visits as routine gear checks."
+              ],
+              "believes_falsely": [
+                "That the shed is close enough to his own territory that no one will think twice about his comings and goings."
+              ]
+            },
+            "JONAH_BRAMWELL": {
+              "knows": [
+                "His grandfather Otis needs daily oxygen support and a guaranteed seat on the ferry.",
+                "Something about the clinic's paperwork this week doesn't sit right, though he can't say what."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "That any oddities he's noticed are about medical supply shortages, with no connection to Danny or the ferry at all."
+              ]
+            }
+          },
+          "solution": "Danny Su's estranged younger brother, Marcus Su, has been hiding in the ferry company's dockside storage shed for three weeks after skipping bail on the mainland following an assault charge — he broke a man's jaw defending Danny in a debt-collection dispute. Danny plans to smuggle Marcus onto the final evacuation ferry using the identification of their late cousin, Peter Su, and intends to falsely report a mechanical fault to justify cutting the ferry's official seat count by one, effectively bumping elderly oxygen-dependent patient Otis Bramwell without anyone realizing why. Danny tells himself he is only protecting family, but the plan directly endangers a clinic patient's evacuation slot.",
+          "objective_facts": [
+            "Danny Su's younger brother, Marcus Su, has been hiding in the ferry company's dockside storage shed since arriving on the island three weeks before the story begins.",
+            "Marcus Su skipped bail on the mainland after an assault charge stemming from a bar fight defending Danny over an unpaid debt.",
+            "Danny Su plans to give Marcus a seat on the final evacuation ferry using the identification of their late cousin, Peter Su.",
+            "Danny intends to falsely report a mechanical fault to justify reducing the ferry's official seat count by one.",
+            "Otis Bramwell, an elderly clinic patient who requires daily oxygen support, is the person whose seat would be effectively lost if Danny's plan succeeds."
+          ]
+        },
+        {
+          "label": "Aldridge's Diagnosis",
+          "character_knowledge": {
+            "DR_THEO_ALDRIDGE": {
+              "knows": [
+                "He was diagnosed with advanced pancreatic cancer six weeks ago on a trip he told the clinic was for supply requisition.",
+                "His prognosis is measured in months."
+              ],
+              "hides": [
+                "The diagnosis entirely, waving off his exhaustion as overwork brought on by the storm."
+              ],
+              "believes_falsely": [
+                "That he can keep the diagnosis hidden through the whole countdown week."
+              ]
+            },
+            "DR_SOPHIE_KANG": {
+              "knows": [
+                "Aldridge has seemed unusually exhausted and unsteady since she arrived on rotation."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "That his condition is ordinary overwork and storm-prep stress, nothing medical."
+              ]
+            }
+          },
+          "solution": "Six weeks before the story begins, Dr. Theo Aldridge was diagnosed with advanced pancreatic cancer by a mainland oncologist during a trip he told clinic staff was for medical-supply requisition. His prognosis is measured in months, and he has told no one on the island. As the ferry seat count tightens across the week, he quietly decides to give up his own guaranteed staff seat to a patient rather than evacuate, planning to remain on Halyard Cay through the hurricane whether or not he survives it — partly genuine self-sacrifice, partly unspoken penance for the Marisol List decision twenty-two years earlier. Dr. Sophie Kang finds the oncologist's letter by accident while searching Aldridge's office for unrelated supply paperwork.",
+          "objective_facts": [
+            "Six weeks before the story begins, Dr. Theo Aldridge was diagnosed with advanced pancreatic cancer by a mainland oncologist during a trip he told clinic staff was for medical-supply requisition.",
+            "Aldridge's prognosis is measured in months, and he has disclosed the diagnosis to no one on the island.",
+            "Aldridge has a guaranteed staff seat reserved on the final evacuation ferry as clinic director.",
+            "Aldridge has decided to give up his reserved seat to a patient and remain on the island through the hurricane.",
+            "Dr. Sophie Kang discovers the oncologist's letter by accident while searching Aldridge's office for unrelated medical-supply paperwork."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "The Fault Line",
+      "theme": "A routine supply run at the ferry shed nearly exposes Marcus Su to Jonah, Kimi's insurance paperwork forces Mei Chen to relive the exact wording she once altered in Aiko Sato's file, and Sophie catches Aldridge wincing through a pain episode he waves off as a strained back — every secret survives the day, but the margin for error is shrinking fast.",
+      "intro_note": "Overnight, the footprints by the shed and the reopened file both went unremarked — but neither Jonah nor Mei Chen has stopped thinking about what they found.",
+      "outro_note": "By the time the storm shutters go up over the Saltbox Tavern, Danny has already decided which name won't make tomorrow's ferry manifest — and has no idea it belongs to a man the whole island loves.",
+      "sections": [
+        "Day Two, Rising Winds — the dock crew watches Odette's outer bands roll closer on the marine radio",
+        "Footprints in the Sand — Jonah circles back to the ferry shed, unable to shake the footprints he found",
+        "Close Call — Danny intercepts Jonah at the shed door seconds before he'd have seen Marcus",
+        "The Insurance Form — Kimi brings Mei Chen a mainland insurance form requiring confirmation of Aiko Sato's old file",
+        "Exact Words — alone, Mei Chen rereads the phrase she wrote herself twenty-two years ago",
+        "Strained Back — Sophie catches Aldridge gripping the exam table through a wave of pain",
+        "Tavern Talk — at the Saltbox, the supply list grows and someone asks aloud whether Otis will make the cut",
+        "What Danny Told Him — Danny feeds Jonah a story about a drifter using the shed for shelter",
+        "Boarding Up — Kimi nails shutters over the Sato house windows, unsettled by Mei Chen's odd tension without knowing why",
+        "Aldridge Alone — behind a locked office door, Aldridge takes something from a bottle he hopes no one has noticed",
+        "Margins — the clinic goes dark for the night as day two ends with every secret still standing"
+      ],
+      "section_words": [
+        null,
+        null,
+        {
+          "min": 130,
+          "max": 200,
+          "target": "140 to 170"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 120,
+          "max": 190,
+          "target": "130 to 160"
+        },
+        null
+      ],
+      "section_locations": [
+        "THE_DOCK",
+        "THE_DOCK",
+        "THE_FERRY_SHED",
+        "THE_CLINIC",
+        "THE_CLINIC",
+        "THE_CLINIC",
+        "SALTBOX_TAVERN",
+        "THE_DOCK",
+        "THE_SATO_HOUSE",
+        "THE_CLINIC",
+        "THE_CLINIC"
+      ],
+      "case": [
+        {
+          "label": "The Marisol List",
+          "character_knowledge": {
+            "DR_THEO_ALDRIDGE": {
+              "knows": [
+                "Kimi is now handling paperwork that touches the clinic's oldest archived records."
+              ],
+              "hides": [
+                "His growing unease, avoiding the archive room entirely rather than risk being seen near it."
+              ],
+              "believes_falsely": [
+                "That if Mei Chen simply handles Kimi's insurance question quietly, the danger passes without him having to do anything at all."
+              ]
+            },
+            "NURSE_MEI_CHEN": {
+              "knows": [
+                "Kimi's insurance form requires her to confirm the exact wording of Aiko Sato's file — the wording she wrote herself."
+              ],
+              "hides": [
+                "Her reaction to the phrase, telling Kimi it's simply standard archival language from that era."
+              ],
+              "believes_falsely": [
+                "That a calm, bureaucratic explanation will fully satisfy Kimi's question and end it there."
+              ]
+            },
+            "KIMI_SATO": {
+              "knows": [
+                "She needs to confirm a specific old file for an insurance cross-check.",
+                "Mei Chen seemed oddly tense when she asked about it."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "That Mei Chen's tension is just storm-week stress and has nothing to do with her mother specifically."
+              ]
+            }
+          },
+          "solution": "Twenty-two years ago, Hurricane Marisol forced the clinic to choose who took the last six seats on the evacuation ferry. Young Dr. Theo Aldridge, then a junior physician, was pressured by the clinic's founding director, Walter Kessler, into striking severe asthmatic patient Aiko Sato from the evacuation list and replacing her with Kessler's own nephew, who had a non-urgent leg fracture. Aiko Sato died during the storm from a respiratory attack with no doctor able to reach her. Nurse Mei Chen, then a young ER nurse, witnessed the swapped list and afterward helped Aldridge alter Aiko Sato's official clinic file to read 'no bed capacity available' rather than record the swap, protecting him after Kessler died within the year and could no longer share the blame. Aldridge has spent twenty-two years being scrupulously fair on paper about triage as unspoken penance — the very fairness Kimi Sato, Aiko's daughter, now trusts completely as the clinic's records administrator.",
+          "objective_facts": [
+            "Twenty-two years ago, Hurricane Marisol struck Halyard Cay and the clinic's evacuation ferry had only six open seats when the storm surge cut off later crossings.",
+            "Aiko Sato, a severe asthmatic patient, was on the original evacuation list compiled by then-junior physician Theo Aldridge.",
+            "The clinic's founding director, Walter Kessler, ordered Aiko Sato's name struck from the list and replaced with his own nephew's, who had a non-urgent leg fracture.",
+            "Aiko Sato died during Hurricane Marisol from a respiratory attack after being left behind.",
+            "Nurse Mei Chen altered Aiko Sato's clinic file after the storm to state 'no bed capacity available' rather than recording the list swap.",
+            "Walter Kessler died eight months after Hurricane Marisol and never faced any consequence for the decision.",
+            "Kimi Sato, Aiko's daughter, was twelve years old when her mother died and has believed for twenty-two years that no doctor could reach her mother in time."
+          ]
+        },
+        {
+          "label": "Danny's Ferry",
+          "character_knowledge": {
+            "CAPTAIN_DANNY_SU": {
+              "knows": [
+                "Jonah found footprints near the shed and nearly walked in on Marcus.",
+                "His cover story about a drifter using the shed seemed to work, for now."
+              ],
+              "hides": [
+                "Marcus, more carefully than before, now that Jonah is circling the shed."
+              ],
+              "believes_falsely": [
+                "That his drifter story fully satisfied Jonah and put the matter to rest."
+              ]
+            },
+            "JONAH_BRAMWELL": {
+              "knows": [
+                "He found footprints near the shed and Danny seemed unusually quick to explain them away.",
+                "There's a faint, nagging inconsistency in Danny's story he can't quite place."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "That the shed activity is about smuggled goods or fuel, not a hidden person — the idea of Marcus never occurs to him."
+              ]
+            }
+          },
+          "solution": "Danny Su's estranged younger brother, Marcus Su, has been hiding in the ferry company's dockside storage shed for three weeks after skipping bail on the mainland following an assault charge — he broke a man's jaw defending Danny in a debt-collection dispute. Danny plans to smuggle Marcus onto the final evacuation ferry using the identification of their late cousin, Peter Su, and intends to falsely report a mechanical fault to justify cutting the ferry's official seat count by one, effectively bumping elderly oxygen-dependent patient Otis Bramwell without anyone realizing why. Danny tells himself he is only protecting family, but the plan directly endangers a clinic patient's evacuation slot.",
+          "objective_facts": [
+            "Danny Su's younger brother, Marcus Su, has been hiding in the ferry company's dockside storage shed since arriving on the island three weeks before the story begins.",
+            "Marcus Su skipped bail on the mainland after an assault charge stemming from a bar fight defending Danny over an unpaid debt.",
+            "Danny Su plans to give Marcus a seat on the final evacuation ferry using the identification of their late cousin, Peter Su.",
+            "Danny intends to falsely report a mechanical fault to justify reducing the ferry's official seat count by one.",
+            "Otis Bramwell, an elderly clinic patient who requires daily oxygen support, is the person whose seat would be effectively lost if Danny's plan succeeds."
+          ]
+        },
+        {
+          "label": "Aldridge's Diagnosis",
+          "character_knowledge": {
+            "DR_THEO_ALDRIDGE": {
+              "knows": [
+                "His pain is worsening and his cover story of a strained back is wearing thin."
+              ],
+              "hides": [
+                "That he's medicating himself privately in his locked office to keep functioning through the day."
+              ],
+              "believes_falsely": [
+                "That he can keep concealing it for the rest of the week if he's careful."
+              ]
+            },
+            "DR_SOPHIE_KANG": {
+              "knows": [
+                "She witnessed a genuine, sharp pain episode, not simple fatigue."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "That it's most likely an old back injury or an ulcer flaring under stress, not anything more serious."
+              ]
+            }
+          },
+          "solution": "Six weeks before the story begins, Dr. Theo Aldridge was diagnosed with advanced pancreatic cancer by a mainland oncologist during a trip he told clinic staff was for medical-supply requisition. His prognosis is measured in months, and he has told no one on the island. As the ferry seat count tightens across the week, he quietly decides to give up his own guaranteed staff seat to a patient rather than evacuate, planning to remain on Halyard Cay through the hurricane whether or not he survives it — partly genuine self-sacrifice, partly unspoken penance for the Marisol List decision twenty-two years earlier. Dr. Sophie Kang finds the oncologist's letter by accident while searching Aldridge's office for unrelated supply paperwork.",
+          "objective_facts": [
+            "Six weeks before the story begins, Dr. Theo Aldridge was diagnosed with advanced pancreatic cancer by a mainland oncologist during a trip he told clinic staff was for medical-supply requisition.",
+            "Aldridge's prognosis is measured in months, and he has disclosed the diagnosis to no one on the island.",
+            "Aldridge has a guaranteed staff seat reserved on the final evacuation ferry as clinic director.",
+            "Aldridge has decided to give up his reserved seat to a patient and remain on the island through the hurricane.",
+            "Dr. Sophie Kang discovers the oncologist's letter by accident while searching Aldridge's office for unrelated medical-supply paperwork."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "Bumped",
+      "theme": "Danny reports a fabricated mechanical fault to justify cutting the ferry's capacity by one seat, provisionally bumping oxygen-dependent patient Otis Bramwell and igniting Jonah's fury without him knowing why, while Aldridge deflects Sophie's gentle question about his health with a lie precise enough to end the conversation — the storm is upgraded to Category 3 as both cover stories hold, for now.",
+      "intro_note": "Danny went to bed the night before already knowing which name he'd cut from the manifest — by morning, Odette has been upgraded to a Category 3, and there's no more time to reconsider.",
+      "outro_note": "That night, Sophie starts searching Aldridge's office for supply paperwork he's been strangely reluctant to hand over — and in the archive, Kimi pulls one more file for her cross-check, a name she's pulled a hundred times before, except tonight the wording stops her cold.",
+      "sections": [
+        "Category Three — the marine radio confirms Odette's upgrade as the island braces harder",
+        "The Fault — Danny reports a fabricated mechanical fault to justify cutting the ferry's capacity by one seat",
+        "One Seat Gone — Kimi updates the evacuation list, provisionally bumping Otis Bramwell",
+        "Jonah's Fury — Jonah confronts Danny at the dock over his grandfather's lost seat",
+        "No Explanation — Danny stonewalls Jonah, offering nothing beyond the fault report",
+        "The Gentle Question — Sophie finds a quiet moment to ask Aldridge directly how he's really doing",
+        "A Lie That Lands — Aldridge offers a precise, credible excuse that ends the conversation",
+        "Boarded Windows — at the Saltbox, the chalkboard supply list gets shorter as shelves empty out",
+        "Kimi's Ledger — Kimi cross-references the evacuation list against the clinic archive late into the evening",
+        "Mei Chen's Watch — Mei Chen lingers nearby, watching Kimi work with barely concealed tension",
+        "Category Three Nightfall — the dock crew lashes down what's left as day three closes"
+      ],
+      "section_words": [
+        null,
+        null,
+        null,
+        {
+          "min": 130,
+          "max": 200,
+          "target": "140 to 170"
+        },
+        null,
+        null,
+        {
+          "min": 120,
+          "max": 190,
+          "target": "130 to 160"
+        },
+        null,
+        null,
+        null,
+        null
+      ],
+      "section_locations": [
+        "THE_DOCK",
+        "THE_DOCK",
+        "THE_CLINIC",
+        "THE_DOCK",
+        "THE_FERRY_SHED",
+        "THE_CLINIC",
+        "THE_CLINIC",
+        "SALTBOX_TAVERN",
+        "THE_CLINIC",
+        "THE_CLINIC",
+        "THE_DOCK"
+      ],
+      "case": [
+        {
+          "label": "The Marisol List",
+          "character_knowledge": {
+            "DR_THEO_ALDRIDGE": {
+              "knows": [
+                "The week's mounting pressure over ferry seats mirrors the exact choice he made twenty-two years ago."
+              ],
+              "hides": [
+                "His fear that the parallel is more than coincidence, saying nothing to Mei Chen or anyone else about it."
+              ],
+              "believes_falsely": [
+                "That the past remains contained as long as Mei Chen keeps managing Kimi's paperwork requests."
+              ]
+            },
+            "NURSE_MEI_CHEN": {
+              "knows": [
+                "Kimi continues cross-referencing archive files as part of her list work, coming closer to the old records each day."
+              ],
+              "hides": [
+                "Her rising anxiety, keeping it from Aldridge too so as not to add to his visible strain."
+              ],
+              "believes_falsely": [
+                "That if she keeps quietly redirecting Kimi's questions, the file will stay buried through the crisis week."
+              ]
+            },
+            "KIMI_SATO": {
+              "knows": [
+                "She is cross-checking this week's evacuation list against the clinic's older archive records.",
+                "Mei Chen has been unusually present and watchful around the archive lately."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "That Mei Chen's watchfulness is ordinary storm-week vigilance, unconnected to her own mother's records."
+              ]
+            }
+          },
+          "solution": "Twenty-two years ago, Hurricane Marisol forced the clinic to choose who took the last six seats on the evacuation ferry. Young Dr. Theo Aldridge, then a junior physician, was pressured by the clinic's founding director, Walter Kessler, into striking severe asthmatic patient Aiko Sato from the evacuation list and replacing her with Kessler's own nephew, who had a non-urgent leg fracture. Aiko Sato died during the storm from a respiratory attack with no doctor able to reach her. Nurse Mei Chen, then a young ER nurse, witnessed the swapped list and afterward helped Aldridge alter Aiko Sato's official clinic file to read 'no bed capacity available' rather than record the swap, protecting him after Kessler died within the year and could no longer share the blame. Aldridge has spent twenty-two years being scrupulously fair on paper about triage as unspoken penance — the very fairness Kimi Sato, Aiko's daughter, now trusts completely as the clinic's records administrator.",
+          "objective_facts": [
+            "Twenty-two years ago, Hurricane Marisol struck Halyard Cay and the clinic's evacuation ferry had only six open seats when the storm surge cut off later crossings.",
+            "Aiko Sato, a severe asthmatic patient, was on the original evacuation list compiled by then-junior physician Theo Aldridge.",
+            "The clinic's founding director, Walter Kessler, ordered Aiko Sato's name struck from the list and replaced with his own nephew's, who had a non-urgent leg fracture.",
+            "Aiko Sato died during Hurricane Marisol from a respiratory attack after being left behind.",
+            "Nurse Mei Chen altered Aiko Sato's clinic file after the storm to state 'no bed capacity available' rather than recording the list swap.",
+            "Walter Kessler died eight months after Hurricane Marisol and never faced any consequence for the decision.",
+            "Kimi Sato, Aiko's daughter, was twelve years old when her mother died and has believed for twenty-two years that no doctor could reach her mother in time."
+          ]
+        },
+        {
+          "label": "Danny's Ferry",
+          "character_knowledge": {
+            "CAPTAIN_DANNY_SU": {
+              "knows": [
+                "He fabricated a mechanical fault to cut ferry capacity by one seat, provisionally bumping Otis Bramwell.",
+                "Jonah is furious but has no idea of the real reason."
+              ],
+              "hides": [
+                "Marcus's presence, framing the seat cut purely as an unavoidable safety issue."
+              ],
+              "believes_falsely": [
+                "That he can weather Jonah's anger without the truth ever surfacing, and that he'll 'make it right' for Otis somehow later."
+              ]
+            },
+            "JONAH_BRAMWELL": {
+              "knows": [
+                "His grandfather has been provisionally bumped from the ferry list due to a stated mechanical fault.",
+                "Danny is the one who reported the fault."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "That the mechanical fault story is true, and that Danny simply didn't fight hard enough to protect an old man's seat — he doesn't suspect a stowaway is the real cause."
+              ]
+            }
+          },
+          "solution": "Danny Su's estranged younger brother, Marcus Su, has been hiding in the ferry company's dockside storage shed for three weeks after skipping bail on the mainland following an assault charge — he broke a man's jaw defending Danny in a debt-collection dispute. Danny plans to smuggle Marcus onto the final evacuation ferry using the identification of their late cousin, Peter Su, and intends to falsely report a mechanical fault to justify cutting the ferry's official seat count by one, effectively bumping elderly oxygen-dependent patient Otis Bramwell without anyone realizing why. Danny tells himself he is only protecting family, but the plan directly endangers a clinic patient's evacuation slot.",
+          "objective_facts": [
+            "Danny Su's younger brother, Marcus Su, has been hiding in the ferry company's dockside storage shed since arriving on the island three weeks before the story begins.",
+            "Marcus Su skipped bail on the mainland after an assault charge stemming from a bar fight defending Danny over an unpaid debt.",
+            "Danny Su plans to give Marcus a seat on the final evacuation ferry using the identification of their late cousin, Peter Su.",
+            "Danny intends to falsely report a mechanical fault to justify reducing the ferry's official seat count by one.",
+            "Otis Bramwell, an elderly clinic patient who requires daily oxygen support, is the person whose seat would be effectively lost if Danny's plan succeeds."
+          ]
+        },
+        {
+          "label": "Aldridge's Diagnosis",
+          "character_knowledge": {
+            "DR_THEO_ALDRIDGE": {
+              "knows": [
+                "His physical decline is getting harder to hide as the week's pressure mounts."
+              ],
+              "hides": [
+                "The diagnosis, deflecting Sophie's direct question with a specific, credible story about an old back injury flaring up."
+              ],
+              "believes_falsely": [
+                "That his answer fully closed the conversation and bought him more time before anyone looks closer."
+              ]
+            },
+            "DR_SOPHIE_KANG": {
+              "knows": [
+                "She asked Aldridge directly and received a specific, plausible explanation about an old injury."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "That the back-injury explanation accounts for what she's seen, even as a small seed of doubt lingers."
+              ]
+            }
+          },
+          "solution": "Six weeks before the story begins, Dr. Theo Aldridge was diagnosed with advanced pancreatic cancer by a mainland oncologist during a trip he told clinic staff was for medical-supply requisition. His prognosis is measured in months, and he has told no one on the island. As the ferry seat count tightens across the week, he quietly decides to give up his own guaranteed staff seat to a patient rather than evacuate, planning to remain on Halyard Cay through the hurricane whether or not he survives it — partly genuine self-sacrifice, partly unspoken penance for the Marisol List decision twenty-two years earlier. Dr. Sophie Kang finds the oncologist's letter by accident while searching Aldridge's office for unrelated supply paperwork.",
+          "objective_facts": [
+            "Six weeks before the story begins, Dr. Theo Aldridge was diagnosed with advanced pancreatic cancer by a mainland oncologist during a trip he told clinic staff was for medical-supply requisition.",
+            "Aldridge's prognosis is measured in months, and he has disclosed the diagnosis to no one on the island.",
+            "Aldridge has a guaranteed staff seat reserved on the final evacuation ferry as clinic director.",
+            "Aldridge has decided to give up his reserved seat to a patient and remain on the island through the hurricane.",
+            "Dr. Sophie Kang discovers the oncologist's letter by accident while searching Aldridge's office for unrelated medical-supply paperwork."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "The File That Doesn't Add Up",
+      "theme": "Sophie finds the oncologist's letter confirming Aldridge's diagnosis while searching his office for supply paperwork, and Kimi — cross-checking the final evacuation list against the clinic archive — notices the impossible phrase 'no bed capacity available' on her mother's twenty-two-year-old file and corners Mei Chen with a question Mei Chen can no longer deflect, ending the episode with the Marisol List cracking open for the first time in twenty-two years.",
+      "intro_note": "Category 3 held through the night, but Odette is still climbing, and the two lies that bought their tellers one more day — Danny's fabricated fault, Aldridge's deflection of Sophie's question — are both still standing when the sun comes up on day four.",
+      "outro_note": "Mei Chen's practiced calm just broke for the first time in twenty-two years, and Kimi isn't leaving the archive room until she gets an answer to the only question that matters now: what does 'no bed capacity available' actually mean.",
+      "sections": [
+        "Day Four: The Category Climbs — Odette strengthens to Category 4 as the clinic races to finish storm prep",
+        "The Office Search — Sophie searches Aldridge's office for requisition paperwork ahead of the next supply run (Aldridge's Diagnosis)",
+        "The Letter — tucked inside a folder marked 'Requisition,' Sophie finds the oncologist's letter (Aldridge's Diagnosis)",
+        "Steady Hands — Sophie forces herself through rounds beside Aldridge without betraying what she just read (Aldridge's Diagnosis)",
+        "Shed Math — Danny walks Marcus through the mechanical-fault story one more time as the numbers tighten (Danny's Ferry)",
+        "Bumped Again — Jonah presses Danny at the dock about why Otis quietly dropped off the manifest (Danny's Ferry)",
+        "Cross-Check — Kimi reconciles the final evacuation list against the clinic's old storm archive (The Marisol List)",
+        "Two Words — Kimi stops cold on a phrase in her mother's twenty-two-year-old file: 'no bed capacity available' (The Marisol List)",
+        "The Question — Kimi carries the open file straight to Mei Chen (The Marisol List)",
+        "Last Call — the Saltbox strips its shelves bare as Category 4 news spreads, and Jonah drowns his frustration over Otis",
+        "What Mei Chen Can't Say — Kimi won't leave the archive room without an answer, and Mei Chen's composure finally slips (The Marisol List)"
+      ],
+      "section_words": [
+        null,
+        null,
+        {
+          "min": 120,
+          "max": 190,
+          "target": "130 to 160"
+        },
+        null,
+        null,
+        null,
+        null,
+        {
+          "min": 110,
+          "max": 180,
+          "target": "120 to 150"
+        },
+        null,
+        null,
+        {
+          "min": 150,
+          "max": 220,
+          "target": "160 to 190"
+        }
+      ],
+      "section_locations": [
+        "THE_CLINIC",
+        "THE_CLINIC",
+        "THE_CLINIC",
+        "THE_CLINIC",
+        "THE_FERRY_SHED",
+        "THE_DOCK",
+        "THE_CLINIC",
+        "THE_CLINIC",
+        "THE_CLINIC",
+        "SALTBOX_TAVERN",
+        "THE_CLINIC"
+      ],
+      "case": [
+        {
+          "label": "The Marisol List",
+          "character_knowledge": {
+            "DR_THEO_ALDRIDGE": {
+              "knows": [
+                "He and Walter Kessler swapped Aiko Sato off the original evacuation list for Kessler's nephew, and Mei Chen altered the file afterward to cover it."
+              ],
+              "hides": [
+                "The entire swap and the altered file from Kimi and everyone else on staff — it has shaped his scrupulous fairness on paper for twenty-two years and he has never told a soul but Mei Chen."
+              ],
+              "believes_falsely": [
+                "That the altered file has held for twenty-two years and will keep holding — he has no idea Kimi is cross-checking the old archive this very week."
+              ]
+            },
+            "NURSE_MEI_CHEN": {
+              "knows": [
+                "The full truth of the swap, and that she personally rewrote Aiko Sato's file to read 'no bed capacity available.'"
+              ],
+              "hides": [
+                "Everything, from Kimi most of all — she has protected Aldridge's name and her own for over two decades and isn't ready to stop today."
+              ],
+              "believes_falsely": [
+                "That she can deflect one more direct question from Kimi the way she's deflected every indirect one before it."
+              ]
+            },
+            "KIMI_SATO": {
+              "knows": [
+                "Her mother's clinic file, cross-checked against the current evacuation list, contains the phrase 'no bed capacity available' — a phrase that matches nothing else in the ferry's passenger records from that storm."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "Has believed for twenty-two years that no doctor could reach her mother in time during Hurricane Marisol — a belief this discovery has just started to crack."
+              ]
+            }
+          },
+          "solution": "Twenty-two years ago, Hurricane Marisol forced the clinic to choose who took the last six seats on the evacuation ferry. Young Dr. Theo Aldridge, then a junior physician, was pressured by the clinic's founding director, Walter Kessler, into striking severe asthmatic patient Aiko Sato from the evacuation list and replacing her with Kessler's own nephew, who had a non-urgent leg fracture. Aiko Sato died during the storm from a respiratory attack with no doctor able to reach her. Nurse Mei Chen, then a young ER nurse, witnessed the swapped list and afterward helped Aldridge alter Aiko Sato's official clinic file to read 'no bed capacity available' rather than record the swap, protecting him after Kessler died within the year and could no longer share the blame. Aldridge has spent twenty-two years being scrupulously fair on paper about triage as unspoken penance — the very fairness Kimi Sato, Aiko's daughter, now trusts completely as the clinic's records administrator.",
+          "objective_facts": [
+            "Twenty-two years ago, Hurricane Marisol struck Halyard Cay and the clinic's evacuation ferry had only six open seats when the storm surge cut off later crossings.",
+            "Aiko Sato, a severe asthmatic patient, was on the original evacuation list compiled by then-junior physician Theo Aldridge.",
+            "The clinic's founding director, Walter Kessler, ordered Aiko Sato's name struck from the list and replaced with his own nephew's, who had a non-urgent leg fracture.",
+            "Aiko Sato died during Hurricane Marisol from a respiratory attack after being left behind.",
+            "Nurse Mei Chen altered Aiko Sato's clinic file after the storm to state 'no bed capacity available' rather than recording the list swap.",
+            "Walter Kessler died eight months after Hurricane Marisol and never faced any consequence for the decision.",
+            "Kimi Sato, Aiko's daughter, was twelve years old when her mother died and has believed for twenty-two years that no doctor could reach her mother in time."
+          ]
+        },
+        {
+          "label": "Danny's Ferry",
+          "character_knowledge": {
+            "CAPTAIN_DANNY_SU": {
+              "knows": [
+                "Marcus is still hiding in the shed and the mechanical-fault story needs to hold for three more days."
+              ],
+              "hides": [
+                "Marcus's presence and the plan to use cousin Peter's identification, from everyone — Jonah especially."
+              ],
+              "believes_falsely": [
+                "That Jonah's questions about Otis are grief talking, not real suspicion."
+              ]
+            },
+            "JONAH_BRAMWELL": {
+              "knows": [
+                "Otis has quietly dropped off the confirmed manifest and Danny's explanation keeps shifting each time he asks."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "That the seat cut is a genuine mechanical problem with the ferry rather than something Danny invented."
+              ]
+            },
+            "DR_THEO_ALDRIDGE": {
+              "knows": [
+                "Danny has reported a mechanical fault that reduces the ferry's official seat count by one."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "That the fault Danny reported is real and has no connection to who ends up on the boat."
+              ]
+            }
+          },
+          "solution": "Danny Su's estranged younger brother, Marcus Su, has been hiding in the ferry company's dockside storage shed for three weeks after skipping bail on the mainland following an assault charge — he broke a man's jaw defending Danny in a debt-collection dispute. Danny plans to smuggle Marcus onto the final evacuation ferry using the identification of their late cousin, Peter Su, and intends to falsely report a mechanical fault to justify cutting the ferry's official seat count by one, effectively bumping elderly oxygen-dependent patient Otis Bramwell without anyone realizing why. Danny tells himself he is only protecting family, but the plan directly endangers a clinic patient's evacuation slot.",
+          "objective_facts": [
+            "Danny Su's younger brother, Marcus Su, has been hiding in the ferry company's dockside storage shed since arriving on the island three weeks before the story begins.",
+            "Marcus Su skipped bail on the mainland after an assault charge stemming from a bar fight defending Danny over an unpaid debt.",
+            "Danny Su plans to give Marcus a seat on the final evacuation ferry using the identification of their late cousin, Peter Su.",
+            "Danny intends to falsely report a mechanical fault to justify reducing the ferry's official seat count by one.",
+            "Otis Bramwell, an elderly clinic patient who requires daily oxygen support, is the person whose seat would be effectively lost if Danny's plan succeeds."
+          ]
+        },
+        {
+          "label": "Aldridge's Diagnosis",
+          "character_knowledge": {
+            "DR_SOPHIE_KANG": {
+              "knows": [
+                "Aldridge was diagnosed with advanced pancreatic cancer six weeks ago by a mainland oncologist, on the trip he told everyone was for supply requisition."
+              ],
+              "hides": [
+                "That she found the letter — she hasn't told Aldridge or anyone else yet, still deciding what to do with it."
+              ],
+              "believes_falsely": []
+            },
+            "DR_THEO_ALDRIDGE": {
+              "knows": [
+                "His own diagnosis and prognosis, which he has told no one on the island."
+              ],
+              "hides": [
+                "The diagnosis from every person on staff, including Sophie."
+              ],
+              "believes_falsely": [
+                "That his cover story about the mainland trip has held completely — he has no idea Sophie found the letter."
+              ]
+            }
+          },
+          "solution": "Six weeks before the story begins, Dr. Theo Aldridge was diagnosed with advanced pancreatic cancer by a mainland oncologist during a trip he told clinic staff was for medical-supply requisition. His prognosis is measured in months, and he has told no one on the island. As the ferry seat count tightens across the week, he quietly decides to give up his own guaranteed staff seat to a patient rather than evacuate, planning to remain on Halyard Cay through the hurricane whether or not he survives it — partly genuine self-sacrifice, partly unspoken penance for the Marisol List decision twenty-two years earlier. Dr. Sophie Kang finds the oncologist's letter by accident while searching Aldridge's office for unrelated supply paperwork.",
+          "objective_facts": [
+            "Six weeks before the story begins, Dr. Theo Aldridge was diagnosed with advanced pancreatic cancer by a mainland oncologist during a trip he told clinic staff was for medical-supply requisition.",
+            "Aldridge's prognosis is measured in months, and he has disclosed the diagnosis to no one on the island.",
+            "Aldridge has a guaranteed staff seat reserved on the final evacuation ferry as clinic director.",
+            "Aldridge has decided to give up his reserved seat to a patient and remain on the island through the hurricane.",
+            "Dr. Sophie Kang discovers the oncologist's letter by accident while searching Aldridge's office for unrelated medical-supply paperwork."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "What the Storm Uncovers",
+      "theme": "Under Kimi's direct questioning Mei Chen finally names Theo Aldridge and the late Walter Kessler as the ones who swapped Aiko Sato off the original list, Aldridge admits his diagnosis to Sophie and announces he will give up his guaranteed seat, and Jonah discovers Marcus hiding in the ferry shed just as Danny's fabricated seat shortage collides with the newly reduced count — leaving the clinic one seat short of everyone who now has a rightful claim to it as Odette's outer bands reach the coast.",
+      "intro_note": "Kimi got her answer to Mei Chen's face and got nothing but a name for it — and now, on the first morning the outer bands actually reach Halyard Cay, that name is still hanging in the air between them.",
+      "outro_note": "The wind is screaming through the shutters, Marcus is standing in the open where Jonah can see him, Aldridge has just given away the one seat that was never in question, and Kimi has done the math out loud in front of everyone: there is one fewer seat than there are people who now have a claim to it.",
+      "sections": [
+        "Day Six: The Outer Bands — wind and rain reach Halyard Cay hours ahead of the main storm, and every plan on the island runs out of slack at once",
+        "The Question Answered — cornered with nowhere left to deflect, Mei Chen tells Kimi it was Theo Aldridge and Walter Kessler who swapped her mother off the list (The Marisol List)",
+        "Twenty-Two Years — Kimi says nothing and walks out before Mei Chen can say anything else (The Marisol List)",
+        "Found Out — Sophie corners Aldridge in his office with the oncologist's letter in her hand (Aldridge's Diagnosis)",
+        "The Admission — Aldridge finally says the word 'cancer' out loud for the first time (Aldridge's Diagnosis)",
+        "The Seat He Won't Take — Aldridge tells Sophie he's giving up his guaranteed staff seat (Aldridge's Diagnosis)",
+        "The Report Goes In — Danny finalizes the fabricated mechanical-fault report with the harbor office (Danny's Ferry)",
+        "What's Behind the Crates — Jonah goes to the ferry shed for rope and finds Marcus hiding behind the diesel drums (Danny's Ferry)",
+        "Brothers — Danny arrives to find Jonah already staring at Marcus, and the story falls apart in real time (Danny's Ferry)",
+        "Kimi Does the Math — back at the clinic, Kimi reconciles Aldridge's vacated seat against Danny's reduced count and the number comes up short (The Marisol List / Danny's Ferry converge)",
+        "Last Orders — the Saltbox boards its windows for good as the island braces and tempers wear down to nothing",
+        "One Seat Short — Kimi says it plainly in front of Aldridge: whatever happens next, there isn't room for everyone who has a rightful claim to that boat"
+      ],
+      "section_words": [
+        null,
+        null,
+        {
+          "min": 130,
+          "max": 200,
+          "target": "140 to 170"
+        },
+        null,
+        {
+          "min": 100,
+          "max": 170,
+          "target": "110 to 140"
+        },
+        null,
+        null,
+        null,
+        {
+          "min": 130,
+          "max": 200,
+          "target": "140 to 170"
+        },
+        null,
+        null,
+        null
+      ],
+      "section_locations": [
+        "THE_DOCK",
+        "THE_CLINIC",
+        "THE_CLINIC",
+        "THE_CLINIC",
+        "THE_CLINIC",
+        "THE_CLINIC",
+        "THE_DOCK",
+        "THE_FERRY_SHED",
+        "THE_FERRY_SHED",
+        "THE_CLINIC",
+        "SALTBOX_TAVERN",
+        "THE_CLINIC"
+      ],
+      "case": [
+        {
+          "label": "The Marisol List",
+          "character_knowledge": {
+            "DR_THEO_ALDRIDGE": {
+              "knows": [
+                "That Mei Chen has now told Kimi it was him and Kessler who made the swap."
+              ],
+              "hides": [
+                "He still hasn't spoken to Kimi himself, and hasn't found the words to."
+              ],
+              "believes_falsely": [
+                "That he has more time before Kimi comes to him directly — he doesn't yet know how much Mei Chen actually told her."
+              ]
+            },
+            "NURSE_MEI_CHEN": {
+              "knows": [
+                "She has now told Kimi that Aldridge and Kessler swapped her mother off the list."
+              ],
+              "hides": [
+                "Her own role in altering Aiko Sato's file — she named the swap, not her own hand in covering it up."
+              ],
+              "believes_falsely": [
+                "That naming Aldridge and Kessler will be enough to satisfy Kimi, and that her own part in it can stay buried a little longer."
+              ]
+            },
+            "KIMI_SATO": {
+              "knows": [
+                "Theo Aldridge and Walter Kessler swapped her mother off the evacuation list twenty-two years ago."
+              ],
+              "hides": [],
+              "believes_falsely": [
+                "Assumes, with nothing yet to correct her, that Aldridge acted willingly out of loyalty to Kessler rather than under Kessler's pressure — and has no idea the file itself was rewritten, or by whose hand."
+              ]
+            }
+          },
+          "solution": "Twenty-two years ago, Hurricane Marisol forced the clinic to choose who took the last six seats on the evacuation ferry. Young Dr. Theo Aldridge, then a junior physician, was pressured by the clinic's founding director, Walter Kessler, into striking severe asthmatic patient Aiko Sato from the evacuation list and replacing her with Kessler's own nephew, who had a non-urgent leg fracture. Aiko Sato died during the storm from a respiratory attack with no doctor able to reach her. Nurse Mei Chen, then a young ER nurse, witnessed the swapped list and afterward helped Aldridge alter Aiko Sato's official clinic file to read 'no bed capacity available' rather than record the swap, protecting him after Kessler died within the year and could no longer share the blame. Aldridge has spent twenty-two years being scrupulously fair on paper about triage as unspoken penance — the very fairness Kimi Sato, Aiko's daughter, now trusts completely as the clinic's records administrator.",
+          "objective_facts": [
+            "Twenty-two years ago, Hurricane Marisol struck Halyard Cay and the clinic's evacuation ferry had only six open seats when the storm surge cut off later crossings.",
+            "Aiko Sato, a severe asthmatic patient, was on the original evacuation list compiled by then-junior physician Theo Aldridge.",
+            "The clinic's founding director, Walter Kessler, ordered Aiko Sato's name struck from the list and replaced with his own nephew's, who had a non-urgent leg fracture.",
+            "Aiko Sato died during Hurricane Marisol from a respiratory attack after being left behind.",
+            "Nurse Mei Chen altered Aiko Sato's clinic file after the storm to state 'no bed capacity available' rather than recording the list swap.",
+            "Walter Kessler died eight months after Hurricane Marisol and never faced any consequence for the decision.",
+            "Kimi Sato, Aiko's daughter, was twelve years old when her mother died and has believed for twenty-two years that no doctor could reach her mother in time."
+          ]
+        },
+        {
+          "label": "Danny's Ferry",
+          "character_knowledge": {
+            "CAPTAIN_DANNY_SU": {
+              "knows": [
+                "The fabricated report is filed and Marcus has just been seen by Jonah."
+              ],
+              "hides": [
+                "He's still trying to talk his way out of it even as Jonah stands there looking at Marcus."
+              ],
+              "believes_falsely": [
+                "That he can still spin this into something Jonah will let go — a belief that's collapsing in real time."
+              ]
+            },
+            "JONAH_BRAMWELL": {
+              "knows": [
+                "Marcus is Danny's brother, hiding from the mainland law, and the mechanical-fault report was invented to cover for him."
+              ],
+              "hides": [],
+              "believes_falsely": []
+            }
+          },
+          "solution": "Danny Su's estranged younger brother, Marcus Su, has been hiding in the ferry company's dockside storage shed for three weeks after skipping bail on the mainland following an assault charge — he broke a man's jaw defending Danny in a debt-collection dispute. Danny plans to smuggle Marcus onto the final evacuation ferry using the identification of their late cousin, Peter Su, and intends to falsely report a mechanical fault to justify cutting the ferry's official seat count by one, effectively bumping elderly oxygen-dependent patient Otis Bramwell without anyone realizing why. Danny tells himself he is only protecting family, but the plan directly endangers a clinic patient's evacuation slot.",
+          "objective_facts": [
+            "Danny Su's younger brother, Marcus Su, has been hiding in the ferry company's dockside storage shed since arriving on the island three weeks before the story begins.",
+            "Marcus Su skipped bail on the mainland after an assault charge stemming from a bar fight defending Danny over an unpaid debt.",
+            "Danny Su plans to give Marcus a seat on the final evacuation ferry using the identification of their late cousin, Peter Su.",
+            "Danny intends to falsely report a mechanical fault to justify reducing the ferry's official seat count by one.",
+            "Otis Bramwell, an elderly clinic patient who requires daily oxygen support, is the person whose seat would be effectively lost if Danny's plan succeeds."
+          ]
+        },
+        {
+          "label": "Aldridge's Diagnosis",
+          "character_knowledge": {
+            "DR_SOPHIE_KANG": {
+              "knows": [
+                "Aldridge has confirmed the diagnosis to her directly and has decided to give up his guaranteed seat."
+              ],
+              "hides": [
+                "She hasn't told Mei Chen, Kimi, or anyone else yet."
+              ],
+              "believes_falsely": []
+            },
+            "DR_THEO_ALDRIDGE": {
+              "knows": [
+                "His diagnosis, now spoken aloud to Sophie, and his decision to give up his seat."
+              ],
+              "hides": [
+                "The diagnosis from Mei Chen, Kimi, Danny, and Jonah — only Sophie knows."
+              ],
+              "believes_falsely": []
+            }
+          },
+          "solution": "Six weeks before the story begins, Dr. Theo Aldridge was diagnosed with advanced pancreatic cancer by a mainland oncologist during a trip he told clinic staff was for medical-supply requisition. His prognosis is measured in months, and he has told no one on the island. As the ferry seat count tightens across the week, he quietly decides to give up his own guaranteed staff seat to a patient rather than evacuate, planning to remain on Halyard Cay through the hurricane whether or not he survives it — partly genuine self-sacrifice, partly unspoken penance for the Marisol List decision twenty-two years earlier. Dr. Sophie Kang finds the oncologist's letter by accident while searching Aldridge's office for unrelated supply paperwork.",
+          "objective_facts": [
+            "Six weeks before the story begins, Dr. Theo Aldridge was diagnosed with advanced pancreatic cancer by a mainland oncologist during a trip he told clinic staff was for medical-supply requisition.",
+            "Aldridge's prognosis is measured in months, and he has disclosed the diagnosis to no one on the island.",
+            "Aldridge has a guaranteed staff seat reserved on the final evacuation ferry as clinic director.",
+            "Aldridge has decided to give up his reserved seat to a patient and remain on the island through the hurricane.",
+            "Dr. Sophie Kang discovers the oncologist's letter by accident while searching Aldridge's office for unrelated medical-supply paperwork."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "Landfall",
+      "theme": "As Hurricane Odette makes landfall and the last ferry prepares to cast off, the clinic staff must resolve the seat shortage Danny's lie created, decide whether Aldridge's sacrifice is allowed to stand, and watch Kimi choose — in front of the man responsible for her mother's death twenty-two years ago — who from Halyard Cay gets to leave the island alive.",
+      "intro_note": "The outer bands have already knocked out half the island's power, Marcus is standing in plain sight in the ferry shed, Aldridge has given up the one seat nobody expected him to give up, and Kimi's math still says the clinic is one seat short of everyone with a rightful claim to the boat — and now the storm itself has stopped waiting.",
+      "outro_note": "",
+      "sections": [
+        "Landfall — Hurricane Odette comes ashore on Halyard Cay as the last ferry crew scrambles to finish loading before the surge cuts off the dock",
+        "The Count — Aldridge, Mei Chen, and Kimi stand over the manifest trying to make one seat cover two names (Danny's Ferry / The Marisol List converge)",
+        "Caught — Jonah drags Danny to the dock to explain Marcus to Aldridge directly (Danny's Ferry)",
+        "The Lie Comes Apart — Danny admits the fault report was fabricated and Marcus was never on any manifest (Danny's Ferry)",
+        "What It Costs — Danny gives up any claim to Marcus's seat and agrees to answer for the false report once the storm passes (Danny's Ferry)",
+        "Everything, Finally — Mei Chen tells Kimi and Aldridge together that she altered Aiko Sato's file herself, twenty-two years ago (The Marisol List)",
+        "Face to Face — Kimi and Aldridge stand alone with the truth of her mother's death between them for the first time (The Marisol List)",
+        "Otis's Seat — Jonah gets word that Otis is back on the confirmed list, no conditions attached (Danny's Ferry)",
+        "Not His Alone to Carry — Sophie tells Mei Chen about Aldridge's diagnosis so he doesn't face the last decision with no one around him knowing what it costs him (Aldridge's Diagnosis)",
+        "Seven Seats — with the wind screaming and the ferry engine already running, Kimi is asked to make the final call on who from Halyard Cay boards, with Theo Aldridge standing in front of her waiting to hear it",
+        "The Boat Pulls Away — the ferry casts off into the storm, Halyard Cay's newest secret behind it and its oldest one finally spoken aloud"
+      ],
+      "section_words": [
+        null,
+        null,
+        null,
+        {
+          "min": 130,
+          "max": 200,
+          "target": "140 to 170"
+        },
+        null,
+        null,
+        {
+          "min": 350,
+          "max": 550,
+          "target": "400 to 480"
+        },
+        null,
+        null,
+        null,
+        {
+          "min": 130,
+          "max": 200,
+          "target": "140 to 170"
+        }
+      ],
+      "section_locations": [
+        "THE_DOCK",
+        "THE_CLINIC",
+        "THE_DOCK",
+        "THE_FERRY_SHED",
+        "THE_DOCK",
+        "THE_CLINIC",
+        "THE_SATO_HOUSE",
+        "THE_DOCK",
+        "THE_CLINIC",
+        "THE_DOCK",
+        "THE_DOCK"
+      ],
+      "case": [
+        {
+          "label": "The Marisol List",
+          "character_knowledge": {
+            "DR_THEO_ALDRIDGE": {
+              "knows": [
+                "The full truth of the swap, Kessler's pressure, and Mei Chen's altered file — now confirmed aloud to Kimi directly."
+              ],
+              "hides": [],
+              "believes_falsely": []
+            },
+            "NURSE_MEI_CHEN": {
+              "knows": [
+                "She has now confessed, to both Kimi and Aldridge together, that she personally altered Aiko Sato's file to read 'no bed capacity available.'"
+              ],
+              "hides": [],
+              "believes_falsely": []
+            },
+            "KIMI_SATO": {
+              "knows": [
+                "The complete truth of her mother's death: Kessler's order, Aldridge's compliance under pressure, and Mei Chen's altered file — and that the man she has trusted with the island's fairness for years is the same man who let her mother die."
+              ],
+              "hides": [],
+              "believes_falsely": []
+            }
+          },
+          "solution": "Twenty-two years ago, Hurricane Marisol forced the clinic to choose who took the last six seats on the evacuation ferry. Young Dr. Theo Aldridge, then a junior physician, was pressured by the clinic's founding director, Walter Kessler, into striking severe asthmatic patient Aiko Sato from the evacuation list and replacing her with Kessler's own nephew, who had a non-urgent leg fracture. Aiko Sato died during the storm from a respiratory attack with no doctor able to reach her. Nurse Mei Chen, then a young ER nurse, witnessed the swapped list and afterward helped Aldridge alter Aiko Sato's official clinic file to read 'no bed capacity available' rather than record the swap, protecting him after Kessler died within the year and could no longer share the blame. Aldridge has spent twenty-two years being scrupulously fair on paper about triage as unspoken penance — the very fairness Kimi Sato, Aiko's daughter, now trusts completely as the clinic's records administrator.",
+          "objective_facts": [
+            "Twenty-two years ago, Hurricane Marisol struck Halyard Cay and the clinic's evacuation ferry had only six open seats when the storm surge cut off later crossings.",
+            "Aiko Sato, a severe asthmatic patient, was on the original evacuation list compiled by then-junior physician Theo Aldridge.",
+            "The clinic's founding director, Walter Kessler, ordered Aiko Sato's name struck from the list and replaced with his own nephew's, who had a non-urgent leg fracture.",
+            "Aiko Sato died during Hurricane Marisol from a respiratory attack after being left behind.",
+            "Nurse Mei Chen altered Aiko Sato's clinic file after the storm to state 'no bed capacity available' rather than recording the list swap.",
+            "Walter Kessler died eight months after Hurricane Marisol and never faced any consequence for the decision.",
+            "Kimi Sato, Aiko's daughter, was twelve years old when her mother died and has believed for twenty-two years that no doctor could reach her mother in time."
+          ]
+        },
+        {
+          "label": "Danny's Ferry",
+          "character_knowledge": {
+            "CAPTAIN_DANNY_SU": {
+              "knows": [
+                "The false report is exposed, Marcus has no legitimate seat, and Otis's place has to be restored."
+              ],
+              "hides": [],
+              "believes_falsely": []
+            },
+            "JONAH_BRAMWELL": {
+              "knows": [
+                "Otis is confirmed back on the list with no conditions, and that Danny will answer for the fabricated report once the island is safe."
+              ],
+              "hides": [],
+              "believes_falsely": []
+            }
+          },
+          "solution": "Danny Su's estranged younger brother, Marcus Su, has been hiding in the ferry company's dockside storage shed for three weeks after skipping bail on the mainland following an assault charge — he broke a man's jaw defending Danny in a debt-collection dispute. Danny plans to smuggle Marcus onto the final evacuation ferry using the identification of their late cousin, Peter Su, and intends to falsely report a mechanical fault to justify cutting the ferry's official seat count by one, effectively bumping elderly oxygen-dependent patient Otis Bramwell without anyone realizing why. Danny tells himself he is only protecting family, but the plan directly endangers a clinic patient's evacuation slot.",
+          "objective_facts": [
+            "Danny Su's younger brother, Marcus Su, has been hiding in the ferry company's dockside storage shed since arriving on the island three weeks before the story begins.",
+            "Marcus Su skipped bail on the mainland after an assault charge stemming from a bar fight defending Danny over an unpaid debt.",
+            "Danny Su plans to give Marcus a seat on the final evacuation ferry using the identification of their late cousin, Peter Su.",
+            "Danny intends to falsely report a mechanical fault to justify reducing the ferry's official seat count by one.",
+            "Otis Bramwell, an elderly clinic patient who requires daily oxygen support, is the person whose seat would be effectively lost if Danny's plan succeeds."
+          ]
+        },
+        {
+          "label": "Aldridge's Diagnosis",
+          "character_knowledge": {
+            "DR_THEO_ALDRIDGE": {
+              "knows": [
+                "His diagnosis is now known to Sophie and Mei Chen, but whether he takes a seat or rides out the storm on the island is still undecided as the ferry prepares to leave."
+              ],
+              "hides": [],
+              "believes_falsely": []
+            },
+            "DR_SOPHIE_KANG": {
+              "knows": [
+                "She told Mei Chen so Aldridge wouldn't face the last-seat decision with no one around him knowing what it costs him — but the outcome itself is still unresolved as the boat casts off."
+              ],
+              "hides": [],
+              "believes_falsely": []
+            },
+            "NURSE_MEI_CHEN": {
+              "knows": [
+                "Aldridge's diagnosis, learned from Sophie in the same hour her own decades-old secret came out — there's been no time left to process it, or to change what happens next, before the ferry has to go."
+              ],
+              "hides": [],
+              "believes_falsely": []
+            }
+          },
+          "solution": "Six weeks before the story begins, Dr. Theo Aldridge was diagnosed with advanced pancreatic cancer by a mainland oncologist during a trip he told clinic staff was for medical-supply requisition. His prognosis is measured in months, and he has told no one on the island. As the ferry seat count tightens across the week, he quietly decides to give up his own guaranteed staff seat to a patient rather than evacuate, planning to remain on Halyard Cay through the hurricane whether or not he survives it — partly genuine self-sacrifice, partly unspoken penance for the Marisol List decision twenty-two years earlier. Dr. Sophie Kang finds the oncologist's letter by accident while searching Aldridge's office for unrelated supply paperwork.",
+          "objective_facts": [
+            "Six weeks before the story begins, Dr. Theo Aldridge was diagnosed with advanced pancreatic cancer by a mainland oncologist during a trip he told clinic staff was for medical-supply requisition.",
+            "Aldridge's prognosis is measured in months, and he has disclosed the diagnosis to no one on the island.",
+            "Aldridge has a guaranteed staff seat reserved on the final evacuation ferry as clinic director.",
+            "Aldridge has decided to give up his reserved seat to a patient and remain on the island through the hurricane.",
+            "Dr. Sophie Kang discovers the oncologist's letter by accident while searching Aldridge's office for unrelated medical-supply paperwork."
+          ]
+        }
+      ]
+    }
+  ]
+}

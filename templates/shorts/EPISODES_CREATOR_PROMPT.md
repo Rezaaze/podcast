@@ -103,11 +103,7 @@ REQUIRED SCHEMA (follow exactly):
             "string — ..."
           ],
           "character_knowledge": {
-            "ROLE_NAME_FROM_VOICES": {
-              "knows": ["string — facts this character genuinely knows firsthand and may freely reveal or act on"],
-              "hides": ["string — facts this character knows but deliberately conceals or lies about — and briefly WHY"],
-              "believes_falsely": ["string — something this character wrongly believes, and why that misunderstanding makes sense"]
-            }
+            "ROLE_NAME_FROM_VOICES": "string — this character's knowledge state for THIS thread, in 1-2 plain sentences (shorts move fast — keep it tight): what they genuinely know, what they conceal/lie about (and briefly why), and anything specific they wrongly believe. Write it as prose, not as separate categories."
           }
         }
       ]

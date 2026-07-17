@@ -1,0 +1,976 @@
+--- PART 1 ---
+
+[NARRATOR]
+Previously on Amity Hollow. At dusk, Jonah's superiors ordered the investigation stood down.
+
+[NARRATOR]
+But Old Chen's warning — that some doors, once you find them, don't let you walk away clean — left Jonah, the investigation's lead, convinced they were closer than ever.
+
+[NARRATOR]
+Now, past midnight at the Field Ops tent above Amity Hollow, the generators keep running long after the daylight voices have gone quiet — and the team gathers anyway, though no one called them here.
+
+[WEI_ZHOU | style: focused, half to himself]
+Anyone tell you to come back out here tonight? Because nobody told me.
+
+[NARRATOR]
+Wei Zhou, the team's signals and audio forensics analyst, hasn't left the console since sundown.
+
+[YUNA_CHO | style: tired, unsettled]
+Nobody had to. I tried sleeping. Didn't take.
+
+[SFX: a folding chair creaking as someone sits]
+
+[NARRATOR]
+Yuna Cho, the government liaison assigned to the investigation, pulls a chair up beside him, still in her field jacket.
+
+[WEI_ZHOU | style: dry, uneasy]
+That's not an answer.
+
+[YUNA_CHO | style: deflecting lightly]
+It's the only one I've got.
+
+[NARRATOR]
+Jonah steps into the tent's light without a word, a folder under his arm, and neither of them asks him why he's already dressed for the field.
+
+[WEI_ZHOU | style: careful, testing]
+You called this?
+
+[JONAH_REESE | style: quiet, wired]
+I didn't call anything.
+
+[NARRATOR]
+He sets the folder on the console. He doesn't open it.
+
+[YUNA_CHO | style: forcing lightness, not landing]
+So we're all just — here. Coincidence.
+
+[JONAH_REESE | style: flat, unreadable]
+Something like that.
+
+[SFX: a laptop lid closing]
+
+[NARRATOR]
+Wei Zhou shuts his screen, though nothing on it looked finished.
+
+[WEI_ZHOU | style: low]
+Feels like a countdown nobody's said the number of.
+
+[NARRATOR]
+No one answers him.
+
+[YUNA_CHO | style: quiet, watching Jonah]
+You look like a man who slept even less than I did.
+
+[JONAH_REESE | style: guarded, tight]
+I'm fine.
+
+[NARRATOR]
+He isn't looking at either of them — he's looking at the door flap, and the dark beyond it, like he's already decided which way the night is going to go.
+
+[WEI_ZHOU | style: steady, waiting him out]
+Jonah. Whatever it is. Say it.
+
+[NARRATOR]
+For a long moment he doesn't, and the generator hum fills the space where an answer should be.
+
+--- PART 2 ---
+
+[NARRATOR]
+Field Ops, same night, same tent. Jonah stands at the head of the console, the team's eyes already on him.
+
+[JONAH_REESE | style: low, controlled urgency]
+We go back to the checkpoint. Tonight.
+
+[WEI_ZHOU | style: alert, careful]
+Tonight. Not tomorrow when we're rested and it's, I don't know, legal.
+
+[JONAH_REESE | style: measured, pressing]
+Old Chen said "egress corridor." You catch that? Not "way out." Not "back door." Egress corridor.
+
+[YUNA_CHO | style: neutral, watching]
+Maybe he used to work construction. Old men pick up words.
+
+[JONAH_REESE | style: quiet, certain]
+That's not a word you pick up, Yuna. That's a word you stamp on a blueprint. He knows that facility's bones. And he handed it to us like he didn't mean to.
+
+[NARRATOR]
+Jonah lets the silence sit a beat before he goes on.
+
+[JONAH_REESE | style: steady, rallying]
+Every hour we wait, that door in his head closes a little more. Men like him talk once, out of guilt, and then they never talk again. If we don't move while it's still raw, we lose it. We lose him.
+
+[WEI_ZHOU | style: resolute]
+I can have the badge network mapped in twenty minutes. I've had eyes on it since this afternoon anyway.
+
+[JONAH_REESE | style: surprised, approving]
+You've already—
+
+[WEI_ZHOU | style: dry]
+I don't sleep well since Milo's drawing. Figured I'd make it useful.
+
+[NARRATOR]
+Jonah looks around the tent — Wei Zhou already reaching for his laptop, no one arguing yet.
+
+[JONAH_REESE | style: searching, quiet]
+Anybody see a reason not to.
+
+[NARRATOR]
+No one answers. No one moves to leave either.
+
+[JONAH_REESE | style: to himself, private]
+Good.
+
+[NARRATOR]
+Inside, Jonah counts a number he hasn't said out loud to any of them — forty-eight hours, and running.
+
+[JONAH_REESE | style: internal, grim]
+They think this is about a slip of the tongue. It's about a clock I haven't shown anyone.
+
+[NARRATOR]
+He straightens, voice pulling back into command.
+
+[JONAH_REESE | style: firm, closing the point]
+Wei, get me that badge map. Everyone else, gear up. We move in the hour.
+
+[SFX: a laptop lid snapping open]
+
+[NARRATOR]
+Wei Zhou is already typing before Jonah finishes the sentence — and across the tent, Yuna Cho hasn't moved at all.
+
+--- PART 3 ---
+
+[NARRATOR]
+Same tent, same hour. Wei Zhou, the team's signals and audio forensics analyst, swings his laptop around so the others can see the screen.
+
+[WEI_ZHOU | style: quick, wired from no sleep]
+I got in. Around two this morning — the checkpoint's badge network. It's not sitting on anything I recognize.
+
+[JONAH_REESE | style: leaning in, focused]
+Not recognize how.
+
+[WEI_ZHOU | style: methodical, still catching his breath]
+I ran the registration against every federal system I have access to. NCIC, the DoD contractor index, the interagency badge clearinghouse. Nothing. No hits. If this were a military checkpoint, it would show up in one of those lists. It doesn't.
+
+[JONAH_REESE | style: quiet, working it through]
+So who's running it.
+
+[WEI_ZHOU | style: careful, hedging]
+That's the part I don't have yet. What I do have is a routing address, and it doesn't point to a federal server. It points to a private contractor's infrastructure.
+
+[JONAH_REESE | style: sharper]
+A contractor. Not the Department of Defense.
+
+[WEI_ZHOU | style: flat, certain]
+Not the Department of Defense. I'd stake the case on that much.
+
+[JONAH_REESE | style: pressing, low]
+Then give me the part you won't stake the case on. The name.
+
+[WEI_ZHOU | style: frustrated at himself]
+I don't have it. The registration's shelled — three layers, and every layer routes somewhere new before it dead-ends. There was a signal spike on my monitor at one point where it looked like it might resolve, and then it just closed. Deliberately, not a glitch.
+
+[JONAH_REESE | style: half to himself]
+A checkpoint that isn't military, guarding a town that isn't on any map.
+
+[WEI_ZHOU | style: quieter, unsettled]
+Whoever built that fence didn't want it traced back to them. That's not an oversight, Jonah. That's design. Somebody spent money making sure a search like mine hits a wall.
+
+[JONAH_REESE | style: resolved, low]
+Then we go tonight, before they know anyone's looking.
+
+[WEI_ZHOU | style: hesitant but nodding along]
+I can get you past the cameras. I can't tell you what's on the other side of that gate.
+
+[JONAH_REESE | style: steady, already turning toward the rest of the tent]
+That's what tonight's for. Everybody hears this.
+
+--- PART 4 ---
+
+[NARRATOR]
+Field Ops, the same tent, only minutes later. Yuna Cho — the government liaison whose job is supposed to be getting the team through the checkpoint's gates, not keeping them from it — steps into the center of the group before Jonah can call the meeting closed.
+
+[YUNA_CHO | style: crisp, procedural]
+Before anyone touches that fence again, we do this through channels. I can have supervised access approved by morning.
+
+[JONAH_REESE | style: flat, unmoved]
+Morning isn't what Chen was talking about.
+
+[YUNA_CHO | style: composed, quickening]
+Chen is a man who lives alone on a ridge and talks to a radio. You want to throw out chain of custody on his word?
+
+[WEI_ZHOU | style: quiet, watching]
+Nobody said throw it out.
+
+[YUNA_CHO | style: sharpening]
+If we go in tonight, unauthorized, anything we find is inadmissible. You'd be handing their lawyers the case, gift-wrapped.
+
+[JONAH_REESE | style: harder]
+There's no case left to protect if there's no time. He said doors like that one don't stay found once you find them.
+
+[YUNA_CHO | style: dismissive]
+That's not evidence. That's a feeling.
+
+[JONAH_REESE | style: pressing]
+You've had two weeks to file for supervised access. You never even started the paperwork.
+
+[YUNA_CHO | style: a beat too quick]
+I started it. It's sitting with regional counsel right now—
+
+[JONAH_REESE]
+Which regional counsel.
+
+[YUNA_CHO | style: caught, recovering fast]
+The standard channel. You don't need the org chart, Jonah, you need patience.
+
+[WEI_ZHOU | style: careful, non-committal]
+Which is it, though. Filed, or filing.
+
+[YUNA_CHO | style: brittle]
+Does it matter? I'm telling you the process protects the case. That should be enough coming from me.
+
+[WEI_ZHOU | style: even]
+It's not an accusation. I'm just asking a question.
+
+[NARRATOR]
+He lets it sit there, unanswered, and says nothing more.
+
+[JONAH_REESE | style: final, decisive]
+We move tonight. You're with us or you're not, Yuna — but I'm done asking permission from a process that hasn't produced one signature in two weeks.
+
+[YUNA_CHO | style: the fight draining out fast, quieter | speed: 0.9]
+...Fine. Fine, I'll come. Someone should be there to keep it clean, at least.
+
+[JONAH_REESE | style: already moving on]
+Then get your gear. We leave in twenty minutes.
+
+--- PART 5 ---
+
+[NARRATOR]
+Field Ops, the same tent, the same night. Before Jonah can turn back to the maps spread across the table, a voice comes from outside the canvas.
+
+[NARRATOR]
+Old Chen — the retired engineer who first warned them off the ridge — stands just past the tent flap, uninvited.
+
+[SFX: a canvas tent flap pulled back]
+
+[OLD_CHEN | style: quiet, matter-of-fact]
+You're going back to the checkpoint tonight. I heard it in your voice before you finished saying it.
+
+[JONAH_REESE | style: guarded]
+We didn't send for an audience, Chen.
+
+[OLD_CHEN | style: even, unhurried]
+No. But you'll want what I'm offering anyway. There's a service road along the east ridge. Cuts wide of the main gate, drops you in behind the fence line, in the one stretch nobody bothers to watch.
+
+[WEI_ZHOU | style: careful]
+That road isn't on anything we've pulled. County, state, satellite overlay — nothing.
+
+[OLD_CHEN | style: flat, no elaboration]
+Wouldn't be. I built it.
+
+[YUNA_CHO | style: sharp, testing]
+Built it how? For who?
+
+[OLD_CHEN | style: closed]
+Long before any of you were assigned to this ground. Back when it still answered to Washington, not whoever holds the lease on it now. I graded it myself. Cleared parts of it by hand. It's old, but it'll hold a truck if you're patient with it, and it'll hold six people on foot without any trouble at all.
+
+[JONAH_REESE | style: weighing it, then decisive]
+You're offering to walk us in yourself.
+
+[OLD_CHEN | style: simple]
+I'm offering to show you where the road starts. Past that, it's yours to walk.
+
+[JONAH_REESE | style: firm]
+Then we go together. You lead.
+
+[WEI_ZHOU | style: low, just to Jonah]
+You're not even going to ask how a caretaker knows a road that doesn't exist on paper?
+
+[JONAH_REESE | style: terse, already moving]
+Not tonight. Tonight I want the road, and I want it before Chen's warning gets cold on all of us.
+
+[NARRATOR]
+Chen nods once, says nothing more, and turns toward the dark tree line — the same decision he made alone in his cabin, now finally in motion.
+
+[SFX: boots crunching onto gravel, fading toward the trees]
+
+--- PART 6 ---
+
+[NARRATOR]
+The Trauma Safe Room, later that night. Dr. Mei Lin, the psychologist assigned to Milo since his rescue, sits with the boy — the investigation's sole survivor, found alone in the village clutching a drawing.
+
+[DR_MEI_LIN | style: soft, unhurried]
+Easier tonight, right? No maps. Just you and the crayons, however long you want.
+
+[SFX: crayons rattling loose in a tin]
+
+[DR_MEI_LIN | style: warm, testing gently]
+You did so well with the drawing yesterday. I won't say that other word again, I promise.
+
+[DR_MEI_LIN | style: gentle, careful]
+I only wanted to ask — when they brought you in, was it through the checkpoint gate?
+
+[SFX: a crayon snapping]
+
+[DR_MEI_LIN | style: alarmed, softening fast]
+Milo — hey. Look at me. Nobody's taking you anywhere. You're safe, right here, with me.
+
+[SFX: a chair leg scraping back hard against the floor]
+
+[DR_MEI_LIN | style: careful, masking worry]
+Okay. Okay. We stop there. No more words tonight, I promise you that.
+
+[DR_MEI_LIN | style: quiet, to herself]
+Worse than the ridge — no drawing this time, no reaching for anything to hand me, just gone somewhere quiet and closed off. I'll log this as escalation and note it for the team.
+
+--- PART 7 ---
+
+[NARRATOR | style: quiet, measured]
+Past midnight, the ridge trail. Jonah's team follows Old Chen along a service road no map shows, moving toward the checkpoint under cover of dark.
+
+[SFX: gravel shifting underfoot, boots on a narrow dirt path]
+
+[OLD_CHEN | style: low, controlled]
+Stay left. Right side drops off about six feet. I never got around to fixing the rail.
+
+[JONAH_REESE | style: hushed, focused]
+Copy that. Single file, everyone. Eyes on the person in front of you, not your phone.
+
+[WEI_ZHOU | style: barely above a whisper]
+Wasn't looking at my phone. Tablet's still logging the badge traffic. I'm not setting it down, not even for this.
+
+[YUNA_CHO | style: quiet, flat]
+Nobody asked you to.
+
+[WEI_ZHOU | style: clipped]
+Wasn't talking to you.
+
+[NARRATOR | style: quiet, neutral]
+Yuna lets the others pass her by degrees, until she's walking last, several paces back from the group.
+
+[JONAH_REESE | style: low, checking]
+You good back there?
+
+[YUNA_CHO | style: careful, even]
+Fine. Just watching my footing.
+
+[SFX: a twig snapping underfoot, the group going still for a beat]
+
+[OLD_CHEN | style: hushed]
+Deer. Keep moving.
+
+[NARRATOR | style: quiet]
+They walk on. Somewhere behind Jonah's silence, a clock he hasn't mentioned to anyone keeps running.
+
+[JONAH_REESE | style: low, terse]
+What's our time.
+
+[WEI_ZHOU | style: quiet]
+Coming up on one-forty.
+
+[JONAH_REESE | style: neutral, guarded]
+Copy. Keep it moving.
+
+[YUNA_CHO | style: quiet, almost to herself]
+You keep saying that like it's going to make the fence get here faster.
+
+[JONAH_REESE | style: flat]
+Wouldn't hurt.
+
+[NARRATOR | style: quiet]
+Old Chen raises a hand, slowing the line to a stop at a break in the pines.
+
+[OLD_CHEN | style: hushed]
+Down through here. This is as close as I take you without the guards seeing us coming.
+
+[NARRATOR | style: quiet, neutral]
+Ahead, past the treeline, the checkpoint fence comes into view — a stretch of the perimeter the guard rotation never turns to watch.
+
+--- PART 8 ---
+
+[NARRATOR]
+The checkpoint fence, same as before, but past midnight now. Wei Zhou crouches over his tablet at the tree line while Jonah, Yuna, and Old Chen wait in the dark behind him.
+
+[WEI_ZHOU | style: focused, low voice]
+Camera feed's live in front of me. Give me ten seconds.
+
+[JONAH_REESE | style: tense, quiet]
+Take fifteen if you need it. I'd rather be dark and slow than fast and seen.
+
+[WEI_ZHOU | style: concentrating]
+Ten's fine. Their loop buffer's sloppy — I just have to feed it a clean freeze instead of killing it outright. Kill it outright and somebody watching a bank of screens notices black squares. Freeze it right, and it just looks like nothing's moving. Because nothing is.
+
+[SFX: soft keyboard clicks, rapid]
+
+[WEI_ZHOU | style: satisfied, still quiet]
+Frozen. All four cameras. We've got a window, but I don't know how long it holds.
+
+[JONAH_REESE | style: decisive]
+Then we don't stand here admiring it.
+
+[NARRATOR]
+Jonah moves to the gate — not the guard booth this time, the service gate further down the fence line.
+
+[SFX: a chain-link gate rattling, then metal groaning as it's forced]
+
+[JONAH_REESE | style: strained with effort]
+Come on—
+
+[SFX: a padlock hasp snapping]
+
+[JONAH_REESE | style: low, urgent]
+Go. Now, while it holds.
+
+[NARRATOR]
+Yuna moves first this time, faster than her hesitation at Field Ops suggested she would. Wei Zhou follows close behind her, tablet still in hand.
+
+[YUNA_CHO | style: clipped, all business]
+No guards on the north side. Same as last time.
+
+[JONAH_REESE | style: alert, scanning]
+Same as last time is exactly what worries me.
+
+[NARRATOR]
+Old Chen doesn't move toward the gate. He stays back at the fence line, one hand resting on a post like it's holding him in place.
+
+[JONAH_REESE | style: turning back, questioning]
+Chen. You're not coming in?
+
+[OLD_CHEN | style: even, giving nothing away]
+Somebody should watch the road behind us. I'll be right here if you need me.
+
+[JONAH_REESE | style: brief, accepting but noting it]
+Fine. Stay close.
+
+[NARRATOR]
+Jonah holds Chen's eyes a moment longer than the answer requires, then turns and follows the others through the gate, into ground none of them have official permission to stand on.
+
+--- PART 9 ---
+
+[NARRATOR]
+Inside the checkpoint's guard office, monitors cast blue light over an empty chair. Jonah, Wei Zhou, and Yuna crowd around the terminal Wei Zhou breached from Field Ops hours earlier.
+
+[WEI_ZHOU | style: focused, low]
+Okay. It's still logged in from my end. Badge history, gate logs, personnel roster — all of it.
+
+[JONAH_REESE | style: urgent]
+Scroll to the registration. Whoever owns this system, I want a name.
+
+[SFX: rapid keyboard clatter]
+
+[WEI_ZHOU | style: reading aloud, flat]
+Operator of record... "Meridian Sentry Services." That's not a division code. That's a company name.
+
+[JONAH_REESE | style: stunned, quiet]
+Meridian Sentry. That's not DoD. That's not any federal contractor registry I've ever worked against.
+
+[YUNA_CHO | style: careful, too even]
+Could be a subcontractor. Agencies use shell vendors for badge systems all the time. It doesn't mean —
+
+[JONAH_REESE | style: cutting her off, sharp]
+It means this checkpoint was never military. Not the fence, not the guards, not the paperwork we've been chasing for weeks.
+
+[NARRATOR]
+He straightens, the realization settling into something colder than surprise.
+
+[JONAH_REESE | style: hard, almost to himself]
+Every stonewall. Every "that's above your clearance." None of it came from the government at all.
+
+[WEI_ZHOU | style: typing again, tense]
+There's more. Let me pull the corporate registry link — this terminal's cached it.
+
+[SFX: a soft electronic chime]
+
+[WEI_ZHOU | style: reading, careful]
+"Meridian Sentry Services — a subsidiary of..." The parent field's redacted. Just a code. HV-dash-something.
+
+[JONAH_REESE | style: leaning in, low]
+Redacted on a guard shack terminal. Somebody didn't want that name sitting in plaintext even out here.
+
+[YUNA_CHO | style: too fast]
+It's probably nothing. Holding companies redact parent fields for tax reasons, it's standard —
+
+[WEI_ZHOU | style: quiet, not looking at her]
+I didn't ask you.
+
+[NARRATOR]
+A beat of silence stretches between them, Yuna's explanation hanging unfinished in the fluorescent hum.
+
+[JONAH_REESE | style: steady, decisive]
+Photograph the screen. Whoever's behind that code, I want it in evidence before anyone remembers to wipe this thing.
+
+[SFX: a phone camera shutter click x2]
+
+[JONAH_REESE | style: grim]
+Everything we thought we knew about who's been stonewalling us — start over. It's not the government hiding this place.
+
+[WEI_ZHOU | style: low, unsettled]
+Then who's been standing behind the curtain the whole time.
+
+--- PART 10 ---
+
+[NARRATOR]
+Inside the checkpoint's guard office, the same thread continues. Jonah moves to a locked cabinet against the far wall.
+
+[SFX: a metal cabinet latch being pried open]
+
+[JONAH_REESE | style: focused, low]
+Wei, get over here.
+
+[WEI_ZHOU | style: alert]
+What'd you find?
+
+[JONAH_REESE | style: reading quickly]
+Manifest. Bulk order — looks like months of shipments.
+
+[SFX: papers being flipped rapidly]
+
+[JONAH_REESE | style: tense, urgent]
+Hub model, quantity, delivery dates. This isn't office supplies, Wei. This is hardware.
+
+[WEI_ZHOU | style: crossing the room fast]
+Let me see that.
+
+[YUNA_CHO | style: too quick, watching]
+Jonah, we should be documenting the terminal, not digging through —
+
+[JONAH_REESE | style: cutting her off, not looking up]
+We're documenting everything.
+
+[WEI_ZHOU | style: reading over his shoulder, voice dropping]
+That model number. I know that model number.
+
+[JONAH_REESE | style: sharp]
+From where.
+
+[WEI_ZHOU | style: quiet, certain]
+Every house in Amity Hollow. Every single one. That's the smart hub sitting on every kitchen counter we processed.
+
+[SFX: a beat of silence, then papers set down hard on a metal desk]
+
+[JONAH_REESE | style: measured, weight settling in]
+Say that again so I know I heard it right.
+
+[WEI_ZHOU | style: firm]
+Exact same model. Exact same serial prefix. Whoever runs this checkpoint ordered the same hardware that ended up in every home in that town.
+
+[JONAH_REESE | style: low, almost to himself]
+Meridian Sentry isn't just guarding a fence. They're supplying the town.
+
+[WEI_ZHOU | style: careful]
+Or somebody using Meridian Sentry as cover is.
+
+[JONAH_REESE | style: decisive]
+Doesn't matter which yet. This is paper. Real paper, with real numbers on it. Photograph every page, then bag the original.
+
+[SFX: a phone camera shutter clicking rapidly]
+
+[YUNA_CHO | style: strained, stepping closer]
+Jonah, chain of custody on something like this — if it's not logged correctly it could get thrown out before it ever —
+
+[JONAH_REESE | style: not breaking focus]
+Then log it correctly. Wei, keep shooting. I want copies before this leaves the room.
+
+[WEI_ZHOU | style: quiet, still shaken]
+Copy that.
+
+[NARRATOR]
+The manifest passes from hand to hand under the office's single working light, each page photographed, each page numbered — the first hard proof, on paper, that the checkpoint and the town were never separate at all.
+
+--- PART 11 ---
+
+[NARRATOR]
+Still the guard office, checkpoint interior, minutes after the manifest surfaces. Jonah photographs pages while the others fan out to document the room.
+
+[JONAH_REESE | style: focused, low]
+Wei, get the cabinet numbers too. Anything with a batch code, I want it shot twice.
+
+[WEI_ZHOU | style: absorbed]
+Copy. Give me the terminal a minute — I want the serials before we lose the session.
+
+[NARRATOR]
+Yuna moves toward the desk, closer to the manifest than the task requires.
+
+[SFX: papers sliding across a metal desk]
+
+[JONAH_REESE | style: catching something, sharp]
+Yuna.
+
+[NARRATOR]
+He's already turning, phone still raised, when he sees her hand close over the pages.
+
+[SFX: a zipper catching, stopping halfway]
+
+[JONAH_REESE | style: quiet, controlled, watching her closely]
+Put it down.
+
+[YUNA_CHO | style: caught, voice flattening]
+I was— securing it. Half this office is unlabeled boxes, Jonah, I wasn't going to leave the one thing that matters sitting loose on a desk.
+
+[NARRATOR]
+For a moment nothing in her face is smooth anymore.
+
+[JONAH_REESE | style: even, not moving]
+That's what the camera's for.
+
+[YUNA_CHO | style: recovering too fast, brittle]
+Right. Of course. Photograph it, then.
+
+[NARRATOR]
+She sets the manifest down herself, hands not quite steady, and steps back into the room's noise as if nothing happened at all.
+
+--- PART 12 ---
+
+[NARRATOR]
+Still inside the guard office, Jonah pulls Yuna Cho into the corridor beyond the door, away from Wei Zhou's search of the terminal.
+
+[SFX: a heavy door easing shut, muffling voices behind it]
+
+[JONAH_REESE | style: low, controlled fury | speed: 0.95]
+Look at me. Why was that manifest going into your bag.
+
+[YUNA_CHO | style: composed, quick recovery]
+Jonah, it's evidence. Everyone in there is grabbing at paper with wet hands and no gloves. I was moving it somewhere safe.
+
+[JONAH_REESE | style: flat, unconvinced]
+Somewhere safe was your bag.
+
+[YUNA_CHO | style: brisk, deflecting]
+Somewhere it wouldn't get torn or left behind in a scramble. You saw how fast we moved in there. Things get lost.
+
+[JONAH_REESE]
+You didn't call out for a camera. You didn't ask Wei Zhou to photograph it first. You just took it.
+
+[YUNA_CHO | style: clipped, defensive]
+Because in the moment I was thinking about the document surviving the next five minutes, not about optics.
+
+[JONAH_REESE | style: quiet, pressing]
+That's not an answer to what I asked.
+
+[SFX: a beat of silence, then a boot scuffing against concrete as she shifts her weight]
+
+[YUNA_CHO | style: careful, measured | speed: 0.9]
+What do you want me to say. That I panicked and grabbed the nearest thing that mattered? Fine. I panicked.
+
+[JONAH_REESE]
+You've never panicked once this whole investigation. Not at the fence, not at Milo's house, not with the drone footage. Not until this.
+
+[YUNA_CHO | style: tight, controlled]
+Maybe I've just been better at hiding it than you give me credit for.
+
+[NARRATOR]
+He watches her face for the crack he expects — the one he saw the moment her hand closed around the papers. It isn't there anymore.
+
+[JONAH_REESE | style: cold, deliberate]
+I'm not going to pretend I believe you. But I'm not going to say what I actually think right now either.
+
+[YUNA_CHO | style: wary, testing]
+And what is it you actually think?
+
+[JONAH_REESE | style: guarded, withholding]
+Not yet.
+
+[NARRATOR]
+He doesn't mention the second phone he saw in her bag two nights ago, powered down, unlabeled. He wants to see where she carries this before he shows her he's watching.
+
+[YUNA_CHO | style: recovering her calm, brittle underneath]
+Fine. Keep the manifest with you, then. I won't touch it again.
+
+[JONAH_REESE]
+You won't get the chance to.
+
+[SFX: the door opening again, voices spilling back into the corridor]
+
+[NARRATOR]
+Neither of them moves first. Behind the door, Wei Zhou's search continues, unaware of anything but the numbers on his screen.
+
+--- PART 13 ---
+
+[NARRATOR]
+Still the guard office at the checkpoint. Jonah's voice and Yuna's stay low near the door. At a second terminal across the room, Wei Zhou — the team's signals and audio forensics analyst — works alone, running the manifest's serial numbers against the inventory database.
+
+[WEI_ZHOU | style: low, clinical, talking himself through it]
+Model numbers first. Match the batch codes to install records. Cross-reference by zone.
+
+[SFX: a terminal keystroke chime]
+
+[WEI_ZHOU | style: same, unhurried]
+Forty-one units, Sycamore block. Nineteen, Birch. Household by household — that's how they logged the rollout.
+
+He scrolls. Stops.
+
+[WEI_ZHOU | style: flat, the words catching despite him]
+Zhang residence. Unit four-four-one-nine.
+
+[SFX: a chair creaking as he leans back hard]
+
+[WEI_ZHOU | style: barely above a whisper, unraveling at the edges]
+That's her hub. That's — I logged that serial myself. Off the record. Three weeks ago.
+
+[NARRATOR]
+Across the room, Jonah glances over, still half-turned toward Yuna.
+
+[JONAH_REESE | style: distracted, functional]
+Zhou. Anything on your end?
+
+[WEI_ZHOU | style: composed, the mask sliding back into place a beat too fast]
+Cross-referencing hardware inventory. Give me a minute.
+
+[JONAH_REESE | style: already turning back]
+Copy.
+
+[NARRATOR]
+Wei Zhou doesn't look up until the door swings shut behind Jonah's attention again.
+
+[WEI_ZHOU | style: nearly silent, to himself]
+Lian.
+
+He stares at the serial number a long moment, then closes the file.
+
+[WEI_ZHOU | style: controlled, deliberate]
+Not yet. Not like this.
+
+[SFX: a single keystroke, softer than the others]
+
+[NARRATOR]
+He copies the number into a private log — not the case file — and clears the screen.
+
+[WEI_ZHOU | style: quiet, almost rehearsing an excuse he'll never need to give]
+It's one serial. Could be a coincidence in the batch run. Could be nothing.
+
+[NARRATOR]
+He doesn't believe it. He goes back to the manifest as if nothing has changed, and across the room, no one has noticed anything has.
+
+--- PART 14 ---
+
+[NARRATOR]
+Deeper into the night, back at the Mobile Forensics Unit, monitors glow blue against canvas walls. Jonah Reese and Wei Zhou hunch over a fresh drone pass, the checkpoint raid barely an hour behind them.
+
+[WEI_ZHOU | style: focused, tired]
+This came in while we were inside the fence. Full thermal sweep, wide radius.
+
+[SFX: a laptop trackpad clicking twice]
+
+[JONAH_REESE | style: leaning in, low]
+Play it again.
+
+[WEI_ZHOU | style: quiet, pointing at the screen]
+Right here. See that plume? Steady, not a flicker — that's active exhaust.
+
+[JONAH_REESE | style: sharpening]
+Exhaust from what. There's nothing zoned out there.
+
+[WEI_ZHOU]
+That's the thing. Pulled the county map before you got back. Whole parcel's listed undeveloped. Has been for fourteen years.
+
+[JONAH_REESE | style: low, almost to himself]
+Undeveloped land doesn't vent heat like that.
+
+[WEI_ZHOU | style: careful]
+No. It doesn't.
+
+[NARRATOR]
+Jonah pulls a printed page from the folder beside him — the manifest they carried out of the guard office.
+
+[SFX: paper unfolding against a table]
+
+[JONAH_REESE | style: building a case aloud]
+Badge system that isn't military. Hubs shipped by the crate. And now a hole in the ground breathing where nothing's supposed to be built at all.
+
+[WEI_ZHOU | style: nodding slowly]
+Same footprint region, roughly. I'd need to overlay the coordinates to be sure.
+
+[JONAH_REESE | style: grim satisfaction creeping in]
+Do it. If that vent lines up with the checkpoint's fence line, we've got the first thing in this whole case that isn't a name on a badge or a serial number. We've got a place.
+
+[WEI_ZHOU | style: still studying the screen]
+One vent point, though. Small. Whatever's pulling air through there — it can't be much.
+
+[NARRATOR]
+He doesn't yet know how wrong that reading will turn out to be.
+
+[JONAH_REESE | style: decisive, quieter now]
+Small or not, it's the first door they didn't manage to hide from us. Mark it. That's where we go next.
+
+[WEI_ZHOU | style: typing]
+Marking it now.
+
+[SFX: a soft keyboard clatter, then a single confirming beep]
+
+[JONAH_REESE | style: exhaling, almost relieved]
+Paper trail's one thing. This — this is something we can put our hands on.
+
+[NARRATOR]
+On the screen behind them, a single red pin blinks over empty ground that, according to every public record, has never held anything at all.
+
+--- PART 15 ---
+
+[NARRATOR]
+Back at the Mobile Forensics Unit, the drone map still glows on the folding table. Jonah and Wei Zhou lean over the coordinates. Old Chen stands a step back, watching.
+
+[JONAH_REESE | style: focused, low]
+Vent's here. If the badge system's perimeter runs the way Wei says, this whole pocket sits inside it.
+
+[WEI_ZHOU | style: clipped, working]
+Confirmed. Same fence line, same registration. Whatever's under there, it's theirs.
+
+[OLD_CHEN | style: neutral, then suddenly flat]
+Let me see that.
+
+[SFX: a laptop dragged a few inches across the folding table]
+
+[NARRATOR]
+Chen leans in over the screen. For a moment he doesn't move at all.
+
+[JONAH_REESE | style: watching him carefully]
+Chen?
+
+[OLD_CHEN | style: too controlled]
+Give me a second.
+
+[NARRATOR]
+He studies the coordinates a beat longer than the map alone would require.
+
+[WEI_ZHOU | style: quiet, noticing]
+You know this spot.
+
+[OLD_CHEN | style: guarded, correcting the record]
+I know the ridge. Every fold in it. Man spends forty years walking a place, he doesn't need a drone to tell him what's under his own feet.
+
+[JONAH_REESE | style: pressing gently]
+That's not what I asked.
+
+[OLD_CHEN | style: even, deflecting]
+Grading like that — that shelf of rock — it holds an exhaust line clean. Whoever poured that vent knew the geology. Wasn't guesswork.
+
+[SFX: a finger tapping twice against the tablet screen]
+
+[WEI_ZHOU | style: skeptical but letting it go]
+So you're saying it's well-built.
+
+[OLD_CHEN | style: distant]
+I'm saying it's exactly where I'd have put it. If I still had a say in such things.
+
+[NARRATOR]
+He straightens, but something in his face hasn't come back with him.
+
+[JONAH_REESE | style: careful, not pushing further]
+You alright to lead us up there tonight?
+
+[OLD_CHEN | style: quiet, resolved]
+I said I'd take you as far as the road goes. This is past where the road goes.
+
+[NARRATOR]
+He looks at the coordinates once more, and this time he doesn't blink until Wei Zhou closes the laptop.
+
+[OLD_CHEN | style: barely audible]
+Long way past.
+
+[JONAH_REESE | style: businesslike, moving on]
+Then we go on foot from the ridge trail. Wei, mark the approach. We leave within the hour.
+
+[NARRATOR]
+Old Chen doesn't answer. He's already turned toward the tent flap, staring out at the dark line of the ridge like it's called his name.
+
+--- PART 16 ---
+
+[NARRATOR]
+Along the ridge above Amity Hollow, past midnight, the team follows the coordinates the drone marked hours ago. Old Chen leads them still, silent since the map.
+
+[JONAH_REESE | style: low, focused]
+Wei — how far off are we from that vent marker?
+
+[WEI_ZHOU | style: quiet, tracking a device]
+Twenty meters, maybe less. Bearing's dead ahead.
+
+[SFX: boots crunching over loose shale]
+
+[JONAH_REESE | style: alert]
+Hold up. Everyone hold up.
+
+[NARRATOR]
+A seam in the rock face, cut too clean to be natural, sits half-buried under moss and root.
+
+[JONAH_REESE | style: quiet disbelief]
+There's a door in the mountain.
+
+[WEI_ZHOU | style: hushed]
+That's not exposed rock. That's plated. Somebody sealed this on purpose.
+
+[JONAH_REESE | style: crouching, methodical]
+Hinge line's on this side. No handle, no lock visible — has to be mechanical, from underneath.
+
+[SFX: a gloved hand scraping moss away from metal]
+
+[JONAH_REESE | style: to the group, certain]
+This lines up. Same bearing as the exhaust vent, same side of the ridge the badge map fenced off. This is it.
+
+[NARRATOR]
+Old Chen stands apart from the others, several paces back, not moving toward the hatch at all.
+
+[OLD_CHEN | style: barely audible]
+Counterweighted. I know that seam pattern.
+
+[JONAH_REESE | style: turning, sharp]
+Chen? You said something.
+
+[OLD_CHEN | style: covering, flat]
+Just an old man talking to himself. Cold gets into an engineer's head out here.
+
+[JONAH_REESE | style: pressing gently]
+You've seen a door like this before.
+
+[OLD_CHEN | style: guarded]
+I've seen a lot of doors in my life, Mr. Reese. Doesn't mean I know this one.
+
+[DR_MEI_LIN | style: careful, watching him]
+You went very still just now. Same as when you saw the drone map.
+
+[OLD_CHEN | style: deflecting, quiet]
+Old joints don't move the way they used to. That's all that was.
+
+[NARRATOR]
+No one presses further. Jonah runs his hand along the plated seam, searching for a way through.
+
+[JONAH_REESE | style: to the team, decisive]
+There's a release mechanism under this panel — has to be. Wei, get a light on this edge. We're not walking away from this tonight.
+
+[WEI_ZHOU | style: steady]
+On it.
+
+[SFX: a metal panel creaking as it's pried loose]
+
+[NARRATOR]
+Beneath the panel, a lever waits, worn smooth by hands none of them can account for. Old Chen watches from the dark beyond the group, his face giving nothing away — and everything.
+
+--- PART 17 ---
+
+[NARRATOR]
+The hatch stands open at last, a black seam in the ridge where solid rock should be. The team gathers at its edge, flashlights trembling against the dark below.
+
+[JONAH_REESE | style: low, steady, adrenaline held tight]
+This is it. This is what they've been hiding.
+
+[SFX: a heavy metal hatch settling against stone]
+
+[WEI_ZHOU | style: quiet, almost to himself]
+The air coming up from there — it's moving. Something's circulating air down there. Recently.
+
+[NARRATOR]
+No one answers him. All eyes have drifted instead to Old Chen, who has not moved toward the opening at all.
+
+[JONAH_REESE | style: careful, watching him now]
+Chen. You alright?
+
+[OLD_CHEN | style: flat, distant, holding very still]
+I'm fine.
+
+[NARRATOR]
+He isn't looking at the hatch. He's looking past it, at something only he can see.
+
+[OLD_CHEN | style: barely audible | speed: 0.9]
+I know this door. I knew it before any of you were born.
+
+[NARRATOR]
+Nobody asks him what else he knows beneath it, or who. The wind moves over the ridge, indifferent, and below their feet the dark keeps its answer a moment longer.
+

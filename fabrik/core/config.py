@@ -42,8 +42,15 @@ DEFAULTS = {
     # Schreibmodell nicht brauchen — das kreative Schreiben (Sections, Beats,
     # Part-Reparatur) bleibt auf generation.model.
     "light_model": "claude-haiku-4-5",
+    # Modell für das EPISODEN-Skript-Review (review_episode_script + Bestätigungs-
+    # Review nach --fix). None = generation.model (das große Schreibmodell):
+    # die 12-Serien-Analyse vom 17.07.2026 zeigte, dass das light_model als
+    # Reviewer praktisch blind ist (z.B. 8/8 leere Reviews bei cured_by_design
+    # trotz 25 realer Fehler) — Beats-Review und Metadaten bleiben auf
+    # light_model (kurze Inputs, dort reicht es).
+    "review_model": None,
     "output_prefix": "figur",
-    "use_beats": False,
+    "use_beats": True,
     # None = Claude-CLI-Default (aktuell "high") — nur überschreiben, wenn der
     # Token-Verbrauch pro Section/Review gezielt gesenkt werden soll.
     "effort": None,
@@ -112,12 +119,13 @@ VALID_TOP_KEYS = {
     "format", "generation", "audio", "output_prefix",
     "series_intro", "series_outro", "episodes",
     "mode", "template", "voices", "course", "locations", "season",
+    "previous_season",
 }
 VALID_FORMAT_KEYS = {
     "parts_per_section", "words_per_part_target",
     "words_per_part_min", "words_per_part_max",
 }
-VALID_GENERATION_KEYS = {"model", "light_model", "use_beats", "effort"}
+VALID_GENERATION_KEYS = {"model", "light_model", "review_model", "use_beats", "effort"}
 VALID_AUDIO_BACKENDS = {"rest", "gradio", "kokoro"}
 VALID_AUDIO_KEYS = {
     "api_url", "voice", "default_style", "target_lufs",
@@ -200,7 +208,7 @@ def validate_data(data) -> tuple[list[str], list[str]]:
         knowledge = case.get("character_knowledge")
         if knowledge is not None:
             if not isinstance(knowledge, dict):
-                errors.append(f"'{path}.character_knowledge' muss ein Objekt sein (Rolle -> Wissens-Slice)")
+                errors.append(f"'{path}.character_knowledge' muss ein Objekt sein (Rolle -> Wissensstand)")
             else:
                 known_roles = set(voices) if isinstance(voices, dict) else set()
                 for role, slice_ in knowledge.items():
@@ -209,21 +217,36 @@ def validate_data(data) -> tuple[list[str], list[str]]:
                             f"'{path}.character_knowledge.{role}' referenziert eine Rolle, "
                             f"die nicht in 'voices' definiert ist"
                         )
-                    if not isinstance(slice_, dict):
-                        errors.append(f"'{path}.character_knowledge.{role}' muss ein Objekt sein")
-                        continue
-                    for key in slice_:
-                        if key not in VALID_CHARACTER_KNOWLEDGE_KEYS:
-                            warnings.append(
-                                f"Unbekannter Schlüssel '{path}.character_knowledge.{role}.{key}' "
-                                f"— wird ignoriert (Tippfehler?)"
-                            )
-                    for key in VALID_CHARACTER_KNOWLEDGE_KEYS:
-                        if key in slice_ and not is_str_list(slice_[key]):
+                    if isinstance(slice_, str):
+                        # Format seit 17.07.2026: freier Fließtext statt drei Listen — einfacher
+                        # für das Modell zu schreiben, weniger Verschachtelungstiefe (siehe
+                        # fabrik/writing/CLAUDE.md). Nur "nicht leer" ist hier prüfbar.
+                        if not slice_.strip():
                             errors.append(
-                                f"'{path}.character_knowledge.{role}.{key}' muss eine Liste "
-                                f"nicht-leerer Strings sein"
+                                f"'{path}.character_knowledge.{role}' darf kein leerer String sein"
                             )
+                    elif isinstance(slice_, dict):
+                        # Alt-Format (vor 17.07.2026): {knows: [...], hides: [...],
+                        # believes_falsely: [...]} — weiter akzeptiert, damit vor dem Umbau
+                        # generierte Serien beim nächsten generate_episode-Lauf gültig bleiben.
+                        for key in slice_:
+                            if key not in VALID_CHARACTER_KNOWLEDGE_KEYS:
+                                warnings.append(
+                                    f"Unbekannter Schlüssel '{path}.character_knowledge.{role}.{key}' "
+                                    f"— wird ignoriert (Tippfehler?)"
+                                )
+                        for key in VALID_CHARACTER_KNOWLEDGE_KEYS:
+                            if key in slice_ and not is_str_list(slice_[key]):
+                                errors.append(
+                                    f"'{path}.character_knowledge.{role}.{key}' muss eine Liste "
+                                    f"nicht-leerer Strings sein"
+                                )
+                    else:
+                        errors.append(
+                            f"'{path}.character_knowledge.{role}' muss ein nicht-leerer String sein "
+                            f"(Wissensstand in Prosa) — oder, im Alt-Format, ein Objekt mit "
+                            f"knows/hides/believes_falsely"
+                        )
                 if known_roles:
                     # NARRATOR (siehe templates/crime_drama, templates/soap_opera) ist keine
                     # Figur mit eigenem Wissen — braucht bewusst kein character_knowledge-Slice.
@@ -260,6 +283,18 @@ def validate_data(data) -> tuple[list[str], list[str]]:
     # bleibt der Episodentitel unverändert wie bisher.
     if "season" in data and (not is_int(data["season"]) or data["season"] < 1):
         errors.append("'season' muss eine positive ganze Zahl sein (Staffelnummer für den Podcast-Kanal)")
+
+    # "previous_season": optionaler Slug der Vorstaffel — Kontinuitäts-Link für
+    # das Skript-Review-Gate (siehe stages/02_scripts/CONTEXT.md). Anders als
+    # "season" (reine Anzeige-Nummer) sagt es dem Review, wessen Canon
+    # (case-Block + META der genannten Serie) diese Staffel nicht widersprechen
+    # darf. Bewusst nur ein String-Check — validate_data bleibt dateisystem-rein;
+    # ob data/series/<slug>/ existiert, prüft nicht der Validator (fällt beim
+    # Lesen im Review-Gate auf).
+    if "previous_season" in data and (not isinstance(data["previous_season"], str)
+                                       or not data["previous_season"].strip()):
+        errors.append("'previous_season' muss der Slug einer vorhandenen Serie sein "
+                      "(Kontinuitäts-Link zur Vorstaffel für das Skript-Review)")
 
     if "style_guidelines" in data and not is_str_list(data["style_guidelines"]):
         errors.append("'style_guidelines' muss eine Liste nicht-leerer Strings sein")
@@ -391,6 +426,9 @@ def validate_data(data) -> tuple[list[str], list[str]]:
         errors.append("'generation.model' muss ein nicht-leerer String sein")
     if "light_model" in gen and (not isinstance(gen["light_model"], str) or not gen["light_model"].strip()):
         errors.append("'generation.light_model' muss ein nicht-leerer String sein")
+    if "review_model" in gen and (not isinstance(gen["review_model"], str) or not gen["review_model"].strip()):
+        errors.append("'generation.review_model' muss ein nicht-leerer String sein "
+                      "(Modell für das Episoden-Skript-Review; weglassen = generation.model)")
     if "use_beats" in gen and not isinstance(gen["use_beats"], bool):
         errors.append("'generation.use_beats' muss ein Bool sein")
     if "effort" in gen and gen["effort"] is not None and gen["effort"] not in VALID_EFFORT_LEVELS:
@@ -603,6 +641,11 @@ def build_config(data) -> dict:
         "words_target": fmt.get("words_per_part_target", DEFAULTS["words_per_part_target"]),
         "model": gen.get("model", DEFAULTS["model"]),
         "light_model": gen.get("light_model", DEFAULTS["light_model"]),
+        # Skript-Review-Modell: explizit gesetzt > DEFAULTS["review_model"] >
+        # generation.model — Default ist bewusst das große Schreibmodell
+        # (siehe DEFAULTS-Kommentar: light_model war als Reviewer blind).
+        "review_model": (gen.get("review_model") or DEFAULTS["review_model"]
+                         or gen.get("model", DEFAULTS["model"])),
         "use_beats": gen.get("use_beats", DEFAULTS["use_beats"]),
         "effort": gen.get("effort", DEFAULTS["effort"]),
         "prefix": data.get("output_prefix", DEFAULTS["output_prefix"]),

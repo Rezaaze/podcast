@@ -1,0 +1,35 @@
+Phrasen-Frequenz-Report (deterministisch, fabrik/writing/phrase_stats.py)
+Episoden ausgewertet: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+
+Wiederholte Phrasen (>= 6x über die Staffel):
+    12x  "in front of"
+    11x  "yoon hee ja"
+    10x  "a moment longer"
+     9x  "six years of"
+     9x  "in this building"
+     7x  "op's board chair"
+     7x  "whatever it is"
+     6x  "halloran group's acquisitions liaison"
+     6x  "i need you to"
+     6x  "sits alone at"
+     6x  "that's all this"
+     6x  "sits alone with"
+     6x  "vance municipal services"
+     6x  "notarized in person"
+     6x  "not yet not"
+     6x  "building's longtime superintendent"
+     6x  "for a moment"
+     6x  "a hundred times"
+     6x  "five years ago"
+
+Style-Einheitston (>= 25x als style/tone/emotion-Wort):
+    62x  style "herself"
+    52x  style "quiet"
+    42x  style "himself"
+    39x  style "almost"
+    33x  style "careful"
+    32x  style "low"
+    30x  style "measured"
+    30x  style "warm"
+    29x  style "flat"
+    25x  style "easy"

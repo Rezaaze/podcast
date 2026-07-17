@@ -9,6 +9,7 @@
   --partial: #d29922;
   --running: #5b8def;
   --missing: #6e7681;
+  --none: #454b58;
 }
 
 * { box-sizing: border-box; }
@@ -66,6 +67,7 @@ main.log-open { padding-bottom: 14rem; }
 .status-card[data-state="partial"] { border-left-color: var(--partial); }
 .status-card[data-state="running"] { border-left-color: var(--running); }
 .status-card[data-state="missing"] { border-left-color: var(--missing); }
+.status-card[data-state="none"] { border-left-color: var(--none); opacity: 0.7; }
 .status-card[data-state="error"] { border-left-color: #e5534b; }
 
 .status-card .label { font-size: 0.75rem; color: var(--muted); }

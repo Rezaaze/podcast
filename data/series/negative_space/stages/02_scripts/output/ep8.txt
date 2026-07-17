@@ -1,0 +1,979 @@
+--- PART 1 ---
+
+[NARRATOR]
+Previously on Negative Space: the anonymous hard drive led Ethan from case files to storage units to the man who filled them, and the chase ended among the rusted gantry cranes of the Riverside Overlook. Marcus's careless words reached further than he knew, and Lina's own hidden source pulled her closer to the same danger circling Ethan. The struggle in the dark ended almost too quietly — and Ethan's light found a face he has known for nineteen years.
+
+[NARRATOR]
+The Riverside Overlook, minutes later. Ethan Voss, the city PD's digital forensics analyst, has the fleeing man pinned against the crane's rusted struts. Backup is already closing in from the access road.
+
+[SFX: gravel scattering under scuffling boots]
+
+[ETHAN_VOSS | style: winded, adrenaline still high]
+Stop moving. Stop— I said stop.
+
+[SFX: metal groaning as a body is shoved against the gantry frame]
+
+[NARRATOR]
+Flashlight beams converge from three directions at once.
+
+[ETHAN_VOSS | style: shouting toward the lights]
+Over here! I've got him!
+
+[NARRATOR]
+The man beneath Ethan's grip goes still — not the stillness of exhaustion, but something closer to relief.
+
+[MR_HAN | style: calm, almost gentle, no fear at all]
+Careful with your knee, Ethan. That elbow doesn't bend the way it used to.
+
+[NARRATOR]
+Ethan's flashlight finds the face beneath him. He doesn't move. He doesn't speak.
+
+[SFX: flashlight beams sweeping across wet metal, footsteps closing in fast]
+
+[NARRATOR]
+Detective Yuki Sato, the homicide detective leading the case, reaches them first, weapon still drawn.
+
+[DET_YUKI_SATO | style: sharp, procedural]
+PD! Hands where I can see them!
+
+[NARRATOR]
+She takes in the scene — Ethan frozen, the suspect motionless, no resistance left in him at all — and something in Ethan's face stops her cold.
+
+[DET_YUKI_SATO | style: quieter now, reading him]
+Voss. You know him.
+
+[NARRATOR]
+Ethan doesn't answer. An officer moves in with cuffs, another calls it over the radio, standard words for a standard arrest.
+
+[SFX: handcuffs ratcheting shut]
+
+[NARRATOR]
+None of them yet know whose wrists those cuffs just closed around. Only Ethan does — and he can't make himself say the name out loud.
+
+--- PART 2 ---
+
+[NARRATOR]
+The gantry crane's shadow still falls over both men. Officers close in with cuffs; Han doesn't resist, doesn't look at them at all.
+
+[SFX: handcuffs ratcheting shut]
+
+[NARRATOR]
+Questions come from every direction — name, identification, whether he understands his rights. Han answers none of it. His eyes stay fixed on Ethan.
+
+[MR_HAN | style: unnervingly calm]
+Do you understand yet why it had to be you?
+
+[ETHAN_VOSS | style: shaken, barely audible]
+Mr. Han—
+
+[MR_HAN | style: gentle, almost fond]
+Nineteen years, Ethan. I sold you that enlarger when you couldn't afford film, let alone a darkroom. I watched you learn to see before you learned to shoot. That's not nothing. That's not an accident.
+
+[ETHAN_VOSS | style: voice cracking]
+Stop talking.
+
+[MR_HAN | style: unhurried]
+I'm not asking you to forgive anything. I'm asking if you understand it. There's a difference.
+
+[DET_YUKI_SATO | style: sharp, taking control]
+Sir, you'll have plenty of time to talk once you're processed. Right now you don't say another word to him.
+
+[MR_HAN | style: mild, unbothered]
+He can decide that for himself, Detective. He always could.
+
+[NARRATOR]
+Yuki looks between the two of them — the old man's stillness, Ethan's stricken face — and files something away she can't yet name.
+
+[DET_YUKI_SATO | style: quiet, to Ethan]
+You know him.
+
+[ETHAN_VOSS | style: hollow]
+He taught me photography. Since I was fifteen.
+
+[NARRATOR]
+Yuki says nothing to that, but her eyes stay on Han a beat longer than procedure requires.
+
+[MR_HAN | style: patient, almost warm]
+You don't have to answer tonight. I've waited this long.
+
+[ETHAN_VOSS | style: barely holding it together]
+Answer what? You haven't asked me anything that makes sense.
+
+[MR_HAN | style: soft, certain]
+I think I have. I think you just don't want it to.
+
+[NARRATOR]
+He falls silent then, and stays silent — not defiant, not afraid, simply waiting, the way he might wait for a print to finish developing under the red light. The officers move him toward the waiting car. He goes without another word, without once looking away from Ethan until the door closes between them.
+
+[SFX: a car door shutting]
+
+--- PART 3 ---
+
+[NARRATOR]
+The precinct bullpen, later that night. Mr. Han sits at intake, fingerprinted and calm, while officers around him try to understand what they've actually caught.
+
+[SFX: fingerprint scanner beeping, three short tones]
+
+[MARCUS_TANG | style: low, urgent]
+That's Han. From the camera shop on Blessing Street. My mom's brought her camera in there for fifteen years.
+
+[MEI_CHEN | style: quiet, watching]
+He's fixed half this department's old film cameras at some point. Everyone here knows him.
+
+[NARRATOR]
+Ethan stands apart from the booking desk, not moving closer, not looking away.
+
+[MARCUS_TANG | style: careful]
+Ethan. You've gone gray. You know him?
+
+[ETHAN_VOSS | style: flat, holding it together]
+He taught me photography. Nineteen years ago.
+
+[DET_YUKI_SATO | style: crisp, arriving fast]
+Name comes back clean. No priors, no flags, not even a parking ticket in a decade. Nothing on paper that gets us from camera-shop owner to what's sitting in those storage units.
+
+[MARCUS_TANG]
+So the system's wrong, or he's careful.
+
+[DET_YUKI_SATO]
+He's careful.
+
+[NARRATOR]
+Across the room, the captain waves Yuki toward his office, his voice pitched low enough not to carry.
+
+[SFX: an office door clicking shut]
+
+[NARRATOR]
+She's back within a minute, jaw set.
+
+[DET_YUKI_SATO | style: measured, controlled]
+He wants this locked down before anyone says Han's name outside this floor. If we're about to tell the city one of its own picked out whole families like a hobby, he wants it airtight first.
+
+[MEI_CHEN]
+Is it airtight?
+
+[DET_YUKI_SATO]
+Getting there.
+
+[NARRATOR]
+Her attention shifts to Ethan, still fixed on the booking desk across the room.
+
+[DET_YUKI_SATO | style: gentler, not letting him off the hook]
+Voss. You've been staring at that desk for ten minutes.
+
+[ETHAN_VOSS | style: quiet]
+I keep waiting for it to look different. It doesn't.
+
+[MARCUS_TANG | style: careful, testing]
+How different are we talking? Like — customer, or —
+
+[ETHAN_VOSS]
+Or.
+
+[NARRATOR]
+No one asks him to finish it. Behind them, an officer walking Han toward holding lets him pause, unhurried, to look back once across the bullpen, as if committing the room to memory.
+
+[DET_YUKI_SATO | style: low, half to herself]
+Fifteen years and nobody flagged him for anything. Whatever this turns out to be, it isn't one night's case.
+
+--- PART 4 ---
+
+[NARRATOR]
+Detective Sato's office, later that night. She has closed the door on the bullpen's noise. Han sits across from her, unhurried.
+
+[SFX: a photograph sliding across a metal desk]
+
+[DET_YUKI_SATO | style: measured, controlled]
+I want you to look at this before you say anything.
+
+[MR_HAN | style: unhurried, almost pleasant]
+May I hold it?
+
+[DET_YUKI_SATO | style: flat]
+No. Did you have any connection to this case.
+
+[MR_HAN | style: appreciative, distant]
+Whoever shot this understood negative space. Look how much they left empty on the left. Most people crowd a frame. Instinct like that isn't taught.
+
+[DET_YUKI_SATO | style: sharpening]
+That's not an answer, Han.
+
+[MR_HAN | style: calm, unbothered]
+It's the only kind of answer I give about craft. A photographer's habits are the most honest thing about them — steadier than what they'll say in a room like this one.
+
+[DET_YUKI_SATO | style: quiet frustration]
+So you won't tell me if it's yours.
+
+[MR_HAN | style: gentle, immovable]
+I've told you how it was made. What more do you need from me tonight.
+
+[NARRATOR]
+She studies him a long moment, then gathers the photo. No confession. No denial. Only the same question she has carried alone all year, still unanswered.
+
+--- PART 5 ---
+
+[NARRATOR]
+The Forensics Lab, later that morning. Mei Chen, the lab's data analyst, spreads three evidence sets across the table for Ethan.
+
+[MEI_CHEN | style: careful, methodical]
+The paper stock first. Fiber composition, weight, the surface coating — all of it matches a specialty photo stock sold retail at exactly one location in this city.
+
+[ETHAN_VOSS | style: flat, bracing for it]
+Han's shop.
+
+[MEI_CHEN | style: quiet confirmation]
+Han's shop. Distributor records only show it going to three buyers in the last decade. He's one of them.
+
+[SFX: a folder set down on a metal table]
+
+[MEI_CHEN | style: shifting to the next thread]
+Now the key. Building management logs every fob and every physical key issued per unit. Yours was reissued during your move, six years ago. The old one was marked returned.
+
+[ETHAN_VOSS | style: tight]
+It wasn't.
+
+[MEI_CHEN]
+It wasn't. I pulled the handoff paperwork. Han co-signed as the locksmith referral that week. His signature's on the line right under yours.
+
+[NARRATOR]
+Mei pulls up a city map on the lab monitor, GPS points glowing across it.
+
+[MEI_CHEN | style: laying it out plainly]
+Last piece. The embedded coordinates from every photo on that drive — I stopped treating them as random and cross-referenced them against known movement. Delivery routes, permit addresses, even a gym membership swipe log.
+
+[SFX: a mouse click, map pins updating]
+
+[MEI_CHEN]
+Every single point sits inside Han's routine. Not near it. Inside it.
+
+[ETHAN_VOSS | style: very quiet]
+Say it anyway. Out loud.
+
+[MEI_CHEN | style: steady, no softening it]
+Paper stock, the key, the GPS trail. Three separate systems, three separate timelines, and they all close around the same person. There's no alternate explanation left standing, Ethan. It's him.
+
+[NARRATOR]
+Ethan stares at the map, at the darkroom's building marked among the pins — a shop he has walked into a hundred times without a second thought.
+
+[ETHAN_VOSS | style: barely audible]
+Nineteen years.
+
+[MEI_CHEN | style: gentler now]
+I know.
+
+[NARRATOR]
+He doesn't move for a long moment, the confirmation sitting heavier than the arrest itself.
+
+[ETHAN_VOSS | style: hollowed out, quiet]
+I taught myself to read evidence so it wouldn't lie to me. I didn't think I'd ever want it to.
+
+[SFX: a chair leg scraping softly as Ethan sits down]
+
+[MEI_CHEN | style: careful, watching him]
+You don't have to look at the rest of it today.
+
+[ETHAN_VOSS | style: firmer, forcing it]
+Yes. I do.
+
+[NARRATOR]
+Mei says nothing more, letting him sit with the map, the pins, and the shape of a man he no longer recognizes.
+
+--- PART 6 ---
+
+[NARRATOR]
+The Forensics Lab, later that same night. The full team has gathered — Ethan, Marcus, Mei, and Detective Sato — and this time Yuki isn't asking questions. She's answering them.
+
+[SFX: a folder of papers slapping down flat on a metal table]
+
+[DET_YUKI_SATO | style: flat, procedural]
+Marcus. I need you to look at these.
+
+[MARCUS_TANG | style: wary but casual]
+Phone records. Okay. Am I supposed to know what I'm looking at?
+
+[DET_YUKI_SATO | style: measured, unhurried]
+You tell me. Four calls, over six weeks. Every one of them lands within twenty minutes of a storage unit getting cleared out.
+
+[MARCUS_TANG | style: forcing lightness]
+I talk to a lot of people, Yuki. That's not a pattern, that's a Tuesday.
+
+[DET_YUKI_SATO | style: cool, unmoved]
+Same number, every time. You want to tell me who that is, or should I?
+
+[MARCUS_TANG | style: quieter now, the ease slipping]
+It's a contact. Someone at the facility. He'd tell me things — who was asking questions, who wasn't. It was never anything that mattered.
+
+[ETHAN_VOSS | style: low, disbelieving]
+Marcus. Two of those units got cleared before we even had warrants drafted.
+
+[MARCUS_TANG | style: defensive, cornered]
+I didn't know that's what he was doing with it. I thought — I thought it was harmless. A guy keeping me in the loop.
+
+[DET_YUKI_SATO | style: quiet, deliberate — letting it land]
+Here's the part you don't know yet.
+
+[SFX: a single sheet of paper sliding across the table]
+
+[DET_YUKI_SATO | style: unwavering]
+That same number has been calling a certain crime reporter for months. Feeding her tips. Your harmless guy in the loop is Lina's anonymous source.
+
+[MEI_CHEN | style: barely audible]
+Oh, God.
+
+[MARCUS_TANG | style: the floor dropping out]
+That's not — no. That doesn't — 
+
+[ETHAN_VOSS | style: hard, quiet]
+Say it, Marcus.
+
+[MARCUS_TANG | style: hollowed out]
+I fed him leads. And he fed Lina. And whoever he was really talking to had time to walk away clean, twice, because of me.
+
+[NARRATOR]
+No one answers him. For a long moment, the only sound in the lab is the hum of the equipment, and the sound of six weeks of small carelessness finally arriving all at once.
+
+[DET_YUKI_SATO | style: even, final]
+This goes in the file, Marcus. All of it.
+
+[MARCUS_TANG | style: barely a whisper]
+I know.
+
+--- PART 7 ---
+
+[NARRATOR]
+The lab empties out, Yuki's phone records still spread across the table. Marcus stays where he was sitting. Mei stays too, closing the door.
+
+[MEI_CHEN | style: quiet, careful]
+I want to give you something before anyone else comes back in.
+
+[MARCUS_TANG | style: hollowed out, flat]
+Go ahead. I don't think it can get worse.
+
+[MEI_CHEN | style: steady, forcing herself through it]
+I've suspected you for weeks, Marcus. Since the second clear-out. The timing was too clean to be luck.
+
+[MARCUS_TANG | style: quiet, stung]
+Weeks.
+
+[MEI_CHEN | style: measured, unflinching]
+Weeks. And I didn't say anything. Not to Ethan, not to Yuki, not to you.
+
+[SFX: a chair leg scraping an inch against the floor]
+
+[MARCUS_TANG | style: low, almost pleading]
+Why didn't you.
+
+[MEI_CHEN | style: pained but holding the line]
+Because I told myself I wasn't sure. Because I didn't want to be the one who ended you over a guess. Because some part of me hoped I was wrong.
+
+[MEI_CHEN | style: quieter, harder to say]
+Unit fourteen cleared out nine hours after you talked to your contact about it. Unit twenty-two, thirty-one hours. Both times I noticed the gap. Both times I let it go.
+
+[MARCUS_TANG | style: barely audible]
+Those were both after leads I gave him. I know the dates. I've known the dates since Yuki laid them out.
+
+[MEI_CHEN | style: steady]
+I'm not telling you this so you'll feel worse. You already know what it cost. I'm telling you because I need you to know I carried it too. Just differently.
+
+[MARCUS_TANG | style: raw]
+You watched me for weeks and said nothing.
+
+[MEI_CHEN | style: firm, not cruel]
+Yes.
+
+[MARCUS_TANG | style: quiet, almost a question]
+Does that make us even, or does it just mean we both failed at the same time.
+
+[MEI_CHEN | style: honest, unresolved]
+I don't know. I'm not asking you to forgive me for the silence. I just didn't want you to find out later that I knew, and let you think I hadn't.
+
+[NARRATOR]
+Neither of them reaches for what comes next — the review board, the lab roster, whether either name survives it. For now they just sit with what already happened, and what it cost people who never knew their names.
+
+--- PART 8 ---
+
+[NARRATOR]
+Back in the precinct bullpen, a corner interview room. Han sits across from Ethan, an observation window at his back, department eyes on both of them now.
+
+[SFX: a metal chair leg scraping against tile]
+
+[MR_HAN | style: composed, almost gentle]
+Sit. You've been standing since they brought me in. I noticed.
+
+[ETHAN_VOSS | style: flat, guarded]
+I'm not here to make you comfortable.
+
+[MR_HAN | style: unhurried]
+No. You're here because you want the names to stop being case numbers. Fine. The Ashworths, on the overlook road, nine years ago. The Delgados, before them. The Prasads, before them. I could go further back. I won't, tonight.
+
+[ETHAN_VOSS | style: tight, restrained]
+Those are people. Not a list.
+
+[MR_HAN | style: reflective]
+They were both, Ethan. Every one of them, I photographed first. Composed them the way you compose a frame — waited for the light, waited for the moment they trusted the lens. That's not so different from what I taught you.
+
+[ETHAN_VOSS | style: sharp]
+Don't.
+
+[MR_HAN | style: calm, unbothered]
+I'm not comparing you to them. I'm telling you what I was looking for the whole time. Skill. Patience. And underneath it, hunger — the part that doesn't stop at "good enough." I found pieces of it in a dozen students over the years. Never all of it, in one person. Until you.
+
+[ETHAN_VOSS | style: low, disbelieving]
+The drive. The apartment. Someone breaking in while I slept —
+
+[MR_HAN | style: matter-of-fact]
+Were never a threat. They were the last stages of an audition. A question asked in a language you already spoke — evidence, sequence, deduction. I needed to know if you could follow it all the way to the end. You did.
+
+[ETHAN_VOSS | style: quiet, cold]
+That's not an answer. That's a sentence.
+
+[MR_HAN | style: light, almost fond]
+One more thing, since we're being honest with each other. The shop. Lina's family — the debt, the notice they were about to lose everything over. That was me too. A gift, before you understood the rules of the game. I wanted you closer before you had reason to run.
+
+[SFX: a hand pressing flat and hard on the metal table]
+
+[ETHAN_VOSS | style: shaken, voice breaking control]
+You didn't save them. You bought us.
+
+[NARRATOR]
+Ethan had walked in believing an arrest would be the end of it. That belief does not survive the sentence Han just finished.
+
+--- PART 9 ---
+
+[NARRATOR]
+Ethan's apartment, past midnight. Lina — his girlfriend, a crime-beat journalist — waits up for him, the door still swinging shut behind him.
+
+[LINA_CHO | style: careful, bracing herself]
+You look like you haven't slept in a week.
+
+[ETHAN_VOSS | style: hollowed out, quiet]
+I haven't. Not really.
+
+[SFX: a jacket dropped onto a chair]
+
+[ETHAN_VOSS | style: flat, working to stay steady]
+The key. The spare I gave him during the move. He never gave it back, Lina. He kept it. On purpose.
+
+[LINA_CHO | style: uncertain, catching up]
+Kept it — for what?
+
+[ETHAN_VOSS | style: low, each word costing him something]
+That photo of me asleep, in this apartment — he used it. This place, your family's shop, all of it. He was watching. Not once. For years.
+
+[LINA_CHO | style: stunned, quiet]
+Years.
+
+[ETHAN_VOSS | style: distant, reciting something he doesn't want to believe]
+He called it an audition. Said he'd been looking for someone with — his words — my exact mix of skill and hunger. The drive, the trail, the break-in. None of it was a warning. It was a test.
+
+[LINA_CHO | style: gentle, careful not to push too hard]
+A test for what, Ethan.
+
+[ETHAN_VOSS | style: barely holding, voice cracking at the edges]
+For me. To become whatever he is.
+
+[LINA_CHO | style: steadying herself, quiet]
+And now? He's caught. What does he want from you now?
+
+[ETHAN_VOSS | style: bitter disbelief]
+That's the thing. He still thinks he's owed an answer. Like getting arrested didn't change the question at all. Like I'm just — late.
+
+[LINA_CHO | style: soft, afraid of the answer]
+An answer to what.
+
+[ETHAN_VOSS | style: guarded, pulling back]
+Whether I say yes.
+
+[NARRATOR]
+He doesn't tell her about the one second, at the overlook, when some part of him understood.
+
+[LINA_CHO | style: tender, not pressing]
+You don't have to say all of it tonight.
+
+[SFX: a soft rustle of fabric as she moves closer]
+
+[ETHAN_VOSS | style: exhausted, grateful, unraveling slightly]
+There's more. I just — I can't get the words out yet.
+
+[LINA_CHO | style: quiet, holding him]
+Then don't. I'm not going anywhere.
+
+[NARRATOR]
+She holds him without asking for the rest, sensing there's a second thing he isn't ready to say.
+
+--- PART 10 ---
+
+[NARRATOR]
+Lina's apartment, later that same night. The Second Byline thread returns — Lina, working alone at her kitchen table.
+
+[NARRATOR]
+Case files and a laptop share the space with unwashed mugs. She has not slept.
+
+[LINA_CHO | style: focused, tired]
+Okay. One more pass. The number doesn't change just because I want it to.
+
+[SFX: laptop keys clicking in a quick burst]
+
+[LINA_CHO | style: reading aloud to herself]
+Prepaid, cash, activated March fourteenth. Registered to nobody, obviously.
+
+[LINA_CHO | style: quieter, working through it]
+But the store it came from has a name.
+
+[SFX: a mouse click, then a soft notification chime]
+
+[LINA_CHO | style: still, caught]
+Vance Street Electronics. Two blocks off Fifth.
+
+[LINA_CHO | style: slow, doing the math out loud]
+Two blocks from Han's shop.
+
+[NARRATOR]
+She sets the laptop down and doesn't touch it again for a moment.
+
+[LINA_CHO | style: barely audible]
+Same stretch. Same block the cashier's check came from.
+
+[LINA_CHO | style: trying to talk herself out of it, unconvincing]
+That's a coincidence. Half the neighborhood buys prepaid phones from that place. It's the cheapest one on the strip.
+
+[LINA_CHO | style: quiet, not believing her own argument]
+Two coincidences.
+
+[SFX: a chair leg scraping against the floor]
+
+[NARRATOR]
+She stands, crosses to the window, and looks out without seeing anything in particular.
+
+[LINA_CHO | style: low, unsettled]
+He called me for months. Every tip checked out. Every single one.
+
+[LINA_CHO | style: harder on herself now]
+Checked out because he wanted it to. Not because I was good.
+
+[LINA_CHO | style: bitter, quiet]
+Or maybe both. I don't know which is worse.
+
+[NARRATOR]
+She returns to the table and pulls up a blank email, addressed to her editor, subject line empty.
+
+[LINA_CHO | style: hovering, uncertain]
+"Source may be compromised." Six words. I could send it right now.
+
+[SFX: a single key tapped, then stillness]
+
+[LINA_CHO | style: quiet, deciding against it — for now]
+Not tonight. Not until I know what "compromised" even means here.
+
+[LINA_CHO | style: to herself, unsteady]
+Fed information by someone circling the same man who's been circling Ethan for months. That's not a source. That's a leash I didn't know I was on.
+
+[NARRATOR]
+She closes the laptop but keeps her hand on it, unwilling to look away for long.
+
+[LINA_CHO | style: almost a whisper]
+Every story I ran this season. How much of it was even mine.
+
+--- PART 11 ---
+
+[NARRATOR]
+The Cho Print Shop, after closing. Rows of framed family portraits still hang on the wall. Lina and Ethan stand alone among them.
+
+[SFX: a metal shop gate rattling as it's pulled halfway down]
+
+[LINA_CHO | style: quiet, worn thin]
+I used to like this wall. Every family that ever trusted us with a roll of film, right there.
+
+[ETHAN_VOSS | style: low, still absorbing it]
+Lina.
+
+[LINA_CHO | style: bracing]
+I know what you're going to say.
+
+[ETHAN_VOSS | style: careful, pained]
+He paid your parents' debt the same week the eviction notice came due. He timed it. He wanted you grateful before you even knew his name mattered.
+
+[LINA_CHO | style: flat, holding herself together]
+I know.
+
+[ETHAN_VOSS | style: quieter]
+It sickens me. That the one good thing that happened to your family this year — wasn't good. It was a hook.
+
+[LINA_CHO | style: sharp, defensive of the memory]
+Don't. Don't take that from me too. My mother cried, Ethan. She thought God finally noticed us.
+
+[ETHAN_VOSS | style: gentle, not backing down]
+I'm not taking it from you. I just can't unknow where it came from.
+
+[SFX: a portrait frame creaking slightly as Lina straightens it against the wall]
+
+[LINA_CHO | style: quiet, almost pleading]
+I can't tell them. I can't sit my mother down and say the roof over her shop was bought by a man who kept — kept trophies in storage units. She'd never print another photo again.
+
+[ETHAN_VOSS | style: measured]
+So we let them keep believing in the lucky break.
+
+[LINA_CHO | style: uncertain]
+Is that mercy? Or is that just — another thing he gets to own. Another quiet debt.
+
+[ETHAN_VOSS | style: heavy]
+I don't know anymore where the line is. Between protecting someone and lying to them.
+
+[LINA_CHO | style: barely audible]
+We've both been drawing that line all season, haven't we.
+
+[ETHAN_VOSS | style: guarded, not meeting it head-on]
+Let's not do that right now.
+
+[LINA_CHO | style: soft, conceding]
+Okay.
+
+[SFX: the shop gate lowered the rest of the way, latching]
+
+[LINA_CHO | style: tired, resolved for tonight]
+So. The shop got lucky. That's the story.
+
+[ETHAN_VOSS | style: quiet agreement]
+That's the story. For now.
+
+[NARRATOR]
+Neither of them says the word secret. Neither needs to.
+
+--- PART 12 ---
+
+[NARRATOR]
+Han's Camera Shop, later that night. The evidence sweep is underway, and Ethan has asked to search the darkroom himself.
+
+[SFX: a heavy door latch clicking open]
+
+[ETHAN_VOSS | style: quiet, controlled | speed: 0.9]
+Log the front room first. I want the darkroom clean before anyone else goes in.
+
+[ETHAN_VOSS | style: low, to himself]
+Nineteen years, and I still know where the light switch is.
+
+[SFX: a red safelight buzzing faintly on]
+
+[ETHAN_VOSS | style: flat, trying to stay clinical]
+Trays are dry. Chemicals capped. Nothing's been touched since —
+
+[ETHAN_VOSS | style: voice catching]
+There's a print on the line.
+
+[NARRATOR]
+A single photograph hangs from the drying line under the red glow, dated the same week as tonight's arrest.
+
+[ETHAN_VOSS | style: barely above a whisper]
+It's me. Asleep — no, this one's not asleep. This is from the overlook. Tonight. He printed this tonight.
+
+[ETHAN_VOSS | style: shaken, quiet]
+Same framing as the others. The tilt, the negative space around the shoulder — he used the same eye on me he used on all of them.
+
+[SFX: a pushpin being pulled from corkboard]
+
+[ETHAN_VOSS | style: reading aloud, unsteady]
+"For whoever finds this first — you already know what to do with what you're holding."
+
+[ETHAN_VOSS | style: quiet, bitter]
+He wrote that for me. Not for whoever. For me.
+
+[NARRATOR]
+Ethan stands with the print and the note a long moment before reaching for an evidence sleeve.
+
+[ETHAN_VOSS | style: hollow, resigned | speed: 0.9]
+He knew I'd be the one standing here. He set the trays. He hung the line. He wanted it to be my hands doing this.
+
+[ETHAN_VOSS | style: firmer, forcing procedure]
+Bag it. Time-stamp the note separately. Chain of custody starts with me, so somebody else logs the transfer.
+
+[SFX: an evidence bag sealing]
+
+[ETHAN_VOSS | style: barely controlled]
+Nineteen years he waited for exactly this room, exactly this light, exactly this version of me finding it.
+
+[ETHAN_VOSS | style: quiet, almost to the photograph]
+You don't get to call this a gift.
+
+[NARRATOR]
+He switches off the safelight, and for a moment the darkroom is only darkness — then the door opens on the ordinary fluorescents of the shop beyond, and he steps back into them without looking behind him.
+
+--- PART 13 ---
+
+[NARRATOR]
+The Precinct Bullpen, later that night. Mr. Han sits across from Detective Sato, a recorder between them, his statement nearly finished.
+
+[DET_YUKI_SATO | style: flat, procedural]
+State the address again, for the recording.
+
+[MR_HAN | style: calm, precise]
+Forty-one Kestrel Yard. Unit C-nine. I rented it under the Alderman name in oh-six.
+
+[DET_YUKI_SATO | style: steady]
+And the contents.
+
+[MR_HAN | style: unhurried, exact]
+A christening gown. A dog's collar, brown leather, the buckle rusted. A woman's reading glasses, tortoiseshell frame. I can list the rest if you want dates.
+
+[DET_YUKI_SATO | style: clipped]
+I want dates.
+
+[MR_HAN | style: reciting, almost proud]
+March the fourteenth, two thousand nine. The Alvarez family. I have always been careful about dates.
+
+[NARRATOR]
+He answers three more questions about the hard drive, the GPS trail, the break-in — each one without pause, without correction.
+
+[DET_YUKI_SATO | style: testing]
+The spare key. When did you have it copied.
+
+[MR_HAN | style: even]
+The week after his move. I told myself it was an oversight I hadn't returned it. It was not an oversight.
+
+[NARRATOR]
+Yuki sets a photograph on the table — the one she has carried alone through the whole season.
+
+[DET_YUKI_SATO | style: quiet, deliberate]
+This one. Nineteen ninety-eight. Ruled an accident. Tell me about the framing.
+
+[MR_HAN | style: shifting, softer, evasive]
+The framing is... interesting. Whoever took it understood negative space. Where the eye rests when there's nothing there to hold it.
+
+[DET_YUKI_SATO | style: pressing]
+That's not an answer.
+
+[MR_HAN | style: deflecting, mild]
+It's an observation. I make a great many of those.
+
+[DET_YUKI_SATO | style: harder]
+Did you take this photograph.
+
+[MR_HAN | style: gentle, unreadable]
+I've admired photographs like it. I couldn't tell you who took every one I've admired.
+
+[NARRATOR]
+Yuki leans forward, her patience visibly thinning.
+
+[DET_YUKI_SATO | style: low, insistent]
+Say it plainly. Yours or not yours.
+
+[NARRATOR]
+Han says nothing. He folds his hands, holds her gaze, and lets several seconds pass in silence.
+
+[SFX: a recorder's tape hiss under the silence]
+
+[DET_YUKI_SATO | style: barely controlled]
+That's the answer, isn't it. You're just not going to give it to me.
+
+[MR_HAN | style: soft, final]
+Some things are better left where they are, Detective.
+
+[NARRATOR]
+She closes the folder without another question, the one case still sitting exactly where it started.
+
+--- PART 14 ---
+
+[NARRATOR]
+The Rooftop Bar, later that night. The team gathers above the city lights — Ethan, Lina, Yuki, and Mei, marking the case closing without much cause to celebrate.
+
+[NARRATOR]
+One chair at the table stays empty.
+
+[ETHAN_VOSS | style: quiet, worn]
+Somebody want this seat, or are we leaving it.
+
+[DET_YUKI_SATO | style: careful, procedural]
+Leave it. Review board hasn't scheduled him yet. Doesn't feel right, pretending otherwise.
+
+[MEI_CHEN | style: distant, guarded]
+I'll get another round.
+
+[NARRATOR]
+Mei stands too fast, chair scraping, and heads for the bar without waiting for orders.
+
+[SFX: a barstool scraping back on concrete]
+
+[LINA_CHO | style: watching Mei go, low]
+She's barely said ten words all night.
+
+[DET_YUKI_SATO | style: flat, tired]
+She's carrying something. Not my place to ask what.
+
+[ETHAN_VOSS | style: rubbing his eyes]
+None of us are asking the right questions tonight. Feels safer that way.
+
+[LINA_CHO | style: gentle correction]
+Or it just feels easier.
+
+[NARRATOR]
+Ethan doesn't argue the difference.
+
+[DET_YUKI_SATO | style: measured, half to herself]
+Formal review starts Monday. Department wants it clean — timeline, calls, everything documented before anyone says a word to the press.
+
+[ETHAN_VOSS | style: careful, non-committal]
+And what do you think happens to him.
+
+[DET_YUKI_SATO | style: guarded]
+I think that's not mine to decide. Or yours.
+
+[NARRATOR]
+She says it evenly, but something in it stays unfinished, a door she's not opening tonight.
+
+[NARRATOR]
+Mei returns, setting glasses down without meeting anyone's eyes.
+
+[SFX: glasses set down on a metal table]
+
+[ETHAN_VOSS | style: raising his glass, quiet, not triumphant]
+To the case being closed. However that ends up counting.
+
+[NARRATOR]
+Nobody echoes it loudly. Glasses touch once, briefly, more habit than toast.
+
+[SFX: glasses clinking softly]
+
+[LINA_CHO | style: soft]
+That's not much of a toast.
+
+[ETHAN_VOSS | style: tired honesty]
+It's what I've got.
+
+[NARRATOR]
+The four of them sit with the empty chair between them, none of them naming what used to sit there before tonight — not the case, not Marcus, just the plain fact that something is missing and none of them are ready to say what.
+
+[MEI_CHEN | style: barely audible]
+It used to be easier than this. Trusting people at this table.
+
+[NARRATOR]
+No one answers her. The silence holds the shape of an agreement none of them said out loud.
+
+--- PART 15 ---
+
+[NARRATOR]
+The Harbor Promenade, later that same night. Ethan and Lina, alone now, the rooftop bar's noise already behind them.
+
+[NARRATOR]
+This is where the operation started — the same stretch of railing, the water quiet under it.
+
+[LINA_CHO | style: soft, worn]
+You picked this spot on purpose.
+
+[ETHAN_VOSS | style: tired, quiet]
+I don't know if I picked it. My feet just stopped here.
+
+[SFX: a distant boat horn, low]
+
+[LINA_CHO | style: gentle]
+It's strange. Standing here and it's just... water. No fog. No van full of equipment.
+
+[ETHAN_VOSS | style: low]
+No Marcus in my ear telling me to breathe.
+
+[LINA_CHO | style: careful]
+How is he.
+
+[ETHAN_VOSS | style: flat, guarded]
+I don't know yet. Ask me next week.
+
+[NARRATOR]
+Neither pushes further. A beat passes before either speaks again.
+
+[LINA_CHO | style: quiet]
+I'm not going to ask you what he said to you back there. At the overlook.
+
+[ETHAN_VOSS | style: quiet, grateful]
+I noticed.
+
+[LINA_CHO | style: gentle, honest]
+I don't need the story tonight, Ethan. I have enough stories.
+
+[ETHAN_VOSS | style: soft]
+Yeah. Me too.
+
+[SFX: a metal railing creaking faintly as someone leans on it]
+
+[NARRATOR]
+He leans into the rail beside her, close enough that their shoulders touch.
+
+[LINA_CHO | style: barely audible]
+I'm not asking about my source either. Not tonight.
+
+[ETHAN_VOSS | style: careful]
+Okay.
+
+[LINA_CHO | style: soft, almost a laugh]
+Just — okay. That's all we're doing tonight. Standing here being okay.
+
+[ETHAN_VOSS | style: quiet, warm]
+I can do that.
+
+[NARRATOR]
+The water moves under the promenade lights, slow and dark.
+
+[LINA_CHO | style: tender]
+Nineteen years, Ethan. That's not a small thing to carry home.
+
+[ETHAN_VOSS | style: rough, low]
+I know how long it is. I've been counting since I was fifteen.
+
+[LINA_CHO | style: gentle]
+You don't have to hand me the whole number tonight.
+
+[ETHAN_VOSS | style: quiet]
+I know.
+
+[SFX: a bicycle bell ringing once as it passes behind them]
+
+[NARRATOR]
+A cyclist passes and is gone, and neither of them turns to look.
+
+[LINA_CHO | style: soft, steady]
+I'm still here. Whatever's left standing between us — I'm still choosing it.
+
+[ETHAN_VOSS | style: quiet, meaning it]
+Same.
+
+[NARRATOR]
+He takes her hand instead of answering further, and for a while that's the whole conversation.
+
+[LINA_CHO | style: quiet, almost teasing]
+We should go home. You look like you're about to fall asleep standing up.
+
+[ETHAN_VOSS | style: tired, small smile in the voice]
+I might already be.
+
+[NARRATOR]
+They walk back along the water together, saying nothing else that needs saying tonight — though the drive, waiting in his apartment, has not finished asking its question.
+
+--- PART 16 ---
+
+[NARRATOR]
+Ethan's apartment, later that night. Alone, he sits at his desk with the original hard drive — the one Han mailed him, months ago.
+
+[SFX: a hard drive connector clicking into a USB port]
+
+[ETHAN_VOSS | style: quiet, worn down]
+First time I opened this, I thought it was a puzzle. Somebody's idea of a joke, or a test I could pass and walk away from.
+
+[ETHAN_VOSS | style: barely audible]
+Nineteen years, and I still heard myself ask why it had to be me. Like I already knew the answer mattered.
+
+[ETHAN_VOSS | style: low, unsettled]
+For one second up on that overlook, I understood him. Not agreed. Understood. I keep telling myself those aren't the same thing.
+
+[ETHAN_VOSS | style: quieter still]
+They're not. But the line's thinner than I want it to be.
+
+[SFX: a laptop trackpad click, then the drive's activity light ticking off]
+
+[ETHAN_VOSS | style: flat, final]
+He asked me if I understood yet why it had to be him. I never answered.
+
+[ETHAN_VOSS | style: almost a whisper]
+Maybe that's the only honest thing I've got left to give him.
+
+[SFX: a drawer sliding shut]
+
+[NARRATOR]
+He sets the drive down, unopened again, and doesn't reach for it a second time.
+

@@ -17,6 +17,47 @@ Flask (`app.py`) + Vanilla JS (`static/app.js`), Single-Page. Eigenes venv
   erzeugen NEUE Serien und sind vom auto-angehängten `series`-Param
   ausgenommen (`app.js::PF_SERIES_SCOPED_EXCLUDE`); jedes andere
   `pf_*`-Kommando bekommt die gewählte Serie automatisch injiziert.
+- **Jobs sind pro Serie parallelisierbar, außer bei geteilter TTS-Ressource:**
+  `runner.py::_lock_key()`: AUTO_TTS_COMMANDS (`pf_podcast_maker`,
+  `pf_batch`, `pf_generate_episode_all` — teilen sich den EINEN lokalen
+  Pinokio/Qwen3-Prozess, `tts_control.py`s start/stop ist nicht
+  Refcount-fähig) teilen sich EINEN gemeinsamen Sperr-Schlüssel
+  (`_TTS_LOCK_KEY = "__tts__"`, nicht command_id-spezifisch — sonst könnten
+  z.B. `pf_batch` und `pf_podcast_maker` trotzdem gleichzeitig laufen und
+  sich den TTS-Server gegenseitig unter den Füßen wegziehen), GLOBAL über
+  alle Serien. Alle anderen `pf_*`-Kommandos (Skripte schreiben,
+  Bild-Prompts, Cover, Thumbnails, SFX-Plan, Highlights) sind reine
+  `claude`-CLI-Aufrufe ohne geteilte Ressource und laufen pro
+  `(command_id, series)` — zwei Serien können also gleichzeitig Skripte
+  schreiben. `jobs.snapshot()` (`/api/jobs`) ist entsprechend nach
+  Lock-Key geschlüsselt (nicht mehr 1:1 nach command_id!) — jeder Eintrag
+  trägt zusätzlich `command_id`/`series` als Felder; bestehende Leser wie
+  `status.py`/`app.py` suchen deshalb über `status.any_command_running()`
+  (iteriert die Werte nach `command_id`) statt per Dict-Lookup.
+  `app.js::syncRunningJobs` sperrt einen Button nur, wenn der laufende Job
+  global ist (Schlüssel ohne `"::"`) ODER seine Serie mit der gerade
+  ausgewählten übereinstimmt — läuft beim Serienwechsel sofort neu (nicht
+  erst beim nächsten 4s-Poll).
+
+## Parallelbetrieb: Isolation + Launcher
+
+- Jedes Cockpit ist ein EIGENER `app.py`-Prozess auf eigenem Port (eigener
+  `jobs = JobRegistry()`, eigene aktive Serie). Zwei Env-Vars entkoppeln die
+  aktive Serie vom globalen `data/series/LATEST` (sonst biegen parallele
+  Instanzen sich gegenseitig um — besonders beim Anlegen): `WEBUI_ISOLATED=1`
+  (aktive Serie pro Prozess im Speicher `_active`, LATEST wird nie geschrieben)
+  bzw. `WEBUI_SERIES=<slug>` (isoliert + fest gepinnt, Umschalter gesperrt).
+  `/api/pf/series` liefert dazu `active`/`pinned`/`isolated`. create_series
+  druckt `PF_CREATED_SERIES=<slug>`; der Client parst die Marker-Zeile aus dem
+  SSE-Stream und übernimmt SIE (nicht den globalen LATEST) — sonst landet ein
+  Cockpit bei parallelen Creates auf der Serie einer Schwester-Instanz.
+- `webui/launcher.py` (Start: `./start_launcher.sh`, Port 5150) ist ein
+  Mini-Supervisor: Weboberfläche mit Start/Stop/Neustart je Cockpit. Spawnt
+  `app.py` mit `WEBUI_PORT`/`WEBUI_ISOLATED`|`WEBUI_SERIES`, `start_new_session
+  =True` (Cockpits überleben Launcher-Ende), merkt PIDs in
+  `.launcher_state.json` (Re-Adoption nach Launcher-Neustart). Stopp vor der
+  Vertonung: der Button „Alle Skripte generieren (ohne Vertonen)" ruft
+  `generate_episode all --no-audio` (nicht in `AUTO_TTS_COMMANDS`).
 
 ## Gotchas (beide in Produktion gelernt)
 
@@ -30,6 +71,20 @@ Flask (`app.py`) + Vanilla JS (`static/app.js`), Single-Page. Eigenes venv
   der `--fix`-Checkbox, weil vorher kein Boolflag über den
   `data-param-*`-Pfad lief (die ältere merge_anthology-Checkbox hat einen
   eigenen Change-Listener). Bei neuen `data-param-*`-Controls beachten.
+- **`boolflag_off`: fehlendes Feld ≠ abgewählt** (Bugfix 17.07.2026, teuerster
+  Produktionsfehler des Tages). `build_argv` las `value = params.get(name)` und
+  hängte bei `if not value` das Abschalt-Flag an — `None` (Feld gar nicht
+  geschickt) verhielt sich damit wie „Checkbox aus" und INVERTIERTE den
+  CLI-Default. Zusammen mit dem Reload-Gotcha oben ist das scharf: ein
+  Browser-Tab, der noch das HTML von vor der Einführung von `data-param-fix`
+  hält, schickt `fix` nicht mit → `--no-fix` → die Reparatur läuft nie, obwohl
+  die Checkbox sichtbar angehakt ist. Ergebnis in Produktion: drei frisch
+  erzeugte Serien (the_glasshouse_vote 23, the_founding_collection 12,
+  seven_seats 7) mit zusammen **42 korrekt geflaggten, aber nie applizierten**
+  Review-Befunden — die Analyse las das zunächst als „Auto-Fix kaputt", dabei
+  war die Reparatur intakt und wurde bloß nie aufgerufen. Jetzt:
+  `if name in (params or {}) and not value`. Für JEDES künftige `boolflag_off`
+  gilt: fehlt der Schlüssel, gilt der CLI-Default.
 - `webui/tts_control.py::start_tts` wartet nach dem offenen Port zusätzlich
   auf `/health` (200 = Modell geladen; Server ohne /health-Endpoint: offener
   Port gilt als bereit). podcast_maker retried seinen Health-Check trotzdem
@@ -39,6 +94,28 @@ Flask (`app.py`) + Vanilla JS (`static/app.js`), Single-Page. Eigenes venv
 
 ## UI-Verhalten
 
+- **Pro-Episode-Statuskarte (16.07.2026 überarbeitet):** vorher standen nur
+  Skript/Audio in der Episode-Karte, Thumbnails/Highlights/SFX (letzteres gab
+  es noch gar nicht) in verstreuten Serien-weiten Aggregat-Karten — "was fehlt
+  noch zu Folge N" ließ sich nicht auf einen Blick beantworten.
+  `status.py::pf_status()` liefert jetzt pro Episode zusätzlich
+  `thumbnail_state`, `highlights_state`, `sfx_state`; `app.js::
+  episodeDetailLine()`/`worstEpState()` fassen das in EINER Karte zusammen
+  (Randfarbe = schlechtester Einzelzustand). Zwei Dimensionen sind bewusst
+  bedingt sichtbar statt immer "offen" zu zeigen: `highlights_state` ist
+  `"none"` (ausgeblendet), solange die Episode nicht vertont ist (highlight_
+  clips.py braucht die Timing-Cues aus der Vertonung); `sfx_state` ist
+  `"none"`, wenn kein SFX-Plan existiert oder diese Episode `keine` behaltenen
+  Cues hat — kein Fehlzustand, nur "hier gibt's nichts zu prüfen". Die alte
+  Aggregat-Karte "Episoden-Thumbnails" ist entfallen (Detail steckt jetzt pro
+  Episode); eine neue "Sounddesign"-Karte (nur Drama-Serien) zeigt stattdessen
+  `<Episoden mit fertigem SFX>/<Episoden mit Cues>` bzw. einen Hinweis, falls
+  noch kein `sfx_plan` gelaufen ist. SFX-Abdeckung pro Episode vergleicht
+  `SFX_PLAN.json`s behaltene Cues (Feld `asset_key`) gegen tatsächlich
+  vorhandene Dateien in `sfx/oneshots/` — Hash-Herleitung (Plan-Feld `asset`,
+  sonst `sfx_asset_hash(prompt)`) MUSS mit `fabrik/cli/sfx_assets.py::
+  jobs_from_plan()` übereinstimmen, sonst zeigt das Cockpit eine Datei als
+  fehlend, die podcast_maker/Lolfi längst unter einem anderen Namen finden.
 - Log-Panel (`#log-panel`) startet eingeklappt, auto-expandiert bei
   Job-Start (`setLogOpen`); Status-Punkt im Header zeigt
   running/done/error auch eingeklappt.
@@ -122,8 +199,11 @@ Flask (`app.py`) + Vanilla JS (`static/app.js`), Single-Page. Eigenes venv
   der 10-Min-Heuristik, `avoid=True` meidet die Maschine dauerhaft in
   jeder Offer-Suche. Manuell beurteilte Maschinen bleiben immer gelistet
   (sonst wäre „Favorit entfernen" im UI nicht umkehrbar).
-- Generier-Buttons tragen die Checkboxen `--fix`-Review
-  (`#pf-fix-review`, `data-param-fix`) und `use_beats` (persistiert wie
+- Generier-Buttons tragen die Checkboxen Review-Fix
+  (`#pf-fix-review`, seit 17.07.2026 DEFAULT ANGEHAKT und invertiert
+  verdrahtet: CLI-Default ist `--fix`, die Checkbox abwählen hängt
+  `--no-fix` an — neuer `args_schema`-Kind `boolflag_off` in runner.py)
+  und `use_beats` (persistiert wie
   merge_anthology via `POST /api/pf/series/settings`; `GET /api/pf/series`
   liefert den Wert pro Serie, `updateUseBeatsCheckbox()` synct beim
   Serienwechsel).

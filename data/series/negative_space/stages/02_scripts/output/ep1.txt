@@ -1,0 +1,866 @@
+--- PART 1 ---
+
+[NARRATOR]
+Every photograph is a room you can't leave. Negative Space follows Ethan Voss, a digital forensics analyst who opens an anonymous hard drive expecting routine evidence and instead finds a stranger's shadow stitched into a dozen family portraits — every family now dead in accidents no one questioned closely enough. As he chases the metadata deeper than his job requires, the people closest to him are keeping their own quiet frames out of view: a girlfriend running her own investigation, a best friend protecting a mistake, a mentor who has spent years developing something far darker than film. This season, the picture only gets clearer once it's too late to look away.
+
+[NARRATOR | style: low, unhurried]
+Episode One. The Anonymous Drive.
+
+[NARRATOR | style: measured, atmospheric]
+At night, this city becomes a grid of lit rectangles. Kitchen windows. Bedroom windows. The blue flicker of a television left on for company. From above, it looks almost tender — thousands of small, warm rooms, each one certain of its own privacy.
+
+[NARRATOR | style: measured, atmospheric]
+No one checks who else might be looking back.
+
+[NARRATOR | style: quiet, deliberate]
+A photograph is supposed to be a kindness. A held moment, offered up freely — here is my kitchen, my child, my ordinary Tuesday. It asks nothing in return but a glance.
+
+[NARRATOR | style: quiet, deliberate]
+It rarely occurs to anyone that the moment might already have an audience. That somewhere just past the edge of the frame, close enough to be caught by accident, someone has been standing very still, waiting to be included.
+
+[NARRATOR | style: low, steady]
+This is a city where everyone believes they are the one doing the watching. The journalist trailing a story she won't name. The analyst reading a file he hasn't logged. The friend keeping score of who gets credited and who doesn't. Each of them certain they hold the vantage point. None of them checking what's behind their own shoulder.
+
+[NARRATOR | style: low, steady]
+Somewhere tonight, a package with no sender's name is already moving through the city toward a desk where someone will open it out of nothing more than curiosity.
+
+[NARRATOR | style: hushed, final]
+It will look, at first, like someone else's family album. It will take longer than anyone would like to admit before a single person in this story understands what they're actually holding — or how long they've already been standing in someone else's frame.
+
+--- PART 2 ---
+
+[NARRATOR]
+Precinct evidence intake, a little after ten at night. A courier drop-off arrives at the desk with no name on the manifest.
+
+[SFX: a metal drop-box lid clanging shut]
+
+[ETHAN_VOSS | style: mildly curious, half-joking]
+Nobody's signing for this one?
+
+[NARRATOR]
+The clerk on duty slides the log book toward him, tapping the empty sender field with one finger.
+
+[ETHAN_VOSS | style: reading aloud, deadpan]
+No account number. No case reference. No return address. Just — a drive.
+
+[SFX: a plastic evidence bag crinkling]
+
+[ETHAN_VOSS | style: thinking out loud, dry]
+And let me guess — camera over the drop-box was down again.
+
+[NARRATOR]
+The clerk shrugs, already reaching for the next intake form. To her, it's a shrug-and-move-on kind of Tuesday.
+
+[NARRATOR]
+What neither of them can see: no shipping label was ever generated for this parcel, and the loading-dock camera wasn't down by accident — its feed was looped six minutes before the drop and released six minutes after. Whoever left this wanted exactly this: an object with no trail behind it.
+
+[ETHAN_VOSS | style: quiet, almost to himself]
+Huh.
+
+[SFX: a chair rolling back against tile]
+
+[NARRATOR]
+There's no assignment sheet with his name on it. No supervisor waved him over. He's simply the one standing closest when the log book needed a signature, and something about the blankness of that sender field snags him.
+
+[ETHAN_VOSS | style: low, deciding in real time]
+I'll take a look before it goes in the queue.
+
+[NARRATOR]
+It's not a decision anyone above him signed off on. It's barely a decision at all — more a hand closing around a small unmarked drive before the moment passes.
+
+[SFX: a drawer sliding shut]
+
+[ETHAN_VOSS | style: to himself, settling it]
+Just me, first pass. Then I'll log it properly.
+
+[NARRATOR]
+He tells himself that last part like a promise. Whether he keeps it is a different question — one that will wait for an empty office, after everyone else has gone home.
+
+--- PART 3 ---
+
+[NARRATOR]
+Same night. Same desk, hours after the bullpen has emptied. Ethan Voss, alone with the drive he chose not to hand off.
+
+[SFX: a USB drive clicking into a port]
+
+[ETHAN_VOSS | style: quiet, methodical]
+Case log, unofficial. Ethan Voss, personal time, not billed. Just — getting eyes on it.
+
+[SFX: a mouse click, soft]
+
+[ETHAN_VOSS | style: mildly puzzled]
+No case number in the file structure. No victim ID. No submitting officer. Folder names are just dates. That's — that's not how evidence comes in.
+
+[ETHAN_VOSS | style: thinking aloud, dry]
+Could be a whistleblower who doesn't trust the department to route it right. Could be family — somebody who thinks a death got closed too fast and doesn't know who else to send it to. Or it's some other unit trying to get a stack of old rulings looked at again without putting their name on it.
+
+[ETHAN_VOSS | style: slightly amused, self-aware]
+Note to self: none of those explanations account for zero shipping record. File that under 'later.'
+
+[NARRATOR]
+He scrolls. Photograph after photograph — none of it looks like a crime scene.
+
+[ETHAN_VOSS | style: settling, almost soothed]
+Birthday cake, five candles. Backyard, sprinkler, kid mid-jump. Christmas morning, wrapping paper everywhere. This isn't a case file. This is somebody's whole album.
+
+[ETHAN_VOSS | style: careful, deliberate]
+And that's exactly why I'm not logging it tonight. The second this hits the queue as 'unidentified evidence, no chain of custody,' it gets stamped low-priority and buried under forty actual open cases. I want three, four hours with it clean, before anyone decides for me what it is.
+
+[NARRATOR]
+He knows what that decision costs him if he's wrong.
+
+[ETHAN_VOSS | style: quieter, almost to himself]
+I'm aware of what I'm doing. I'll square it with Marcus. Just — not yet.
+
+[NARRATOR]
+He keeps scrolling. A birthday party. A kitchen. A driveway, a family loading a car.
+
+[ETHAN_VOSS | style: slowing down, distracted]
+Wait.
+
+[SFX: a mouse click, soft]
+
+[ETHAN_VOSS | style: narrowing focus]
+Edge of frame, right side. Somebody standing at the fence line. Could be a neighbor. Wrong angle to make out a face — same with this next one, actually, huh.
+
+[ETHAN_VOSS | style: brushing it off, unconvinced by his own dismissal]
+Probably nothing. People wander into other people's pictures all the time.
+
+[NARRATOR]
+He says it like he believes it. He keeps scrolling anyway.
+
+--- PART 4 ---
+
+[NARRATOR]
+Across town, in a stairwell off the Herald's newsroom, Lina Cho — Ethan's girlfriend and a crime-beat reporter — steps out of earshot to take a call. The thread turns to her, away from the lab.
+
+[SFX: a heavy stairwell door swinging shut]
+
+[LINA_CHO | style: low, guarded]
+Say that part again, slower this time.
+
+[LINA_CHO | style: careful, writing something down]
+The file only goes back three years? I need earlier. Whatever you've still got.
+
+[LINA_CHO | style: firmer]
+I'm not asking where you got it. I never do. That's the deal.
+
+[LINA_CHO | style: quieter, sincere]
+Your name doesn't go near this. Not in a draft, not in a footnote. I've told you that every time.
+
+[LINA_CHO | style: almost fond]
+Same drop, Thursday. Like always.
+
+[SFX: a phone buzzing against the stairwell railing]
+
+[LINA_CHO | style: switching instantly, warm]
+Hey — no, nothing, just finishing something at the office.
+
+[LINA_CHO | style: light, deflecting]
+A source, that's all. You know I can't get into it.
+
+[LINA_CHO | style: gentle, closing it down]
+I'll be home soon. I promise.
+
+[NARRATOR]
+She stays a moment longer than the stairwell requires, certain — for now — that none of this reaches him.
+
+--- PART 5 ---
+
+[NARRATOR]
+Back at the forensics lab, late afternoon. Marcus Tang — Ethan's lab partner and closest friend — has spent two years running second on every file they share.
+
+[MARCUS_TANG | style: casual, testing the water]
+You've had that drive plugged in since this morning. Nothing came through intake for it. I checked.
+
+[ETHAN_VOSS | style: distracted, guarded]
+It's nothing yet. Just something I'm looking at.
+
+[MARCUS_TANG | style: light, but pressing]
+Looking at what, exactly?
+
+[ETHAN_VOSS | style: careful, deflecting]
+Some old photos. Probably nothing. I'll loop you in if it's actually a thing.
+
+[MARCUS_TANG | style: flat, unconvinced]
+If it's actually a thing. Right.
+
+[NARRATOR]
+Marcus lets a beat pass before he answers.
+
+[MARCUS_TANG | style: quiet, wounded under the calm]
+You know what's funny? I've read every report we've filed together since I got here. Every single one. Lead analyst, E. Voss. Secondary, M. Tang.
+
+[ETHAN_VOSS | style: caught off guard]
+That's just how the paperwork shakes out. You know that.
+
+[MARCUS_TANG | style: bitter, controlled]
+It shakes out the same way every time, though. Two years of it shaking out the same way.
+
+[SFX: a metal case latch snapping shut]
+
+[ETHAN_VOSS | style: tired, trying to close it down]
+Marcus, come on. This isn't about credit lines.
+
+[MARCUS_TANG | style: cold, precise]
+No. It's about you deciding, again, what I get to know and when. Off the books, no case number — that's not "nothing," Ethan. That's you doing exactly what you always do.
+
+[ETHAN_VOSS | style: quiet, unsure how to fix it]
+It's not like that this time.
+
+[MARCUS_TANG | style: even, closing off]
+Sure.
+
+[NARRATOR]
+He picks his bag up off the counter, unhurried.
+
+[MARCUS_TANG | style: light again, but the warmth is gone]
+I've got the Delgado samples to log. Let me know if it ever becomes an actual case. I'll try to look surprised.
+
+[SFX: a lab door swinging shut on its hinge]
+
+[NARRATOR]
+Ethan watches the door a moment before turning back to his screen. Marcus doesn't look back once.
+
+--- PART 6 ---
+
+[NARRATOR]
+Forensics lab, city precinct, past nine at night. Ethan has called Marcus in to look at the drive with him, framing it as a favor rather than a case file.
+
+[ETHAN_VOSS | style: casual, a little too casual]
+I just need a second set of eyes. You're better at reading light than I am.
+
+[MARCUS_TANG | style: flat, cool]
+Funny. Didn't know you still needed a second set of eyes on anything you're working.
+
+[ETHAN_VOSS | style: not rising to it]
+Marcus.
+
+[MARCUS_TANG | style: clipped]
+I'm here. Pull it up.
+
+[NARRATOR]
+Ethan opens the folder. Twelve thumbnails fill the screen, dated but unlabeled.
+
+[ETHAN_VOSS | style: focused]
+Look at three and seven. Same light temperature — five-six hundred kelvin, give or take. Late afternoon, both of them.
+
+[MARCUS_TANG | style: grudging interest creeping in]
+Same lens too. See the barrel distortion at the edges? Cheap glass, wide-angle. Somebody's not using a phone.
+
+[ETHAN_VOSS | style: quiet]
+A real camera. Somebody who knows what they're doing.
+
+[MARCUS_TANG]
+Or somebody who was taught.
+
+[NARRATOR]
+Marcus leans closer, scrolling between two more images.
+
+[MARCUS_TANG | style: sharpening]
+Ethan. The molding on this doorframe. Same profile as the one in four.
+
+[ETHAN_VOSS | style: surprised]
+Different house though. Different family.
+
+[MARCUS_TANG]
+Same trim carpenter, maybe. Or same street. Get me the metadata, I'll run the GPS tags if they kept any.
+
+[ETHAN_VOSS | style: careful, evasive]
+I haven't pulled EXIF yet. Wanted a clean visual pass first.
+
+[MARCUS_TANG | style: suspicious but letting it go]
+Fine. When's this hitting the queue, by the way? I want my name on the intake form this time, not buried in your notes.
+
+[ETHAN_VOSS | style: measured, avoiding the real answer]
+It'll get there.
+
+[SFX: a mouse click, sharp, deliberate]
+
+[MARCUS_TANG | style: intent, all business now]
+Go back one. Bottom left corner. You see that?
+
+[ETHAN_VOSS | style: leaning in]
+See what.
+
+[MARCUS_TANG]
+Somebody standing at the tree line. Same distance out in this one as he was in three. I thought it was noise the first time. It's not noise.
+
+[NARRATOR]
+Ethan says nothing for a moment, studying the shape.
+
+[ETHAN_VOSS | style: low]
+Pull up three again. Side by side.
+
+[SFX: keyboard clatter, quick]
+
+[MARCUS_TANG | style: unsettled despite himself]
+Okay. That's not a coincidence, Ethan. That's the same guy.
+
+--- PART 7 ---
+
+[NARRATOR]
+Han's Camera Shop, early evening, several blocks from the precinct. Mr. Han — the elderly shop owner who taught Ethan his first darkroom lesson years ago — is midway through his usual free weekend class, a new family gathered around the counter.
+
+[MR_HAN | style: warm, patient]
+Hold it steady against your ribs, not your face. Let the camera become part of you before you ask it to see anything.
+
+[SFX: a camera shutter clicking once]
+
+[MR_HAN | style: warm, patient]
+There. You see how the light pools by the window instead of the door? That's the whole lesson, really. Everything else is just paperwork.
+
+[SFX: a bell chiming softly above the shop door]
+
+[MR_HAN | style: pleasant, unhurried]
+Welcome back. Sit, sit — I'm nearly done spoiling this family rotten with free advice.
+
+[MR_HAN | style: modest, deflecting]
+Six this spring, was it? Could be seven. I've stopped counting, and honestly the ledger stopped counting before I did. It's not a school. It's just a Saturday I happen to keep open.
+
+[MR_HAN | style: gently redirecting]
+Now, don't go telling people I'm some fixture, I'll get a plaque and a parking spot and neither one suits me. Come look at this instead — this is worth your time.
+
+[SFX: a metal lens case unlatching]
+
+[MR_HAN | style: quietly delighted]
+A client dropped this off Tuesday. Nineteen-sixties, uncoated glass, the kind that draws a face soft at the edges and sharp right where it should be. I've been cleaning the barrel by hand — you can't rush a thing like this, or you'll scratch forty years of good use off it in a second.
+
+[MR_HAN | style: to the family, warm again]
+Go on, both of you, try the light by the window one more time. I want to see if you were listening.
+
+[SFX: a camera shutter clicking twice, close together]
+
+[MR_HAN | style: soft, almost to himself]
+Better. Much better.
+
+--- PART 8 ---
+
+[NARRATOR]
+Han's Camera Shop, after closing. The front lights are off; only the darkroom's red bulb still burns.
+
+[NARRATOR]
+Alone now, Han moves between the developing trays with the ease of a man who has done this ten thousand times.
+
+[SFX: photo paper sliding into a developing tray, liquid stirring]
+
+[MR_HAN | style: quiet, contented, humming under his breath]
+(humming an old tune, half to himself)
+
+[MR_HAN | style: warm, conversational, as if the room might answer back]
+There you are. A little patience, that's all you ever needed.
+
+[NARRATOR]
+He lifts a print with tongs, studies it under the red light, sets it aside to dry.
+
+[SFX: a small metal ring of keys set down on a wooden counter]
+
+[MR_HAN | style: unhurried, almost tender]
+Riverside again this week. They do like to raise the rent on an empty room.
+
+[NARRATOR]
+From a drawer beneath the counter, he takes out a slim ledger, its cover soft with handling, and opens it flat.
+
+[MR_HAN | style: measured, reciting like a ritual]
+(murmuring, tracing a finger down the page)
+One, two... still twelve. Good. Twelve is a fine number to sit with for a while.
+
+[NARRATOR]
+Beside the ledger, a small brass tag catches the red light — a name stamped into it that isn't his own.
+
+[SFX: a drawer sliding shut, wood on wood]
+
+[MR_HAN | style: gentle, almost apologetic to no one]
+Arthur keeps such tidy books. Better than I ever did under my own name.
+
+[NARRATOR]
+He closes the ledger, returns it to the drawer, and goes back to the trays, unbothered, as if he'd said nothing at all.
+
+[MR_HAN | style: soft, pleased, private]
+(humming again, a little louder now)
+Soon, I think. Someone's finally paying the right kind of attention.
+
+[NARRATOR]
+The prints drip steadily into the tray below. Han hangs another to dry, unhurried, at peace, alone with whatever it is he's building.
+
+[SFX: a print clipped onto a drying line, a soft snap of the clothespin]
+
+[NARRATOR]
+Outside, the shop's dark windows give nothing away. Inside, only the red light keeps him company — and it asks him nothing at all.
+
+--- PART 9 ---
+
+[NARRATOR]
+Back at the precinct, past midnight. Ethan and Marcus — the forensics-lab partner still smarting over being left out — spread the photographs across a bare table under a single desk lamp.
+
+[MARCUS_TANG | style: dry, still a little cool]
+Twelve prints. You could've just emailed me the JPEGs, you know. Saved us both the paper cuts.
+
+[ETHAN_VOSS | style: distracted, focused on the images]
+I wanted to see them side by side. Something's been bothering me and I can't pin it on a screen.
+
+[SFX: photographs sliding across a wooden table]
+
+[MARCUS_TANG | style: flat, going through motions]
+Family in a backyard. Family at a birthday table. Family on some dock somewhere. These are somebody's Christmas cards, Ethan.
+
+[ETHAN_VOSS | style: quiet, insistent]
+Look at the tree line. Back left, past the kid's shoulder.
+
+[MARCUS_TANG | style: leaning in, half-interested despite himself]
+...Huh. Somebody's standing there. Bad photobomb.
+
+[ETHAN_VOSS | style: careful, testing the words]
+Now look at this one. Different house. Different year, probably — the car in the driveway's ten years newer.
+
+[MARCUS_TANG | style: sharpening, curiosity winning out]
+Same distance from the lens. Same — hang on, same height, same angle almost exactly. That's not a coincidence, that's a habit.
+
+[ETHAN_VOSS | style: low, something clicking into place]
+Keep going. Third one.
+
+[SFX: a photograph set down hard on the table]
+
+[MARCUS_TANG | style: unsettled now, dropping the coolness]
+There. Same shape at the edge again. Ethan, that's three.
+
+[ETHAN_VOSS | style: tight, controlled]
+Don't stop.
+
+[MARCUS_TANG | style: quieter, counting under his breath]
+Four. Five... six. Same distance every time, same tilt of the head like he's watching something just off to the side, never the camera.
+
+[ETHAN_VOSS | style: barely above a whisper]
+Every one, Marcus. Go through the rest.
+
+[MARCUS_TANG | style: shaken, all the resentment gone from his voice]
+Seven. Eight. Nine — Ethan, this is every single photograph. All twelve.
+
+[ETHAN_VOSS | style: staring at the table, hollowed out]
+Twelve different families. Twelve different houses. Same man in every one.
+
+[MARCUS_TANG | style: hushed, forgetting to be annoyed with him]
+Who logs a case like this? Who even brought this drive in?
+
+[ETHAN_VOSS | style: evasive, moving past the question fast]
+Doesn't matter yet. What matters is somebody wanted this seen. All of it. At once.
+
+[MARCUS_TANG | style: unable to look away from the prints]
+Then he's not hiding from the camera at all, is he. He's making sure it's there.
+
+[NARRATOR]
+Neither man says it aloud, but both are thinking the same thing: whatever this is, it stopped being ordinary six photographs ago.
+
+--- PART 10 ---
+
+[NARRATOR]
+Lina's apartment, later that same night. She shuts her bedroom door and turns the lock behind her.
+
+[NARRATOR]
+This room isn't for anyone else — not her roommate, not her editor, and not Ethan.
+
+[SFX: a door lock clicking shut]
+
+[LINA_CHO | style: quiet, focused, alone]
+Okay. Let's see what he gave you this time.
+
+[SFX: an envelope tearing open]
+
+[LINA_CHO | style: murmuring, reading]
+Riverside Storage. Unit fourteen. Rented under a name that traces to absolutely nobody.
+
+[LINA_CHO | style: quiet, matter-of-fact]
+Same shaky handwriting on the envelope. Same nothing where a return address should be. He's careful, whoever he is.
+
+[SFX: a pushpin pressed into a corkboard]
+
+[LINA_CHO | style: methodical, half to herself]
+That's four now. Four families. Four accidental deaths, ruled clean, closed fast, never looked at twice.
+
+[LINA_CHO | style: tracing a line, low]
+And every one of you connects right back here.
+
+[SFX: string pulled taut and pinned]
+
+[LINA_CHO | style: stepping back, tired]
+Five months of this board. Five months my editor thinks I dropped, because apparently a hunch isn't a story until somebody's already dead enough times to prove it.
+
+[LINA_CHO | style: dry, bitter]
+Well. Congratulations, everyone. You proved it.
+
+[LINA_CHO | style: reading down the board, then going still]
+Kessler. Why is that name doing that to me.
+
+[LINA_CHO | style: dawning, uneasy]
+Ethan said it. Last week, over coffee — some case Marcus was griping about, nothing he thought twice about. He said it like it was nothing.
+
+[SFX: a phone buzzing once on the desk]
+
+[LINA_CHO | style: distracted, not moving to answer it]
+It wasn't nothing. It's sitting right here, four rows down, under a photograph of a woman I've never met.
+
+[LINA_CHO | style: quiet, arguing with herself]
+I could tell him. Lay it all out, see if his case and my board are the same four walls.
+
+[LINA_CHO | style: firmer, talking herself down]
+And say what — that I've had someone inside the department feeding me sealed files for months, and I never once mentioned it? That I've been building this behind a locked door while he complained to me about traffic and paperwork?
+
+[LINA_CHO | style: weighing it, quiet]
+Because I know exactly what happens if I hand this over. My source goes quiet, the department seals it tighter, and whatever story is left here runs under somebody else's byline. Not mine.
+
+[LINA_CHO | style: resolved, guarded]
+No. Not until I know for certain it's the same case. Not until I know exactly what I'd be handing him.
+
+[SFX: a light switch clicking off]
+
+[LINA_CHO | style: low, to the empty room]
+Stay in your lane, Cho. Just a little longer.
+
+--- PART 11 ---
+
+[NARRATOR]
+Ethan's apartment, later that night. The Second Byline continues — Lina, distracted, sits curled on the couch beside him.
+
+[ETHAN_VOSS | style: gentle, unhurried]
+You've been somewhere else all week. Even right now, a little.
+
+[LINA_CHO | style: light, deflecting]
+I'm right here.
+
+[ETHAN_VOSS | style: soft, teasing]
+You know what I mean. The phone calls in the stairwell. The face you make reading your notes.
+
+[LINA_CHO | style: careful, practiced casual]
+It's a source thing. He's skittish — one wrong word and he stops talking to me. That's all it is.
+
+[ETHAN_VOSS | style: mild curiosity, not pressing]
+Anyone I'd know?
+
+[LINA_CHO | style: warm but firm]
+If I tell you, he's not a source anymore. You know how this works.
+
+[ETHAN_VOSS | style: relenting, easy laugh]
+Fine, fine. Detective Voss respects journalistic privilege.
+
+[SFX: a mug set down gently on a wooden table]
+
+[LINA_CHO | style: quieter, genuine]
+I promise it's nothing that touches you.
+
+[ETHAN_VOSS | style: sincere]
+I wasn't worried. I trust you.
+
+[NARRATOR]
+He lets it go. Neither of them names what they're not saying.
+
+[LINA_CHO | style: affectionate, a little tired]
+Come here. I've missed just sitting like this.
+
+[ETHAN_VOSS | style: soft]
+I'm not going anywhere.
+
+[SFX: a couch cushion shifting as two people settle closer]
+
+--- PART 12 ---
+
+[NARRATOR]
+Later that night, in the lab's break room, Marcus Tang stays behind after his shift ends, tablet still glowing with case photos he isn't supposed to be reviewing alone.
+
+[SFX: a phone buzzing once against a table]
+
+[MARCUS_TANG | style: distracted, then a flicker of pleasure]
+LabRat_MT. Of course.
+
+[MARCUS_TANG | style: reading under his breath, wry]
+"Hey, forensics guy. That tip about the print smudge blew up in the comments. People want more. You got anything juicy this week?"
+
+[MARCUS_TANG | style: quiet, checking over his shoulder | speed: 1.1]
+Nobody's here. Nobody's ever here.
+
+[NARRATOR]
+He glances toward the hallway before he starts typing, thumb hovering longer than it needs to.
+
+[MARCUS_TANG | style: muttering to himself, self-justifying]
+Vague. Keep it vague. Nothing that points anywhere.
+
+[MARCUS_TANG | style: typing, half a smile]
+"Funny you ask. Something landed on my partner's desk this week. Weird one. Can't say more — but if it turns into anything, you'll be the first to know."
+
+[SFX: a phone buzzing twice, quick]
+
+[MARCUS_TANG | style: pleased, reading]
+"See, this is why you're my favorite source. You always know exactly how much to give me."
+
+[MARCUS_TANG | style: quiet laugh, a little too satisfied]
+Favorite source. Yeah. Sure.
+
+[NARRATOR]
+He sets the phone face-down, then almost immediately turns it back over.
+
+[MARCUS_TANG | style: rationalizing, low]
+It's nothing. I didn't give him a name. Didn't give him a file number. Didn't give him anything real.
+
+[MARCUS_TANG | style: harder edge, bitter]
+Not like anyone around here's rushing to give me credit for real work anyway.
+
+[SFX: a phone buzzing once more]
+
+[MARCUS_TANG | style: reading, warmer again]
+"Next episode's dropping Friday. I might mention you again — the 'inside guy' bit always kills. You good with that?"
+
+[MARCUS_TANG | style: typing, quick, almost eager]
+"Always good with that."
+
+[NARRATOR]
+He pockets the phone, gathers his bag, and switches off the break room light, already rehearsing how he'll describe the moment if anyone ever asks — though no one has, and no one is watching him leave.
+
+--- PART 13 ---
+
+[NARRATOR]
+Two hours after sunset, on the flat roof above the forensics wing, three people share vending-machine coffee and thirty minutes off the clock. Ethan and Marcus lean against the railing. Mei Chen — the lab's data analyst, the one who traces GPS trails no one else thinks to look for — sits cross-legged on a folded tarp, watching both of them more than either notices.
+
+[MARCUS_TANG | style: loose, half-joking]
+Tell me you didn't actually eat the vending machine chili.
+
+[ETHAN_VOSS | style: dry]
+Once. I was young. I had dreams.
+
+[MEI_CHEN | style: light, amused]
+You had a stomach ache for three days. Yuki still brings it up.
+
+[SFX: a can cracking open]
+
+[MARCUS_TANG | style: teasing, but with an edge underneath]
+Speaking of things people bring up — heard our golden boy's been running solo missions again. Whole drive, no case number, and somehow the rest of us just find out by accident.
+
+[ETHAN_VOSS | style: careful, deflecting]
+It's not like that, Marcus.
+
+[MARCUS_TANG | style: too specific for banter]
+No? Twelve photos, same shadow every time, no metadata worth trusting — sounds like exactly like that to me.
+
+[NARRATOR]
+Ethan laughs it off. Mei doesn't.
+
+[MEI_CHEN | style: quiet, to herself, almost inaudible]
+He wasn't in the room for that count.
+
+[NARRATOR]
+Marcus's phone buzzes against the tarp. He glances down, and for half a second his face changes — quick, tight, gone before Ethan looks over.
+
+[SFX: a phone buzzing once against fabric]
+
+[ETHAN_VOSS | style: casual]
+Somebody special?
+
+[MARCUS_TANG | style: overly breezy]
+Fantasy football. Devastating losses. Don't ask.
+
+[NARRATOR]
+He pockets the phone before it can buzz again. Mei watches the whole motion — the speed of it, the way his eyes checked the roof door first.
+
+[MEI_CHEN | style: neutral, filing it away, not saying it]
+(thinking) Probably nothing. Probably just — nothing.
+
+[ETHAN_VOSS | style: warm, unbothered]
+You've been weird about your phone all week, man.
+
+[MARCUS_TANG | style: sharp, quick recovery]
+And you've been weird about a hard drive all week. We even.
+
+[NARRATOR]
+The three of them laugh — Ethan easy, Marcus a beat too fast, Mei a half-second behind both of them, still watching the door Marcus checked.
+
+[MEI_CHEN | style: gentle, changing the subject]
+Coffee's terrible tonight, by the way.
+
+[ETHAN_VOSS | style: warm]
+Coffee's terrible every night.
+
+[NARRATOR]
+Above the city, three colleagues share an easy silence — each of them holding something the other two can't see.
+
+--- PART 14 ---
+
+[NARRATOR]
+Later that evening, back at the precinct's forensics floor. Ethan and Marcus have pulled in Detective Yuki Sato, a homicide detective known for going by the book, to help name one of the families on the drive.
+
+[ETHAN_VOSS | style: careful, professional]
+I know it's a long shot. No case number, no file to match it to. But you've got a better memory for old faces than the database does.
+
+[DET_YUKI_SATO | style: measured]
+Pull it up. I've got a few minutes before I'm back on shift.
+
+[SFX: a laptop trackpad clicking, a photo enlarging]
+
+[MARCUS_TANG | style: flat, still cool]
+This one. Family of four, backyard, looks maybe eight, nine years old going by the haircut on the kid.
+
+[DET_YUKI_SATO | style: still, giving nothing away]
+I know this family.
+
+[ETHAN_VOSS | style: alert]
+You know them how?
+
+[DET_YUKI_SATO | style: even, controlled]
+Closed it myself. Six, seven years back. Carbon monoxide, faulty water heater. Ruled accidental, no other party involved.
+
+[NARRATOR]
+Privately, a memory surfaces she does not share: the vent she never got to re-inspect, the timeline she signed off on a day earlier than she wanted to.
+
+[MARCUS_TANG | style: curious, unaware]
+Anything about it feel off at the time?
+
+[DET_YUKI_SATO | style: firm, closing the door on the question]
+No. The scene was consistent, the report was clean. That closure was solid.
+
+[ETHAN_VOSS | style: nodding, taking her at her word]
+Good to know. One less thing to chase.
+
+[DET_YUKI_SATO | style: even]
+I'll pull the file number for you before I head out. Saves you the records request.
+
+[NARRATOR]
+She says it the way she's said it to herself for years — evenly, like a fact rather than a hope.
+
+[DET_YUKI_SATO | style: quiet, almost to herself, half a beat after the others have looked away]
+Given what we had. That's all anyone can work with.
+
+[NARRATOR]
+Ethan is already back at the keyboard. Marcus is reaching for the next photograph. Neither one catches the half-second her eyes stay on the screen after the rest of her has already moved on — long enough that if either of them looked up now, they'd see exactly how little she believes what she just said.
+
+--- PART 15 ---
+
+[NARRATOR]
+Past midnight, the forensics lab. Ethan, Marcus, and Mei Chen — the data analyst who's been quietly cross-referencing the case behind the scenes — sit around a monitor, running the drive's photographed families against city business records.
+
+[MEI_CHEN | style: focused, reading off a list]
+Okay. Cross-referencing addresses against local business licenses within a two-mile radius of each family's home. Give me a second.
+
+[SFX: rapid keyboard typing]
+
+[MARCUS_TANG | style: rubbing his eyes, tired]
+Two in the morning and we're running zip codes against yoga studios. Tell me again why this is more urgent than my actual caseload.
+
+[ETHAN_VOSS | style: not rising to it, quiet]
+Because twelve dead families and one recurring face isn't nothing, Marcus.
+
+[MEI_CHEN | style: surprised, then careful]
+Wait. I've got a hit. Not a chain, not a franchise — a small business. Comes up four times.
+
+[SFX: a printer spitting out a page]
+
+[MARCUS_TANG | style: leaning in]
+Which one.
+
+[MEI_CHEN | style: neutral, just reading]
+Han's Camera Shop. Corner of Delmar and Ninth. Four of the twelve families have a payment record there — private lesson bookings, going back years.
+
+[ETHAN_VOSS | style: barely reacting, filing it away]
+Camera shop.
+
+[MARCUS_TANG | style: shrugging, unbothered]
+Makes sense, doesn't it? Families who take pictures of themselves probably take a class somewhere. It's not exactly a smoking gun.
+
+[MEI_CHEN | style: agreeing, cautious]
+Could easily be coincidence. It's a popular shop — free weekend lessons, been around forever. Half this neighborhood's probably walked through that door at some point.
+
+[ETHAN_VOSS | style: even, non-committal]
+Still. Four out of twelve isn't nothing either.
+
+[SFX: a chair rolling back across tile]
+
+[ETHAN_VOSS | style: standing, businesslike]
+I'll flag it. Not as anything — just a thread we follow if the others dry up.
+
+[MARCUS_TANG | style: already moving on, dry]
+Groundbreaking. A guy who teaches people to use a camera also has customers who own cameras.
+
+[ETHAN_VOSS | style: a small, tired laugh, then serious again]
+Laugh now. Write it down anyway, Mei.
+
+[MEI_CHEN | style: already typing]
+Writing it down.
+
+[NARRATOR]
+No one in the room says the name again. It sits in the file, four lines among hundreds, waiting for someone to look twice.
+
+--- PART 16 ---
+
+[NARRATOR]
+Back at the precinct, past midnight now, Ethan and Marcus request the earliest report tied to the drive — a family, dead eleven years, ruled an accident within days. Sato lingers at the printer, watching.
+
+[SFX: a printer spooling a single page]
+
+[MARCUS_TANG | style: skimming aloud, clinical]
+Gas leak, ruled unrelated to prior incidents. Case closed in nine days. No secondary review requested.
+
+[ETHAN_VOSS | style: quiet, methodical]
+Nine days. That's fast for a family of four.
+
+[DET_YUKI_SATO | style: even, careful not to react]
+Nine days was normal, back then. Departments were leaner.
+
+[MARCUS_TANG]
+No dissenting notes on file. Nobody flagged it.
+
+[ETHAN_VOSS | style: turning a page, thinking out loud]
+Same as the others. Clean ruling, no follow-up, no second look.
+
+[DET_YUKI_SATO | style: measured, a beat too controlled | speed: 0.95]
+Clean doesn't mean wrong, Voss.
+
+[ETHAN_VOSS]
+I didn't say wrong. I said clean.
+
+[MARCUS_TANG | style: dry, half to himself]
+Every single one of these reads like it was written to be forgotten.
+
+[SFX: a folder closing softly]
+
+[ETHAN_VOSS | style: low, settling into it]
+That's what's bothering me. Not that they're wrong. That they're identical.
+
+[DET_YUKI_SATO | style: flat, holding still]
+Old cases. Old habits. That's all this is.
+
+--- PART 17 ---
+
+[NARRATOR]
+Same lab, past midnight. Ethan, Marcus, Mei, and Detective Sato stand before a wall that no longer has room for anything more.
+
+[MARCUS_TANG | style: quiet, spent]
+That's the last one. Report on the Alvarez file, ninety-four.
+
+[SFX: a pushpin driven into corkboard]
+
+[DET_YUKI_SATO | style: flat, taking inventory]
+Ninety-four to now. That's not a case. That's a career.
+
+[MEI_CHEN | style: careful, still counting]
+I keep recounting because I don't trust the first number. Nine families. Nine rulings, all clean, all separate desks, none of them ever compared side by side until tonight.
+
+[ETHAN_VOSS | style: low, staring at the wall]
+Nine that we've found on one drive. We don't know what we haven't found.
+
+[MARCUS_TANG | style: trying for dry, not quite landing]
+Twenty-some years of somebody standing at the edge of a photograph nobody thought to look at twice.
+
+[SFX: a folder set down hard on a metal desk]
+
+[DET_YUKI_SATO | style: guarded, to herself as much as them]
+Somebody who was never a suspect. Never a name in any of these files.
+
+[MEI_CHEN | style: quiet]
+Which means whatever we build from here, we're not confirming a theory. We're starting one.
+
+[ETHAN_VOSS | style: even, but something underneath it]
+Then we start tomorrow. Get some sleep. All of you.
+
+[SFX: a light switch clicking off, room falling to hum]
+
+[NARRATOR | style: measured, closing]
+No one in that room says the word that's already forming in the dark between them. Twenty years is a long time for a shadow to stand at the edge of a frame and never once be asked to step forward. Long enough to learn exactly how much a person needs to see, and how much they don't.
+
+Later that night, alone at his kitchen table, Ethan lays all twelve photographs side by side under a single lamp. This time he doesn't stop at the first frame, or the third. He goes through all twelve, slowly, and finally sees what his eye kept catching and losing: the same shadow. The same distance. The same tilt of a head at the edge of frame — in families who never lived in the same city, never knew each other, and have nothing in common except that they are all, every one of them, dead.
+

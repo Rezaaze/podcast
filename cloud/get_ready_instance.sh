@@ -24,7 +24,15 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 export PATH="${HOME}/.local/bin:${PATH}"
 POOL_FILE="${SCRIPT_DIR}/.instance_pool"
 MAX_POOL_SIZE=2
-MAX_WAIT_SECONDS=180
+# 180s war zu knapp fuer einen Resume nach kaltem Host-Cache: das Modell-
+# Warmup kann je nach Host 5-15 Min. dauern (siehe onstart_qwen3_tts.sh),
+# ein zu frueher Timeout-Abbruch hier gab eine eigentlich gute, gerade
+# hochfahrende Pool-Instanz vorzeitig auf und wich auf race.sh aus -- das
+# mietete eine KOMPLETT NEUE Instanz an, waehrend die alte im Hintergrund
+# kurz danach ebenfalls bereit gewesen waere (doppelte Kosten). 600s deckt
+# das beobachtete Warmup-Fenster ab, ohne bei einer wirklich toten Instanz
+# zu lange zu haengen (18 vs. 60 Polling-Runden a 10s).
+MAX_WAIT_SECONDS=600
 TEMPLATE_HASH="c2352e9ebc56ffd4b83b51c6d229363a"
 # 55308: die zweifach verifizierte EU-Stamm-Instanz (Estland) -- siehe
 # Memory 'vastai-stamm-instanz' / KNOWN_RELIABLE_MACHINE_IDS in

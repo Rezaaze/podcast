@@ -71,6 +71,33 @@ def character_hash(description: str) -> str:
     return hashlib.sha1(description.strip().lower().encode("utf-8")).hexdigest()[:16]
 
 
+def _archetype_clause(description: str) -> str:
+    """Der Teil VOR dem ersten ';' — in der Praxis der Archetyp/die Rolle
+    ("a brilliant homicide detective..."), während danach die Serien-
+    spezifische Plot-Rückblende folgt (Fallname, Familienbezug, Geheimnis).
+    Beleg (16.07.2026, echte Produktionsdaten über 11 Serien): 59 von 61
+    Rollenbeschreibungen (97%) haben dieses ';'-Muster, Beschreibungen sind
+    im Schnitt 39 Wörter lang — die Plot-Hälfte verwässert den Jaccard-Score
+    für zwei archetypisch fast identische Rollen sonst auf sehr niedrige
+    Werte (z.B. zwei 'vom Fall korrumpierte Detective'-Figuren nur 0.20
+    Volltext-Ähnlichkeit). Nur für den FUZZY-Vergleich genutzt — exaktes
+    Hash-Matching bleibt bewusst auf der VOLLEN Beschreibung (character_hash),
+    ein wortgleicher Text soll weiterhin sofort treffen, unabhängig davon,
+    ob er einen ';' enthält.
+
+    Bei Tests mit echten Paaren (16.07.2026) blieb selbst der Archetyp-Teil-
+    Score für die stärksten echten Treffer bei ~0.24 — und in derselben
+    Spanne lagen auch klare FALSE POSITIVES (zwei Rollen, die nur eine
+    gemeinsame Ethnizitäts-Formulierung teilen, sonst aber nichts). Die
+    SIMILARITY_THRESHOLD bleibt deshalb unverändert bei 0.8 — dieser Split
+    verbessert nur die Signalqualität für zukünftige, wirklich nah beieinander
+    liegende Fälle, senkt aber NICHT automatisch die Schwelle (das Risiko
+    einer falschen Porträt-Wiederverwendung wiegt schwerer als eine verpasste
+    Wiederverwendung). Systematische Kandidatensuche unterhalb der Schwelle:
+    `python3 -m fabrik.cli.library_audit characters`."""
+    return description.split(";", 1)[0].strip()
+
+
 def _tokens(text):
     return {w for w in _WORD_RE.findall(text.lower()) if w not in _STOPWORDS}
 
@@ -131,13 +158,17 @@ def _find_similar(description, index):
     """Bester Fuzzy-Treffer NUR gegen die ursprüngliche description jedes
     Index-Eintrags (nicht gegen dessen aliases) — verhindert Drift über eine
     Kette grenzwertiger Treffer hinweg (siehe sfx_library.py::_find_similar
-    für die volle "Stille-Post"-Begründung, identisches Muster hier)."""
-    query = _tokens(description)
+    für die volle "Stille-Post"-Begründung, identisches Muster hier).
+
+    Vergleich läuft auf _archetype_clause() (Teil vor dem ersten ';'), nicht
+    auf der vollen Beschreibung — siehe deren Docstring für die Begründung
+    und warum SIMILARITY_THRESHOLD trotzdem unverändert bleibt."""
+    query = _tokens(_archetype_clause(description))
     if len(query) < MIN_TOKENS_FOR_FUZZY:
         return None, None
     best_hash, best_score = None, 0.0
     for h, entry in index.items():
-        candidate_tokens = _tokens(entry["description"])
+        candidate_tokens = _tokens(_archetype_clause(entry["description"]))
         if len(candidate_tokens) < MIN_TOKENS_FOR_FUZZY:
             continue
         score = _similarity(query, candidate_tokens)

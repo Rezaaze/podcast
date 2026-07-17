@@ -50,6 +50,18 @@ FFMPEG_TIMEOUT_SECONDS = 60
 # weiterhin riskierte.
 MAX_PROMPT_CHARS = 450
 
+# ElevenLabs' Sound-Generation-API lehnt duration_seconds < 0.5 hart ab (400
+# "invalid_generation_settings"). fabrik/cli/sfx_plan.py's eigener
+# MIN_ASSET_SECONDS lag bis 16.07.2026 bei 0.2 (der Planungs-Prompt empfahl
+# sogar aktiv 0.2-0.4s für kurze Kontaktgeräusche wie einen Stiftklick) — ein
+# in Produktion beobachteter Fehlschlag ("mouse_click" mit 0.4s/0.3s geplant).
+# Sicherheitsnetz nach demselben Muster wie MAX_PROMPT_CHARS oben: EIN
+# gemeinsamer Clamp hier (beide Aufrufer, ambience UND one-shots, laufen über
+# generate_sound_effect()) statt sich auf einen korrekt kalibrierten Planer
+# zu verlassen — ein bereits geschriebener Plan mit zu kurzen Werten (wie die
+# beiden oben genannten Serien) funktioniert damit auch ohne Neu-Planung.
+MIN_DURATION_SECONDS = 0.5
+
 
 def fit_prompt(description: str, suffix: str = "", max_chars: int = MAX_PROMPT_CHARS) -> str:
     """Kappt description wortweise, falls description(+suffix) MAX_PROMPT_CHARS
@@ -123,6 +135,11 @@ def generate_sound_effect(text: str, duration_seconds: float | None = None) -> b
         print(f"  WARNUNG: Prompt ist {len(text)} Zeichen (Limit {MAX_PROMPT_CHARS}) — "
               f"wortweise gekappt, bevor er an ElevenLabs geht.")
         text = fit_prompt(text)
+
+    if duration_seconds is not None and duration_seconds < MIN_DURATION_SECONDS:
+        print(f"  WARNUNG: geplante Dauer {duration_seconds}s liegt unter dem API-Minimum "
+              f"({MIN_DURATION_SECONDS}s) — auf {MIN_DURATION_SECONDS}s angehoben.")
+        duration_seconds = MIN_DURATION_SECONDS
 
     body = {"text": text}
     if duration_seconds is not None:

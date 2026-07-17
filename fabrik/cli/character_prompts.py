@@ -28,6 +28,7 @@ Bildgenerierung selbst nutzt nur stdlib (urllib), kein zusätzliches Paket.
 """
 
 import argparse
+import collections
 import os
 import re
 import sys
@@ -96,17 +97,26 @@ def classify_emotion(style_text):
     return None
 
 
+# Kostenbremse: jede Rolle bekommt höchstens so viele Emotionsbilder, egal wie
+# viele der 7 EMOTIONS in ihren Skripten tatsächlich vorkommen — jedes Bild ist
+# ein eigener OpenAI-Call (Zeit + Geld). Gedeckelt wird PRO ROLLE auf die
+# HÄUFIGSTEN Emotionen in DEREN EIGENEN Zeilen, nicht projektweit dieselben 4
+# für alle — eine Rolle mit Liebes-Subplot behält "love", auch wenn eine
+# andere Rolle im Ensemble es nie braucht.
+MAX_EMOTIONS_PER_ROLE = 4
+
+
 def find_used_emotions(series, roles):
     """Scannt alle vorhandenen Episoden-Skripte nach style-Regieanweisungen
     pro Rolle und klassifiziert sie über classify_emotion() — liefert pro
-    Rolle nur die Emotionen, die für diese Rolle tatsächlich vorkommen (spart
-    Bild-Generierung für nie gebrauchte Varianten). Rollen ohne (noch)
-    generierte Skripte bekommen eine leere Menge zurück (→ nur das
-    Neutral-Porträt nötig)."""
-    used = {role: set() for role in roles}
+    Rolle höchstens MAX_EMOTIONS_PER_ROLE Emotionen, und zwar die am
+    häufigsten vorkommenden (spart Bild-Generierung für seltene Varianten,
+    siehe MAX_EMOTIONS_PER_ROLE). Rollen ohne (noch) generierte Skripte
+    bekommen eine leere Menge zurück (→ nur das Neutral-Porträt nötig)."""
+    counts = {role: collections.Counter() for role in roles}
     scripts_dir = series.scripts_dir
     if not os.path.isdir(scripts_dir):
-        return used
+        return {role: set() for role in roles}
 
     script_files = [
         f for f in os.listdir(scripts_dir)
@@ -126,12 +136,16 @@ def find_used_emotions(series, roles):
                 # hart geprüft — hier defensiv nur überspringen, nicht abbrechen.
                 continue
             for item in items:
-                if item.kind != "speech" or item.speaker not in used:
+                if item.kind != "speech" or item.speaker not in counts:
                     continue
                 emotion = classify_emotion(item.style)
                 if emotion:
-                    used[item.speaker].add(emotion)
-    return used
+                    counts[item.speaker][emotion] += 1
+
+    return {
+        role: {emotion for emotion, _ in c.most_common(MAX_EMOTIONS_PER_ROLE)}
+        for role, c in counts.items()
+    }
 
 
 def characters_dir(series):

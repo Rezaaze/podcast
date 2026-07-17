@@ -1,0 +1,940 @@
+--- PART 1 ---
+
+[NARRATOR | style: measured, cinematic]
+A body surfaces in the harbor bearing the exact signature of a killer the underworld buried years ago, and across town a schoolteacher wakes from an illegal, life-saving transplant with a stranger's steadiness in her hands. This is the story of the heart that wouldn't stay dead, the marriage it's quietly destroying, and the war two rival worlds are about to wage over a woman who has no idea she's already lost the fight for her own body.
+
+[NARRATOR | style: hushed, present-tense]
+A recovery room, past midnight. Maya Lin, a schoolteacher, surfaces from anesthesia hours after an illegal transplant. She is alone.
+
+[SFX: a heart monitor beeping steady and slow]
+
+[MAYA_LIN | style: groggy, disoriented | speed: 0.85]
+Mm— light. There's— too much light.
+
+[MAYA_LIN | style: confused, straining to place herself]
+Machines. That's a— that's a monitor. Okay. Okay, I know this sound.
+
+[MAYA_LIN | style: quieter, dawning focus]
+That's not the sound. That's not — that's not what my heart sounds like.
+
+[MAYA_LIN | style: unsettled, listening]
+It's too even. It's not skipping, it's not— it never skips. It just goes. Like it's counting something down instead of just... beating.
+
+[MAYA_LIN | style: wincing, physical]
+God. My chest. Every breath pulls at—
+
+[SFX: a hospital blanket shifting against thin sheets]
+
+[MAYA_LIN | style: breath catching, then oddly calm]
+That should hurt more than it does.
+
+[NARRATOR | style: hushed, present-tense]
+A stillness moves through her that isn't hers.
+
+[MAYA_LIN | style: flat, unfamiliar calm | speed: 0.9]
+It's fine. I'm fine. There's nothing to be afraid of here.
+
+[MAYA_LIN | style: quiet alarm underneath the calm]
+Wait — no. I should be terrified right now. I woke up cut open in a room I don't know and I should be — why does that thought feel so far away.
+
+[MAYA_LIN | style: testing, curious]
+Fingers. Let's just — let's see if the fingers still work.
+
+[MAYA_LIN | style: startled softly]
+Oh.
+
+[MAYA_LIN | style: quiet, unsettled precision]
+That's not how I move my hand. I flex it in stages, I always have, since I was a kid, my mother used to say I unfold my fingers like I'm deciding one at a time. That wasn't deciding. That was just — done. All at once. Clean.
+
+[MAYA_LIN | style: trying to laugh it off, failing | speed: 1.05]
+Drugs. It's the drugs. Anesthesia does strange things, everyone says that, Daniel's cousin came out of her gallbladder surgery singing in Cantonese and she doesn't even speak Cantonese, so this is— this is nothing.
+
+[MAYA_LIN | style: low, to herself, unconvinced]
+This is nothing.
+
+[NARRATOR | style: hushed, present-tense]
+She lies still, listening to a heartbeat she no longer recognizes as entirely her own, and does not yet have a word for what just answered when she moved her hand.
+
+--- PART 2 ---
+
+[NARRATOR]
+Same recovery room, still hour one. A nurse comes in to check the monitors at Maya's bedside.
+
+[SFX: hospital room door opening]
+
+[MAYA_LIN | style: groggy, half-focused]
+Is that— is that mine? That number.
+
+[MAYA_LIN | style: drifting, trying to track the conversation]
+You said "strong." You didn't say that about the last one. The old one.
+
+[MAYA_LIN | style: quieter, more awake now]
+Whose was it.
+
+[MAYA_LIN | style: pressing gently, still polite]
+No, I mean — where did it actually come from. A person. Somebody had a name.
+
+[MAYA_LIN | style: repeating back, flat, testing the words]
+Donor confidentiality is standard for every procedure. You said that already. Word for word, almost.
+
+[MARCUS_TAN | style: cold, precise, intruding — only the listener hears this]
+Twice to the door. She looked at it twice before she said "standard." Nobody looks at a door like that for a form she fills out every week.
+
+[MAYA_LIN | style: sinking back, unfocused, letting it go]
+Okay. Okay, that's — that's fine. Standard. Fine.
+
+[MAYA_LIN | style: to herself, drowsy, rationalizing]
+Everybody who does this must get the same answer. It's not just me.
+
+[SFX: a wheeled cart brake releasing]
+
+[MAYA_LIN | style: faint, already half under again]
+When I'm stronger. I'll ask again when I'm stronger and I'm not seeing two of everything.
+
+[MARCUS_TAN | style: quiet, almost amused, unsettling]
+Ask all you like. Some questions get answered by machines instead of people. Listen to the one in your chest. It already knows more than she does.
+
+[MAYA_LIN | style: barely audible, unnerved without knowing why]
+That's a strange thing to think.
+
+[SFX: hospital room door closing]
+
+[MAYA_LIN | style: eyes closing, surrendering to sleep]
+I'll ask again tomorrow. Tomorrow I'll ask again.
+
+--- PART 3 ---
+
+[NARRATOR]
+Recovery room, later that same hour. Daniel Woo — Maya's husband — arrives at her bedside, having waited through her surgery not knowing if she'd wake at all.
+
+[SFX: a door easing open, then a chair leg scraping close to the bed]
+
+[DANIEL_WOO | style: relief breaking through exhaustion]
+Hey. Hey, you're — you're awake.
+
+[MAYA_LIN | style: groggy, soft]
+Daniel.
+
+[DANIEL_WOO | style: voice catching]
+I sat in that waiting room for six hours telling myself every terrible thing that could go wrong, and none of it happened. None of it. You're here.
+
+[MAYA_LIN | style: warm, a little far away]
+I'm here.
+
+[DANIEL_WOO | style: tender]
+Can I—
+
+He takes her hand, careful, like it might not be real yet.
+
+[DANIEL_WOO | style: quiet, building]
+I already called my mother. She's got opinions about how much rest you're allowed to actually take, which is none, apparently, she wants to feed you back to full strength by Thursday. And I was thinking — once you're stronger, we take that week off, no restaurant, no phone, just the two of us and something boring and ordinary. Rent bad movies. Burn toast. I don't care what we do as long as it's nothing.
+
+[MAYA_LIN | style: gentle laugh, slightly delayed]
+Nothing sounds perfect.
+
+[DANIEL_WOO | style: searching her face]
+How do you feel? Really.
+
+[MAYA_LIN | style: composed, a beat too smooth]
+Fine. Tired. Sore, right here—
+
+[SFX: a soft rustle of hospital blanket]
+
+[MAYA_LIN | style: reassuring, covering]
+—but fine. Better than fine, honestly. I thought I'd feel worse.
+
+[DANIEL_WOO | style: relieved, not quite convinced]
+Good. That's — good.
+
+He watches her eyes find his, a half-beat slower than he expects, like she's catching up to her own face.
+
+[DANIEL_WOO | style: gentle, testing]
+You're looking at me kind of funny.
+
+[MAYA_LIN | style: light, deflecting]
+I just had my chest opened, Daniel. Give me a minute to remember how faces work.
+
+[DANIEL_WOO | style: laughing softly, letting it go]
+Fair. Fair enough.
+
+He squeezes her hand, and for a moment neither of them says anything — the monitors keeping their patient rhythm behind the silence, a rhythm steadier than either of them notices to name.
+
+[DANIEL_WOO | style: settling in]
+I'm not going anywhere tonight. Just so you know.
+
+[MAYA_LIN | style: quiet, grateful, distracted underneath]
+I know.
+
+She holds his hand and does not tell him about the stillness she felt an hour ago, the calm that didn't feel like hers. He does not tell her that something in the half-second before her smile made him feel, just briefly, like he was greeting a stranger wearing his wife's face. Neither names it. The moment passes, folded quietly into the beeping and the dim light, the first small distance neither of them will admit to yet.
+
+--- END PART 3 ---
+
+--- PART 4 ---
+
+[NARRATOR]
+Three nights of storm have battered the harbor; now, as the wind drops, the tide drags something new against the pilings.
+
+[NARRATOR]
+Fog lies thick over the docks before dawn, so dense that at first the men working the early shift take the shape at the waterline for driftwood, or a dropped tarp caught on the pylons.
+
+[NARRATOR]
+One of them wades closer with a boat hook, meaning only to clear it before the morning barges come through.
+
+[SFX: a boat hook scraping against something heavy and waterlogged]
+
+[NARRATOR]
+The hook catches on fabric, then on something firmer beneath it, and the shape rolls half over in the black water.
+
+[NARRATOR]
+It is not driftwood. It is not a tarp.
+
+[NARRATOR]
+The worker drops the hook and calls the others over, his voice swallowed by the fog before it reaches the crane operators forty feet away.
+
+[SFX: a heavy hook clattering onto wet concrete]
+
+[NARRATOR]
+They gather at the edge of the pier, three men and then five, none of them stepping into the water to bring it closer, all of them already certain of what they are looking at.
+
+[NARRATOR]
+Along the forearm, visible even through the grime of weeks submerged, a tattoo holds its shape — a coiled, angular mark none of them can name but all of them recognize as deliberate, chosen, someone's signature inked into skin.
+
+[NARRATOR]
+Below it, an old scar cuts a straight line just past the wrist, the kind left by a blade drawn fast and sure, healed long before the water ever touched it.
+
+[NARRATOR]
+Nobody on the dock says his name out loud — Marcus Tan, the assassin the underworld had already buried in rumor, if not yet in fact. Nobody there has to.
+
+[NARRATOR]
+One of the younger workers backs away first, then a second, until the whole group has retreated a full length of the pier, murmuring instead of speaking, distances opening between each of them as though proximity itself were catching.
+
+[SFX: a radio call crackling to life on someone's belt]
+
+[NARRATOR]
+Someone finally calls it in. Within the hour, uniformed officers unspool yellow tape across the pier's mouth, tying it off to a rusted cleat and a stack of crab pots, sealing off a stretch of dock that has never once needed sealing before.
+
+[SFX: tape being pulled taut and torn off the roll]
+
+[NARRATOR]
+The body lies exactly where the tide left it, and something about it unsettles even the officers standing guard — the marks too old for a killing this fresh, the flesh too fresh for marks this old, as if the corpse has arrived from two different weeks at once.
+
+[NARRATOR]
+No one on the dock yet has a name for what they're looking at. Only a description already moving through the precinct radio: adult male, distinctive tattoo, scar pattern, recovered at the north pier.
+
+--- PART 5 ---
+
+[NARRATOR]
+The same dock, deepening night. Detective Calloway — the homicide investigator who caught this case years before anyone remembered it — crouches over the body while the harbor fog thickens around the tape line.
+
+[SFX: a flashlight clicking on]
+
+[DET_CALLOWAY | style: flat, procedural]
+Tell the coroner I want him bagged and moved before this fog gets any worse. Nobody touches the hands till photos are done.
+
+[SFX: radio static crackling, a muffled voice too distant to make out]
+
+[DET_CALLOWAY | style: clipped]
+Copy. Give me two minutes.
+
+[NARRATOR]
+He runs the beam slow across the corpse's forearm, then stops.
+
+[DET_CALLOWAY | style: quiet, to himself, controlled]
+Compass rose. Right forearm.
+
+[NARRATOR]
+He shifts the light to a puckered line of old scar tissue below the ribs, tracing it like he's reading a signature he memorized a long time ago.
+
+[DET_CALLOWAY | style: barely audible, something breaking through the calm]
+Left side, same scar. It's you.
+
+[SFX: radio static crackling again]
+
+[DET_CALLOWAY | style: forcing his voice level]
+Negative, nothing yet. Still working the ID.
+
+[NARRATOR]
+He straightens, keeping his face arranged into the same tired boredom he'd wear for any floater.
+
+[DET_CALLOWAY | style: dry, offhand, performing disinterest]
+Probably another one of theirs settling a score. They don't usually leave this much for us to find.
+
+[NARRATOR]
+Inside, something else moves through him — a name surfacing from a file he never let close.
+
+[DET_CALLOWAY | style: internal, tight, private]
+Marcus Tan. Three years, and you wash up two miles from where you disappeared. Somebody finally got sloppy.
+
+[NARRATOR]
+His light drifts lower, catches a row of clean, straight incisions along the torso — too neat for a knife fight, too deliberate for anything he's used to writing up.
+
+[DET_CALLOWAY | style: murmuring, uneasy under the procedural tone]
+That's not from a blade.
+
+[SFX: a camera shutter clicking twice]
+
+[NARRATOR]
+He glances toward the uniforms working the perimeter, then angles his body so the photographer's next frame misses the detail entirely.
+
+[DET_CALLOWAY | style: low, decisive]
+Not writing that in tonight's report. Not till I know what it means.
+
+[NARRATOR]
+He folds his notebook shut over a hand-drawn sketch of the incision line, tucks it inside his jacket, and calls toward the tape.
+
+[DET_CALLOWAY | style: raising his voice, back to procedural]
+Wrap it. I've got what I need.
+
+[NARRATOR]
+He doesn't move yet. He stands over the body a moment longer, alone with a case he buried once already and has no intention of losing again.
+
+--- PART 6 ---
+
+[NARRATOR]
+Across the city, in a private tea room above one of her restaurants, Madam Chen — the matriarch who built the syndicate the Quiet Man once served — receives her nightly report before a lieutenant kneeling at the threshold.
+
+[MADAM_CHEN | style: calm, unhurried]
+Sit. Pour first, speak second. Whatever you're carrying will keep for one more cup.
+
+[SFX: porcelain cup set down on a lacquered tray]
+
+[MADAM_CHEN | style: measured, testing]
+Now. Say it again, slowly, and don't dress it up for me.
+
+[MADAM_CHEN | style: flat, unreadable]
+The Quiet Man. On the docks. Since when do dead men earn names people whisper twice in one night.
+
+[MADAM_CHEN | style: cool, deliberate]
+Rival families like to borrow a reputation they never earned. It costs them nothing, and it costs me a headache I don't have time for tonight. That is all this is. A cheap costume.
+
+[MADAM_CHEN | style: quieter, controlled anger]
+Someone wants my people looking over their shoulders instead of doing their jobs. I will not allow that. Not from a name, not from a rumor, not from fog on the water.
+
+[MADAM_CHEN | style: crisp, final]
+Go back down. Find whoever is saying his name in my streets, and make them stop saying it. Quietly. I don't want a second rumor started about how the first one got handled.
+
+[SFX: a door sliding shut]
+
+[NARRATOR]
+Alone now, she lets the stillness hold for a long moment before her composure finally slips — just once, just for herself.
+
+[MADAM_CHEN | style: low, private, almost to herself]
+Seven weeks, Marcus. I gave the order with this mouth. I stood close enough to hear it finished.
+
+[MADAM_CHEN | style: low, private, brittle underneath]
+Whatever is wearing your name on the water tonight, it did not walk there on its own two feet to collect a debt from me.
+
+[MADAM_CHEN | style: hardening again]
+It is a message. Someone else's message, dressed in your skin because they know it will make me flinch.
+
+[SFX: porcelain cup lifted and set down again]
+
+[MADAM_CHEN | style: cold resolve]
+I built this house on knowing which stories to believe and which to bury. That one — I buried myself. It stays buried.
+
+--- PART 7 ---
+
+[NARRATOR]
+Madam Chen's private study, the same evening. Sora Kim — once the Quiet Man's protégé, now the syndicate's sharpest enforcer — is summoned to report.
+
+[MADAM_CHEN | style: measured, unreadable]
+Sit. I won't keep you.
+
+[SORA_KIM | style: composed, alert]
+You said it was urgent.
+
+[MADAM_CHEN | style: casual, testing]
+Not urgent. Curious. My people tell me a name is moving through the street again. Marcus Tan.
+
+[SFX: a teacup set down deliberately on a wooden table]
+
+[SORA_KIM | style: flat, a half-beat too long before speaking]
+That's an old name.
+
+[MADAM_CHEN | style: watching closely]
+Seven weeks isn't old.
+
+[SORA_KIM | style: controlled, clipped]
+Long enough. What are they saying, exactly.
+
+[MADAM_CHEN | style: light, deflecting]
+Nothing worth repeating. Ghost stories. A man doesn't vanish and stay interesting forever — someone always tries to borrow the shine off him.
+
+[SORA_KIM | style: guarded]
+Borrow it how.
+
+[MADAM_CHEN | style: cool]
+That's what I'd like to know. Which is why I'm asking the person who knew him best.
+
+[SORA_KIM | style: even, revealing nothing]
+I knew his work. Not much else.
+
+[MADAM_CHEN | style: appraising pause]
+Of course.
+
+[NARRATOR]
+Chen studies her a moment longer, then waves a hand — dismissal.
+
+[MADAM_CHEN | style: brisk]
+Keep your ear to it. If the name gets louder, I want to hear it from you before I hear it from the street.
+
+[SORA_KIM | style: steady]
+Understood.
+
+[NARRATOR]
+Sora leaves the study, her steps unhurried down the corridor. Alone in the stairwell, out of sight, her control finally gives way.
+
+[SFX: a heavy door easing shut, latch catching]
+
+[SORA_KIM | style: breath catching, barely audible]
+Marcus.
+
+[NARRATOR]
+She presses a hand flat against the wall, steadying herself, eyes shut.
+
+[SORA_KIM | style: raw, almost angry at herself]
+Seven weeks and you don't even leave a body. Just — a name people pass around like it's nothing.
+
+[SORA_KIM | style: quieter, aching]
+I didn't get to ask you anything. I didn't get to say — 
+
+[NARRATOR]
+She doesn't finish the sentence. She straightens instead, wipes her face with the back of one hand, and rebuilds the mask she wore in front of Chen — feature by feature, until nothing shows.
+
+[SORA_KIM | style: hard, final, to herself]
+Gone is gone. Don't make it a ghost story too.
+
+--- PART 8 ---
+
+[NARRATOR]
+Recovery, minutes later. Maya alone now, the visitors gone, monitors still counting her pulse into the quiet.
+
+[MAYA_LIN | style: drowsy, half to herself]
+Just rest. That's all this is.
+
+[NARRATOR]
+Her hand lies open on the blanket, and she watches it the way she'd watch a stranger's.
+
+[MAYA_LIN | style: quiet unease]
+No shake. There's always a shake, after.
+
+[SFX: a heart monitor beeping at a slow, even pace]
+
+[MAYA_LIN | style: barely audible]
+Why isn't there a shake.
+
+[NARRATOR]
+Before she decides anything, her fingers curl — loose, ready, a shape her hand has never made on its own.
+
+[MAYA_LIN | style: frightened stillness | speed: 0.85]
+I didn't do that.
+
+[NARRATOR]
+She stares at her own hand as if waiting for it to explain itself.
+
+[MAYA_LIN | style: forcing calm, testing]
+Okay. Okay — move. Just move because I say so.
+
+[NARRATOR]
+Slowly, deliberately, she straightens her fingers again — and gets no answer as to whose idea that first motion was.
+
+[MAYA_LIN | style: hollow whisper]
+Nothing. Just tired. That's all this is.
+
+--- PART 9 ---
+
+[NARRATOR]
+Two days after surgery, in the same recovery ward, a physician reviews Maya's chart at her bedside before discharge.
+
+[NARRATOR]
+He speaks in the brisk, reassuring cadence of someone who has given this speech a hundred times — sternotomy healing on schedule, vitals stronger than expected for this stage, a follow-up in ten days. He does not linger on the transplant itself.
+
+[SFX: a clipboard set down on a rolling tray]
+
+[MAYA_LIN | style: still groggy, trying to focus]
+Excellent recovery trajectory. That's — that's good. That's what you want to hear, right?
+
+[NARRATOR]
+He hands her the discharge folder and moves on to the next bed before she can ask anything further.
+
+[MAYA_LIN | style: quiet, to herself, flipping pages]
+Activity restrictions. Medication schedule. Wound care...
+
+[SFX: paper pages turning, one after another]
+
+[MAYA_LIN | style: a small frown, slower now]
+Donor: —
+
+[MAYA_LIN | style: puzzled, not alarmed]
+Nothing. Not even redacted. Just blank.
+
+[NARRATOR]
+A nurse — not the one from her first night, a different one — straightens the blanket at the foot of the bed, closer than the task requires.
+
+[MAYA_LIN | style: mild, testing the water]
+Is that normal? For it to just be — empty like this?
+
+[NARRATOR]
+The nurse says something about black-market cases never carrying paperwork at all, that blank is safer for everyone than a redaction someone could still trace, and that Maya is lucky it went as smoothly as it did.
+
+[MAYA_LIN | style: accepting, tired]
+Right. No paperwork at all. Makes sense, I guess.
+
+[NARRATOR]
+The nurse's shoulders ease, visibly, the moment Maya looks back down at the folder instead of up at her.
+
+[MAYA_LIN | style: to herself, almost amused, almost not]
+Since when do I read the fine print on anything.
+
+[SFX: a wheelchair brake releasing with a click]
+
+[NARRATOR]
+An orderly arrives with a wheelchair for the mandatory ride to the exit. Maya signs the last page without reading it, folder balanced on her knees.
+
+[MAYA_LIN | style: steadier than she expects, almost brisk]
+Okay. Home.
+
+[NARRATOR]
+She says it like a decision, not a question, her hand signing the line with a confidence her body hasn't earned yet. Neither she nor anyone around her notices.
+
+--- PART 10 ---
+
+[NARRATOR]
+Early evening. Daniel carries Maya over the threshold of their apartment — her first night home since the surgery.
+
+[SFX: a door unlatching]
+
+[DANIEL_WOO | style: playful, tender]
+Okay. Don't laugh at me.
+
+[MAYA_LIN | style: soft laugh, a little embarrassed]
+Daniel, I can walk.
+
+[DANIEL_WOO | style: mock-serious]
+Tradition. My mother would kill me if I didn't.
+
+[MAYA_LIN | style: amused, settling into it]
+Your mother would kill you for a lot of things.
+
+[SFX: the door swinging shut behind them]
+
+[NARRATOR]
+He lifts her over the threshold and sets her down just inside, in the front hall of their home.
+
+[DANIEL_WOO | style: gentle]
+There. Home.
+
+[MAYA_LIN | style: quiet, taking it in]
+Home.
+
+[NARRATOR]
+Daniel keeps his hands on her waist a beat longer than the moment calls for.
+
+[MAYA_LIN | style: light, noticing]
+You can let go, you know. I'm not going to fall.
+
+[DANIEL_WOO | style: half-laughing, but not quite]
+I know. I just —
+
+[MAYA_LIN | style: waiting, gentle]
+What.
+
+[DANIEL_WOO | style: careful, holding back]
+Nothing. I'm glad you're here.
+
+[NARRATOR]
+He steps back, and something unspoken passes between them.
+
+[DANIEL_WOO | style: trying to sound casual]
+You want tea? I got that jasmine stuff you like. Kept it in the freezer so it wouldn't go stale while you were —
+
+[MAYA_LIN | style: gentle interruption]
+Tea sounds good.
+
+[NARRATOR]
+He hesitates in the hallway a moment longer, watching her.
+
+[DANIEL_WOO | style: quiet, almost to himself]
+You seem —
+
+[MAYA_LIN | style: alert, guarded under the warmth]
+Seem what?
+
+[DANIEL_WOO | style: backing off, gentle]
+Nothing. Tired. You should sit.
+
+[NARRATOR]
+He turns toward the kitchen. Maya doesn't move right away.
+
+[MAYA_LIN | style: bright, deliberately changing the subject]
+Did you finally fix the thermostat, or is this place going to be an icebox all winter again?
+
+[DANIEL_WOO | style: grateful for the shift, relieved]
+It's on the list. Right under "convince my wife to actually rest."
+
+[SFX: a kettle being set down on a stovetop]
+
+[NARRATOR]
+In the kitchen, he fills the kettle. Maya lingers in the hallway, one hand resting flat against her own sternum, as if listening for something only she can hear.
+
+[MAYA_LIN | style: barely audible, to herself]
+Steady.
+
+[NARRATOR]
+She lowers her hand before he can see, and follows him in.
+
+--- PART 11 ---
+
+[NARRATOR]
+The Night Market, that same evening. Daniel's extended family — aunts, cousins, his mother behind the stall counter — has gathered at the Woo family's food stand to welcome Maya home from the hospital.
+
+[DANIEL_WOO | style: warm, proud]
+I told them small dinner. Quiet. My mother heard "Maya's coming" and closed the whole stall for a private table instead.
+
+[MAYA_LIN | style: smiling, a little strained]
+It's beautiful, Daniel. I just — I didn't expect quite this many people, or quite this much noise.
+
+[DANIEL_WOO | style: affectionate, teasing]
+Nobody in this family has ever understood the word "small." You knew that when you married me.
+
+[SFX: glasses clinking in a toast]
+
+[MAYA_LIN | style: forcing warmth, raising a glass]
+To being home, then. Thank you — all of you.
+
+[DANIEL_WOO | style: gentle, leaning in]
+Aunt Wei's been saying all night you look different. Stronger, she keeps saying. Before you make that face — she means it kindly.
+
+[MAYA_LIN | style: light, deflecting]
+Tell her it's the good drugs talking. I'll take "stronger" over "barely standing," any day.
+
+[DANIEL_WOO | style: quieter, watching her closely]
+She's not entirely wrong, though. You moved through that whole crowd back there — hugging, weaving between tables — like none of it cost you anything. Three days out of surgery.
+
+[MAYA_LIN | style: covering quickly, a beat too fast]
+Adrenaline, probably. Everyone watching me like I might fall over — maybe my body just decided to prove them wrong.
+
+[DANIEL_WOO | style: letting it go, gently]
+Well. Don't let it prove anything else tonight. Sit. Eat. My mother made the soup you like, and she'll be offended if it goes cold.
+
+[MAYA_LIN | style: soft, grateful, a little tired underneath]
+That much, I can do.
+
+[DANIEL_WOO | style: warm]
+I mean it, though — rest tonight. No cooking, no cleaning, nothing. Let the family feed you for once.
+
+[MAYA_LIN | style: quiet, half to herself]
+I keep waiting to feel it — the tired part. It hasn't come yet.
+
+[DANIEL_WOO | style: not quite catching it, distracted by a cousin calling his name]
+Sorry — what?
+
+[MAYA_LIN | style: quick recovery, brighter]
+Nothing. Go say hello. I'll be right here, being fed within an inch of my life.
+
+[DANIEL_WOO | style: laughing, already turning away]
+That's the plan. Don't disappear on me.
+
+[MAYA_LIN | style: soft, unreadable]
+I won't. Go.
+
+--- PART 12 ---
+
+[NARRATOR]
+Home, that same first night. The Woos' kitchen, small and warm. Maya moves toward the counter while Daniel unpacks leftovers from the market.
+
+[DANIEL_WOO | style: gently insistent]
+Sit down. I've got this — you're two days out of a hospital bed, not two days into a cooking show.
+
+[MAYA_LIN | style: light, deflecting]
+Daniel, I can hold a knife. I promise the surgeon didn't take that away from me.
+
+[NARRATOR]
+She crosses to the drawer anyway.
+
+[SFX: a kitchen drawer sliding open]
+
+[MAYA_LIN | style: casual]
+Just the scallions. You chop, I'll stand here and supervise, if that makes you feel better.
+
+[NARRATOR]
+Her hand closes around the handle.
+
+[MAYA_LIN | style: flat, arrested]
+—
+
+[NARRATOR]
+The grip is already set before she has chosen it — knuckles low, blade angled back along her forearm, thumb braced against the spine of the steel. Not the loose, careless hold she has used her whole life. Something else.
+
+[MAYA_LIN | style: quiet, unsettled | speed: 0.9]
+Huh.
+
+[DANIEL_WOO | style: distracted, from across the kitchen]
+What?
+
+[MAYA_LIN | style: covering fast]
+Nothing. Just — cold. The handle's cold.
+
+[NARRATOR]
+She stares at her own fist around the knife as if it belongs to someone standing just behind her eyes.
+
+[MARCUS_TAN | style: low, intimate, only the listener hears]
+There it is.
+
+[NARRATOR]
+Maya doesn't hear the words. She only feels the certainty in her hand — a fluency she has never earned, never practiced, never once needed in a life spent grading spelling tests and packing lunches.
+
+[NARRATOR]
+Daniel looks up, sensing something in her stillness.
+
+[DANIEL_WOO | style: concerned, careful]
+Hey. You okay? You went somewhere for a second.
+
+[NARRATOR]
+Maya sets the knife down deliberately, flexing her fingers as if shaking off a cramp.
+
+[SFX: a knife set down on a wooden cutting board]
+
+[MAYA_LIN | style: bright, overcompensating]
+I'm fine — really. Just tired. Long day for someone who technically has a brand-new heart.
+
+[DANIEL_WOO | style: relieved, softening]
+Right. Of course. Sit. I mean it this time.
+
+[NARRATOR]
+She lets him steer her to a stool, laughing off the moment, already rehearsing how she'll describe it to herself later — fatigue, medication, nothing. She does not look at her own hand again. She does not let herself.
+
+[NARRATOR]
+Behind her, on the board, the scallions sit untouched beside a knife she no longer entirely trusts.
+
+--- PART 13 ---
+
+[NARRATOR | style: hushed, procedural]
+Deep night, a back office at the Clinic — the same private hospital where Maya's heart was replaced. Two staff members, a technician and a records clerk, sit before a terminal glowing in the dark, Maya's donor file open between them.
+
+[SFX: keyboard keys clicking rapidly]
+
+[NARRATOR | style: hushed, procedural]
+The clerk highlights a field labeled DONOR SOURCE and deletes it in a single keystroke. The technician watches the cursor blink where the entry used to be, then reaches past her and types a new line — a false intake date, a fabricated procurement code, numbers that will never trace back to anyone.
+
+[SFX: a chair creaking as someone leans back]
+
+[NARRATOR | style: hushed, procedural]
+The technician says, low, that they're going too far this time — that scrubbing a chart is one thing, but building a whole clean history from nothing feels like something else. The clerk doesn't look up. She reminds him what happens to the pipeline, to everyone who's touched it, if this one file is ever pulled and doesn't hold together under a light.
+
+[NARRATOR | style: hushed, tense]
+Neither one names the donor. The clerk only says the file was never supposed to exist in the first place — that black-market cases don't get records, they get gaps, and a gap is easier to defend than a lie with a name attached. The technician asks, carefully, what happens if someone goes looking anyway. She doesn't answer. She just keeps typing.
+
+[SFX: a door handle turning down the hall]
+
+[NARRATOR | style: hushed, urgent]
+The sound stills them both for a moment — footsteps somewhere past the office, then nothing. The clerk exhales and returns to the screen. She fills the last blank field, donor history, with three words that will satisfy any auditor who never thinks to ask twice: routine, screened, deceased. She saves the file.
+
+[NARRATOR | style: flat, closing]
+On the terminal now, Maya Lin's chart shows a clean donor history that never happened — untraceable, unremarkable, exactly the way the Clinic builds every file it can't afford to have questioned.
+
+--- PART 14 ---
+
+[NARRATOR]
+Late that night at the precinct, the storm has passed but the paperwork hasn't. Detective Calloway — the homicide detective already circling the dock case — sits alone in an emptied records room, an old file open beside his notes from the harbor.
+
+[DET_CALLOWAY | style: low, muttering to himself]
+Tan, Marcus. Missing persons, filed seven years back. Scar, left brow. Tattoo, right forearm.
+
+[SFX: a manila folder dropped flat on a metal desk]
+
+[DET_CALLOWAY | style: quiet, satisfied]
+Match. Match. Match.
+
+[NARRATOR]
+He lays photographs from the dock beside the old intake sheet, lining up the details until they hold.
+
+[DET_CALLOWAY | style: flat, to himself]
+Seven years I carry this guy in a drawer, and the tide just hands him back to me.
+
+[NARRATOR]
+He slows over one photo — a clean surgical line along the ribs — and frowns.
+
+[DET_CALLOWAY | style: puzzled, then dismissive]
+That's not a knife wound. That's — no. Doesn't matter. Somebody finishes an old grudge, they finish it however they want.
+
+[NARRATOR]
+He sets the photo aside, unwilling to let a detail slow him down tonight. His phone rings; he answers, and only his side of the call carries.
+
+[DET_CALLOWAY | style: guarded, casual]
+Yeah, it's me. — No, I already pulled the file, I'm looking at it right now. — What do you mean fresh eyes, I've had eyes on this since it was still warm.
+
+[SFX: a chair creaking as he leans back]
+
+[DET_CALLOWAY | style: forcing calm]
+I'm not attached to it. I'm saying I know the file, that's all. Saves everybody the ramp-up. — Sure. Sure, I'll keep you posted.
+
+[NARRATOR]
+He hangs up and sits with it a moment, the old file still open under his hand.
+
+[DET_CALLOWAY | style: to himself, low]
+Not a chance you're taking this off my desk.
+
+[NARRATOR]
+He gathers both files together, squares the edges, and slides them into his own bag rather than back into evidence storage.
+
+[DET_CALLOWAY | style: quiet, resolved]
+Seven years. I'm not handing you off to somebody who's gonna read you cold.
+
+[SFX: a bag zipper closing]
+
+[NARRATOR]
+He kills the desk lamp and leaves the records room dark, the case already his again in every way that matters — whether or not anyone signs off on it.
+
+--- PART 15 ---
+
+[NARRATOR | style: neutral]
+Madam Chen's private study, the night after the harbor discovery. Back to the Quiet Man's Return: her inner circle stands assembled, summoned to answer for a body pulled from her own water.
+
+[MADAM_CHEN | style: cold, controlled]
+A body on my docks. My tide. My territory. And in this room — full of men I pay to know everything before the street does — nobody has given me a name.
+
+[SFX: a teacup set down hard on a lacquered table]
+
+[MADAM_CHEN | style: quiet menace]
+I will ask once, slowly, so there's no confusion later about what I asked. Whose blood was spilled on that pier.
+
+[NARRATOR | style: neutral]
+No one answers. The silence stretches long enough to become its own kind of answer.
+
+[MADAM_CHEN | style: rising, performed outrage]
+Nothing. All of you, trained to whisper in every corner of this city, and the one corner that matters tonight, you've gone deaf.
+
+[MADAM_CHEN | style: sharp, testing]
+I've heard the name already, in three different mouths today, none of them yours. Say it to my face instead of behind my back, if you're so afraid of it.
+
+[MADAM_CHEN | style: measured, deliberate | speed: 0.9]
+Still nothing. Fine. Let me say what none of you will. They're calling it the Quiet Man, come back from wherever men like him go. As if a man simply returns from nothing.
+
+[MADAM_CHEN | style: commanding]
+Hear me clearly, because I will only say this once. That is not a ghost on my pier. That is a message — someone crude enough to believe dragging a dressed-up corpse into my water would rattle me. Some rival, some upstart, borrowing a dead man's fear to start a war they don't have the stomach to start honestly.
+
+[MADAM_CHEN | style: hard, final]
+Find me who is behind it. Not rumor — a name, a family, a face I can put a price on. Whoever decided my territory was an open door will learn otherwise before the week is out.
+
+[MADAM_CHEN | style: dismissive, closing]
+Go. Quietly. I don't want the street any louder than it already is tonight.
+
+[NARRATOR | style: neutral]
+The room empties, footsteps fading down the hall.
+
+[SFX: a heavy door easing shut]
+
+[MADAM_CHEN | style: private, unguarded | speed: 0.85]
+A message. That's what I told them, because it's easier to command a lie than to sit with the truth — that the sea has simply given back what I put in it myself, seven weeks too late to matter, and far too soon for me to be ready.
+
+--- PART 16 ---
+
+[NARRATOR]
+Madam Chen's private office, the same night. The lieutenants have gone. Only Sora Kim remains, summoned back through a side door most in the organization don't know exists.
+
+[SFX: a heavy door clicking shut]
+
+[MADAM_CHEN | style: measured, deceptively gentle]
+Sit.
+
+[SORA_KIM | style: composed, alert]
+I'd rather stand.
+
+[MADAM_CHEN | style: unhurried, watching closely]
+As you like.
+
+[MADAM_CHEN | style: measured, deceptively gentle]
+You heard what was said downstairs. A name, floating up from the docks like it had never gone anywhere.
+
+[SORA_KIM | style: flat, controlled]
+I heard a rumor. Rumors float. That's what they do.
+
+[MADAM_CHEN | style: measured, deceptively gentle]
+This one has a body attached to it.
+
+[SORA_KIM | style: flat, controlled | speed: 0.95]
+Bodies wash up. Doesn't mean they're who someone wants them to be.
+
+[MADAM_CHEN | style: unhurried, watching closely]
+That's precisely what I need to know. Not what the street wants to believe. What's true.
+
+[MADAM_CHEN | style: cool, deliberate]
+Someone is using his name to unsettle my people, or worse, telling them I've lost my grip on my own territory. I won't have that. Not from a corpse, and not from a rumor.
+
+[SORA_KIM | style: guarded, careful]
+You want it confirmed or denied.
+
+[MADAM_CHEN | style: cool, deliberate]
+Quietly. No noise, no questions that reach the wrong ears. Go to the morgue, go to whoever's holding that file, and find out whose face is actually under that sheet.
+
+[MADAM_CHEN | style: unhurried, watching closely]
+You knew him best of anyone I have left. If it's a copycat's work, you'll see through it faster than any of them.
+
+[SORA_KIM | style: flat, controlled]
+And if it isn't.
+
+[MADAM_CHEN | style: measured, deceptively gentle]
+Then I'll want to know exactly who thought they could resurrect him to spit in my face.
+
+[MADAM_CHEN | style: quiet, testing]
+That doesn't trouble you. Does it.
+
+[SORA_KIM | style: flat, controlled | speed: 0.9]
+Marcus is seven weeks gone with no word to anyone. I stopped being troubled by his name a long time ago.
+
+[MADAM_CHEN | style: unhurried, watching closely]
+Good.
+
+[SORA_KIM | style: guarded, careful]
+I'll have something for you by tomorrow night.
+
+[NARRATOR]
+Chen watches the door long after it closes behind her.
+
+[SFX: a teacup set down on a saucer]
+
+[MADAM_CHEN | style: alone, unreadable]
+Tomorrow night.
+
+[NARRATOR]
+Outside, in the corridor, Sora stops walking. For one unwatched moment, her composure finally gives way.
+
+--- PART 17 ---
+
+[NARRATOR]
+Three in the morning, the Woo apartment above the restaurant district. Daniel sleeps beside her, his breathing slow and even. Maya lies awake, listening.
+
+[MAYA_LIN | style: quiet, listening]
+(barely a whisper)
+Steady.
+
+[MAYA_LIN | style: unsettled, private]
+Too steady.
+
+[SFX: a digital clock softly changing minutes]
+
+[MAYA_LIN | style: guarded, testing herself]
+Before the surgery, it used to skip. Flutter, then catch up, like it was embarrassed. I hated it. I used to lie here and count the stumbles.
+
+[MAYA_LIN | style: subdued]
+Now I count nothing. It just — keeps time.
+
+[NARRATOR]
+She presses two fingers below her collarbone, over the fresh scar.
+
+[MAYA_LIN | style: careful, almost hopeful]
+(to herself)
+Answer me. Do something wrong. Please.
+
+[SFX: fabric shifting faintly as she settles her hand back down]
+
+[MAYA_LIN | style: distant, quiet dread]
+The form had a blank line where a name should've been. Nobody blacks out a line. They fill it with nothing on purpose.
+
+[MAYA_LIN | style: resigned, small]
+I won't wake him for this.
+
+[NARRATOR]
+She lies still, eyes open in the dark, one hand resting over a pulse she no longer recognizes as only her own.
+

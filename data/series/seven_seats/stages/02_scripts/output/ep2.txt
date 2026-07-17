@@ -1,0 +1,574 @@
+--- PART 1 ---
+
+[NARRATOR | style: calm, grounding]
+Previously on Seven Seats — Jonah found fresh footprints outside the ferry shed and couldn't shake the feeling something was wrong. Nurse Mei Chen pulled an old file from the archive and closed it again just as quickly. Neither of them has said a word about it since.
+
+[NARRATOR | style: neutral, orienting]
+Day two of the countdown. Five days out from Hurricane Odette. Down at the Halyard Cay dock, Captain Danny Su and his crew gather around a marine radio, its static cutting through the wind.
+
+[SFX: radio static crackling, then a clipped weather-band voice]
+
+[CAPTAIN_DANNY_SU | style: focused, steady]
+Say that swell height again.
+
+[NARRATOR | style: neutral]
+A crew member, Petey, leans in toward the radio.
+
+[CAPTAIN_DANNY_SU | style: steady, working]
+Petey. You getting that?
+
+[NARRATOR | style: neutral]
+Petey nods toward the horizon.
+
+[CAPTAIN_DANNY_SU | style: low, private, distracted]
+Six seats. Same as it's been all week.
+
+[NARRATOR | style: neutral]
+He crouches at the bow line, testing the tension by hand as the chop knocks the hull against the dock.
+
+[SFX: a rope creaking taut against a dock cleat]
+
+[CAPTAIN_DANNY_SU | style: measured, masking]
+Line's holding. Double-check the stern anyway before the wind picks up more.
+
+[NARRATOR | style: neutral]
+A young deckhand, Rosa, joins him at the rail, watching the gray band on the horizon.
+
+[CAPTAIN_DANNY_SU | style: even, controlled]
+Something on your mind, Rosa?
+
+[CAPTAIN_DANNY_SU | style: quiet, guarded | speed: 0.95]
+It always does. Every storm week, everybody counts the same six seats like it's new math.
+
+[NARRATOR | style: neutral]
+Danny doesn't answer right away. His eyes stay on the water, though his thoughts are somewhere else entirely — on the shed behind him, and what a mechanical fault report will need to sound like when the time comes.
+
+[CAPTAIN_DANNY_SU | style: flat, rehearsed calm]
+Boat'll be ready. That's my job. Who sits where — that's not decided today.
+
+[NARRATOR | style: neutral]
+Rosa shrugs and heads off to check the stern line. Danny stays a moment longer, watching Odette's first pale bands smear across the far sky, closer than they were yesterday. He glances once toward the storage shed up the path, then turns back to the water before anyone can follow his gaze.
+
+--- PART 2 ---
+
+[NARRATOR]
+Midmorning, day two. Jonah Bramwell, the young paramedic, walks the dock path back toward the ferry company's storage shed, telling himself he's only checking the tide lines.
+
+[JONAH_BRAMWELL | style: muttering to himself, unconvinced]
+Nothing there yesterday. Nothing there today. Just go look, then go back to work.
+
+[NARRATOR]
+He crouches at the same patch of sand beside the shed's east wall.
+
+[JONAH_BRAMWELL | style: quiet, focused]
+Still here.
+
+[SFX: sand shifting under a crouching weight]
+
+[JONAH_BRAMWELL | style: low, thinking aloud]
+Too clean for yesterday's rain to have touched them. Somebody's been walking this exact line since last night.
+
+[JONAH_BRAMWELL | style: reasoning, uneasy]
+Could be a drifter came in off a boat. Could be kids daring each other to sneak in for the fireworks stash. Doesn't have to mean anything.
+
+[NARRATOR]
+He straightens and moves along the shed's side wall, scanning the crates stacked against it.
+
+[JONAH_BRAMWELL | style: sharpening, alert]
+That's wrong. These were flush against the wall Tuesday. Now there's a gap you could slide a body through.
+
+[SFX: a wooden crate scraping an inch across the floor]
+
+[JONAH_BRAMWELL | style: startled, then controlled]
+Just settling. Boards shift in the damp.
+
+[JONAH_BRAMWELL | style: firmer, deciding]
+Or somebody's been moving things around in here and doesn't want it obvious.
+
+[NARRATOR]
+Jonah steps back from the wall and looks toward the shed's front door, weighing the walk around.
+
+[JONAH_BRAMWELL | style: resolved]
+Enough of this. I'm not going to keep sneaking around the back of my own dock asking sand what it saw. Danny runs this shed — Danny can just tell me what's going on.
+
+[JONAH_BRAMWELL | style: muttering, half a laugh at himself]
+Probably some drifter he hasn't gotten around to chasing off. Five more days till the storm and I'm out here playing detective over footprints.
+
+[NARRATOR]
+He starts around the corner toward the shed's front door, footsteps quickening on the packed sand.
+
+--- PART 3 ---
+
+[NARRATOR]
+Still on the dock path, the wind sharper than yesterday, Jonah reaches the ferry shed just as Danny Su, the island's ferryman, rounds the corner from the tide side, closing the gap before Jonah's hand finds the latch.
+
+[CAPTAIN_DANNY_SU | style: easy, deliberately casual]
+Hey — didn't expect you back down here twice in one morning.
+
+[JONAH_BRAMWELL | style: measured, watchful]
+Wanted another look at those footprints. And somebody's moved the crates since yesterday.
+
+[SFX: a soft thud from inside the shed]
+
+[CAPTAIN_DANNY_SU | style: light, quick to cover]
+Just the wind knocking things loose. Storm's already got everyone jumpy.
+
+[JONAH_BRAMWELL | style: pressing gently]
+Danny, if there's something in there that isn't yours to worry about, just tell me.
+
+[CAPTAIN_DANNY_SU | style: laughing it off, tight underneath]
+It's rope and diesel cans, Jonah. Come on, the tide's turning and I need eyes on that list before the wind picks up more.
+
+[JONAH_BRAMWELL | style: slightly thrown]
+Now? I was going to check —
+
+[CAPTAIN_DANNY_SU | style: warm, steering]
+Five minutes. Save yourself a trip back down here later.
+
+[JONAH_BRAMWELL | style: wary, quiet]
+Sure. Five minutes.
+
+[SFX: shed door latch settling shut]
+
+[NARRATOR]
+Jonah follows Danny up the path, already turning over how easily Danny had appeared, and how little it had taken to walk him away from the door.
+
+--- PART 4 ---
+
+[NARRATOR]
+At the clinic's records desk, Kimi Sato sorts through a stack of insurance paperwork. Mei Chen, the head nurse who has run this floor for fifteen years, looks up from the filing cabinet behind her.
+
+[KIMI_SATO | style: brisk, businesslike]
+Mei, I need five minutes. Mainland insurer's doing a cross-check before they'll pre-authorize storm evacuations for anyone with an open claim.
+
+[NURSE_MEI_CHEN | style: warm, unbothered]
+Cross-check on what.
+
+[KIMI_SATO | style: reading off a form]
+Old files, apparently. They want written confirmation of exact wording before they'll accept it as valid documentation. This one's from twenty-two years back.
+
+[SFX: a manila folder sliding across a desk]
+
+[KIMI_SATO]
+Sato, Aiko. That's — that's my mother's file, Mei.
+
+[NURSE_MEI_CHEN | style: carefully even]
+I know whose file it is, Kimi.
+
+[KIMI_SATO | style: apologetic, quick]
+Sorry — I didn't mean it like that. It's just a formality, they need someone who was on staff back then to confirm the outcome line matches what's typed. Something about bed capacity.
+
+[NURSE_MEI_CHEN | style: steady, giving nothing away]
+"No bed capacity available." That's the line.
+
+[KIMI_SATO]
+That's it exactly. You've got it memorized?
+
+[NURSE_MEI_CHEN | style: light, deflecting]
+You memorize things you've typed a hundred times. Storm season back then, we ran out of beds constantly. Half the old files probably say the same thing.
+
+[KIMI_SATO | style: satisfied, moving on]
+That's what I figured — standard language for the era. Insurer just needs a staff signature confirming it hasn't been altered.
+
+[SFX: a pen clicking]
+
+[NURSE_MEI_CHEN]
+Give it here. I'll sign it now, get it off your list.
+
+[KIMI_SATO]
+You sure? I can come back after your rounds.
+
+[NURSE_MEI_CHEN | style: calm, dismissive]
+It's one signature, Kimi. Not going anywhere.
+
+[SFX: paper being smoothed flat on a desk]
+
+[NARRATOR]
+Mei Chen takes the pen. Her hand hovers over the line a beat longer than the signature requires before she signs.
+
+[KIMI_SATO | style: curious, not alarmed]
+You okay? You went somewhere for a second.
+
+[NURSE_MEI_CHEN | style: recovering smoothly]
+Long morning. Danny's crew keeps radioing supply questions like I'm not elbow-deep in vaccine inventory.
+
+[KIMI_SATO | style: laughing lightly]
+Everyone's a little frayed this week. I've got shutters to hang at Mom's place tonight, so believe me, I understand.
+
+[NURSE_MEI_CHEN]
+Go on, then. I'll get this back to you by end of day.
+
+[KIMI_SATO]
+Thanks, Mei. Seriously.
+
+[SFX: footsteps receding, a door easing shut]
+
+[NARRATOR]
+Kimi gathers the rest of her stack and heads for the hallway, unaware of what she's just asked Mei Chen to sign.
+
+--- PART 5 ---
+
+[NARRATOR]
+The clinic's records room, minutes after Kimi has gone. Wind rattles the loose pane in the door. Mei Chen is alone now, the Sato file still open on the desk in front of her.
+
+[NURSE_MEI_CHEN | style: quiet, controlled | speed: 0.9]
+"No bed capacity available."
+
+[NURSE_MEI_CHEN | style: quiet, controlled]
+Six words. I picked every one of them.
+
+[SFX: a single sheet of paper being turned over slowly]
+
+[NURSE_MEI_CHEN | style: low, remembering]
+I remember the pen. Kessler's pen, actually. Mine had run dry an hour before, and I didn't want to walk to the supply closet and be seen carrying a pen like it mattered.
+
+[NURSE_MEI_CHEN | style: barely audible]
+It mattered.
+
+[NURSE_MEI_CHEN | style: even, rehearsing]
+"The phrasing reflects standard triage documentation practice for that period. Nothing more should be read into it."
+
+[NURSE_MEI_CHEN | style: flat, self-critical]
+That's what I'll say if the insurance office calls back. Calm. Bored, even. People believe boredom.
+
+[NURSE_MEI_CHEN | style: quiet, almost testing the idea]
+I could just tell her. Twenty-two years, and I could just say it plainly, today, in this room, before the wind gets any worse.
+
+[NURSE_MEI_CHEN | style: quiet, shutting the thought down | speed: 0.9]
+No. Not today. Not with a storm five days out and Theo already carrying more than his back.
+
+[NARRATOR]
+Outside, the marine radio on the shelf crackles faintly with a wind-speed update no one is listening to.
+
+[NURSE_MEI_CHEN | style: steadier, practical]
+She only asked for the wording. She didn't ask why. As long as no one asks why, the wording is enough.
+
+[NURSE_MEI_CHEN | style: quiet, uneasy]
+She's her mother's daughter, though. She has that same way of not letting a thing go once she's picked it up.
+
+[SFX: a metal file drawer sliding shut]
+
+[NURSE_MEI_CHEN | style: firm, composing herself]
+Standard archival language. That's all it is, if anyone asks again.
+
+[NARRATOR]
+She locks the drawer, checks it once more, and straightens as footsteps pass in the corridor outside.
+
+--- PART 6 ---
+
+[NARRATOR]
+Inside the clinic, midafternoon on the second day of the countdown, Dr. Sophie Kang — the young physician filling in on the island this storm season — comes looking for a signature and finds an exam room door half shut.
+
+[NARRATOR]
+Dr. Theo Aldridge, the clinic's longtime director, is bent over the exam table, both hands braced against the edge.
+
+[DR_SOPHIE_KANG | style: startled, quickly masking it]
+Theo?
+
+[SFX: an exam table shifting slightly under weight]
+
+[DR_THEO_ALDRIDGE | style: forcing steadiness into his voice]
+Give me a second.
+
+[DR_SOPHIE_KANG | style: careful, concerned]
+Is it your back again? You were favoring it yesterday too.
+
+[DR_THEO_ALDRIDGE | style: straightening too fast, covering]
+It's fine. I threw it out hauling crates off the last supply boat. Comes and goes.
+
+[DR_SOPHIE_KANG | style: skeptical but gentle]
+That didn't look like "comes and goes." You went white.
+
+[DR_THEO_ALDRIDGE | style: dry, deflecting]
+I'm fifty-eight, Sophie. Everything looks worse than it is.
+
+[DR_SOPHIE_KANG | style: still watching him closely]
+I can pull the heating pad from the supply closet. Or take your afternoon rounds — you sit somewhere with your feet up for an hour.
+
+[DR_THEO_ALDRIDGE | style: firm, already moving]
+I don't need either. There's a storm coming and a clinic full of people who need to see the director upright.
+
+[DR_SOPHIE_KANG | style: unconvinced, pressing lightly]
+Upright isn't the same as fine.
+
+[DR_THEO_ALDRIDGE | style: softening just enough to close the subject]
+Noted. I'll ice it tonight.
+
+[NARRATOR]
+He rolls his shoulders, tests his footing, and reaches for the clipboard hanging by the door.
+
+[DR_THEO_ALDRIDGE | style: businesslike, already changing subjects]
+Now — did you need me for a signature, or did you just come to diagnose my back?
+
+[DR_SOPHIE_KANG | style: letting it go, half a laugh]
+The signature. Discharge form for the Hendricks boy.
+
+[SFX: a pen clicking]
+
+[NARRATOR]
+Aldridge signs without sitting down, without setting the clipboard on the table, keeping his weight carefully even on both feet.
+
+[DR_THEO_ALDRIDGE | style: neutral, moving toward the door]
+Anything else on the board this afternoon?
+
+[DR_SOPHIE_KANG | style: still studying him a beat too long]
+Just the usual storm-week walk-ins. I've got it if you want to sit this round out.
+
+[DR_THEO_ALDRIDGE | style: final, gently closing the door on the topic]
+I want to keep moving. Bad back or not, that's how you shake it loose.
+
+[NARRATOR]
+He steps past her into the hallway before she can offer again, one hand briefly pressed flat against the doorframe as he goes.
+
+--- PART 7 ---
+
+[NARRATOR]
+That evening, the Saltbox Tavern is packed tighter than usual, the storm supply list on the chalkboard nearly doubled since morning. Jonah nurses a drink at the bar while Kimi Sato steps in, empty crate under one arm, working through her own list.
+
+[SFX: chalk squeaking against a board]
+
+[KIMI_SATO | style: tired, wry]
+Propane's crossed off twice. Somebody's panic-buying.
+
+[JONAH_BRAMWELL | style: distracted, half-listening]
+Everybody's panic-buying. Radio said the outer bands are visible now.
+
+[KIMI_SATO | style: light, but pointed]
+You look like you're somewhere else.
+
+[JONAH_BRAMWELL | style: deflecting]
+Just tired.
+
+[NARRATOR]
+Behind them, two dockhands lean over the chalkboard, their voices carrying easily over the room.
+
+[KIMI_SATO | style: overhearing, half amused]
+Did you hear them counting seats? Six on the ferry, and they're already doing math on who doesn't fit.
+
+[JONAH_BRAMWELL | style: sharpening, alert]
+What do you mean, who doesn't fit.
+
+[KIMI_SATO | style: careful, not realizing the weight of it]
+Somebody said Otis's oxygen tanks take up room for two people. Wasn't trying to be cruel about it. Just — logistics.
+
+[NARRATOR]
+Jonah sets his glass down harder than he means to.
+
+[SFX: a glass set down hard on the bar]
+
+[JONAH_BRAMWELL | style: tight, controlled anger]
+My grandfather's tanks aren't cargo. They're what keeps him breathing.
+
+[KIMI_SATO | style: backpedaling, gentle]
+Jonah, I know. I'm not the one who said it. I just — I heard it and thought you should know people are already talking that way.
+
+[JONAH_BRAMWELL | style: quieter, unsettled]
+Six seats. Everybody keeps saying it like it's simple.
+
+[KIMI_SATO | style: sympathetic]
+Nothing about this week is simple.
+
+[NARRATOR]
+Jonah looks toward the chalkboard, the growing list of names and needs, and says nothing for a moment.
+
+[JONAH_BRAMWELL | style: low, half to himself]
+Feels like everyone's got something they're not saying out loud.
+
+[KIMI_SATO | style: puzzled, gentle]
+What's that supposed to mean?
+
+[JONAH_BRAMWELL | style: pulling back, guarded]
+Nothing. Forget it.
+
+[NARRATOR]
+He pushes off the bar, the shed and the footprints and now his grandfather's name all tangled together in his head, and heads for the door before Kimi can ask again.
+
+--- PART 8 ---
+
+[NARRATOR]
+Later that afternoon, Danny Su finds Jonah on the dock path again, headed back toward the shed on his own.
+
+[CAPTAIN_DANNY_SU | style: casual, deliberately unhurried]
+Hey. Saved you a walk.
+
+[JONAH_BRAMWELL | style: wary, direct]
+I was just going to take another look at that shed.
+
+[CAPTAIN_DANNY_SU | style: easy, rehearsed-sounding]
+Don't need to. I figured it out. Got a drifter's been bunking in there — probably came over on a supply boat, saw an empty building, made himself at home. I've been meaning to run him off, just haven't had the hour to spare with the storm work piling up.
+
+[SFX: a loose halyard clanging against a mast in the wind]
+
+[JONAH_BRAMWELL | style: skeptical, careful]
+A drifter. Okay. So why didn't you say that yesterday, when I told you about the footprints?
+
+[CAPTAIN_DANNY_SU | style: momentary beat, then smooth]
+Because yesterday I didn't know. I went and checked myself last night, saw somebody'd been in there sleeping. Didn't want to get everybody stirred up over some guy passing through before I'd even confirmed it.
+
+[JONAH_BRAMWELL | style: still processing]
+The crates looked moved. That's a lot of settling in for somebody passing through.
+
+[CAPTAIN_DANNY_SU | style: shrugging it off]
+People make themselves comfortable when they think no one's watching. I'll clear him out before the winds get bad. Not worth losing sleep over.
+
+[JONAH_BRAMWELL | style: quiet, unconvinced but not pushing]
+Alright. Just — let me know if you need a hand running him off.
+
+[CAPTAIN_DANNY_SU | style: relieved, light]
+Will do. Go check on your grandfather's oxygen order, that's the real fire today.
+
+[NARRATOR]
+Jonah heads off toward the clinic road. Danny watches him go until he's out of sight.
+
+[SFX: gravel crunching under boots, fading]
+
+[NARRATOR]
+Alone, Danny lets his shoulders drop, certain the matter is closed.
+
+[CAPTAIN_DANNY_SU | style: murmured, to himself, exhaling]
+Okay. Okay.
+
+[NARRATOR]
+Down the path, Jonah slows near the tavern, turning the timeline over once more — Danny's story doesn't quite match the order things happened, and some part of him isn't ready to let that go.
+
+--- PART 9 ---
+
+[NARRATOR]
+Evening now, day two of the countdown, five days out from landfall. At the old Sato house above the ferry road, Kimi works alone, boarding the last windows before the wind turns.
+
+[SFX: a hammer striking a nail into wood]
+
+[KIMI_SATO | style: focused, a little tired]
+Two more panels on this side and I'm done.
+
+[SFX: a hammer striking a nail into wood x2, 0.4s apart]
+
+[KIMI_SATO | style: muttering to herself]
+Should've started with the back windows. Wind's coming off the water tonight, not the road.
+
+[KIMI_SATO | style: casual, dialing, still working]
+Hey. Sorry to bother you again — the insurance office wants to know if the file note needs a supervisor signature, or if yours on its own is enough.
+
+[NURSE_MEI_CHEN | style: carefully even, over the phone]
+Mine's enough. It's an archival record, not an active chart. One signature, that's all they need.
+
+[KIMI_SATO | style: light, unaware]
+Good. One less thing to chase before the storm. You okay, though? You still sound a little wound up from this afternoon.
+
+[NURSE_MEI_CHEN | style: a beat too quick, covering]
+I'm fine. It's storm week. Everyone on that floor sounds wound up right now.
+
+[KIMI_SATO | style: accepting, not quite convinced]
+Fair enough. Go home before the wind picks up any more, Mei. Don't stay late over a form.
+
+[SFX: a phone call disconnecting, a soft beep]
+
+[KIMI_SATO | style: quiet, half to herself]
+Wound up. Sure.
+
+[SFX: a hammer striking a nail into wood]
+
+[KIMI_SATO | style: softer, setting the hammer down]
+You'd have this whole house boarded by now, wouldn't you. You always said I was too slow with my hands.
+
+[KIMI_SATO | style: gentle, wry]
+I found your file today, actually. Some insurance thing, nothing exciting. Twenty-two years and you're still on a form somewhere, still making paperwork for me.
+
+[KIMI_SATO | style: quieter, more to herself than the photograph]
+Mei got strange about it, though. Just for a second. Probably nothing. Everybody's strange this week.
+
+[SFX: a hammer striking a nail into wood x2, 0.4s apart]
+
+[KIMI_SATO | style: resolved, picking the pace back up]
+One more panel. Then I'll believe you rested easy in this house, at least.
+
+--- PART 10 ---
+
+[NARRATOR]
+Evening. The clinic corridor has emptied. In his locked office, Dr. Theo Aldridge, the island's longtime director, waits for the last footsteps to fade.
+
+[DR_THEO_ALDRIDGE | style: quiet, controlled]
+Everyone gone. Good.
+
+[SFX: a desk drawer sliding open]
+
+[DR_THEO_ALDRIDGE | style: low, measuring under his breath]
+Twelve. No more than twelve, or you're useless by nine.
+
+[SFX: a small bottle cap unscrewing]
+
+[DR_THEO_ALDRIDGE | style: barely audible, almost clinical]
+Enough to get through rounds. Not enough to slow the hands.
+
+[NARRATOR]
+He catches his reflection in the darkened window glass.
+
+[DR_THEO_ALDRIDGE | style: tired, private, unguarded]
+Six weeks. Look at you.
+
+[DR_THEO_ALDRIDGE | style: steadying himself, resolve hardening]
+Careful. That's all this week needs from you. Careful, and quiet, same as it's always been.
+
+[SFX: the bottle cap being screwed back on]
+
+[NARRATOR]
+He puts the bottle away, straightens his coat, and unlocks the door.
+
+[DR_THEO_ALDRIDGE | style: composed, professional mask sliding back on]
+Rounds. Let's go.
+
+[SFX: a key turning in a lock]
+
+--- PART 11 ---
+
+[NARRATOR]
+Night falls on Halyard Cay, day two of the countdown closing with five days left before Odette makes landfall. The clinic empties out, lights going dark room by room.
+
+[NURSE_MEI_CHEN | style: tired, methodical]
+Last chart's logged. Go home, Kimi. Get some sleep before tomorrow.
+
+[KIMI_SATO | style: warm but distracted]
+You too. You've had that look all day.
+
+[NURSE_MEI_CHEN | style: covering, light]
+Storm week. Everyone's got that look.
+
+[SFX: a filing cabinet drawer sliding shut and latching]
+
+[NARRATOR]
+Kimi gathers her bag and steps out into the wind. Mei watches the door a moment longer than she needs to.
+
+[DR_SOPHIE_KANG | style: quiet, entering]
+Building's clearing out. You heading home too?
+
+[NURSE_MEI_CHEN | style: even]
+Soon. Just closing up the records room.
+
+[DR_SOPHIE_KANG | style: careful, testing]
+Dr. Aldridge get off alright? He still looked stiff when I saw him earlier.
+
+[NURSE_MEI_CHEN | style: neutral]
+He's tougher than he looks. Always has been.
+
+[NARRATOR]
+Outside, the ferry dock sits quiet under a rising wind, the shed's crates undisturbed since Danny last checked them.
+
+[CAPTAIN_DANNY_SU | style: low, alone]
+One more day like today and I'm out of room to move.
+
+[SFX: a rope creaking taut against a cleat]
+
+[NARRATOR]
+Across town, the last hammer blow lands on the final shutter over the Sato house windows.
+
+[KIMI_SATO | style: to herself, unsettled]
+Just stress. That's all it is.
+
+[NARRATOR]
+Behind a locked office door already gone dark, a bottle sits capped in its drawer, the man who uses it long gone for the night.
+
+[SFX: a heavy exterior door closing and a lock turning]
+
+[NARRATOR]
+The clinic stands empty now, every light out, every secret from the day still exactly where it was left — only closer to the surface than before. Offshore, past the reef, Odette's outer bands keep turning toward the island, patient and indifferent to the six seats that won't be enough for everyone who needs one.
+

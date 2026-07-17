@@ -55,10 +55,17 @@ shaky" waren echte Produktions-Cues, für die ElevenLabs Geld gekostet hat):
   bedeutung]`-Zeilen werden vor TTS gestrippt und der nächsten Section
   via extract_vocab_notes wieder vorgelegt.
 - `crime_drama` — ein durchgehender Fall pro Staffel; `episodes[n].case`
-  ist EIN Objekt (`solution`, `objective_facts`,
-  `character_knowledge: {ROLE: {knows, hides, believes_falsely}}`), über
-  alle Episoden konsistent, nur das Wissen wächst. Der Knowledge-Split
-  lässt Widersprüche/Lügen organisch entstehen statt behauptet zu werden.
+  ist EIN Objekt (`solution`, `objective_facts`, `character_knowledge:
+  {ROLE: "Fließtext-Wissensstand"}`), über alle Episoden konsistent, nur
+  das Wissen wächst. Der Knowledge-Split lässt Widersprüche/Lügen organisch
+  entstehen statt behauptet zu werden. **Seit 17.07.2026 ist
+  `character_knowledge.ROLE` freier Fließtext** (1-3 Sätze: was die Figur
+  weiß/verbirgt/fälschlich glaubt, als Prosa statt drei separater Listen)
+  statt `{knows: [...], hides: [...], believes_falsely: [...]}` — weniger
+  JSON-Verschachtelung, geringeres Abriss-Risiko bei der Generierung (siehe
+  fabrik/cli/CLAUDE.md). Alt-Format bleibt für vor dem Umbau generierte
+  Serien unterstützt (`validate_case_block`/`_build_single_case_block`
+  akzeptieren beide Formen).
 - `soap_opera` — gleiche Mechanik, aber `case` ist eine LISTE unabhängiger
   Threads (je `label` + gleiches Sub-Schema): eine Soap-Episode treibt
   mehrere Storylines parallel. Section-Zahl wird ZUSÄTZLICH pro Episode
@@ -99,6 +106,17 @@ shaky" waren echte Produktions-Cues, für die ElevenLabs Geld gekostet hat):
   fiele je nach Backend auf `default_style` bzw. leeren Instruct zurück,
   Details in fabrik/audio/CLAUDE.md) — Style/Emotion klang auf der
   Erzähler-Rolle hörbar "off" (User-Feedback).
+- **NARRATOR-Buchhaltungs-Verbot + Regieanweisungs-Verbot (17.07.2026,
+  crime_drama/soap_opera/shorts):** der NARRATOR darf nie Thread-Labels,
+  das Wort "thread"/"storyline" oder Szenennummern aussprechen (Produktion:
+  15-43 hörbare Leaks pro Serie, teils spoilernd — "Frame-Up" verriet die
+  Unschuld einer Figur); und keine nackten 3.-Person-Aktionssätze zwischen
+  Dialogzeilen (der Parser hängt sie an den laufenden Sprecher an, das TTS
+  spricht sie mit) sowie keine Fremd-Sprecher unter Hauptfiguren-Tags.
+  Deterministisch abgesichert durch `find_narrator_leaks()` (Retry) und
+  `warn_stage_directions()` (Warnung) in script_writer.validate_parts —
+  erreicht wie alle Master-Template-Änderungen nur NEUE Serien
+  (references/-Kopien bleiben eingefroren, MWP-Semantik).
 - **section_words-Lektion:** ein Override, der nur 10–20% unter dem
   Episoden-Default liegt, lässt den Writer zuverlässig unterschießen —
   ein wirklich kurzer Beat heißt ~100–200 Wörter, kein kosmetischer
