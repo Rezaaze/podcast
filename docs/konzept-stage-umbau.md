@@ -229,66 +229,122 @@ Modell, nicht gegen selbstgemachte Redundanz.
 
 ### Phase 1 — Verträge schreiben (reine .md-Arbeit, gefahrlos)
 
-- [ ] **T1.1** `templates/_workspace/stage_01_CONTEXT.md` wird Routing über
+- [x] **T1.1** `templates/_workspace/stage_01_CONTEXT.md` wird Routing über
       die drei Teilstages.
-- [ ] **T1.2** Drei neue Vertrags-MDs: `stage_01a_CONTEXT.md`,
+- [x] **T1.2** Drei neue Vertrags-MDs: `stage_01a_CONTEXT.md`,
       `stage_01b_CONTEXT.md`, `stage_01c_CONTEXT.md` — je Inputs / exakte
-      Ausgabeform / Review-Gate.
-- [ ] **T1.3** `templates/soap_opera/` + `templates/crime_drama/`: den
-      Creator-Prompt in drei Prompt-Dateien zerlegen
-      (`CANON_PROMPT.md`, `ARC_PROMPT.md`, `EPISODE_PROMPT.md`). Die
-      übrigen vier Templates (narration, media_analysis, language_course,
-      shorts) bleiben einstufig — sie haben keine Threads und kein
-      Batch-Problem.
-- [ ] **T1.4** `templates/CLAUDE.md` + `fabrik/cli/CLAUDE.md` nachziehen.
+      Ausgabeform / Review-Gate. Korrigiert nach Phase-3-Erkenntnis:
+      canon.json/arc.json sind Checkpoint-Zwischenstand, kein eigenes
+      Workspace-Review-Gate (siehe dort).
+- [x] **T1.3** `templates/soap_opera/` + `templates/crime_drama/`: den
+      Creator-Prompt in drei Prompt-Dateien zerlegt
+      (`CANON_PROMPT.md`, `ARC_PROMPT.md`, `EPISODE_PROMPT.md`), alte
+      `EPISODES_CREATOR_PROMPT.md` in Phase 3 gelöscht (erst nachdem der
+      Code sie nicht mehr brauchte). Die übrigen vier Templates bleiben
+      einstufig.
+- [x] **T1.4** `templates/CLAUDE.md` + `fabrik/cli/CLAUDE.md` nachgezogen
+      (Phase 1 UND nochmal vollständig in Phase 3, als der tatsächliche
+      Code stand).
 
-### Phase 2 — Schema (Code, aber ohne Generierung)
+### Phase 2 — Schema (Code, aber ohne Generierung) ✅ abgeschlossen 17.07.2026
 
-- [ ] **T2.1** `config.py`: `case_canon`/`threads` als Top-Level-Feld
-      zulassen (heute in `VALID_TOP_KEYS` verboten und vor dem Speichern
-      gelöscht); Validator dafür.
-- [ ] **T2.2** `config.py`: Section-Objekt validieren (`what` Pflicht, `who`
-      gegen `voices`, `thread` gegen `threads`, `location` gegen
-      `locations`) — String-Sections weiter akzeptieren (Bestandsserien).
-- [ ] **T2.3** Helfer `section_text(section)` in `fabrik/core/` — gibt bei
-      Alt-Strings den String zurück, bei Objekten die erzählte Fassung.
-      Die acht Lesestellen (`script_writer` ×5, `podcast_maker`,
-      `sfx_plan`, `thumbnail_writer`, `location_prompts`) darauf umstellen.
-- [ ] **T2.4** `build_case_file_block`: Label gegen `threads` auflösen, mit
-      Fallback auf per-Episoden-Fakten (Alt-Serien).
+- [x] **T2.1** `config.py`: `threads` als Top-Level-Feld zugelassen
+      (`VALID_TOP_KEYS`); Validator reicht durch `validate_case_block`.
+      (`case_canon` bewusst NICHT aufgenommen — das war ein rein
+      Batch-internes Konzept, das mit dem Batch-Apparat in Phase 3
+      komplett entfiel.)
+- [x] **T2.2** `config.py`: Section-Objekt-Form validiert (`is_section_list`/
+      `is_object_section_list`, `what` Pflicht, `who` gegen `voices`,
+      `thread` gegen `threads`, `location` gegen `locations`, `words`
+      wiederverwendet `validate_words_value`) — String-Sections bleiben
+      gültig, 17 Bestandsserien gegengeprüft (0 neue Fehler).
+- [x] **T2.3** `fabrik/core/sections.py` (neu): `section_text`/
+      `section_title`/`section_location`/`section_words_override`. Alle 8
+      Lesestellen umgestellt: `script_writer.py` (×7 Stellen, nicht ×5 wie
+      geschätzt — `resolve_section_cfg`, `build_beats_prompt`,
+      `build_section_prompt`, `generate_episode_meta`, Hauptschleife,
+      `_generate_sections_parallel`), `podcast_maker.py`
+      (`get_section_locations`), `sfx_plan.py` (`collect_sections`),
+      `thumbnail_writer.py`. `location_prompts.py` liest entgegen der
+      ursprünglichen Annahme gar kein `section_locations` (nur den
+      Top-Level-`locations`-Block) — keine Änderung nötig.
+- [x] **T2.4 entfällt ersatzlos** — siehe Phase-3-Log: Fakten-Injektion
+      passiert beim episodes.json-Zusammenbau (Ersatz für
+      `apply_case_canon`), nicht bei jedem `build_case_file_block()`-Lese-
+      zugriff. `episode.case[]` trägt dadurch schon vollständig
+      `solution`/`objective_facts`, `build_case_file_block` blieb
+      unangetastet.
 
-### Phase 3 — Generierung (das Herzstück)
+### Phase 3 — Generierung (das Herzstück) ✅ abgeschlossen 17.07.2026
 
-- [ ] **T3.1** `generate_canon()` + Validator + Retry (ersetzt
-      `generate_skeleton_with_retry` teilweise).
-- [ ] **T3.2** `generate_arc()` + Validator (Zuteilung eindeutig, Threads
-      existieren) + Retry.
-- [ ] **T3.3** `generate_episode_concept(n)` — ein Aufruf pro Episode,
-      parallel über `ThreadPoolExecutor` (Muster aus
-      `generate_series_batched` wiederverwenden, inkl. Checkpoint).
-- [ ] **T3.4** Checkpoint auf die neue Struktur (canon/arc/episode-N
-      einzeln); Schlüssel wie heute aus den Aufruf-Parametern
-      (`_checkpoint_key`, NICHT aus dem substituierten Prompt).
-- [ ] **T3.5** Die 227 Zeilen löschen (Tabelle oben) und den Batch-Apparat
-      ausbauen.
+- [x] **T3.1** `generate_canon()` + `validate_canon()` + Retry.
+- [x] **T3.2** `generate_arc()` + `validate_arc()` (Zuteilung eindeutig,
+      Threads existieren, kein Event doppelt, jede Episode Wendepunkt oder
+      `breather`) + Retry.
+- [x] **T3.3** `generate_episode_concept(n)` — ein Aufruf pro Episode,
+      parallel über `ThreadPoolExecutor` (`EPISODE_CONCEPT_PARALLEL_CAP=4`).
+- [x] **T3.4** Checkpoint auf die neue Struktur: `_cached_unit()`
+      verallgemeinert `_cached_batch` für canon/arc/episode-N einzeln,
+      Schlüssel weiterhin `_checkpoint_key()` aus den Aufruf-Parametern.
+- [x] **T3.5** Die 227 Zeilen (plus Batch-Apparat: `compute_batch_size`,
+      `build_skeleton_prompt`/`validate_skeleton`/
+      `generate_skeleton_with_retry`, `generate_batch_with_retry`,
+      `generate_series_batched`, `EXPAND_BATCH_PROMPT`) gelöscht.
+      **Design-Abweichung ggü. Plan:** `threads` ist jetzt bei BEIDEN
+      Templates eine Liste (crime_drama: genau 1 Eintrag statt eines
+      Einzelobjekts) — vereinheitlicht die Section-`thread`-Validierung
+      gegen `threads[].label` ohne Template-Fallunterscheidung im Schema.
+      Fakten-Injektion (`solution`/`objective_facts` aus `canon.threads` in
+      jedes `episode.case[]`) ersetzt `apply_case_canon()` beim Zusammenbau
+      in `generate_case_based_series()` — `build_case_file_block()` musste
+      dafür NICHT angefasst werden (T2.4 entfiel dadurch ersatzlos).
 
-### Phase 4 — Der eine verbleibende Check
+### Phase 4 — Rausch-Check + Reconciliation-Pass ✅ abgeschlossen 17.07.2026
 
-- [ ] **T4.1** In `validate_parts`: Sprechtext ohne einen einzigen
-      Buchstaben (`—`), Platzhalter-Text (`placeholder`/`TODO`/`TBD`),
-      Nicht-ASCII außerhalb der Serien-Sprache, Markdown-Marker. Alles
-      retryable, alles deterministisch. Belege: `seven_seats` ep2/ep6,
-      `the_glasshouse_vote` ep2/ep5.
+- [x] **T4.1** `find_noise()` in `validate_parts`: Sprechtext ohne
+      Buchstaben, Platzhalter (`placeholder`/`TODO`/`TBD`), Markdown-Reste,
+      fremdsprachige Zeichen (Han/Hiragana-Katakana/Hangul) außerhalb der
+      Serien-Sprache. Retryable, deterministisch. Gegen 236 Parts aus
+      seven_seats + the_understudy getestet: 1 echter Fund (Interpunktion-
+      only-Zeile), 0 False Positives.
+- [x] **Ergänzung ggü. ursprünglichem Plan** (aus separater Recherche zu
+      vergleichbaren Long-Form-Generierungsproblemen, siehe Session vom
+      17.07.2026): `check_turning_point_coverage()` — Reconciliation-Pass
+      NACH allen 01c-Calls, ein LLM-Judge liest `arc.json` gegen die
+      fertigen Sections, mit 5x Self-Consistency-Voting (FlawedFictions-
+      Muster) gegen Judge-Rauschen. Fügt sich unverändert in
+      `repair_series()` ein.
 
-### Phase 5 — Verifikation
+### Phase 5 — Verifikation ✅ abgeschlossen 17.07.2026
 
-- [ ] **T5.1 Mini-Serie** (2 Episoden, soap_opera) durch alle drei
-      Teilstages, `generate_episode check`, ein Skript schreiben.
-- [ ] **T5.2 Echte Serie** (10 Episoden, soap_opera) — der Fall, der heute
-      gescheitert ist. Messen: Section-Tiefe pro Episode (Ziel: gleichmäßig
-      ≥ 13, keine Batch-Signatur), `turning_points` je genau einmal gespielt,
-      Kanon-Drift strukturell unmöglich.
-- [ ] **T5.3** Vergleich gegen T0.3 in dieses Dokument schreiben.
+- [x] **T5.1 Mini-Serie** (2 Episoden, soap_opera, `common_grounds`) durch
+      alle drei Teilstages, `generate_episode check` grün, Skript für
+      Episode 1 tatsächlich geschrieben (Beats + 4 Sections parallel,
+      Metadaten) — sauberer, gut lesbarer Dialog, keine Format-/Noise-
+      Funde. Reconciliation-Check: 5/5 Voting-Läufe sauber.
+- [x] **T5.2 Echte Serie** (10 Episoden, soap_opera, `the_meridian_blend`,
+      genau der Fall, der im Ein-Schuss-/Batch-Modus zuverlässig
+      scheiterte) — Kanon + Bogen je ein Call, alle 10 Episoden-Konzepte
+      im ERSTEN Versuch erfolgreich (keine Retries nötig), Reconciliation-
+      Check 5/5 Voting-Läufe sauber ("jeder Wendepunkt genau einmal
+      erzählt"), Inhalts-Review fand 2 echte Akzent-Casting-Befunde (keine
+      False Positives), `generate_episode check` grün.
+- [x] **T5.3 Vergleich gegen T0.3:**
+
+      | Serie | Eps | min avg | max avg | Faktor |
+      |---|---|---|---|---|
+      | **the_meridian_blend (NEU, 01a/01b/01c)** | 10 | 19.3 | 26.2 | **1.35** |
+      | facades (beste Alt-Serie) | 10 | 23.4 | 31.3 | 1.3 |
+      | chain_of_custody (schlechteste Alt-Serie) | 10 | 3.0 | 32.1 | 10.7 |
+
+      `the_meridian_blend` liegt auf dem Niveau der BESTEN Alt-Serie —
+      ohne dass irgendein Batch-Mechanismus mehr existiert, der eine
+      Section-Tiefe-Grenze ziehen könnte. Kanon-Drift strukturell
+      verifiziert unmöglich (`solution` pro Thread: exakt 1 distinkter Text
+      über alle 10 Episoden, programmatisch geprüft). Kontinuität nicht
+      separat gemessen (kein Vorher-Nachher-Datenpunkt verfügbar), aber
+      kein Hinweis auf das im Plan befürchtete Risiko in den beiden
+      generierten Skripten.
 
 ## Rückwärtskompatibilität
 
