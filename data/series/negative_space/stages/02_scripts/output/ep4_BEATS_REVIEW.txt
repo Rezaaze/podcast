@@ -1,3 +1,0 @@
-1 Hinweis(e):
-
-- Scene 7: Beat 5 states 'Lina still doesn't know the deadline has moved,' but the case file establishes Lina 'knows: The landlord has sent a second, harsher notice moving up the deadline.' This directly contradicts the character knowledge boundary.
