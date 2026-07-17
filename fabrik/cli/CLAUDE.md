@@ -22,106 +22,131 @@ einzige Serie).
 
 ## create_series.py
 
-**⚠️ In Umbau (Branch `mwp-umbau`, Plan: `docs/konzept-stage-umbau.md`):**
-für `CASE_BASED_TEMPLATES` wird der Ein-Schuss-/Batch-Mechanismus unten
-durch drei kleine, aufeinander aufbauende Calls ersetzt (Kanon → Bogen →
-Episoden einzeln parallel) — Vertrag bereits geschrieben
-(`templates/_workspace/stage_01{a,b,c}_CONTEXT.md`,
-`templates/{crime_drama,soap_opera}/{CANON,ARC,EPISODE}_PROMPT.md`), der
-Generierungscode in `create_series.py` (unten beschrieben) läuft zum
-Zeitpunkt dieses Absatzes noch auf dem ALTEN Batch-Pfad — dieser Abschnitt
-wird erst nach Phase 3 des Umbau-Plans überschrieben, nicht schon jetzt,
-um keine Dokumentation zu schreiben, die dem tatsächlichen Code
-widerspricht.
-
 `python3 -m fabrik.cli.create_series "Topic" [--episodes N] [--minutes M]
 [--locations L] [--template T] [--no-review] [--fix]`
 
 `--template` nimmt jeden Ordnernamen unter `templates/` (kein argparse-
 `choices`); aktuell: narration, media_analysis, language_course,
-crime_drama, soap_opera, shorts.
+crime_drama, soap_opera, shorts. Zwei grundverschiedene Generierungspfade,
+je nach `template in CASE_BASED_TEMPLATES` (= crime_drama/soap_opera):
 
-- `--minutes` steuert die Episodenlänge: `estimate_section_count()` leitet
-  die Section-Zahl aus minutes (WORDS_PER_MINUTE=150) und den
-  `parts_per_section`/`words_per_part_target`-Literalen des Templates ab —
-  kein Template hardcodet mehr eine Section-Zahl. Warnt laut bei
-  unparsebaren Format-Werten. (media_analysis-Sonderfall: siehe
-  templates/CLAUDE.md — dort skaliert --minutes nur die Wortziele.)
+- `--minutes` steuert die Episodenlänge: `estimate_section_count()`
+  (Ein-Schuss-Pfad) bzw. `estimate_section_count_from_format()`
+  (case-based Pfad, liest aus dem bereits generierten `canon.format` statt
+  aus einer Template-Datei) leiten die Section-Zahl aus minutes
+  (WORDS_PER_MINUTE=150) und `parts_per_section`/`words_per_part_target`
+  ab. Warnt laut bei unparsebaren Format-Werten. (media_analysis-
+  Sonderfall: siehe templates/CLAUDE.md — dort skaliert --minutes nur die
+  Wortziele.)
 - `--locations` steuert, wie viele wiederverwendbare Szenen-Orte
   soap_opera erfindet; von Templates ohne Location-Support ignoriert.
-- **`generate_with_retry` (MAX_ATTEMPTS=3):** ungültiges JSON,
-  `validate_data`-Fehler UND falsche Episodenzahl werden wörtlich in den
-  nächsten Versuch zurückgefüttert (gleiches Muster wie
-  `call_claude_with_retry` beim Skript-Writer) — Count-Mismatch ist ein
-  retryable ERROR, keine Warnung. Timeout/transienter CLI-Fehler ist
-  ebenfalls retryable (ohne Feedback — es gibt nichts zu korrigieren);
-  nur "claude not found"/"not logged in" brechen sofort ab.
-- **Best-Effort-Fallback** (Gegenstück zu validate_parts' fallback_safe):
-  sind alle Versuche schema-sauber und nur die Episodenzahl daneben, wird
-  der Versuch mit der nächstliegenden Zahl genommen statt abzubrechen —
-  nur ein echter validate_data-Fehler disqualifiziert einen Versuch, ein
-  falscher Count allein nie. `sys.exit(1)` nur, wenn über alle Versuche
-  keiner fallback-sicher war.
-- **`check_section_detail()` — Section-Tiefe als Retry-Gate (17.07.2026).**
-  Nur für `CASE_BASED_TEMPLATES`: deren EPISODES_CREATOR_PROMPT.md verlangt
-  wörtlich `"section title 1 (scene description, name which thread it belongs
-  to)"`, während narration ausdrücklich einen TITEL will ("The Hook & The Man
-  with a Thousand Faces") — der Check erzwingt also nur den Template-Vertrag,
-  deshalb das Gate. Meldet jede Episode mit Ø < `SECTION_DETAIL_MIN_AVG_WORDS`
-  (=10) Wörtern pro Section als retryable Fehler MIT Feedback
-  (`SECTION_DETAIL_FEEDBACK` zeigt ein Positiv- und drei Negativbeispiele);
-  läuft im Ein-Schuss-Pfad (`generate_with_retry`, fallback-SICHER, geht aber in
-  `badness` ein, damit der Best-Effort den erzähltesten Versuch nimmt) UND pro
-  Batch (`generate_batch_with_retry`, `start_num=start` → echte Episodennummer).
-  **Bewusst NICHT in `config.validate_data()`:** das ist ein
-  Generierungs-Qualitätsgate, kein Schema. Dort eingebaut wären 6 von 11
-  Bestands-Soap-Serien ab sofort ungültig und `generate_episode` würde sie
-  verweigern.
 
-  **Warum das die zweitwichtigste Wurzelursache ist** (Nachmessung 17.07.2026
-  über 15 Produktionsserien): die Section-Tiefe ist der stärkste verfügbare
-  Prädiktor für Skript-Qualität — und sie ist eine Eigenschaft des BATCHES, kein
-  Zufall pro Episode. `the_understudy` (Batches 1-3/4-6/7-9/10): Ø 12.4/12.8/12.8
-  — 4.2/4.0/3.8 — 6.9/7.0/7.2 — 22.5. Innerhalb jedes Batches konstant, zwischen
-  den Batches um den Faktor 6 verschieden; jeder Batch ist eben ein eigener
-  Claude-Aufruf und nichts fixierte die Granularität. Dasselbe Muster in
-  `the_glasshouse_vote` (ep1-6 Ø 18-23, ep7-10 Ø 3.7-4.1) und spiegelbildlich in
-  `the_founding_collection` (ep1-3 Ø 8-10, ep4-8 Ø 21-29). Die Fehlerdichte folgt
-  invers: glasshouse ~alle schweren Fehler in ep7-10, founding ~39 in ep1-4 vs. 2
-  in ep8, `seven_seats` (gleichmäßig Ø 15-25) die sauberste Serie.
-  **Der Kausalpfad:** aus `"Declan's Turn"` (ep9) und `"The Ledger Laid Bare"`
-  (ep10) kann kein Writer ableiten, welche der beiden das Geständnis tragen soll
-  — beide Titel lesen sich gleich gut als "Declan legt die Bücher offen", und die
-  zwei Batches sehen einander nie (nur das gemeinsame Skeleton). Ergebnis: das
-  Geständnis wird zweimal gespielt. `case_canon` verhindert das NICHT — es
-  fixiert Fakten (Täter/Beweise/Daten), nicht die Ereignis-Zuteilung; deshalb ist
-  `check_case_drift` bei 0, während der Klimax doppelt läuft: die Zahlen stimmen
-  ja in beiden Fassungen. Genau dieselbe Signatur hatte `the_understudy` zwei
-  Tage früher (Doppel-Klimax ep9/ep10, ep9 dünn/ep10 reich) — unbemerkt, weil
-  nichts danach suchte. Der Beat-Layer BEMERKT die Kollision übrigens (ep10s
-  Beats schreiben "He tells the board everything *this time*"), kann sie aber
-  nicht auflösen: er muss für jede Section aus episodes.json Beats liefern und
-  darf keine streichen.
-- **`check_section_words_gaps()` läuft IMMER** (auch mit `--no-review`:
-  lokal, gratis, deterministisch): flaggt bei soap_opera jedes
-  `section_words.min`, das weniger als `SECTION_WORDS_MIN_GAP=80` Wörter
-  unter `format.words_per_part_min` liegt. Produktions-Lektion: ein
-  "sharp confrontation"-Override mit nur 10–20% Abschlag ließ den
-  Skript-Writer zuverlässig unterschießen — dieselben Sections failten
-  über alle Eskalationsstufen, bis der Override selbst als Ursache
-  identifiziert war. Das soap_opera-Creator-Prompt wurde entsprechend
-  verschärft (kurzer Beat = ~100–200 Wörter, kein kosmetischer Rabatt);
-  der Check ist das Sicherheitsnetz, falls das Planungsmodell es doch tut.
+### Nicht-CASE_BASED_TEMPLATES: Ein-Schuss (`generate_with_retry`)
+
+narration/media_analysis/language_course/shorts erzeugen die komplette
+`episodes.json` in EINEM Claude-Call. **`generate_with_retry`
+(MAX_ATTEMPTS=3):** ungültiges JSON, `validate_data`-Fehler UND falsche
+Episodenzahl werden wörtlich in den nächsten Versuch zurückgefüttert
+(gleiches Muster wie `call_claude_with_retry` beim Skript-Writer) —
+Count-Mismatch ist ein retryable ERROR, keine Warnung. Timeout/transienter
+CLI-Fehler ist ebenfalls retryable (ohne Feedback); nur "claude not
+found"/"not logged in" brechen sofort ab. **Best-Effort-Fallback**
+(Gegenstück zu validate_parts' fallback_safe): sind alle Versuche
+schema-sauber und nur die Episodenzahl daneben, wird der Versuch mit der
+nächstliegenden Zahl genommen statt abzubrechen. `sys.exit(1)`, wenn über
+alle Versuche keiner fallback-sicher war — kein Batch-Ausweichpfad mehr
+(siehe Umbau unten), diese vier Templates sind klein genug, dass er in der
+Praxis nie gebraucht wurde.
+
+### CASE_BASED_TEMPLATES: Kanon → Staffelbogen → Episoden (Stage-01-Umbau, 17.07.2026)
+
+**Ersetzt seit diesem Umbau (Begründung + Referenzdaten:
+`docs/konzept-stage-umbau.md`) den früheren Ein-Schuss-/Batch-Mechanismus
+komplett** (227+ Zeilen gelöscht: `apply_case_canon`, `check_case_drift`,
+`check_section_detail`, `check_section_words_gaps`, der ganze
+Skeleton/Batch-Apparat). Wurzelursache des alten Mechanismus: die
+Section-Tiefe war eine Eigenschaft des BATCHES, kein Zufall pro Episode
+(`the_understudy`: Ø 12.4/12.8/12.8 — 4.2/4.0/3.8 — 6.9/7.0/7.2 — 22.5,
+exakt an den Batch-Grenzen) — aus zwei Titeln wie `"Declan's Turn"` (ep9)
+und `"The Ledger Laid Bare"` (ep10) konnte kein Writer ableiten, welche
+Episode ein Geständnis tragen soll, wenn die beiden Batches einander nie
+sehen. `case_canon` (Fakten) verhinderte das NICHT — es fixierte
+Täter/Beweise, nicht die Ereignis-ZUTEILUNG.
+
+`generate_case_based_series()` (main()'s Einstiegspunkt für diesen Pfad)
+orchestriert drei Teilstages, jede mit eigenem Retry+Validierung und
+eigenem Checkpoint (`_cached_unit()`, s.u.):
+
+1. **`generate_canon()`** (01a, ein Call) → `canon.json`: Welt, Cast,
+   Orte, und `threads` — die EINE Stelle, an der Fakten eines
+   Handlungsstrangs stehen (`label`/`solution`/`objective_facts`).
+   `validate_canon()` baut dafür ein Kandidat-Dokument mit einer
+   Platzhalter-Episode und lässt `config.validate_data()` die schwere
+   Arbeit machen (Wiederverwendung statt Duplikation), ergänzt nur die
+   Thread-Anzahl-Regel (crime_drama genau 1, soap_opera 2-4).
+2. **`generate_arc()`** (01b, ein Call, sieht `canon.json`) → `arc.json`:
+   `turning_points: [{thread, episode, event}]` — **jeder Wendepunkt
+   genau EINER Episode zugeteilt**, das ist der Mechanismus, der einen
+   Doppel-Klimax strukturell unmöglich macht (analog zu einem
+   Writers'-Room-Breakdown: die Zuteilung steht fest, BEVOR einzelne
+   Episoden geschrieben werden). `validate_arc()` prüft deterministisch:
+   jeder `thread` existiert in `canon.threads`, jede Episode 1..N kommt
+   genau einmal vor, kein `event` dupliziert sich (Text-Vergleich), jede
+   Episode hat ≥1 Wendepunkt oder `breather: true`.
+3. **`generate_episode_concept()`** (01c, EIN Call PRO EPISODE, parallel
+   über `ThreadPoolExecutor`, `EPISODE_CONCEPT_PARALLEL_CAP=4`) → pro
+   Episode `sections: [{title, what, who, thread, location, words}]` +
+   `case: [{label, character_knowledge}]` + `intro_note`/`outro_note`.
+   Jeder Call sieht `canon.json` + `arc.json` (+ die eigenen Wendepunkte,
+   + Nachbar-Episoden-Kurzfassung für Kontinuität), aber NIE die parallel
+   generierten Sections anderer Episoden — keine Batch-Grenze mehr, an
+   der die Granularität kippen könnte.
+   **`validate_episode_concept()`** — Detailtiefe-Band als PRO-Section-Gate
+   (CONCOCT-Lektion, ersetzt das alte, nachträgliche
+   `check_section_detail`): jedes `what` muss zwischen `SECTION_WORDS_MIN`
+   (12) und `SECTION_WORDS_MAX` (30) Länge-Einheiten liegen (sprachneutral,
+   `textproc.count_length_units`), UND die Streuung innerhalb einer Episode
+   darf Faktor 3 nicht überschreiten (max/min der Section-Längen) — beides
+   führt VOR der Übernahme zum Retry mit Feedback, nicht erst danach.
+
+**Zusammenbau** (Ende von `generate_case_based_series()`): Kanon-Felder +
+`threads` + pro Episode `figure`/`theme` (aus `arc.json`) +
+`sections`/`case`/`intro_note`/`outro_note` (aus dem 01c-Ergebnis). Jeder
+`case`-Eintrag bekommt `solution`/`objective_facts` aus
+`canon.threads[label]` injiziert — der Ersatz für das alte
+`apply_case_canon()`, nur ohne Drift-Risiko: die Fakten stehen in
+`canon.threads` bereits EINMAL final fest, 01c liefert pro Episode nur
+noch `label`+`character_knowledge`. Danach ein finaler
+`config.validate_data()`-Sicherheitsnetz-Check auf dem Gesamtdokument.
+
+**Checkpoint (`_cached_unit()`):** canon/arc/jedes Episoden-Konzept sind
+eigene Einheiten unter `data/.create_series_staging/<hash>/{canon,arc,
+episode_N}.json` — verallgemeinert das alte `_cached_batch`-Muster
+(Schlüssel weiterhin `_checkpoint_key()`: Hash der AUFRUF-Parameter, NICHT
+des substituierten Prompts, aus demselben FIGURE_HISTORY-Grund wie zuvor).
+Ein optionales `validate_fn` verwirft einen Checkpoint, der seit einer
+Code-Änderung nicht mehr zum Schema passt (Muster aus dem alten
+Skeleton-Checkpoint). Scheitert eine Episode endgültig, bleiben die
+übrigen bereits generierten Einheiten erhalten — ein identischer Rerun
+generiert nur die fehlenden neu. Gelöscht wird der Ordner ERST nach
+erfolgreichem Schreiben der Serie (`_clear_checkpoint`, in `main()`,
+NACH `paths.write_latest`) — Review/Reparatur laufen dazwischen und
+sind selbst potenziell lange Claude-Aufrufe.
+
+**TODO (Phase 4 des Umbau-Plans, noch nicht implementiert):**
+Reconciliation-Pass nach allen 01c-Calls — ein LLM-Judge-Call (mit
+Self-Consistency-Voting) liest `arc.json` gegen die fertigen Sections und
+meldet, falls ein Wendepunkt versehentlich in >1 oder 0 Episoden erzählt
+wurde. Soll unter `--fix` durch denselben `repair_series()`-Dispatcher
+laufen wie das Inhalts-Review unten.
+
+### Gemeinsam für beide Pfade
+
 - **`review_series`** (LLM, skippbar via `--no-review`): Spoiler vor dem
   Finale, Widersprüche objective_facts/character_knowledge,
-  Accent-Casting-Regel, Episoden-Überlappung, und (Check 5) dieselbe
-  section_words-Diskrepanz in Prosaform — als Zweitschicht behalten, war
-  aber für den numerischen Fall allein unzuverlässig (übersah in einem
-  echten 10-Episoden-Review ALLE Instanzen), daher hat der
-  deterministische Check Priorität. Findings sind warn-only —
+  Accent-Casting-Regel, Episoden-Überlappung. Findings sind warn-only —
 - **AUSSER mit `--fix`:** `repair_series()` behebt die gemeldeten Findings
-  (Format seit 17.07.2026: `[{"episodes": [int, ...], "problem": str}]`,
-  liefert `review_series()` UND `check_case_drift()` gleichermaßen).
+  (Format: `[{"episodes": [int, ...], "problem": str}]`).
   **Dispatcher-Logik: Befunde werden nach Geltungsbereich AUFGETEILT** und
   jede Gruppe mit dem kleinstmöglichen Aufruf repariert (die Schritte bauen
   aufeinander auf, der zweite sieht das Ergebnis des ersten):
@@ -130,10 +155,12 @@ crime_drama, soap_opera, shorts.
      Figur/Thema/Thread-Labels der übrigen als Kontext), analog zu
      `repair_part()`/`apply_episode_fixes()` beim Skript-Writer, nur auf
      episodes.json-Ebene. Danach `_reconcile_case_canon_from_siblings()`:
-     erzwingt, dass `solution`/`objective_facts` der reparierten Episoden zur
-     ersten UNVERÄNDERTEN Episode desselben Thread-Labels passen (ersetzt
-     `apply_case_canon()`, das hier nicht mehr greift — `case_canon` ist zu
-     diesem Zeitpunkt längst aus `data` entfernt).
+     erzwingt, dass `solution`/`objective_facts` der reparierten Episoden
+     zur ersten UNVERÄNDERTEN Episode desselben Thread-Labels passen — bei
+     NEU generierten (case-based) Serien ein reiner No-op (die Felder
+     stehen dort schon einmalig in `threads`, nicht mehr pro Episode
+     dupliziert), bleibt aber für Alt-Serien mit dem Vor-Umbau-Schema
+     wirksam.
   2. Befunde OHNE Episodennummer (Akzent-Casting über `voices` & Co.) →
      `_repair_series_globals()`: schickt NUR die Top-Level-Felder ohne
      `episodes` (ein paar KB statt >100 KB). Harte Prompt-Regel: die
@@ -141,37 +168,24 @@ crime_drama, soap_opera, shorts.
      sie in `character_knowledge` und werden hier nicht angefasst;
      `validate_data()` fängt eine Umbenennung zusätzlich ab.
   3. Nur was Schritt 1/2 NICHT hinbekommen haben → `_repair_series_full()`,
-     der alte Weg, der die KOMPLETTE episodes.json in einem Call neu ausgibt.
-     Reines Auffangnetz. Bei nur teilweisem Erfolg gibt `repair_series()` den
-     bereits verbesserten Stand zurück (nicht None) — Teilerfolge zu
-     verwerfen wäre schlechter als sie zu behalten.
+     der volle Dokument-Umbau in einem Call. Reines Auffangnetz. Bei nur
+     teilweisem Erfolg gibt `repair_series()` den bereits verbesserten
+     Stand zurück (nicht None) — Teilerfolge zu verwerfen wäre schlechter
+     als sie zu behalten.
 
-  **Warum die Aufteilung (Bugfix 17.07.2026, Nutzer-Symptom "bei 10 Episoden
-  gibt es Probleme"):** vorher entschied der Dispatcher am SCHWÄCHSTEN
-  Befund — ein einziger Fund ohne Episodenbezug kippte ALLE Befunde in den
-  vollen Umbau. Da Akzent-Casting konstruktionsbedingt nie eine
-  Episodennummer trägt (es hängt am Top-Level-`voices`), landete praktisch
-  jeder `--fix`-Lauf im Komplettumbau. Der hat weder Kanon-Slimming noch
-  Batch-Aufteilung, muss >100 KB ausgeben und riss bei 10 Episoden
-  zuverlässig ab — nach drei Minuten Generierung bis zu 90 Minuten
-  scheinbarer Stillstand (3 × `compute_timeout(10)`=1800s blinde Retries).
-  6–8 Episoden liefen durch, weil das Dokument dort noch ~70–90 KB groß ist.
-  Gemessen nach dem Fix (echte 10-Episoden-Serie, Spoiler-Fund in Ep. 7 +
-  Akzent-Fund): 117s, beide Reparaturen im ersten Versuch, nur Episode 7
-  verändert.
+  **Warum die Aufteilung (Bugfix 17.07.2026, Nutzer-Symptom "bei 10
+  Episoden gibt es Probleme"):** vorher entschied der Dispatcher am
+  SCHWÄCHSTEN Befund — ein einziger Fund ohne Episodenbezug kippte ALLE
+  Befunde in den vollen Umbau, der bei 10 Episoden (>100 KB Ausgabe)
+  zuverlässig abriss. Gemessen nach dem Fix (echte 10-Episoden-Serie,
+  Spoiler-Fund + Akzent-Fund): 117s, beide Reparaturen im ersten Versuch,
+  nur die betroffene Episode verändert.
   **Abriss-Erkennung in ALLEN Reparatur-Pfaden:** `response_looks_truncated()`
-  fehlte hier bis 17.07.2026 komplett (nur die Generierungspfade hatten sie).
-  Jetzt brechen `_repair_series_episodes()` und `_repair_series_full()` beim
-  ersten Abriss ab, statt ein Längenproblem blind mit Feedback zu wiederholen.
-  Alle drei Wege re-validieren strukturell (eigene MAX_ATTEMPTS-Schleife,
-  gleiches Feedback-Muster). Bekommt keiner eine gültige Korrektur hin, bleibt
+  — `_repair_series_episodes()` und `_repair_series_full()` brechen beim
+  ersten Abriss ab, statt ein Längenproblem blind mit Feedback zu
+  wiederholen. Alle drei Wege re-validieren strukturell (eigene
+  MAX_ATTEMPTS-Schleife). Bekommt keiner eine gültige Korrektur hin, bleibt
   das Original unangetastet und die Findings werden gedruckt.
-- **Checkpoint-Reihenfolge (Bugfix 17.07.2026):** der Batch-Checkpoint
-  (siehe unten) wird ERST nach dem erfolgreichen Speichern der Serie
-  gelöscht, nicht schon direkt nach Skeleton+Batches — Review und
-  Reparatur laufen dazwischen und sind selbst potenziell lange
-  Claude-Aufrufe; ein Abbruch dort hätte sonst die schon fertige
-  Skeleton+Batch-Arbeit verloren.
 - **Slug-Reservierung:** `paths.reserve_unique_series()` legt den Wurzelordner
   atomar an (`exist_ok=False`) — der leere Ordner IST die Reservierung und
   schließt die TOCTOU-Lücke bei mehreren parallelen Cockpits (`list_series()`
@@ -184,119 +198,19 @@ crime_drama, soap_opera, shorts.
   Titels hieße `..._2`). Aufgeräumt wird ausschließlich die eigene, gerade
   angelegte Reservierung. `import_story.py` nutzt weiterhin das ältere,
   nicht-atomare `paths.unique_slug()`.
-- Creator-Templates tragen einen expliziten `{{FIGURE_HISTORY}}`-
-  Platzhalter (`build_prompt` errort laut, wenn er fehlt UND der Legacy-
-  ALREADY-USED-FIGURES-Regex nicht greift — kein stilles Auslassen).
+- Creator-/Kanon-Templates tragen einen expliziten `{{FIGURE_HISTORY}}`-
+  Platzhalter (`build_prompt`/`build_canon_prompt` errort laut, wenn er
+  fehlt UND der Legacy-ALREADY-USED-FIGURES-Regex nicht greift).
 - Timeout skaliert: `compute_timeout` = 180s/Episode, Floor 900s, Cap
-  3600s. Heartbeat alle 20s via `run_claude_process` (fabrik/core).
-- **Batch-Checkpoint (17.07.2026, Nutzer-Feedback "viel Ausfall/Zeitverlust"):**
-  `generate_series_batched()` speichert Skeleton und jeden erfolgreichen Batch
-  unter `data/.create_series_staging/<hash>/`. **Schlüssel = Hash der AUFRUF-
-  Parameter** (Thema/Template/Episodenzahl/Minuten/Orte/Modell/case_based,
-  `_checkpoint_key()`), berechnet in `main()` und an
-  `generate_series_batched()` durchgereicht — dieselbe Funktion räumt den
-  Ordner am Ende von `main()` wieder auf. **NICHT über den fertig
-  substituierten Prompt hashen** (bis 17.07.2026 genau so, und dadurch in der
-  Praxis wirkungslos): dort steckt via `build_prompt()` die komplette
-  FIGURE_HISTORY drin — eine global wachsende Datei, die JEDER
-  `generate_episode`-Lauf einer BELIEBIGEN anderen Serie fortschreibt. Bei
-  mehreren parallelen Cockpits änderte sich der Prompt-Text im Minutentakt,
-  der Hash mit ihm, und ein Rerun fand seinen eigenen Checkpoint nie wieder
-  (Nutzer-Symptom 17.07.2026: "er generiert gerade das Skeleton wieder,
-  warum?" — 7 fremde figure_history-Einträge in den 30 Min. seit dem
-  Fehllauf). Inhaltlich veraltet der Checkpoint dadurch nicht: die Figuren
-  dieser Serie sind längst gewählt, die Historie ist im Prompt nur eine
-  "nimm diese nicht"-Liste; ein Treffer kann höchstens eine inzwischen
-  woanders vergebene Figur wiederholen — dafür gibt es
-  `history.warn_on_repeated_figures()`. Scheitert danach EIN Batch endgültig (alle Retries +
-  Halbierungen erschöpft), bricht der Lauf wie bisher mit `sys.exit(1)` ab,
-  aber ein **identischer** Rerun (`_cached_batch()`) lädt Skeleton und alle
-  bereits erfolgreichen Batches von Platte und generiert nur noch den
-  fehlenden Teil. **Gelöscht wird der Ordner ERST ganz am Ende von `main()`**,
-  NACHDEM die Serie tatsächlich auf Platte geschrieben ist (nach
-  `paths.write_latest(slug)`) — NICHT schon direkt nach erfolgreichem
-  `generate_series_batched()`. Bugfix 17.07.2026 (Nutzer-Symptom: "kommt immer
-  dieser Teil" bei jedem Abbruch+Neustart): `main()` lässt nach Skeleton+Batches
-  noch Inhalts-Review und ggf. `--fix`-Reparatur laufen — beides eigene, oft
-  lange Claude-Aufrufe. Ein zu früh gelöschter Checkpoint (ursprünglich direkt
-  in `generate_series_batched()`) ließ einen Abbruch WÄHREND Review/Reparatur
-  die komplette, bereits fertige Skeleton+Batch-Arbeit verlieren — bei jedem
-  erneuten Versuch begann die teuerste Phase wieder bei null. Ein korrupter/
-  unvollständiger Checkpoint-Eintrag blockiert nie (führt nur zur
-  Neu-Generierung dieses einen Teils). Bewusst NUR im Batch-Pfad: der
-  Ein-Schuss-Pfad (`generate_with_retry`) ist atomar (eine Antwort, ganz oder
-  gar nicht) und fällt bei Scheitern ohnehin auf den Batch-Pfad zurück — dort
-  gibt es keinen Teil-Fortschritt, der sich zu retten lohnt. Kein Flag zum
-  Erzwingen einer Neu-Generierung nötig (jede Parameter-Änderung ändert den
-  Hash automatisch); ein bewusst frischer Lauf trotz identischer Parameter:
-  `rm -rf data/.create_series_staging/`.
-- **Staffel-Kanon im Batch-Pfad (17.07.2026):** Wurzelursache Nr. 1 der
-  12-Serien-Analyse (docs/script-analysis-2026-07-17/) war Konzept-Drift —
-  jeder Batch erfand die case-Blöcke unabhängig neu (cured_by_design: vier
-  Namen für denselben Antagonisten, Drift exakt an Batch-Grenzen; im
-  Ein-Schuss-Pfad sind solutions dagegen wortgleich über alle Episoden).
-  Fix in drei Schichten: (1) das Skeleton enthält bei CASE_BASED_TEMPLATES
-  ein Pflichtfeld `case_canon` (Threads mit label/solution/objective_facts,
-  EINMAL final festgelegt; `validate_skeleton(case_based=True)`); (2)
-  `EXPAND_BATCH_PROMPT` verpflichtet jeden Batch auf wörtliche Kopie;
-  (3) `apply_case_canon()` normalisiert nach dem Zusammensetzen
-  deterministisch zurück (Code statt LLM-Hoffnung) und `case_canon` wird
-  vor dem Speichern entfernt (kein episodes.json-Feld).
-  `apply_case_canon()` matcht über das Label; ein Fall OHNE Label matcht einen
-  Ein-Thread-Kanon (crime_drama: `case` ist ein einzelnes Objekt, ein Fall =
-  ein Thread). Ein Thread MIT abweichendem Label matcht dagegen NIE, auch
-  nicht bei nur einem Kanon-Thread (Fix 17.07.2026, vorher entschied allein
-  die Anzahl): das ist keine fehlende Zuordnung, sondern eine Umbenennung —
-  sie still zu kanonisieren gäbe dem Thread die richtigen Fakten unter dem
-  FALSCHEN Namen, und weil das Ergebnis dann sauber aussieht, bliebe es
-  unbemerkt (`check_case_drift` vergleicht Episoden untereinander, nicht
-  gegen den Kanon: benennen alle Episoden einheitlich um, fällt es nirgends
-  mehr auf).
-  Seit dem Latenz-Umbau (ebenfalls 17.07.2026) geben Batches `solution`/
-  `objective_facts` gar nicht mehr aus (nur label + character_knowledge) —
-  `apply_case_canon()` injiziert sie mechanisch; das halbiert grob die
-  Antwortgröße und damit das Abriss-Risiko. Threads ohne Kanon-Treffer
-  (erfundenes/umbenanntes Label) werden laut gewarnt.
-  **`check_case_drift(data)` läuft IMMER** (wie check_section_words_gaps,
-  auch mit --no-review, auch im Ein-Schuss-Pfad): meldet abweichende
-  solution/objective_facts pro Thread-Label und Einzel-Episoden-Labels
-  (Umbenennungs-Verdacht); mit `--fix` gehen Befunde an `repair_series()`.
-- **Batch-Pfad für große Case-Serien:** überschreiten crime_drama/
-  soap_opera (`CASE_BASED_TEMPLATES`) zusammen
-  `BATCH_THRESHOLD_EPISODE_MINUTES=120` Episodenminuten (17.07.2026 von
-  200 gesenkt — der Graubereich riss im Ein-Schuss oft ab und verbrannte
-  Minuten, bevor der Batch-Pfad ohnehin übernahm), weicht
-  `skip_one_shot` auf `generate_series_batched` aus (episodes.json in
-  mehreren Claude-Calls statt einem One-Shot am Output-Limit).
-  **Abriss-Erkennung (`response_looks_truncated`):** eine lange, an keiner
-  `{`-Position dekodierbare Antwort (oder ein "continuing in the next
-  reply") ist ein Längen-, kein Inhaltsproblem — Feedback-Retries können
-  das nie beheben. Der Ein-Schuss bricht dann sofort zum Batch-Pfad ab,
-  ein Batch überspringt seine Restversuche und halbiert direkt.
-  `compute_batch_size()` skaliert die Episoden/Batch nur mit Minuten — bei
-  vielen `case`-Threads/`character_knowledge` (viele Rollen, viele parallele
-  Storylines) skaliert der tatsächliche Output aber nicht rein
-  minuten-proportional (siehe dessen Docstring), ein Batch kann also trotz
-  "sicherer" Minutenzahl zu groß geraten. Beleg aus Produktion (16.07.2026):
-  ein soap_opera-Batch von 2 Episoden lieferte wiederholt eine mehrere
-  tausend Zeichen lange Antwort, die an KEINER `{`-Position vollständig
-  dekodierbar war — klares Indiz für eine mitten in der Struktur
-  abgeschnittene Antwort, nicht für API-Drosselung. **Deshalb halbiert
-  `generate_batch_with_retry()` einen Batch automatisch**, wenn alle
-  `MAX_ATTEMPTS` Versuche bei der aktuellen Größe scheitern (rekursiv, endet
-  spätestens bei count=1) — ein kleinerer Batch braucht eine kürzere Antwort
-  und bekommt sein eigenes frisches Versuchs-Budget, statt denselben zu
-  großen Versuch blind zu wiederholen.
+  3600s (Kanon/Bogen: `episode_count`; ein Episoden-Konzept:
+  `compute_timeout(1)`). Heartbeat alle 20s via `run_claude_process`
+  (fabrik/core). `compute_batch_timeout` (kleinerer Floor) lebt weiter,
+  aber nur noch für `_repair_series_episodes()`/`_repair_series_globals()`.
 - **Systemweite Claude-Aufruf-Bremse:** `fabrik/core/claude_cli.py::
   _claude_slot()` begrenzt zusätzlich, wie viele `claude`-Subprozesse
   GLEICHZEITIG über alle Cockpits/Serien/Threads hinweg laufen dürfen
   (`PF_MAX_CONCURRENT_CLAUDE`, Default **20** — hoch angesetzt als reine
-  Notbremse, siehe fabrik/core/CLAUDE.md: die ursprüngliche Sorge vor
-  Account-Drosselung bei mehreren Cockpits war anhand echter Session-Logs
-  NICHT belegbar, das tatsächliche Problem war die Batch-Halbierung oben).
-  Kein Ersatz dafür, nur Ergänzung für den Fall, dass doch einmal echte
-  Drosselung auftritt (erkennbar an `⚠️ Claude-CLI-Fehler`/`API-Fehler` mit
-  429/rate_limit/overloaded im Text).
+  Notbremse, siehe fabrik/core/CLAUDE.md).
 
 ## generate_episode.py
 

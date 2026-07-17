@@ -20,9 +20,28 @@ def build_series_prompt_block(topic: str, episode_count: int = 3,
                               location_count: int | None = None) -> str:
     """Exakt der Prompt, den create_series.py an die claude-CLI schickt —
     fertig zum manuellen Einfügen in Claude, falls create_series.py nicht
-    direkt ausgeführt werden soll."""
+    direkt ausgeführt werden soll.
+
+    CASE_BASED_TEMPLATES (crime_drama/soap_opera) laufen seit dem
+    Stage-01-Umbau über drei aufeinander aufbauende Prompts (Kanon -> Bogen
+    -> Episoden, siehe docs/konzept-stage-umbau.md) statt eines einzelnen —
+    der zweite/dritte Prompt braucht die Ausgabe des vorigen als Kontext und
+    lässt sich daher nicht im Voraus als EIN Copy-Paste-Block rendern. Hier
+    nur der erste Schritt (Kanon-Prompt) mit einem Hinweis; für den vollen
+    Ablauf ist `python3 -m fabrik.cli.create_series` der vorgesehene Weg."""
     if location_count is None:
         location_count = cs.DEFAULT_LOCATION_COUNT
+    if template in cs.CASE_BASED_TEMPLATES:
+        canon_prompt = cs.build_canon_prompt(
+            cs.load_stage_prompt(template, "CANON_PROMPT.md"),
+            topic, episode_count, minutes, location_count)
+        return (
+            f"HINWEIS: '{template}' läuft in drei Schritten (Kanon -> Staffelbogen -> "
+            f"Episoden) — unten nur Schritt 1 (Kanon). Schritt 2/3 brauchen die "
+            f"Kanon-Antwort als Eingabe und lassen sich nicht im Voraus rendern; "
+            f"für den kompletten Ablauf direkt "
+            f"'python3 -m fabrik.cli.create_series' verwenden.\n\n{canon_prompt}"
+        )
     return cs.build_prompt(cs.load_creator_prompt(template), topic, episode_count,
                            minutes, location_count)
 

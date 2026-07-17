@@ -87,9 +87,10 @@ def current_episodes_json():
 
 
 # Kurzbeschreibungen fürs Template-Dropdown. Die Liste der Templates selbst
-# kommt aus templates/ (jeder Ordner mit EPISODES_CREATOR_PROMPT.md) — neue
-# Templates erscheinen automatisch, nur eben ohne Beschreibung, bis sie hier
-# eingetragen sind.
+# kommt aus templates/ (jeder Ordner mit EPISODES_CREATOR_PROMPT.md ODER —
+# seit dem Stage-01-Umbau, die zwei CASE_BASED_TEMPLATES — CANON_PROMPT.md) —
+# neue Templates erscheinen automatisch, nur eben ohne Beschreibung, bis sie
+# hier eingetragen sind.
 TEMPLATE_DESCRIPTIONS = {
     "narration": "Ein-Sprecher-Anthologie",
     "language_course": "Sprachkurs-Hörspiel",
@@ -102,13 +103,18 @@ TEMPLATE_DESCRIPTIONS = {
 
 def list_templates() -> list:
     """Alle nutzbaren Templates (Ordner unter templates/ mit
-    EPISODES_CREATOR_PROMPT.md) + ob der Creator-Prompt {{LOCATION_COUNT}}
-    kennt — daran hängt, ob das Orte-Feld im UI sichtbar ist."""
+    EPISODES_CREATOR_PROMPT.md — Ein-Schuss-Templates — oder CANON_PROMPT.md
+    — die zwei CASE_BASED_TEMPLATES seit dem Stage-01-Umbau) + ob der
+    jeweilige Entry-Point-Prompt {{LOCATION_COUNT}} kennt — daran hängt, ob
+    das Orte-Feld im UI sichtbar ist."""
     result = []
     if not os.path.isdir(pf_paths.TEMPLATES_DIR):
         return result
     for name in sorted(os.listdir(pf_paths.TEMPLATES_DIR)):
-        prompt_file = os.path.join(pf_paths.TEMPLATES_DIR, name, "EPISODES_CREATOR_PROMPT.md")
+        template_dir = os.path.join(pf_paths.TEMPLATES_DIR, name)
+        prompt_file = os.path.join(template_dir, "EPISODES_CREATOR_PROMPT.md")
+        if not os.path.isfile(prompt_file):
+            prompt_file = os.path.join(template_dir, "CANON_PROMPT.md")
         if not os.path.isfile(prompt_file):
             continue
         try:

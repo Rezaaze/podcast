@@ -27,8 +27,14 @@ _STAGE_CONTEXT_MAP = {
     "stage_04_CONTEXT.md": paths.STAGE_VISUALS,
 }
 
-# Aus templates/<name>/ nach references/ kopierte Dateien
-_REFERENCE_FILES = ("PROMPT_TEMPLATE.md", "EPISODES_CREATOR_PROMPT.md")
+# Aus templates/<name>/ nach references/ kopierte Dateien — pro Template
+# existiert entweder EPISODES_CREATOR_PROMPT.md (Ein-Schuss-Templates) oder
+# die drei CANON/ARC/EPISODE_PROMPT.md (CASE_BASED_TEMPLATES, seit dem
+# Stage-01-Umbau); die Kopierschleife unten überspringt fehlende Dateien
+# ohnehin (os.path.exists-Check), beide Formen können also in derselben
+# Liste stehen.
+_REFERENCE_FILES = ("PROMPT_TEMPLATE.md", "EPISODES_CREATOR_PROMPT.md",
+                    "CANON_PROMPT.md", "ARC_PROMPT.md", "EPISODE_PROMPT.md")
 
 
 def _render(template_path, dest_path, replacements):

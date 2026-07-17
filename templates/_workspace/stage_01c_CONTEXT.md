@@ -3,9 +3,10 @@
 Nur für `CASE_BASED_TEMPLATES` (crime_drama, soap_opera).
 
 ## Inputs
-- Layer 4: `../01a_canon/output/canon.json` (Threads, Cast, Orte, Format)
-- Layer 4: `../01b_arc/output/arc.json` (Wendepunkt-Zuteilung, Figure/Theme
-  aller Episoden — nicht nur der eigenen, für Kontinuitäts-Kontext)
+- Checkpoint aus 01a: `canon.json` (Threads, Cast, Orte, Format) — kein
+  Workspace-File, siehe stage_01a_CONTEXT.md
+- Checkpoint aus 01b: `arc.json` (Wendepunkt-Zuteilung, Figure/Theme aller
+  Episoden — nicht nur der eigenen, für Kontinuitäts-Kontext)
 - Layer 3 (global): `templates/{{TEMPLATE}}/EPISODE_PROMPT.md`
 
 ## Process
@@ -27,13 +28,19 @@ zusammengesetzt (Kanon-Top-Level-Felder + `threads` + `episodes[]`).
 
 ## Outputs
 - `output/episodes.json` — **Single Source of Truth für ALLE weiteren
-  Stages.** Enthält `threads` (aus canon.json übernommen) und pro Episode
-  `figure`/`theme` (aus arc.json), `intro_note`/`outro_note`,
-  `sections: [{title, what, who, thread, location, words}]`,
-  `case: [{label, character_knowledge}]`.
+  Stages**, jetzt tatsächlich als Workspace-Datei geschrieben (anders als
+  `canon.json`/`arc.json`, die nur Checkpoints waren). Enthält `threads`
+  (aus canon.json übernommen) und pro Episode `figure`/`theme` (aus
+  arc.json), `intro_note`/`outro_note`,
+  `sections: [{title, what, who, thread, location, words}]`, `case:
+  [{label, character_knowledge, solution, objective_facts}]` — die beiden
+  letzten Felder werden beim Zusammenbau mechanisch aus `canon.threads`
+  injiziert (Ersatz für das alte `apply_case_canon`), 01c liefert pro
+  Episode nur `label`+`character_knowledge`.
 
-Nach dieser Teilstage wird `canon.json`/`arc.json` von keiner weiteren
-Stage mehr gelesen — alle drei Fakten-Ebenen sind in `episodes.json`
+Nach dieser Teilstage wird `canon.json`/`arc.json` (beide ohnehin nur
+Checkpoints, kein Workspace-File) von keiner weiteren Stage mehr
+gebraucht — alle drei Fakten-Ebenen sind in `episodes.json`
 zusammengeführt.
 
 ## Review-Gate danach

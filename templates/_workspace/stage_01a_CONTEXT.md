@@ -17,7 +17,8 @@ Ausgeführt automatisch als erster Schritt von:
 `python3 -m fabrik.cli.create_series "<topic>" --template {{TEMPLATE}}`
 
 ## Outputs
-- `output/canon.json` — `series_title`, `language`, `mode`, `template`,
+- Checkpoint (kein Workspace-File): `data/.create_series_staging/<hash>/
+  canon.json` — `series_title`, `language`, `mode`, `template`,
   `writer_persona`, `style_guidelines`, `voices`, `locations` (nur
   soap_opera), `format`, `generation`, `audio`, `output_prefix`,
   `series_intro`, `series_outro`, `threads`
@@ -28,10 +29,11 @@ sie nur noch über `label`, erfinden sie nie neu. crime_drama trägt genau
 EINEN Thread (der eine durchgehende Fall der Staffel), soap_opera 2 bis 4
 gleichzeitig laufende.
 
-## Review-Gate danach
+## Kein separates Review-Gate
 
-`canon.json` ist vor 01b editierbar (Stimmen tauschen, Thread-Fakten
-schärfen, Orte anpassen) — Änderungen hier wirken auf die ganze Staffel,
-weil 01b/01c sie als festen Kontext bekommen. Keine automatische Prüfung
-vor 01b nötig; offensichtliche Fehler (fehlendes `label`, doppelte Voice)
-fängt 01b beim Einlesen.
+01a/01b/01c laufen automatisch nacheinander INNERHALB EINES
+`create_series`-Aufrufs (wie zuvor Skeleton+Batches) — `canon.json`
+selbst ist nur ein Checkpoint zum Wiederaufsetzen bei einem Abbruch, kein
+von Hand editierbares Zwischenprodukt. Der tatsächliche Review-Gate bleibt
+wie bisher die fertige `episodes.json` nach 01c (siehe stage_01c_CONTEXT.md)
+— `threads`/`case`/Sections sind dort vollständig zusammengeführt.

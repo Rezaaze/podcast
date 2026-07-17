@@ -3,7 +3,8 @@
 Nur für `CASE_BASED_TEMPLATES` (crime_drama, soap_opera).
 
 ## Inputs
-- Layer 4: `../01a_canon/output/canon.json` (Threads, Cast, Format)
+- Checkpoint aus 01a: `canon.json` (Threads, Cast, Format) — kein
+  Workspace-File, siehe stage_01a_CONTEXT.md
 - Layer 3 (global): `templates/{{TEMPLATE}}/ARC_PROMPT.md`
 
 ## Process
@@ -21,7 +22,8 @@ Ausgeführt automatisch als zweiter Schritt von `create_series.py`, direkt
 nach 01a.
 
 ## Outputs
-- `output/arc.json` — `turning_points: [{thread, episode, event}]` +
+- Checkpoint (kein Workspace-File): `data/.create_series_staging/<hash>/
+  arc.json` — `turning_points: [{thread, episode, event}]` +
   `episodes: [{episode, figure, theme, breather?}]`
 
 `arc.json` geht in JEDEN 01c-Prompt (jede Episode sieht die volle
@@ -29,10 +31,8 @@ Zuteilung, nicht nur ihre eigene) — das verhindert, dass zwei Episoden
 denselben Wendepunkt für sich beanspruchen, ohne dass sie sich gegenseitig
 sehen müssten.
 
-## Review-Gate danach
+## Kein separates Review-Gate
 
-`arc.json` ist vor 01c editierbar (Wendepunkt in eine andere Episode
-verschieben, Titel/Thema schärfen, Atempausen markieren). Wendepunkte
-NICHT von Hand duplizieren oder streichen, ohne den betroffenen Thread in
-`canon.json` gegenzuprüfen — 01c generiert sonst eine Episode, die einen
-inzwischen verwaisten Wendepunkt erzählen soll.
+Wie 01a (siehe dort) — läuft automatisch innerhalb desselben
+`create_series`-Aufrufs weiter zu 01c, `arc.json` ist nur ein
+Wiederaufsetz-Checkpoint. Der Review-Gate ist die fertige `episodes.json`.
