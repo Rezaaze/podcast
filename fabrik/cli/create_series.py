@@ -879,8 +879,9 @@ def generate_case_based_series(topic: str, template: str, episode_count: int, mi
     Batch-Pfad: Kanon (01a, ein Call) -> Staffelbogen (01b, ein Call, sieht den Kanon) ->
     Episoden-Konzepte (01c, ein Call PRO Episode, parallel, sieht Kanon+Bogen aber nie
     die Sections anderer Episoden). Jede Teilstage ist einzeln über _cached_unit()
-    checkpointed. Gibt (data, warnings) wie generate_with_retry() zurück, oder (None, [])
-    bei endgültigem Scheitern irgendeiner Teilstage."""
+    checkpointed. Gibt (data, warnings, arc) zurück — arc zusätzlich zu generate_with_retry()s
+    (data, warnings), weil main() es für den Reconciliation-Pass (check_turning_point_coverage)
+    braucht — oder (None, [], None) bei endgültigem Scheitern irgendeiner Teilstage."""
     print("  Teilstage 1/3: Kanon (Welt, Cast, Orte, Fakten-Threads) ...")
     canon = _cached_unit(
         checkpoint_key, "canon",
@@ -889,7 +890,7 @@ def generate_case_based_series(topic: str, template: str, episode_count: int, mi
     )
     if canon is None:
         print("  ❌  Kanon-Generierung gescheitert.")
-        return None, []
+        return None, [], None
     canon.setdefault("template", template)
 
     print("  Teilstage 2/3: Staffelbogen (Wendepunkt-Zuteilung, Episoden-Themen) ...")
@@ -900,7 +901,7 @@ def generate_case_based_series(topic: str, template: str, episode_count: int, mi
     )
     if arc is None:
         print("  ❌  Staffelbogen-Generierung gescheitert.")
-        return None, []
+        return None, [], None
 
     section_count = estimate_section_count_from_format(canon.get("format", {}), minutes)
     max_workers = max(1, min(episode_count, EPISODE_CONCEPT_PARALLEL_CAP))
@@ -936,7 +937,7 @@ def generate_case_based_series(topic: str, template: str, episode_count: int, mi
               f"{_checkpoint_dir(checkpoint_key)} zwischengespeichert — derselbe Aufruf "
               f"generiert bei einem erneuten Versuch nur noch die fehlgeschlagenen "
               f"Episoden {sorted(failed)} neu.")
-        return None, []
+        return None, [], None
 
     # Zusammenbau: Kanon-Top-Level-Felder + threads + Episoden (arc.figure/theme +
     # 01c-Sections/case). Fakten-Injektion (solution/objective_facts pro Thread-Label
@@ -983,13 +984,13 @@ def generate_case_based_series(topic: str, template: str, episode_count: int, mi
             print(f"    - {e}")
         # Checkpoint bleibt erhalten — die Einzel-Konzepte waren jeweils für sich valide,
         # dieser Fehler betrifft nur das Gesamtdokument.
-        return None, []
+        return None, [], None
 
     # ACHTUNG: hier bewusst NICHT _clear_checkpoint() aufrufen — main() lässt nach diesem
     # Return noch Inhalts-Review UND ggf. --fix-Reparatur laufen (eigene, oft lange
     # Claude-Aufrufe), BEVOR die Serie überhaupt auf Platte geschrieben wird. main()
     # räumt den Checkpoint selbst auf, erst NACH dem erfolgreichen Schreiben der Datei.
-    return data, warnings
+    return data, warnings, arc
 
 
 REVIEW_PROMPT = """You are a ruthless script editor doing a pre-production review.
@@ -1081,6 +1082,144 @@ def review_series(data: dict, model: str, effort: Optional[str] = None) -> Optio
             # Episoden-Bezug behandelt, das erzwingt in repair_series() sicher den
             # vollen Dokument-Umbau statt eine falsche Lokalisierung zu raten.
             issues.append({"episodes": [], "problem": str(i)})
+    return issues
+
+
+RECONCILIATION_PROMPT = """You are auditing a serialized audio-drama season for ONE specific \
+structural defect: a plot turning point that got independently narrated in more than one \
+episode, or in none at all — because each episode was written in a separate call that never saw \
+the others' scenes.
+
+SEASON'S PLANNED TURNING POINTS (each was assigned to exactly ONE episode when the season was \
+planned; a different episode narrating the same event is a bug):
+{turning_points_block}
+
+WHAT EACH EPISODE ACTUALLY CONTAINS (per section: title, the narrated scene, which thread it \
+belongs to):
+{episodes_block}
+
+For EACH planned turning point listed above, decide which episode(s) actually narrate or resolve \
+that specific event in their sections. Respond ONLY with valid JSON, no markdown fences, exactly:
+{{"findings": [{{"event": "<the event text, copied EXACTLY from the list above>", "verdict": \
+"ok"|"duplicate"|"missing", "episodes": [<episode number(s) that actually narrate this event — \
+for "duplicate" list ALL of them, for "missing" an empty list, for "ok" the single correct \
+episode>], "explanation": "one short sentence"}}]}}
+
+Output exactly one entry per turning point listed above, in the same order. "duplicate" = \
+narrated in more than one episode (even if worded differently — the same underlying event/reveal \
+counts as the same). "missing" = narrated in zero episodes. "ok" = narrated in exactly its \
+assigned episode and nowhere else. Do not flag a turning point as duplicate just because an \
+earlier episode FORESHADOWS or references it in passing without actually resolving/revealing it \
+— only an actual narration of the event counts.
+"""
+
+
+def _build_turning_points_block(turning_points: list) -> str:
+    return "\n".join(
+        f"- [{tp.get('thread')}] assigned to episode {tp.get('episode')}: {tp.get('event')}"
+        for tp in turning_points if isinstance(tp, dict)
+    )
+
+
+def _build_episodes_sections_block(episodes: list) -> str:
+    blocks = []
+    for i, ep in enumerate(episodes, start=1):
+        lines = [f"=== EPISODE {i}: \"{ep.get('figure', '')}\" ==="]
+        for sec in ep.get("sections", []):
+            if isinstance(sec, dict):
+                lines.append(f"  - [{sec.get('thread', '?')}] {sec.get('title', '')}: "
+                             f"{sec.get('what', '')}")
+            else:
+                lines.append(f"  - {sec}")
+        blocks.append("\n".join(lines))
+    return "\n\n".join(blocks)
+
+
+def check_turning_point_coverage(data: dict, arc: dict, model: str, effort: Optional[str] = None,
+                                 votes: int = 5, threshold: int = 4) -> list:
+    """Reconciliation-Pass NACH allen parallelen 01c-Aufrufen (Phase 4,
+    docs/konzept-stage-umbau.md): ein LLM-Judge liest arc.json's
+    turning_points gegen die fertigen Sections und meldet jeden Wendepunkt,
+    der in mehr als einer Episode erzählt wurde (Doppel-Klimax) oder in
+    keiner (verloren gegangen). Läuft EINMAL pro Serie, nicht pro Episode
+    — ein Fan-out hier ist billig gegen den Nutzen, einen echten
+    Doppel-Klimax zu fangen.
+
+    Self-Consistency-Voting (FlawedFictions-Muster gegen dokumentiertes
+    LLM-Judge-Rauschen): derselbe Call läuft `votes`-mal; ein Fund zählt
+    nur, wenn dasselbe (Wendepunkt, Verdikt, Episoden) in mindestens
+    `threshold` von `votes` Läufen übereinstimmend auftaucht — einzelne
+    abweichende Läufe werden verworfen statt sofort einen echten Fund zu
+    riskieren.
+
+    Rückgabeform identisch zu review_series()/dem gelöschten
+    check_case_drift(): [{"episodes": [int], "problem": str}] — fügt sich
+    dadurch unverändert in repair_series() ein."""
+    turning_points = arc.get("turning_points") if isinstance(arc, dict) else None
+    if not turning_points:
+        return []
+    episodes = data.get("episodes", [])
+    prompt = RECONCILIATION_PROMPT.format(
+        turning_points_block=_build_turning_points_block(turning_points),
+        episodes_block=_build_episodes_sections_block(episodes),
+    )
+    timeout = compute_timeout(len(episodes))
+
+    all_votes = []  # list of {event_key: (verdict, sorted_episode_tuple)}
+    for i in range(votes):
+        raw = call_claude(prompt, model, timeout=timeout,
+                          label=f"Wendepunkt-Abdeckung prüfen ({i + 1}/{votes})")
+        if not raw:
+            continue
+        parsed = parse_json_response(raw)
+        findings = parsed.get("findings") if isinstance(parsed, dict) else None
+        if not isinstance(findings, list):
+            continue
+        vote_map = {}
+        for f in findings:
+            if not isinstance(f, dict):
+                continue
+            event_key = _normalize_ws(f.get("event", "")).lower()
+            verdict = f.get("verdict")
+            eps = tuple(sorted(e for e in (f.get("episodes") or []) if isinstance(e, int)))
+            if event_key and verdict in ("ok", "duplicate", "missing"):
+                vote_map[event_key] = (verdict, eps)
+        if vote_map:
+            all_votes.append(vote_map)
+
+    if not all_votes:
+        print("  ⚠️  Wendepunkt-Abdeckungs-Check: alle Voting-Läufe fehlgeschlagen — übersprungen.")
+        return []
+
+    issues = []
+    for tp in turning_points:
+        event_key = _normalize_ws(tp.get("event", "")).lower()
+        tally = {}
+        for vote_map in all_votes:
+            if event_key in vote_map:
+                verdict, eps = vote_map[event_key]
+                if verdict != "ok":
+                    key = (verdict, eps)
+                    tally[key] = tally.get(key, 0) + 1
+        if not tally:
+            continue
+        (verdict, eps), count = max(tally.items(), key=lambda kv: kv[1])
+        if count < threshold:
+            continue
+        assigned_ep = tp.get("episode")
+        if verdict == "duplicate":
+            extra_eps = [e for e in eps if e != assigned_ep] or list(eps)
+            issues.append({"episodes": extra_eps, "problem": (
+                f"Wendepunkt \"{tp.get('event')}\" (Thread '{tp.get('thread')}', laut Bogen für "
+                f"Episode {assigned_ep} vorgesehen) wird zusätzlich in Episode(n) {extra_eps} "
+                f"erzählt — Doppel-Klimax ({count}/{len(all_votes)} Voting-Läufe einig)."
+            )})
+        elif verdict == "missing" and assigned_ep is not None:
+            issues.append({"episodes": [assigned_ep], "problem": (
+                f"Wendepunkt \"{tp.get('event')}\" (Thread '{tp.get('thread')}') wird in der "
+                f"dafür vorgesehenen Episode {assigned_ep} nicht erzählt "
+                f"({count}/{len(all_votes)} Voting-Läufe einig)."
+            )})
     return issues
 
 
@@ -1492,13 +1631,14 @@ def main():
         # docs/konzept-stage-umbau.md. Ersetzt den früheren Ein-Schuss-/Batch-Pfad
         # komplett für crime_drama/soap_opera.
         print(f"🧩  '{args.template}' — Kanon → Staffelbogen → Episoden ...")
-        data, warnings = generate_case_based_series(args.topic, args.template, args.episodes,
-                                                     args.minutes, args.locations,
-                                                     config.DEFAULTS["model"], checkpoint_key)
+        data, warnings, arc = generate_case_based_series(args.topic, args.template, args.episodes,
+                                                         args.minutes, args.locations,
+                                                         config.DEFAULTS["model"], checkpoint_key)
         if data is None:
             print("❌  Serien-Generierung ist gescheitert — Abbruch.")
             sys.exit(1)
     else:
+        arc = None  # kein Staffelbogen außerhalb von CASE_BASED_TEMPLATES — kein Reconciliation-Pass
         creator_prompt = load_creator_prompt(args.template)
         prompt = build_prompt(creator_prompt, args.topic, args.episodes, args.minutes,
                               args.locations)
@@ -1551,10 +1691,30 @@ def main():
         else:
             print("✅  Inhalts-Review: keine Auffälligkeiten.")
 
-    # TODO (Phase 4, docs/konzept-stage-umbau.md): Reconciliation-Pass hier einhängen —
-    # ein LLM-Judge-Call (5x Self-Consistency-Voting) liest arc.json gegen die fertigen
-    # Sections und meldet jeden Wendepunkt, der in >1 oder 0 Episoden erzählt wurde;
-    # Befunde laufen bei --fix durch denselben repair_series()-Dispatcher wie oben.
+    if arc is not None:
+        print("🧭  Wendepunkt-Abdeckung prüfen (5x Self-Consistency-Voting gegen "
+              "Doppel-Klimax/verlorene Wendepunkte) ...")
+        review_model = data.get("generation", {}).get("light_model", config.DEFAULTS["light_model"])
+        review_effort = data.get("generation", {}).get("effort", config.DEFAULTS["effort"])
+        coverage_issues = check_turning_point_coverage(data, arc, review_model, effort=review_effort)
+        if coverage_issues and args.fix:
+            print(f"🔧  {len(coverage_issues)} Wendepunkt-Befund(e) — versuche automatische "
+                  f"Reparatur ...")
+            fixed = repair_series(data, coverage_issues, config.DEFAULTS["model"], args.episodes)
+            if fixed is not None:
+                data = fixed
+                data.setdefault("template", args.template)
+                coverage_issues = check_turning_point_coverage(data, arc, review_model,
+                                                                effort=review_effort)
+            else:
+                print("  ⚠️  Wendepunkt-Reparatur fehlgeschlagen — episodes.json bleibt beim "
+                      "ursprünglichen Stand, Befunde unten von Hand prüfen.")
+        if coverage_issues:
+            print(f"⚠️  Wendepunkt-Abdeckung: {len(coverage_issues)} Befund(e):")
+            for i in coverage_issues:
+                print(f"  - {i['problem']}")
+        else:
+            print("✅  Wendepunkt-Abdeckung: jeder Wendepunkt genau einmal erzählt.")
 
     # Ab hier ist der Ordner reserviert (der leere Ordner IST die Reservierung, siehe
     # paths.reserve_unique_series()). Schlägt das Schreiben danach fehl — oder bricht der

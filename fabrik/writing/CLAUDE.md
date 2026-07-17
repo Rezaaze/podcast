@@ -18,16 +18,29 @@ die ganze Episode/Serie — episodenübergreifende Kontinuität läuft komplett
 Episode-Review (nachträglich) und Beat-Layer (vorab), siehe unten.
 
 **TTS-Hazard-Checks in `validate_parts()` (17.07.2026):** zusätzlich zum
-Format-Parse laufen zwei Checks aus der 12-Serien-Analyse: (1)
-`find_narrator_leaks()` — NARRATOR-Zeilen, die case-Thread-Labels, das Wort
-"thread"/"storyline" oder Szenennummern hörbar aussprechen (in Produktion
-15-43 Leaks/Serie, teils spoilernd) = retryable Fehler, fallback-sicher,
-erhöht badness (`_LEAK_BADNESS`); braucht `cfg["case_labels"]`, das
-`generate_episode()` pro Episode in eine cfg-KOPIE injiziert. (2)
-`warn_stage_directions()` — mutmaßliche 3.-Person-Regieanweisungen im
-Sprechtext ("He signs the form.") = NUR Konsolen-Warnung (False-Positive-
-Risiko im Dialog); entstehen, weil `script_parser.py` Fließtext nach einer
-Sprecherzeile an deren Text ANHÄNGT statt zu erroren.
+Format-Parse laufen drei Checks. (1) `find_narrator_leaks()` — NARRATOR-
+Zeilen, die case-Thread-Labels, das Wort "thread"/"storyline" oder
+Szenennummern hörbar aussprechen (in Produktion 15-43 Leaks/Serie, teils
+spoilernd) = retryable Fehler, fallback-sicher, erhöht badness
+(`_LEAK_BADNESS`); braucht `cfg["case_labels"]`, das `generate_episode()`
+pro Episode in eine cfg-KOPIE injiziert. (2) `warn_stage_directions()` —
+mutmaßliche 3.-Person-Regieanweisungen im Sprechtext ("He signs the
+form.") = NUR Konsolen-Warnung (False-Positive-Risiko im Dialog);
+entstehen, weil `script_parser.py` Fließtext nach einer Sprecherzeile an
+deren Text ANHÄNGT statt zu erroren. (3) **`find_noise()`** (Stage-01-
+Umbau Phase 4, docs/konzept-stage-umbau.md) — der EINE verbleibende
+deterministische Check, der den gelöschten Section-Tiefe-/Kanon-Drift-
+Checks aus create_series.py nachfolgt, aber eine andere Fehlerklasse
+abdeckt (reines Modell-Rauschen, gegen das keine Prompt-Vorgabe hilft,
+kein Struktur-/Kontinuitätsproblem): Sprechzeilen ohne einen einzigen
+Buchstaben (`textproc.is_speakable()`), Platzhalter
+(`placeholder`/`TODO`/`TBD`), Markdown-Reste (`**fett**`, `` `code` ``,
+Listenpunkte) und fremdsprachige Zeichen mitten im Sprechtext (beobachtet:
+`问题` in einem englischen Satz — Han/Hiragana-Katakana/Hangul-Ranges,
+übersprungen bei `cfg["language"]` = Chinese/Mandarin). Retryable Fehler,
+fallback-sicher, erhöht badness (`_NOISE_BADNESS`). Gegengeprüft an 236
+Parts aus zwei echten Produktionsserien: 1 echter Fund (eine
+Interpunktions-only-Zeile), 0 False Positives.
 
 **Phrasen-Wächter (`phrase_stats.py`, stdlib-only, 17.07.2026):** zählt
 3-5-Wort-n-Gramme + Style-Wörter über die bereits geschriebenen Episoden

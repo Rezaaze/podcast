@@ -670,6 +670,43 @@ def find_narrator_leaks(items, case_labels) -> list[str]:
     return leaks
 
 
+_NOISE_BADNESS = 30  # Gewicht eines Rausch-Funds im badness-Vergleich der Fallback-Auswahl
+_PLACEHOLDER_RE = re.compile(r'\b(?:placeholder|TODO|TBD)\b', re.IGNORECASE)
+_MARKDOWN_RE = re.compile(r'\*\*[^*]+\*\*|`[^`]+`|^#{1,6}\s|^[-*]\s', re.MULTILINE)
+# Han/Hiragana-Katakana/Hangul — die konkret beobachtete Leck-Klasse ("问题"
+# mitten in einem englischen Satz), nicht jedes erdenkliche Nicht-Latein-Skript.
+_CJK_LEAK_RE = re.compile(r'[一-鿿぀-ヿ가-힯]')
+
+
+def find_noise(items, language: str) -> list[str]:
+    """Deterministischer Rausch-Filter für Sprechtext (Stage-01-Umbau Phase 4,
+    docs/konzept-stage-umbau.md) — der EINE verbleibende Check gegen
+    Modell-Schluder, gegen den keine Prompt-Vorgabe hilft: reiner
+    Interpunktions-Text ohne einen einzigen Buchstaben, Platzhalter
+    (placeholder/TODO/TBD), Markdown-Reste, die mitgesprochen würden, und
+    fremdsprachige Zeichen mitten im Sprechtext (beobachtet: '问题' in einem
+    englischen Satz). Deckt eine andere Fehlerklasse ab als die gelöschten
+    Section-Tiefe-/Kanon-Drift-Checks — die sind strukturell unmöglich
+    geworden, das hier ist reines Rauschen, das nur ein Textscan fängt."""
+    issues = []
+    is_cjk_language = any(w in (language or "").lower() for w in ("chinese", "mandarin"))
+    for item in items:
+        if item.kind != "speech":
+            continue
+        text = item.text or ""
+        if not text.strip():
+            continue
+        if not textproc.is_speakable(text):
+            issues.append(f"[{item.speaker}] line has no speakable content (punctuation-only): \"{text[:60]}\"")
+        if _PLACEHOLDER_RE.search(text):
+            issues.append(f"[{item.speaker}] line contains placeholder text: \"{text[:80]}\"")
+        if _MARKDOWN_RE.search(text):
+            issues.append(f"[{item.speaker}] line contains markdown formatting that would be read aloud: \"{text[:80]}\"")
+        if not is_cjk_language and _CJK_LEAK_RE.search(text):
+            issues.append(f"[{item.speaker}] line contains non-{language or 'English'} script characters: \"{text[:80]}\"")
+    return issues
+
+
 def warn_stage_directions(items, part_label: str) -> None:
     """Konsolen-Warnung (kein Retry) für mutmaßliche Regieanweisungen, die als
     Sprechtext mitvertont würden — entstehen, wenn das Modell eine nackte
@@ -767,6 +804,22 @@ def validate_parts(parts, expected_parts, cfg) -> tuple[bool, str, list[str], bo
                 # TTS-Hazard 2 (nur Warnung): mutmaßliche Regieanweisung im
                 # Sprechtext — zu unscharf für einen Retry, aber sichtbar machen.
                 warn_stage_directions(items, f"PART {num}")
+
+                # Rausch-Filter (Fehler, retryable, fallback-sicher): Platzhalter,
+                # Markdown-Reste, fremdsprachige Zeichen, reine Interpunktion —
+                # siehe find_noise().
+                noise = find_noise(items, cfg.get("language"))
+                if noise:
+                    ok = False
+                    badness += _NOISE_BADNESS * len(noise)
+                    console = console or (f"Part {num}: Rauschen im Sprechtext "
+                                          f"({len(noise)}x)")
+                    for n in noise:
+                        detail.append(
+                            f"Part {num}: NOISE — {n} — rewrite as clean spoken prose in "
+                            f"{cfg.get('language') or 'English'}: no placeholders, no markdown, "
+                            f"no other-language characters, no punctuation-only lines"
+                        )
 
     return ok, console, detail, fallback_safe, badness
 

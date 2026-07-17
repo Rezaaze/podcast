@@ -133,12 +133,24 @@ erfolgreichem Schreiben der Serie (`_clear_checkpoint`, in `main()`,
 NACH `paths.write_latest`) — Review/Reparatur laufen dazwischen und
 sind selbst potenziell lange Claude-Aufrufe.
 
-**TODO (Phase 4 des Umbau-Plans, noch nicht implementiert):**
-Reconciliation-Pass nach allen 01c-Calls — ein LLM-Judge-Call (mit
-Self-Consistency-Voting) liest `arc.json` gegen die fertigen Sections und
-meldet, falls ein Wendepunkt versehentlich in >1 oder 0 Episoden erzählt
-wurde. Soll unter `--fix` durch denselben `repair_series()`-Dispatcher
-laufen wie das Inhalts-Review unten.
+**Reconciliation-Pass (`check_turning_point_coverage()`, Phase 4 des
+Umbau-Plans):** läuft NACH allen 01c-Calls, einmal pro Serie, als
+LLM-Judge-Call — liest `arc.json`s `turning_points` gegen die fertigen
+Sections aller Episoden und entscheidet pro Wendepunkt: `ok` (genau in der
+zugeteilten Episode erzählt), `duplicate` (zusätzlich in einer anderen
+Episode) oder `missing` (in keiner). **Self-Consistency-Voting**
+(FlawedFictions-Muster gegen dokumentiertes LLM-Judge-Rauschen): derselbe
+Call läuft 5x (`votes`), ein Fund zählt nur, wenn dasselbe
+(Wendepunkt, Verdikt, betroffene Episoden) in mindestens 4 von 5 Läufen
+(`threshold`) übereinstimmt — ein einzelner abweichender Lauf wird
+verworfen statt sofort einen Fund auszulösen. Rückgabeform identisch zu
+`review_series()`/dem gelöschten `check_case_drift()`:
+`[{"episodes": [int], "problem": str}]`, läuft in `main()` daher durch
+denselben `repair_series()`-Dispatcher wie das Inhalts-Review — bei
+`--fix` wird die betroffene Episode (bzw. bei einem Doppel-Klimax die
+ZUSÄTZLICHE, nicht die ursprünglich zugeteilte) gezielt neu generiert.
+Ohne `arc.json` (Nicht-CASE_BASED_TEMPLATES) läuft dieser Check nicht
+— `main()` setzt `arc = None` in diesem Fall.
 
 ### Gemeinsam für beide Pfade
 
