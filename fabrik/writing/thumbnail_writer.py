@@ -18,6 +18,7 @@ from __future__ import annotations
 import os
 import time
 
+from fabrik.core import sections as sec
 from fabrik.writing import image_backends
 from fabrik.writing.script_writer import call_claude, MAX_RETRIES, RETRY_DELAY
 
@@ -32,7 +33,7 @@ MAX_HOOK_CHARS = 40
 def build_hook_prompt(data, episode) -> str:
     series_title = data.get("series_title", "")
     language = data.get("language", "German")
-    sections_text = "\n".join(f"- {s}" for s in episode["sections"])
+    sections_text = "\n".join(f"- {sec.section_title(s)}" for s in episode["sections"])
 
     return (
         f"You are a poster tagline writer for \"{series_title}\", an audio "

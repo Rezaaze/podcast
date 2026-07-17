@@ -33,7 +33,7 @@ from pydub import AudioSegment
 from fabrik.audio import pipeline as audio
 from fabrik.audio.tts_backends import build_backend
 from fabrik.cli import sfx_plan
-from fabrik.core import config, paths, textproc
+from fabrik.core import config, paths, sections as sec, textproc
 from fabrik.writing.script_parser import ScriptFormatError, parse_drama_part
 
 FADE_MS = 15
@@ -375,7 +375,10 @@ def get_section_locations(input_file, data, prefix):
     """Section-Locations aus episodes.json anhand der Dateinummer (ep7 ->
     Index 6) auf die Episode gemappt — gleiches Muster wie
     load_section_styles, aber modusunabhängig (locations gibt es sowohl bei
-    narration als auch drama)."""
+    narration als auch drama). Bei Objekt-Sections (Stage-01-Umbau) steht
+    der Ort im Section-Objekt selbst statt im alten Parallel-Array — wird
+    hier zu derselben flachen Liste zusammengebaut, damit build_location_timeline()
+    unverändert bleibt."""
     match = re.search(rf'{re.escape(prefix)}(\d+)', os.path.basename(input_file), re.IGNORECASE)
     if not match:
         return None
@@ -383,7 +386,12 @@ def get_section_locations(input_file, data, prefix):
     episodes = data.get("episodes", [])
     if ep_idx < 0 or ep_idx >= len(episodes):
         return None
-    return episodes[ep_idx].get("section_locations")
+    episode = episodes[ep_idx]
+    secs = episode.get("sections") or []
+    legacy = episode.get("section_locations")
+    if not any(isinstance(s, dict) for s in secs):
+        return legacy
+    return [sec.section_location(s, i, legacy) for i, s in enumerate(secs)]
 
 
 def build_location_timeline(section_locations, parts_per_section, part_offsets,
@@ -688,8 +696,8 @@ def run_postprocessing(series, cfg, data, episode_name, input_file, episode_path
         episode_num = audio.extract_episode_number(input_file, cfg["prefix"])
         plan_ambience = sfx_plan.section_ambience_lookup(
             sfx_plan.load_plan(sfx_plan.plan_path(series)))
-        section_ambience = {sec: variant
-                            for (ep, sec), variant in plan_ambience.items()
+        section_ambience = {sec_idx: variant
+                            for (ep, sec_idx), variant in plan_ambience.items()
                             if ep == episode_num}
         write_location_timeline(episode_name, section_locations, cfg["parts_per_section"],
                                 part_offsets, episode_path, series.output_dir,

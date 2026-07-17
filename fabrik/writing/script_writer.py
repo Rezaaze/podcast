@@ -13,6 +13,7 @@ import sys
 import time
 from typing import Optional
 
+from ..core import sections as sec
 from ..core import textproc
 from ..core.claude_cli import parse_json_response, run_claude_process
 from ..core.config import DEFAULTS
@@ -190,14 +191,17 @@ def build_outro_spec(position, total, next_figure, series_outro, outro_note,
 
 
 def resolve_section_cfg(cfg, episode, section_idx) -> dict:
-    """Wendet episode['section_words'][section_idx] (falls gesetzt) auf eine
+    """Wendet das Wortbudget-Override der Section (falls gesetzt) auf eine
     Kopie von cfg an — erlaubt einzelnen Szenen ein eigenes Wortbudget statt
     des globalen format-Defaults für die ganze Episode (z.B. eine kurze
-    Cliffhanger-Szene neben einer langen Dialog-Szene)."""
-    overrides = episode.get("section_words")
-    if not overrides or section_idx >= len(overrides) or not overrides[section_idx]:
+    Cliffhanger-Szene neben einer langen Dialog-Szene). Liest bei Objekt-
+    Sections section['words'], sonst (Alt-Form) episode['section_words'][idx]
+    — sec.section_words_override() vereinheitlicht beides."""
+    secs = episode.get("sections") or []
+    section = secs[section_idx] if section_idx < len(secs) else None
+    override = sec.section_words_override(section, section_idx, episode.get("section_words"))
+    if not override:
         return cfg
-    override = overrides[section_idx]
     resolved = dict(cfg)
     if "min" in override:
         resolved["min_words"] = override["min"]
@@ -316,7 +320,7 @@ def build_beats_prompt(episodes, ep_idx, cfg, previous_beats_text: str) -> str:
     Dialogzeilen oder Stil. Siehe docs/beat-layer-design.md Abschnitt 3."""
     episode = episodes[ep_idx]
     sections = episode["sections"]
-    sections_text = "\n".join(f"Scene {i+1}: {s}" for i, s in enumerate(sections))
+    sections_text = "\n".join(f"Scene {i+1}: {sec.section_text(s)}" for i, s in enumerate(sections))
     case_block = build_case_file_block(episode.get("case"))
     continuity = (
         f"Beats of ALL previous episodes, in order — this is the CANONICAL RECORD of what "
@@ -462,7 +466,11 @@ def build_section_prompt(template, data, episodes, ep_idx, section_idx,
     pps = cfg["parts_per_section"]
     parts_total = len(sections) * pps
     parts = section_part_numbers(section_idx, pps)
-    section_title = sections[section_idx]
+    # section_brief ist der eigentliche Schreibauftrag für DIESE Section (bei
+    # Objekt-Sections das erzählte 'what', bei Alt-Sections identisch mit dem
+    # Titel) — die Episoden-Übersicht (all_sections_text) nutzt dagegen die
+    # kurze section_title() weiter unten.
+    section_brief = sec.section_text(sections[section_idx])
 
     series_title  = data.get("series_title", "")
     series_intro  = data.get("series_intro", "an epic intro for the entire anthology series")
@@ -478,7 +486,7 @@ def build_section_prompt(template, data, episodes, ep_idx, section_idx,
                                    template=cfg.get("template", "narration"))
 
     all_sections_text = "\n".join(
-        f"Section {i+1}: {s} ("
+        f"Section {i+1}: {sec.section_title(s)} ("
         + " and ".join(f"--- PART {n} ---" for n in section_part_numbers(i, pps))
         + ")"
         for i, s in enumerate(sections)
@@ -550,7 +558,7 @@ def build_section_prompt(template, data, episodes, ep_idx, section_idx,
 
     markers = "\n".join(f"--- PART {n} ---" for n in parts)
     prompt += (
-        f"\n\nNow write ONLY Section {section_idx + 1}: \"{section_title}\".\n"
+        f"\n\nNow write ONLY Section {section_idx + 1}: \"{section_brief}\".\n"
         f"This section consists of exactly {cfg['parts_per_section']} part(s):\n"
         f"{markers}\n\n"
         f"Start immediately with --- PART {parts[0]} --- and end after --- PART {parts[-1]} ---. "
@@ -912,7 +920,7 @@ def generate_episode_meta(series: Series, ep_idx, data, episodes, force, cfg) ->
         print(f"  Titel & Beschreibung bereits vorhanden: {os.path.basename(meta_file)} ✓")
         return True
 
-    sections_text = "\n".join(f"- {s}" for s in episode["sections"])
+    sections_text = "\n".join(f"- {sec.section_title(s)}" for s in episode["sections"])
     prompt = (
         f"You are {cfg['persona']}. The podcast series \"{data.get('series_title', '')}\" "
         f"has an episode about {episode['figure']}.\n\n"
@@ -1470,7 +1478,8 @@ def generate_episode(series: Series, ep_idx, template, data, episodes, force, cf
         print(f"  Gefundene Parts in Datei: {sorted(existing_parts)} — überspringe fertige Sections.")
 
     pending = []
-    for sec_idx, section_title in enumerate(sections):
+    for sec_idx, raw_section in enumerate(sections):
+        section_title = sec.section_title(raw_section)
         section_parts = section_part_numbers(sec_idx, cfg["parts_per_section"])
         # Section überspringen wenn alle Parts bereits vorhanden
         if all(p in existing_parts for p in section_parts):

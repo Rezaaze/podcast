@@ -58,7 +58,7 @@ import subprocess
 import sys
 import time
 
-from fabrik.core import config, paths
+from fabrik.core import config, paths, sections as sec
 from fabrik.core.claude_cli import run_claude_process, parse_json_response
 from fabrik.core.textproc import sfx_asset_hash
 from fabrik.writing.script_parser import ScriptFormatError, parse_drama_part
@@ -177,13 +177,13 @@ def collect_sections(data):
     braucht es dafür nicht."""
     out = []
     for ep_num, episode in enumerate(data.get("episodes", []), start=1):
-        locs = episode.get("section_locations") or []
-        for sec_idx, text in enumerate(episode.get("sections", [])):
-            location = locs[sec_idx] if sec_idx < len(locs) else None
+        legacy_locs = episode.get("section_locations") or []
+        for sec_idx, raw_section in enumerate(episode.get("sections", [])):
+            location = sec.section_location(raw_section, sec_idx, legacy_locs)
             if not location:
                 continue  # null = "Ort bleibt wie zuvor" (build_location_timeline)
             out.append({"episode": ep_num, "section": sec_idx,
-                        "location": location, "text": text})
+                        "location": location, "text": sec.section_text(raw_section)})
     return out
 
 

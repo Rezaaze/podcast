@@ -119,7 +119,7 @@ VALID_TOP_KEYS = {
     "format", "generation", "audio", "output_prefix",
     "series_intro", "series_outro", "episodes",
     "mode", "template", "voices", "course", "locations", "season",
-    "previous_season",
+    "previous_season", "threads",
 }
 VALID_FORMAT_KEYS = {
     "parts_per_section", "words_per_part_target",
@@ -155,6 +155,11 @@ VALID_EPISODE_KEYS = {
 VALID_LOCATION_KEYS = {"name", "description"}
 VALID_SOURCE_VALUES = {"generated", "imported"}
 VALID_SECTION_WORDS_KEYS = {"min", "max", "target"}
+# Section-Objekt-Form (seit dem Stage-01-Umbau, docs/konzept-stage-umbau.md) —
+# ersetzt die alten Parallel-Arrays section_words/section_locations für NEU
+# generierte case-based Serien; Alt-Serien (sections = Liste von Strings)
+# bleiben unverändert lesbar, siehe is_object_section_list() unten.
+VALID_SECTION_OBJECT_KEYS = {"title", "what", "who", "thread", "location", "words"}
 VALID_CASE_KEYS = {"label", "solution", "objective_facts", "character_knowledge"}
 VALID_CHARACTER_KNOWLEDGE_KEYS = {"knows", "hides", "believes_falsely"}
 VALID_VOICE_KEYS = {"voice", "default_style", "description", "speed", "seed"}
@@ -186,6 +191,40 @@ def validate_data(data) -> tuple[list[str], list[str]]:
 
     def is_str_list(v):
         return isinstance(v, list) and all(isinstance(s, str) and s.strip() for s in v)
+
+    def is_object_section_list(v):
+        return isinstance(v, list) and bool(v) and all(isinstance(s, dict) for s in v)
+
+    def is_section_list(v):
+        """Sections sind entweder die Alt-Form (Liste von Titel-Strings) oder
+        die neue Objekt-Form (ein Objekt pro Szene mit erzähltem 'what',
+        siehe VALID_SECTION_OBJECT_KEYS) — nie gemischt innerhalb einer
+        Episode."""
+        if not isinstance(v, list) or not v:
+            return False
+        return is_str_list(v) or is_object_section_list(v)
+
+    def validate_words_value(w, path):
+        """Prüft einen 'words'-Wert: null, eine ganze Zahl, oder
+        {min, max, target} — geteilt zwischen der alten section_words[j]-
+        Parallel-Array-Form und dem neuen section['words']-Objektfeld."""
+        if w is None:
+            return
+        if isinstance(w, dict):
+            for key in w:
+                if key not in VALID_SECTION_WORDS_KEYS:
+                    warnings.append(f"Unbekannter Schlüssel '{path}.{key}' — wird ignoriert (Tippfehler?)")
+            sw_min, sw_max = w.get("min"), w.get("max")
+            if "min" in w and (not is_int(sw_min) or sw_min < 1):
+                errors.append(f"'{path}.min' muss eine ganze Zahl >= 1 sein")
+            if "max" in w and (not is_int(sw_max) or sw_max < 1):
+                errors.append(f"'{path}.max' muss eine ganze Zahl >= 1 sein")
+            if is_int(sw_min) and is_int(sw_max) and sw_min >= sw_max:
+                errors.append(f"'{path}.min' ({sw_min}) muss kleiner als '{path}.max' ({sw_max}) sein")
+            if "target" in w and (not isinstance(w["target"], str) or not w["target"].strip()):
+                errors.append(f"'{path}.target' muss ein nicht-leerer String sein (z.B. \"150 to 250\")")
+        elif not is_int(w):
+            errors.append(f"'{path}' muss 'null', eine ganze Zahl oder {{min, max, target}} sein")
 
     def validate_case_block(case, voices, path, require_label):
         """Prüft einen einzelnen case/thread-Block (solution/objective_facts/
@@ -392,6 +431,28 @@ def validate_data(data) -> tuple[list[str], list[str]]:
                 if not isinstance(lcfg.get(k), str) or not lcfg.get(k, "").strip():
                     errors.append(f"'locations.{key}.{k}' fehlt oder ist kein nicht-leerer String")
 
+    # --- threads (optional; case-based Templates seit dem Stage-01-Umbau, siehe
+    # docs/konzept-stage-umbau.md) — die EINE Stelle, an der Fakten eines
+    # Handlungsstrangs stehen (label/solution/objective_facts), von Sections per
+    # 'thread'-Feld referenziert statt pro Episode neu ausgegeben. Wie viele
+    # Threads ein Template erwartet (crime_drama genau 1, soap_opera 2-4) ist eine
+    # Generierungsentscheidung von create_series.py, kein Schema-Fehler hier —
+    # ansonsten würden Alt-Serien ohne 'threads' oder mit anderer Zahl beim
+    # nächsten generate_episode-Lauf grundlos ungültig.
+    thread_labels = set()
+    threads = data.get("threads")
+    if threads is not None:
+        if not isinstance(threads, list) or not threads:
+            errors.append("'threads' muss eine nicht-leere Liste von Handlungsstrang-Objekten sein")
+            threads = []
+        for j, thread in enumerate(threads):
+            validate_case_block(thread, voices, f"threads[{j}]", require_label=True)
+            if isinstance(thread, dict) and isinstance(thread.get("label"), str) and thread["label"].strip():
+                thread_labels.add(thread["label"])
+        dupes = {lbl for lbl in thread_labels if sum(1 for t in threads if isinstance(t, dict) and t.get("label") == lbl) > 1}
+        if dupes:
+            errors.append(f"'threads' enthält doppelte Labels: {sorted(dupes)} — jeder Handlungsstrang braucht ein eindeutiges Label")
+
     # --- format ---
     fmt = data.get("format", {})
     if not isinstance(fmt, dict):
@@ -501,10 +562,12 @@ def validate_data(data) -> tuple[list[str], list[str]]:
                           f"bereits geschriebene Skripte, die generate_episode.py überspringen soll")
 
         secs = ep.get("sections")
-        if not is_str_list(secs) or not secs:
-            errors.append(f"'{path}.sections' fehlt oder ist keine nicht-leere Liste von Strings")
+        if not is_section_list(secs):
+            errors.append(f"'{path}.sections' fehlt oder ist keine nicht-leere Liste von Strings "
+                          f"ODER Section-Objekten (gemischt nicht erlaubt)")
             continue
         section_counts.add(len(secs))
+        object_sections = is_object_section_list(secs)
 
         styles = ep.get("section_styles")
         if styles is not None:
@@ -521,51 +584,80 @@ def validate_data(data) -> tuple[list[str], list[str]]:
         elif mode == "narration":
             warnings.append(f"'{path}.section_styles' fehlt — alle Parts bekommen den audio.default_style")
 
-        section_words = ep.get("section_words")
-        if section_words is not None:
-            if not isinstance(section_words, list) or len(section_words) != len(secs):
-                errors.append(
-                    f"'{path}.section_words' muss eine Liste mit {len(secs)} Einträgen sein "
-                    f"(einer pro Section, 'null' = format-Default verwenden)"
-                )
-            else:
-                for j, sw in enumerate(section_words):
-                    swpath = f"{path}.section_words[{j}]"
-                    if sw is None:
-                        continue
-                    if not isinstance(sw, dict):
-                        errors.append(f"'{swpath}' muss ein Objekt ({{min, max, target}}) oder 'null' sein")
-                        continue
-                    for key in sw:
-                        if key not in VALID_SECTION_WORDS_KEYS:
-                            warnings.append(f"Unbekannter Schlüssel '{swpath}.{key}' — wird ignoriert (Tippfehler?)")
-                    sw_min, sw_max = sw.get("min"), sw.get("max")
-                    if "min" in sw and (not is_int(sw_min) or sw_min < 1):
-                        errors.append(f"'{swpath}.min' muss eine ganze Zahl >= 1 sein")
-                    if "max" in sw and (not is_int(sw_max) or sw_max < 1):
-                        errors.append(f"'{swpath}.max' muss eine ganze Zahl >= 1 sein")
-                    if is_int(sw_min) and is_int(sw_max) and sw_min >= sw_max:
-                        errors.append(f"'{swpath}.min' ({sw_min}) muss kleiner als '{swpath}.max' ({sw_max}) sein")
-                    if "target" in sw and (not isinstance(sw["target"], str) or not sw["target"].strip()):
-                        errors.append(f"'{swpath}.target' muss ein nicht-leerer String sein (z.B. \"150 to 250\")")
+        if object_sections:
+            # Section-Objekt-Form: 'words'/'location' stehen JETZT im Objekt selbst
+            # (siehe VALID_SECTION_OBJECT_KEYS) — die alten Parallel-Arrays sind hier
+            # überflüssig und würden nur stillschweigend ignoriert, deshalb Warnung
+            # statt Schweigen.
+            if ep.get("section_words") is not None:
+                warnings.append(f"'{path}.section_words' wird bei Section-Objekten ignoriert — "
+                                f"'words' steht jetzt in jedem Section-Objekt selbst")
+            if ep.get("section_locations") is not None:
+                warnings.append(f"'{path}.section_locations' wird bei Section-Objekten ignoriert — "
+                                f"'location' steht jetzt in jedem Section-Objekt selbst")
+            for j, sec in enumerate(secs):
+                spath = f"{path}.sections[{j}]"
+                for key in sec:
+                    if key not in VALID_SECTION_OBJECT_KEYS:
+                        warnings.append(f"Unbekannter Schlüssel '{spath}.{key}' — wird ignoriert (Tippfehler?)")
+                if not isinstance(sec.get("title"), str) or not sec.get("title", "").strip():
+                    errors.append(f"'{spath}.title' fehlt oder ist kein nicht-leerer String")
+                if not isinstance(sec.get("what"), str) or not sec.get("what", "").strip():
+                    errors.append(f"'{spath}.what' fehlt oder ist kein nicht-leerer String — die eigentliche "
+                                  f"erzählte Szene (ein bloßer Titel reicht nicht, siehe konzept-stage-umbau.md)")
+                who = sec.get("who")
+                if who is not None:
+                    if not is_str_list(who):
+                        errors.append(f"'{spath}.who' muss eine Liste nicht-leerer Strings sein")
+                    elif isinstance(voices, dict) and voices:
+                        unknown = [r for r in who if r not in voices]
+                        if unknown:
+                            errors.append(f"'{spath}.who' referenziert {unknown} — keine Rolle(n) aus 'voices'")
+                thread = sec.get("thread")
+                if thread is not None:
+                    if not isinstance(thread, str) or not thread.strip():
+                        errors.append(f"'{spath}.thread' muss ein nicht-leerer String sein")
+                    elif thread_labels and thread not in thread_labels:
+                        errors.append(f"'{spath}.thread' = '{thread}' ist kein Label aus 'threads' "
+                                      f"({', '.join(sorted(thread_labels))})")
+                loc = sec.get("location")
+                if loc is not None:
+                    if not isinstance(loc, str):
+                        errors.append(f"'{spath}.location' muss ein String (Key aus 'locations') sein")
+                    elif locations and loc not in locations:
+                        errors.append(f"'{spath}.location' = '{loc}' ist kein Key aus 'locations' "
+                                      f"({', '.join(sorted(locations))})")
+                if "words" in sec:
+                    validate_words_value(sec["words"], f"{spath}.words")
+        else:
+            section_words = ep.get("section_words")
+            if section_words is not None:
+                if not isinstance(section_words, list) or len(section_words) != len(secs):
+                    errors.append(
+                        f"'{path}.section_words' muss eine Liste mit {len(secs)} Einträgen sein "
+                        f"(einer pro Section, 'null' = format-Default verwenden)"
+                    )
+                else:
+                    for j, sw in enumerate(section_words):
+                        validate_words_value(sw, f"{path}.section_words[{j}]")
 
-        section_locations = ep.get("section_locations")
-        if section_locations is not None:
-            if not isinstance(section_locations, list) or len(section_locations) != len(secs):
-                errors.append(
-                    f"'{path}.section_locations' muss eine Liste mit {len(secs)} Einträgen sein "
-                    f"(einer pro Section, 'null' = kein Orts-Wechsel/Hintergrund bleibt wie zuvor)"
-                )
-            elif not locations:
-                errors.append(f"'{path}.section_locations' ist gesetzt, aber es gibt keine 'locations' "
-                              f"auf oberster Ebene, aus denen die Keys stammen könnten")
-            else:
-                for j, loc_key in enumerate(section_locations):
-                    if loc_key is None:
-                        continue
-                    if not isinstance(loc_key, str) or loc_key not in locations:
-                        errors.append(f"'{path}.section_locations[{j}]' = '{loc_key}' ist kein Key aus "
-                                      f"'locations' ({', '.join(sorted(locations))})")
+            section_locations = ep.get("section_locations")
+            if section_locations is not None:
+                if not isinstance(section_locations, list) or len(section_locations) != len(secs):
+                    errors.append(
+                        f"'{path}.section_locations' muss eine Liste mit {len(secs)} Einträgen sein "
+                        f"(einer pro Section, 'null' = kein Orts-Wechsel/Hintergrund bleibt wie zuvor)"
+                    )
+                elif not locations:
+                    errors.append(f"'{path}.section_locations' ist gesetzt, aber es gibt keine 'locations' "
+                                  f"auf oberster Ebene, aus denen die Keys stammen könnten")
+                else:
+                    for j, loc_key in enumerate(section_locations):
+                        if loc_key is None:
+                            continue
+                        if not isinstance(loc_key, str) or loc_key not in locations:
+                            errors.append(f"'{path}.section_locations[{j}]' = '{loc_key}' ist kein Key aus "
+                                          f"'locations' ({', '.join(sorted(locations))})")
 
         case = ep.get("case")
         if case is not None:
