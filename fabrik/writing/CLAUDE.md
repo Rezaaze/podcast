@@ -50,6 +50,42 @@ ausgenommen — Figuren/Orte MÜSSEN wiederkehren), `build_section_prompt()`
 hängt ihn an; `generate_episode.py all` schreibt zusätzlich
 `PHRASE_REPORT.txt` als Review-Gate neben die Skripte.
 
+**Kontinuitäts-Wächter (`continuity.py`, stdlib-only, 19.07.2026):** prüft
+die FERTIGEN Skripte einer Staffel deterministisch gegen den Kanon aus
+episodes.json. Drei Checks, alle ohne Modellaufruf: (1) Orts-/Organisations-
+Eigennamen gegen `locations[].name` + die in `threads` genannten Entitäten
+(Produktion: eine Serie führte vier verschiedene Zeitungen, obwohl der Kanon
+eine kennt); (2) Ortstyp am selben Besitzer, klassenweise verglichen — Kanon
+"Renata's House" vs. Prosa "Renata's apartment" ist ein Fund, "Adrian's
+precinct" neben "Adrian's Apartment" nicht (sein Arbeitsplatz); (3)
+Zeitangaben nahe einem Kanon-**Eigennamen**, die keiner der für ihn
+festgelegten Angaben entsprechen ("Six weeks" für Panopticon, das laut
+`objective_facts` vier Monate läuft).
+
+Zwei Verwendungen, wie bei `phrase_stats.py`: `build_continuity_report()` →
+`CONTINUITY_REPORT.txt` (Review-Gate, schreibt `generate_episode all`
+automatisch neben PHRASE_REPORT.txt; Knopf im Cockpit unter „Einzelschritte");
+`build_continuity_block()` → Prompt-Block mit den harten Werten, die schon
+feststehen (Kanon-Ortsnamen, erreichte Zählerstände).
+
+**Kalibrierung — nicht ohne Messung anfassen.** Zwei Entwürfe scheiterten
+vorher an echten Produktionsdaten: (a) generische Zähler-Regression über
+jedes Nomen mit Zahl produzierte 127 Meldungen auf zwei Serien, praktisch
+alle falsch ("drei Blocks", "94 Prozent" — Nomen mit Zahlen variieren
+legitim); (b) Zeitanker über beliebige Eigennamen verankerte auf "Adrian",
+"Captain", "Detective", die in jeder zweiten Zeile stehen, sodass jedes
+Zeitfenster traf. Deshalb `_usable_anchors()`: Figurennamen (via
+`phrase_stats.name_words`) und alles, was häufiger als 3x pro Episode
+vorkommt, scheiden als Anker aus. Endstand auf denselben zwei Serien: 12
+Meldungen, alle belegbar, darunter fünf, die ein LLM-Prüfpanel übersehen
+hatte.
+
+**Grenze, ehrlich benannt:** prosa-INTERNE Zahlenfehler ohne Kanon-Bezug
+findet das Modul nicht (Ep1 "forty-two mornings" → Ep2 "Six weeks. Six
+faces."; Foto "Forty-one" an Tag 48). Das ist die größere Hälfte der
+gemessenen Brüche und braucht ein aus der Prosa gezogenes Zustands-Register
+— bewusst noch nicht gebaut.
+
 ## Wortbudget pro PART
 
 - `format.words_per_part_min/max`, gemessen sprachneutral via
@@ -131,11 +167,29 @@ leaken, selbst bei sauberem Plan.
   `--no-script-review` skippt komplett. Alle Flags laufen durch
   `generate_episode.py all`s Subprocess-Parallelität.
 
-## Beat-Layer (`generation.use_beats: true`, opt-in, Default aus)
+## Beat-Layer (`generation.use_beats`, Default **AN** via `DEFAULTS`)
 
 Schließt dieselbe Kontinuitätslücke wie das Review, aber VOR der teuren
 Prosa statt danach. Gated auf `cfg["use_beats"] and episode.get("case")`.
 Volle Design-Begründung: `docs/beat-layer-design.md`.
+
+**Diese Überschrift sagte bis 19.07.2026 "opt-in, Default aus" — das war
+falsch.** `DEFAULTS["use_beats"]` (fabrik/core/config.py) steht auf `True`,
+fehlt der Key in episodes.json, laufen die Beats also. Das WebUI las den
+Wert mit hart kodiertem Default `False` und zeigte deshalb eine leere
+Checkbox für Serien, in denen die Beat-Schicht sehr wohl lief (beide bei
+der Drift-Messung untersuchten Produktionsserien hatten BEATS-Dateien, nur
+eine hatte den Key gesetzt). Beides gefixt — wer den Default ändert, muss
+`webui/app.py`s Rückfall NICHT nachziehen, der liest ihn jetzt aus
+`DEFAULTS`.
+
+**Beats sind nicht genug.** Die Messung (docs/kontinuitaets-messung-
+2026-07-19.md) fand ~1,1 gegengeprüfte Kanon-Brüche pro Episode TROTZ
+laufender Beat-Schicht. Der Grund ist strukturell: Beats entstehen VOR der
+Prosa aus dem Plan und wissen nicht, was das Modell tatsächlich geschrieben
+hat. Die Fehlerklasse, die dadurch durchrutscht (erfundene Ortsnamen,
+Zeitangaben gegen die objective_facts), fängt `continuity.py` deterministisch
+ab — siehe unten.
 
 - `generate_beats()`: EIN Claude-Call sieht alle Section-Einzeiler +
   `case`-Block (`build_case_file_block()`, unverändert wiederverwendet) +

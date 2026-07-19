@@ -372,6 +372,16 @@ COMMANDS = {
     # sfx_plan läuft AUTOMATISCH in `generate_episode all` (vor batch — er
     # verändert die MP3 selbst). Der Knopf hier ist für Einzel-Episoden und
     # zum Neu-Planen nach Skript-Änderungen (--force).
+    "pf_continuity_check": {
+        "label": "Kontinuität prüfen (Kanon-Abgleich, deterministisch)",
+        "cwd": PF_DIR,
+        "interpreter": lambda: sys.executable,
+        "module": "fabrik.cli.continuity_check",
+        "args_schema": [
+            ("flag", "series", "--series"),
+        ],
+        "kind": "line",
+    },
     "pf_sfx_plan": {
         "label": "SFX-Plan (Palette, Platzierung, Ambience — Claude)",
         "cwd": PF_DIR,

@@ -122,6 +122,10 @@
         <button class="run-btn" data-command="pf_generate_episode" data-param-episode="pf-episode-n" data-param-fix="pf-fix-review">Nur diese Episode generieren</button>
       </div>
       <div class="action-row">
+        <button class="run-btn" data-command="pf_continuity_check">Kontinuität gegen den Kanon prüfen</button>
+      </div>
+      <p class="hint">Läuft nach „Alle Skripte generieren" ohnehin automatisch mit und schreibt <code>CONTINUITY_REPORT.txt</code> zu den Skripten — der Knopf ist zum Nachprüfen. Deterministisch, kein Claude-Aufruf, kostet nichts: meldet erfundene Ortsnamen (Kanon sagt „The Herald Newsroom", die Prosa erfindet eine zweite Zeitung) und Zeitangaben, die den <code>objective_facts</code> widersprechen. Reine Anzeige — repariert nichts, du entscheidest beim Lesen.</p>
+      <div class="action-row">
         <label for="pf-render-target">Vertonen auf:</label>
         <select id="pf-render-target">
           <option value="local" selected>Lokal (Mac, Pinokio/Qwen3)</option>

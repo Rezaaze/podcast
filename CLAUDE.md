@@ -24,6 +24,13 @@ zu LÖSCHEN statt weitere hinzuzufügen — Begründung, Datenlage und Task-Stan
 in `docs/konzept-stage-umbau.md`. Vor Änderungen an `create_series.py` oder
 am `sections`-Schema dort nachsehen.
 
+**🧪 Paralleler Ground-up-Rewrite (separates Gleis):** In `rewrite/` entsteht ein
+sauberer Neubau nach `docs/redesign-blueprint.md` (Plan: `docs/redesign-implementation-plan.md`).
+Vollständig isoliert — verändert `fabrik/` NICHT. Stand: Phase 0–7 + Provider fertig,
+154 Tests grün, mit echtem Claude lauffähig. Beim Arbeiten in `rewrite/` lädt Claude Code
+dort automatisch `rewrite/CLAUDE.md` (eigene Invarianten/Routing). Der Produktivbetrieb
+läuft weiter über `fabrik/` + WebUI — nicht verwechseln.
+
 ## Layout
 
 Getrennt nach Laufzeitumgebung und Kopplung, nicht nach Thema:
@@ -101,8 +108,10 @@ cd cloud && ./rent.sh && ./status.sh   # ./stop.sh ./resume.sh ./destroy.sh
 | WebUI, COMMANDS/JobRegistry/SSE, UI-Gotchas | `webui/CLAUDE.md` |
 | Template-Anatomie, die 6 Formate, Accent-Casting, NARRATOR-Regel | `templates/CLAUDE.md` |
 | Beat-Layer-Design-Begründung | `docs/beat-layer-design.md` |
+| Kanon-Drift gemessen (warum Beats nicht reichen), Kontinuitäts-Wächter | `docs/kontinuitaets-messung-2026-07-19.md` |
 | MWP-Umbau (Plan, Ziel-Layout, Task-Stand) | `docs/mwp-umbau-plan.md` |
 | Konzept-Stage zerlegen (01a Kanon / 01b Bogen / 01c Episoden), Check-Abbau | `docs/konzept-stage-umbau.md` |
+| Ground-up-Rewrite (Blueprint, Plan, Invarianten) | `docs/redesign-blueprint.md`, `docs/redesign-implementation-plan.md`, `rewrite/CLAUDE.md` |
 
 ## Top-Gotchas (gelten überall)
 

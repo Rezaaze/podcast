@@ -1267,6 +1267,19 @@ def extract_part_text(script_text: str, part_num: int) -> Optional[str]:
     return match.group(1).strip() if match else None
 
 
+def build_repair_evidence_block(script_text: str, part_num: int) -> str:
+    """Rest der Episode (alle Parts außer dem zu reparierenden) als Beleg für
+    repair_part() — ohne das kann ein Cross-Part-Widerspruch (Part 11 nennt
+    einen anderen Betrag/Zeitpunkt als Part 4) nicht sicher aufgelöst werden:
+    das Modell sieht nur den geflaggten Part + die Problem-Beschreibung und
+    muss raten, welche Seite des Widerspruchs falsch ist. Beobachtet an zwei
+    Produktionsserien (the_midnight_frame, split_signal): --fix reparierte
+    genau diese Fälle systematisch nicht."""
+    pattern = re.compile(rf'--- PART {part_num} ---\n\n.*?(?=--- PART \d+ ---|\Z)', re.DOTALL)
+    rest, n = pattern.subn('', script_text, count=1)
+    return rest.strip() if n else script_text.strip()
+
+
 def replace_part_in_script(output_file: str, part_num: int, new_text: str) -> bool:
     """Ersetzt genau einen Part in der Skriptdatei durch neuen Text — per
     Ersetzungs-FUNKTION statt -String, damit Backslashes/Gruppen-Referenzen
@@ -1290,9 +1303,16 @@ characters, same scene, same events — only the flagged problem gets fixed.
 
 CASE FILE (authoritative source of who knows what):
 {case_block}
-
+{prior_episode_block}
 FLAGGED PROBLEM IN PART {part_num}:
 {problem}
+
+REST OF THE EPISODE (every other part, for reference — do NOT rewrite any of this, it is shown
+only so you can see what facts, numbers, dates, and knowledge are established elsewhere). If the
+flagged problem is a contradiction between Part {part_num} and something stated here or in the
+prior-episode context above, treat what is stated there as authoritative and change Part
+{part_num} to match it, unless the problem description says otherwise:
+{rest_of_episode}
 
 CURRENT TEXT OF PART {part_num} — rewrite this, fixing ONLY the flagged problem. Keep
 everything else as close to the original as possible: which characters are present, the scene
@@ -1305,12 +1325,21 @@ Do not add any other parts, commentary, or explanation before or after it.
 """
 
 
-def repair_part(episode: dict, part_num: int, problem: str, cfg: dict, script_text: str) -> Optional[str]:
+def repair_part(episode: dict, part_num: int, problem: str, cfg: dict, script_text: str,
+                 context_block: str = "") -> Optional[str]:
     """Schreibt EINEN Part gezielt neu, um einen vom Episoden-Review gemeldeten
-    Wissens-Verstoß/Spoiler-Leak zu beheben — läuft durch dieselbe Validierung
-    (Wortbudget, Format, Retry, Best-Effort-Fallback) wie call_claude_with_retry
-    bei der Erstgenerierung. Gibt den neuen Text zurück, oder None bei
-    endgültigem Fehlschlag (Part bleibt in dem Fall unverändert)."""
+    Wissens-Verstoß/Spoiler-Leak/Fakten-Widerspruch zu beheben — läuft durch
+    dieselbe Validierung (Wortbudget, Format, Retry, Best-Effort-Fallback) wie
+    call_claude_with_retry bei der Erstgenerierung. Gibt den neuen Text zurück,
+    oder None bei endgültigem Fehlschlag (Part bleibt in dem Fall unverändert).
+
+    Bekommt den Rest der Episode als Beleg mit (build_repair_evidence_block) —
+    ohne das kann ein Cross-Part-Widerspruch (eine Zahl/ein Zeitpunkt, der in
+    einem ANDEREN Part anders lautet) nicht sicher aufgelöst werden: das
+    Modell sah vorher nur den geflaggten Part + die Problem-Beschreibung und
+    musste raten, welche Seite des Widerspruchs falsch ist. `context_block`
+    (optional, von apply_episode_fixes durchgereicht) deckt denselben Fall
+    gegen eine FRÜHERE Episode ab."""
     current_text = extract_part_text(script_text, part_num)
     if current_text is None:
         print(f"    ⚠️  Part {part_num} nicht im Skript gefunden — Reparatur übersprungen.")
@@ -1319,18 +1348,28 @@ def repair_part(episode: dict, part_num: int, problem: str, cfg: dict, script_te
     section_idx = (part_num - 1) // cfg["parts_per_section"]
     section_cfg = resolve_section_cfg(cfg, episode, section_idx)
 
+    prior_episode_block = f"\n{context_block}" if context_block else ""
     prompt = REPAIR_PROMPT.format(
         case_block=build_case_file_block(episode.get("case")),
+        prior_episode_block=prior_episode_block,
         part_num=part_num, problem=problem, current_text=current_text,
+        rest_of_episode=build_repair_evidence_block(script_text, part_num),
     )
     result = call_claude_with_retry(prompt, [part_num], section_cfg)
     return result[0][1] if result else None
 
 
-def apply_episode_fixes(series: Series, ep_idx: int, episode: dict, cfg: dict, issues: list) -> int:
+def apply_episode_fixes(series: Series, ep_idx: int, episode: dict, cfg: dict, issues: list,
+                         context_block: str = "") -> int:
     """Repariert jeden vom Review gemeldeten Part (mit bekannter Part-Nummer)
     einzeln und schreibt ihn direkt in die Skriptdatei zurück. Gibt die
-    Anzahl erfolgreich reparierter Parts zurück."""
+    Anzahl erfolgreich reparierter Parts zurück.
+
+    `context_block` (i.d.R. dasselbe build_review_context_block()-Ergebnis, das
+    review_episode_script() schon bekam: Beats der Vorepisode + intro_note) wird
+    an repair_part() weitergereicht — ohne das kann ein Widerspruch GEGEN eine
+    frühere Episode (nicht nur gegen einen anderen Part derselben Episode) nicht
+    aufgelöst werden, weil repair_part() sonst nur das aktuelle Skript sieht."""
     output_file = series.script_file(cfg["prefix"], ep_idx + 1)
     fixed = 0
     for issue in issues:
@@ -1342,7 +1381,7 @@ def apply_episode_fixes(series: Series, ep_idx: int, episode: dict, cfg: dict, i
         print(f"    🔧 Repariere Part {part_num}: {problem[:80]}")
         with open(output_file, "r", encoding="utf-8") as f:
             script_text = f.read()
-        new_text = repair_part(episode, part_num, problem, cfg, script_text)
+        new_text = repair_part(episode, part_num, problem, cfg, script_text, context_block)
         if new_text and replace_part_in_script(output_file, part_num, new_text):
             fixed += 1
             print(f"    ✓ Part {part_num} repariert.")
@@ -1616,6 +1655,11 @@ def generate_episode(series: Series, ep_idx, template, data, episodes, force, cf
                      else f"{len(cached_issues)} offene(r) Hinweis(e), --fix zum Reparieren")
             print(f"  Episoden-Review bereits vorhanden ({state}): {os.path.basename(review_file)} ✓")
         else:
+            # Einmal berechnet, für Erst-Review UND Reparatur wiederverwendet
+            # (reine Datei-Reads, kein Claude-Call) — repair_part() braucht denselben
+            # Cross-Episoden-Kontext wie das Review, sonst kann es einen Widerspruch
+            # gegen eine FRÜHERE Episode nicht auflösen (nur gegen die eigene).
+            review_context = build_review_context_block(series, ep_idx, episodes[ep_idx], cfg)
             if cached_issues:
                 print(f"\n  🔁 {len(cached_issues)} Hinweis(e) aus vorhandener "
                       f"{os.path.basename(review_file)} übernommen — kein erneutes Erst-Review.")
@@ -1625,7 +1669,6 @@ def generate_episode(series: Series, ep_idx, template, data, episodes, force, cf
                 # review_model statt light_model: die 12-Serien-Analyse zeigte
                 # das light_model als Reviewer praktisch blind (Details:
                 # DEFAULTS['review_model'] in fabrik/core/config.py).
-                review_context = build_review_context_block(series, ep_idx, episodes[ep_idx], cfg)
                 issues = review_episode_script(episodes[ep_idx], episode_num, len(episodes),
                                                previous_content, cfg.get("review_model", cfg["model"]),
                                                effort=cfg.get("effort"), context_block=review_context)
@@ -1638,7 +1681,8 @@ def generate_episode(series: Series, ep_idx, template, data, episodes, force, cf
                 else:
                     print(f"  🔧 {len(issues)} Hinweis(e) ({len(fixable)} automatisch reparierbar) — "
                           f"repariere betroffene Parts ...")
-                    fixed = apply_episode_fixes(series, ep_idx, episodes[ep_idx], cfg, issues)
+                    fixed = apply_episode_fixes(series, ep_idx, episodes[ep_idx], cfg, issues,
+                                                 context_block=review_context)
                     if fixed == 0:
                         # Kein Part hat sich geändert — ein Bestätigungs-Review würde nur
                         # dasselbe Skript erneut (und teuer) prüfen. Originalbefunde behalten.
@@ -1648,7 +1692,6 @@ def generate_episode(series: Series, ep_idx, template, data, episodes, force, cf
                         print(f"  {fixed}/{len(fixable)} Part(s) repariert — Review erneut, um den Fix zu bestätigen ...")
                         with open(output_file, "r", encoding="utf-8") as f:
                             updated_text = f.read()
-                        review_context = build_review_context_block(series, ep_idx, episodes[ep_idx], cfg)
                         reviewed_again = review_episode_script(episodes[ep_idx], episode_num, len(episodes),
                                                                updated_text, cfg.get("review_model", cfg["model"]),
                                                                effort=cfg.get("effort"), context_block=review_context)

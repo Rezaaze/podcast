@@ -19,6 +19,7 @@ einzige Serie).
 | sfx_plan | SFX-Cues kuratieren: Palette + Platzierung + Lautstärke | claude CLI |
 | sfx_assets / location_ambience | die Sounds dazu generieren (ElevenLabs) | ELEVENLABS_API_KEY, stdlib urllib |
 | library_audit | Near-Miss-Kandidaten in den Asset-Bibliotheken auflisten (reine Anzeige) | stdlib-only |
+| continuity_check | fertige Skripte gegen den Kanon prüfen (reine Anzeige) | stdlib-only |
 
 ## create_series.py
 
@@ -237,8 +238,16 @@ Ohne `arc.json` (Nicht-CASE_BASED_TEMPLATES) läuft dieser Check nicht
   blieben deshalb unbehoben im vertonten Material. Der `all`-Pfad reicht
   die Entscheidung explizit als `--fix`/`--no-fix` an die Subprozesse durch.
 - Nach `all` schreibt der Elternprozess `PHRASE_REPORT.txt` (deterministische
-  Phrasen-/Style-Tic-Zählung, fabrik/writing/phrase_stats.py) neben die
-  Skripte — reine Anzeige, Review-Gate.
+  Phrasen-/Style-Tic-Zählung, fabrik/writing/phrase_stats.py) und
+  `CONTINUITY_REPORT.txt` (Kanon-Abgleich, fabrik/writing/continuity.py)
+  neben die Skripte — beide reine Anzeige, Review-Gate, kein Claude-Call.
+  Der Kontinuitäts-Report ist auch einzeln aufrufbar
+  (`python3 -m fabrik.cli.continuity_check`, Knopf im Cockpit unter
+  „Einzelschritte") und deckt die Fehlerklasse ab, die weder Beat-Layer noch
+  Episode-Review sehen: beide arbeiten PRO Episode, erfundene Ortsnamen und
+  Zeitangaben gegen die `objective_facts` zeigen sich erst im Vergleich der
+  ganzen Staffel gegen den Kanon
+  (Messung: docs/kontinuitaets-messung-2026-07-19.md).
 - `--fix`/Review-Semantik und Beats: siehe fabrik/writing/CLAUDE.md.
 - Jede Episode bekommt automatisch eine `<prefix>N_META.txt`
   (Titel/Beschreibung/Zuschauer-Frage, `script_writer.generate_episode_meta`)

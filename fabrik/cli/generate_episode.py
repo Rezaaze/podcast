@@ -167,6 +167,19 @@ def main():
                     script_texts, exclude_words=phrase_stats.name_words(data)))
             print(f"Phrasen-Report: {os.path.basename(report_path)}")
 
+            # Kontinuitäts-Report (ebenfalls deterministisch und gratis):
+            # erfundene Ortsnamen und Zeitangaben, die den objective_facts
+            # widersprechen. Deckt die Fehlerklasse ab, die weder Beat-Layer
+            # noch Episode-Review sehen — beide arbeiten pro Episode, diese
+            # Brüche zeigen sich erst im Vergleich der ganzen Staffel gegen
+            # den Kanon (Messung: docs/kontinuitaets-messung-2026-07-19.md).
+            from fabrik.writing import continuity
+            cont_path = os.path.join(os.path.dirname(report_path),
+                                     "CONTINUITY_REPORT.txt")
+            with open(cont_path, "w", encoding="utf-8") as f:
+                f.write(continuity.build_continuity_report(data, script_texts))
+            print(f"Kontinuitäts-Report: {os.path.basename(cont_path)}")
+
         if failed:
             print(f"Fehlgeschlagen: Episode(n) {sorted(failed)}")
             print("batch wird nicht gestartet — erst alle Episoden generieren.")

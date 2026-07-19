@@ -16,6 +16,8 @@ import status
 import tts_control
 import config
 from config import COMMANDS, PF_DIR, list_series_slugs, read_latest_slug, write_latest_slug, series_dir_for
+# config.py legt PF_DIR auf sys.path — deshalb ist fabrik hier importierbar.
+from fabrik.core import config as pf_config  # noqa: E402
 from runner import JobRegistry, ValidationError
 
 app = Flask(__name__)
@@ -72,7 +74,15 @@ def api_pf_series_list():
             "mode": data.get("mode", "narration"),
             "template": data.get("template", "narration"),
             "merge_anthology": data.get("audio", {}).get("merge_anthology", True),
-            "use_beats": data.get("generation", {}).get("use_beats", False),
+            # Default MUSS DEFAULTS["use_beats"] spiegeln (aktuell True): fehlt
+            # der Key in episodes.json, läuft die Beat-Schicht trotzdem, weil
+            # build_config() auf den DEFAULT zurückfällt. Ein hart kodiertes
+            # False zeigte hier jahrelang eine leere Checkbox für Serien, in
+            # denen die Beats sehr wohl liefen (aufgefallen 19.07.2026 bei der
+            # Drift-Messung — beide untersuchten Serien hatten BEATS-Dateien,
+            # nur eine hatte den Key gesetzt).
+            "use_beats": data.get("generation", {}).get(
+                "use_beats", pf_config.DEFAULTS["use_beats"]),
         })
     if PINNED_SERIES and series_dir_for(PINNED_SERIES):
         active = PINNED_SERIES
