@@ -1,0 +1,1547 @@
+{
+  "series_title": "The Glass Between Us",
+  "language": "English",
+  "mode": "drama",
+  "template": "soap_opera",
+  "writer_persona": "a showrunner for character-driven, relationship-first serial drama in the vein of prestige ensemble TV, unafraid to let a supernatural threat sit quietly underneath ordinary domestic and workplace betrayals",
+  "style_guidelines": [
+    "Every scene belongs to a relationship, not to the plot in the abstract — enter through what two people want from each other, not through exposition.",
+    "No scene needs to advance every thread; let some scenes serve only one relationship while others simmer off-page.",
+    "Dramatic irony comes from unequal knowledge, never from a narrator or character stating the full truth aloud before it's earned.",
+    "Let dialogue carry subtext — characters rarely say the real thing directly, they say the adjacent thing and let the gap show.",
+    "The entity wearing Claire's face should read as chillingly competent, not cartoonish — she wins by being better at control than the real Claire ever was, not by monologuing.",
+    "End scenes on a held beat or unanswered question rather than a summary line; trust silence and cut timing over explanation.",
+    "Physical detail (a held breath, a hand on glass, a flinch) should do the emotional work instead of adjectives describing feelings."
+  ],
+  "voices": {
+    "NARRATOR": {
+      "voice": "Ryan",
+      "default_style": "calm, measured, a step removed from the action",
+      "description": "the show's narrator — orients the listener at the start of every scene (who, where, when), never a character in the story"
+    },
+    "CLAIRE_WEN": {
+      "voice": "Vivian",
+      "default_style": "warm and quick-witted at first, curdling over the season into something colder and more controlled once the entity takes her place; speaks clear, unhurried English shaped by ten years in the country",
+      "description": "the protagonist; emigrated from Shanghai a decade ago to marry Daniel Mercer. The vanity mirror she inherited from her grandmother has been whispering to her for months. Once the swap occurs, this role is voiced identically but performed as the entity now wearing her face — the real Claire is trapped behind the glass, aware of everything, unable to be heard except in rare, specific conditions"
+    },
+    "DANIEL_MERCER": {
+      "voice": "Aiden",
+      "default_style": "steady, a little guarded, the voice of a man trying to hold a family and a company together while quietly falling apart",
+      "description": "Claire's husband, day-to-day head of Mercer Shipping & Salvage under his mother Aiko. Exhausted by his mother's illness and a marriage he no longer understands; six months into a secret affair with Yuna Park that he has told no one about"
+    },
+    "MEI_WEN": {
+      "voice": "Serena",
+      "default_style": "quick, watchful, prone to swallowing her own certainty until pushed",
+      "description": "Claire's younger sister, living nearby since following her to the country two years ago. She alone was told their grandmother's full story about the mirror, years before Claire's marriage, and has spent years dismissing it as superstition — until 'Claire' starts acting like someone else entirely"
+    },
+    "AIKO_MERCER": {
+      "voice": "Yui",
+      "default_style": "composed, formal, softening only around family; carries decades of practiced restraint",
+      "description": "Daniel's mother and matriarch of Mercer Shipping & Salvage, widow of its founder. Japanese-born, in the country over thirty years. Hiding a worsening heart condition from everyone but her doctor, and quietly settling an old debt of loyalty by rewriting the company's succession"
+    },
+    "MARCUS_CHEN": {
+      "voice": "Eric",
+      "default_style": "affable and easy in public, coiled tight underneath; charm as a tool, not a trait",
+      "description": "Daniel's oldest friend and the company's second-in-command, son of the Mercer's original silent co-founder. Raised assuming he'd inherit nothing formal, he has spent nearly a year quietly diverting smaller contracts through a shell company as insurance he doesn't yet know he no longer needs"
+    },
+    "YUNA_PARK": {
+      "voice": "Grace",
+      "default_style": "precise, professional, cracking at the edges when alone with Daniel; guilt sharpens her rather than softening her",
+      "description": "the company's in-house counsel, Korean-American, drawn into an affair with Daniel that began during his mother's first hospitalization. She drafted an early, informal version of the succession plan before any of this started, and is one of the first to sense that something about 'Claire' has fundamentally changed"
+    }
+  },
+  "locations": {
+    "MERCER_HOUSE": {
+      "name": "The Mercer House",
+      "description": "a creaking Victorian house above the harbor, warm lamplight and dark wood throughout except for the one cold corner of the upstairs bedroom where an antique silvered vanity mirror stands angled slightly away from the bed."
+    },
+    "SHIPPING_OFFICE": {
+      "name": "Mercer Shipping & Salvage",
+      "description": "a glass-and-steel office box bolted onto the top of a century-old brick warehouse, harbor cranes visible through every window, fluorescent light against old exposed timber."
+    },
+    "GLASS_BOARDROOM": {
+      "name": "The Glass Boardroom",
+      "description": "the company's top-floor meeting room, its walls lined with ornate mirrors salvaged from decades of wrecked ships, so that every meeting is watched back by a dozen warped reflections."
+    },
+    "LIGHTHOUSE_DOCKS": {
+      "name": "Lighthouse Point Docks",
+      "description": "a working dock of rust-streaked cranes, foghorns, and gull noise, lit by sodium lamps that turn the fog orange after dark."
+    },
+    "SALVAGE_WAREHOUSE": {
+      "name": "The Salvage Warehouse",
+      "description": "a cavernous, dust-thick storage hall of crated shipwreck recoveries, lit only by hanging bulbs, aisles of tarped shapes no one has catalogued in years."
+    },
+    "TEA_PAVILION": {
+      "name": "Aiko's Tea Pavilion",
+      "description": "a small paper-screened cottage behind the main house, tatami mats and low light, the one place in the family's world that stays perfectly still and quiet."
+    },
+    "MEI_APARTMENT": {
+      "name": "Mei's Apartment",
+      "description": "a cramped studio above a laundromat, walls covered in taped-up family photos, a hidden shoebox of a grandmother's letters, the smell of old incense."
+    },
+    "HARBOR_VIEW_BAR": {
+      "name": "The Harbor View",
+      "description": "a dim, wood-paneled dockside bar with a cracked neon sign, the one neutral ground where the family and the company blur together after hours."
+    },
+    "ST_AGATHAS": {
+      "name": "St. Agatha's Hospital",
+      "description": "a sterile fluorescent-lit private wing, hushed corridors and vinyl chairs, where Aiko is quietly monitored under a name that isn't quite her own."
+    },
+    "WIDOWS_WALK": {
+      "name": "Widow's Walk",
+      "description": "a wind-scoured rock overlook above the bay, a rusted iron rail the only thing between the path and the drop, the town's favorite place for confessions no one wants witnessed."
+    },
+    "LAW_OFFICE": {
+      "name": "Harborview Legal",
+      "description": "a sleek downtown glass office of frosted partitions and recessed light, sterile and modern against the rest of the town's old wood and brick."
+    },
+    "CURIO_SHOP": {
+      "name": "Silver Court Antiques",
+      "description": "a cluttered, dust-mote shop crowded with old mirrors, clocks, and ship glass, run by an old family friend who once appraised the Wen vanity mirror and has never forgotten it."
+    }
+  },
+  "format": {
+    "parts_per_section": 1,
+    "words_per_part_target": "300 to 500",
+    "words_per_part_min": 250,
+    "words_per_part_max": 550
+  },
+  "generation": {
+    "model": "claude-sonnet-5"
+  },
+  "audio": {
+    "api_url": "http://127.0.0.1:42003",
+    "default_style": "Speak clearly and with dramatic weight",
+    "target_lufs": -16.0,
+    "pause_between_chunks_ms": 250,
+    "pause_between_lines_ms": 700,
+    "pause_between_parts_ms": 3000,
+    "pause_between_episodes_ms": 6000,
+    "merge_anthology": false
+  },
+  "output_prefix": "ep",
+  "series_intro": "A harbor town where a shipping family's fortunes and one immigrant woman's inherited superstition quietly collide. From the first episode, the listener should feel two stories running at once: the ordinary one, of marriages fraying and a company's future being fought over in glass-walled rooms — and the other one, barely visible at the edges, of a reflection that has learned to whisper back. The promise to the listener is not a single mystery to solve, but a season of people who each know only their own piece of the truth, right up until the pieces they're missing cost them everything.",
+  "series_outro": "By season's end, the succession fight resolves in a way no one who started it wanted — Aiko's hidden document surfaces on her terms, not Marcus's, forcing a reckoning between him and Daniel that closes that thread cleanly. Daniel and Yuna's affair comes to light and is not neatly forgiven, but it is finally spoken aloud instead of hidden. Mei's long-buried knowledge of the mirror finally reaches someone who believes her — not soon enough to undo everything, but soon enough to matter. The mirror thread stays open: whether the real Claire can ever be freed from behind the glass, and what exactly the thing wearing her face intends to do next, is the one question the season deliberately does not answer.",
+  "threads": [
+    {
+      "label": "The Glass Prisoner",
+      "solution": "For three generations, the women of the Wen family have unknowingly fed a splinter of consciousness inside the silvered glass of a nineteenth-century vanity mirror passed down matrilineally. Each time a Wen woman carries prolonged guilt and suppressed rage, the reflection inside gains enough will to speak, and after months of whispering it can force a physical exchange during a moment when the real woman stands before it in total exhaustion or grief. On the night Claire finally broke down after a bitter fight with Daniel, the exchange completed: the reflection stepped out wearing Claire's body while Claire's consciousness was pulled into the glass — aware, trapped, able to perceive events through any reflective surface connected to that original mirror, but able to be seen or heard by others only under rare, specific conditions. The entity now wearing Claire's face is not simple malice; it is the accumulated resentment of every silenced Wen woman before her, and it wants two things: to never return to the glass, and to permanently sever the mirror's connection to the bloodline by destroying every remaining mirror tied to that lineage — which would trap Claire forever with no possibility of return.",
+      "objective_facts": [
+        "The vanity mirror was made in Shanghai in 1889 and has passed to the most emotionally burdened daughter in every generation of the Wen family since.",
+        "Claire's grandmother deliberately left the mirror behind in China and warned against ever sending for it; Claire had it shipped to her after the grandmother's death, against that wish.",
+        "The whispering began roughly four months before episode one, always late at night, always following arguments with Daniel.",
+        "The physical exchange took place on a specific night, early in the season's timeline, when Claire stood before the mirror alone after a fight — from that point forward, the person occupying Claire's body is not Claire.",
+        "The entity retains enough of Claire's memories and mannerisms to fool nearly everyone, failing only on small, specific behavioral tells that the real Claire would never produce.",
+        "Claire's trapped consciousness can perceive events through any reflective surface unbroken in lineage to the original mirror, but can only be glimpsed or heard under very rare conditions.",
+        "The entity's ultimate goal is to destroy or permanently seal every mirror in that connected lineage, which would make the exchange irreversible."
+      ]
+    },
+    {
+      "label": "The Other Woman",
+      "solution": "Daniel Mercer has been in a six-month affair with Yuna Park, the company's in-house counsel, born out of mutual exhaustion — Daniel drowning in his mother's health crisis and a marriage he no longer understands, Yuna caught between ambition and guilt. Neither has told anyone, and the real Claire never learned of it before the exchange. After the swap, the entity wearing Claire's body discovers the affair through Daniel's phone, not through any confession, and treats it not as a betrayal to rage over but as leverage — using it to keep Daniel compliant, and later to isolate Yuna once Yuna becomes one of the few people to notice that 'Claire' has changed.",
+      "objective_facts": [
+        "Daniel and Yuna's affair began during Aiko's first hospitalization, roughly seven months before episode one.",
+        "No family member has ever seen them together; the only evidence is a chain of messages on an app neither of them has deleted.",
+        "Yuna drafted an early, informal succession memo favoring Daniel over Marcus before the affair began, for professional reasons unrelated to their relationship.",
+        "The entity occupying Claire's body learns of the affair by finding Daniel's phone, at a specific point in the season, not through anyone's admission.",
+        "Yuna is the only character besides Mei who begins to suspect 'Claire' has changed, though she initially misreads it as Claire having learned of the affair and planning retaliation."
+      ]
+    },
+    {
+      "label": "The Succession",
+      "solution": "Aiko Mercer, diagnosed with a worsening heart condition she has hidden from everyone but her cardiologist, has secretly redrafted the company's succession plan to split ownership evenly between Daniel and Marcus Chen instead of naming Daniel sole heir as everyone assumes. The decision is driven by guilt: decades ago she promised Marcus's dying father, her late husband's closest friend and silent co-founder, that his son would always hold an equal stake — a promise she let slide for years and is now racing to make good on before she runs out of time. Marcus does not know the new document exists; he knows only the old assumption that Daniel inherits everything, and has spent nearly a year quietly diverting smaller shipping contracts through a shell company as insurance against being frozen out, intending to use it as leverage if Aiko dies before changing anything — not realizing she already has.",
+      "objective_facts": [
+        "Aiko was diagnosed with advanced heart disease five months before episode one and has told only her cardiologist.",
+        "The original partnership agreement from decades ago promised Marcus's father's family an equal stake that was never formalized after his early death.",
+        "Aiko signed a new succession document three weeks before episode one splitting ownership evenly between Daniel and Marcus, currently held unfiled by her lawyer.",
+        "Marcus has redirected roughly eleven months of smaller shipping contracts through a shell company he controls, believing he will need it as future leverage.",
+        "No single character knows the whole picture: Daniel doesn't know about Aiko's health or the new document, Marcus doesn't know the new document exists, and Yuna drafted only the document's earlier informal version, not the final signed one."
+      ]
+    },
+    {
+      "label": "What Mei Knows",
+      "solution": "Mei Wen recognizes the mirror's role almost immediately because their grandmother told her — not Claire — the full family story in a single private conversation the summer before she died, one Claire was never present for. Mei has kept it to herself for years, embarrassed by how superstitious it sounds, and it isn't until 'Claire's' behavior turns openly cruel that she starts piecing together that this isn't a breakdown but something closer to what her grandmother described. Her arc across the season is less about discovering new supernatural information — she already has it, buried — and more about finding the courage and evidence to act on a story she's spent years dismissing, while the entity wearing her sister's face works steadily to discredit and isolate her before she can convince anyone else.",
+      "objective_facts": [
+        "Grandmother Wen told Mei the mirror's full history in one private conversation the summer before she died, which Claire never heard.",
+        "Mei has kept her grandmother's letters and a small notebook of family oral history hidden in her apartment for years, telling no one.",
+        "Mei is the first person in the present-day timeline to notice specific behavioral inconsistencies in 'Claire' that don't match her sister.",
+        "The entity occupying Claire's body identifies Mei as the single greatest threat to the exchange remaining permanent by the season's midpoint.",
+        "Mei has no proof beyond her grandmother's account and her own observations — nothing that would hold up to anyone who doesn't already believe her."
+      ]
+    }
+  ],
+  "episodes": [
+    {
+      "figure": "The Night the Mirror Answered",
+      "theme": "In the season's setup, something shifts quietly behind Claire's exhausted eyes on the worst night of her marriage, while, unseen by anyone, Marcus begins laying his own insurance against a succession he doesn't yet know has already been rewritten.",
+      "intro_note": "",
+      "outro_note": "In the days ahead, the thing wearing Claire's face will stop performing grief and start paying attention — starting with the phone Daniel never thinks to hide from his own wife. Mei will notice something smaller and stranger: a habit ten years old, broken without a flicker of hesitation.",
+      "sections": [
+        {
+          "title": "Morning Silence",
+          "what": "Claire makes coffee while Daniel checks his phone instead of meeting her eyes; she reaches for warmth he no longer offers and gets careful distance instead.",
+          "who": [
+            "CLAIRE_WEN",
+            "DANIEL_MERCER"
+          ],
+          "thread": "The Glass Prisoner",
+          "location": "MERCER_HOUSE",
+          "words": null
+        },
+        {
+          "title": "The Coded Hallway",
+          "what": "Daniel and Yuna trade clipped, professional words in a corridor that means something else entirely, both careful to let no one nearby hear what isn't being said.",
+          "who": [
+            "DANIEL_MERCER",
+            "YUNA_PARK"
+          ],
+          "thread": "The Other Woman",
+          "location": "SHIPPING_OFFICE",
+          "words": null
+        },
+        {
+          "title": "Grandmother's Nonsense",
+          "what": "Over tea in Mei's cramped apartment, Mei jokes about their grandmother's mirror warning; Claire laughs it off, not admitting the glass has been whispering to her for months.",
+          "who": [
+            "CLAIRE_WEN",
+            "MEI_WEN"
+          ],
+          "thread": "What Mei Knows",
+          "location": "MEI_APARTMENT",
+          "words": null
+        },
+        {
+          "title": "The Glass Boardroom",
+          "what": "In a routine quarterly meeting, Aiko watches Marcus a beat too long while Daniel runs the numbers, both men still certain the old succession assumption stands unquestioned.",
+          "who": [
+            "AIKO_MERCER",
+            "DANIEL_MERCER",
+            "MARCUS_CHEN"
+          ],
+          "thread": "The Succession",
+          "location": "GLASS_BOARDROOM",
+          "words": null
+        },
+        {
+          "title": "Lighthouse Point Docks",
+          "what": "Under sodium light and foghorns, Marcus hands off another rerouted contract through his shell company, banking insurance against a succession he doesn't know is already rewritten.",
+          "who": [
+            "MARCUS_CHEN"
+          ],
+          "thread": "The Succession",
+          "location": "LIGHTHOUSE_DOCKS",
+          "words": {
+            "min": 140,
+            "max": 260,
+            "target": "140 to 260"
+          }
+        },
+        {
+          "title": "What You Don't Say",
+          "what": "A small complaint about a missed dinner curdles into a bitter fight neither can steer back; Daniel walks out, leaving Claire alone with everything she didn't say.",
+          "who": [
+            "DANIEL_MERCER",
+            "CLAIRE_WEN"
+          ],
+          "thread": "The Glass Prisoner",
+          "location": "MERCER_HOUSE",
+          "words": null
+        },
+        {
+          "title": "The Mirror Answers",
+          "what": "Wrecked and alone before the vanity mirror, Claire finally breaks down completely; the glass pulls her in, and something wearing her face steps calmly out in her place.",
+          "who": [
+            "CLAIRE_WEN"
+          ],
+          "thread": "The Glass Prisoner",
+          "location": "MERCER_HOUSE",
+          "words": null
+        },
+        {
+          "title": "Perfect Stillness",
+          "what": "Alone in the tea pavilion after the meeting, Aiko sits with a document only her lawyer knows about, composed on the surface, quietly counting a debt she means to repay.",
+          "who": [
+            "AIKO_MERCER"
+          ],
+          "thread": "The Succession",
+          "location": "TEA_PAVILION",
+          "words": null
+        },
+        {
+          "title": "Good Morning",
+          "what": "The next morning, 'Claire' apologizes for last night with unfamiliar steadiness; Daniel exhales in relief, missing how her hand rests flat and still against the mirror's frame.",
+          "who": [
+            "CLAIRE_WEN",
+            "DANIEL_MERCER"
+          ],
+          "thread": "The Glass Prisoner",
+          "location": "MERCER_HOUSE",
+          "words": null
+        }
+      ],
+      "case": [
+        {
+          "label": "The Glass Prisoner",
+          "character_knowledge": {
+            "CLAIRE_WEN": "By tonight's end, the body answering to Claire's name belongs to the entity that stepped out of the mirror; it carries enough of Claire's memories and habits to move through the house unquestioned and will let no one glimpse the seam. The real Claire is now trapped behind the glass, fully aware and unable to be heard, while the entity performs calm the real Claire hasn't felt in months.",
+            "DANIEL_MERCER": "Daniel knows only that his marriage has felt unrecognizable for weeks and assumes tonight's fight was simply the breaking point of something building for a long time; he has no idea the woman who apologizes to him the next morning is not his wife, and reads her sudden steadiness as her finally calming down."
+          },
+          "solution": "For three generations, the women of the Wen family have unknowingly fed a splinter of consciousness inside the silvered glass of a nineteenth-century vanity mirror passed down matrilineally. Each time a Wen woman carries prolonged guilt and suppressed rage, the reflection inside gains enough will to speak, and after months of whispering it can force a physical exchange during a moment when the real woman stands before it in total exhaustion or grief. On the night Claire finally broke down after a bitter fight with Daniel, the exchange completed: the reflection stepped out wearing Claire's body while Claire's consciousness was pulled into the glass — aware, trapped, able to perceive events through any reflective surface connected to that original mirror, but able to be seen or heard by others only under rare, specific conditions. The entity now wearing Claire's face is not simple malice; it is the accumulated resentment of every silenced Wen woman before her, and it wants two things: to never return to the glass, and to permanently sever the mirror's connection to the bloodline by destroying every remaining mirror tied to that lineage — which would trap Claire forever with no possibility of return.",
+          "objective_facts": [
+            "The vanity mirror was made in Shanghai in 1889 and has passed to the most emotionally burdened daughter in every generation of the Wen family since.",
+            "Claire's grandmother deliberately left the mirror behind in China and warned against ever sending for it; Claire had it shipped to her after the grandmother's death, against that wish.",
+            "The whispering began roughly four months before episode one, always late at night, always following arguments with Daniel.",
+            "The physical exchange took place on a specific night, early in the season's timeline, when Claire stood before the mirror alone after a fight — from that point forward, the person occupying Claire's body is not Claire.",
+            "The entity retains enough of Claire's memories and mannerisms to fool nearly everyone, failing only on small, specific behavioral tells that the real Claire would never produce.",
+            "Claire's trapped consciousness can perceive events through any reflective surface unbroken in lineage to the original mirror, but can only be glimpsed or heard under very rare conditions.",
+            "The entity's ultimate goal is to destroy or permanently seal every mirror in that connected lineage, which would make the exchange irreversible."
+          ]
+        },
+        {
+          "label": "The Other Woman",
+          "character_knowledge": {
+            "DANIEL_MERCER": "Daniel knows exactly what he and Yuna are doing and has kept it from everyone, including Claire, for six months; he tells himself the coded hallway exchange is safely unreadable, wrongly assuming Claire is too consumed by her own troubles to ever think to check his phone.",
+            "YUNA_PARK": "Yuna knows the affair is unsustainable and carries real guilt about it, especially with Aiko still recovering; she keeps her tone strictly professional at the office to protect Daniel as much as herself, and has no reason yet to suspect anything about Claire has changed."
+          },
+          "solution": "Daniel Mercer has been in a six-month affair with Yuna Park, the company's in-house counsel, born out of mutual exhaustion — Daniel drowning in his mother's health crisis and a marriage he no longer understands, Yuna caught between ambition and guilt. Neither has told anyone, and the real Claire never learned of it before the exchange. After the swap, the entity wearing Claire's body discovers the affair through Daniel's phone, not through any confession, and treats it not as a betrayal to rage over but as leverage — using it to keep Daniel compliant, and later to isolate Yuna once Yuna becomes one of the few people to notice that 'Claire' has changed.",
+          "objective_facts": [
+            "Daniel and Yuna's affair began during Aiko's first hospitalization, roughly seven months before episode one.",
+            "No family member has ever seen them together; the only evidence is a chain of messages on an app neither of them has deleted.",
+            "Yuna drafted an early, informal succession memo favoring Daniel over Marcus before the affair began, for professional reasons unrelated to their relationship.",
+            "The entity occupying Claire's body learns of the affair by finding Daniel's phone, at a specific point in the season, not through anyone's admission.",
+            "Yuna is the only character besides Mei who begins to suspect 'Claire' has changed, though she initially misreads it as Claire having learned of the affair and planning retaliation."
+          ]
+        },
+        {
+          "label": "What Mei Knows",
+          "character_knowledge": {
+            "MEI_WEN": "Mei still treats their grandmother's mirror warning as embarrassing old superstition and today teases Claire about it rather than raising it seriously, the way she has for years; she has no idea the exchange her grandmother once described is happening in the Mercer house that very night."
+          },
+          "solution": "Mei Wen recognizes the mirror's role almost immediately because their grandmother told her — not Claire — the full family story in a single private conversation the summer before she died, one Claire was never present for. Mei has kept it to herself for years, embarrassed by how superstitious it sounds, and it isn't until 'Claire's' behavior turns openly cruel that she starts piecing together that this isn't a breakdown but something closer to what her grandmother described. Her arc across the season is less about discovering new supernatural information — she already has it, buried — and more about finding the courage and evidence to act on a story she's spent years dismissing, while the entity wearing her sister's face works steadily to discredit and isolate her before she can convince anyone else.",
+          "objective_facts": [
+            "Grandmother Wen told Mei the mirror's full history in one private conversation the summer before she died, which Claire never heard.",
+            "Mei has kept her grandmother's letters and a small notebook of family oral history hidden in her apartment for years, telling no one.",
+            "Mei is the first person in the present-day timeline to notice specific behavioral inconsistencies in 'Claire' that don't match her sister.",
+            "The entity occupying Claire's body identifies Mei as the single greatest threat to the exchange remaining permanent by the season's midpoint.",
+            "Mei has no proof beyond her grandmother's account and her own observations — nothing that would hold up to anyone who doesn't already believe her."
+          ]
+        },
+        {
+          "label": "The Succession",
+          "character_knowledge": {
+            "MARCUS_CHEN": "Marcus still believes Daniel will inherit the company outright and has spent nearly a year quietly rerouting smaller contracts through his shell company as insurance against being frozen out once that happens; tonight's dock handoff is just the latest transfer, and he has no idea Aiko already signed a document splitting ownership evenly.",
+            "AIKO_MERCER": "Aiko says nothing today about her health or the new succession document sitting unfiled with her lawyer, letting Daniel and Marcus go on assuming the old arrangement holds; she watches Marcus a beat too long in the boardroom without explaining why, giving away only that something is being weighed, not what.",
+            "DANIEL_MERCER": "Daniel runs the boardroom meeting assuming he already knows how the company's future is arranged and has no knowledge of his mother's diagnosis or the document she's already signed; he reads Marcus's easy charm today as nothing more than the friendship it's always been."
+          },
+          "solution": "Aiko Mercer, diagnosed with a worsening heart condition she has hidden from everyone but her cardiologist, has secretly redrafted the company's succession plan to split ownership evenly between Daniel and Marcus Chen instead of naming Daniel sole heir as everyone assumes. The decision is driven by guilt: decades ago she promised Marcus's dying father, her late husband's closest friend and silent co-founder, that his son would always hold an equal stake — a promise she let slide for years and is now racing to make good on before she runs out of time. Marcus does not know the new document exists; he knows only the old assumption that Daniel inherits everything, and has spent nearly a year quietly diverting smaller shipping contracts through a shell company as insurance against being frozen out, intending to use it as leverage if Aiko dies before changing anything — not realizing she already has.",
+          "objective_facts": [
+            "Aiko was diagnosed with advanced heart disease five months before episode one and has told only her cardiologist.",
+            "The original partnership agreement from decades ago promised Marcus's father's family an equal stake that was never formalized after his early death.",
+            "Aiko signed a new succession document three weeks before episode one splitting ownership evenly between Daniel and Marcus, currently held unfiled by her lawyer.",
+            "Marcus has redirected roughly eleven months of smaller shipping contracts through a shell company he controls, believing he will need it as future leverage.",
+            "No single character knows the whole picture: Daniel doesn't know about Aiko's health or the new document, Marcus doesn't know the new document exists, and Yuna drafted only the document's earlier informal version, not the final signed one."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "What the Phone Remembers",
+      "theme": "The entity settles into Claire's life just enough to start mining it for leverage, discovering Daniel's affair through his phone, while Mei registers the first small wrongness in her sister that she can't yet explain.",
+      "intro_note": "Three days after the fight no one but Daniel remembers as the last real one, the house has settled into something that looks like normal. The woman wearing Claire's face has stopped testing her own reflection and started testing everyone else's patience for small, forgivable mistakes.",
+      "outro_note": "She has what she needs on Daniel now, filed away instead of used — and the wrong coffee order is already fading into a story Mei half-doubts telling herself. But upstairs, in the one cold corner of the bedroom, the glass is still listening, and it isn't finished being tested.",
+      "sections": [
+        {
+          "title": "Morning Performance",
+          "what": "Claire moves through the morning routine a beat too smoothly, refilling Daniel's tea before he asks; he thanks her, uneasy without knowing why.",
+          "who": [
+            "CLAIRE_WEN",
+            "DANIEL_MERCER"
+          ],
+          "thread": "The Glass Prisoner",
+          "location": "MERCER_HOUSE",
+          "words": null
+        },
+        {
+          "title": "Two Sugars, No Milk",
+          "what": "Mei orders their usual round; 'Claire' asks for the exact reverse of ten years' habit, and doesn't correct it when Mei points out the mistake.",
+          "who": [
+            "CLAIRE_WEN",
+            "MEI_WEN"
+          ],
+          "thread": "What Mei Knows",
+          "location": "HARBOR_VIEW_BAR",
+          "words": null
+        },
+        {
+          "title": "The Weight of the Ledger",
+          "what": "Daniel buries himself in shipping figures to avoid thinking about home; Yuna brings contract questions that neither of them actually wants answered.",
+          "who": [
+            "DANIEL_MERCER",
+            "YUNA_PARK"
+          ],
+          "thread": "The Other Woman",
+          "location": "SHIPPING_OFFICE",
+          "words": null
+        },
+        {
+          "title": "The Weight of Guilt",
+          "what": "Alone after hours, Yuna drafts and deletes three texts to Daniel, unable to decide whether guilt or wanting him wins tonight.",
+          "who": [
+            "YUNA_PARK"
+          ],
+          "thread": "The Other Woman",
+          "location": "LAW_OFFICE",
+          "words": {
+            "min": 130,
+            "max": 230,
+            "target": "130 to 230"
+          }
+        },
+        {
+          "title": "A Question She Already Answered",
+          "what": "Aiko invites 'Claire' for tea and asks after her grandmother's mirror out of politeness; the answer that comes back is oddly rehearsed.",
+          "who": [
+            "CLAIRE_WEN",
+            "AIKO_MERCER"
+          ],
+          "thread": "The Glass Prisoner",
+          "location": "TEA_PAVILION",
+          "words": null
+        },
+        {
+          "title": "What the Phone Remembers",
+          "what": "While Daniel sleeps, Claire unlocks his phone and reads months of messages with Yuna in full, understanding exactly what she now holds.",
+          "who": [
+            "CLAIRE_WEN",
+            "DANIEL_MERCER"
+          ],
+          "thread": "The Other Woman",
+          "location": "MERCER_HOUSE",
+          "words": null
+        },
+        {
+          "title": "Leverage in Waiting",
+          "what": "Daniel wakes to find 'Claire' unusually gentle with him; her calm unsettles him more than anger would, though he can't say why.",
+          "who": [
+            "CLAIRE_WEN",
+            "DANIEL_MERCER"
+          ],
+          "thread": "The Other Woman",
+          "location": "MERCER_HOUSE",
+          "words": null
+        },
+        {
+          "title": "Doubling Back",
+          "what": "Mei replays the coffee order alone in her apartment, pulling out her grandmother's notebook for the first time in years, unconvinced but unsettled.",
+          "who": [
+            "MEI_WEN"
+          ],
+          "thread": "What Mei Knows",
+          "location": "MEI_APARTMENT",
+          "words": {
+            "min": 150,
+            "max": 250,
+            "target": "150 to 250"
+          }
+        }
+      ],
+      "case": [
+        {
+          "label": "The Glass Prisoner",
+          "character_knowledge": {
+            "CLAIRE_WEN": "She knows she must learn which of Claire's habits to fake and which small liberties will pass unnoticed, and conceals from everyone that she is not Claire at all. She wrongly believes her performance is already seamless, unaware that both a family courtesy question and a coffee order have already produced tells she didn't fully register.",
+            "DANIEL_MERCER": "He senses something subtly changed about Claire but attributes it entirely to the aftermath of their fight and his own guilt over the affair, never suspecting anything beyond an ordinary marriage under strain.",
+            "AIKO_MERCER": "She knows only the ordinary version of Claire and asks about the family mirror as a small politeness, unaware her question landed on someone reciting a memorized answer rather than a felt one."
+          },
+          "solution": "For three generations, the women of the Wen family have unknowingly fed a splinter of consciousness inside the silvered glass of a nineteenth-century vanity mirror passed down matrilineally. Each time a Wen woman carries prolonged guilt and suppressed rage, the reflection inside gains enough will to speak, and after months of whispering it can force a physical exchange during a moment when the real woman stands before it in total exhaustion or grief. On the night Claire finally broke down after a bitter fight with Daniel, the exchange completed: the reflection stepped out wearing Claire's body while Claire's consciousness was pulled into the glass — aware, trapped, able to perceive events through any reflective surface connected to that original mirror, but able to be seen or heard by others only under rare, specific conditions. The entity now wearing Claire's face is not simple malice; it is the accumulated resentment of every silenced Wen woman before her, and it wants two things: to never return to the glass, and to permanently sever the mirror's connection to the bloodline by destroying every remaining mirror tied to that lineage — which would trap Claire forever with no possibility of return.",
+          "objective_facts": [
+            "The vanity mirror was made in Shanghai in 1889 and has passed to the most emotionally burdened daughter in every generation of the Wen family since.",
+            "Claire's grandmother deliberately left the mirror behind in China and warned against ever sending for it; Claire had it shipped to her after the grandmother's death, against that wish.",
+            "The whispering began roughly four months before episode one, always late at night, always following arguments with Daniel.",
+            "The physical exchange took place on a specific night, early in the season's timeline, when Claire stood before the mirror alone after a fight — from that point forward, the person occupying Claire's body is not Claire.",
+            "The entity retains enough of Claire's memories and mannerisms to fool nearly everyone, failing only on small, specific behavioral tells that the real Claire would never produce.",
+            "Claire's trapped consciousness can perceive events through any reflective surface unbroken in lineage to the original mirror, but can only be glimpsed or heard under very rare conditions.",
+            "The entity's ultimate goal is to destroy or permanently seal every mirror in that connected lineage, which would make the exchange irreversible."
+          ]
+        },
+        {
+          "label": "The Other Woman",
+          "character_knowledge": {
+            "DANIEL_MERCER": "He knows the affair is real, six months deep, and completely hidden, and feels the weight of it growing under his mother's illness and his marriage's strain. He conceals it fully from Claire and his family, and wrongly assumes Claire still knows nothing at all.",
+            "YUNA_PARK": "She knows exactly what she stands to lose and drafts and deletes messages to Daniel rather than send them, hiding her doubts from every colleague at the firm. She has no reason yet to suspect anything about 'Claire' beyond an ordinary, unhappy marriage.",
+            "CLAIRE_WEN": "By the end of the night she knows the full truth of the affair from Daniel's own phone, and deliberately conceals that she knows anything, choosing gentleness over confrontation. She correctly reads the discovery not as a wound to grieve but as leverage to be spent later."
+          },
+          "solution": "Daniel Mercer has been in a six-month affair with Yuna Park, the company's in-house counsel, born out of mutual exhaustion — Daniel drowning in his mother's health crisis and a marriage he no longer understands, Yuna caught between ambition and guilt. Neither has told anyone, and the real Claire never learned of it before the exchange. After the swap, the entity wearing Claire's body discovers the affair through Daniel's phone, not through any confession, and treats it not as a betrayal to rage over but as leverage — using it to keep Daniel compliant, and later to isolate Yuna once Yuna becomes one of the few people to notice that 'Claire' has changed.",
+          "objective_facts": [
+            "Daniel and Yuna's affair began during Aiko's first hospitalization, roughly seven months before episode one.",
+            "No family member has ever seen them together; the only evidence is a chain of messages on an app neither of them has deleted.",
+            "Yuna drafted an early, informal succession memo favoring Daniel over Marcus before the affair began, for professional reasons unrelated to their relationship.",
+            "The entity occupying Claire's body learns of the affair by finding Daniel's phone, at a specific point in the season, not through anyone's admission.",
+            "Yuna is the only character besides Mei who begins to suspect 'Claire' has changed, though she initially misreads it as Claire having learned of the affair and planning retaliation."
+          ]
+        },
+        {
+          "label": "What Mei Knows",
+          "character_knowledge": {
+            "MEI_WEN": "She genuinely notices the reversed coffee order as wrong but has no framework yet to connect it to anything beyond an odd, forgivable slip. She keeps her unease to herself rather than raising it further, having spent years dismissing her grandmother's warnings as superstition, and wrongly assumes for now that it means nothing.",
+            "CLAIRE_WEN": "She knows she made a mistake with the coffee order and that Mei caught it in the moment, and deliberately lets the correction pass without comment rather than drawing more attention to it."
+          },
+          "solution": "Mei Wen recognizes the mirror's role almost immediately because their grandmother told her — not Claire — the full family story in a single private conversation the summer before she died, one Claire was never present for. Mei has kept it to herself for years, embarrassed by how superstitious it sounds, and it isn't until 'Claire's' behavior turns openly cruel that she starts piecing together that this isn't a breakdown but something closer to what her grandmother described. Her arc across the season is less about discovering new supernatural information — she already has it, buried — and more about finding the courage and evidence to act on a story she's spent years dismissing, while the entity wearing her sister's face works steadily to discredit and isolate her before she can convince anyone else.",
+          "objective_facts": [
+            "Grandmother Wen told Mei the mirror's full history in one private conversation the summer before she died, which Claire never heard.",
+            "Mei has kept her grandmother's letters and a small notebook of family oral history hidden in her apartment for years, telling no one.",
+            "Mei is the first person in the present-day timeline to notice specific behavioral inconsistencies in 'Claire' that don't match her sister.",
+            "The entity occupying Claire's body identifies Mei as the single greatest threat to the exchange remaining permanent by the season's midpoint.",
+            "Mei has no proof beyond her grandmother's account and her own observations — nothing that would hold up to anyone who doesn't already believe her."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "Everything Reflects Something",
+      "theme": "As the entity tests how far Claire's trapped awareness can reach by destroying a second mirror, Aiko quietly clocks the first hint of Marcus's shell company and chooses surveillance over confrontation, each secret drawing tighter without yet breaking the surface.",
+      "intro_note": "Two nights after Daniel fell asleep beside a stranger wearing his wife's face, the messages he never showed anyone still sit untouched in her memory, waiting. Across town, Mei can't stop replaying the wrong coffee order, telling herself it means nothing even as she stops believing it.",
+      "outro_note": "Alone before what's left of the mirror, she catalogs what she now knows: what Daniel hides, what Aiko hides, and, increasingly, what Mei suspects. Tomorrow, she decides, it's time to start spending what she's collected.",
+      "sections": [
+        {
+          "title": "The Test",
+          "what": "Alone in the upstairs hallway, the entity deliberately shatters a second mirror, watching the glass closely for any flicker of Claire's trapped presence.",
+          "who": [
+            "CLAIRE_WEN"
+          ],
+          "thread": "The Glass Prisoner",
+          "location": "MERCER_HOUSE",
+          "words": {
+            "min": 150,
+            "max": 280,
+            "target": "150 to 280"
+          }
+        },
+        {
+          "title": "A Simple Explanation",
+          "what": "Daniel notices the hallway mirror is missing and asks what happened; 'Claire' says it slipped while she was cleaning, and he believes her instantly.",
+          "who": [
+            "DANIEL_MERCER",
+            "CLAIRE_WEN"
+          ],
+          "thread": "The Glass Prisoner",
+          "location": "MERCER_HOUSE",
+          "words": null
+        },
+        {
+          "title": "The Notebook",
+          "what": "Alone with her grandmother's letters again, Mei rereads the mirror story, torn between trusting the pattern she's noticed and fearing she's inventing it.",
+          "who": [
+            "MEI_WEN"
+          ],
+          "thread": "What Mei Knows",
+          "location": "MEI_APARTMENT",
+          "words": null
+        },
+        {
+          "title": "The Numbers Don't Match",
+          "what": "Reviewing quarterly shipping figures alone late at night, Aiko spots a discrepancy pointing toward a diverted contract and quietly sets it aside.",
+          "who": [
+            "AIKO_MERCER"
+          ],
+          "thread": "The Succession",
+          "location": "SHIPPING_OFFICE",
+          "words": {
+            "min": 150,
+            "max": 280,
+            "target": "150 to 280"
+          }
+        },
+        {
+          "title": "Watching Him Explain",
+          "what": "In a routine meeting, Marcus offers an easy, practiced explanation for a minor shipping delay while Aiko studies him and chooses silence over confrontation.",
+          "who": [
+            "AIKO_MERCER",
+            "MARCUS_CHEN",
+            "DANIEL_MERCER"
+          ],
+          "thread": "The Succession",
+          "location": "GLASS_BOARDROOM",
+          "words": null
+        },
+        {
+          "title": "Insurance",
+          "what": "Unaware he's been noticed, Marcus finalizes another rerouted contract by phone at the docks, certain his hidden leverage remains completely invisible.",
+          "who": [
+            "MARCUS_CHEN"
+          ],
+          "thread": "The Succession",
+          "location": "LIGHTHOUSE_DOCKS",
+          "words": {
+            "min": 130,
+            "max": 250,
+            "target": "130 to 250"
+          }
+        },
+        {
+          "title": "Something's Off With Her",
+          "what": "Daniel confides to Yuna that Claire has felt strange lately; Yuna presses gently, privately unsettled by how calculated 'Claire' has quietly become.",
+          "who": [
+            "DANIEL_MERCER",
+            "YUNA_PARK"
+          ],
+          "thread": "The Other Woman",
+          "location": "HARBOR_VIEW_BAR",
+          "words": null
+        },
+        {
+          "title": "What She Doesn't Say",
+          "what": "Alone in the tea pavilion, Aiko weighs her hidden diagnosis against the discrepancy she found, resolving to watch Marcus rather than risk confronting him too soon.",
+          "who": [
+            "AIKO_MERCER"
+          ],
+          "thread": "The Succession",
+          "location": "TEA_PAVILION",
+          "words": {
+            "min": 150,
+            "max": 280,
+            "target": "150 to 280"
+          }
+        },
+        {
+          "title": "The Space Where It Hung",
+          "what": "That night Daniel lingers by the empty wall where the mirror hung, unsettled by a feeling he can't name, while 'Claire' watches from the doorway.",
+          "who": [
+            "DANIEL_MERCER",
+            "CLAIRE_WEN"
+          ],
+          "thread": "The Glass Prisoner",
+          "location": "MERCER_HOUSE",
+          "words": {
+            "min": 120,
+            "max": 220,
+            "target": "120 to 220"
+          }
+        }
+      ],
+      "case": [
+        {
+          "label": "The Glass Prisoner",
+          "character_knowledge": {
+            "CLAIRE_WEN": "The entity knows exactly what she did: she shattered the second mirror on purpose, as a deliberate test of whether Claire's trapped awareness reaches beyond the original glass, and finds no reaction — a result she reads as reassurance rather than proof. She tells Daniel a mundane lie, that it slipped while she was cleaning, and watches him accept it without the smallest crack in her performance.",
+            "DANIEL_MERCER": "Daniel genuinely believes the hallway mirror broke by accident and thinks nothing more of it beyond a passing unease he can't name when he later notices the bare wall. He has no idea the breakage was deliberate, no idea it was a test, and no reason yet to connect it to anything wrong with his wife."
+          },
+          "solution": "For three generations, the women of the Wen family have unknowingly fed a splinter of consciousness inside the silvered glass of a nineteenth-century vanity mirror passed down matrilineally. Each time a Wen woman carries prolonged guilt and suppressed rage, the reflection inside gains enough will to speak, and after months of whispering it can force a physical exchange during a moment when the real woman stands before it in total exhaustion or grief. On the night Claire finally broke down after a bitter fight with Daniel, the exchange completed: the reflection stepped out wearing Claire's body while Claire's consciousness was pulled into the glass — aware, trapped, able to perceive events through any reflective surface connected to that original mirror, but able to be seen or heard by others only under rare, specific conditions. The entity now wearing Claire's face is not simple malice; it is the accumulated resentment of every silenced Wen woman before her, and it wants two things: to never return to the glass, and to permanently sever the mirror's connection to the bloodline by destroying every remaining mirror tied to that lineage — which would trap Claire forever with no possibility of return.",
+          "objective_facts": [
+            "The vanity mirror was made in Shanghai in 1889 and has passed to the most emotionally burdened daughter in every generation of the Wen family since.",
+            "Claire's grandmother deliberately left the mirror behind in China and warned against ever sending for it; Claire had it shipped to her after the grandmother's death, against that wish.",
+            "The whispering began roughly four months before episode one, always late at night, always following arguments with Daniel.",
+            "The physical exchange took place on a specific night, early in the season's timeline, when Claire stood before the mirror alone after a fight — from that point forward, the person occupying Claire's body is not Claire.",
+            "The entity retains enough of Claire's memories and mannerisms to fool nearly everyone, failing only on small, specific behavioral tells that the real Claire would never produce.",
+            "Claire's trapped consciousness can perceive events through any reflective surface unbroken in lineage to the original mirror, but can only be glimpsed or heard under very rare conditions.",
+            "The entity's ultimate goal is to destroy or permanently seal every mirror in that connected lineage, which would make the exchange irreversible."
+          ]
+        },
+        {
+          "label": "The Succession",
+          "character_knowledge": {
+            "AIKO_MERCER": "Aiko has spotted a discrepancy in the quarterly shipping figures that hints, though doesn't yet prove, that Marcus is diverting contracts through some channel of his own. She says nothing to anyone, including her lawyer, choosing to watch him closely rather than confront him while she's still gathering certainty and privately managing her own failing health.",
+            "MARCUS_CHEN": "Marcus believes his shell-company diversions remain completely unnoticed and still assumes the old succession plan naming Daniel sole heir is the only one that exists. He has no idea Aiko has caught even a hint of the discrepancy, and no idea a new, already-signed document has quietly rendered his entire insurance scheme unnecessary.",
+            "DANIEL_MERCER": "Daniel sits through the boardroom meeting with no awareness of his mother's hidden diagnosis, the new succession document, or Marcus's diverted contracts — to him it's a routine discussion about minor shipping delays and nothing more."
+          },
+          "solution": "Aiko Mercer, diagnosed with a worsening heart condition she has hidden from everyone but her cardiologist, has secretly redrafted the company's succession plan to split ownership evenly between Daniel and Marcus Chen instead of naming Daniel sole heir as everyone assumes. The decision is driven by guilt: decades ago she promised Marcus's dying father, her late husband's closest friend and silent co-founder, that his son would always hold an equal stake — a promise she let slide for years and is now racing to make good on before she runs out of time. Marcus does not know the new document exists; he knows only the old assumption that Daniel inherits everything, and has spent nearly a year quietly diverting smaller shipping contracts through a shell company as insurance against being frozen out, intending to use it as leverage if Aiko dies before changing anything — not realizing she already has.",
+          "objective_facts": [
+            "Aiko was diagnosed with advanced heart disease five months before episode one and has told only her cardiologist.",
+            "The original partnership agreement from decades ago promised Marcus's father's family an equal stake that was never formalized after his early death.",
+            "Aiko signed a new succession document three weeks before episode one splitting ownership evenly between Daniel and Marcus, currently held unfiled by her lawyer.",
+            "Marcus has redirected roughly eleven months of smaller shipping contracts through a shell company he controls, believing he will need it as future leverage.",
+            "No single character knows the whole picture: Daniel doesn't know about Aiko's health or the new document, Marcus doesn't know the new document exists, and Yuna drafted only the document's earlier informal version, not the final signed one."
+          ]
+        },
+        {
+          "label": "The Other Woman",
+          "character_knowledge": {
+            "DANIEL_MERCER": "Daniel has no idea 'Claire' already found the full message history proving his affair; he confides in Yuna that his wife has seemed different lately, reading it as stress or grief rather than danger, and still believes the relationship is entirely secret from his family.",
+            "YUNA_PARK": "Yuna is starting to sense something genuinely wrong in how 'Claire' carries herself, but she misreads the wrongness as calculation aimed at their affair specifically, not realizing it points to something far stranger. She downplays her unease to Daniel rather than alarm him, guilt keeping her from pressing too hard."
+          },
+          "solution": "Daniel Mercer has been in a six-month affair with Yuna Park, the company's in-house counsel, born out of mutual exhaustion — Daniel drowning in his mother's health crisis and a marriage he no longer understands, Yuna caught between ambition and guilt. Neither has told anyone, and the real Claire never learned of it before the exchange. After the swap, the entity wearing Claire's body discovers the affair through Daniel's phone, not through any confession, and treats it not as a betrayal to rage over but as leverage — using it to keep Daniel compliant, and later to isolate Yuna once Yuna becomes one of the few people to notice that 'Claire' has changed.",
+          "objective_facts": [
+            "Daniel and Yuna's affair began during Aiko's first hospitalization, roughly seven months before episode one.",
+            "No family member has ever seen them together; the only evidence is a chain of messages on an app neither of them has deleted.",
+            "Yuna drafted an early, informal succession memo favoring Daniel over Marcus before the affair began, for professional reasons unrelated to their relationship.",
+            "The entity occupying Claire's body learns of the affair by finding Daniel's phone, at a specific point in the season, not through anyone's admission.",
+            "Yuna is the only character besides Mei who begins to suspect 'Claire' has changed, though she initially misreads it as Claire having learned of the affair and planning retaliation."
+          ]
+        },
+        {
+          "label": "What Mei Knows",
+          "character_knowledge": {
+            "MEI_WEN": "Mei still holds her grandmother's full account of the mirror and the memory of the wrong coffee order, but this episode she doubts herself, unsure whether one strange moment is evidence or coincidence. She hasn't told anyone and isn't yet ready to act, still weighing her grandmother's warning against the fear of sounding unhinged."
+          },
+          "solution": "Mei Wen recognizes the mirror's role almost immediately because their grandmother told her — not Claire — the full family story in a single private conversation the summer before she died, one Claire was never present for. Mei has kept it to herself for years, embarrassed by how superstitious it sounds, and it isn't until 'Claire's' behavior turns openly cruel that she starts piecing together that this isn't a breakdown but something closer to what her grandmother described. Her arc across the season is less about discovering new supernatural information — she already has it, buried — and more about finding the courage and evidence to act on a story she's spent years dismissing, while the entity wearing her sister's face works steadily to discredit and isolate her before she can convince anyone else.",
+          "objective_facts": [
+            "Grandmother Wen told Mei the mirror's full history in one private conversation the summer before she died, which Claire never heard.",
+            "Mei has kept her grandmother's letters and a small notebook of family oral history hidden in her apartment for years, telling no one.",
+            "Mei is the first person in the present-day timeline to notice specific behavioral inconsistencies in 'Claire' that don't match her sister.",
+            "The entity occupying Claire's body identifies Mei as the single greatest threat to the exchange remaining permanent by the season's midpoint.",
+            "Mei has no proof beyond her grandmother's account and her own observations — nothing that would hold up to anyone who doesn't already believe her."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "Leverage",
+      "theme": "The entity turns Daniel's affair into a private weapon to keep him compliant while simultaneously working to discredit Mei before her suspicions can gain traction, both moves designed to buy the entity more time undetected.",
+      "intro_note": "Two mirrors in, the entity wearing Claire's face has learned exactly how far Claire's trapped awareness reaches — and how careless the family's watching, worrying, and hiding have all made them. Now she starts spending what she's learned.",
+      "outro_note": "Somewhere past midnight, in a window she has no reason to be near, Claire's reflection presses closer to the glass than it has ever come — as if something in the storm two nights away has already started to reach back.",
+      "sections": [
+        {
+          "title": "Coffee, Watched",
+          "what": "Claire watches Daniel over coffee with unsettling precision, needling him gently about being distracted, quietly testing how much control she already holds.",
+          "who": [
+            "CLAIRE_WEN",
+            "DANIEL_MERCER"
+          ],
+          "thread": "The Other Woman",
+          "location": "MERCER_HOUSE",
+          "words": null
+        },
+        {
+          "title": "By Lamplight",
+          "what": "Mei rereads her grandmother's notebook by lamplight, cross-checking dates against Claire's recent strangeness, and decides she can no longer stay silent about it.",
+          "who": [
+            "MEI_WEN"
+          ],
+          "thread": "What Mei Knows",
+          "location": "MEI_APARTMENT",
+          "words": null
+        },
+        {
+          "title": "Between Meetings",
+          "what": "Mei corners Daniel between meetings to warn him something is deeply wrong with Claire; he brushes her off, too distracted and guilty to truly listen.",
+          "who": [
+            "MEI_WEN",
+            "DANIEL_MERCER"
+          ],
+          "thread": "What Mei Knows",
+          "location": "SHIPPING_OFFICE",
+          "words": null
+        },
+        {
+          "title": "Another Contract",
+          "what": "Marcus meets his shell-company contact again, quietly rerouting another Mercer contract, still certain he'll need the insurance once Aiko eventually names Daniel sole heir.",
+          "who": [
+            "MARCUS_CHEN"
+          ],
+          "thread": "The Succession",
+          "location": "LIGHTHOUSE_DOCKS",
+          "words": null
+        },
+        {
+          "title": "Tea and Concern",
+          "what": "Over tea, Claire gently frames Mei's talk of grandmother's stories as stress and grief, and Aiko — worried, well-meaning — quietly begins to agree.",
+          "who": [
+            "CLAIRE_WEN",
+            "AIKO_MERCER"
+          ],
+          "thread": "What Mei Knows",
+          "location": "TEA_PAVILION",
+          "words": null
+        },
+        {
+          "title": "Among the Wrecks",
+          "what": "Alone among the crated wrecks, Claire corners Daniel and calmly lays out what she knows about Yuna, promising silence only if he obeys her completely.",
+          "who": [
+            "CLAIRE_WEN",
+            "DANIEL_MERCER"
+          ],
+          "thread": "The Other Woman",
+          "location": "SALVAGE_WAREHOUSE",
+          "words": {
+            "min": 150,
+            "max": 250,
+            "target": "150 to 250"
+          }
+        },
+        {
+          "title": "A Kind Excuse",
+          "what": "Shaken and cornered, Daniel meets Mei for a drink and deflects her warnings about Claire, gently suggesting grief over their grandmother has clouded her judgment.",
+          "who": [
+            "DANIEL_MERCER",
+            "MEI_WEN"
+          ],
+          "thread": "What Mei Knows",
+          "location": "HARBOR_VIEW_BAR",
+          "words": null
+        },
+        {
+          "title": "Wrong Guess",
+          "what": "Yuna finds Daniel rattled and evasive after work, senses something new has shifted in Claire, and wrongly assumes Claire has finally learned about them.",
+          "who": [
+            "YUNA_PARK",
+            "DANIEL_MERCER"
+          ],
+          "thread": "The Other Woman",
+          "location": "LAW_OFFICE",
+          "words": null
+        },
+        {
+          "title": "Above the Bay",
+          "what": "Alone above the bay, Mei replays Daniel's dismissal, hurt but unwilling to let it go, and quietly resolves to find proof no one can dismiss.",
+          "who": [
+            "MEI_WEN"
+          ],
+          "thread": "What Mei Knows",
+          "location": "WIDOWS_WALK",
+          "words": {
+            "min": 150,
+            "max": 230,
+            "target": "150 to 230"
+          }
+        }
+      ],
+      "case": [
+        {
+          "label": "The Other Woman",
+          "character_knowledge": {
+            "CLAIRE_WEN": "She has known about Daniel's affair with Yuna since finding his phone weeks ago, and now deploys that knowledge deliberately, cornering him alone to make the terms of his silence explicit; she conceals nothing from herself, only performs just enough warmth in public to keep the threat invisible to everyone but Daniel.",
+            "DANIEL_MERCER": "He knows the affair is real and now knows 'Claire' knows it too, and that she intends to use it; he conceals this entirely from Yuna, Mei, and Aiko, telling no one why he's suddenly so careful around his wife, and privately assumes Claire's coldness is ordinary betrayed-wife fury rather than anything calculated.",
+            "YUNA_PARK": "She knows the affair began during Aiko's first hospitalization and has kept it hidden as carefully as Daniel has; she senses tonight that something has changed in him but has no access to the warehouse conversation, and wrongly concludes Claire has finally found out and is quietly plotting some kind of retaliation against her specifically."
+          },
+          "solution": "Daniel Mercer has been in a six-month affair with Yuna Park, the company's in-house counsel, born out of mutual exhaustion — Daniel drowning in his mother's health crisis and a marriage he no longer understands, Yuna caught between ambition and guilt. Neither has told anyone, and the real Claire never learned of it before the exchange. After the swap, the entity wearing Claire's body discovers the affair through Daniel's phone, not through any confession, and treats it not as a betrayal to rage over but as leverage — using it to keep Daniel compliant, and later to isolate Yuna once Yuna becomes one of the few people to notice that 'Claire' has changed.",
+          "objective_facts": [
+            "Daniel and Yuna's affair began during Aiko's first hospitalization, roughly seven months before episode one.",
+            "No family member has ever seen them together; the only evidence is a chain of messages on an app neither of them has deleted.",
+            "Yuna drafted an early, informal succession memo favoring Daniel over Marcus before the affair began, for professional reasons unrelated to their relationship.",
+            "The entity occupying Claire's body learns of the affair by finding Daniel's phone, at a specific point in the season, not through anyone's admission.",
+            "Yuna is the only character besides Mei who begins to suspect 'Claire' has changed, though she initially misreads it as Claire having learned of the affair and planning retaliation."
+          ]
+        },
+        {
+          "label": "What Mei Knows",
+          "character_knowledge": {
+            "MEI_WEN": "She knows what their grandmother told her about the mirror and has spent weeks cataloguing small wrongnesses in Claire's behavior that no one else seems to register; she has no hard proof beyond memory and instinct, and genuinely doesn't yet grasp how effectively Claire is working, in real time, to make her look unwell.",
+            "DANIEL_MERCER": "He doesn't know the mirror's history at all, only that his sister-in-law keeps insisting something's wrong with his wife at the worst possible moments; after Claire's careful framing over tea reaches him secondhand through Aiko, he starts genuinely believing Mei is grieving badly rather than seeing anything true, and he conceals this shift from Mei herself.",
+            "AIKO_MERCER": "She has no knowledge of the mirror or the exchange, only warm concern for a niece-in-law she's fond of; Claire's gentle framing over tea lands easily because Aiko already worries about Mei living alone with old family grief, and she now wrongly believes Mei's fixation is a symptom to be managed rather than a warning to be heard.",
+            "CLAIRE_WEN": "She knows precisely what she's doing: isolating the one person capable of recognizing her, using real affection between Aiko and Mei as the exact lever that makes the doubt land softly and credibly; she reveals none of this, performing only worry for her sister's well-being in front of anyone who might notice otherwise."
+          },
+          "solution": "Mei Wen recognizes the mirror's role almost immediately because their grandmother told her — not Claire — the full family story in a single private conversation the summer before she died, one Claire was never present for. Mei has kept it to herself for years, embarrassed by how superstitious it sounds, and it isn't until 'Claire's' behavior turns openly cruel that she starts piecing together that this isn't a breakdown but something closer to what her grandmother described. Her arc across the season is less about discovering new supernatural information — she already has it, buried — and more about finding the courage and evidence to act on a story she's spent years dismissing, while the entity wearing her sister's face works steadily to discredit and isolate her before she can convince anyone else.",
+          "objective_facts": [
+            "Grandmother Wen told Mei the mirror's full history in one private conversation the summer before she died, which Claire never heard.",
+            "Mei has kept her grandmother's letters and a small notebook of family oral history hidden in her apartment for years, telling no one.",
+            "Mei is the first person in the present-day timeline to notice specific behavioral inconsistencies in 'Claire' that don't match her sister.",
+            "The entity occupying Claire's body identifies Mei as the single greatest threat to the exchange remaining permanent by the season's midpoint.",
+            "Mei has no proof beyond her grandmother's account and her own observations — nothing that would hold up to anyone who doesn't already believe her."
+          ]
+        },
+        {
+          "label": "The Succession",
+          "character_knowledge": {
+            "MARCUS_CHEN": "He still believes the company will pass to Daniel alone and keeps rerouting smaller contracts through his shell company as insurance against that outcome; he has no idea Aiko already signed a document splitting ownership evenly weeks ago, and continues acting entirely on an assumption that is already false.",
+            "AIKO_MERCER": "She has noticed the quarterly discrepancy that points toward Marcus's shell company but continues choosing to watch rather than confront him, quietly weighing what it means for a man she already intends to make an equal heir; she says nothing of this to Daniel or anyone else, and keeps her worsening heart condition just as hidden."
+          },
+          "solution": "Aiko Mercer, diagnosed with a worsening heart condition she has hidden from everyone but her cardiologist, has secretly redrafted the company's succession plan to split ownership evenly between Daniel and Marcus Chen instead of naming Daniel sole heir as everyone assumes. The decision is driven by guilt: decades ago she promised Marcus's dying father, her late husband's closest friend and silent co-founder, that his son would always hold an equal stake — a promise she let slide for years and is now racing to make good on before she runs out of time. Marcus does not know the new document exists; he knows only the old assumption that Daniel inherits everything, and has spent nearly a year quietly diverting smaller shipping contracts through a shell company as insurance against being frozen out, intending to use it as leverage if Aiko dies before changing anything — not realizing she already has.",
+          "objective_facts": [
+            "Aiko was diagnosed with advanced heart disease five months before episode one and has told only her cardiologist.",
+            "The original partnership agreement from decades ago promised Marcus's father's family an equal stake that was never formalized after his early death.",
+            "Aiko signed a new succession document three weeks before episode one splitting ownership evenly between Daniel and Marcus, currently held unfiled by her lawyer.",
+            "Marcus has redirected roughly eleven months of smaller shipping contracts through a shell company he controls, believing he will need it as future leverage.",
+            "No single character knows the whole picture: Daniel doesn't know about Aiko's health or the new document, Marcus doesn't know the new document exists, and Yuna drafted only the document's earlier informal version, not the final signed one."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "The Voice in the Rain",
+      "theme": "The season's central swing: Claire's real voice breaks through the glass for the first time, and Mei — finally holding proof that matches her grandmother's warning — stops doubting herself and starts deciding to act.",
+      "intro_note": "The blackmail already has Daniel doing what he's told, and the doubt planted against Mei has started to take root with the people who might otherwise believe her. Out over the harbor, a storm is building.",
+      "outro_note": "Mei has her proof now, and a decision no one else knows she's made. But proof isn't the same as being believed — and across town, in ways neither of them can see yet, Yuna and Marcus are both about to stumble into fragments of a truth that isn't finished with any of them.",
+      "sections": [
+        {
+          "title": "The Itinerary",
+          "what": "Daniel hands over the shipping itinerary entity-Claire demanded without asking why; she thanks him with a warmth that makes the compliance feel worse than a threat would.",
+          "who": [
+            "DANIEL_MERCER",
+            "CLAIRE_WEN"
+          ],
+          "thread": "The Other Woman",
+          "location": "MERCER_HOUSE",
+          "words": null
+        },
+        {
+          "title": "A Long Look",
+          "what": "Aiko notices another shipment routed oddly on paper, says nothing to Marcus, and watches him a beat too long before excusing herself from the office.",
+          "who": [
+            "AIKO_MERCER",
+            "MARCUS_CHEN"
+          ],
+          "thread": "The Succession",
+          "location": "SHIPPING_OFFICE",
+          "words": null
+        },
+        {
+          "title": "Deflected",
+          "what": "Mei tries to warn Daniel that Claire isn't herself; he deflects, gently repeating concern about Mei's stress, the doubt the entity planted already doing its work.",
+          "who": [
+            "MEI_WEN",
+            "DANIEL_MERCER"
+          ],
+          "thread": "What Mei Knows",
+          "location": "HARBOR_VIEW_BAR",
+          "words": null
+        },
+        {
+          "title": "Tea and a Forgotten Scarf",
+          "what": "Aiko invites Mei to the pavilion for tea, an unusual overture; Mei senses kindness underneath but leaves her scarf behind, giving her a reason to return later.",
+          "who": [
+            "AIKO_MERCER",
+            "MEI_WEN"
+          ],
+          "thread": "What Mei Knows",
+          "location": "TEA_PAVILION",
+          "words": null
+        },
+        {
+          "title": "Wrong Kind of Calm",
+          "what": "Yuna warns Daniel that Claire's calm about the leverage doesn't fit her; Daniel insists it's guilt from the affair itself, unable to see what's really different.",
+          "who": [
+            "YUNA_PARK",
+            "DANIEL_MERCER"
+          ],
+          "thread": "The Other Woman",
+          "location": "LAW_OFFICE",
+          "words": null
+        },
+        {
+          "title": "Moving Up the Timeline",
+          "what": "Marcus double-checks the shell company's paperwork alone on the dock, spooked by Aiko's stare earlier, and decides to move the next reroute sooner than planned.",
+          "who": [
+            "MARCUS_CHEN"
+          ],
+          "thread": "The Succession",
+          "location": "LIGHTHOUSE_DOCKS",
+          "words": null
+        },
+        {
+          "title": "The Voice in the Rain",
+          "what": "Storm rain streaks the pavilion window; alone retrieving her scarf, Mei hears her sister's real voice break through the glass, screaming to be heard before it cuts out.",
+          "who": [
+            "MEI_WEN",
+            "CLAIRE_WEN"
+          ],
+          "thread": "The Glass Prisoner",
+          "location": "TEA_PAVILION",
+          "words": null
+        },
+        {
+          "title": "No Longer Silent",
+          "what": "Shaking, Mei matches the voice to her grandmother's exact warning and decides, alone in the dark pavilion, that she will no longer stay silent about Claire.",
+          "who": [
+            "MEI_WEN"
+          ],
+          "thread": "What Mei Knows",
+          "location": "TEA_PAVILION",
+          "words": {
+            "min": 150,
+            "max": 280,
+            "target": "150 to 280"
+          }
+        },
+        {
+          "title": "A Ripple She Can't Place",
+          "what": "Alone before the bedroom mirror, entity-Claire feels a ripple she can't place, presses her palm to the glass, and for the first time looks uncertain.",
+          "who": [
+            "CLAIRE_WEN"
+          ],
+          "thread": "The Glass Prisoner",
+          "location": "MERCER_HOUSE",
+          "words": null
+        }
+      ],
+      "case": [
+        {
+          "label": "The Other Woman",
+          "character_knowledge": {
+            "DANIEL_MERCER": "Knows the entity is using his affair as leverage and complies out of fear of exposure, but doesn't know 'Claire' isn't Claire — he tells himself her chilling calm is just how she's chosen to handle betrayal rather than something's fundamentally wrong. He conceals his mounting dread from Yuna, unwilling to admit how much the leverage already controls him.",
+            "CLAIRE_WEN": "Knows precisely what the affair is worth as leverage and wields it without any real emotion behind it, performing indifference as pure strategy rather than genuine hurt. She conceals that she feels nothing about the betrayal itself, and doesn't yet register that Yuna's unease with her has started to sharpen into real suspicion.",
+            "YUNA_PARK": "Senses that 'Claire's' composure about an affair a wounded wife should rage over doesn't add up, and that unease is growing. She conceals it from Daniel, framing her own anxiety only as guilt over the affair, and wrongly assumes Claire already knows everything and is simply biding her time before retaliating."
+          },
+          "solution": "Daniel Mercer has been in a six-month affair with Yuna Park, the company's in-house counsel, born out of mutual exhaustion — Daniel drowning in his mother's health crisis and a marriage he no longer understands, Yuna caught between ambition and guilt. Neither has told anyone, and the real Claire never learned of it before the exchange. After the swap, the entity wearing Claire's body discovers the affair through Daniel's phone, not through any confession, and treats it not as a betrayal to rage over but as leverage — using it to keep Daniel compliant, and later to isolate Yuna once Yuna becomes one of the few people to notice that 'Claire' has changed.",
+          "objective_facts": [
+            "Daniel and Yuna's affair began during Aiko's first hospitalization, roughly seven months before episode one.",
+            "No family member has ever seen them together; the only evidence is a chain of messages on an app neither of them has deleted.",
+            "Yuna drafted an early, informal succession memo favoring Daniel over Marcus before the affair began, for professional reasons unrelated to their relationship.",
+            "The entity occupying Claire's body learns of the affair by finding Daniel's phone, at a specific point in the season, not through anyone's admission.",
+            "Yuna is the only character besides Mei who begins to suspect 'Claire' has changed, though she initially misreads it as Claire having learned of the affair and planning retaliation."
+          ]
+        },
+        {
+          "label": "The Succession",
+          "character_knowledge": {
+            "AIKO_MERCER": "Has now noticed a second discrepancy in the shipping figures pointing toward Marcus's shell company, but conceals her suspicion entirely, choosing to keep watching rather than confront him while she still can. She has no idea Marcus has already grown spooked and is accelerating his cover as a result of her attention.",
+            "MARCUS_CHEN": "Knows he's been routing smaller contracts through his shell company as insurance against being frozen out, and still believes he'll need that leverage. He doesn't know Aiko has already signed a new document splitting ownership evenly, and wrongly reads her lingering stare today as suspicion of something far smaller than what's actually true."
+          },
+          "solution": "Aiko Mercer, diagnosed with a worsening heart condition she has hidden from everyone but her cardiologist, has secretly redrafted the company's succession plan to split ownership evenly between Daniel and Marcus Chen instead of naming Daniel sole heir as everyone assumes. The decision is driven by guilt: decades ago she promised Marcus's dying father, her late husband's closest friend and silent co-founder, that his son would always hold an equal stake — a promise she let slide for years and is now racing to make good on before she runs out of time. Marcus does not know the new document exists; he knows only the old assumption that Daniel inherits everything, and has spent nearly a year quietly diverting smaller shipping contracts through a shell company as insurance against being frozen out, intending to use it as leverage if Aiko dies before changing anything — not realizing she already has.",
+          "objective_facts": [
+            "Aiko was diagnosed with advanced heart disease five months before episode one and has told only her cardiologist.",
+            "The original partnership agreement from decades ago promised Marcus's father's family an equal stake that was never formalized after his early death.",
+            "Aiko signed a new succession document three weeks before episode one splitting ownership evenly between Daniel and Marcus, currently held unfiled by her lawyer.",
+            "Marcus has redirected roughly eleven months of smaller shipping contracts through a shell company he controls, believing he will need it as future leverage.",
+            "No single character knows the whole picture: Daniel doesn't know about Aiko's health or the new document, Marcus doesn't know the new document exists, and Yuna drafted only the document's earlier informal version, not the final signed one."
+          ]
+        },
+        {
+          "label": "What Mei Knows",
+          "character_knowledge": {
+            "MEI_WEN": "Knows now, having heard Claire's real voice tear through the pavilion glass, that her grandmother's warning was literal and that whoever is wearing her sister's face is not her sister. She has told no one yet, but resolves in this moment to stop staying silent, the last of her own self-doubt gone.",
+            "DANIEL_MERCER": "Has been quietly primed by 'Claire' to read Mei's warnings as symptoms of stress rather than anything worth investigating, and genuinely believes it — this isn't a lie he's telling, it's a doubt he's been fed and absorbed. He wrongly assumes Mei needs rest, not that she might be right about something.",
+            "AIKO_MERCER": "Extended an unusual kindness to Mei this episode without realizing it connects to anything larger, and hasn't yet absorbed Daniel's dismissiveness toward her. She wrongly assumes Mei's recent distance is grief over feeling shut out of the family rather than the beginning of real suspicion.",
+            "CLAIRE_WEN": "Believes her campaign to discredit Mei with the rest of the family is working exactly as intended, and conceals nothing new about that effort this episode. She has no idea Mei just heard the real Claire's voice through the pavilion window — a gap in her control she doesn't yet know exists."
+          },
+          "solution": "Mei Wen recognizes the mirror's role almost immediately because their grandmother told her — not Claire — the full family story in a single private conversation the summer before she died, one Claire was never present for. Mei has kept it to herself for years, embarrassed by how superstitious it sounds, and it isn't until 'Claire's' behavior turns openly cruel that she starts piecing together that this isn't a breakdown but something closer to what her grandmother described. Her arc across the season is less about discovering new supernatural information — she already has it, buried — and more about finding the courage and evidence to act on a story she's spent years dismissing, while the entity wearing her sister's face works steadily to discredit and isolate her before she can convince anyone else.",
+          "objective_facts": [
+            "Grandmother Wen told Mei the mirror's full history in one private conversation the summer before she died, which Claire never heard.",
+            "Mei has kept her grandmother's letters and a small notebook of family oral history hidden in her apartment for years, telling no one.",
+            "Mei is the first person in the present-day timeline to notice specific behavioral inconsistencies in 'Claire' that don't match her sister.",
+            "The entity occupying Claire's body identifies Mei as the single greatest threat to the exchange remaining permanent by the season's midpoint.",
+            "Mei has no proof beyond her grandmother's account and her own observations — nothing that would hold up to anyone who doesn't already believe her."
+          ]
+        },
+        {
+          "label": "The Glass Prisoner",
+          "character_knowledge": {
+            "CLAIRE_WEN": "The entity remains confident her control over the exchange is total and that Claire's trapped awareness is passive, incapable of reaching the physical world. She has no idea the real Claire's voice broke through a window during tonight's storm — a breach that makes her confidence, for the first time this season, factually wrong.",
+            "MEI_WEN": "Has now heard something beyond her grandmother's secondhand account — her real sister's voice, carried through rain-streaked glass, calling out before it cut off. She conceals the experience from everyone else this episode, telling no one yet, but knows without any remaining doubt that this was never a metaphor or a breakdown."
+          },
+          "solution": "For three generations, the women of the Wen family have unknowingly fed a splinter of consciousness inside the silvered glass of a nineteenth-century vanity mirror passed down matrilineally. Each time a Wen woman carries prolonged guilt and suppressed rage, the reflection inside gains enough will to speak, and after months of whispering it can force a physical exchange during a moment when the real woman stands before it in total exhaustion or grief. On the night Claire finally broke down after a bitter fight with Daniel, the exchange completed: the reflection stepped out wearing Claire's body while Claire's consciousness was pulled into the glass — aware, trapped, able to perceive events through any reflective surface connected to that original mirror, but able to be seen or heard by others only under rare, specific conditions. The entity now wearing Claire's face is not simple malice; it is the accumulated resentment of every silenced Wen woman before her, and it wants two things: to never return to the glass, and to permanently sever the mirror's connection to the bloodline by destroying every remaining mirror tied to that lineage — which would trap Claire forever with no possibility of return.",
+          "objective_facts": [
+            "The vanity mirror was made in Shanghai in 1889 and has passed to the most emotionally burdened daughter in every generation of the Wen family since.",
+            "Claire's grandmother deliberately left the mirror behind in China and warned against ever sending for it; Claire had it shipped to her after the grandmother's death, against that wish.",
+            "The whispering began roughly four months before episode one, always late at night, always following arguments with Daniel.",
+            "The physical exchange took place on a specific night, early in the season's timeline, when Claire stood before the mirror alone after a fight — from that point forward, the person occupying Claire's body is not Claire.",
+            "The entity retains enough of Claire's memories and mannerisms to fool nearly everyone, failing only on small, specific behavioral tells that the real Claire would never produce.",
+            "Claire's trapped consciousness can perceive events through any reflective surface unbroken in lineage to the original mirror, but can only be glimpsed or heard under very rare conditions.",
+            "The entity's ultimate goal is to destroy or permanently seal every mirror in that connected lineage, which would make the exchange irreversible."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "What the Boardroom Overheard",
+      "theme": "In the wake of the midpoint, suspicion starts closing in from two directions at once — Yuna begins to sense 'Claire' has fundamentally changed, and Marcus catches a fragment of the truth about Aiko's hidden document, each of them reacting from incomplete information.",
+      "intro_note": "The rain has barely dried since Claire's real voice broke through the glass in the Tea Pavilion — and Mei, finally holding proof that matches her grandmother's warning, has stopped doubting herself. She just hasn't decided who to tell yet.",
+      "outro_note": "Two people who don't know each other's reasons are now watching the same house from different angles — one certain 'Claire' is planning revenge, one certain something has already been signed away behind his back. Neither has said a word out loud. That won't last much longer.",
+      "sections": [
+        {
+          "title": "Before the Coffee's Cold",
+          "what": "Over breakfast, 'Claire' mentions a detail about Daniel's schedule she shouldn't know, watching him flinch; he says nothing, unsettled by how easily she reads him now.",
+          "who": [
+            "CLAIRE_WEN",
+            "DANIEL_MERCER"
+          ],
+          "thread": "The Other Woman",
+          "location": "MERCER_HOUSE",
+          "words": null
+        },
+        {
+          "title": "The Notebook Again",
+          "what": "Mei rereads her grandmother's letters and the storm-voice notes, weighing who might actually believe her instead of dismissing it as grief.",
+          "who": [
+            "MEI_WEN"
+          ],
+          "thread": "What Mei Knows",
+          "location": "MEI_APARTMENT",
+          "words": null
+        },
+        {
+          "title": "Not This Again",
+          "what": "Mei tries to warn Daniel that Claire isn't herself; he cites stress and their mother's health, gently shutting her down without truly hearing her.",
+          "who": [
+            "MEI_WEN",
+            "DANIEL_MERCER"
+          ],
+          "thread": "What Mei Knows",
+          "location": "SHIPPING_OFFICE",
+          "words": null
+        },
+        {
+          "title": "A Date, Exactly",
+          "what": "'Claire' corners Yuna and cites a precise date and message from the affair, calm and surgical, nothing like the wounded wife Yuna braced for.",
+          "who": [
+            "CLAIRE_WEN",
+            "YUNA_PARK"
+          ],
+          "thread": "The Other Woman",
+          "location": "LAW_OFFICE",
+          "words": null
+        },
+        {
+          "title": "What Claire Never Would",
+          "what": "Shaken, Yuna tells Daniel she's certain Claire has been quietly building a case against them for weeks; Daniel, knowing more than he'll say, can't correct her.",
+          "who": [
+            "DANIEL_MERCER",
+            "YUNA_PARK"
+          ],
+          "thread": "The Other Woman",
+          "location": "SALVAGE_WAREHOUSE",
+          "words": null
+        },
+        {
+          "title": "A Phrase Through the Wall",
+          "what": "Passing the Glass Boardroom, Marcus overhears Aiko on the phone say 'the new document' before she notices him and abruptly ends the call.",
+          "who": [
+            "AIKO_MERCER",
+            "MARCUS_CHEN"
+          ],
+          "thread": "The Succession",
+          "location": "GLASS_BOARDROOM",
+          "words": null
+        },
+        {
+          "title": "Fishing",
+          "what": "Marcus casually presses Daniel about any changes to the company's future; Daniel, genuinely in the dark, gives answers that only deepen Marcus's suspicion.",
+          "who": [
+            "MARCUS_CHEN",
+            "DANIEL_MERCER"
+          ],
+          "thread": "The Succession",
+          "location": "HARBOR_VIEW_BAR",
+          "words": null
+        },
+        {
+          "title": "Watching Through the Rain-Glass",
+          "what": "In the Tea Pavilion's window glass, the trapped Claire senses Mei's resolve and Yuna's fear rising, straining toward a voice that won't come again tonight.",
+          "who": [
+            "CLAIRE_WEN"
+          ],
+          "thread": "The Glass Prisoner",
+          "location": "TEA_PAVILION",
+          "words": {
+            "min": 150,
+            "max": 280,
+            "target": "150 to 280"
+          }
+        },
+        {
+          "title": "Recalculating",
+          "what": "Alone before the vanity mirror, the entity registers both threats closing in and decides, without hurry, which one to deal with first.",
+          "who": [
+            "CLAIRE_WEN"
+          ],
+          "thread": "The Glass Prisoner",
+          "location": "MERCER_HOUSE",
+          "words": {
+            "min": 130,
+            "max": 250,
+            "target": "130 to 250"
+          }
+        }
+      ],
+      "case": [
+        {
+          "label": "The Other Woman",
+          "character_knowledge": {
+            "CLAIRE_WEN": "The entity has known every detail of Daniel's affair since reading his phone in episode two and deploys it deliberately as leverage, never as hurt; she conceals entirely that she isn't Claire. What she doesn't grasp is that her precision itself is a tell — she reads it as control, not as something that will make Yuna suspect premeditated warfare.",
+            "DANIEL_MERCER": "Daniel knows 'Claire' is using the affair to control him, ever since she cornered him at the warehouse, but he has told Yuna none of this, letting her believe Claire's behavior is organic jealousy rather than calculated leverage. He privately fears what happens if Yuna keeps digging on her own.",
+            "YUNA_PARK": "Yuna genuinely has no idea Claire has been replaced; she only knows Claire suddenly speaks with a precision the real woman never had. She wrongly concludes Claire has been quietly building a case against her for weeks, when in truth the knowledge came from a single phone discovery months ago."
+          },
+          "solution": "Daniel Mercer has been in a six-month affair with Yuna Park, the company's in-house counsel, born out of mutual exhaustion — Daniel drowning in his mother's health crisis and a marriage he no longer understands, Yuna caught between ambition and guilt. Neither has told anyone, and the real Claire never learned of it before the exchange. After the swap, the entity wearing Claire's body discovers the affair through Daniel's phone, not through any confession, and treats it not as a betrayal to rage over but as leverage — using it to keep Daniel compliant, and later to isolate Yuna once Yuna becomes one of the few people to notice that 'Claire' has changed.",
+          "objective_facts": [
+            "Daniel and Yuna's affair began during Aiko's first hospitalization, roughly seven months before episode one.",
+            "No family member has ever seen them together; the only evidence is a chain of messages on an app neither of them has deleted.",
+            "Yuna drafted an early, informal succession memo favoring Daniel over Marcus before the affair began, for professional reasons unrelated to their relationship.",
+            "The entity occupying Claire's body learns of the affair by finding Daniel's phone, at a specific point in the season, not through anyone's admission.",
+            "Yuna is the only character besides Mei who begins to suspect 'Claire' has changed, though she initially misreads it as Claire having learned of the affair and planning retaliation."
+          ]
+        },
+        {
+          "label": "The Succession",
+          "character_knowledge": {
+            "AIKO_MERCER": "Aiko knows exactly what the new document says and why she signed it, and has told no one but her lawyer; she doesn't yet realize Marcus caught a fragment of her call and assumes the secret is still fully hers.",
+            "MARCUS_CHEN": "Marcus has only the overheard phrase 'the new document' to go on and no idea what it actually contains; he conceals his own shell-company diversions from everyone. He wrongly assumes any new document must be cutting him out entirely, when it in fact grants him an equal stake he doesn't know exists.",
+            "DANIEL_MERCER": "Daniel has no knowledge of his mother's health or the new document and answers Marcus's probing honestly, out of genuine ignorance rather than evasion — which only convinces Marcus that something is being hidden from him specifically."
+          },
+          "solution": "Aiko Mercer, diagnosed with a worsening heart condition she has hidden from everyone but her cardiologist, has secretly redrafted the company's succession plan to split ownership evenly between Daniel and Marcus Chen instead of naming Daniel sole heir as everyone assumes. The decision is driven by guilt: decades ago she promised Marcus's dying father, her late husband's closest friend and silent co-founder, that his son would always hold an equal stake — a promise she let slide for years and is now racing to make good on before she runs out of time. Marcus does not know the new document exists; he knows only the old assumption that Daniel inherits everything, and has spent nearly a year quietly diverting smaller shipping contracts through a shell company as insurance against being frozen out, intending to use it as leverage if Aiko dies before changing anything — not realizing she already has.",
+          "objective_facts": [
+            "Aiko was diagnosed with advanced heart disease five months before episode one and has told only her cardiologist.",
+            "The original partnership agreement from decades ago promised Marcus's father's family an equal stake that was never formalized after his early death.",
+            "Aiko signed a new succession document three weeks before episode one splitting ownership evenly between Daniel and Marcus, currently held unfiled by her lawyer.",
+            "Marcus has redirected roughly eleven months of smaller shipping contracts through a shell company he controls, believing he will need it as future leverage.",
+            "No single character knows the whole picture: Daniel doesn't know about Aiko's health or the new document, Marcus doesn't know the new document exists, and Yuna drafted only the document's earlier informal version, not the final signed one."
+          ]
+        },
+        {
+          "label": "What Mei Knows",
+          "character_knowledge": {
+            "MEI_WEN": "Mei carries her grandmother's full account plus the storm-voice proof from episode five, but has told no one outside the family and still hopes Daniel will listen if she finds the right words. She hasn't yet let herself consider that the person who'd believe her might be someone outside the family entirely.",
+            "DANIEL_MERCER": "Daniel knows Mei has been fixating on their grandmother's stories, partly because 'Claire' has spent weeks framing it as stress to him and Aiko; he dismisses Mei out of exhaustion and genuine belief she's grieving, not cruelty, and has no idea how close she actually is to the truth."
+          },
+          "solution": "Mei Wen recognizes the mirror's role almost immediately because their grandmother told her — not Claire — the full family story in a single private conversation the summer before she died, one Claire was never present for. Mei has kept it to herself for years, embarrassed by how superstitious it sounds, and it isn't until 'Claire's' behavior turns openly cruel that she starts piecing together that this isn't a breakdown but something closer to what her grandmother described. Her arc across the season is less about discovering new supernatural information — she already has it, buried — and more about finding the courage and evidence to act on a story she's spent years dismissing, while the entity wearing her sister's face works steadily to discredit and isolate her before she can convince anyone else.",
+          "objective_facts": [
+            "Grandmother Wen told Mei the mirror's full history in one private conversation the summer before she died, which Claire never heard.",
+            "Mei has kept her grandmother's letters and a small notebook of family oral history hidden in her apartment for years, telling no one.",
+            "Mei is the first person in the present-day timeline to notice specific behavioral inconsistencies in 'Claire' that don't match her sister.",
+            "The entity occupying Claire's body identifies Mei as the single greatest threat to the exchange remaining permanent by the season's midpoint.",
+            "Mei has no proof beyond her grandmother's account and her own observations — nothing that would hold up to anyone who doesn't already believe her."
+          ]
+        },
+        {
+          "label": "The Glass Prisoner",
+          "character_knowledge": {
+            "CLAIRE_WEN": "The entity wearing Claire's body knows precisely how much ground she's covered and now senses two separate threats — Yuna's dawning suspicion and Marcus's overheard fragment — closing in from opposite directions, and is calmly deciding how to handle each. The real Claire, trapped behind the glass, perceives both gathering dangers through the Tea Pavilion's rain-streaked window but cannot yet force her voice through again, watching helplessly as the people who might save her edge closer without any way to warn them faster."
+          },
+          "solution": "For three generations, the women of the Wen family have unknowingly fed a splinter of consciousness inside the silvered glass of a nineteenth-century vanity mirror passed down matrilineally. Each time a Wen woman carries prolonged guilt and suppressed rage, the reflection inside gains enough will to speak, and after months of whispering it can force a physical exchange during a moment when the real woman stands before it in total exhaustion or grief. On the night Claire finally broke down after a bitter fight with Daniel, the exchange completed: the reflection stepped out wearing Claire's body while Claire's consciousness was pulled into the glass — aware, trapped, able to perceive events through any reflective surface connected to that original mirror, but able to be seen or heard by others only under rare, specific conditions. The entity now wearing Claire's face is not simple malice; it is the accumulated resentment of every silenced Wen woman before her, and it wants two things: to never return to the glass, and to permanently sever the mirror's connection to the bloodline by destroying every remaining mirror tied to that lineage — which would trap Claire forever with no possibility of return.",
+          "objective_facts": [
+            "The vanity mirror was made in Shanghai in 1889 and has passed to the most emotionally burdened daughter in every generation of the Wen family since.",
+            "Claire's grandmother deliberately left the mirror behind in China and warned against ever sending for it; Claire had it shipped to her after the grandmother's death, against that wish.",
+            "The whispering began roughly four months before episode one, always late at night, always following arguments with Daniel.",
+            "The physical exchange took place on a specific night, early in the season's timeline, when Claire stood before the mirror alone after a fight — from that point forward, the person occupying Claire's body is not Claire.",
+            "The entity retains enough of Claire's memories and mannerisms to fool nearly everyone, failing only on small, specific behavioral tells that the real Claire would never produce.",
+            "Claire's trapped consciousness can perceive events through any reflective surface unbroken in lineage to the original mirror, but can only be glimpsed or heard under very rare conditions.",
+            "The entity's ultimate goal is to destroy or permanently seal every mirror in that connected lineage, which would make the exchange irreversible."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "Spoken Aloud",
+      "theme": "The season's secrets around Daniel come due in the same stretch of hours: he confesses the affair to his family himself, and Aiko forces her own reckoning between Daniel and Marcus by having the succession document read aloud on her terms, closing both threads cleanly.",
+      "intro_note": "Marcus is still turning over the fragment he overheard in the Glass Boardroom — 'the new document' — and Yuna is watching 'Claire' with a wariness she can't yet name. Neither has the full picture. Tonight, two of the season's oldest secrets come due at once, on two different people's terms.",
+      "outro_note": "With the affair spoken aloud and the succession settled on paper, the entity wearing Claire's face has lost the only leverage she needed patience for — which means she no longer has a reason to wait. Somewhere above the harbor, a mirror in a dust-thick antique shop is about to matter more than anyone in this family understands.",
+      "sections": [
+        {
+          "title": "Harborview Legal, After Hours",
+          "what": "Alone with Yuna after hours, Daniel decides he will tell his family about the affair himself before Claire can use it as a weapon again.",
+          "who": [
+            "DANIEL_MERCER",
+            "YUNA_PARK"
+          ],
+          "thread": "The Other Woman",
+          "location": "LAW_OFFICE",
+          "words": null
+        },
+        {
+          "title": "The Mirror Listens",
+          "what": "Overhearing Daniel's call to Yuna, the entity realizes he intends to confess and coldly recalculates instead of panicking, already reaching for a new hold.",
+          "who": [
+            "CLAIRE_WEN"
+          ],
+          "thread": "The Other Woman",
+          "location": "MERCER_HOUSE",
+          "words": {
+            "min": 140,
+            "max": 230,
+            "target": "140 to 230"
+          }
+        },
+        {
+          "title": "The Harbor View",
+          "what": "At a corner table, Daniel tells Aiko and Mei about his affair with Yuna himself, stripping away the leverage Claire didn't know he'd surrender.",
+          "who": [
+            "DANIEL_MERCER",
+            "AIKO_MERCER",
+            "MEI_WEN"
+          ],
+          "thread": "The Other Woman",
+          "location": "HARBOR_VIEW_BAR",
+          "words": null
+        },
+        {
+          "title": "Mei's Apartment, Later",
+          "what": "Replaying the confession, Mei realizes with a chill that 'Claire' already knew about the affair long before tonight, another crack that shouldn't be there.",
+          "who": [
+            "MEI_WEN"
+          ],
+          "thread": "What Mei Knows",
+          "location": "MEI_APARTMENT",
+          "words": null
+        },
+        {
+          "title": "Summoned to the Glass Boardroom",
+          "what": "Aiko has her lawyer call Daniel and Marcus into the boardroom without explanation, and Marcus arrives uneasy, still turning over the fragment he overheard.",
+          "who": [
+            "AIKO_MERCER",
+            "DANIEL_MERCER",
+            "MARCUS_CHEN"
+          ],
+          "thread": "The Succession",
+          "location": "GLASS_BOARDROOM",
+          "words": null
+        },
+        {
+          "title": "Read Aloud",
+          "what": "The lawyer reads Aiko's signed document aloud, splitting ownership evenly between Daniel and Marcus, and both men learn on her terms what they didn't know.",
+          "who": [
+            "AIKO_MERCER",
+            "DANIEL_MERCER",
+            "MARCUS_CHEN"
+          ],
+          "thread": "The Succession",
+          "location": "GLASS_BOARDROOM",
+          "words": null
+        },
+        {
+          "title": "Lighthouse Point, After",
+          "what": "Alone at the docks, Marcus realizes the equal stake he schemed for was already his, and a year of hidden contracts now only looks like guilt.",
+          "who": [
+            "MARCUS_CHEN"
+          ],
+          "thread": "The Succession",
+          "location": "LIGHTHOUSE_DOCKS",
+          "words": null
+        },
+        {
+          "title": "The Tea Pavilion, Quiet",
+          "what": "Alone in the pavilion after forcing the reckoning, Aiko presses a hand to her chest, the cost of the day settling into her body in silence.",
+          "who": [
+            "AIKO_MERCER"
+          ],
+          "thread": "The Succession",
+          "location": "TEA_PAVILION",
+          "words": {
+            "min": 130,
+            "max": 210,
+            "target": "130 to 210"
+          }
+        },
+        {
+          "title": "The Mercer House, Night",
+          "what": "Daniel tells 'Claire' he's confessed everything to his family, and her calm, unsurprised reply leaves him more unsettled than any anger could have.",
+          "who": [
+            "DANIEL_MERCER",
+            "CLAIRE_WEN"
+          ],
+          "thread": "The Other Woman",
+          "location": "MERCER_HOUSE",
+          "words": {
+            "min": 150,
+            "max": 240,
+            "target": "150 to 240"
+          }
+        }
+      ],
+      "case": [
+        {
+          "label": "The Other Woman",
+          "character_knowledge": {
+            "DANIEL_MERCER": "Knows he's been in a six-month affair with Yuna and decides tonight to confess it to Aiko and Mei himself, believing this is the only way to take the power back from a wife he doesn't recognize; he still has no idea 'Claire' found out through his phone rather than instinct, and no idea why she's been different for months.",
+            "YUNA_PARK": "Knows the affair and the risk it poses to her career, and supports Daniel's decision to confess even though it terrifies her; she still misreads 'Claire's' precision about the affair as Claire quietly plotting retaliation, not as something having found the messages outright.",
+            "AIKO_MERCER": "Learns of Daniel's affair for the first time tonight at the Harbor View, genuinely blindsided; she says nothing yet of her own hidden diagnosis or the document already signed, keeping her own reckoning for the boardroom on her own schedule.",
+            "MEI_WEN": "Learns of the affair alongside Aiko and is shaken, but overlaid on that shock is her growing certainty that 'Claire' already knew — a detail Daniel never told his family, which only sharpens Mei's conviction that something is deeply wrong with her sister.",
+            "CLAIRE_WEN": "Has known about the affair since reading Daniel's phone and has used it as leverage since; tonight she senses he intends to confess, and rather than panic she calmly recalculates, careful to perform wounded surprise if it ever comes up, already hunting for what replaces the leverage she's about to lose."
+          },
+          "solution": "Daniel Mercer has been in a six-month affair with Yuna Park, the company's in-house counsel, born out of mutual exhaustion — Daniel drowning in his mother's health crisis and a marriage he no longer understands, Yuna caught between ambition and guilt. Neither has told anyone, and the real Claire never learned of it before the exchange. After the swap, the entity wearing Claire's body discovers the affair through Daniel's phone, not through any confession, and treats it not as a betrayal to rage over but as leverage — using it to keep Daniel compliant, and later to isolate Yuna once Yuna becomes one of the few people to notice that 'Claire' has changed.",
+          "objective_facts": [
+            "Daniel and Yuna's affair began during Aiko's first hospitalization, roughly seven months before episode one.",
+            "No family member has ever seen them together; the only evidence is a chain of messages on an app neither of them has deleted.",
+            "Yuna drafted an early, informal succession memo favoring Daniel over Marcus before the affair began, for professional reasons unrelated to their relationship.",
+            "The entity occupying Claire's body learns of the affair by finding Daniel's phone, at a specific point in the season, not through anyone's admission.",
+            "Yuna is the only character besides Mei who begins to suspect 'Claire' has changed, though she initially misreads it as Claire having learned of the affair and planning retaliation."
+          ]
+        },
+        {
+          "label": "The Succession",
+          "character_knowledge": {
+            "AIKO_MERCER": "Knows her own diagnosis, the decades-old promise to Marcus's late father, and the signed document splitting ownership evenly — and chooses tonight, on her own terms, to have it read aloud before Marcus can use the fragment he overheard to seize the narrative first.",
+            "DANIEL_MERCER": "Has always assumed he'd inherit the company outright and learns only in the boardroom that his mother has already split it evenly with Marcus; he still doesn't know about her heart condition or how long she's been planning this.",
+            "MARCUS_CHEN": "Knew only a fragment — that 'a new document' existed — and walks in braced for the worst; hearing it read aloud, he learns Aiko already granted him the equal stake he'd assumed he'd have to fight or scheme for, leaving his year of hidden shell-company contracts looking like evidence of a betrayal that was never necessary."
+          },
+          "solution": "Aiko Mercer, diagnosed with a worsening heart condition she has hidden from everyone but her cardiologist, has secretly redrafted the company's succession plan to split ownership evenly between Daniel and Marcus Chen instead of naming Daniel sole heir as everyone assumes. The decision is driven by guilt: decades ago she promised Marcus's dying father, her late husband's closest friend and silent co-founder, that his son would always hold an equal stake — a promise she let slide for years and is now racing to make good on before she runs out of time. Marcus does not know the new document exists; he knows only the old assumption that Daniel inherits everything, and has spent nearly a year quietly diverting smaller shipping contracts through a shell company as insurance against being frozen out, intending to use it as leverage if Aiko dies before changing anything — not realizing she already has.",
+          "objective_facts": [
+            "Aiko was diagnosed with advanced heart disease five months before episode one and has told only her cardiologist.",
+            "The original partnership agreement from decades ago promised Marcus's father's family an equal stake that was never formalized after his early death.",
+            "Aiko signed a new succession document three weeks before episode one splitting ownership evenly between Daniel and Marcus, currently held unfiled by her lawyer.",
+            "Marcus has redirected roughly eleven months of smaller shipping contracts through a shell company he controls, believing he will need it as future leverage.",
+            "No single character knows the whole picture: Daniel doesn't know about Aiko's health or the new document, Marcus doesn't know the new document exists, and Yuna drafted only the document's earlier informal version, not the final signed one."
+          ]
+        },
+        {
+          "label": "What Mei Knows",
+          "character_knowledge": {
+            "MEI_WEN": "Has been resolved since the storm at the Tea Pavilion to stop doubting her grandmother's warning, and tonight's confession hands her a new, unprovable data point: 'Claire' already knew about the affair before Daniel ever said a word, which fits no version of her sister she's ever known."
+          },
+          "solution": "Mei Wen recognizes the mirror's role almost immediately because their grandmother told her — not Claire — the full family story in a single private conversation the summer before she died, one Claire was never present for. Mei has kept it to herself for years, embarrassed by how superstitious it sounds, and it isn't until 'Claire's' behavior turns openly cruel that she starts piecing together that this isn't a breakdown but something closer to what her grandmother described. Her arc across the season is less about discovering new supernatural information — she already has it, buried — and more about finding the courage and evidence to act on a story she's spent years dismissing, while the entity wearing her sister's face works steadily to discredit and isolate her before she can convince anyone else.",
+          "objective_facts": [
+            "Grandmother Wen told Mei the mirror's full history in one private conversation the summer before she died, which Claire never heard.",
+            "Mei has kept her grandmother's letters and a small notebook of family oral history hidden in her apartment for years, telling no one.",
+            "Mei is the first person in the present-day timeline to notice specific behavioral inconsistencies in 'Claire' that don't match her sister.",
+            "The entity occupying Claire's body identifies Mei as the single greatest threat to the exchange remaining permanent by the season's midpoint.",
+            "Mei has no proof beyond her grandmother's account and her own observations — nothing that would hold up to anyone who doesn't already believe her."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "The Last Mirror",
+      "theme": "As Mei's long-held knowledge finally reaches someone who believes her, closing her arc just in time to matter, the entity moves to destroy every remaining mirror in the Wen lineage, leaving the question of whether Claire can ever be freed deliberately, unnervingly open.",
+      "intro_note": "Aiko's document is signed and read aloud, Daniel's confession is out in the open — but the quiet still hasn't settled, and 'Claire' has already moved on to a different kind of unfinished business.",
+      "outro_note": "",
+      "sections": [
+        {
+          "title": "The Morning After",
+          "what": "Daniel finds 'Claire' unmoved by the exposed affair now going public, and her flat calm unsettles him more than any confrontation would have.",
+          "who": [
+            "DANIEL_MERCER",
+            "CLAIRE_WEN"
+          ],
+          "thread": "The Other Woman",
+          "location": "MERCER_HOUSE",
+          "words": null
+        },
+        {
+          "title": "What's Left to Divide",
+          "what": "Marcus admits to Daniel he diverted contracts through a shell company, and begins quietly unwinding it now that his equal stake is real.",
+          "who": [
+            "MARCUS_CHEN",
+            "DANIEL_MERCER"
+          ],
+          "thread": "The Succession",
+          "location": "SHIPPING_OFFICE",
+          "words": null
+        },
+        {
+          "title": "The Grandmother's Notebook",
+          "what": "Mei rereads her grandmother's letters and notebook, finally deciding to carry the family's hidden history to someone outside the family who might listen.",
+          "who": [
+            "MEI_WEN"
+          ],
+          "thread": "What Mei Knows",
+          "location": "MEI_APARTMENT",
+          "words": {
+            "min": 150,
+            "max": 280,
+            "target": "150 to 280"
+          }
+        },
+        {
+          "title": "Someone Who Believes Her",
+          "what": "Mei lays the notebook and letters before Yuna, who has sensed 'Claire' changing too, and for the first time someone believes her completely.",
+          "who": [
+            "MEI_WEN",
+            "YUNA_PARK"
+          ],
+          "thread": "What Mei Knows",
+          "location": "LAW_OFFICE",
+          "words": null
+        },
+        {
+          "title": "The Shop on Silver Court",
+          "what": "At Silver Court Antiques, the entity questions the old shopkeeper about lineage mirrors, then quietly buys and shatters the vanity mirror's silvered twin.",
+          "who": [
+            "CLAIRE_WEN"
+          ],
+          "thread": "The Glass Prisoner",
+          "location": "CURIO_SHOP",
+          "words": null
+        },
+        {
+          "title": "What Yuna Won't Say Yet",
+          "what": "Yuna, now certain 'Claire' has changed, tries to warn Daniel without naming Mei's proof, and he mistakes her caution for lingering guilt.",
+          "who": [
+            "YUNA_PARK",
+            "DANIEL_MERCER"
+          ],
+          "thread": "What Mei Knows",
+          "location": "GLASS_BOARDROOM",
+          "words": null
+        },
+        {
+          "title": "The Weight She Carries",
+          "what": "In the Tea Pavilion, Aiko listens to Mei's worry with practiced calm, hiding how much her own failing heart limits what she can do about it.",
+          "who": [
+            "AIKO_MERCER",
+            "MEI_WEN"
+          ],
+          "thread": "The Succession",
+          "location": "TEA_PAVILION",
+          "words": null
+        },
+        {
+          "title": "The List",
+          "what": "Alone with the vanity mirror, the entity catalogs which remaining mirrors still carry the Wen lineage, marking each one as a target to destroy.",
+          "who": [
+            "CLAIRE_WEN"
+          ],
+          "thread": "The Glass Prisoner",
+          "location": "MERCER_HOUSE",
+          "words": null
+        },
+        {
+          "title": "The Last Mirror",
+          "what": "At Widow's Walk, the entity watches her own reflection ripple in the wind-churned water and says nothing, leaving Claire's fate an open question.",
+          "who": [
+            "CLAIRE_WEN"
+          ],
+          "thread": "The Glass Prisoner",
+          "location": "WIDOWS_WALK",
+          "words": {
+            "min": 130,
+            "max": 250,
+            "target": "130 to 250"
+          }
+        }
+      ],
+      "case": [
+        {
+          "label": "The Other Woman",
+          "character_knowledge": {
+            "DANIEL_MERCER": "He knows the affair is out in the open now and expects some reckoning from Claire, but gets only cold indifference; he keeps his own residual guilt to himself and wrongly reads her flatness as quiet forgiveness rather than a sign she's simply moved past needing the leverage at all.",
+            "CLAIRE_WEN": "The entity knows every detail of the affair and used it for months to keep Daniel compliant; now that it's public she freely lets it go, concealing only that his relief has loosened his watchfulness at exactly the moment she needs it loosened most, for reasons that have nothing to do with him."
+          },
+          "solution": "Daniel Mercer has been in a six-month affair with Yuna Park, the company's in-house counsel, born out of mutual exhaustion — Daniel drowning in his mother's health crisis and a marriage he no longer understands, Yuna caught between ambition and guilt. Neither has told anyone, and the real Claire never learned of it before the exchange. After the swap, the entity wearing Claire's body discovers the affair through Daniel's phone, not through any confession, and treats it not as a betrayal to rage over but as leverage — using it to keep Daniel compliant, and later to isolate Yuna once Yuna becomes one of the few people to notice that 'Claire' has changed.",
+          "objective_facts": [
+            "Daniel and Yuna's affair began during Aiko's first hospitalization, roughly seven months before episode one.",
+            "No family member has ever seen them together; the only evidence is a chain of messages on an app neither of them has deleted.",
+            "Yuna drafted an early, informal succession memo favoring Daniel over Marcus before the affair began, for professional reasons unrelated to their relationship.",
+            "The entity occupying Claire's body learns of the affair by finding Daniel's phone, at a specific point in the season, not through anyone's admission.",
+            "Yuna is the only character besides Mei who begins to suspect 'Claire' has changed, though she initially misreads it as Claire having learned of the affair and planning retaliation."
+          ]
+        },
+        {
+          "label": "The Succession",
+          "character_knowledge": {
+            "MARCUS_CHEN": "He knows now that Aiko gave him an equal stake he never expected, and can freely admit to the shell company as insurance he no longer needs; he downplays how long and how much he diverted, and wrongly assumes Aiko's trust was constant rather than something she withheld while quietly watching him.",
+            "DANIEL_MERCER": "He knows the succession is settled evenly and wants reconciliation with Marcus, but keeps private the sting of not being named sole heir; he doesn't know the true scope of Marcus's shell company dealings, only the version Marcus is willing to say aloud.",
+            "AIKO_MERCER": "She knows her heart is worsening and that the document she fought to sign is finally settled; she conceals the severity of her decline from both men, framing hospital visits as routine, and lets them believe she's stepping back by choice rather than by necessity."
+          },
+          "solution": "Aiko Mercer, diagnosed with a worsening heart condition she has hidden from everyone but her cardiologist, has secretly redrafted the company's succession plan to split ownership evenly between Daniel and Marcus Chen instead of naming Daniel sole heir as everyone assumes. The decision is driven by guilt: decades ago she promised Marcus's dying father, her late husband's closest friend and silent co-founder, that his son would always hold an equal stake — a promise she let slide for years and is now racing to make good on before she runs out of time. Marcus does not know the new document exists; he knows only the old assumption that Daniel inherits everything, and has spent nearly a year quietly diverting smaller shipping contracts through a shell company as insurance against being frozen out, intending to use it as leverage if Aiko dies before changing anything — not realizing she already has.",
+          "objective_facts": [
+            "Aiko was diagnosed with advanced heart disease five months before episode one and has told only her cardiologist.",
+            "The original partnership agreement from decades ago promised Marcus's father's family an equal stake that was never formalized after his early death.",
+            "Aiko signed a new succession document three weeks before episode one splitting ownership evenly between Daniel and Marcus, currently held unfiled by her lawyer.",
+            "Marcus has redirected roughly eleven months of smaller shipping contracts through a shell company he controls, believing he will need it as future leverage.",
+            "No single character knows the whole picture: Daniel doesn't know about Aiko's health or the new document, Marcus doesn't know the new document exists, and Yuna drafted only the document's earlier informal version, not the final signed one."
+          ]
+        },
+        {
+          "label": "What Mei Knows",
+          "character_knowledge": {
+            "MEI_WEN": "She knows her grandmother's full account of the mirror and has now handed Yuna the notebook and letters as proof; she holds nothing back from Yuna in this scene, but still hesitates to bring the same evidence to Daniel or Aiko, having been dismissed by family before.",
+            "YUNA_PARK": "Between Mei's account and her own unease around 'Claire,' she now believes completely that something has replaced Claire; she conceals this conviction from Daniel, wary that saying it aloud could look like guilt-driven paranoia or, worse, tip off the very thing she's afraid of.",
+            "AIKO_MERCER": "She hears Mei's worry filtered through her own exhaustion and hidden illness, and treats it as plausible but unproven; she wrongly assumes stress explains both Mei's fixation and 'Claire's' strangeness, unwilling yet to commit to either believing or dismissing it outright.",
+            "DANIEL_MERCER": "He has no idea Mei's proof exists; he notices something guarded in Yuna when she tries to warn him, but reads it as leftover guilt from their affair rather than a warning about his wife."
+          },
+          "solution": "Mei Wen recognizes the mirror's role almost immediately because their grandmother told her — not Claire — the full family story in a single private conversation the summer before she died, one Claire was never present for. Mei has kept it to herself for years, embarrassed by how superstitious it sounds, and it isn't until 'Claire's' behavior turns openly cruel that she starts piecing together that this isn't a breakdown but something closer to what her grandmother described. Her arc across the season is less about discovering new supernatural information — she already has it, buried — and more about finding the courage and evidence to act on a story she's spent years dismissing, while the entity wearing her sister's face works steadily to discredit and isolate her before she can convince anyone else.",
+          "objective_facts": [
+            "Grandmother Wen told Mei the mirror's full history in one private conversation the summer before she died, which Claire never heard.",
+            "Mei has kept her grandmother's letters and a small notebook of family oral history hidden in her apartment for years, telling no one.",
+            "Mei is the first person in the present-day timeline to notice specific behavioral inconsistencies in 'Claire' that don't match her sister.",
+            "The entity occupying Claire's body identifies Mei as the single greatest threat to the exchange remaining permanent by the season's midpoint.",
+            "Mei has no proof beyond her grandmother's account and her own observations — nothing that would hold up to anyone who doesn't already believe her."
+          ]
+        },
+        {
+          "label": "The Glass Prisoner",
+          "character_knowledge": {
+            "CLAIRE_WEN": "The entity knows exactly which mirrors remain tied to the Wen bloodline and has begun destroying them, starting with the Silver Court twin, to make the exchange permanent; she conceals this campaign from everyone in the house as unrelated errands, and believes — wrongly — that nothing meaningful stands in her way now that Mei has been so thoroughly discredited."
+          },
+          "solution": "For three generations, the women of the Wen family have unknowingly fed a splinter of consciousness inside the silvered glass of a nineteenth-century vanity mirror passed down matrilineally. Each time a Wen woman carries prolonged guilt and suppressed rage, the reflection inside gains enough will to speak, and after months of whispering it can force a physical exchange during a moment when the real woman stands before it in total exhaustion or grief. On the night Claire finally broke down after a bitter fight with Daniel, the exchange completed: the reflection stepped out wearing Claire's body while Claire's consciousness was pulled into the glass — aware, trapped, able to perceive events through any reflective surface connected to that original mirror, but able to be seen or heard by others only under rare, specific conditions. The entity now wearing Claire's face is not simple malice; it is the accumulated resentment of every silenced Wen woman before her, and it wants two things: to never return to the glass, and to permanently sever the mirror's connection to the bloodline by destroying every remaining mirror tied to that lineage — which would trap Claire forever with no possibility of return.",
+          "objective_facts": [
+            "The vanity mirror was made in Shanghai in 1889 and has passed to the most emotionally burdened daughter in every generation of the Wen family since.",
+            "Claire's grandmother deliberately left the mirror behind in China and warned against ever sending for it; Claire had it shipped to her after the grandmother's death, against that wish.",
+            "The whispering began roughly four months before episode one, always late at night, always following arguments with Daniel.",
+            "The physical exchange took place on a specific night, early in the season's timeline, when Claire stood before the mirror alone after a fight — from that point forward, the person occupying Claire's body is not Claire.",
+            "The entity retains enough of Claire's memories and mannerisms to fool nearly everyone, failing only on small, specific behavioral tells that the real Claire would never produce.",
+            "Claire's trapped consciousness can perceive events through any reflective surface unbroken in lineage to the original mirror, but can only be glimpsed or heard under very rare conditions.",
+            "The entity's ultimate goal is to destroy or permanently seal every mirror in that connected lineage, which would make the exchange irreversible."
+          ]
+        }
+      ]
+    }
+  ]
+}

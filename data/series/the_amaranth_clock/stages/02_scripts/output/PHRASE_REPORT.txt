@@ -1,0 +1,28 @@
+Phrasen-Frequenz-Report (deterministisch, fabrik/writing/phrase_stats.py)
+Episoden ausgewertet: 1, 2, 3, 4, 5, 6, 7, 9, 10
+
+Wiederholte Phrasen (>= 6x über die Staffel):
+     8x  "a moment longer"
+     7x  "in this building"
+     7x  "you look like"
+     7x  "for a moment"
+     7x  "for eighteen years"
+     7x  "in front of"
+     7x  "four forty seven"
+     6x  "building's longest tenured resident"
+     6x  "twelve years and"
+     6x  "twelve years i"
+     6x  "cracked red booth"
+     6x  "neither of them"
+     6x  "ten days into"
+     6x  "three days before"
+
+Style-Einheitston (>= 25x als style/tone/emotion-Wort):
+    49x  style "quiet"
+    34x  style "warm"
+    34x  style "gentle"
+    33x  style "measured"
+    31x  style "low"
+    30x  style "careful"
+    28x  style "soft"
+    26x  style "tired"

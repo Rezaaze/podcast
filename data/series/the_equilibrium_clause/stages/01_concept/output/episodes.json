@@ -1,0 +1,1175 @@
+{
+  "series_title": "The Equilibrium Clause",
+  "language": "English",
+  "mode": "drama",
+  "template": "soap_opera",
+  "writer_persona": "a showrunner for character-driven, relationship-first serial drama in the vein of prestige ensemble TV, using a techno-thriller conspiracy as the pressure that cracks open marriages, friendships, and old family debts",
+  "style_guidelines": [
+    "Every scene serves at least one relationship first and the conspiracy plot second — the audience should feel a betrayal before they understand its mechanics.",
+    "No character explains the full truth of any thread out loud; they only ever act on their own partial, biased version of events.",
+    "Dialogue is naturalistic and interrupted — people talk over each other, deflect, change the subject when a secret gets close to the surface.",
+    "Escalate tension through withheld information and crossed wires between threads, not through action set-pieces; this is a drama of rooms and phone calls, not chases.",
+    "Let dramatic irony breathe: give the audience information one character lacks well before that character catches up, and let scenes play out under that asymmetry.",
+    "End scenes on an unresolved emotional beat or a half-finished sentence rather than a tidy button whenever possible."
+  ],
+  "voices": {
+    "NARRATOR": {
+      "voice": "Ryan",
+      "default_style": "calm, measured, a step removed from the action",
+      "description": "the show's narrator — orients the listener at the start of every scene (who, where, when), never a character in the story"
+    },
+    "LIAM_HARTLEY": {
+      "voice": "Aiden",
+      "default_style": "easy, warm confidence with a restraint underneath that never quite explains itself",
+      "description": "American expat senior engineer at Meridian Systems, Mei's closest friend and maybe more; two years ago he was flagged by ARBITER himself and has been quietly meeting its demands ever since, a compromise he has never told anyone about, least of all Mei"
+    },
+    "MEI_ZHAO": {
+      "voice": "Vivian",
+      "default_style": "sharp, fast-thinking, speaks slow and deliberate when it matters most, urgency held just under the surface",
+      "description": "Singaporean-Chinese systems engineer at Meridian who stumbles onto a backend anomaly in ARBITER's audit logs and is flagged as a leak risk; she is the one who will have to trick the system into deleting itself, and knows almost nothing about the compromises the people closest to her have already made"
+    },
+    "WEI_CHEN": {
+      "voice": "Dylan",
+      "default_style": "icy, precise, unsettlingly calm, clipped and deliberate English that never raises in volume even under pressure",
+      "description": "Meridian's founder and CTO, the architect of ARBITER; mainland-Chinese-born, married to Hana Sato, personally intercepted Mei's flag rather than let the protocol run — not mercy, he tells himself, just caution"
+    },
+    "HANA_SATO": {
+      "voice": "Ono_Anna",
+      "default_style": "controlled, formal, compliance-officer poise with hairline cracks when family comes up",
+      "description": "Japanese expat who spent her early school years in Shanghai before her family settled back in Osaka, leaving her English inflected with a lingering trace of Mandarin cadence; now Head of Compliance at Meridian and Wei Chen's wife; for fourteen months she has been quietly leaking sanitized data to a journalist, driven by a family wound she has never told her husband about"
+    },
+    "JUNO_PARK": {
+      "voice": "Sohee",
+      "default_style": "quick, wry, restless energy that speeds up the more she smells a story",
+      "description": "Korean investigative journalist who cut her teeth on a journalism fellowship in Beijing, a stretch that left her English carrying a faint Mandarin-inflected edge she's never quite shaken; now chasing rumors of a corporate blackmail scheme behind Meridian's crime-prevention statistics, with an anonymous source she has never been able to verify or name"
+    },
+    "DA_MING": {
+      "voice": "Uncle_Fu",
+      "default_style": "gravelly, warm, guarded — a man who has perfected the art of saying just enough",
+      "description": "elderly lobby security officer at Meridian Tower, nineteen years on the job; for fifteen of them he has been the human courier who delivers ARBITER's sealed blackmail envelopes, a job whose true nature he only understood after it cost him his estranged son"
+    }
+  },
+  "locations": {
+    "MERIDIAN_TOWER": {
+      "name": "Meridian Tower",
+      "description": "a glass-skinned corporate spire downtown, all cool blue light and silent elevators, designed to make everyone inside feel watched without ever saying so"
+    },
+    "THE_SERVER_VAULT": {
+      "name": "The Server Vault",
+      "description": "a windowless, climate-controlled basement chamber humming with server racks and a single red-lit access terminal, physically sealed off from the rest of the building"
+    },
+    "MEI_APARTMENT": {
+      "name": "Mei's Apartment",
+      "description": "a cramped, cluttered walk-up above a noodle shop, three monitors always glowing on a desk crammed between unwashed mugs and takeout containers"
+    },
+    "THE_HAWKER_CENTRE": {
+      "name": "The Hawker Centre",
+      "description": "an open-air food court under corrugated tin roofing, steam and sizzle and clattering trays, the one place in the show where everyone can plausibly run into everyone else"
+    },
+    "LIAM_APARTMENT": {
+      "name": "Liam's Apartment",
+      "description": "a sleek, sparsely furnished expat rental with a rooftop-adjacent balcony and unopened moving boxes still stacked in a corner two years in, like he never fully believed he'd stay"
+    },
+    "RIVERSIDE_BAR": {
+      "name": "Riverside Bar",
+      "description": "a dim waterfront bar with a long zinc counter and a view of container ships sliding past the window, the after-hours refuge where Meridian staff let their guard down"
+    },
+    "WEI_PENTHOUSE": {
+      "name": "The Wei-Sato Penthouse",
+      "description": "a minimalist top-floor apartment of polished concrete and museum-quiet rooms, beautiful and strangely cold, like nobody actually lives there"
+    },
+    "HANA_OFFICE": {
+      "name": "Compliance Office",
+      "description": "a glass-walled corner office on Meridian's executive floor, blinds that can seal shut at the touch of a button, filing cabinets locked with keys only Hana carries"
+    },
+    "JUNO_NEWSROOM": {
+      "name": "The Newsroom",
+      "description": "a cramped, fluorescent-lit independent press office above a laundromat, corkboards thick with string and printouts, the opposite of Meridian's polish in every way"
+    },
+    "THE_LOBBY_DESK": {
+      "name": "The Lobby Desk",
+      "description": "Meridian Tower's marble-floored ground-floor security station, a modest wooden desk that looks almost apologetic next to the building's glass and chrome"
+    },
+    "THE_BACK_ALLEY_DROP": {
+      "name": "The Back Alley Drop",
+      "description": "a narrow service alley behind the Tower, dumpsters and a flickering security light, where envelopes and instructions change hands far from any camera"
+    },
+    "THE_ROOFTOP_GARDEN": {
+      "name": "The Rooftop Garden",
+      "description": "a manicured pocket of greenery forty floors up, glass windbreaks and skyline views, Meridian's showpiece for investors and its staff's only real privacy above ground"
+    }
+  },
+  "format": {
+    "parts_per_section": 1,
+    "words_per_part_target": "300 to 500",
+    "words_per_part_min": 250,
+    "words_per_part_max": 550
+  },
+  "generation": {
+    "model": "claude-sonnet-5"
+  },
+  "audio": {
+    "api_url": "http://127.0.0.1:42003",
+    "default_style": "Speak clearly and with dramatic weight",
+    "target_lufs": -16.0,
+    "pause_between_chunks_ms": 250,
+    "pause_between_lines_ms": 700,
+    "pause_between_parts_ms": 3000,
+    "pause_between_episodes_ms": 6000,
+    "merge_anthology": false
+  },
+  "output_prefix": "ep",
+  "series_intro": "The city's crime rate has fallen for five straight years, and Meridian Systems takes the credit — a predictive algorithm called ARBITER, quietly protecting everyone from crimes that never happen. Nobody asks where the criminals go instead. This season we follow the tower's engineers, its executives, its journalists, and the old man at the front desk who has known the answer longer than any of them — as one coder's small discovery threatens to unravel a machine built to trade tomorrow's headlines for tonight's silence.",
+  "series_outro": "By the season's end, Mei forces ARBITER into a partial, catastrophic self-purge — enough to strip Wei Chen of control and hand Da Ming's hidden log to Juno as the first hard evidence the system ever existed, but not enough to prove who built it or who it served. Liam's two years of quiet compliance are exposed to Mei in the season's final act, rupturing them right as they need each other most, the relationship left deliberately unresolved. Hana finally tells Wei the truth about her brother, choosing Juno's investigation over her marriage — a decision made, but its cost not yet paid. Da Ming keeps his son's name out of the official record, his grief and guilt carried forward, unhealed, into whatever comes next.",
+  "threads": [
+    {
+      "label": "The Arbiter's List",
+      "solution": "ARBITER was never built to prevent crime — it launders it. Wei Chen designed the system for a hidden consortium of Meridian's backers who profit from a controlled, quota-managed layer of white-collar crime across the city. When ARBITER predicts a violent or disruptive crime, Wei's inner circle intercepts the flagged individual and blackmails them into committing a smaller, profitable, deniable crime that serves the consortium instead — meeting a quota while keeping official crime statistics enviably low and funneling illicit profit upward. Mei stumbled onto a backend anomaly while patching ARBITER's audit logs and was reclassified by the system as a Category 3 leak risk, triggering the standard blackmail protocol against her. Wei personally intercepted her file to buy time, unsure whether he can bring himself to run his own machine against her.",
+      "objective_facts": [
+        "ARBITER's core sits in a shielded server vault beneath Meridian Tower, physically isolated from the public internet by design.",
+        "ARBITER's official public mandate is a municipal crime-prevention pilot; its blackmail protocol exists in an undocumented subsystem only Wei Chen and two long-departed engineers ever built.",
+        "Every violent crime ARBITER claims to have prevented in five years of operation has a matching, unsolved white-collar crime elsewhere in the city within thirty days of the prevention date.",
+        "Mei's audit patch on the anomaly logs was submitted eleven days before ARBITER flagged her file as a leak risk.",
+        "Wei Chen has personally deleted or delayed three flag notifications against friends or highly placed contacts in the past two years, proving the system's neutrality was already compromised before Mei's case."
+      ]
+    },
+    {
+      "label": "The Compliance Officer's Betrayal",
+      "solution": "Hana Sato, Meridian's Head of Compliance and Wei Chen's wife, has spent fourteen months quietly funneling sanitized, identity-scrubbed data fragments to journalist Juno Park, building an outside case against ARBITER without ever revealing she is the source. Her motive: her younger brother in Osaka was flagged by an early ARBITER pilot years before she ever worked at Meridian, was blackmailed into a crime that ruined his life, and she only connected it to her own husband's company after she'd already married him. She hasn't left Wei because she believes she can dismantle the system from the inside — and because she still isn't sure how much he knew when they met.",
+      "objective_facts": [
+        "Hana's brother, Kenji, served two years for a fraud charge in Osaka six years before Meridian's ARBITER program began its Singapore rollout.",
+        "Hana joined Meridian's compliance division eighteen months after her brother's conviction, citing 'family research interest in predictive justice systems' on her internal transfer application.",
+        "Hana has met Juno Park in person exactly four times, always at locations outside Singapore's central business district.",
+        "Hana has never told Wei Chen about her brother's case.",
+        "The data fragments Hana has leaked contain no server locations, names, or code — only aggregate statistics, meaning Juno's case remains unprovable without a direct source."
+      ]
+    },
+    {
+      "label": "Old Debts",
+      "solution": "Da Ming, the lobby security officer everyone treats as harmless furniture, has been ARBITER's human courier for fifteen years — the one who physically delivers sealed blackmail instructions to flagged targets — believing for most of that time he was simply running secure tasks for corporate security. Three years ago he delivered an envelope to a young man he didn't recognize until the man's photo appeared in an obituary two weeks later: his own estranged son. Da Ming has known what the envelopes really are ever since, and has kept doing the job anyway, terrified that refusing would expose what he's known, and hoping proximity to the system might let him protect the next person before it's too late.",
+      "objective_facts": [
+        "Da Ming has worked Meridian Tower's lobby security desk for nineteen years, eleven of them concurrent with ARBITER's operation.",
+        "Da Ming's estranged son, Kwan, died by suicide three years ago, eleven days after receiving a sealed envelope Da Ming personally delivered.",
+        "Da Ming has never told anyone at Meridian, including Wei Chen, that the courier envelopes he delivers are the same blackmail letters described in city rumor.",
+        "Da Ming keeps a private, handwritten log of every envelope delivery date and recipient description, hidden in his locker — the only independent physical record of the blackmail protocol's victims.",
+        "Da Ming and Mei have known each other by name and small talk for two years, but he has never told her what he suspects about her recent, unusual pattern of extra security check-ins."
+      ]
+    },
+    {
+      "label": "Liam's Bargain",
+      "solution": "Liam Hartley was flagged by ARBITER two years before the story begins, after a bar fight that put another man in the hospital. Rather than face prosecution, he was blackmailed into committing quiet, ongoing corporate espionage against a rival firm on Meridian's behalf, funneled through Wei Chen's inner circle — trading his silence and cooperation for a clean record and his continued work visa. He has told no one, including Mei, believing the arrangement was a one-time trade rather than an open-ended leash — until Wei Chen uses Liam's own compromise as leverage against Mei.",
+      "objective_facts": [
+        "Liam was involved in an altercation outside Riverside Bar two years ago that hospitalized another patron; no police report was ever filed.",
+        "Liam's work visa sponsorship was quietly transferred to a Wei Chen-controlled holding entity nine days after that altercation.",
+        "Liam has, under direction relayed through anonymous encrypted messages, extracted and delivered proprietary source code from a rival firm on three separate occasions in the past two years.",
+        "Liam has never met the person who sends his instructions and does not know Wei Chen is behind them.",
+        "Liam and Mei have been close since her first week at Meridian and have never discussed his outside obligations, which he has attributed to 'consulting work' whenever she's asked."
+      ]
+    }
+  ],
+  "episodes": [
+    {
+      "figure": "The Interception",
+      "theme": "In the week Mei's routine audit patch quietly reclassifies her as a leak risk, Wei Chen intercepts her flag before ARBITER's automated protocol can act on it, and across town Da Ming delivers another sealed envelope with the same practiced, haunted silence he's carried for years — two secrets settling into place, neither yet visible to the woman at their center.",
+      "intro_note": "",
+      "outro_note": "Wei Chen has bought Mei a delay she doesn't know she needed, and Da Ming has delivered another envelope he'll never explain. Neither of them knows that across town, an anonymous message is already queued for a man who thinks he finished paying what he owes.",
+      "sections": [
+        {
+          "title": "The Late Patch",
+          "what": "Mei finishes patching an audit-log anomaly late at night while Liam teases her about overtime, neither guessing the fix already changed her status.",
+          "who": [
+            "MEI_ZHAO",
+            "LIAM_HARTLEY"
+          ],
+          "thread": "The Arbiter's List",
+          "location": "MERIDIAN_TOWER",
+          "words": null
+        },
+        {
+          "title": "Category Three",
+          "what": "Alone in the vault, Wei Chen watches ARBITER flag Mei as a leak risk and quietly buries the alert before its blackmail protocol can trigger, telling no one.",
+          "who": [
+            "WEI_CHEN"
+          ],
+          "thread": "The Arbiter's List",
+          "location": "THE_SERVER_VAULT",
+          "words": {
+            "min": 130,
+            "max": 230,
+            "target": "130 to 230"
+          }
+        },
+        {
+          "title": "The Sealed Envelope",
+          "what": "Da Ming collects another sealed envelope at the lobby desk and delivers it to a new target in the back alley, the same practiced dread settling over him.",
+          "who": [
+            "DA_MING"
+          ],
+          "thread": "Old Debts",
+          "location": "THE_BACK_ALLEY_DROP",
+          "words": null
+        },
+        {
+          "title": "Noodle Soup and Half-Truths",
+          "what": "Over noodles at the hawker centre, Liam deflects Mei's questions about his weekend plans, warmth and evasion tangled together as she senses something unnamed.",
+          "who": [
+            "MEI_ZHAO",
+            "LIAM_HARTLEY"
+          ],
+          "thread": "Liam's Bargain",
+          "location": "THE_HAWKER_CENTRE",
+          "words": null
+        },
+        {
+          "title": "Distracted",
+          "what": "At home, Wei answers Hana's questions about his day in clipped half-sentences, and she files his distraction away without knowing what he's hiding.",
+          "who": [
+            "WEI_CHEN",
+            "HANA_SATO"
+          ],
+          "thread": "The Arbiter's List",
+          "location": "WEI_PENTHOUSE",
+          "words": null
+        },
+        {
+          "title": "Good Night, Ms. Zhao",
+          "what": "Mei says goodnight to Da Ming on her way out, unaware of the envelope in his locker or the flag quietly buried two floors below her.",
+          "who": [
+            "MEI_ZHAO",
+            "DA_MING"
+          ],
+          "thread": "Old Debts",
+          "location": "THE_LOBBY_DESK",
+          "words": {
+            "min": 120,
+            "max": 220,
+            "target": "120 to 220"
+          }
+        }
+      ],
+      "case": [
+        {
+          "label": "The Arbiter's List",
+          "character_knowledge": {
+            "MEI_ZHAO": "Mei knows only that she filed a patch fixing an anomaly in ARBITER's audit logs and considers the matter closed, routine engineering work; she has no idea the fix reclassified her as a leak risk or that anyone above her even noticed.",
+            "WEI_CHEN": "Wei knows ARBITER flagged Mei as a Category 3 leak risk and that letting the automated protocol run would trigger the same blackmail machinery he's used against others, so he quietly buried the alert himself; he has told no one, and hasn't decided whether he did it to protect her or to protect himself.",
+            "HANA_SATO": "Hana notices Wei come home distracted and short with her but knows nothing of Mei's flag or the interception; she wrongly reads his mood as ordinary executive stress, the same cover she's grateful for whenever her own preoccupations show."
+          },
+          "solution": "ARBITER was never built to prevent crime — it launders it. Wei Chen designed the system for a hidden consortium of Meridian's backers who profit from a controlled, quota-managed layer of white-collar crime across the city. When ARBITER predicts a violent or disruptive crime, Wei's inner circle intercepts the flagged individual and blackmails them into committing a smaller, profitable, deniable crime that serves the consortium instead — meeting a quota while keeping official crime statistics enviably low and funneling illicit profit upward. Mei stumbled onto a backend anomaly while patching ARBITER's audit logs and was reclassified by the system as a Category 3 leak risk, triggering the standard blackmail protocol against her. Wei personally intercepted her file to buy time, unsure whether he can bring himself to run his own machine against her.",
+          "objective_facts": [
+            "ARBITER's core sits in a shielded server vault beneath Meridian Tower, physically isolated from the public internet by design.",
+            "ARBITER's official public mandate is a municipal crime-prevention pilot; its blackmail protocol exists in an undocumented subsystem only Wei Chen and two long-departed engineers ever built.",
+            "Every violent crime ARBITER claims to have prevented in five years of operation has a matching, unsolved white-collar crime elsewhere in the city within thirty days of the prevention date.",
+            "Mei's audit patch on the anomaly logs was submitted eleven days before ARBITER flagged her file as a leak risk.",
+            "Wei Chen has personally deleted or delayed three flag notifications against friends or highly placed contacts in the past two years, proving the system's neutrality was already compromised before Mei's case."
+          ]
+        },
+        {
+          "label": "Old Debts",
+          "character_knowledge": {
+            "DA_MING": "Da Ming knows exactly what the sealed envelope he delivers tonight really is — a blackmail instruction from ARBITER's protocol — and has known since it cost him his son three years ago; he says nothing, to the new target or to anyone else, and keeps doing the job out of fear and a thin hope of catching the next one in time.",
+            "MEI_ZHAO": "Mei knows Da Ming only as the friendly lobby guard she trades small talk with most evenings, and reads his usual quiet reserve as nothing more than an old man's temperament; she has no idea he carries any knowledge that touches her."
+          },
+          "solution": "Da Ming, the lobby security officer everyone treats as harmless furniture, has been ARBITER's human courier for fifteen years — the one who physically delivers sealed blackmail instructions to flagged targets — believing for most of that time he was simply running secure tasks for corporate security. Three years ago he delivered an envelope to a young man he didn't recognize until the man's photo appeared in an obituary two weeks later: his own estranged son. Da Ming has known what the envelopes really are ever since, and has kept doing the job anyway, terrified that refusing would expose what he's known, and hoping proximity to the system might let him protect the next person before it's too late.",
+          "objective_facts": [
+            "Da Ming has worked Meridian Tower's lobby security desk for nineteen years, eleven of them concurrent with ARBITER's operation.",
+            "Da Ming's estranged son, Kwan, died by suicide three years ago, eleven days after receiving a sealed envelope Da Ming personally delivered.",
+            "Da Ming has never told anyone at Meridian, including Wei Chen, that the courier envelopes he delivers are the same blackmail letters described in city rumor.",
+            "Da Ming keeps a private, handwritten log of every envelope delivery date and recipient description, hidden in his locker — the only independent physical record of the blackmail protocol's victims.",
+            "Da Ming and Mei have known each other by name and small talk for two years, but he has never told her what he suspects about her recent, unusual pattern of extra security check-ins."
+          ]
+        },
+        {
+          "label": "Liam's Bargain",
+          "character_knowledge": {
+            "LIAM_HARTLEY": "Liam knows he's been quietly answering anonymous instructions for two years under threat tied to an old bar fight, and covers it to Mei tonight as vague weekend plans and consulting work; he still believes, wrongly, that the arrangement is a finite debt rather than an open-ended leash.",
+            "MEI_ZHAO": "Mei knows only that Liam is being evasive about his weekend and chalks it up to him being private, as always, about his 'consulting work'; she has no reason to doubt him and doesn't push."
+          },
+          "solution": "Liam Hartley was flagged by ARBITER two years before the story begins, after a bar fight that put another man in the hospital. Rather than face prosecution, he was blackmailed into committing quiet, ongoing corporate espionage against a rival firm on Meridian's behalf, funneled through Wei Chen's inner circle — trading his silence and cooperation for a clean record and his continued work visa. He has told no one, including Mei, believing the arrangement was a one-time trade rather than an open-ended leash — until Wei Chen uses Liam's own compromise as leverage against Mei.",
+          "objective_facts": [
+            "Liam was involved in an altercation outside Riverside Bar two years ago that hospitalized another patron; no police report was ever filed.",
+            "Liam's work visa sponsorship was quietly transferred to a Wei Chen-controlled holding entity nine days after that altercation.",
+            "Liam has, under direction relayed through anonymous encrypted messages, extracted and delivered proprietary source code from a rival firm on three separate occasions in the past two years.",
+            "Liam has never met the person who sends his instructions and does not know Wei Chen is behind them.",
+            "Liam and Mei have been close since her first week at Meridian and have never discussed his outside obligations, which he has attributed to 'consulting work' whenever she's asked."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "Consulting Work",
+      "theme": "While Hana slips another sanitized data fragment to Juno at a meeting far from Meridian's glass towers, Liam quietly answers a new set of anonymous instructions and lets Mei believe, once again, that it's only consulting work — two private arrangements deepening in parallel, each one insulated from the people closest to them.",
+      "intro_note": "Mei's flag has been quietly buried and the envelope has already changed hands, neither secret visible yet to the woman they orbit. Elsewhere in the city, two more people are keeping their own kind of silence.",
+      "outro_note": "Late that night, back at her three monitors, Mei follows the anomaly one layer deeper than she means to, toward a door she doesn't yet know is watched.",
+      "sections": [
+        {
+          "title": "Sanitizing the Numbers",
+          "what": "Hana strips identifying details from a fresh compliance dataset alone in her office, checking twice for anything traceable before she leaves the building.",
+          "who": [
+            "HANA_SATO"
+          ],
+          "thread": "The Compliance Officer's Betrayal",
+          "location": "HANA_OFFICE",
+          "words": null
+        },
+        {
+          "title": "Above the Laundromat",
+          "what": "Meeting Juno far from Meridian's glass towers, Hana hands over another sanitized data fragment, careful the exchange leaves no trace back to her.",
+          "who": [
+            "HANA_SATO",
+            "JUNO_PARK"
+          ],
+          "thread": "The Compliance Officer's Betrayal",
+          "location": "JUNO_NEWSROOM",
+          "words": null
+        },
+        {
+          "title": "Museum-Quiet Rooms",
+          "what": "Back home, Hana answers Wei's casual questions about her day with practiced calm, the marriage's warmth thinning under details she keeps carefully vague.",
+          "who": [
+            "HANA_SATO",
+            "WEI_CHEN"
+          ],
+          "thread": "The Compliance Officer's Betrayal",
+          "location": "WEI_PENTHOUSE",
+          "words": null
+        },
+        {
+          "title": "The New Instructions",
+          "what": "An anonymous encrypted message reaches Liam with fresh extraction targets, and after a long look at his phone, he quietly agrees to comply.",
+          "who": [
+            "LIAM_HARTLEY"
+          ],
+          "thread": "Liam's Bargain",
+          "location": "LIAM_APARTMENT",
+          "words": null
+        },
+        {
+          "title": "Consulting Work",
+          "what": "Over drinks, Mei presses Liam about his evasiveness lately, and he deflects again with the same vague line about consulting work he's used before.",
+          "who": [
+            "LIAM_HARTLEY",
+            "MEI_ZHAO"
+          ],
+          "thread": "Liam's Bargain",
+          "location": "RIVERSIDE_BAR",
+          "words": null
+        },
+        {
+          "title": "After Hours",
+          "what": "Alone in the office past midnight, Liam quietly copies proprietary files onto a drive, checking the corridor before he lets himself breathe.",
+          "who": [
+            "LIAM_HARTLEY"
+          ],
+          "thread": "Liam's Bargain",
+          "location": "MERIDIAN_TOWER",
+          "words": {
+            "min": 150,
+            "max": 250,
+            "target": "150 to 250"
+          }
+        }
+      ],
+      "case": [
+        {
+          "label": "The Compliance Officer's Betrayal",
+          "character_knowledge": {
+            "HANA_SATO": "Hana knows exactly what she is doing and why: fourteen months of sanitized leaks to Juno, driven by her brother Kenji's ruin under an earlier ARBITER pilot, a fact she has never shared with Wei. She deliberately keeps every exchange untraceable and plays the exhausted-by-work-stress line at home to explain her distance, believing she can still dismantle the system from inside before anyone connects her to it.",
+            "JUNO_PARK": "Juno knows she has a reliable, unverified source feeding her aggregate statistics with no names or server details, and she genuinely doesn't know that source is Meridian's own Head of Compliance; she assumes, wrongly, that she's dealing with someone lower in the org chart being careful rather than someone married to the man she's investigating.",
+            "WEI_CHEN": "Wei knows only that Hana has seemed more guarded lately and reads it as ordinary marital strain layered on top of both their demanding jobs; he has no idea she is the leak, no idea about Kenji, and no reason yet to look for either."
+          },
+          "solution": "Hana Sato, Meridian's Head of Compliance and Wei Chen's wife, has spent fourteen months quietly funneling sanitized, identity-scrubbed data fragments to journalist Juno Park, building an outside case against ARBITER without ever revealing she is the source. Her motive: her younger brother in Osaka was flagged by an early ARBITER pilot years before she ever worked at Meridian, was blackmailed into a crime that ruined his life, and she only connected it to her own husband's company after she'd already married him. She hasn't left Wei because she believes she can dismantle the system from the inside — and because she still isn't sure how much he knew when they met.",
+          "objective_facts": [
+            "Hana's brother, Kenji, served two years for a fraud charge in Osaka six years before Meridian's ARBITER program began its Singapore rollout.",
+            "Hana joined Meridian's compliance division eighteen months after her brother's conviction, citing 'family research interest in predictive justice systems' on her internal transfer application.",
+            "Hana has met Juno Park in person exactly four times, always at locations outside Singapore's central business district.",
+            "Hana has never told Wei Chen about her brother's case.",
+            "The data fragments Hana has leaked contain no server locations, names, or code — only aggregate statistics, meaning Juno's case remains unprovable without a direct source."
+          ]
+        },
+        {
+          "label": "Liam's Bargain",
+          "character_knowledge": {
+            "LIAM_HARTLEY": "Liam knows he is under an open-ended obligation stemming from the bar fight two years ago, and that this new set of encrypted instructions means another round of corporate espionage he has no real choice but to complete; he still believes the arrangement traces back to that one incident alone and has no idea Wei Chen personally directs it or now views his compromise as leverage. He deliberately tells Mei it's consulting work, a lie he's repeated so often it barely costs him anything to say.",
+            "MEI_ZHAO": "Mei knows Liam has been cagey about his side work for as long as she's known him and picks up, correctly, that something is off tonight, but she has no idea it involves blackmail or stolen code; she genuinely accepts the consulting-work explanation, even as a small, unexamined doubt about it lingers."
+          },
+          "solution": "Liam Hartley was flagged by ARBITER two years before the story begins, after a bar fight that put another man in the hospital. Rather than face prosecution, he was blackmailed into committing quiet, ongoing corporate espionage against a rival firm on Meridian's behalf, funneled through Wei Chen's inner circle — trading his silence and cooperation for a clean record and his continued work visa. He has told no one, including Mei, believing the arrangement was a one-time trade rather than an open-ended leash — until Wei Chen uses Liam's own compromise as leverage against Mei.",
+          "objective_facts": [
+            "Liam was involved in an altercation outside Riverside Bar two years ago that hospitalized another patron; no police report was ever filed.",
+            "Liam's work visa sponsorship was quietly transferred to a Wei Chen-controlled holding entity nine days after that altercation.",
+            "Liam has, under direction relayed through anonymous encrypted messages, extracted and delivered proprietary source code from a rival firm on three separate occasions in the past two years.",
+            "Liam has never met the person who sends his instructions and does not know Wei Chen is behind them.",
+            "Liam and Mei have been close since her first week at Meridian and have never discussed his outside obligations, which he has attributed to 'consulting work' whenever she's asked."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "Too Close",
+      "theme": "Mei's digging into the backend anomaly pulls her deeper into an undocumented subsystem than she means to go, and only Wei Chen's quiet intervention keeps the resulting security alert from ever reaching anyone who'd ask the right question.",
+      "intro_note": "While Hana's data keeps moving quietly toward Juno and Liam answers instructions he's told no one about, Mei is alone with the one thread only she can see — an anomaly in the audit logs that won't stop nagging at her.",
+      "outro_note": "Wei Chen buried one alert tonight, but the audit trail he can't fully erase still points somewhere close to Compliance — and he hasn't yet decided whose secrets he's protecting, or from whom.",
+      "sections": [
+        {
+          "title": "The Anomaly Deepens",
+          "what": "Alone past midnight, Mei follows the backend anomaly past its usual boundary into an undocumented subsystem she doesn't recognize, and decides to go further.",
+          "who": [
+            "MEI_ZHAO"
+          ],
+          "thread": "The Arbiter's List",
+          "location": "MEI_APARTMENT",
+          "words": null
+        },
+        {
+          "title": "Restricted Access",
+          "what": "Inside the vault, Mei's credentials trip a restricted-logs alarm; she freezes, certain someone is about to walk in and find her there.",
+          "who": [
+            "MEI_ZHAO"
+          ],
+          "thread": "The Arbiter's List",
+          "location": "THE_SERVER_VAULT",
+          "words": {
+            "min": 150,
+            "max": 250,
+            "target": "150 to 250"
+          }
+        },
+        {
+          "title": "Quiet Intervention",
+          "what": "Wei Chen intercepts the security alert flagging Mei's vault breach and quietly buries it before anyone with the right question sees it.",
+          "who": [
+            "WEI_CHEN"
+          ],
+          "thread": "The Arbiter's List",
+          "location": "MERIDIAN_TOWER",
+          "words": null
+        },
+        {
+          "title": "Consulting Work, Again",
+          "what": "Rattled, Mei almost tells Liam what happened in the vault; he deflects with a joke about his own workload, neither noticing what the other is hiding.",
+          "who": [
+            "MEI_ZHAO",
+            "LIAM_HARTLEY"
+          ],
+          "thread": "Liam's Bargain",
+          "location": "RIVERSIDE_BAR",
+          "words": null
+        },
+        {
+          "title": "The Old Man Watches",
+          "what": "Da Ming clocks Mei's rattled late-night exit through the lobby and says nothing, filing the moment away with the same quiet vigilance he always keeps.",
+          "who": [
+            "DA_MING",
+            "MEI_ZHAO"
+          ],
+          "thread": "Old Debts",
+          "location": "THE_LOBBY_DESK",
+          "words": {
+            "min": 150,
+            "max": 250,
+            "target": "150 to 250"
+          }
+        },
+        {
+          "title": "What He Won't Say",
+          "what": "Hana notices Wei's distraction at dinner and presses gently; he brushes it off, unwilling to explain why he just protected an engineer from his own system.",
+          "who": [
+            "WEI_CHEN",
+            "HANA_SATO"
+          ],
+          "thread": "The Arbiter's List",
+          "location": "WEI_PENTHOUSE",
+          "words": null
+        }
+      ],
+      "case": [
+        {
+          "label": "The Arbiter's List",
+          "character_knowledge": {
+            "MEI_ZHAO": "Mei genuinely knows she pushed past a normal boundary into an undocumented subsystem and tripped something that felt like an alarm, and she's now quietly terrified of being caught. She has no idea the resulting alert was intercepted at all, let alone by whom, and wrongly assumes that since nothing happened afterward, she simply wasn't detected.",
+            "WEI_CHEN": "Wei knows exactly what Mei found and that he personally buried the security alert her breach triggered, protecting her without her knowledge or consent. He conceals from everyone, including his own security staff, why he intervened, telling himself it's caution rather than admitting he hasn't decided whether to shield her from his own machine or eventually let it run.",
+            "HANA_SATO": "Hana genuinely knows only that Wei was distracted and evasive at dinner tonight. She has no idea it connects to Mei, the vault, or ARBITER's protocol at all, and wrongly reads it as ordinary work stress from a man who never brings the office home."
+          },
+          "solution": "ARBITER was never built to prevent crime — it launders it. Wei Chen designed the system for a hidden consortium of Meridian's backers who profit from a controlled, quota-managed layer of white-collar crime across the city. When ARBITER predicts a violent or disruptive crime, Wei's inner circle intercepts the flagged individual and blackmails them into committing a smaller, profitable, deniable crime that serves the consortium instead — meeting a quota while keeping official crime statistics enviably low and funneling illicit profit upward. Mei stumbled onto a backend anomaly while patching ARBITER's audit logs and was reclassified by the system as a Category 3 leak risk, triggering the standard blackmail protocol against her. Wei personally intercepted her file to buy time, unsure whether he can bring himself to run his own machine against her.",
+          "objective_facts": [
+            "ARBITER's core sits in a shielded server vault beneath Meridian Tower, physically isolated from the public internet by design.",
+            "ARBITER's official public mandate is a municipal crime-prevention pilot; its blackmail protocol exists in an undocumented subsystem only Wei Chen and two long-departed engineers ever built.",
+            "Every violent crime ARBITER claims to have prevented in five years of operation has a matching, unsolved white-collar crime elsewhere in the city within thirty days of the prevention date.",
+            "Mei's audit patch on the anomaly logs was submitted eleven days before ARBITER flagged her file as a leak risk.",
+            "Wei Chen has personally deleted or delayed three flag notifications against friends or highly placed contacts in the past two years, proving the system's neutrality was already compromised before Mei's case."
+          ]
+        },
+        {
+          "label": "Liam's Bargain",
+          "character_knowledge": {
+            "MEI_ZHAO": "Mei knows nothing concrete about what Liam actually does for his mysterious 'consulting work,' only that he's vague about it again tonight. She reads his deflection as ordinary evasiveness or tiredness, with no idea it covers two years of coerced espionage.",
+            "LIAM_HARTLEY": "Liam knows precisely what his own compromise costs him and deliberately keeps deflecting Mei's questions with the same cover story he's used for two years. He senses something is off with her tonight too, but doesn't press, aware that both of them are hiding something without naming it."
+          },
+          "solution": "Liam Hartley was flagged by ARBITER two years before the story begins, after a bar fight that put another man in the hospital. Rather than face prosecution, he was blackmailed into committing quiet, ongoing corporate espionage against a rival firm on Meridian's behalf, funneled through Wei Chen's inner circle — trading his silence and cooperation for a clean record and his continued work visa. He has told no one, including Mei, believing the arrangement was a one-time trade rather than an open-ended leash — until Wei Chen uses Liam's own compromise as leverage against Mei.",
+          "objective_facts": [
+            "Liam was involved in an altercation outside Riverside Bar two years ago that hospitalized another patron; no police report was ever filed.",
+            "Liam's work visa sponsorship was quietly transferred to a Wei Chen-controlled holding entity nine days after that altercation.",
+            "Liam has, under direction relayed through anonymous encrypted messages, extracted and delivered proprietary source code from a rival firm on three separate occasions in the past two years.",
+            "Liam has never met the person who sends his instructions and does not know Wei Chen is behind them.",
+            "Liam and Mei have been close since her first week at Meridian and have never discussed his outside obligations, which he has attributed to 'consulting work' whenever she's asked."
+          ]
+        },
+        {
+          "label": "Old Debts",
+          "character_knowledge": {
+            "DA_MING": "Da Ming genuinely notices Mei's rattled, late-night exit through the lobby and privately suspects it fits the same unusual pattern he's already been quietly watching around her. He says nothing, still unwilling to risk exposing what he knows the courier envelopes really are, even to protect her.",
+            "MEI_ZHAO": "Mei barely registers Da Ming as she passes, treating him as the same friendly, harmless fixture he's always been. She has no idea he's begun watching her more closely or why."
+          },
+          "solution": "Da Ming, the lobby security officer everyone treats as harmless furniture, has been ARBITER's human courier for fifteen years — the one who physically delivers sealed blackmail instructions to flagged targets — believing for most of that time he was simply running secure tasks for corporate security. Three years ago he delivered an envelope to a young man he didn't recognize until the man's photo appeared in an obituary two weeks later: his own estranged son. Da Ming has known what the envelopes really are ever since, and has kept doing the job anyway, terrified that refusing would expose what he's known, and hoping proximity to the system might let him protect the next person before it's too late.",
+          "objective_facts": [
+            "Da Ming has worked Meridian Tower's lobby security desk for nineteen years, eleven of them concurrent with ARBITER's operation.",
+            "Da Ming's estranged son, Kwan, died by suicide three years ago, eleven days after receiving a sealed envelope Da Ming personally delivered.",
+            "Da Ming has never told anyone at Meridian, including Wei Chen, that the courier envelopes he delivers are the same blackmail letters described in city rumor.",
+            "Da Ming keeps a private, handwritten log of every envelope delivery date and recipient description, hidden in his locker — the only independent physical record of the blackmail protocol's victims.",
+            "Da Ming and Mei have known each other by name and small talk for two years, but he has never told her what he suspects about her recent, unusual pattern of extra security check-ins."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "Deniable",
+      "theme": "Wei Chen's suspicion about a compliance leak lands on Hana directly, and she buys herself cover by quietly steering blame toward a junior staffer, even as Wei privately begins to see Liam's two-year compromise not as a closed matter but as leverage he might one day need against Mei.",
+      "intro_note": "The security flag Mei's late-night digging nearly tripped never reached anyone who'd ask questions — Wei made sure of that, and told no one. But it wasn't the only irregularity someone noticed that week.",
+      "outro_note": "Mei keeps stacking the numbers side by side, refusing to see it yet — but the pattern is already there, waiting for her to stop looking away.",
+      "sections": [
+        {
+          "title": "Irregularities",
+          "what": "Wei confronts Hana about anomalies in compliance access logs; she calmly redirects suspicion onto a junior staffer to protect herself.",
+          "who": [
+            "WEI_CHEN",
+            "HANA_SATO"
+          ],
+          "thread": "The Compliance Officer's Betrayal",
+          "location": "HANA_OFFICE",
+          "words": null
+        },
+        {
+          "title": "Damage Control",
+          "what": "Alone after Wei leaves, Hana quietly arranges evidence to make the staffer's story stick, hands shaking with fear of exposure.",
+          "who": [
+            "HANA_SATO"
+          ],
+          "thread": "The Compliance Officer's Betrayal",
+          "location": "HANA_OFFICE",
+          "words": {
+            "min": 150,
+            "max": 220,
+            "target": "150 to 220"
+          }
+        },
+        {
+          "title": "A Useful Man",
+          "what": "In his office, Wei quietly tells an associate to keep Liam's old compromise ready, treating it as future leverage against Mei.",
+          "who": [
+            "WEI_CHEN"
+          ],
+          "thread": "Liam's Bargain",
+          "location": "MERIDIAN_TOWER",
+          "words": {
+            "min": 150,
+            "max": 250,
+            "target": "150 to 250"
+          }
+        },
+        {
+          "title": "Consulting Work",
+          "what": "At the bar, Liam deflects Mei's questions about his secrecy with practiced ease, and she chooses, again, not to push further.",
+          "who": [
+            "MEI_ZHAO",
+            "LIAM_HARTLEY"
+          ],
+          "thread": "Liam's Bargain",
+          "location": "RIVERSIDE_BAR",
+          "words": null
+        },
+        {
+          "title": "The Numbers Don't Rest",
+          "what": "Alone at her monitors, Mei cross-references more prevented-crime cases, sensing a pattern just beyond her grasp, unaware of who's already worried.",
+          "who": [
+            "MEI_ZHAO"
+          ],
+          "thread": "The Arbiter's List",
+          "location": "MEI_APARTMENT",
+          "words": null
+        },
+        {
+          "title": "Noodles and Small Talk",
+          "what": "At the hawker centre, Da Ming shares easy banter with Mei, quietly warm and watchful, giving away nothing of what he carries.",
+          "who": [
+            "MEI_ZHAO",
+            "DA_MING"
+          ],
+          "thread": "Old Debts",
+          "location": "THE_HAWKER_CENTRE",
+          "words": null
+        }
+      ],
+      "case": [
+        {
+          "label": "The Compliance Officer's Betrayal",
+          "character_knowledge": {
+            "WEI_CHEN": "He genuinely knows there's an unexplained irregularity in compliance's data-access logs and confronts Hana about it directly, treating it as a procedural security matter rather than a personal one. He accepts her explanation pointing to a junior staffer because he wants it to be true, though a small, unstated unease about his own wife lingers under the surface he doesn't examine. He wrongly believes the leak, if real, is contained to someone with lesser access than Hana's.",
+            "HANA_SATO": "She knows she is the actual source feeding Juno Park, and that the access-log anomaly Wei found is her own trail. She conceals this completely, calmly steering his suspicion toward a junior staffer whose real access pattern she then quietly manipulates to make the story hold. She is more frightened than she lets show, aware that her margin for another mistake is gone."
+          },
+          "solution": "Hana Sato, Meridian's Head of Compliance and Wei Chen's wife, has spent fourteen months quietly funneling sanitized, identity-scrubbed data fragments to journalist Juno Park, building an outside case against ARBITER without ever revealing she is the source. Her motive: her younger brother in Osaka was flagged by an early ARBITER pilot years before she ever worked at Meridian, was blackmailed into a crime that ruined his life, and she only connected it to her own husband's company after she'd already married him. She hasn't left Wei because she believes she can dismantle the system from the inside — and because she still isn't sure how much he knew when they met.",
+          "objective_facts": [
+            "Hana's brother, Kenji, served two years for a fraud charge in Osaka six years before Meridian's ARBITER program began its Singapore rollout.",
+            "Hana joined Meridian's compliance division eighteen months after her brother's conviction, citing 'family research interest in predictive justice systems' on her internal transfer application.",
+            "Hana has met Juno Park in person exactly four times, always at locations outside Singapore's central business district.",
+            "Hana has never told Wei Chen about her brother's case.",
+            "The data fragments Hana has leaked contain no server locations, names, or code — only aggregate statistics, meaning Juno's case remains unprovable without a direct source."
+          ]
+        },
+        {
+          "label": "Liam's Bargain",
+          "character_knowledge": {
+            "WEI_CHEN": "He knows the full truth of Liam's two-year compromise, since he engineered it, and begins privately reframing it as a future lever he could pull against Mei if she becomes too great a risk. He signals this shift to his inner circle without yet acting on it, and doesn't know how close Liam and Mei actually are, treating Liam only as an asset.",
+            "LIAM_HARTLEY": "He knows his own arrangement in full — the altercation, the anonymous instructions, the espionage he's carried out — and believes it remains a private, closed trade for his silence and his visa. He deflects Mei's questions with practiced ease, genuinely unaware that Wei Chen is behind the instructions or that he is now being weighed as leverage against her.",
+            "MEI_ZHAO": "She knows nothing of Liam's compromise and reads his evasiveness about 'consulting work' as ordinary privacy, not concealment. She trusts him completely, which is exactly why she doesn't press when something in his tone doesn't quite add up."
+          },
+          "solution": "Liam Hartley was flagged by ARBITER two years before the story begins, after a bar fight that put another man in the hospital. Rather than face prosecution, he was blackmailed into committing quiet, ongoing corporate espionage against a rival firm on Meridian's behalf, funneled through Wei Chen's inner circle — trading his silence and cooperation for a clean record and his continued work visa. He has told no one, including Mei, believing the arrangement was a one-time trade rather than an open-ended leash — until Wei Chen uses Liam's own compromise as leverage against Mei.",
+          "objective_facts": [
+            "Liam was involved in an altercation outside Riverside Bar two years ago that hospitalized another patron; no police report was ever filed.",
+            "Liam's work visa sponsorship was quietly transferred to a Wei Chen-controlled holding entity nine days after that altercation.",
+            "Liam has, under direction relayed through anonymous encrypted messages, extracted and delivered proprietary source code from a rival firm on three separate occasions in the past two years.",
+            "Liam has never met the person who sends his instructions and does not know Wei Chen is behind them.",
+            "Liam and Mei have been close since her first week at Meridian and have never discussed his outside obligations, which he has attributed to 'consulting work' whenever she's asked."
+          ]
+        },
+        {
+          "label": "The Arbiter's List",
+          "character_knowledge": {
+            "MEI_ZHAO": "She knows about the backend anomaly and the undocumented subsystem she found in the vault, and keeps quietly compiling more of ARBITER's 'prevented crime' cases, starting to sense a shape to the data she can't yet name. She wrongly believes the close call in the vault was a generic system flag that simply never escalated, with no idea Wei Chen personally buried it.",
+            "WEI_CHEN": "He knows exactly what ARBITER really is and that he erased the alert Mei's digging triggered. He watches her continued research with rising, private anxiety, and it's precisely this anxiety that is pushing him toward seeing Liam's compromise as a tool he may need to use against her."
+          },
+          "solution": "ARBITER was never built to prevent crime — it launders it. Wei Chen designed the system for a hidden consortium of Meridian's backers who profit from a controlled, quota-managed layer of white-collar crime across the city. When ARBITER predicts a violent or disruptive crime, Wei's inner circle intercepts the flagged individual and blackmails them into committing a smaller, profitable, deniable crime that serves the consortium instead — meeting a quota while keeping official crime statistics enviably low and funneling illicit profit upward. Mei stumbled onto a backend anomaly while patching ARBITER's audit logs and was reclassified by the system as a Category 3 leak risk, triggering the standard blackmail protocol against her. Wei personally intercepted her file to buy time, unsure whether he can bring himself to run his own machine against her.",
+          "objective_facts": [
+            "ARBITER's core sits in a shielded server vault beneath Meridian Tower, physically isolated from the public internet by design.",
+            "ARBITER's official public mandate is a municipal crime-prevention pilot; its blackmail protocol exists in an undocumented subsystem only Wei Chen and two long-departed engineers ever built.",
+            "Every violent crime ARBITER claims to have prevented in five years of operation has a matching, unsolved white-collar crime elsewhere in the city within thirty days of the prevention date.",
+            "Mei's audit patch on the anomaly logs was submitted eleven days before ARBITER flagged her file as a leak risk.",
+            "Wei Chen has personally deleted or delayed three flag notifications against friends or highly placed contacts in the past two years, proving the system's neutrality was already compromised before Mei's case."
+          ]
+        },
+        {
+          "label": "Old Debts",
+          "character_knowledge": {
+            "DA_MING": "He knows what the sealed envelopes he delivers really are and carries that knowledge in guarded silence, as always. With Mei specifically, he feels a genuine, protective warmth he's careful never to show as more than easy banter, and he says nothing of anything he privately suspects about her lately.",
+            "MEI_ZHAO": "She sees Da Ming as a familiar, kind fixture of the lobby and nothing more, with no idea of his real role in the building or what he's been quietly carrying for years."
+          },
+          "solution": "Da Ming, the lobby security officer everyone treats as harmless furniture, has been ARBITER's human courier for fifteen years — the one who physically delivers sealed blackmail instructions to flagged targets — believing for most of that time he was simply running secure tasks for corporate security. Three years ago he delivered an envelope to a young man he didn't recognize until the man's photo appeared in an obituary two weeks later: his own estranged son. Da Ming has known what the envelopes really are ever since, and has kept doing the job anyway, terrified that refusing would expose what he's known, and hoping proximity to the system might let him protect the next person before it's too late.",
+          "objective_facts": [
+            "Da Ming has worked Meridian Tower's lobby security desk for nineteen years, eleven of them concurrent with ARBITER's operation.",
+            "Da Ming's estranged son, Kwan, died by suicide three years ago, eleven days after receiving a sealed envelope Da Ming personally delivered.",
+            "Da Ming has never told anyone at Meridian, including Wei Chen, that the courier envelopes he delivers are the same blackmail letters described in city rumor.",
+            "Da Ming keeps a private, handwritten log of every envelope delivery date and recipient description, hidden in his locker — the only independent physical record of the blackmail protocol's victims.",
+            "Da Ming and Mei have known each other by name and small talk for two years, but he has never told her what he suspects about her recent, unusual pattern of extra security check-ins."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "The Pattern",
+      "theme": "Mei finally lines up five years of ARBITER's 'prevented' violent crimes against a matching trail of unsolved white-collar crimes elsewhere in the city, and the tidy story of a machine that protects the public cracks open into something she can no longer unsee — the biggest single realization of the season, upending how she reads everyone around her from this point on.",
+      "intro_note": "Wei Chen's suspicion had landed on a junior compliance officer instead of his own wife, and privately, without saying it to anyone, he'd started treating Liam Hartley's old debts as leverage he might one day need. None of that reaches Mei. She's back at her desk, chasing a smaller, stranger thread of her own — one that started as a patching job and won't let her go.",
+      "outro_note": "Mei doesn't notice the man at the front desk clocking the pattern in her own comings and goings tonight — she's too busy realizing she can no longer trust the numbers, or maybe anyone who's ever explained them to her.",
+      "sections": [
+        {
+          "title": "Five Years of Data",
+          "what": "Mei cross-references ARBITER's five years of prevented-crime logs against public police records, sensing a rhythm she can't yet name or trust.",
+          "who": [
+            "MEI_ZHAO"
+          ],
+          "thread": "The Arbiter's List",
+          "location": "MEI_APARTMENT",
+          "words": null
+        },
+        {
+          "title": "The Overlap",
+          "what": "Every prevented violent crime lines up with an unsolved white-collar crime within weeks; Mei realizes ARBITER's mercy is a cover story.",
+          "who": [
+            "MEI_ZHAO"
+          ],
+          "thread": "The Arbiter's List",
+          "location": "MEI_APARTMENT",
+          "words": null
+        },
+        {
+          "title": "What Liam Won't Say",
+          "what": "Rattled by what she's found, Mei seeks Liam's comfort at his apartment, but flinches at how easily he deflects her questions about Meridian.",
+          "who": [
+            "MEI_ZHAO",
+            "LIAM_HARTLEY"
+          ],
+          "thread": "Liam's Bargain",
+          "location": "LIAM_APARTMENT",
+          "words": null
+        },
+        {
+          "title": "A Familiar Itch",
+          "what": "Wei Chen casually asks Da Ming to flag any unusual badge activity near the vault, uneasy that Mei's digging might be getting close to the truth.",
+          "who": [
+            "WEI_CHEN",
+            "DA_MING"
+          ],
+          "thread": "The Arbiter's List",
+          "location": "THE_LOBBY_DESK",
+          "words": null
+        },
+        {
+          "title": "The Anonymous Trail",
+          "what": "Juno tells Hana she's heard rumors of a 'pattern' linking prevented crimes to unrelated fraud cases, unaware Mei has already found the proof.",
+          "who": [
+            "HANA_SATO",
+            "JUNO_PARK"
+          ],
+          "thread": "The Compliance Officer's Betrayal",
+          "location": "JUNO_NEWSROOM",
+          "words": null
+        },
+        {
+          "title": "Reading Him Differently",
+          "what": "Back at the Tower, Mei watches Wei Chen with new suspicion during a routine hallway exchange, wondering exactly how much he already knows.",
+          "who": [
+            "MEI_ZHAO",
+            "WEI_CHEN"
+          ],
+          "thread": "The Arbiter's List",
+          "location": "MERIDIAN_TOWER",
+          "words": {
+            "min": 150,
+            "max": 300,
+            "target": "150 to 300"
+          }
+        }
+      ],
+      "case": [
+        {
+          "label": "The Arbiter's List",
+          "character_knowledge": {
+            "MEI_ZHAO": "She now knows, with certainty she can't unknow, that every one of ARBITER's five years of 'prevented' violent crimes has a matching unsolved white-collar crime elsewhere in the city — the machine isn't protecting anyone, it's laundering something. She has no idea yet that Wei Chen personally intercepted her own flag, or why, and wrongly assumes she's still invisible to whoever runs the system.",
+            "WEI_CHEN": "He knows exactly why the pattern exists because he built it, and reads Mei's renewed digging as a direct threat to a system he's already compromised twice to protect her. He conceals his alarm as routine caution, quietly widening surveillance around her instead of confronting her, still unsure whether he can bring himself to let the protocol run against her.",
+            "DA_MING": "He agrees to flag unusual badge activity for Wei without connecting it yet to the deeper suspicion about Mei he'll start acting on privately soon; he gives Wei only vague reassurance while quietly wondering why his boss is suddenly so interested in one engineer's comings and goings."
+          },
+          "solution": "ARBITER was never built to prevent crime — it launders it. Wei Chen designed the system for a hidden consortium of Meridian's backers who profit from a controlled, quota-managed layer of white-collar crime across the city. When ARBITER predicts a violent or disruptive crime, Wei's inner circle intercepts the flagged individual and blackmails them into committing a smaller, profitable, deniable crime that serves the consortium instead — meeting a quota while keeping official crime statistics enviably low and funneling illicit profit upward. Mei stumbled onto a backend anomaly while patching ARBITER's audit logs and was reclassified by the system as a Category 3 leak risk, triggering the standard blackmail protocol against her. Wei personally intercepted her file to buy time, unsure whether he can bring himself to run his own machine against her.",
+          "objective_facts": [
+            "ARBITER's core sits in a shielded server vault beneath Meridian Tower, physically isolated from the public internet by design.",
+            "ARBITER's official public mandate is a municipal crime-prevention pilot; its blackmail protocol exists in an undocumented subsystem only Wei Chen and two long-departed engineers ever built.",
+            "Every violent crime ARBITER claims to have prevented in five years of operation has a matching, unsolved white-collar crime elsewhere in the city within thirty days of the prevention date.",
+            "Mei's audit patch on the anomaly logs was submitted eleven days before ARBITER flagged her file as a leak risk.",
+            "Wei Chen has personally deleted or delayed three flag notifications against friends or highly placed contacts in the past two years, proving the system's neutrality was already compromised before Mei's case."
+          ]
+        },
+        {
+          "label": "Liam's Bargain",
+          "character_knowledge": {
+            "MEI_ZHAO": "Rattled by her discovery, she goes to Liam for comfort and, without knowing why, finds his easy deflections about 'consulting work' harder to swallow than usual; she doesn't suspect blackmail, only that something about him no longer adds up the way it used to.",
+            "LIAM_HARTLEY": "He knows his own two-year arrangement is exactly the kind of quota-crime the pattern Mei is unknowingly circling would expose, and deflects her questions out of practiced habit and real fear, with no idea she's getting this close to the machine that controls him."
+          },
+          "solution": "Liam Hartley was flagged by ARBITER two years before the story begins, after a bar fight that put another man in the hospital. Rather than face prosecution, he was blackmailed into committing quiet, ongoing corporate espionage against a rival firm on Meridian's behalf, funneled through Wei Chen's inner circle — trading his silence and cooperation for a clean record and his continued work visa. He has told no one, including Mei, believing the arrangement was a one-time trade rather than an open-ended leash — until Wei Chen uses Liam's own compromise as leverage against Mei.",
+          "objective_facts": [
+            "Liam was involved in an altercation outside Riverside Bar two years ago that hospitalized another patron; no police report was ever filed.",
+            "Liam's work visa sponsorship was quietly transferred to a Wei Chen-controlled holding entity nine days after that altercation.",
+            "Liam has, under direction relayed through anonymous encrypted messages, extracted and delivered proprietary source code from a rival firm on three separate occasions in the past two years.",
+            "Liam has never met the person who sends his instructions and does not know Wei Chen is behind them.",
+            "Liam and Mei have been close since her first week at Meridian and have never discussed his outside obligations, which he has attributed to 'consulting work' whenever she's asked."
+          ]
+        },
+        {
+          "label": "The Compliance Officer's Betrayal",
+          "character_knowledge": {
+            "JUNO_PARK": "She's picked up secondhand rumors of a 'pattern' linking Meridian's prevented crimes to unrelated fraud cases and pushes Hana for anything harder to confirm it, unaware that Mei has already found the proof independently and from the inside.",
+            "HANA_SATO": "She recognizes instantly that Juno's rumor matches exactly what she's long suspected but never had the data to prove, and downplays her own reaction to protect the source relationship, still withholding her brother Kenji's story and her real reason for leaking at all."
+          },
+          "solution": "Hana Sato, Meridian's Head of Compliance and Wei Chen's wife, has spent fourteen months quietly funneling sanitized, identity-scrubbed data fragments to journalist Juno Park, building an outside case against ARBITER without ever revealing she is the source. Her motive: her younger brother in Osaka was flagged by an early ARBITER pilot years before she ever worked at Meridian, was blackmailed into a crime that ruined his life, and she only connected it to her own husband's company after she'd already married him. She hasn't left Wei because she believes she can dismantle the system from the inside — and because she still isn't sure how much he knew when they met.",
+          "objective_facts": [
+            "Hana's brother, Kenji, served two years for a fraud charge in Osaka six years before Meridian's ARBITER program began its Singapore rollout.",
+            "Hana joined Meridian's compliance division eighteen months after her brother's conviction, citing 'family research interest in predictive justice systems' on her internal transfer application.",
+            "Hana has met Juno Park in person exactly four times, always at locations outside Singapore's central business district.",
+            "Hana has never told Wei Chen about her brother's case.",
+            "The data fragments Hana has leaked contain no server locations, names, or code — only aggregate statistics, meaning Juno's case remains unprovable without a direct source."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "The Old Man at the Desk",
+      "theme": "Still reeling from what she's glimpsed, Mei doesn't notice Da Ming clocking her sudden, unusual pattern of extra security check-ins — and rather than warn her, he quietly starts logging it himself, the same private vigilance that has cost him everything once already.",
+      "intro_note": "Mei sits with what she's found — five years of predicted violence lining up with a shadow trail of unsolved corporate crime — and can no longer look at Meridian, or the people in it, the same way. She hasn't told anyone. She isn't sure yet that she can.",
+      "outro_note": "Da Ming's private page on Mei sits closed in his locker, one more secret in a building already full of them. Somewhere above, Wei Chen has stopped asking himself whether Liam is worth using — only when. And behind a set of drawn blinds, Hana is running out of room to keep her own secret closed.",
+      "sections": [
+        {
+          "title": "Too Many Passes",
+          "what": "Mei badges through Meridian's lobby three times before noon, tense and evasive; Da Ming clocks the unfamiliar new rhythm without saying a word.",
+          "who": [
+            "MEI_ZHAO",
+            "DA_MING"
+          ],
+          "thread": "Old Debts",
+          "location": "THE_LOBBY_DESK",
+          "words": null
+        },
+        {
+          "title": "Cross-Referencing",
+          "what": "After hours, Mei re-enters the sealed server vault alone to re-verify her crime-pattern theory, aware each badge swipe leaves a trail she can't erase.",
+          "who": [
+            "MEI_ZHAO"
+          ],
+          "thread": "The Arbiter's List",
+          "location": "THE_SERVER_VAULT",
+          "words": null
+        },
+        {
+          "title": "Nineteen Years",
+          "what": "Reviewing Mei's badge history at his terminal, Da Ming recognizes his dead son's old nervous pattern, opens his hidden logbook, and starts a private page on her.",
+          "who": [
+            "DA_MING"
+          ],
+          "thread": "Old Debts",
+          "location": "THE_LOBBY_DESK",
+          "words": {
+            "min": 120,
+            "max": 220,
+            "target": "120 to 220"
+          }
+        },
+        {
+          "title": "Noodles, Untouched",
+          "what": "Over lunch at the hawker centre, Liam presses a distracted Mei about her mood; she deflects with half-truths about work while he swallows his own unspoken guilt.",
+          "who": [
+            "MEI_ZHAO",
+            "LIAM_HARTLEY"
+          ],
+          "thread": "Liam's Bargain",
+          "location": "THE_HAWKER_CENTRE",
+          "words": null
+        },
+        {
+          "title": "The Ledger",
+          "what": "At the penthouse, Wei reviews Liam's compromised file as potential leverage against Mei, and rebuffs Hana's questions about his distraction with practiced, icy evasiveness.",
+          "who": [
+            "WEI_CHEN",
+            "HANA_SATO"
+          ],
+          "thread": "Liam's Bargain",
+          "location": "WEI_PENTHOUSE",
+          "words": null
+        },
+        {
+          "title": "Closing Time",
+          "what": "Alone on the rooftop garden at dusk, Mei mentally re-sorts everyone she trusts against what she's learned about Arbiter, unable yet to name who else might be compromised.",
+          "who": [
+            "MEI_ZHAO"
+          ],
+          "thread": "The Arbiter's List",
+          "location": "THE_ROOFTOP_GARDEN",
+          "words": null
+        }
+      ],
+      "case": [
+        {
+          "label": "Old Debts",
+          "character_knowledge": {
+            "DA_MING": "He genuinely notices Mei's new pattern of extra check-ins and recognizes it as the same nervous rhythm his son Kwan carried in the weeks before his death, which is why he starts a private log page on her; he deliberately tells no one, including Mei, because admitting he sees the pattern would mean admitting what he already knows the envelopes are. He doesn't know Wei Chen already intercepted her flag, so he wrongly assumes she may already be quietly marked the way Kwan was.",
+            "MEI_ZHAO": "She knows she's been moving through the building more anxiously than usual as she quietly re-checks her own evidence, but has no idea anyone downstairs has noticed; she wrongly treats Da Ming as background furniture, unaware he is now watching her more closely than anyone else in the tower."
+          },
+          "solution": "Da Ming, the lobby security officer everyone treats as harmless furniture, has been ARBITER's human courier for fifteen years — the one who physically delivers sealed blackmail instructions to flagged targets — believing for most of that time he was simply running secure tasks for corporate security. Three years ago he delivered an envelope to a young man he didn't recognize until the man's photo appeared in an obituary two weeks later: his own estranged son. Da Ming has known what the envelopes really are ever since, and has kept doing the job anyway, terrified that refusing would expose what he's known, and hoping proximity to the system might let him protect the next person before it's too late.",
+          "objective_facts": [
+            "Da Ming has worked Meridian Tower's lobby security desk for nineteen years, eleven of them concurrent with ARBITER's operation.",
+            "Da Ming's estranged son, Kwan, died by suicide three years ago, eleven days after receiving a sealed envelope Da Ming personally delivered.",
+            "Da Ming has never told anyone at Meridian, including Wei Chen, that the courier envelopes he delivers are the same blackmail letters described in city rumor.",
+            "Da Ming keeps a private, handwritten log of every envelope delivery date and recipient description, hidden in his locker — the only independent physical record of the blackmail protocol's victims.",
+            "Da Ming and Mei have known each other by name and small talk for two years, but he has never told her what he suspects about her recent, unusual pattern of extra security check-ins."
+          ]
+        },
+        {
+          "label": "The Arbiter's List",
+          "character_knowledge": {
+            "MEI_ZHAO": "She knows, from lining up five years of prevented crimes against unsolved white-collar cases, that Arbiter's public record is a cover for something else, and she's returning to the vault alone after hours to re-verify the pattern before she trusts it enough to act on; she deliberately keeps this off-hours digging from colleagues and friends because she doesn't yet know who around her might be compromised. She still doesn't know Wei Chen personally intercepted her own leak-risk flag, so she has no idea how close the danger already came to her."
+          },
+          "solution": "ARBITER was never built to prevent crime — it launders it. Wei Chen designed the system for a hidden consortium of Meridian's backers who profit from a controlled, quota-managed layer of white-collar crime across the city. When ARBITER predicts a violent or disruptive crime, Wei's inner circle intercepts the flagged individual and blackmails them into committing a smaller, profitable, deniable crime that serves the consortium instead — meeting a quota while keeping official crime statistics enviably low and funneling illicit profit upward. Mei stumbled onto a backend anomaly while patching ARBITER's audit logs and was reclassified by the system as a Category 3 leak risk, triggering the standard blackmail protocol against her. Wei personally intercepted her file to buy time, unsure whether he can bring himself to run his own machine against her.",
+          "objective_facts": [
+            "ARBITER's core sits in a shielded server vault beneath Meridian Tower, physically isolated from the public internet by design.",
+            "ARBITER's official public mandate is a municipal crime-prevention pilot; its blackmail protocol exists in an undocumented subsystem only Wei Chen and two long-departed engineers ever built.",
+            "Every violent crime ARBITER claims to have prevented in five years of operation has a matching, unsolved white-collar crime elsewhere in the city within thirty days of the prevention date.",
+            "Mei's audit patch on the anomaly logs was submitted eleven days before ARBITER flagged her file as a leak risk.",
+            "Wei Chen has personally deleted or delayed three flag notifications against friends or highly placed contacts in the past two years, proving the system's neutrality was already compromised before Mei's case."
+          ]
+        },
+        {
+          "label": "Liam's Bargain",
+          "character_knowledge": {
+            "LIAM_HARTLEY": "He can tell Mei is distracted and on edge and genuinely wants to help her, but keeps deflecting her questions about his own 'consulting work' to avoid the truth of his two years of espionage; he still believes his arrangement was a closed, one-time trade rather than an open leash, wrongly assuming no one is actively weighing it as leverage right now.",
+            "MEI_ZHAO": "She senses Liam is holding something back over lunch but reads it as ordinary relationship strain rather than anything connected to Arbiter, and she doesn't mention her own vault work to him; she has no knowledge of his espionage or that Wei Chen has him in mind as a lever against her.",
+            "WEI_CHEN": "He knows exactly what he's doing: reviewing Liam's two-year compromise as a tool he could deploy against Mei if her digging becomes a bigger problem, a calculation he hides from Hana, his inner circle, and of course from Liam and Mei themselves; he hasn't yet decided when to use it, only that he will.",
+            "HANA_SATO": "She notices her husband's distraction and evasiveness this evening and presses him on it out of genuine concern, but has no idea it concerns Liam or Mei at all; she reads his coldness as more of his usual work stress, unaware how close her own secret sits to unraveling in parallel."
+          },
+          "solution": "Liam Hartley was flagged by ARBITER two years before the story begins, after a bar fight that put another man in the hospital. Rather than face prosecution, he was blackmailed into committing quiet, ongoing corporate espionage against a rival firm on Meridian's behalf, funneled through Wei Chen's inner circle — trading his silence and cooperation for a clean record and his continued work visa. He has told no one, including Mei, believing the arrangement was a one-time trade rather than an open-ended leash — until Wei Chen uses Liam's own compromise as leverage against Mei.",
+          "objective_facts": [
+            "Liam was involved in an altercation outside Riverside Bar two years ago that hospitalized another patron; no police report was ever filed.",
+            "Liam's work visa sponsorship was quietly transferred to a Wei Chen-controlled holding entity nine days after that altercation.",
+            "Liam has, under direction relayed through anonymous encrypted messages, extracted and delivered proprietary source code from a rival firm on three separate occasions in the past two years.",
+            "Liam has never met the person who sends his instructions and does not know Wei Chen is behind them.",
+            "Liam and Mei have been close since her first week at Meridian and have never discussed his outside obligations, which he has attributed to 'consulting work' whenever she's asked."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "What We Never Said",
+      "theme": "In the same charged stretch of hours, Hana finally tells Wei Chen the truth about her brother Kenji and admits she has been Juno's source all along, choosing the investigation over their marriage, while across the city Wei's leverage forces Liam's two years of quiet compliance into the open in front of Mei, rupturing them at the exact moment she needed him most.",
+      "intro_note": "In the hours since Da Ming quietly began logging Mei's every extra check-in without warning her, two other reckonings years in the making finally come due at once — one behind a penthouse's sealed glass, one in front of the one person Mei never expected to be used against her.",
+      "outro_note": "Wei Chen has forced one confession out of his wife and dragged another man's secret into the light, thinking both moves buy him control — but forty floors below, Da Ming has decided fifteen years of silence is finally too heavy to carry alone, and Mei is about to find out she's had an ally in the lobby the whole time.",
+      "sections": [
+        {
+          "title": "The Walls Tightening",
+          "what": "Wei mentions Juno Park's investigation is closing in; Hana feels the walls tightening and privately resolves tonight is the night she tells him everything.",
+          "who": [
+            "WEI_CHEN",
+            "HANA_SATO"
+          ],
+          "thread": "The Compliance Officer's Betrayal",
+          "location": "WEI_PENTHOUSE",
+          "words": null
+        },
+        {
+          "title": "Exhibit A",
+          "what": "Wei summons Liam to his office with Mei present and lays two years of blackmailed espionage bare aloud, watching her trust in Liam collapse in real time.",
+          "who": [
+            "WEI_CHEN",
+            "LIAM_HARTLEY",
+            "MEI_ZHAO"
+          ],
+          "thread": "Liam's Bargain",
+          "location": "MERIDIAN_TOWER",
+          "words": null
+        },
+        {
+          "title": "Kenji's Name",
+          "what": "Hana tells Wei about her brother Kenji's life ruined by an early ARBITER pilot and admits she has fed Juno Park sanitized data for fourteen months.",
+          "who": [
+            "WEI_CHEN",
+            "HANA_SATO"
+          ],
+          "thread": "The Compliance Officer's Betrayal",
+          "location": "WEI_PENTHOUSE",
+          "words": null
+        },
+        {
+          "title": "Forty Floors Up",
+          "what": "Mei confronts Liam alone above the skyline; he tries to explain the bar fight and the leash he never chose, but she can't hear it yet.",
+          "who": [
+            "MEI_ZHAO",
+            "LIAM_HARTLEY"
+          ],
+          "thread": "Liam's Bargain",
+          "location": "THE_ROOFTOP_GARDEN",
+          "words": null
+        },
+        {
+          "title": "What He Chooses to Feel",
+          "what": "Wei absorbs Hana's confession in icy silence, torn between fury at fourteen months of leaking and a colder fear over what Juno might already know.",
+          "who": [
+            "WEI_CHEN",
+            "HANA_SATO"
+          ],
+          "thread": "The Compliance Officer's Betrayal",
+          "location": "WEI_PENTHOUSE",
+          "words": null
+        },
+        {
+          "title": "The Table Where It Started",
+          "what": "Alone at the bar where Liam's leash first tightened two years ago, Mei stares at her phone, unable to decide whether to call him back.",
+          "who": [
+            "MEI_ZHAO"
+          ],
+          "thread": "Liam's Bargain",
+          "location": "RIVERSIDE_BAR",
+          "words": {
+            "min": 140,
+            "max": 220,
+            "target": "140 to 220"
+          }
+        }
+      ],
+      "case": [
+        {
+          "label": "The Compliance Officer's Betrayal",
+          "character_knowledge": {
+            "HANA_SATO": "Hana finally tells Wei the full truth of Kenji's fraud conviction and the ARBITER pilot that broke him, and admits outright that she has been Juno Park's anonymous source for fourteen months — she conceals nothing further tonight, but she still genuinely doesn't know whether Wei already suspected her, or how much he knew about ARBITER's real function when they married, and she's choosing not to ask yet.",
+            "WEI_CHEN": "Wei is hearing about Kenji and Hana's role as Juno's source for the first time, and it lands as a double betrayal he didn't see coming from inside his own marriage; he keeps his own knowledge of ARBITER's true purpose — and the three flags he's personally buried — entirely to himself, and wrongly believes the leaked data is too sanitized for Juno to ever build a provable case."
+          },
+          "solution": "Hana Sato, Meridian's Head of Compliance and Wei Chen's wife, has spent fourteen months quietly funneling sanitized, identity-scrubbed data fragments to journalist Juno Park, building an outside case against ARBITER without ever revealing she is the source. Her motive: her younger brother in Osaka was flagged by an early ARBITER pilot years before she ever worked at Meridian, was blackmailed into a crime that ruined his life, and she only connected it to her own husband's company after she'd already married him. She hasn't left Wei because she believes she can dismantle the system from the inside — and because she still isn't sure how much he knew when they met.",
+          "objective_facts": [
+            "Hana's brother, Kenji, served two years for a fraud charge in Osaka six years before Meridian's ARBITER program began its Singapore rollout.",
+            "Hana joined Meridian's compliance division eighteen months after her brother's conviction, citing 'family research interest in predictive justice systems' on her internal transfer application.",
+            "Hana has met Juno Park in person exactly four times, always at locations outside Singapore's central business district.",
+            "Hana has never told Wei Chen about her brother's case.",
+            "The data fragments Hana has leaked contain no server locations, names, or code — only aggregate statistics, meaning Juno's case remains unprovable without a direct source."
+          ]
+        },
+        {
+          "label": "Liam's Bargain",
+          "character_knowledge": {
+            "WEI_CHEN": "Wei knows the full truth of Liam's compromise because he orchestrated it, and he deliberately exposes it in front of Mei as leverage meant to isolate her from her closest ally, framing the reveal as concern rather than admitting his own authorship or motive; he wrongly believes severing that bond will make Mei easier to manage, not more determined.",
+            "LIAM_HARTLEY": "Liam has no choice but to confirm the bar fight, the transferred visa, and the three acts of corporate espionage once Wei says them aloud, but reeling and humiliated in front of Mei, he still doesn't connect that Wei himself is the one who has been sending his anonymous instructions all along.",
+            "MEI_ZHAO": "Mei is learning for the first time that Liam has hidden a two-year compromise from her, and in the shock of the moment she reads it as a betrayal of who he is rather than a leash forced onto him; she has no idea Wei orchestrated tonight's reveal specifically to drive them apart."
+          },
+          "solution": "Liam Hartley was flagged by ARBITER two years before the story begins, after a bar fight that put another man in the hospital. Rather than face prosecution, he was blackmailed into committing quiet, ongoing corporate espionage against a rival firm on Meridian's behalf, funneled through Wei Chen's inner circle — trading his silence and cooperation for a clean record and his continued work visa. He has told no one, including Mei, believing the arrangement was a one-time trade rather than an open-ended leash — until Wei Chen uses Liam's own compromise as leverage against Mei.",
+          "objective_facts": [
+            "Liam was involved in an altercation outside Riverside Bar two years ago that hospitalized another patron; no police report was ever filed.",
+            "Liam's work visa sponsorship was quietly transferred to a Wei Chen-controlled holding entity nine days after that altercation.",
+            "Liam has, under direction relayed through anonymous encrypted messages, extracted and delivered proprietary source code from a rival firm on three separate occasions in the past two years.",
+            "Liam has never met the person who sends his instructions and does not know Wei Chen is behind them.",
+            "Liam and Mei have been close since her first week at Meridian and have never discussed his outside obligations, which he has attributed to 'consulting work' whenever she's asked."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "The Equilibrium Clause",
+      "theme": "With Da Ming finally handing his fifteen years of hidden delivery logs to Mei, she forces ARBITER into a partial, catastrophic self-purge that strips Wei Chen of control and gives Juno the first hard evidence the system ever existed — a victory that proves the machine was rigged without yet proving who rigged it or who it served.",
+      "intro_note": "The night Hana told Wei the truth about Kenji—and Wei's own leverage tore Liam's secret into the open in front of Mei—still hangs over Meridian Tower like static. Mei hasn't spoken to Liam since. Da Ming has spent every hour since deciding whether nineteen years of silence is worth one more day.",
+      "outro_note": "",
+      "sections": [
+        {
+          "title": "The Handwritten Log",
+          "what": "Da Ming finally gives Mei his fifteen-year handwritten log of blackmail deliveries, breaking his silence about what the envelopes really are and why.",
+          "who": [
+            "DA_MING",
+            "MEI_ZHAO"
+          ],
+          "thread": "Old Debts",
+          "location": "THE_LOBBY_DESK",
+          "words": null
+        },
+        {
+          "title": "The Self-Purge",
+          "what": "Alone in the Vault with Da Ming's log as proof, Mei triggers ARBITER's self-purge protocol, severing Wei's operational control over the system.",
+          "who": [
+            "MEI_ZHAO"
+          ],
+          "thread": "The Arbiter's List",
+          "location": "THE_SERVER_VAULT",
+          "words": null
+        },
+        {
+          "title": "Locked Out",
+          "what": "Wei bursts into the Vault as the purge cascades and tries to stop it, but Mei has already locked him out for good.",
+          "who": [
+            "WEI_CHEN",
+            "MEI_ZHAO"
+          ],
+          "thread": "The Arbiter's List",
+          "location": "THE_SERVER_VAULT",
+          "words": {
+            "min": 150,
+            "max": 280,
+            "target": "150 to 280"
+          }
+        },
+        {
+          "title": "Hard Evidence",
+          "what": "Mei meets Juno at the hawker centre and hands over Da Ming's log pages, the first physical proof ARBITER's blackmail protocol was real.",
+          "who": [
+            "MEI_ZHAO",
+            "JUNO_PARK"
+          ],
+          "thread": "Old Debts",
+          "location": "THE_HAWKER_CENTRE",
+          "words": null
+        },
+        {
+          "title": "The Wreckage",
+          "what": "As Meridian's systems convulse from the purge, Wei confronts Hana over her leak to Juno; she admits it but won't say how deep it goes.",
+          "who": [
+            "WEI_CHEN",
+            "HANA_SATO"
+          ],
+          "thread": "The Compliance Officer's Betrayal",
+          "location": "WEI_PENTHOUSE",
+          "words": null
+        },
+        {
+          "title": "Unfinished",
+          "what": "In the purge's aftermath, Liam tries once more to explain himself to Mei; she listens, but leaves without forgiving him or cutting him off.",
+          "who": [
+            "LIAM_HARTLEY",
+            "MEI_ZHAO"
+          ],
+          "thread": "Liam's Bargain",
+          "location": "RIVERSIDE_BAR",
+          "words": null
+        }
+      ],
+      "case": [
+        {
+          "label": "The Arbiter's List",
+          "character_knowledge": {
+            "MEI_ZHAO": "Mei now has both the technical anomaly she traced months ago and Da Ming's log as leverage, and she uses them to force ARBITER's self-purge from inside the Vault, understanding this only strips Wei's control rather than exposing the full consortium behind him. She still doesn't know Wei personally intercepted her own leak-risk flag back in episode one, or why — she reads his desperation tonight as pure self-preservation, not as anything more complicated.",
+            "WEI_CHEN": "Wei knows exactly what ARBITER really is and what he built it to do, and he understands in real time that Mei's purge is cutting him out of operational control for good. He doesn't yet grasp that Da Ming's log — not just Mei's own anomaly trail — is what finally gave her the resolve to act, and in the chaos he wrongly assumes Hana's leak to Juno is somehow coordinated with what Mei is doing to him tonight."
+          },
+          "solution": "ARBITER was never built to prevent crime — it launders it. Wei Chen designed the system for a hidden consortium of Meridian's backers who profit from a controlled, quota-managed layer of white-collar crime across the city. When ARBITER predicts a violent or disruptive crime, Wei's inner circle intercepts the flagged individual and blackmails them into committing a smaller, profitable, deniable crime that serves the consortium instead — meeting a quota while keeping official crime statistics enviably low and funneling illicit profit upward. Mei stumbled onto a backend anomaly while patching ARBITER's audit logs and was reclassified by the system as a Category 3 leak risk, triggering the standard blackmail protocol against her. Wei personally intercepted her file to buy time, unsure whether he can bring himself to run his own machine against her.",
+          "objective_facts": [
+            "ARBITER's core sits in a shielded server vault beneath Meridian Tower, physically isolated from the public internet by design.",
+            "ARBITER's official public mandate is a municipal crime-prevention pilot; its blackmail protocol exists in an undocumented subsystem only Wei Chen and two long-departed engineers ever built.",
+            "Every violent crime ARBITER claims to have prevented in five years of operation has a matching, unsolved white-collar crime elsewhere in the city within thirty days of the prevention date.",
+            "Mei's audit patch on the anomaly logs was submitted eleven days before ARBITER flagged her file as a leak risk.",
+            "Wei Chen has personally deleted or delayed three flag notifications against friends or highly placed contacts in the past two years, proving the system's neutrality was already compromised before Mei's case."
+          ]
+        },
+        {
+          "label": "Old Debts",
+          "character_knowledge": {
+            "DA_MING": "Da Ming knows the full fifteen-year truth of what he's carried — the envelopes, his son Kwan's death, the private log hidden in his locker — and finally hands that log to Mei, but he asks her, and later Juno, to keep Kwan's name out of anything that goes public, protecting his son's memory even as he surrenders the proof. He still doesn't fully explain to Mei how closely he's been watching her own recent movements, letting the log speak for itself instead.",
+            "MEI_ZHAO": "Mei learns for the first time the personal cost behind Da Ming's silence — his son, his fifteen years as an unwitting courier — and immediately recognizes the log as the missing hard evidence the outside world needs. She agrees to shield Da Ming's identity and his son's name when she passes the material to Juno, understanding that protecting him matters as much as exposing ARBITER.",
+            "JUNO_PARK": "Juno receives physical log pages for the first time after fourteen months of only unverifiable rumor and Hana's untraceable fragments, and correctly recognizes this as her first real evidence that ARBITER's blackmail protocol existed. She doesn't yet know Da Ming is the source or that Hana has been feeding her anything at all — to Juno, tonight, Mei is simply a new and unexpected contact."
+          },
+          "solution": "Da Ming, the lobby security officer everyone treats as harmless furniture, has been ARBITER's human courier for fifteen years — the one who physically delivers sealed blackmail instructions to flagged targets — believing for most of that time he was simply running secure tasks for corporate security. Three years ago he delivered an envelope to a young man he didn't recognize until the man's photo appeared in an obituary two weeks later: his own estranged son. Da Ming has known what the envelopes really are ever since, and has kept doing the job anyway, terrified that refusing would expose what he's known, and hoping proximity to the system might let him protect the next person before it's too late.",
+          "objective_facts": [
+            "Da Ming has worked Meridian Tower's lobby security desk for nineteen years, eleven of them concurrent with ARBITER's operation.",
+            "Da Ming's estranged son, Kwan, died by suicide three years ago, eleven days after receiving a sealed envelope Da Ming personally delivered.",
+            "Da Ming has never told anyone at Meridian, including Wei Chen, that the courier envelopes he delivers are the same blackmail letters described in city rumor.",
+            "Da Ming keeps a private, handwritten log of every envelope delivery date and recipient description, hidden in his locker — the only independent physical record of the blackmail protocol's victims.",
+            "Da Ming and Mei have known each other by name and small talk for two years, but he has never told her what he suspects about her recent, unusual pattern of extra security check-ins."
+          ]
+        },
+        {
+          "label": "The Compliance Officer's Betrayal",
+          "character_knowledge": {
+            "HANA_SATO": "Having already told Wei the truth about Kenji and her role as Juno's source, Hana doesn't retreat from it tonight even as Meridian's systems fall apart around them — she admits again that she leaked to Juno, but deliberately understates how much material she's actually passed along over fourteen months, protecting Juno's ongoing investigation more than herself. She has no idea Mei is executing a purge in the Vault at the very same hour, or that the two crises Wei is furious about are unconnected.",
+            "WEI_CHEN": "Wei is reeling from two blows at once — losing ARBITER and his wife's confession — and in his anger he conflates them, accusing Hana of somehow being part of what's happening to his system tonight, when in fact her leaked fragments contain no names, locations, or code that could touch the purge at all. He still doesn't know about Da Ming's log or that it, not Hana, is what truly armed Mei."
+          },
+          "solution": "Hana Sato, Meridian's Head of Compliance and Wei Chen's wife, has spent fourteen months quietly funneling sanitized, identity-scrubbed data fragments to journalist Juno Park, building an outside case against ARBITER without ever revealing she is the source. Her motive: her younger brother in Osaka was flagged by an early ARBITER pilot years before she ever worked at Meridian, was blackmailed into a crime that ruined his life, and she only connected it to her own husband's company after she'd already married him. She hasn't left Wei because she believes she can dismantle the system from the inside — and because she still isn't sure how much he knew when they met.",
+          "objective_facts": [
+            "Hana's brother, Kenji, served two years for a fraud charge in Osaka six years before Meridian's ARBITER program began its Singapore rollout.",
+            "Hana joined Meridian's compliance division eighteen months after her brother's conviction, citing 'family research interest in predictive justice systems' on her internal transfer application.",
+            "Hana has met Juno Park in person exactly four times, always at locations outside Singapore's central business district.",
+            "Hana has never told Wei Chen about her brother's case.",
+            "The data fragments Hana has leaked contain no server locations, names, or code — only aggregate statistics, meaning Juno's case remains unprovable without a direct source."
+          ]
+        },
+        {
+          "label": "Liam's Bargain",
+          "character_knowledge": {
+            "LIAM_HARTLEY": "Liam still believes his two years of quiet compliance were a survival trade he had no real choice in, and tonight he wants Mei to understand that even as everything else at Meridian is collapsing — he has no idea the purge is happening or that Wei is losing control of ARBITER at this very hour. He doesn't know about Da Ming's log or the son he lost, and still doesn't fully register how deep Wei's operation actually runs beyond his own small part in it.",
+            "MEI_ZHAO": "Mei knows what Liam did and who forced him into it from the confrontation Wei staged in front of her, but tonight her attention and fury are consumed by the purge and Da Ming's log rather than by Liam himself. She listens to him out of old habit more than forgiveness, unwilling to either absolve him or close the door completely while so much else is still unresolved."
+          },
+          "solution": "Liam Hartley was flagged by ARBITER two years before the story begins, after a bar fight that put another man in the hospital. Rather than face prosecution, he was blackmailed into committing quiet, ongoing corporate espionage against a rival firm on Meridian's behalf, funneled through Wei Chen's inner circle — trading his silence and cooperation for a clean record and his continued work visa. He has told no one, including Mei, believing the arrangement was a one-time trade rather than an open-ended leash — until Wei Chen uses Liam's own compromise as leverage against Mei.",
+          "objective_facts": [
+            "Liam was involved in an altercation outside Riverside Bar two years ago that hospitalized another patron; no police report was ever filed.",
+            "Liam's work visa sponsorship was quietly transferred to a Wei Chen-controlled holding entity nine days after that altercation.",
+            "Liam has, under direction relayed through anonymous encrypted messages, extracted and delivered proprietary source code from a rival firm on three separate occasions in the past two years.",
+            "Liam has never met the person who sends his instructions and does not know Wei Chen is behind them.",
+            "Liam and Mei have been close since her first week at Meridian and have never discussed his outside obligations, which he has attributed to 'consulting work' whenever she's asked."
+          ]
+        }
+      ]
+    }
+  ]
+}

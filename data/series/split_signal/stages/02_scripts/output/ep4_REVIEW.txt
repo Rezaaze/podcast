@@ -1,0 +1,3 @@
+1 Hinweis(e):
+
+- Part 12: Piper tells her editor "Which unit, I don't know yet" even though she already identified the line item as "Unit 4 — cold case resource allocation" back in Part 2, and had already narrowed it to three captains in Part 8 — contradicting her own established progress.

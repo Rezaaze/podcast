@@ -1,0 +1,418 @@
+--- PART 1 ---
+
+[NARRATOR]
+Three days ago, Tommy Lau asked Nora Vance a straight question in the Amaranth's lobby, and got only silence back.
+[NARRATOR]
+The building has sat on that silence ever since — until tonight, when one woman's paperwork drags a much older wound into the light.
+[NARRATOR]
+It's the fourteenth night since the season began, two days since Desmond caught Tommy fixing the lobby's stuck fixture. Across the street, Lila Chen — who has run the Corner Diner alone since her husband Henry's death — has just turned the lock on the front door.
+
+[LILA_CHEN | style: distracted, half to herself]
+Just the receipts. Just tidying up, that's all this is.
+
+[NARRATOR]
+She spreads two sets of ledgers across the counter — the diner's own books, and Henry's old renovation records from the Amaranth, still in his handwriting after all these years.
+
+[LILA_CHEN | style: murmuring, methodical]
+Nineteen ninety-eight. Let's see what you were up to that year, old man.
+
+[SFX: pages turning, a pencil set down on the counter]
+
+[LILA_CHEN | style: focused]
+Supplies, March. April rent — that lines up fine.
+
+[LILA_CHEN | style: puzzled]
+May twelfth. Four thousand, one hundred. What's that against?
+
+[NARRATOR]
+She checks her own books against the same date. Nothing lines up — no delivery, no repair, no note in her own hand that year to explain it.
+
+[LILA_CHEN | style: uneasy, voice tightening]
+That's not mine. That's not — Henry, what is this.
+
+[LILA_CHEN | style: reasoning it away, unconvincing even to herself]
+Maybe he was just holding it for someone. People did that back then.
+
+[NARRATOR]
+She runs her finger down the column a second time, then a third, checking her own arithmetic before she'll trust his.
+
+[LILA_CHEN | style: flat, the realization settling in cold]
+It's not a mistake. I've checked it three times. It's not a mistake.
+
+[SFX: a mug set down hard on the counter]
+
+[LILA_CHEN | style: rattled, barely audible]
+Twenty years I never once looked twice at these books. Why tonight.
+
+[NARRATOR]
+Outside, the diner's neon sign flickers once against the window glass, and Lila doesn't move to fix it.
+
+[LILA_CHEN | style: resolved, low]
+I'm not leaving this sitting on the counter till morning.
+
+--- PART 2 ---
+
+[NARRATOR]
+Past ten now, the same night. The basement archive, one bulb swinging over the shelves, and Augustine still bent over his ledgers when the stairs creak behind him.
+
+[LILA_CHEN | style: tense, trying to sound casual | speed: 1.1]
+You're still down here.
+
+[AUGUSTINE_KWOK | style: mild surprise, guarded underneath]
+Diner's closed already? Didn't hear you lock up.
+
+[LILA_CHEN | style: bracing herself]
+I found something. In Henry's books. I want you to look at it.
+
+[SFX: paper unfolding and set down on a wooden table]
+
+[LILA_CHEN | style: pressing, unsteady]
+Nineteen ninety-eight. The renovation fund. There's a figure here that doesn't match anything — not my books, not his. You knew Walter's numbers better than anyone left standing. What is this?
+
+[AUGUSTINE_KWOK | style: flat, controlled, giving nothing]
+I never saw Walter's books. Only heard him complain about them.
+
+[LILA_CHEN | style: sharper, unconvinced]
+Augustine. Henry wrote this. His hand, not mine. Something moved through that fund that I can't account for, and you're telling me you know nothing.
+
+[AUGUSTINE_KWOK | style: even, closing the door gently but firmly]
+Henry's bookkeeping was his own. Always was. Man kept things close — you know that better than I do.
+
+[LILA_CHEN | style: quieter, searching his face]
+That's not an answer.
+
+[AUGUSTINE_KWOK | style: tired, final]
+It's the only one I've got, Lila.
+
+[NARRATOR]
+She studies him a moment, the bulb swaying overhead — then folds the page back into her pocket and climbs the stairs without another word.
+
+--- PART 3 ---
+
+[NARRATOR]
+Fourteen days into the season, minutes after Lila left the basement unconvinced. In the rooftop greenhouse Augustine Kwok, the building's old caretaker and Henry's closest friend, waters the beds alone.
+
+[SFX: a watering can spout trickling onto soil]
+
+[AUGUSTINE_KWOK | style: low, forcing calm]
+Mystery to me. That's what I told her.
+
+[AUGUSTINE_KWOK | style: bitter under his breath]
+Feet from the box the whole time.
+
+[NARRATOR]
+He sets the can down at the potting bench.
+
+[SFX: a metal watering can set down on a wooden bench]
+
+[AUGUSTINE_KWOK | style: sudden sharp pain, breath catching]
+Ah—
+
+[AUGUSTINE_KWOK | style: gritted, doubled over]
+Not now. Not now.
+
+[NARRATOR]
+He grips the edge of the bench, bent nearly double.
+
+[AUGUSTINE_KWOK | style: forcing steady counting, teeth clenched | speed: 0.85]
+One. Two. Three.
+
+[AUGUSTINE_KWOK | style: same, slower, riding it out | speed: 0.8]
+Four. Five.
+
+[AUGUSTINE_KWOK | style: still counting, voice fraying at the edges | speed: 0.8]
+Six. Seven.
+
+[AUGUSTINE_KWOK | style: the wave easing, exhausted relief]
+Eight. There.
+
+[NARRATOR]
+He straightens by degrees, one hand still braced on the wood.
+
+[AUGUSTINE_KWOK | style: hoarse, to himself]
+Sharper than yesterday.
+
+[SFX: footsteps ascending a stairwell, growing closer]
+
+[NARRATOR]
+Footsteps climb toward the greenhouse — Nora Vance, the young tenant six months along, still telling a story about the father that doesn't hold together.
+
+[AUGUSTINE_KWOK | style: pulling himself upright fast, breath controlled]
+Straighten up.
+
+[NARRATOR]
+He wipes his face with his sleeve just as she rounds into view.
+
+[NORA_VANCE | style: light, curious]
+Augustine? You look like the beds fought back.
+
+[AUGUSTINE_KWOK | style: practiced ease, warm surface over strain]
+Just this stubborn irrigation line. Fights me every week.
+
+[NORA_VANCE | style: gentle concern]
+You sure you're alright? You went a little pale.
+
+[AUGUSTINE_KWOK | style: easy, deflecting smoothly]
+Old man, hot glass roof, cold water. Nothing more than that.
+
+[NORA_VANCE | style: half-convinced, letting it go]
+If you say so. Don't overwork yourself up here.
+
+[AUGUSTINE_KWOK | style: warm, closing the subject]
+Wouldn't dream of it. Go on, off your feet.
+
+[NARRATOR]
+She lingers a beat, then turns back toward the stairwell.
+
+[SFX: footsteps descending, fading]
+
+[NARRATOR]
+Alone again, Augustine looks down at his own hands, steady now, and says nothing at all.
+
+--- PART 4 ---
+
+[NARRATOR]
+Midday on day fourteen. Sixteen days since Tommy's release, the lobby empties out after the lunch rush upstairs. He comes down the stairwell as Nora pushes through the front door, and the question he asked her three days ago is still sitting there, unanswered, between them.
+
+[SFX: the lobby door swinging shut behind her]
+
+[TOMMY_LAU | style: trying to sound casual, failing a little]
+Nora. Hey.
+
+[NORA_VANCE | style: bright, a beat too fast]
+Tommy. Hi.
+
+[TOMMY_LAU | style: watchful, searching her face]
+You look tired.
+
+[NORA_VANCE | style: deflecting, light]
+It's this heat. I swear it's worse than last week. I can't sleep with the windows open and I can't sleep with them shut either.
+
+[TOMMY_LAU]
+Yeah.
+
+[NORA_VANCE | style: already moving, shifting her bag]
+Anyway. I've got groceries dying in this bag, I should—
+
+[TOMMY_LAU | style: quiet, not quite letting her past]
+I wasn't trying to corner you the other day.
+
+[NORA_VANCE | style: the smile tightening]
+I know.
+
+[TOMMY_LAU]
+I just figured you'd say something by now. One way or the other.
+
+[NORA_VANCE | style: gentle deflection, eyes not quite meeting his]
+There's nothing to say that I haven't said.
+
+[TOMMY_LAU]
+That's not an answer.
+
+[NORA_VANCE | style: soft but final, already stepping around him]
+It's ninety-one degrees and I'm carrying frozen peas. Can we do this some other day?
+
+[TOMMY_LAU | style: relenting, tired]
+Yeah. Sure. Go.
+
+[NORA_VANCE | style: relieved, quick]
+Thanks.
+
+[NARRATOR]
+She heads for the stairs without looking back. Tommy stays where he is, watching the door swing shut behind her.
+
+[TOMMY_LAU | style: low, half to himself]
+She's just tired. That's all it is.
+
+[NARRATOR]
+He doesn't sound like he believes it. Neither of the names sitting under that silence — Julian's, or the ledger page now folded in Lila's apron pocket two floors below — gets spoken. The lobby settles back into its afternoon quiet, holding both.
+
+--- PART 5 ---
+
+[NARRATOR]
+Day fourteen, midafternoon. At the Corner Diner, Desmond Hale — the Amaranth's building manager — has caught Iris Tanaka, Walter's elder daughter, before her call with the sale attorneys.
+
+[DESMOND_HALE | style: measured, insistent]
+I called the engineer again this morning. Same man, same report, and he still couldn't tell me which inspection date the foundation section is based on.
+
+[IRIS_TANAKA | style: clipped, resolute]
+Desmond, we've had this conversation.
+
+[DESMOND_HALE | style: measured, insistent]
+Then let me finish it properly. The load figures on the east stairwell don't match the March walkthrough. I was there. I watched him take those readings myself, and the numbers in the final report are lower than what he called out that day.
+
+[IRIS_TANAKA | style: firm, tired]
+Lower how? By how much?
+
+[DESMOND_HALE | style: steady]
+Enough that it changes the recommendation. Enough that it's the difference between "repair" and "condemn."
+
+[SFX: a coffee cup set down on a saucer]
+
+[IRIS_TANAKA | style: firm, tired]
+He's a licensed structural engineer. You're a man who watched him hold a clipboard for one afternoon. I don't say that to be cruel, I say it because it's true.
+
+[DESMOND_HALE | style: low, controlled]
+I'm not asking you to take my word over his. I'm asking why he wouldn't answer a straight question about his own report.
+
+[IRIS_TANAKA | style: even]
+People get defensive when they think they're being accused of something. You've been circling him for two weeks like he falsified it.
+
+[DESMOND_HALE | style: level]
+I haven't said that.
+
+[IRIS_TANAKA | style: even]
+You don't have to. It's in how you ask.
+
+[NARRATOR]
+She sets her fork down, done eating before she's done arguing.
+
+[IRIS_TANAKA | style: resolute, closing the subject]
+Julian went through the whole file line by line last week. Every page. He does this for a living, Desmond, longer than you or I have known the man exists. He found nothing wrong with it.
+
+[DESMOND_HALE | style: quiet skepticism]
+Julian reviewed it, or Julian signed off on it?
+
+[IRIS_TANAKA | style: sharp]
+Is there a difference to you?
+
+[DESMOND_HALE | style: retreating slightly]
+Maybe not. I just — I trust what I saw with my own eyes on that stairwell more than a phone call that wouldn't answer a simple question.
+
+[IRIS_TANAKA | style: final, weary]
+And I trust the man who's spent two years untangling my father's finances so I don't have to. That's where I'm leaving it.
+
+[NARRATOR]
+She rises, gathering her coat off the back of the booth.
+
+[SFX: a chair scraping back against the floor]
+
+[IRIS_TANAKA | style: softening slightly, sincere]
+I know you love this place. I know that's why you're pushing. But the report stands, Desmond. It stands because Julian says it stands, and I have no reason not to believe him.
+
+[NARRATOR]
+She's gone before he can answer, the door swinging shut behind her, and the name he keeps circling — the one he still can't attach to anything — stays exactly where it was: just out of reach.
+
+--- PART 6 ---
+
+[NARRATOR]
+Day fourteen of the season, the same evening Desmond leaves the diner. Lila catches him in the lobby before he reaches the stairwell up to his own floor.
+
+[SFX: a door chime jingling as it swings shut behind her]
+
+[LILA_CHEN | style: distracted, holding something back]
+Desmond. Do you have a minute?
+
+[DESMOND_HALE | style: attentive]
+For you, always. You look like you've seen a ghost.
+
+[LILA_CHEN | style: hesitant]
+Maybe I have. I was going through some of Henry's old ledgers tonight — just tidying, that's all — and something in them didn't sit right.
+
+[DESMOND_HALE | style: measured, concerned]
+Didn't sit right how?
+
+[LILA_CHEN | style: guarded]
+I can't put words to it yet. Just a cold feeling I can't shake, looking at his own handwriting.
+
+[DESMOND_HALE | style: steady, offering]
+Bring it down sometime. Let me take a look with you. Two sets of eyes catch things one alone won't.
+
+[LILA_CHEN | style: pulling back]
+No — no. It's nothing. An old woman finding something to fuss over on a slow night, that's all it is.
+
+[DESMOND_HALE | style: unconvinced but not pushing]
+You don't fuss over things that don't matter, Lila. I've known you twenty years. I've never once seen it.
+
+[LILA_CHEN | style: firm, closing the door on it]
+It's paperwork. Numbers from a man who's been gone four years. Whatever it is, it can stay buried where it is.
+
+[DESMOND_HALE | style: probing lightly]
+Lately it feels like everybody in this place is carrying something they won't set down. You. Augustine, too, the way he's been.
+
+[LILA_CHEN | style: sharp, deflecting]
+Augustine's fine. He's always fine. Don't go looking for trouble where there isn't any, Desmond.
+
+[DESMOND_HALE | style: relenting]
+All right. But if you change your mind, my door's open. Always has been.
+
+[LILA_CHEN | style: easing]
+I know where to find you. Go on up. It's late.
+
+[SFX: footsteps receding across the lobby tile]
+
+[NARRATOR]
+She's out the door before he can answer, leaving him standing at the foot of the stairs with more questions than she gave him answers.
+
+--- PART 7 ---
+
+[NARRATOR]
+Day fifteen. Seventeen days since Tommy walked out of Fenmore Correctional, sixteen days left before the Amaranth goes to auction. Down in the archive, under the same hanging bulb, he drags the tenant complaint box back onto the table — with no way of knowing what Lila laid on this exact surface less than a day before.
+
+[SFX: cardboard box scraping across a metal table]
+
+[TOMMY_LAU | style: low, methodical]
+Ninety-eight. Complaint forms, ninety-eight. Odell's name has to turn up somewhere in this pile.
+
+[TOMMY_LAU | style: flat, reading aloud]
+"Unit four-B. Noise complaint, October." Not him.
+
+[TOMMY_LAU | style: clipped]
+"Elevator service request, November." Not him either.
+
+[TOMMY_LAU | style: dry]
+Half these forms aren't even signed. Whoever filed them didn't want their name on record any more than Odell did.
+
+[SFX: a folder dropped onto the growing pile]
+
+[TOMMY_LAU | style: tight frustration]
+Twelve years I had every name from that courtroom memorized. His lawyer's, the judge's, the guard who put his hand on a Bible and lied. None of them show up on paper down here.
+
+[TOMMY_LAU | style: weary, half a laugh]
+Still crooked. That corner brick's been loose since I was a kid hiding down here from my grandmother.
+
+[TOMMY_LAU | style: distracted]
+Probably older than the fire itself. Nobody's touched that thing in years.
+
+[SFX: box lid set back down with a thud]
+
+[TOMMY_LAU | style: hollow]
+Same three names again. Same nothing.
+
+[TOMMY_LAU | style: restless, rising]
+Somebody paid Odell to say what he said. I feel it in my teeth. I just can't put a signature to it, and a feeling doesn't get anybody's sentence overturned.
+
+[TOMMY_LAU | style: resigned]
+Same as last week. Same as the week before that.
+
+[TOMMY_LAU | style: low, determined despite himself]
+Fine. Tomorrow, then. There's a box up on that top shelf I haven't cracked open yet.
+
+[NARRATOR]
+He switches off the bulb and climbs the stairs, leaving the brick exactly where it's sat for weeks — still holding the one answer he has no reason yet to go looking for.
+
+--- PART 8 ---
+
+[NARRATOR]
+Past midnight, the diner long closed and Lila back in her apartment believing the matter settled, the basement archive still holds Augustine under its single hanging bulb.
+
+[AUGUSTINE_KWOK | style: hollowed, talking to the wall as much as himself]
+Not tonight either. Not for her.
+
+[NARRATOR]
+He presses his palm flat against the loose brick and leaves it there, the same choice he's made every week since Tommy's release, no closer to different.
+
+[SFX: a heavy stairwell door creaking open above]
+
+[DESMOND_HALE | style: raising his voice down the stairwell, real concern under it]
+Augustine? It's past midnight — you still down there? You alright?
+
+[NARRATOR]
+The question drops into the dark and waits. Augustine's hand stays on the brick. His breath comes slow, dragging, a beat too long before his body remembers how to answer.
+
+[AUGUSTINE_KWOK | style: forcing steadiness into his voice a second too late]
+...fine. I'm fine. Just closing up.
+
+[NARRATOR]
+Upstairs, Lila's question is already loose in the halls, and so is the toll it's taking on the man who lied to her face. Before long, two more will start to notice what he's carrying — one arriving with a briefcase full of paperwork, the other stopping cold in an empty basement doorway.
+

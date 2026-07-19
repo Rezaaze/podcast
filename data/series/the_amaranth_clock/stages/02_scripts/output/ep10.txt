@@ -1,0 +1,396 @@
+--- PART 1 ---
+
+[NARRATOR]
+Three nights ago, at a clinic she told no one about, Nora had an ultrasound and still hasn't said what it showed. Augustine's six weeks of silence have one day left before the follow-up he's been counting toward. And the sale Iris set in motion the morning she came home now has an hour on the clock.
+
+[NARRATOR]
+Day thirty. Sunlight crosses the Amaranth's lobby floor, the stopped clock above the desk still frozen at ten past nine. Desmond Hale, the building's manager for two decades, unstacks folding chairs and squares them into rows facing where the auctioneer's table will sit.
+
+[SFX: metal folding chairs being unstacked and set down]
+
+[DESMOND_HALE | style: brisk, businesslike]
+Six across, four back. Leave the aisle wide — Mrs. Okafor's coming with the wheelchair.
+
+[SFX: lobby door swinging open]
+
+[DESMOND_HALE | style: guarded]
+Morning. Didn't expect anyone this early.
+
+[IRIS_TANAKA | style: composed, resolute]
+Walter Tanaka's daughter — she wanted to see the room before it filled. I wanted it empty first. Once.
+
+[DESMOND_HALE | style: even, testing]
+Funny thing to want, on a day like today.
+
+[IRIS_TANAKA | style: clipped]
+It's just a lobby, Desmond.
+
+[DESMOND_HALE | style: pointed but restrained]
+You remember what I showed you. Down in the basement. Those cracks the report called structural — they're cosmetic. I'd stake eighteen years on it.
+
+[IRIS_TANAKA | style: firm, closing the door on the subject]
+I remember. It doesn't change what the numbers say. The debt's real whether the cracks are or not.
+
+[DESMOND_HALE | style: level]
+Never said it wasn't. Just seems a strange thing, losing a building over a lie somebody bothered to tell.
+
+[IRIS_TANAKA | style: steady, deflecting]
+Nobody lied. An inspector did his job badly. That's all.
+
+[DESMOND_HALE | style: unconvinced, quiet insistence — avoid "quiet"; use "low, unshaken"]
+I've walked every inch of that basement. Somebody paid for those numbers to come out wrong. I just can't tell you who.
+
+[IRIS_TANAKA | style: brittle composure]
+Then it's a question for the engineer, not for me. I have a room to fill in an hour.
+
+[SFX: heels crossing the lobby floor toward the desk]
+
+[NARRATOR]
+She crosses to the reception desk, back straight, papers already stacked and squared. Desmond watches her go, the doubt he can't prove and can't let go of following her the length of the room.
+
+--- PART 2 ---
+
+[NARRATOR]
+Below the lobby, day thirty holds a different clock. In the basement archive, under the single bulb that has hung bare since the renovation twelve years ago, Tommy is back among the shelves he's already emptied twice.
+
+[TOMMY_LAU | style: gritted patience]
+There has to be something in here that isn't a receipt for paint.
+
+[SFX: a metal file drawer sliding open on a dry track]
+
+[TOMMY_LAU | style: muttering]
+Same box. Same nothing.
+
+[NARRATOR]
+Augustine appears at the bottom of the stairs, a trowel still in one hand from the greenhouse, and stops when he sees which box Tommy has open.
+
+[AUGUSTINE_KWOK | style: flat, deciding]
+That one's never had anything in it. I made sure of that a long time ago.
+
+[TOMMY_LAU | style: startled, wary]
+Augustine. Didn't hear you.
+
+[AUGUSTINE_KWOK | style: measured, final]
+You wouldn't. I've gotten good at that.
+
+[NARRATOR]
+Augustine crosses the room, past Tommy, to a section of brick wall no different from any other, and stops in front of it like a man arriving somewhere he's walked to a hundred times before.
+
+[TOMMY_LAU | style: confused]
+What are you doing?
+
+[SFX: brick scraping loose from mortar, dragged free]
+
+[NARRATOR]
+He works one brick free with his bare hands, sets it down without looking at it, and reaches into the dark gap behind it.
+
+[AUGUSTINE_KWOK | style: low, resolved]
+Twelve years. I told myself every one of them was the wrong week.
+
+[SFX: a metal box latch clicking open then shut]
+
+[NARRATOR]
+He draws out a small fireproof box, its corners scorched dull, and holds it against his chest the way a man holds something he's finally decided to stop carrying alone.
+
+[TOMMY_LAU | style: stunned, barely audible]
+Augustine — what is that.
+
+[AUGUSTINE_KWOK | style: steady, unmoved]
+Not tonight. Not just to you.
+
+[TOMMY_LAU | style: pressing, disbelieving]
+Twelve years I've been down here going through garbage, and you had — you knew where —
+
+[AUGUSTINE_KWOK | style: cutting him off, firm]
+Go get Lila. Bring her down here.
+
+[TOMMY_LAU | style: shaken]
+Lila. Why does she need to —
+
+[AUGUSTINE_KWOK | style: quietly immovable]
+Because I'm not opening this without her in the room. Go on. I'll wait.
+
+[NARRATOR]
+Tommy looks once more at the box, then at the brick lying loose on the floor, and climbs the stairs without another word, leaving Augustine alone under the bulb with twelve years finally in his hands.
+
+--- PART 3 ---
+
+[NARRATOR]
+In the basement archive, the same bare bulb burning overhead, Lila Chen — who has kept the diner across the street running alone since her husband Henry's death — comes down the stairs at Tommy's word, not knowing why he sent for her.
+
+[LILA_CHEN | style: uneasy]
+Tommy said you needed me down here. What's this about, Augustine?
+
+[AUGUSTINE_KWOK | style: resolved]
+Sit if you want to. I don't think either of you will want to be standing when I'm done.
+
+[SFX: a metal box latch clicking open]
+
+[AUGUSTINE_KWOK | style: steady, grim]
+I took this out of Walter's office two nights before the fire. I've kept it behind that brick since. Twelve years.
+
+[TOMMY_LAU | style: wary]
+Kept what.
+
+[AUGUSTINE_KWOK]
+His ledger. In his own hand.
+
+[SFX: pages turning, brittle]
+
+[AUGUSTINE_KWOK | style: flat, reading]
+"June, ninety-eight. Renovation fund, withdrawal, one hundred eighty thousand. Purpose: personal. H.C. debts — settled in full."
+
+[LILA_CHEN | style: confused]
+H.C. That's — Augustine, that's Henry.
+
+[AUGUSTINE_KWOK]
+Walter emptied the renovation fund to cover your husband's gambling. Both of them were six weeks from an audit that would've buried them.
+
+[LILA_CHEN | style: breaking]
+So they burned it. They burned the wing to hide it.
+
+[AUGUSTINE_KWOK | style: unflinching]
+The insurance paid out before anyone thought to ask why the fire started where it did.
+
+[TOMMY_LAU | style: hard, low]
+Where it started. Where I was standing.
+
+[AUGUSTINE_KWOK]
+There's more. One more line.
+
+[SFX: a page turning]
+
+[AUGUSTINE_KWOK | style: reading, grim]
+"Paid: Ray Odell, five thousand. For statement, as discussed."
+
+[TOMMY_LAU | style: stunned]
+Ray Odell put me in that courtroom. Ray Odell stood up and swore he saw me with the can in my hand.
+
+[AUGUSTINE_KWOK]
+Walter paid him to say it. Your grandparents couldn't afford a lawyer who'd have found this line. I could have. I didn't.
+
+[TOMMY_LAU | style: voice shaking]
+Twelve years, Augustine. You had this the whole twelve years.
+
+[LILA_CHEN | style: pleading, desperate]
+Henry wouldn't — he sat across from me every night for six years after. He never once —
+
+[AUGUSTINE_KWOK | style: gentle but final]
+He never told you because telling you meant telling everyone. Same as it would've meant for me.
+
+[LILA_CHEN | style: shattered]
+I buried a man I thought I knew. Now I'm burying someone else instead.
+
+[TOMMY_LAU | style: to himself, disbelieving]
+Real names. Real money. I've waited twelve years just to hear real names.
+
+[NARRATOR]
+Neither Tommy nor Lila asks yet who paid for the structural report that started the auction clock, or what Nora has been carrying since the spring — Augustine's ledger answers only the question it was written to answer, and leaves the rest of the building's secrets exactly where they were an hour ago.
+
+--- PART 4 ---
+
+[NARRATOR]
+Six weeks to the day since Augustine's diagnosis, the basement archive holds only him and Lila now.
+[NARRATOR]
+Tommy has gone, taking the ledger's words with him, needing to be alone.
+
+[TOMMY_LAU | style: shaken, urgent hush]
+I need air. I can't sit with this yet.
+
+[SFX: a door easing shut down the corridor]
+
+[LILA_CHEN | style: raw, disbelieving]
+Twelve years, Augustine. Henry let a boy rot for twelve years, and you knew the whole time.
+
+[AUGUSTINE_KWOK | style: measured but strained]
+I knew. I've carried it since before the ash finished cooling.
+
+[LILA_CHEN | style: unsteady]
+Why tonight. Why now, on top of everything else this house has already taken from us.
+
+[AUGUSTINE_KWOK | style: resolved, subdued]
+Because I'm not certain how many more tonights I get to choose from. Six weeks ago, a doctor told me the growth in my pancreas won't wait for a better one.
+
+[LILA_CHEN | style: stunned, voice catching]
+Six weeks. You've known six weeks and said nothing, not one word.
+
+[AUGUSTINE_KWOK | style: steady, unflinching]
+Not to you, not to anyone. I told myself I was sparing you one thing at a time. Tonight I ran out of silences I can still afford to keep.
+
+[LILA_CHEN | style: hollowed out]
+The greenhouse. The stairs you've slowed on. I told myself it was only your age catching up with you.
+
+[AUGUSTINE_KWOK | style: plain, unguarded]
+It was never my age, Lila.
+
+[LILA_CHEN | style: overwhelmed]
+I don't know which of you to grieve first — the husband I buried an hour ago, or the man in front of me who's already halfway gone.
+
+[AUGUSTINE_KWOK | style: subdued, final]
+Grieve me later. Right now I just needed you to know before I couldn't tell you at all.
+
+--- PART 5 ---
+
+[NARRATOR]
+Day thirty, the hour set for the auction. Two floors above the archive, the lobby fills with every chair Desmond set out — tenants and bidders gathering as an assistant lays the winning bidder's paperwork on the podium.
+Near the front, apart from the general crowd, sits Julian Reyes — Iris's fiancé — leaning close to murmur something to the assistant before the room quiets.
+
+[SFX: a folder of papers set down hard on a wooden podium]
+
+[IRIS_TANAKA | style: studying the papers, working something out in real time]
+That routing number — I know it. I copied it off bank statements weeks ago, off an account I could never put a name to.
+
+[IRIS_TANAKA | style: the arithmetic finally landing]
+I've traced these transfers for weeks — money moving into the very maintenance debt that forced this auction — and told myself it didn't matter whose account it was, so long as the sale went through.
+
+[IRIS_TANAKA | style: her composure slipping as the pieces lock together]
+Wait. Don't call for bids yet.
+
+[DESMOND_HALE | style: low, alert]
+Iris — what are you saying?
+
+[IRIS_TANAKA | style: voice outpacing her own understanding of what she's saying]
+That LLC isn't some anonymous trust behind a lawyer's letterhead. It's Julian. He's the signatory. He's been buying this building out from under it for two years, and I signed my name beside his and never once asked why.
+
+--- PART 6 ---
+
+[NARRATOR]
+The lobby of the Amaranth, moments after Iris's accusation. Julian Reyes, her fiancé, seated near the front, has just been named as the man behind the numbered LLC.
+
+[DESMOND_HALE | style: raising his voice to be heard]
+I inspected that basement myself, six weeks ago. Every joist, every support beam. There's no cracking in the load walls. There's no water damage past the north pipe. Whatever's in that report — it isn't what I found.
+
+[NARRATOR]
+A murmur moves through the folding chairs. Several tenants who spent years dismissing Tommy's claims of innocence now watch a different man's story fall apart in the same room.
+
+[IRIS_TANAKA | style: shaking, but not backing down]
+Julian. Say something. Tell them the account isn't yours.
+
+[NARRATOR]
+Julian rises halfway, says something about a business partner, a signature he never read closely — the explanation trails off before it becomes a denial.
+
+[IRIS_TANAKA | style: quieter now, the fight draining into disbelief]
+You're not answering me. You're just — talking around it. Two years, Julian. Two years and you couldn't just —
+
+[NARRATOR]
+She stops herself, one hand pressed flat against her own collarbone, working back through anniversaries and business trips that suddenly read differently.
+
+[DESMOND_HALE | style: gentler, stepping closer to her]
+Iris.
+
+[IRIS_TANAKA | style: distant, almost to herself]
+The scouting trip. The one before I moved back. He said it was for a restaurant chain.
+
+[NARRATOR]
+Somewhere behind the folding chairs, an unfamiliar voice — the auctioneer — calls for order, then announces the sale is suspended pending review of the ownership dispute. Chairs scrape. Voices rise over each other.
+
+[DESMOND_HALE | style: low, only for her]
+Nobody's bidding on anything today. Come sit down.
+
+[IRIS_TANAKA | style: flat, holding herself together by will alone]
+I just told a room full of people that my fiancé lied to all of them. I don't — I don't know what I'm supposed to feel first.
+
+[SFX: a gavel set down hard on a wooden podium, unstruck]
+
+[NARRATOR]
+Desmond guides her toward the stairs, away from the noise, while behind them Julian is still talking to no one who's listening anymore.
+
+--- PART 7 ---
+
+[NARRATOR]
+The greenhouse sits above the fourth floor, irrigation lines dripping over rows Augustine has tended for decades. Nora is already there, one hand resting low on her stomach, when Tommy climbs the last stair.
+
+[TOMMY_LAU | style: hollow, still catching up to what he heard]
+I didn't know anyone else was up here.
+
+[NORA_VANCE | style: startled, then softening]
+I needed somewhere that wasn't the lobby. Somewhere without folding chairs.
+
+[TOMMY_LAU | style: flat]
+Yeah. I get that.
+
+[NORA_VANCE | style: quieter, admitting something]
+I went yesterday. To the doctor. For the baby.
+
+[SFX: an irrigation line ticking, water dripping onto leaves]
+
+[NORA_VANCE | style: careful, watching for his reaction]
+Alone. I didn't tell anyone I was going.
+
+[TOMMY_LAU | style: sharpening, something breaking loose]
+Alone. Right. Same as everything else about this.
+
+[NORA_VANCE | style: defensive but gentle]
+Tommy—
+
+[TOMMY_LAU | style: raw, cutting through]
+No, listen. I just spent an hour downstairs finding out my whole life got decided by two men and a paid-off guard before I was old enough to vote. I can't walk up here and not know one more thing that's mine to know.
+
+[NORA_VANCE | style: bracing]
+This isn't the same as that.
+
+[TOMMY_LAU | style: low, direct]
+Is it mine. The baby. Just tell me that much.
+
+[NORA_VANCE | style: caught, stalling]
+Today's not the day for this. Not with what's happening downstairs—
+
+[TOMMY_LAU | style: pressing, not letting it go]
+You keep saying that. Every time I ask. There's always something bigger happening downstairs.
+
+[NORA_VANCE | style: pleading, evasive]
+Because there always is. Look at what's going on today alone. You can't tell me this is the moment to sort out—
+
+[TOMMY_LAU | style: quiet, cutting under her]
+That's not an answer.
+
+[SFX: a greenhouse door swinging shut on its hinge]
+
+[NORA_VANCE | style: strained, changing direction]
+I'm exhausted, Tommy. I've been up since before sunrise. Whatever's between us, I can't do this standing in the one place I come to breathe.
+
+[TOMMY_LAU | style: bitter, resigned]
+You never can. Funny how that works out.
+
+[NORA_VANCE | style: barely audible]
+That's not fair.
+
+[TOMMY_LAU | style: tired, done pushing for now]
+Maybe not. Doesn't make it wrong.
+
+[NARRATOR]
+He looks at her a beat, waiting for anything that isn't a deflection. She gives him nothing. He turns and starts down the stairs, leaving the question hanging over the dripping leaves, unanswered again.
+
+--- PART 8 ---
+
+[NARRATOR]
+Past midnight, the Corner Diner sits dark except for one lamp over the counter. Lila is alone, the ledger page in front of her, closed for hours now but not for her.
+
+[LILA_CHEN | style: hollowed out]
+Henry used to sit right here. Doing the real books after I'd gone up to bed, telling me it was slow season paperwork.
+
+[LILA_CHEN | style: flat, disbelieving]
+Twelve years I poured his coffee across the street from that boy's cell and called it bad luck.
+
+[SFX: a spoon set down against a ceramic saucer]
+
+[LILA_CHEN | style: barely controlled]
+And Augustine. Sitting on it every single week. Watching me grieve the wrong man and never once —
+
+[LILA_CHEN | style: breaking, quiet fury]
+He's dying. He told me that like it was a smaller thing to hand me. Like I had a shelf left for it.
+
+[LILA_CHEN | style: exhausted, to no one]
+I don't know which one I'm supposed to be crying for tonight. My husband. My oldest friend. Or that boy, who never did one thing to deserve either of them.
+
+[SFX: the diner's neon sign outside flickering, buzzing faintly]
+
+[LILA_CHEN | style: small, unguarded]
+Twenty years I've closed this place alone and never minded it.
+
+[LILA_CHEN | style: worn through]
+Tonight it feels like there isn't a booth in here big enough to hold what I know now.
+
+[NARRATOR]
+No one comes. The ledger stays open under her hand, and the diner that has always felt like hers alone finally feels like too much room for one person to sit in.
+

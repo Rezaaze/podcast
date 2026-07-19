@@ -1,0 +1,1821 @@
+{
+  "series_title": "The Amaranth Clock",
+  "language": "English",
+  "mode": "drama",
+  "template": "soap_opera",
+  "writer_persona": "a showrunner for character-driven, relationship-first serial drama in the vein of prestige ensemble TV, personally obsessive about season-long continuity — exact dates, elapsed time, and who has learned what by which episode",
+  "style_guidelines": [
+    "Every scene opens through the NARRATOR anchoring exact elapsed time (day of the auction countdown, week of Nora's pregnancy, days since Tommy's release, weeks since Augustine's diagnosis) before any dialogue — this is a continuity stress test, treat these counters as load-bearing facts, not color.",
+    "Reuse the four named locations verbatim across episodes; never invent one-off scenery, and let each location's fixed details (the lobby's stopped clock at 4:47, the diner's cracked red booth, the greenhouse's dripping irrigation line, the basement's single hanging bulb) recur unchanged so a listener can track place by ear.",
+    "No scene is allowed to explain a thread's full truth to the audience via narration or an all-knowing character — dramatic irony comes from the gap between what each character has pieced together and the objective facts in canon.",
+    "Dialogue is naturalistic and clipped, soap-opera pacing: characters interrupt, deflect, and change the subject the moment a conversation drifts too close to their own secret.",
+    "Cross-thread collisions are the engine of the season — let scenes ostensibly about one thread (a diner conversation about the auction) accidentally surface a fact belonging to another thread (Julian's name, a hospital appointment) without anyone in the room realizing its weight.",
+    "Track ages, dates, and elapsed time with numeric precision episode to episode — if episode 1 states Tommy was released 'three days ago' and Augustine was diagnosed 'six weeks ago,' every later episode's references to those events must stay arithmetically consistent with the season's timeline.",
+    "Let physical details of the four locations age forward in small, trackable ways across the season (a repaired clock hand, a new crack in the booth vinyl, an emptied shelf in the archive) rather than resetting each episode to a blank slate."
+  ],
+  "voices": {
+    "NARRATOR": {
+      "voice": "Ryan",
+      "default_style": "calm, measured, a step removed from the action",
+      "description": "the show's narrator — orients the listener at the start of every scene (who, where, when, and exactly how much time has passed), never a character in the story"
+    },
+    "DESMOND_HALE": {
+      "voice": "Aiden",
+      "default_style": "warm but weary, protective, speaks like someone who's fixed too many things alone",
+      "description": "The Amaranth's live-in building manager for eighteen years, a native of the neighborhood; loyal to the building itself more than to any one owner, and the one person everyone brings problems to — which means he hears fragments of every thread but the full picture of none."
+    },
+    "IRIS_TANAKA": {
+      "voice": "Ono_Anna",
+      "default_style": "speaks slow, deliberate, very clear English; brisk and guarded, softening only when she thinks no one's watching",
+      "description": "elder daughter of the Amaranth's late founder Walter Tanaka, raised partly in Shanghai with her Chinese mother after her parents' divorce; returns after twelve years to force the building's sale, publicly citing the numbers, privately carrying a reason she's told no one — including her fiancé."
+    },
+    "LILA_CHEN": {
+      "voice": "Serena",
+      "default_style": "speaks slow, deliberate, very clear English; brisk warmth with a diner-owner's no-nonsense edge",
+      "description": "emigrated from Guangzhou in her twenties; has run the Corner Diner across from the Amaranth for two decades since her husband Henry's death, and knows more about the building's old finances than she lets on, because Henry once kept its books."
+    },
+    "AUGUSTINE_KWOK": {
+      "voice": "Uncle_Fu",
+      "default_style": "slow, gravelly, given to long pauses before he says the thing that matters",
+      "description": "the Amaranth's longest-tenured resident, an immigrant from Hong Kong who built the rooftop greenhouse decades ago by hand; was Henry Chen's closest friend and the last living person who saw the building's original ledgers before they disappeared."
+    },
+    "NORA_VANCE": {
+      "voice": "Sohee",
+      "default_style": "speaks slow, deliberate, very clear English; quick, deflecting humor that cracks under pressure",
+      "description": "twenty-six, moved to the city from Hangzhou with her family as a child and has lived in the Amaranth since college; six months pregnant and telling everyone a story about the father that doesn't quite hold together."
+    },
+    "TOMMY_LAU": {
+      "voice": "Dylan",
+      "default_style": "speaks slow, deliberate, very clear English; guarded calm that occasionally slips into old street cadence",
+      "description": "raised by grandparents who emigrated from Beijing, grew up two blocks from the Amaranth; released on parole after twelve years for an arson conviction the neighborhood still argues about, and moving back into the building he was convicted of trying to burn down."
+    }
+  },
+  "locations": {
+    "LOBBY_ATRIUM": {
+      "name": "The Amaranth Lobby",
+      "description": "Faded Art Deco lobby with brass mailboxes down one wall and a wall clock frozen at 4:47 that no one has fixed in a decade; sound bounces off marble floors, and the elevator's mirrored doors catch every arrival before the doorman does."
+    },
+    "ROOFTOP_GREENHOUSE": {
+      "name": "The Rooftop Greenhouse",
+      "description": "A glass-paned greenhouse Augustine built onto the roof decades ago, warm and humid year-round, its irrigation line perpetually dripping into a rusted bucket, ringed by a view of the whole block below."
+    },
+    "CORNER_DINER": {
+      "name": "The Corner Diner",
+      "description": "Lila's diner across the street, all chrome and cracked red vinyl booths under a buzzing neon sign, the one place in the neighborhood open past midnight and loud enough that private conversations have to lean in close."
+    },
+    "BASEMENT_ARCHIVE": {
+      "name": "The Basement Archive",
+      "description": "A cramped storage room beneath the east wing lit by a single hanging bulb, shelves of water-damaged tenant files, and a loose brick in the back wall where the building's oldest records — and older secrets — are kept."
+    }
+  },
+  "format": {
+    "parts_per_section": 1,
+    "words_per_part_target": "300 to 500",
+    "words_per_part_min": 250,
+    "words_per_part_max": 550
+  },
+  "generation": {
+    "model": "claude-sonnet-5"
+  },
+  "audio": {
+    "api_url": "http://127.0.0.1:42003",
+    "default_style": "Speak clearly and with dramatic weight",
+    "target_lufs": -16.0,
+    "pause_between_chunks_ms": 250,
+    "pause_between_lines_ms": 700,
+    "pause_between_parts_ms": 3000,
+    "pause_between_episodes_ms": 6000,
+    "merge_anthology": false
+  },
+  "output_prefix": "ep",
+  "series_intro": "In the lobby of the Amaranth, the wall clock has read 4:47 for ten years, and nobody has bothered to fix it — because in this building, nothing is ever really over. Six residents. Four countdowns already running when we arrive: thirty days until the building goes to auction, six months into a pregnancy nobody can quite explain, three days since a man came home from twelve years in prison for a fire he swears he didn't set, and a diagnosis one resident is keeping from everyone he loves. Each of them knows their own piece. None of them know the whole shape of what's coming. This season, we watch the clock.",
+  "series_outro": "By the season's end, one thread closes hard: the fireproof box comes out from behind the loose brick, and the truth about the fire — who set it, who paid for the silence, and who spent twelve years paying for someone else's crime — is finally spoken aloud in a room that can't unhear it, even as it costs Lila the version of her husband she'd spent a decade mourning. The auction resolves in the same breath, Julian's numbered LLC exposed before the gavel falls, though whether the Amaranth is saved or simply changes hands more honestly is left for the listener to weigh against what it cost to find out. Nora's countdown reaches its ultrasound appointment but not its due date — the baby, and the question of who raises her, stay unresolved as the season closes. And Augustine's clock, the one no doctor can stop, keeps running past the final scene: he has told the truth, and he has told Lila his diagnosis, but not yet how many follow-up appointments are left to keep.",
+  "threads": [
+    {
+      "label": "The Auction Clock",
+      "solution": "Walter Tanaka died eight months before episode 1, leaving the Amaranth split fifty-fifty between his daughter Iris and a trust whose controlling signatory — hidden behind a numbered LLC — is Julian Reyes, Iris's fiancé. For two years Julian has quietly bought up the building's deferred maintenance debt and paid a structural engineer to fabricate the worst findings in a damning inspection report, engineering a thirty-day forced auction that Iris genuinely believes is her own grief-driven decision, unaware Julian intends to be its winning bidder.",
+      "objective_facts": [
+        "Walter Tanaka died 8 months before episode 1, leaving the Amaranth split 50/50 between Iris and a trust.",
+        "The trust's controlling signatory is Julian Reyes, though its public filings list only a numbered LLC.",
+        "Julian has purchased $340,000 of the building's deferred maintenance debt over the past two years without Iris's knowledge.",
+        "The structural engineer's report cites two fabricated defects that Julian paid the inspector to add.",
+        "The auction is scheduled for exactly 30 days after the will's contest window closes, which is day 1 of episode 1.",
+        "Desmond has independently inspected the basement and found its real structural condition sound, contradicting the report."
+      ]
+    },
+    {
+      "label": "The Frame-Up",
+      "solution": "Twelve years before episode 1, a fire gutted the Amaranth's east wing. Walter Tanaka and Lila's husband Henry Chen — both facing bankruptcy after Walter secretly embezzled from the building's renovation fund to cover Henry's gambling debts — staged the fire for the insurance payout. Tommy Lau, seventeen at the time, was framed with a planted gas can and a coerced statement from a paid-off security guard; he served twelve years of a fifteen-year sentence for an arson he didn't commit. Building superintendent Augustine Kwok had removed Walter's original embezzlement ledger from his office two nights before the fire, suspecting something was wrong, and has hidden it in the basement archive ever since, unable to prove foul play until Henry's death.",
+      "objective_facts": [
+        "The east-wing fire occurred 12 years before episode 1's present day.",
+        "Walter Tanaka embezzled $180,000 from the building's 1998 renovation fund to cover Henry Chen's gambling debts.",
+        "Walter and Henry jointly arranged the arson for the insurance payout, timed six weeks before the embezzlement was due to be audited.",
+        "The security guard who testified against Tommy, Ray Odell, was paid $5,000 by Walter and has since left the state.",
+        "Augustine removed the original embezzlement ledger from Walter's office two nights before the fire and has hidden it since in a fireproof box behind the loose brick in the basement archive.",
+        "Henry Chen died 4 years ago without ever telling Lila the truth.",
+        "Tommy was released on parole 3 days before episode 1 begins, having served 12 of his 15-year sentence."
+      ]
+    },
+    {
+      "label": "The Ninth Month",
+      "solution": "Nora is six months pregnant by Julian Reyes, Iris's fiancé, conceived during a location-scouting trip for the auction before Iris had fully returned to the city. Julian does not know Nora is pregnant or that she intends to keep the baby. Nora spent one night with Tommy shortly after his release — unrelated to the pregnancy, since she was already carrying by then — and has let the neighborhood's assumption that Tommy is the father stand uncorrected, both to protect Julian's engagement to Iris and because Tommy has never pushed her to deny it.",
+      "objective_facts": [
+        "Nora is 26 weeks pregnant as of episode 1.",
+        "Conception occurred during a dated location-scouting trip Julian took for the Amaranth auction, roughly six weeks before Iris permanently returned to the city.",
+        "Julian does not know Nora is pregnant.",
+        "Nora and Tommy spent one night together 2 days after his release, after Nora was already pregnant.",
+        "Nora has never confirmed or denied to anyone that Tommy is the father.",
+        "Nora has an ultrasound appointment scheduled for a fixed date within the season, which she has told no one about."
+      ]
+    },
+    {
+      "label": "The Reckoning",
+      "solution": "Augustine was diagnosed with terminal pancreatic cancer six weeks before episode 1 and given a prognosis of three to four months; he has told no one, including Lila. He has visited the basement archive alone at least once a week since Tommy's release, each time deciding not to hand over the ledger that would clear Tommy's name — because doing so would also destroy Lila's memory of Henry as the husband she still grieves rather than the man who let an innocent teenager take his fall.",
+      "objective_facts": [
+        "Augustine was diagnosed 6 weeks before episode 1's present day.",
+        "His oncologist gave a prognosis of 3 to 4 months.",
+        "Augustine has told no one about the diagnosis.",
+        "The ledger proving Henry and Walter's fraud is in a fireproof box behind a specific loose brick in the basement archive.",
+        "Augustine has visited the basement archive alone at least once a week since Tommy's release, each time leaving the ledger untouched.",
+        "Augustine's next oncology follow-up appointment is scheduled for a fixed date within the season."
+      ]
+    }
+  ],
+  "episodes": [
+    {
+      "figure": "Three Days Home",
+      "theme": "Tommy's return sets the Ninth Month's central lie quietly into motion as Nora lets the neighborhood's assumption about the baby's father stand, while Augustine's routine, unremarked visit to the archive recommits the Frame-Up's secret to silence for another night.",
+      "intro_note": "",
+      "outro_note": "In her mail, unopened, sits the structural engineer's report Iris hasn't yet seen — and thirty days start counting the moment she signs it. Two floors below, Augustine folds a hospital reminder into his pocket before anyone can ask what it says.",
+      "sections": [
+        {
+          "title": "Three Days Home",
+          "what": "Tommy Lau returns to the Amaranth three days after his release; Desmond greets him warmly in the lobby while other tenants watch in wary silence.",
+          "who": [
+            "TOMMY_LAU",
+            "DESMOND_HALE"
+          ],
+          "thread": "The Frame-Up",
+          "location": "LOBBY_ATRIUM",
+          "words": null
+        },
+        {
+          "title": "The Contest Window Closes",
+          "what": "Iris Tanaka arrives to declare the will's contest window closed today, formally starting the thirty-day auction countdown, while Desmond reacts uneasily to the timing.",
+          "who": [
+            "IRIS_TANAKA",
+            "DESMOND_HALE"
+          ],
+          "thread": "The Auction Clock",
+          "location": "LOBBY_ATRIUM",
+          "words": null
+        },
+        {
+          "title": "Congratulations, I Guess",
+          "what": "Nora arrives visibly pregnant; Desmond congratulates her and Tommy as a couple, assuming he's the father, and Nora lets the assumption stand uncorrected.",
+          "who": [
+            "NORA_VANCE",
+            "DESMOND_HALE",
+            "TOMMY_LAU"
+          ],
+          "thread": "The Ninth Month",
+          "location": "LOBBY_ATRIUM",
+          "words": null
+        },
+        {
+          "title": "Henry's Booth",
+          "what": "Lila welcomes Tommy home with a free meal in Henry's old booth; her grief for her husband surfaces as Tommy's unspoken bitterness about his conviction lingers.",
+          "who": [
+            "LILA_CHEN",
+            "TOMMY_LAU"
+          ],
+          "thread": "The Frame-Up",
+          "location": "CORNER_DINER",
+          "words": null
+        },
+        {
+          "title": "Bad Water Pressure",
+          "what": "Alone in the greenhouse, Augustine waters plants through a private stab of pain he hides, quietly calculating how much longer he can keep his diagnosis secret.",
+          "who": [
+            "AUGUSTINE_KWOK"
+          ],
+          "thread": "The Reckoning",
+          "location": "ROOFTOP_GREENHOUSE",
+          "words": {
+            "min": 150,
+            "max": 250,
+            "target": "150 to 250"
+          }
+        },
+        {
+          "title": "What the Numbers Say",
+          "what": "Iris meets Lila for coffee and mentions the coming structural report and thirty-day sale, unaware Lila once kept the building's real financial books.",
+          "who": [
+            "IRIS_TANAKA",
+            "LILA_CHEN"
+          ],
+          "thread": "The Auction Clock",
+          "location": "CORNER_DINER",
+          "words": null
+        },
+        {
+          "title": "The Loose Brick",
+          "what": "Alone in the basement on the night of Tommy's release, Augustine checks the fireproof box behind the loose brick and again leaves the ledger hidden.",
+          "who": [
+            "AUGUSTINE_KWOK"
+          ],
+          "thread": "The Frame-Up",
+          "location": "BASEMENT_ARCHIVE",
+          "words": {
+            "min": 150,
+            "max": 250,
+            "target": "150 to 250"
+          }
+        },
+        {
+          "title": "Three Days, One Night",
+          "what": "Nora finds Tommy alone on the rooftop at night; their unfinished history from two nights together resurfaces, though neither one names the baby aloud.",
+          "who": [
+            "NORA_VANCE",
+            "TOMMY_LAU"
+          ],
+          "thread": "The Ninth Month",
+          "location": "ROOFTOP_GREENHOUSE",
+          "words": null
+        }
+      ],
+      "case": [
+        {
+          "label": "The Frame-Up",
+          "character_knowledge": {
+            "TOMMY_LAU": "Tommy knows he's innocent of the arson and served twelve years for it, and he's returning to the exact building he was convicted of trying to burn down. He genuinely doesn't know who framed him or why, and wrongly believes Ray Odell's testimony against him was simple neighborhood malice rather than a $5,000 payoff, since he never learned the guard was compensated. He's guarded about how much anger he lets show, especially around Desmond, who was kind to him before and after prison.",
+            "DESMOND_HALE": "Desmond has managed the Amaranth for eighteen years and remembers the fire well enough to privately doubt Tommy ever set it, though he has no evidence and has never said so aloud. He welcomes Tommy back without judgment, genuinely uncertain what actually happened that night, and unaware of Walter and Henry's role or Augustine's hidden ledger.",
+            "LILA_CHEN": "Lila still grieves Henry as a good man who kept the building's old books and never told her anything was wrong; she has no idea he helped stage the fire or embezzle from the renovation fund. She privately doubts Tommy's guilt, having known him as a boy, but has never voiced that doubt because it would mean questioning Henry, which she isn't ready to do.",
+            "AUGUSTINE_KWOK": "Augustine alone knows the full truth: Walter and Henry staged the fire, framed Tommy with a planted gas can, and paid off Ray Odell, and he has kept the original embezzlement ledger hidden behind a loose brick in the basement archive ever since. Tonight, as every week since Tommy's release, he visits the archive and again chooses not to retrieve it, protecting Lila's memory of Henry rather than clearing Tommy's name."
+          },
+          "solution": "Twelve years before episode 1, a fire gutted the Amaranth's east wing. Walter Tanaka and Lila's husband Henry Chen — both facing bankruptcy after Walter secretly embezzled from the building's renovation fund to cover Henry's gambling debts — staged the fire for the insurance payout. Tommy Lau, seventeen at the time, was framed with a planted gas can and a coerced statement from a paid-off security guard; he served twelve years of a fifteen-year sentence for an arson he didn't commit. Building superintendent Augustine Kwok had removed Walter's original embezzlement ledger from his office two nights before the fire, suspecting something was wrong, and has hidden it in the basement archive ever since, unable to prove foul play until Henry's death.",
+          "objective_facts": [
+            "The east-wing fire occurred 12 years before episode 1's present day.",
+            "Walter Tanaka embezzled $180,000 from the building's 1998 renovation fund to cover Henry Chen's gambling debts.",
+            "Walter and Henry jointly arranged the arson for the insurance payout, timed six weeks before the embezzlement was due to be audited.",
+            "The security guard who testified against Tommy, Ray Odell, was paid $5,000 by Walter and has since left the state.",
+            "Augustine removed the original embezzlement ledger from Walter's office two nights before the fire and has hidden it since in a fireproof box behind the loose brick in the basement archive.",
+            "Henry Chen died 4 years ago without ever telling Lila the truth.",
+            "Tommy was released on parole 3 days before episode 1 begins, having served 12 of his 15-year sentence."
+          ]
+        },
+        {
+          "label": "The Auction Clock",
+          "character_knowledge": {
+            "IRIS_TANAKA": "Iris believes forcing the sale is entirely her own grief-driven decision, made harder by a structural report she trusts at face value; she has no idea Julian commissioned fabricated findings or that he intends to be the winning bidder through a numbered LLC. Today she treats the will's contest window closing as simply the practical start of a process she thinks she controls.",
+            "DESMOND_HALE": "Desmond has independently inspected the basement and found it structurally sound, which quietly contradicts what he's heard about the coming engineer's report, though he doesn't yet know why the two accounts might differ or that Julian is behind it. He raises his concern to Iris in general terms, not wanting to alarm her without proof.",
+            "LILA_CHEN": "Lila remembers enough from the years Henry kept the Amaranth's books to suspect the building's finances were never as fragile as the coming report will claim, but she keeps that suspicion to herself for now, unsure whether it's worth revisiting old ledgers she's tried to leave behind."
+          },
+          "solution": "Walter Tanaka died eight months before episode 1, leaving the Amaranth split fifty-fifty between his daughter Iris and a trust whose controlling signatory — hidden behind a numbered LLC — is Julian Reyes, Iris's fiancé. For two years Julian has quietly bought up the building's deferred maintenance debt and paid a structural engineer to fabricate the worst findings in a damning inspection report, engineering a thirty-day forced auction that Iris genuinely believes is her own grief-driven decision, unaware Julian intends to be its winning bidder.",
+          "objective_facts": [
+            "Walter Tanaka died 8 months before episode 1, leaving the Amaranth split 50/50 between Iris and a trust.",
+            "The trust's controlling signatory is Julian Reyes, though its public filings list only a numbered LLC.",
+            "Julian has purchased $340,000 of the building's deferred maintenance debt over the past two years without Iris's knowledge.",
+            "The structural engineer's report cites two fabricated defects that Julian paid the inspector to add.",
+            "The auction is scheduled for exactly 30 days after the will's contest window closes, which is day 1 of episode 1.",
+            "Desmond has independently inspected the basement and found its real structural condition sound, contradicting the report."
+          ]
+        },
+        {
+          "label": "The Ninth Month",
+          "character_knowledge": {
+            "NORA_VANCE": "Nora knows the baby is Julian's, conceived weeks before Iris permanently returned to the city, and that Julian has no idea she's pregnant. She deliberately lets Desmond's assumption that Tommy is the father stand uncorrected today, partly to protect Julian's engagement and partly because Tommy has never pushed her to deny it, which makes the lie easier to leave alone.",
+            "DESMOND_HALE": "Desmond genuinely and wrongly believes Tommy is the father, reasoning from the timing of Tommy's release and the neighborhood's easy assumption; he means the congratulations warmly and has no idea he's reinforcing a lie.",
+            "TOMMY_LAU": "Tommy knows he spent one night with Nora two days after his release, but he doesn't know when she actually conceived or that it was weeks before that night. He lets Desmond's assumption pass without correcting it either, half-believing it could be true and unwilling to press Nora for an answer he isn't sure he wants."
+          },
+          "solution": "Nora is six months pregnant by Julian Reyes, Iris's fiancé, conceived during a location-scouting trip for the auction before Iris had fully returned to the city. Julian does not know Nora is pregnant or that she intends to keep the baby. Nora spent one night with Tommy shortly after his release — unrelated to the pregnancy, since she was already carrying by then — and has let the neighborhood's assumption that Tommy is the father stand uncorrected, both to protect Julian's engagement to Iris and because Tommy has never pushed her to deny it.",
+          "objective_facts": [
+            "Nora is 26 weeks pregnant as of episode 1.",
+            "Conception occurred during a dated location-scouting trip Julian took for the Amaranth auction, roughly six weeks before Iris permanently returned to the city.",
+            "Julian does not know Nora is pregnant.",
+            "Nora and Tommy spent one night together 2 days after his release, after Nora was already pregnant.",
+            "Nora has never confirmed or denied to anyone that Tommy is the father.",
+            "Nora has an ultrasound appointment scheduled for a fixed date within the season, which she has told no one about."
+          ]
+        },
+        {
+          "label": "The Reckoning",
+          "character_knowledge": {
+            "AUGUSTINE_KWOK": "Augustine was diagnosed with terminal pancreatic cancer six weeks ago and given three to four months, and he has told no one, including Lila. Alone in the greenhouse tonight, he hides a flash of real pain from no one but himself, privately rationing how much longer he can carry both this secret and the ledger's."
+          },
+          "solution": "Augustine was diagnosed with terminal pancreatic cancer six weeks before episode 1 and given a prognosis of three to four months; he has told no one, including Lila. He has visited the basement archive alone at least once a week since Tommy's release, each time deciding not to hand over the ledger that would clear Tommy's name — because doing so would also destroy Lila's memory of Henry as the husband she still grieves rather than the man who let an innocent teenager take his fall.",
+          "objective_facts": [
+            "Augustine was diagnosed 6 weeks before episode 1's present day.",
+            "His oncologist gave a prognosis of 3 to 4 months.",
+            "Augustine has told no one about the diagnosis.",
+            "The ledger proving Henry and Walter's fraud is in a fireproof box behind a specific loose brick in the basement archive.",
+            "Augustine has visited the basement archive alone at least once a week since Tommy's release, each time leaving the ledger untouched.",
+            "Augustine's next oncology follow-up appointment is scheduled for a fixed date within the season."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "The Thirty-Day Clock",
+      "theme": "Iris locks the Amaranth's fate to a fabricated report she trusts completely, formalizing the Auction Clock's countdown, while Augustine's small, practiced act of hiding a hospital reminder shows the Reckoning's secret is already a habit, not a slip.",
+      "intro_note": "Three days since Tommy Lau came home, and already the building has settled back into old habits: Nora let Desmond's assumption about her baby's father stand unspoken in the lobby, and Augustine climbed down to the basement archive one more time, leaving whatever he keeps there undisturbed. Now, as the auction clock ticks toward its thirtieth day, the Amaranth's residents move through their routines, unaware of how many of those routines are quietly rehearsed lies.",
+      "outro_note": "The auction is locked, the paperwork signed, and somewhere behind seed packets in the greenhouse, another envelope waits with the others no one has found. Thirty days now separate the Amaranth from an ending no one in the building has yet imagined, and for one more week, at least, the building's routines will hold.",
+      "sections": [
+        {
+          "title": "The Report",
+          "what": "Iris reviews the structural engineer's fabricated report with Desmond, trusts its findings completely, and formally sets the auction for day thirty.",
+          "who": [
+            "IRIS_TANAKA",
+            "DESMOND_HALE"
+          ],
+          "thread": "The Auction Clock",
+          "location": "LOBBY_ATRIUM",
+          "words": null
+        },
+        {
+          "title": "Congratulations, I Guess",
+          "what": "At the diner, Iris tells Lila the auction date is locked in; Lila offers warm congratulations while privately recalling Henry's old worries about the building's books.",
+          "who": [
+            "IRIS_TANAKA",
+            "LILA_CHEN"
+          ],
+          "thread": "The Auction Clock",
+          "location": "CORNER_DINER",
+          "words": null
+        },
+        {
+          "title": "The Mail Run",
+          "what": "Desmond sorts mail at the brass boxes; Augustine swoops in, pockets an unopened envelope from his own slot, and waves off Desmond's casual question about it.",
+          "who": [
+            "DESMOND_HALE",
+            "AUGUSTINE_KWOK"
+          ],
+          "thread": "The Reckoning",
+          "location": "LOBBY_ATRIUM",
+          "words": {
+            "min": 140,
+            "max": 260,
+            "target": "140 to 260"
+          }
+        },
+        {
+          "title": "Behind the Seed Packets",
+          "what": "Alone in the greenhouse, Augustine opens the envelope, confirms it's another oncology reminder, and tucks it behind the seed packets where the others are hidden.",
+          "who": [
+            "AUGUSTINE_KWOK"
+          ],
+          "thread": "The Reckoning",
+          "location": "ROOFTOP_GREENHOUSE",
+          "words": null
+        },
+        {
+          "title": "Undemanding Company",
+          "what": "Nora escapes lobby gossip about Tommy and the baby by hiding in the greenhouse, where Augustine offers quiet, undemanding company without asking questions she can't answer.",
+          "who": [
+            "NORA_VANCE",
+            "AUGUSTINE_KWOK"
+          ],
+          "thread": "The Ninth Month",
+          "location": "ROOFTOP_GREENHOUSE",
+          "words": null
+        },
+        {
+          "title": "Steering the Subject",
+          "what": "Over pie at the diner, Lila gently presses Nora about the baby's father; Nora deflects with a joke and pivots the talk to the auction news.",
+          "who": [
+            "NORA_VANCE",
+            "LILA_CHEN"
+          ],
+          "thread": "The Ninth Month",
+          "location": "CORNER_DINER",
+          "words": null
+        },
+        {
+          "title": "Two Habits Collide",
+          "what": "Desmond mentions Augustine seemed distracted by his mail earlier; Augustine deflects onto the auction news, and both men let their own evasions pass unremarked.",
+          "who": [
+            "DESMOND_HALE",
+            "AUGUSTINE_KWOK"
+          ],
+          "thread": "The Reckoning",
+          "location": "LOBBY_ATRIUM",
+          "words": null
+        },
+        {
+          "title": "Under the Frozen Clock",
+          "what": "Alone beneath the stopped lobby clock, Iris signs the auction paperwork, certain of her numbers, unaware the countdown she just made real serves someone else's plan.",
+          "who": [
+            "IRIS_TANAKA"
+          ],
+          "thread": "The Auction Clock",
+          "location": "LOBBY_ATRIUM",
+          "words": {
+            "min": 130,
+            "max": 240,
+            "target": "130 to 240"
+          }
+        }
+      ],
+      "case": [
+        {
+          "label": "The Auction Clock",
+          "character_knowledge": {
+            "IRIS_TANAKA": "Trusts the fabricated report completely and formally sets the auction for day thirty, genuinely believing this is her own grief-driven decision to sell. She has no idea Julian commissioned the report or intends to bid, and wrongly takes the numbers as simply the honest state of a building that's fallen apart since her father died.",
+            "DESMOND_HALE": "Knows from his own basement inspection that the report's structural findings are wrong and raises the discrepancy to Iris, but she waves it off. He doesn't yet know why the report is fabricated or that Julian is behind it, only that something about it doesn't add up.",
+            "LILA_CHEN": "Has no concrete knowledge of the engineering behind the auction, but Henry's old bookkeeping has left her with an unspoken, unexamined wariness about how the Amaranth's finances have always run, which she keeps to herself while congratulating Iris over coffee."
+          },
+          "solution": "Walter Tanaka died eight months before episode 1, leaving the Amaranth split fifty-fifty between his daughter Iris and a trust whose controlling signatory — hidden behind a numbered LLC — is Julian Reyes, Iris's fiancé. For two years Julian has quietly bought up the building's deferred maintenance debt and paid a structural engineer to fabricate the worst findings in a damning inspection report, engineering a thirty-day forced auction that Iris genuinely believes is her own grief-driven decision, unaware Julian intends to be its winning bidder.",
+          "objective_facts": [
+            "Walter Tanaka died 8 months before episode 1, leaving the Amaranth split 50/50 between Iris and a trust.",
+            "The trust's controlling signatory is Julian Reyes, though its public filings list only a numbered LLC.",
+            "Julian has purchased $340,000 of the building's deferred maintenance debt over the past two years without Iris's knowledge.",
+            "The structural engineer's report cites two fabricated defects that Julian paid the inspector to add.",
+            "The auction is scheduled for exactly 30 days after the will's contest window closes, which is day 1 of episode 1.",
+            "Desmond has independently inspected the basement and found its real structural condition sound, contradicting the report."
+          ]
+        },
+        {
+          "label": "The Reckoning",
+          "character_knowledge": {
+            "AUGUSTINE_KWOK": "Knows he was diagnosed six weeks ago with a terminal prognosis and has told no one. Today he intercepts and hides another oncology appointment reminder before Desmond can see it, deflecting instinctively; hiding the mail has become routine for him now, not panic.",
+            "DESMOND_HALE": "Notices Augustine seemed oddly quick to grab his own mail and briefly distracted afterward, but has no idea why. He assumes it's nothing more than one of Augustine's usual private moods and lets it go when Augustine changes the subject."
+          },
+          "solution": "Augustine was diagnosed with terminal pancreatic cancer six weeks before episode 1 and given a prognosis of three to four months; he has told no one, including Lila. He has visited the basement archive alone at least once a week since Tommy's release, each time deciding not to hand over the ledger that would clear Tommy's name — because doing so would also destroy Lila's memory of Henry as the husband she still grieves rather than the man who let an innocent teenager take his fall.",
+          "objective_facts": [
+            "Augustine was diagnosed 6 weeks before episode 1's present day.",
+            "His oncologist gave a prognosis of 3 to 4 months.",
+            "Augustine has told no one about the diagnosis.",
+            "The ledger proving Henry and Walter's fraud is in a fireproof box behind a specific loose brick in the basement archive.",
+            "Augustine has visited the basement archive alone at least once a week since Tommy's release, each time leaving the ledger untouched.",
+            "Augustine's next oncology follow-up appointment is scheduled for a fixed date within the season."
+          ]
+        },
+        {
+          "label": "The Ninth Month",
+          "character_knowledge": {
+            "NORA_VANCE": "Knows the baby is Julian's and that Tommy is not the father, and continues letting the neighborhood's assumption about Tommy stand. Today she uses Augustine's greenhouse and Lila's diner as places to dodge questions about the father without ever lying outright.",
+            "AUGUSTINE_KWOK": "Has no idea who the baby's father actually is and simply offers Nora quiet company in the greenhouse, reading her evasiveness as ordinary pregnancy nerves rather than anything specific.",
+            "LILA_CHEN": "Assumes, like the rest of the building, that Tommy is the father, and presses Nora gently out of genuine care. She has no reason to doubt the assumption and reads Nora's deflection as nothing more than shyness."
+          },
+          "solution": "Nora is six months pregnant by Julian Reyes, Iris's fiancé, conceived during a location-scouting trip for the auction before Iris had fully returned to the city. Julian does not know Nora is pregnant or that she intends to keep the baby. Nora spent one night with Tommy shortly after his release — unrelated to the pregnancy, since she was already carrying by then — and has let the neighborhood's assumption that Tommy is the father stand uncorrected, both to protect Julian's engagement to Iris and because Tommy has never pushed her to deny it.",
+          "objective_facts": [
+            "Nora is 26 weeks pregnant as of episode 1.",
+            "Conception occurred during a dated location-scouting trip Julian took for the Amaranth auction, roughly six weeks before Iris permanently returned to the city.",
+            "Julian does not know Nora is pregnant.",
+            "Nora and Tommy spent one night together 2 days after his release, after Nora was already pregnant.",
+            "Nora has never confirmed or denied to anyone that Tommy is the father.",
+            "Nora has an ultrasound appointment scheduled for a fixed date within the season, which she has told no one about."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "What the Building Remembers",
+      "theme": "A quieter episode of ordinary building life — Desmond's rounds, Lila's diner rhythms, Augustine's greenhouse routines — that lets every established secret sit undisturbed while the season's relationships breathe before the complications ahead.",
+      "intro_note": "Three days after Iris signed the auction into motion, the building exhales. The countdown keeps running underneath the floorboards, but for one day, nothing forces itself to the surface.",
+      "outro_note": "The quiet won't hold for long. Tomorrow, a shelf in the basement archive and a booth in the diner will each come within inches of giving something away.",
+      "sections": [
+        {
+          "title": "Morning Rounds",
+          "what": "Desmond walks Tommy through routine building fixes and small favors, easing him back into daily rhythms without dwelling on his twelve years away.",
+          "who": [
+            "DESMOND_HALE",
+            "TOMMY_LAU"
+          ],
+          "thread": "The Frame-Up",
+          "location": "LOBBY_ATRIUM",
+          "words": null
+        },
+        {
+          "title": "The Corner Diner",
+          "what": "Lila serves Nora her usual order, fussing over her health with maternal warmth, and Nora deflects every gentle question about the father.",
+          "who": [
+            "LILA_CHEN",
+            "NORA_VANCE"
+          ],
+          "thread": "The Ninth Month",
+          "location": "CORNER_DINER",
+          "words": null
+        },
+        {
+          "title": "Watering the Roof",
+          "what": "Nora escapes to the greenhouse for quiet, and Augustine tends his plants alongside her, offering calm company while masking his own exhaustion.",
+          "who": [
+            "AUGUSTINE_KWOK",
+            "NORA_VANCE"
+          ],
+          "thread": "The Reckoning",
+          "location": "ROOFTOP_GREENHOUSE",
+          "words": null
+        },
+        {
+          "title": "Numbers and Grief",
+          "what": "Iris thanks Desmond for keeping the building running, certain the sale is the only responsible choice, while he mentions his own basement findings in passing.",
+          "who": [
+            "IRIS_TANAKA",
+            "DESMOND_HALE"
+          ],
+          "thread": "The Auction Clock",
+          "location": "LOBBY_ATRIUM",
+          "words": null
+        },
+        {
+          "title": "Old Friends",
+          "what": "Augustine joins Lila for their weekly dinner ritual, and she reminisces fondly about Henry's bookkeeping, unaware her memories needle at what Augustine still hides.",
+          "who": [
+            "AUGUSTINE_KWOK",
+            "LILA_CHEN"
+          ],
+          "thread": "The Frame-Up",
+          "location": "CORNER_DINER",
+          "words": null
+        },
+        {
+          "title": "The Drip Line",
+          "what": "Desmond fixes the greenhouse's perpetually dripping irrigation line while Augustine waves off his tiredness as nothing more than an old man's aching back.",
+          "who": [
+            "DESMOND_HALE",
+            "AUGUSTINE_KWOK"
+          ],
+          "thread": "The Reckoning",
+          "location": "ROOFTOP_GREENHOUSE",
+          "words": null
+        },
+        {
+          "title": "Boxes in the Dark",
+          "what": "Tommy wanders the basement archive alone, touching shelves he remembers from childhood, unsettled by how much of the building's past he still can't place.",
+          "who": [
+            "TOMMY_LAU"
+          ],
+          "thread": "The Frame-Up",
+          "location": "BASEMENT_ARCHIVE",
+          "words": null
+        },
+        {
+          "title": "Closing Time",
+          "what": "Tommy walks Nora up after her shift, their rapport easy and unspoken, neither mentioning the night they shared or the question hanging between them.",
+          "who": [
+            "TOMMY_LAU",
+            "NORA_VANCE"
+          ],
+          "thread": "The Ninth Month",
+          "location": "LOBBY_ATRIUM",
+          "words": null
+        }
+      ],
+      "case": [
+        {
+          "label": "The Auction Clock",
+          "character_knowledge": {
+            "IRIS_TANAKA": "Iris genuinely believes the structural report and the resulting thirty-day auction timeline are sound, and that selling is her own grief-driven decision; she has no idea Julian commissioned the fabricated defects or has been quietly buying up the building's debt, so she treats Desmond's basement remark as a minor technical footnote rather than a contradiction worth chasing.",
+            "DESMOND_HALE": "Desmond knows firsthand, from his own inspection, that the basement is structurally sound, which quietly contradicts the report Iris is relying on, but he doesn't yet know who altered the findings or why — this episode he only mentions it in passing rather than pressing the issue."
+          },
+          "solution": "Walter Tanaka died eight months before episode 1, leaving the Amaranth split fifty-fifty between his daughter Iris and a trust whose controlling signatory — hidden behind a numbered LLC — is Julian Reyes, Iris's fiancé. For two years Julian has quietly bought up the building's deferred maintenance debt and paid a structural engineer to fabricate the worst findings in a damning inspection report, engineering a thirty-day forced auction that Iris genuinely believes is her own grief-driven decision, unaware Julian intends to be its winning bidder.",
+          "objective_facts": [
+            "Walter Tanaka died 8 months before episode 1, leaving the Amaranth split 50/50 between Iris and a trust.",
+            "The trust's controlling signatory is Julian Reyes, though its public filings list only a numbered LLC.",
+            "Julian has purchased $340,000 of the building's deferred maintenance debt over the past two years without Iris's knowledge.",
+            "The structural engineer's report cites two fabricated defects that Julian paid the inspector to add.",
+            "The auction is scheduled for exactly 30 days after the will's contest window closes, which is day 1 of episode 1.",
+            "Desmond has independently inspected the basement and found its real structural condition sound, contradicting the report."
+          ]
+        },
+        {
+          "label": "The Frame-Up",
+          "character_knowledge": {
+            "DESMOND_HALE": "Desmond has no knowledge of the twelve-year-old embezzlement or of Walter and Henry's role in the fire; he sympathizes with how hard Tommy's readjustment is but has never had reason to doubt the official verdict beyond a vague, unspoken neighborhood unease.",
+            "TOMMY_LAU": "Tommy knows he's innocent of the arson but has no proof and no idea the truth is a ledger sitting behind a loose brick two floors beneath him; the building's familiar spaces surface old memories for him this episode, not new answers.",
+            "AUGUSTINE_KWOK": "Augustine knows the full truth — that Walter and Henry staged the fire and that the ledger proving it sits in the basement archive — and this episode he keeps that knowledge folded away entirely, letting Lila's fond memories of Henry pass uncorrected.",
+            "LILA_CHEN": "Lila believes Henry was simply a devoted, careful bookkeeper and has no idea he and Walter defrauded the building or framed Tommy for it; her warm reminiscing tonight is genuine, and, to Augustine, quietly painful."
+          },
+          "solution": "Twelve years before episode 1, a fire gutted the Amaranth's east wing. Walter Tanaka and Lila's husband Henry Chen — both facing bankruptcy after Walter secretly embezzled from the building's renovation fund to cover Henry's gambling debts — staged the fire for the insurance payout. Tommy Lau, seventeen at the time, was framed with a planted gas can and a coerced statement from a paid-off security guard; he served twelve years of a fifteen-year sentence for an arson he didn't commit. Building superintendent Augustine Kwok had removed Walter's original embezzlement ledger from his office two nights before the fire, suspecting something was wrong, and has hidden it in the basement archive ever since, unable to prove foul play until Henry's death.",
+          "objective_facts": [
+            "The east-wing fire occurred 12 years before episode 1's present day.",
+            "Walter Tanaka embezzled $180,000 from the building's 1998 renovation fund to cover Henry Chen's gambling debts.",
+            "Walter and Henry jointly arranged the arson for the insurance payout, timed six weeks before the embezzlement was due to be audited.",
+            "The security guard who testified against Tommy, Ray Odell, was paid $5,000 by Walter and has since left the state.",
+            "Augustine removed the original embezzlement ledger from Walter's office two nights before the fire and has hidden it since in a fireproof box behind the loose brick in the basement archive.",
+            "Henry Chen died 4 years ago without ever telling Lila the truth.",
+            "Tommy was released on parole 3 days before episode 1 begins, having served 12 of his 15-year sentence."
+          ]
+        },
+        {
+          "label": "The Reckoning",
+          "character_knowledge": {
+            "AUGUSTINE_KWOK": "Augustine knows he was diagnosed six weeks ago and given three to four months, and continues concealing it from everyone, including Nora and Desmond, passing off his fatigue as ordinary aches from age and labor.",
+            "NORA_VANCE": "Nora has no idea Augustine is sick; she comes to the greenhouse simply because his steady presence and the quiet routine calm her, unaware she's leaning on someone who is dying.",
+            "DESMOND_HALE": "Desmond notices Augustine seems a little more tired than usual but has no reason to suspect anything beyond age catching up with him, and accepts his brushed-off explanation at face value."
+          },
+          "solution": "Augustine was diagnosed with terminal pancreatic cancer six weeks before episode 1 and given a prognosis of three to four months; he has told no one, including Lila. He has visited the basement archive alone at least once a week since Tommy's release, each time deciding not to hand over the ledger that would clear Tommy's name — because doing so would also destroy Lila's memory of Henry as the husband she still grieves rather than the man who let an innocent teenager take his fall.",
+          "objective_facts": [
+            "Augustine was diagnosed 6 weeks before episode 1's present day.",
+            "His oncologist gave a prognosis of 3 to 4 months.",
+            "Augustine has told no one about the diagnosis.",
+            "The ledger proving Henry and Walter's fraud is in a fireproof box behind a specific loose brick in the basement archive.",
+            "Augustine has visited the basement archive alone at least once a week since Tommy's release, each time leaving the ledger untouched.",
+            "Augustine's next oncology follow-up appointment is scheduled for a fixed date within the season."
+          ]
+        },
+        {
+          "label": "The Ninth Month",
+          "character_knowledge": {
+            "LILA_CHEN": "Lila has no idea Julian is the father and, like the rest of the building, simply assumes it's likely Tommy's without ever asking directly; her fussing over Nora tonight is pure maternal instinct, not suspicion.",
+            "NORA_VANCE": "Nora knows Julian is the father and that he doesn't know she's pregnant, and continues letting everyone — including Tommy — assume otherwise, both to protect Julian's engagement to Iris and because no one has forced the question yet.",
+            "TOMMY_LAU": "Tommy doesn't know whether the baby could be his after their one night together, but has decided not to push Nora for an answer, content for now with the easy rapport between them."
+          },
+          "solution": "Nora is six months pregnant by Julian Reyes, Iris's fiancé, conceived during a location-scouting trip for the auction before Iris had fully returned to the city. Julian does not know Nora is pregnant or that she intends to keep the baby. Nora spent one night with Tommy shortly after his release — unrelated to the pregnancy, since she was already carrying by then — and has let the neighborhood's assumption that Tommy is the father stand uncorrected, both to protect Julian's engagement to Iris and because Tommy has never pushed her to deny it.",
+          "objective_facts": [
+            "Nora is 26 weeks pregnant as of episode 1.",
+            "Conception occurred during a dated location-scouting trip Julian took for the Amaranth auction, roughly six weeks before Iris permanently returned to the city.",
+            "Julian does not know Nora is pregnant.",
+            "Nora and Tommy spent one night together 2 days after his release, after Nora was already pregnant.",
+            "Nora has never confirmed or denied to anyone that Tommy is the father.",
+            "Nora has an ultrasound appointment scheduled for a fixed date within the season, which she has told no one about."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "Too Close to the Wall",
+      "theme": "Two secrets nearly surface and are narrowly contained in the same stretch of hours: Tommy comes within a shelf of the loose brick before Augustine redirects him, and Julian comes within a glance of noticing Nora's pregnancy before she talks him elsewhere.",
+      "intro_note": "The quiet week at the Amaranth holds through breakfast rounds and diner coffee — but by afternoon, two secrets each drift within arm's reach of the light, and survive only by inches.",
+      "outro_note": "Both secrets make it through the day intact, but the margin was thinner than either man realized — and tomorrow, a structural engineer's report and Augustine's own body are about to start asking questions a decoy can't answer.",
+      "sections": [
+        {
+          "title": "An Old Case File",
+          "what": "Tommy asks Desmond how to see his old case file; Desmond, wanting to help, points him toward the basement archive's tenant records.",
+          "who": [
+            "TOMMY_LAU",
+            "DESMOND_HALE"
+          ],
+          "thread": "The Frame-Up",
+          "location": "LOBBY_ATRIUM",
+          "words": null
+        },
+        {
+          "title": "One Shelf Away",
+          "what": "Tommy digs through water-damaged folders one shelf from the loose brick when Augustine appears and steers him toward a decoy file instead.",
+          "who": [
+            "TOMMY_LAU",
+            "AUGUSTINE_KWOK"
+          ],
+          "thread": "The Frame-Up",
+          "location": "BASEMENT_ARCHIVE",
+          "words": null
+        },
+        {
+          "title": "The Paperwork Visit",
+          "what": "Iris tells Desmond that Julian is coming by that afternoon to review auction documents, unaware his numbers already contradict Desmond's own basement inspection.",
+          "who": [
+            "IRIS_TANAKA",
+            "DESMOND_HALE"
+          ],
+          "thread": "The Auction Clock",
+          "location": "LOBBY_ATRIUM",
+          "words": null
+        },
+        {
+          "title": "Too Close to the Booth",
+          "what": "Julian drops by Nora's diner booth to talk auction logistics, his eyes lingering until Nora steers him hard toward questions about his engagement instead.",
+          "who": [
+            "NORA_VANCE"
+          ],
+          "thread": "The Ninth Month",
+          "location": "CORNER_DINER",
+          "words": null
+        },
+        {
+          "title": "What the Greenhouse Hides",
+          "what": "Alone among the plants after steering Tommy away, Augustine waters the irrigation line and silently counts how many more close calls he can survive.",
+          "who": [
+            "AUGUSTINE_KWOK"
+          ],
+          "thread": "The Reckoning",
+          "location": "ROOFTOP_GREENHOUSE",
+          "words": null
+        },
+        {
+          "title": "Aftershocks",
+          "what": "Still rattled, Tommy tells Lila the archive turned up nothing on his case, venting frustration while she pours coffee and listens without asking why.",
+          "who": [
+            "TOMMY_LAU",
+            "LILA_CHEN"
+          ],
+          "thread": "The Frame-Up",
+          "location": "CORNER_DINER",
+          "words": null
+        },
+        {
+          "title": "Reading the Room",
+          "what": "Crossing the lobby after the diner, a shaken Nora waves off Desmond's concern about her paleness, blaming exhaustion instead of what almost happened.",
+          "who": [
+            "NORA_VANCE",
+            "DESMOND_HALE"
+          ],
+          "thread": "The Ninth Month",
+          "location": "LOBBY_ATRIUM",
+          "words": null
+        },
+        {
+          "title": "Two Kinds of Quiet",
+          "what": "Lila brings Augustine dinner in the greenhouse, their familiar ease masking how much he still isn't telling her about the ledger or his health.",
+          "who": [
+            "AUGUSTINE_KWOK",
+            "LILA_CHEN"
+          ],
+          "thread": "The Reckoning",
+          "location": "ROOFTOP_GREENHOUSE",
+          "words": null
+        }
+      ],
+      "case": [
+        {
+          "label": "The Frame-Up",
+          "character_knowledge": {
+            "TOMMY_LAU": "Knows he's innocent and was framed twelve years ago by a planted gas can and Ray Odell's coerced testimony, but has no idea who orchestrated it or that a ledger proving it sits behind a specific brick. He genuinely believes the archive might hold something useful for his case and wrongly assumes today's dead end was just bad luck, not deliberate redirection.",
+            "AUGUSTINE_KWOK": "Knows exactly where the ledger is and the full truth of Walter and Henry's fraud, and conceals it to protect Lila's memory of Henry as much as to protect himself. Today he improvises a decoy without explaining why, aware of exactly how close Tommy came and unsettled by it.",
+            "DESMOND_HALE": "Has no knowledge of the ledger or the fire's true cause; genuinely wants to help Tommy out of guilt and protectiveness toward the building's people. He wrongly assumes the archive is just dusty tenant paperwork with nothing worth hiding.",
+            "LILA_CHEN": "Doesn't yet know Henry's involvement in the fire or the fund; hears Tommy's frustration as simple bad luck and offers comfort without suspicion, unknowingly sitting on proximity to the truth through Henry's old books, which she hasn't yet opened."
+          },
+          "solution": "Twelve years before episode 1, a fire gutted the Amaranth's east wing. Walter Tanaka and Lila's husband Henry Chen — both facing bankruptcy after Walter secretly embezzled from the building's renovation fund to cover Henry's gambling debts — staged the fire for the insurance payout. Tommy Lau, seventeen at the time, was framed with a planted gas can and a coerced statement from a paid-off security guard; he served twelve years of a fifteen-year sentence for an arson he didn't commit. Building superintendent Augustine Kwok had removed Walter's original embezzlement ledger from his office two nights before the fire, suspecting something was wrong, and has hidden it in the basement archive ever since, unable to prove foul play until Henry's death.",
+          "objective_facts": [
+            "The east-wing fire occurred 12 years before episode 1's present day.",
+            "Walter Tanaka embezzled $180,000 from the building's 1998 renovation fund to cover Henry Chen's gambling debts.",
+            "Walter and Henry jointly arranged the arson for the insurance payout, timed six weeks before the embezzlement was due to be audited.",
+            "The security guard who testified against Tommy, Ray Odell, was paid $5,000 by Walter and has since left the state.",
+            "Augustine removed the original embezzlement ledger from Walter's office two nights before the fire and has hidden it since in a fireproof box behind the loose brick in the basement archive.",
+            "Henry Chen died 4 years ago without ever telling Lila the truth.",
+            "Tommy was released on parole 3 days before episode 1 begins, having served 12 of his 15-year sentence."
+          ]
+        },
+        {
+          "label": "The Auction Clock",
+          "character_knowledge": {
+            "IRIS_TANAKA": "Genuinely believes Julian's visit to review paperwork is just a supportive fiancé helping with a grief-driven business decision, and has no idea he orchestrated the debt purchases or the fabricated report. She mentions his visit to Desmond casually, with nothing to hide.",
+            "DESMOND_HALE": "Has already found the basement structurally sound, directly contradicting the engineer's report, but hasn't told Iris yet, choosing to dig further before raising it. He's genuinely worried about the building's fate without yet suspecting Julian by name."
+          },
+          "solution": "Walter Tanaka died eight months before episode 1, leaving the Amaranth split fifty-fifty between his daughter Iris and a trust whose controlling signatory — hidden behind a numbered LLC — is Julian Reyes, Iris's fiancé. For two years Julian has quietly bought up the building's deferred maintenance debt and paid a structural engineer to fabricate the worst findings in a damning inspection report, engineering a thirty-day forced auction that Iris genuinely believes is her own grief-driven decision, unaware Julian intends to be its winning bidder.",
+          "objective_facts": [
+            "Walter Tanaka died 8 months before episode 1, leaving the Amaranth split 50/50 between Iris and a trust.",
+            "The trust's controlling signatory is Julian Reyes, though its public filings list only a numbered LLC.",
+            "Julian has purchased $340,000 of the building's deferred maintenance debt over the past two years without Iris's knowledge.",
+            "The structural engineer's report cites two fabricated defects that Julian paid the inspector to add.",
+            "The auction is scheduled for exactly 30 days after the will's contest window closes, which is day 1 of episode 1.",
+            "Desmond has independently inspected the basement and found its real structural condition sound, contradicting the report."
+          ]
+        },
+        {
+          "label": "The Ninth Month",
+          "character_knowledge": {
+            "NORA_VANCE": "Knows she's pregnant by Julian and that he doesn't know; when he nearly notices her silhouette in the booth, she panics internally and deliberately steers him toward his own engagement to shut the moment down. She hides how close the call was from everyone afterward, including Desmond.",
+            "DESMOND_HALE": "Doesn't know who fathered Nora's child and, like the rest of the building, assumes it may be Tommy based on the neighborhood's talk since his release. He reads her paleness in the lobby as pregnancy fatigue and doesn't push, unaware anything unusual just happened with Julian."
+          },
+          "solution": "Nora is six months pregnant by Julian Reyes, Iris's fiancé, conceived during a location-scouting trip for the auction before Iris had fully returned to the city. Julian does not know Nora is pregnant or that she intends to keep the baby. Nora spent one night with Tommy shortly after his release — unrelated to the pregnancy, since she was already carrying by then — and has let the neighborhood's assumption that Tommy is the father stand uncorrected, both to protect Julian's engagement to Iris and because Tommy has never pushed her to deny it.",
+          "objective_facts": [
+            "Nora is 26 weeks pregnant as of episode 1.",
+            "Conception occurred during a dated location-scouting trip Julian took for the Amaranth auction, roughly six weeks before Iris permanently returned to the city.",
+            "Julian does not know Nora is pregnant.",
+            "Nora and Tommy spent one night together 2 days after his release, after Nora was already pregnant.",
+            "Nora has never confirmed or denied to anyone that Tommy is the father.",
+            "Nora has an ultrasound appointment scheduled for a fixed date within the season, which she has told no one about."
+          ]
+        },
+        {
+          "label": "The Reckoning",
+          "character_knowledge": {
+            "AUGUSTINE_KWOK": "Knows he's terminally ill with a prognosis of three to four months and has told no one. Today's near-miss with Tommy sharpens his private math on how much longer he can carry both the ledger and the diagnosis, and he conceals his fatigue behind routine warmth toward Lila.",
+            "LILA_CHEN": "Has no idea about the diagnosis and reads Augustine's quiet as simply his usual gravelly reserve. She genuinely enjoys their old friendship over dinner in the greenhouse, unknowingly comforting a dying man who is also protecting her late husband's secret."
+          },
+          "solution": "Augustine was diagnosed with terminal pancreatic cancer six weeks before episode 1 and given a prognosis of three to four months; he has told no one, including Lila. He has visited the basement archive alone at least once a week since Tommy's release, each time deciding not to hand over the ledger that would clear Tommy's name — because doing so would also destroy Lila's memory of Henry as the husband she still grieves rather than the man who let an innocent teenager take his fall.",
+          "objective_facts": [
+            "Augustine was diagnosed 6 weeks before episode 1's present day.",
+            "His oncologist gave a prognosis of 3 to 4 months.",
+            "Augustine has told no one about the diagnosis.",
+            "The ledger proving Henry and Walter's fraud is in a fireproof box behind a specific loose brick in the basement archive.",
+            "Augustine has visited the basement archive alone at least once a week since Tommy's release, each time leaving the ledger untouched.",
+            "Augustine's next oncology follow-up appointment is scheduled for a fixed date within the season."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "The Bad Back",
+      "theme": "Desmond's confrontation with the structural engineer chips at the Auction Clock's fabricated foundation without cracking it, while Augustine's greenhouse stumble in front of Nora forces the Reckoning's secret into its first real cover story.",
+      "intro_note": "Two secrets survived the day before by inches — Tommy one shelf short of the loose brick, Julian one glance short of noticing Nora's changed shape — and the building exhales into a new morning where the closest calls stay exactly that: close, not caught.",
+      "outro_note": "Tommy sits with the math long after Lila's diner goes quiet, and by morning the question he's been circling stops being a private doubt — tomorrow, he decides, he's going to ask Nora outright, and this time he won't accept silence for an answer.",
+      "sections": [
+        {
+          "title": "The Basement Wall",
+          "what": "Desmond returns alone to the basement wall he inspected weeks ago, checking again for cracks the engineer's report claims exist, and finds nothing new.",
+          "who": [
+            "DESMOND_HALE"
+          ],
+          "thread": "The Auction Clock",
+          "location": "BASEMENT_ARCHIVE",
+          "words": null
+        },
+        {
+          "title": "The Phone Call",
+          "what": "Desmond calls the structural engineer directly, reading off the report's fabricated defects one by one; the engineer deflects, refusing to name who commissioned it.",
+          "who": [
+            "DESMOND_HALE"
+          ],
+          "thread": "The Auction Clock",
+          "location": "LOBBY_ATRIUM",
+          "words": {
+            "min": 150,
+            "max": 250,
+            "target": "150 to 250"
+          }
+        },
+        {
+          "title": "Free Coffee",
+          "what": "Tommy eats alone in his old booth; Lila sets down free coffee without a word, their careful politeness masking years neither wants to unpack.",
+          "who": [
+            "TOMMY_LAU",
+            "LILA_CHEN"
+          ],
+          "thread": "The Frame-Up",
+          "location": "CORNER_DINER",
+          "words": null
+        },
+        {
+          "title": "Slower Than Usual",
+          "what": "Nora climbs to the greenhouse to clear her head and finds Augustine watering slower than usual, their small talk circling everything neither says outright.",
+          "who": [
+            "AUGUSTINE_KWOK",
+            "NORA_VANCE"
+          ],
+          "thread": "The Reckoning",
+          "location": "ROOFTOP_GREENHOUSE",
+          "words": null
+        },
+        {
+          "title": "The Bad Back",
+          "what": "Reaching for a high shelf, Augustine grips it as pain spikes through him and nearly collapses; Nora catches his arm, and he waves it off as a bad back.",
+          "who": [
+            "AUGUSTINE_KWOK",
+            "NORA_VANCE"
+          ],
+          "thread": "The Reckoning",
+          "location": "ROOFTOP_GREENHOUSE",
+          "words": {
+            "min": 100,
+            "max": 180,
+            "target": "100 to 180"
+          }
+        },
+        {
+          "title": "By the Mailboxes",
+          "what": "Shaken, Nora runs into Tommy by the mailboxes; he notices she's pale and asks if she's alright, and she deflects onto Augustine instead of herself.",
+          "who": [
+            "NORA_VANCE",
+            "TOMMY_LAU"
+          ],
+          "thread": "The Ninth Month",
+          "location": "LOBBY_ATRIUM",
+          "words": null
+        },
+        {
+          "title": "Among the Files",
+          "what": "Desmond finds Augustine among the tenant files and vents about the engineer's stonewalling, careful not to say he suspects someone paid for the lie.",
+          "who": [
+            "DESMOND_HALE",
+            "AUGUSTINE_KWOK"
+          ],
+          "thread": "The Auction Clock",
+          "location": "BASEMENT_ARCHIVE",
+          "words": null
+        },
+        {
+          "title": "The Math",
+          "what": "Late that night, Tommy tells Lila he can't stop wondering if the baby is his; she warns him gently to ask Nora outright instead of guessing.",
+          "who": [
+            "TOMMY_LAU",
+            "LILA_CHEN"
+          ],
+          "thread": "The Ninth Month",
+          "location": "CORNER_DINER",
+          "words": null
+        }
+      ],
+      "case": [
+        {
+          "label": "The Auction Clock",
+          "character_knowledge": {
+            "DESMOND_HALE": "He genuinely knows, from his own basement inspection, that the structural report's cited defects don't match what he found, and this episode he presses the engineer about it directly by phone; he doesn't know Julian is behind any of it or that the engineer was paid, and the deflection only leaves him more certain something is wrong without telling him who is responsible."
+          },
+          "solution": "Walter Tanaka died eight months before episode 1, leaving the Amaranth split fifty-fifty between his daughter Iris and a trust whose controlling signatory — hidden behind a numbered LLC — is Julian Reyes, Iris's fiancé. For two years Julian has quietly bought up the building's deferred maintenance debt and paid a structural engineer to fabricate the worst findings in a damning inspection report, engineering a thirty-day forced auction that Iris genuinely believes is her own grief-driven decision, unaware Julian intends to be its winning bidder.",
+          "objective_facts": [
+            "Walter Tanaka died 8 months before episode 1, leaving the Amaranth split 50/50 between Iris and a trust.",
+            "The trust's controlling signatory is Julian Reyes, though its public filings list only a numbered LLC.",
+            "Julian has purchased $340,000 of the building's deferred maintenance debt over the past two years without Iris's knowledge.",
+            "The structural engineer's report cites two fabricated defects that Julian paid the inspector to add.",
+            "The auction is scheduled for exactly 30 days after the will's contest window closes, which is day 1 of episode 1.",
+            "Desmond has independently inspected the basement and found its real structural condition sound, contradicting the report."
+          ]
+        },
+        {
+          "label": "The Reckoning",
+          "character_knowledge": {
+            "AUGUSTINE_KWOK": "He knows the pain that drops him against the shelf came from the cancer, not his back, and the instant he sees Nora notice, he invents the bad-back excuse on reflex, protecting a diagnosis he's told no one about for six weeks; he gives away nothing about the ledger or Tommy in this moment.",
+            "NORA_VANCE": "She only sees an old man stumble and brush it off, and while the excuse doesn't quite sit right with her, she has no reason to suspect it's anything more than his age catching up with him, distracted as she already is by her own hidden countdown."
+          },
+          "solution": "Augustine was diagnosed with terminal pancreatic cancer six weeks before episode 1 and given a prognosis of three to four months; he has told no one, including Lila. He has visited the basement archive alone at least once a week since Tommy's release, each time deciding not to hand over the ledger that would clear Tommy's name — because doing so would also destroy Lila's memory of Henry as the husband she still grieves rather than the man who let an innocent teenager take his fall.",
+          "objective_facts": [
+            "Augustine was diagnosed 6 weeks before episode 1's present day.",
+            "His oncologist gave a prognosis of 3 to 4 months.",
+            "Augustine has told no one about the diagnosis.",
+            "The ledger proving Henry and Walter's fraud is in a fireproof box behind a specific loose brick in the basement archive.",
+            "Augustine has visited the basement archive alone at least once a week since Tommy's release, each time leaving the ledger untouched.",
+            "Augustine's next oncology follow-up appointment is scheduled for a fixed date within the season."
+          ]
+        },
+        {
+          "label": "The Frame-Up",
+          "character_knowledge": {
+            "TOMMY_LAU": "He knows he served twelve years for a fire he didn't set and is easing back into the neighborhood one careful interaction at a time, including with Lila, but he still has no idea her husband Henry helped engineer the frame that convicted him.",
+            "LILA_CHEN": "She's gentle with Tommy out of old guilt over how the neighborhood treated him, still believing Henry died without any hand in what happened to him, unaware her late husband and Walter arranged the fire together."
+          },
+          "solution": "Twelve years before episode 1, a fire gutted the Amaranth's east wing. Walter Tanaka and Lila's husband Henry Chen — both facing bankruptcy after Walter secretly embezzled from the building's renovation fund to cover Henry's gambling debts — staged the fire for the insurance payout. Tommy Lau, seventeen at the time, was framed with a planted gas can and a coerced statement from a paid-off security guard; he served twelve years of a fifteen-year sentence for an arson he didn't commit. Building superintendent Augustine Kwok had removed Walter's original embezzlement ledger from his office two nights before the fire, suspecting something was wrong, and has hidden it in the basement archive ever since, unable to prove foul play until Henry's death.",
+          "objective_facts": [
+            "The east-wing fire occurred 12 years before episode 1's present day.",
+            "Walter Tanaka embezzled $180,000 from the building's 1998 renovation fund to cover Henry Chen's gambling debts.",
+            "Walter and Henry jointly arranged the arson for the insurance payout, timed six weeks before the embezzlement was due to be audited.",
+            "The security guard who testified against Tommy, Ray Odell, was paid $5,000 by Walter and has since left the state.",
+            "Augustine removed the original embezzlement ledger from Walter's office two nights before the fire and has hidden it since in a fireproof box behind the loose brick in the basement archive.",
+            "Henry Chen died 4 years ago without ever telling Lila the truth.",
+            "Tommy was released on parole 3 days before episode 1 begins, having served 12 of his 15-year sentence."
+          ]
+        },
+        {
+          "label": "The Ninth Month",
+          "character_knowledge": {
+            "NORA_VANCE": "She continues letting Tommy and the building believe he might be the father, though tonight her mind is elsewhere on Augustine's stumble, and she still hasn't decided how she'll answer if Tommy ever asks her outright.",
+            "TOMMY_LAU": "He's begun quietly counting the months since their one night together and doing math that doesn't quite add up, though he hasn't yet voiced the question directly to Nora, confiding his doubt to Lila instead.",
+            "LILA_CHEN": "She has no idea Julian is involved and assumes, like everyone else, that the baby might be Tommy's; she nudges him to ask Nora directly, unaware she's encouraging a conversation that could unravel more than paternity."
+          },
+          "solution": "Nora is six months pregnant by Julian Reyes, Iris's fiancé, conceived during a location-scouting trip for the auction before Iris had fully returned to the city. Julian does not know Nora is pregnant or that she intends to keep the baby. Nora spent one night with Tommy shortly after his release — unrelated to the pregnancy, since she was already carrying by then — and has let the neighborhood's assumption that Tommy is the father stand uncorrected, both to protect Julian's engagement to Iris and because Tommy has never pushed her to deny it.",
+          "objective_facts": [
+            "Nora is 26 weeks pregnant as of episode 1.",
+            "Conception occurred during a dated location-scouting trip Julian took for the Amaranth auction, roughly six weeks before Iris permanently returned to the city.",
+            "Julian does not know Nora is pregnant.",
+            "Nora and Tommy spent one night together 2 days after his release, after Nora was already pregnant.",
+            "Nora has never confirmed or denied to anyone that Tommy is the father.",
+            "Nora has an ultrasound appointment scheduled for a fixed date within the season, which she has told no one about."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "Whose Baby",
+      "theme": "Tommy's direct question to Nora pushes the Ninth Month past deflection into deliberate ambiguity, forcing her to actively let a bigger lie stand rather than merely allow an assumption to persist.",
+      "intro_note": "Three days after Desmond's confrontation with the structural engineer went nowhere, and Augustine's stumble in the greenhouse got waved off as nothing more than a bad back, the Amaranth settles into an uneasy quiet — but Tommy has stopped being satisfied with what people assume, and starts asking outright.",
+      "outro_note": "That night, after the diner empties out, Lila stays late to close the register and pulls out Henry's old handwritten ledgers to update her own books — and pauses, pencil hovering, over a column of figures from 1998 that doesn't add up the way she remembers it.",
+      "sections": [
+        {
+          "title": "Doubts in the Lobby",
+          "what": "Desmond tells Iris the engineer dodged every question about the basement, and urges her to delay the auction; Iris refuses, trusting the report over her own building manager.",
+          "who": [
+            "DESMOND_HALE",
+            "IRIS_TANAKA"
+          ],
+          "thread": "The Auction Clock",
+          "location": "LOBBY_ATRIUM",
+          "words": null
+        },
+        {
+          "title": "The Bucket Still Drips",
+          "what": "Augustine waters the greenhouse beside Nora, wincing through pain he brushes off again as a bad back, and gently asks how she's really doing without pressing further.",
+          "who": [
+            "AUGUSTINE_KWOK",
+            "NORA_VANCE"
+          ],
+          "thread": "The Reckoning",
+          "location": "ROOFTOP_GREENHOUSE",
+          "words": null
+        },
+        {
+          "title": "The Loose Brick, Again",
+          "what": "Augustine descends to the archive alone, weaker than the week before, and leaves the fireproof box hidden behind the brick untouched once more.",
+          "who": [
+            "AUGUSTINE_KWOK"
+          ],
+          "thread": "The Frame-Up",
+          "location": "BASEMENT_ARCHIVE",
+          "words": {
+            "min": 150,
+            "max": 220,
+            "target": "150 to 220"
+          }
+        },
+        {
+          "title": "What Tommy Wants to Believe",
+          "what": "Tommy tells Lila over pie that he wants the baby to be his, someone worth staying clean for, and Lila urges him to just ask Nora outright.",
+          "who": [
+            "TOMMY_LAU",
+            "LILA_CHEN"
+          ],
+          "thread": "The Ninth Month",
+          "location": "CORNER_DINER",
+          "words": null
+        },
+        {
+          "title": "Whose Baby",
+          "what": "Tommy corners Nora by the mailboxes and asks directly if the baby is his; she neither confirms nor denies it, letting him draw his own hopeful conclusion.",
+          "who": [
+            "TOMMY_LAU",
+            "NORA_VANCE"
+          ],
+          "thread": "The Ninth Month",
+          "location": "LOBBY_ATRIUM",
+          "words": {
+            "min": 150,
+            "max": 230,
+            "target": "150 to 230"
+          }
+        },
+        {
+          "title": "After the Question",
+          "what": "Shaken, Nora seeks out Lila at the diner, saying only that Tommy asked her something hard without naming what, and Lila reads more warmth into it than truth.",
+          "who": [
+            "NORA_VANCE",
+            "LILA_CHEN"
+          ],
+          "thread": "The Ninth Month",
+          "location": "CORNER_DINER",
+          "words": null
+        },
+        {
+          "title": "Numbers She Trusts",
+          "what": "Iris takes the inspection report up to the greenhouse for quiet and rereads it alone, resolving to proceed with the auction, certain grief hasn't clouded her judgment.",
+          "who": [
+            "IRIS_TANAKA"
+          ],
+          "thread": "The Auction Clock",
+          "location": "ROOFTOP_GREENHOUSE",
+          "words": null
+        },
+        {
+          "title": "The Building Still Standing",
+          "what": "Desmond finds Tommy fixing a broken lobby fixture unasked, and quietly tells him the building remembers who helped it, not just who hurt it.",
+          "who": [
+            "DESMOND_HALE",
+            "TOMMY_LAU"
+          ],
+          "thread": "The Frame-Up",
+          "location": "LOBBY_ATRIUM",
+          "words": null
+        }
+      ],
+      "case": [
+        {
+          "label": "The Auction Clock",
+          "character_knowledge": {
+            "DESMOND_HALE": "Knows his own basement inspection found the structure sound, directly contradicting the engineer's report, and keeps pressing Iris on that gap without knowing who commissioned the fabrication or why — he's genuinely suspicious but has no name to attach to it yet.",
+            "IRIS_TANAKA": "Believes the inspection report and her decision to force the sale are entirely her own grief-driven judgment, unaware her fiancé Julian secretly manufactured the auction's urgency and stands to profit; she grows defensive when Desmond questions the numbers because doubting the report would mean doubting her own resolve."
+          },
+          "solution": "Walter Tanaka died eight months before episode 1, leaving the Amaranth split fifty-fifty between his daughter Iris and a trust whose controlling signatory — hidden behind a numbered LLC — is Julian Reyes, Iris's fiancé. For two years Julian has quietly bought up the building's deferred maintenance debt and paid a structural engineer to fabricate the worst findings in a damning inspection report, engineering a thirty-day forced auction that Iris genuinely believes is her own grief-driven decision, unaware Julian intends to be its winning bidder.",
+          "objective_facts": [
+            "Walter Tanaka died 8 months before episode 1, leaving the Amaranth split 50/50 between Iris and a trust.",
+            "The trust's controlling signatory is Julian Reyes, though its public filings list only a numbered LLC.",
+            "Julian has purchased $340,000 of the building's deferred maintenance debt over the past two years without Iris's knowledge.",
+            "The structural engineer's report cites two fabricated defects that Julian paid the inspector to add.",
+            "The auction is scheduled for exactly 30 days after the will's contest window closes, which is day 1 of episode 1.",
+            "Desmond has independently inspected the basement and found its real structural condition sound, contradicting the report."
+          ]
+        },
+        {
+          "label": "The Reckoning",
+          "character_knowledge": {
+            "AUGUSTINE_KWOK": "Knows he is dying of pancreatic cancer diagnosed six weeks ago and continues concealing it, this week masking real physical pain from Nora as nothing more than a bad back, careful not to worry her while sensing she carries her own quiet burden he doesn't ask about.",
+            "NORA_VANCE": "Senses Augustine is hiding something more serious than a sore back but doesn't push, distracted by her own secret and grateful for his gentle, undemanding company in the greenhouse."
+          },
+          "solution": "Augustine was diagnosed with terminal pancreatic cancer six weeks before episode 1 and given a prognosis of three to four months; he has told no one, including Lila. He has visited the basement archive alone at least once a week since Tommy's release, each time deciding not to hand over the ledger that would clear Tommy's name — because doing so would also destroy Lila's memory of Henry as the husband she still grieves rather than the man who let an innocent teenager take his fall.",
+          "objective_facts": [
+            "Augustine was diagnosed 6 weeks before episode 1's present day.",
+            "His oncologist gave a prognosis of 3 to 4 months.",
+            "Augustine has told no one about the diagnosis.",
+            "The ledger proving Henry and Walter's fraud is in a fireproof box behind a specific loose brick in the basement archive.",
+            "Augustine has visited the basement archive alone at least once a week since Tommy's release, each time leaving the ledger untouched.",
+            "Augustine's next oncology follow-up appointment is scheduled for a fixed date within the season."
+          ]
+        },
+        {
+          "label": "The Frame-Up",
+          "character_knowledge": {
+            "AUGUSTINE_KWOK": "Knows the fireproof box behind the loose brick holds the ledger proving Henry and Walter framed Tommy for the arson, and again chooses not to retrieve it, torn between clearing Tommy's name and destroying Lila's memory of Henry — a choice that weighs heavier now that his own time is running out.",
+            "TOMMY_LAU": "Has no knowledge of the ledger or where it's hidden, only feels the neighborhood's lingering suspicion and tries to earn back trust through small unasked acts like fixing the lobby fixture, wrongly believing redemption is something he has to work for rather than something the truth would simply hand him.",
+            "DESMOND_HALE": "Doesn't know the fire was staged by Walter and Henry or that Augustine has proof hidden nearby; genuinely believes in Tommy's rehabilitation and offers him quiet, unknowing loyalty that sits closer to the buried truth than he realizes."
+          },
+          "solution": "Twelve years before episode 1, a fire gutted the Amaranth's east wing. Walter Tanaka and Lila's husband Henry Chen — both facing bankruptcy after Walter secretly embezzled from the building's renovation fund to cover Henry's gambling debts — staged the fire for the insurance payout. Tommy Lau, seventeen at the time, was framed with a planted gas can and a coerced statement from a paid-off security guard; he served twelve years of a fifteen-year sentence for an arson he didn't commit. Building superintendent Augustine Kwok had removed Walter's original embezzlement ledger from his office two nights before the fire, suspecting something was wrong, and has hidden it in the basement archive ever since, unable to prove foul play until Henry's death.",
+          "objective_facts": [
+            "The east-wing fire occurred 12 years before episode 1's present day.",
+            "Walter Tanaka embezzled $180,000 from the building's 1998 renovation fund to cover Henry Chen's gambling debts.",
+            "Walter and Henry jointly arranged the arson for the insurance payout, timed six weeks before the embezzlement was due to be audited.",
+            "The security guard who testified against Tommy, Ray Odell, was paid $5,000 by Walter and has since left the state.",
+            "Augustine removed the original embezzlement ledger from Walter's office two nights before the fire and has hidden it since in a fireproof box behind the loose brick in the basement archive.",
+            "Henry Chen died 4 years ago without ever telling Lila the truth.",
+            "Tommy was released on parole 3 days before episode 1 begins, having served 12 of his 15-year sentence."
+          ]
+        },
+        {
+          "label": "The Ninth Month",
+          "character_knowledge": {
+            "TOMMY_LAU": "Doesn't know Julian exists as a possibility and has no reason to suspect him; having spent one night with Nora after his release, he wants to believe the baby is his and asks her outright this episode, choosing to read her non-answer as confirmation because he needs something to hold onto.",
+            "NORA_VANCE": "Knows Julian is the father and that Tommy isn't, but when directly asked, deliberately neither confirms nor denies it — a conscious escalation from merely letting an assumption stand — because the truth would expose Julian's affair and unravel Iris's engagement.",
+            "LILA_CHEN": "Doesn't know who the father is or that Nora is deceiving anyone; encourages Tommy to ask Nora directly out of genuine warmth, and afterward reads Nora's shaken mood as evidence of real feeling between them, unaware of what was actually left unsaid."
+          },
+          "solution": "Nora is six months pregnant by Julian Reyes, Iris's fiancé, conceived during a location-scouting trip for the auction before Iris had fully returned to the city. Julian does not know Nora is pregnant or that she intends to keep the baby. Nora spent one night with Tommy shortly after his release — unrelated to the pregnancy, since she was already carrying by then — and has let the neighborhood's assumption that Tommy is the father stand uncorrected, both to protect Julian's engagement to Iris and because Tommy has never pushed her to deny it.",
+          "objective_facts": [
+            "Nora is 26 weeks pregnant as of episode 1.",
+            "Conception occurred during a dated location-scouting trip Julian took for the Amaranth auction, roughly six weeks before Iris permanently returned to the city.",
+            "Julian does not know Nora is pregnant.",
+            "Nora and Tommy spent one night together 2 days after his release, after Nora was already pregnant.",
+            "Nora has never confirmed or denied to anyone that Tommy is the father.",
+            "Nora has an ultrasound appointment scheduled for a fixed date within the season, which she has told no one about."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "Henry's Handwriting",
+      "theme": "The season's sharpest turn: Lila's own discovery in Henry's old books ties her late husband to Walter's embezzlement, partially surfacing the Frame-Up's buried fraud and cracking her decade of grieving him as she knew him, a rupture the rest of the season will have to live inside.",
+      "intro_note": "Three days after Tommy asked Nora point-blank whether the baby is his and got silence instead of an answer, the building settles into an uneasy quiet — until one woman's late-night bookkeeping cracks open a decade of grief no one saw coming.",
+      "outro_note": "Lila's question about her husband's handwriting is loose in the building now, and so is the strain it's put on Augustine — and two more people are about to start noticing what he's carrying: one in a briefcase full of paperwork, the other in an empty basement doorway.",
+      "sections": [
+        {
+          "title": "The Numbers Don't Match",
+          "what": "Late at night, Lila cross-checks Henry's handwritten ledgers against the diner's books and finds numbers from 1998 that don't match anything of her own.",
+          "who": [
+            "LILA_CHEN"
+          ],
+          "thread": "The Frame-Up",
+          "location": "CORNER_DINER",
+          "words": null
+        },
+        {
+          "title": "Confronting Augustine",
+          "what": "Lila brings the ledger page to Augustine in the basement archive, demanding what he knows about Walter's 1998 renovation fund; he denies knowing more.",
+          "who": [
+            "LILA_CHEN",
+            "AUGUSTINE_KWOK"
+          ],
+          "thread": "The Frame-Up",
+          "location": "BASEMENT_ARCHIVE",
+          "words": {
+            "min": 140,
+            "max": 230,
+            "target": "140 to 230"
+          }
+        },
+        {
+          "title": "Steadying Himself",
+          "what": "Watering the greenhouse alone, Augustine steadies himself through a sudden wave of pain, calming his breathing just before Nora arrives to ask after him.",
+          "who": [
+            "AUGUSTINE_KWOK",
+            "NORA_VANCE"
+          ],
+          "thread": "The Reckoning",
+          "location": "ROOFTOP_GREENHOUSE",
+          "words": null
+        },
+        {
+          "title": "Unanswered",
+          "what": "In the lobby, Nora and Tommy pass each other; his question about the baby still unanswered hangs between them as she deflects with small talk.",
+          "who": [
+            "NORA_VANCE",
+            "TOMMY_LAU"
+          ],
+          "thread": "The Ninth Month",
+          "location": "LOBBY_ATRIUM",
+          "words": null
+        },
+        {
+          "title": "Trusting the Paperwork",
+          "what": "In the diner, Desmond presses Iris again about the structural report's inconsistencies, but she insists the numbers are solid, trusting Julian's paperwork completely.",
+          "who": [
+            "DESMOND_HALE",
+            "IRIS_TANAKA"
+          ],
+          "thread": "The Auction Clock",
+          "location": "CORNER_DINER",
+          "words": null
+        },
+        {
+          "title": "Rattled",
+          "what": "Rattled, Lila corners Desmond in the lobby and admits something about Henry's old books feels wrong, without naming what, then refuses his help.",
+          "who": [
+            "LILA_CHEN",
+            "DESMOND_HALE"
+          ],
+          "thread": "The Frame-Up",
+          "location": "LOBBY_ATRIUM",
+          "words": null
+        },
+        {
+          "title": "Searching Again",
+          "what": "Tommy returns to the basement archive searching for his old case file, unaware Lila has just found a ledger discrepancy tied to the same building records.",
+          "who": [
+            "TOMMY_LAU"
+          ],
+          "thread": "The Frame-Up",
+          "location": "BASEMENT_ARCHIVE",
+          "words": null
+        },
+        {
+          "title": "Not Answering",
+          "what": "In the archive after Lila leaves, Augustine lingers by the loose brick and doesn't answer when Desmond calls down the stairs checking he's alright.",
+          "who": [
+            "AUGUSTINE_KWOK",
+            "DESMOND_HALE"
+          ],
+          "thread": "The Reckoning",
+          "location": "BASEMENT_ARCHIVE",
+          "words": {
+            "min": 100,
+            "max": 180,
+            "target": "100 to 180"
+          }
+        }
+      ],
+      "case": [
+        {
+          "label": "The Frame-Up",
+          "character_knowledge": {
+            "LILA_CHEN": "She has genuinely discovered a discrepancy in Henry's handwriting tying him to Walter's 1998 renovation fund and doesn't yet know it connects to embezzlement, arson, or Tommy's conviction — she wrongly assumes it might be some isolated bookkeeping favor Henry did for Walter, not fraud, and her confrontation with Augustine is driven by confusion and fear rather than certainty.",
+            "AUGUSTINE_KWOK": "He knows the complete truth — that Walter and Henry embezzled from the renovation fund and staged the fire together, and that he himself pulled the original ledger from Walter's office and has hidden it in the basement ever since — and he flatly denies knowing more to Lila's face, protecting her decade of grieving Henry rather than the man who let Tommy take the fall.",
+            "TOMMY_LAU": "He knows he's innocent and is still searching the archive for anything that might clear his name, but he has no idea a ledger exists, where it's hidden, or that Lila has just stumbled onto a related thread; he genuinely believes he's searching alone.",
+            "DESMOND_HALE": "He only hears Lila's vague unease about Henry's old books, with no specifics, and has no knowledge of any ledger, embezzlement, or arson connection — to him it reads as ordinary grief resurfacing, not a lead."
+          },
+          "solution": "Twelve years before episode 1, a fire gutted the Amaranth's east wing. Walter Tanaka and Lila's husband Henry Chen — both facing bankruptcy after Walter secretly embezzled from the building's renovation fund to cover Henry's gambling debts — staged the fire for the insurance payout. Tommy Lau, seventeen at the time, was framed with a planted gas can and a coerced statement from a paid-off security guard; he served twelve years of a fifteen-year sentence for an arson he didn't commit. Building superintendent Augustine Kwok had removed Walter's original embezzlement ledger from his office two nights before the fire, suspecting something was wrong, and has hidden it in the basement archive ever since, unable to prove foul play until Henry's death.",
+          "objective_facts": [
+            "The east-wing fire occurred 12 years before episode 1's present day.",
+            "Walter Tanaka embezzled $180,000 from the building's 1998 renovation fund to cover Henry Chen's gambling debts.",
+            "Walter and Henry jointly arranged the arson for the insurance payout, timed six weeks before the embezzlement was due to be audited.",
+            "The security guard who testified against Tommy, Ray Odell, was paid $5,000 by Walter and has since left the state.",
+            "Augustine removed the original embezzlement ledger from Walter's office two nights before the fire and has hidden it since in a fireproof box behind the loose brick in the basement archive.",
+            "Henry Chen died 4 years ago without ever telling Lila the truth.",
+            "Tommy was released on parole 3 days before episode 1 begins, having served 12 of his 15-year sentence."
+          ]
+        },
+        {
+          "label": "The Reckoning",
+          "character_knowledge": {
+            "AUGUSTINE_KWOK": "He was diagnosed with terminal cancer six weeks ago and has told no one; today's pain in the greenhouse and his delayed response to Desmond in the archive are both real physical decline he's covering with distraction and silence, made worse by the emotional weight of lying to Lila moments earlier.",
+            "NORA_VANCE": "She noticed Augustine looked unsteady before and still doesn't know why; she takes his composure at face value once he waves her off, having no reason to suspect it's anything more than age or a bad back.",
+            "DESMOND_HALE": "He notices Augustine is slow to answer from the archive and files it away as odd, but he has no idea it's connected to illness — to him it's just another small thing about Augustine that doesn't quite add up yet."
+          },
+          "solution": "Augustine was diagnosed with terminal pancreatic cancer six weeks before episode 1 and given a prognosis of three to four months; he has told no one, including Lila. He has visited the basement archive alone at least once a week since Tommy's release, each time deciding not to hand over the ledger that would clear Tommy's name — because doing so would also destroy Lila's memory of Henry as the husband she still grieves rather than the man who let an innocent teenager take his fall.",
+          "objective_facts": [
+            "Augustine was diagnosed 6 weeks before episode 1's present day.",
+            "His oncologist gave a prognosis of 3 to 4 months.",
+            "Augustine has told no one about the diagnosis.",
+            "The ledger proving Henry and Walter's fraud is in a fireproof box behind a specific loose brick in the basement archive.",
+            "Augustine has visited the basement archive alone at least once a week since Tommy's release, each time leaving the ledger untouched.",
+            "Augustine's next oncology follow-up appointment is scheduled for a fixed date within the season."
+          ]
+        },
+        {
+          "label": "The Ninth Month",
+          "character_knowledge": {
+            "NORA_VANCE": "She knows the baby is Julian's and has still never confirmed or denied to Tommy that he's the father; her deflection in the lobby is deliberate, protecting both Julian's engagement and her own unfinished decision about what to say.",
+            "TOMMY_LAU": "He asked her directly in the last few days and got no real answer; he doesn't know the truth and, reading her silence as evasion rather than denial, is starting to genuinely wonder if the child could be his."
+          },
+          "solution": "Nora is six months pregnant by Julian Reyes, Iris's fiancé, conceived during a location-scouting trip for the auction before Iris had fully returned to the city. Julian does not know Nora is pregnant or that she intends to keep the baby. Nora spent one night with Tommy shortly after his release — unrelated to the pregnancy, since she was already carrying by then — and has let the neighborhood's assumption that Tommy is the father stand uncorrected, both to protect Julian's engagement to Iris and because Tommy has never pushed her to deny it.",
+          "objective_facts": [
+            "Nora is 26 weeks pregnant as of episode 1.",
+            "Conception occurred during a dated location-scouting trip Julian took for the Amaranth auction, roughly six weeks before Iris permanently returned to the city.",
+            "Julian does not know Nora is pregnant.",
+            "Nora and Tommy spent one night together 2 days after his release, after Nora was already pregnant.",
+            "Nora has never confirmed or denied to anyone that Tommy is the father.",
+            "Nora has an ultrasound appointment scheduled for a fixed date within the season, which she has told no one about."
+          ]
+        },
+        {
+          "label": "The Auction Clock",
+          "character_knowledge": {
+            "IRIS_TANAKA": "She trusts the structural engineer's report and Julian's handling of the numbers completely, with no idea he commissioned the fabricated findings or has been quietly buying up the building's debt; to her, pressing forward with the auction is simply the responsible, if painful, choice.",
+            "DESMOND_HALE": "He knows from his own basement inspection that the report's worst findings don't hold up, but he still doesn't know who paid for the fabrication or that Julian is behind it; pressing Iris again is him probing a contradiction he can feel but can't yet name."
+          },
+          "solution": "Walter Tanaka died eight months before episode 1, leaving the Amaranth split fifty-fifty between his daughter Iris and a trust whose controlling signatory — hidden behind a numbered LLC — is Julian Reyes, Iris's fiancé. For two years Julian has quietly bought up the building's deferred maintenance debt and paid a structural engineer to fabricate the worst findings in a damning inspection report, engineering a thirty-day forced auction that Iris genuinely believes is her own grief-driven decision, unaware Julian intends to be its winning bidder.",
+          "objective_facts": [
+            "Walter Tanaka died 8 months before episode 1, leaving the Amaranth split 50/50 between Iris and a trust.",
+            "The trust's controlling signatory is Julian Reyes, though its public filings list only a numbered LLC.",
+            "Julian has purchased $340,000 of the building's deferred maintenance debt over the past two years without Iris's knowledge.",
+            "The structural engineer's report cites two fabricated defects that Julian paid the inspector to add.",
+            "The auction is scheduled for exactly 30 days after the will's contest window closes, which is day 1 of episode 1.",
+            "Desmond has independently inspected the basement and found its real structural condition sound, contradicting the report."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "Two Tuesdays",
+      "theme": "Both remaining threads tighten toward exposure at once: Iris stumbles onto financial proof that inches the Auction Clock toward Julian without yet naming him, while Desmond's catch of Augustine's missed appointments and thin lie brings the Reckoning to the edge of discovery.",
+      "intro_note": "A few days after Lila found Henry's name tangled in Walter's old renovation numbers—and after Augustine's flat denial that he knew anything more—the building has gone quiet on the surface, though nothing she read has stopped turning over in her mind.",
+      "outro_note": "Desmond has a lie he can't yet explain and Iris has papers she can't yet name, and neither one has noticed that Nora's own calendar has a single date circled that she hasn't shown to anyone at the Amaranth.",
+      "sections": [
+        {
+          "title": "The Missing Tuesday",
+          "what": "Desmond tells Lila he has missed Augustine at their usual Tuesday coffee twice running now and admits he's starting to worry.",
+          "who": [
+            "DESMOND_HALE",
+            "LILA_CHEN"
+          ],
+          "thread": "The Reckoning",
+          "location": "LOBBY_ATRIUM",
+          "words": null
+        },
+        {
+          "title": "The Open Briefcase",
+          "what": "Iris waits alone while Julian steps outside to take a call, and glancing into his open briefcase finds bank records tying the LLC's debt purchases to one shared account.",
+          "who": [
+            "IRIS_TANAKA"
+          ],
+          "thread": "The Auction Clock",
+          "location": "CORNER_DINER",
+          "words": null
+        },
+        {
+          "title": "A Bad Knee",
+          "what": "Augustine waters the greenhouse beside Nora and brushes off a wince of pain as a bad knee, the same lie he's used before.",
+          "who": [
+            "AUGUSTINE_KWOK",
+            "NORA_VANCE"
+          ],
+          "thread": "The Reckoning",
+          "location": "ROOFTOP_GREENHOUSE",
+          "words": null
+        },
+        {
+          "title": "The Hardware Store",
+          "what": "Desmond intercepts Augustine returning to the lobby and asks where he spent the afternoon; Augustine claims the hardware store, but Desmond has spotted a clinic parking stub in his coat.",
+          "who": [
+            "DESMOND_HALE",
+            "AUGUSTINE_KWOK"
+          ],
+          "thread": "The Reckoning",
+          "location": "LOBBY_ATRIUM",
+          "words": {
+            "min": 150,
+            "max": 250,
+            "target": "150 to 250"
+          }
+        },
+        {
+          "title": "The Shared Account",
+          "what": "Iris shows Desmond the account records from Julian's briefcase, and his own suspicions about the fabricated inspection report suddenly feel less separate from hers.",
+          "who": [
+            "IRIS_TANAKA",
+            "DESMOND_HALE"
+          ],
+          "thread": "The Auction Clock",
+          "location": "CORNER_DINER",
+          "words": null
+        },
+        {
+          "title": "The Bulb Still Burns",
+          "what": "Shaken after Desmond's questions, Augustine retreats to the basement archive and sits near the loose brick for a long time without touching it.",
+          "who": [
+            "AUGUSTINE_KWOK"
+          ],
+          "thread": "The Reckoning",
+          "location": "BASEMENT_ARCHIVE",
+          "words": {
+            "min": 120,
+            "max": 200,
+            "target": "120 to 200"
+          }
+        },
+        {
+          "title": "Henry's Ghost",
+          "what": "Tommy notices Lila's distraction at the diner and asks what's wrong; she deflects toward the auction instead of the discovery she made in Henry's old books.",
+          "who": [
+            "LILA_CHEN",
+            "TOMMY_LAU"
+          ],
+          "thread": "The Frame-Up",
+          "location": "CORNER_DINER",
+          "words": null
+        },
+        {
+          "title": "Two Tuesdays",
+          "what": "Alone in the lobby beneath the stopped clock, Iris studies the photocopied records, weighing whether to confront Julian directly, and pockets them instead.",
+          "who": [
+            "IRIS_TANAKA"
+          ],
+          "thread": "The Auction Clock",
+          "location": "LOBBY_ATRIUM",
+          "words": {
+            "min": 120,
+            "max": 200,
+            "target": "120 to 200"
+          }
+        }
+      ],
+      "case": [
+        {
+          "label": "The Auction Clock",
+          "character_knowledge": {
+            "IRIS_TANAKA": "She still believes the auction is her own grief-driven decision, resting on an inspection report she trusts completely and has no idea Julian commissioned. Today she found bank records in his briefcase tying the numbered LLC's debt purchases to a shared account, which unsettles her enough to show Desmond, but she reflexively assumes the account belongs to some associate of Julian's handling his affairs, not to Julian himself.",
+            "DESMOND_HALE": "He knows from his own basement inspection that the structural report is fabricated and, since confronting the engineer in episode 5, suspects someone has been buying up the building's debt to force the sale, though the engineer never gave him a name. When Iris shows him the shared-account records, the pattern matches what he already distrusts, but he has no reason yet to connect that account to Julian specifically."
+          },
+          "solution": "Walter Tanaka died eight months before episode 1, leaving the Amaranth split fifty-fifty between his daughter Iris and a trust whose controlling signatory — hidden behind a numbered LLC — is Julian Reyes, Iris's fiancé. For two years Julian has quietly bought up the building's deferred maintenance debt and paid a structural engineer to fabricate the worst findings in a damning inspection report, engineering a thirty-day forced auction that Iris genuinely believes is her own grief-driven decision, unaware Julian intends to be its winning bidder.",
+          "objective_facts": [
+            "Walter Tanaka died 8 months before episode 1, leaving the Amaranth split 50/50 between Iris and a trust.",
+            "The trust's controlling signatory is Julian Reyes, though its public filings list only a numbered LLC.",
+            "Julian has purchased $340,000 of the building's deferred maintenance debt over the past two years without Iris's knowledge.",
+            "The structural engineer's report cites two fabricated defects that Julian paid the inspector to add.",
+            "The auction is scheduled for exactly 30 days after the will's contest window closes, which is day 1 of episode 1.",
+            "Desmond has independently inspected the basement and found its real structural condition sound, contradicting the report."
+          ]
+        },
+        {
+          "label": "The Reckoning",
+          "character_knowledge": {
+            "AUGUSTINE_KWOK": "He knows he is dying and has told no one; this afternoon's absence was his second missed check-in in a row because of an oncology appointment he can't yet bring himself to explain. He lies to Desmond about being at the hardware store and downplays his pain to Nora as a bad knee, both familiar covers he's used before and knows are wearing thin.",
+            "DESMOND_HALE": "He genuinely doesn't know what's wrong with Augustine, only that two Tuesdays have now been missed and that the hardware-store story doesn't match the clinic parking stub he glimpsed in his coat pocket. He wrongly assumes it's something Augustine is embarrassed by—money trouble, maybe, or a doctor's visit about nothing serious—rather than imagining it could be terminal.",
+            "NORA_VANCE": "She sees Augustine wince while watering the greenhouse and takes his bad-knee excuse at face value, the same way she did in episode 5, because she has no reason to look closer and is preoccupied with her own concealed appointment coming up. She freely offers to help him with the heavier watering without suspecting anything beyond his age catching up with him."
+          },
+          "solution": "Augustine was diagnosed with terminal pancreatic cancer six weeks before episode 1 and given a prognosis of three to four months; he has told no one, including Lila. He has visited the basement archive alone at least once a week since Tommy's release, each time deciding not to hand over the ledger that would clear Tommy's name — because doing so would also destroy Lila's memory of Henry as the husband she still grieves rather than the man who let an innocent teenager take his fall.",
+          "objective_facts": [
+            "Augustine was diagnosed 6 weeks before episode 1's present day.",
+            "His oncologist gave a prognosis of 3 to 4 months.",
+            "Augustine has told no one about the diagnosis.",
+            "The ledger proving Henry and Walter's fraud is in a fireproof box behind a specific loose brick in the basement archive.",
+            "Augustine has visited the basement archive alone at least once a week since Tommy's release, each time leaving the ledger untouched.",
+            "Augustine's next oncology follow-up appointment is scheduled for a fixed date within the season."
+          ]
+        },
+        {
+          "label": "The Frame-Up",
+          "character_knowledge": {
+            "LILA_CHEN": "Since finding Henry's handwriting tangled in Walter's 1998 renovation numbers last episode, she's been quietly turning the discrepancy over, unable to shake the sense that her husband was involved in something he never told her, though she still lacks any concrete link to the fire itself. She deliberately deflects Tommy's question about her distraction toward auction talk, unwilling to voice a suspicion about Henry she isn't ready to say aloud.",
+            "TOMMY_LAU": "He has no idea Lila's distraction has anything to do with his own conviction or with Henry Chen; he only reads it as her being tired or stressed about the building's sale. He lets her change the subject without pushing, having learned in this building that people deflect for their own reasons."
+          },
+          "solution": "Twelve years before episode 1, a fire gutted the Amaranth's east wing. Walter Tanaka and Lila's husband Henry Chen — both facing bankruptcy after Walter secretly embezzled from the building's renovation fund to cover Henry's gambling debts — staged the fire for the insurance payout. Tommy Lau, seventeen at the time, was framed with a planted gas can and a coerced statement from a paid-off security guard; he served twelve years of a fifteen-year sentence for an arson he didn't commit. Building superintendent Augustine Kwok had removed Walter's original embezzlement ledger from his office two nights before the fire, suspecting something was wrong, and has hidden it in the basement archive ever since, unable to prove foul play until Henry's death.",
+          "objective_facts": [
+            "The east-wing fire occurred 12 years before episode 1's present day.",
+            "Walter Tanaka embezzled $180,000 from the building's 1998 renovation fund to cover Henry Chen's gambling debts.",
+            "Walter and Henry jointly arranged the arson for the insurance payout, timed six weeks before the embezzlement was due to be audited.",
+            "The security guard who testified against Tommy, Ray Odell, was paid $5,000 by Walter and has since left the state.",
+            "Augustine removed the original embezzlement ledger from Walter's office two nights before the fire and has hidden it since in a fireproof box behind the loose brick in the basement archive.",
+            "Henry Chen died 4 years ago without ever telling Lila the truth.",
+            "Tommy was released on parole 3 days before episode 1 begins, having served 12 of his 15-year sentence."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "The Appointment",
+      "theme": "Nora keeps her ultrasound appointment entirely alone, the Ninth Month's countdown reaching its most private milestone yet without resolving anything about who the father is or will be.",
+      "intro_note": "Two Tuesdays missed, and Desmond's question still hangs in the basement air — Augustine gave him nothing but a thin excuse. Upstairs, Iris hasn't let go of the numbers she found in Julian's briefcase, not yet sure what they add up to. Today, though, the building's attention turns to someone who slipped out before breakfast, telling no one where.",
+      "outro_note": "Three days now stand between the Amaranth and the auction block. In the basement, a loose brick still waits behind Augustine's silence. In a diner booth, Lila's question about her husband's handwriting hasn't gone away. And in a greenhouse gone quiet for the night, Nora holds a black-and-white photograph no one else at the Amaranth has seen — the season's clocks are all running down at once, and only one of them has just quietly, privately, ticked forward.",
+      "sections": [
+        {
+          "title": "Slipping Out",
+          "what": "Twenty-nine days since Tommy came home, Nora crosses the lobby dressed for an errand she won't name, deflecting Desmond's offer to walk her out.",
+          "who": [
+            "NORA_VANCE",
+            "DESMOND_HALE"
+          ],
+          "thread": "The Ninth Month",
+          "location": "LOBBY_ATRIUM",
+          "words": null
+        },
+        {
+          "title": "Missed Tuesdays, Again",
+          "what": "Nine weeks into a diagnosis no one knows, Augustine blames a doctor's appointment for his back when Desmond presses again about his missing afternoons.",
+          "who": [
+            "AUGUSTINE_KWOK",
+            "DESMOND_HALE"
+          ],
+          "thread": "The Reckoning",
+          "location": "BASEMENT_ARCHIVE",
+          "words": null
+        },
+        {
+          "title": "Greenhouse Shift",
+          "what": "Tommy helps water the greenhouse and asks lightly where Nora's gone today; Augustine deflects, then steers their talk toward the fire before it lingers.",
+          "who": [
+            "TOMMY_LAU",
+            "AUGUSTINE_KWOK"
+          ],
+          "thread": "The Frame-Up",
+          "location": "ROOFTOP_GREENHOUSE",
+          "words": null
+        },
+        {
+          "title": "Reading the Numbers",
+          "what": "Three days from the auction, Iris asks Lila to look over unfamiliar account records; Lila's old bookkeeping eye catches a pattern she can't yet name.",
+          "who": [
+            "IRIS_TANAKA",
+            "LILA_CHEN"
+          ],
+          "thread": "The Auction Clock",
+          "location": "CORNER_DINER",
+          "words": null
+        },
+        {
+          "title": "Alone in the Greenhouse",
+          "what": "Home from the clinic, Nora sits alone among Augustine's plants, replaying the ultrasound she watched by herself, telling no one at the Amaranth she went.",
+          "who": [
+            "NORA_VANCE"
+          ],
+          "thread": "The Ninth Month",
+          "location": "ROOFTOP_GREENHOUSE",
+          "words": {
+            "min": 150,
+            "max": 250,
+            "target": "150 to 250"
+          }
+        },
+        {
+          "title": "Circling the Ledger",
+          "what": "Lila lays Henry's discrepancy on the counter again and watches Augustine's hands go still; he denies knowing more, and she almost, almost believes him.",
+          "who": [
+            "LILA_CHEN",
+            "AUGUSTINE_KWOK"
+          ],
+          "thread": "The Frame-Up",
+          "location": "CORNER_DINER",
+          "words": null
+        },
+        {
+          "title": "Back Before Dark",
+          "what": "Nora slides into her usual booth that evening; Lila notices she's quieter than her jokes let on, and Nora talks fast past every question.",
+          "who": [
+            "NORA_VANCE",
+            "LILA_CHEN"
+          ],
+          "thread": "The Ninth Month",
+          "location": "CORNER_DINER",
+          "words": null
+        },
+        {
+          "title": "Three Days Out",
+          "what": "With the auction three days off, Desmond tells Iris his own basement inspection still contradicts the report, and for the first time, she hesitates.",
+          "who": [
+            "DESMOND_HALE",
+            "IRIS_TANAKA"
+          ],
+          "thread": "The Auction Clock",
+          "location": "LOBBY_ATRIUM",
+          "words": null
+        }
+      ],
+      "case": [
+        {
+          "label": "The Ninth Month",
+          "character_knowledge": {
+            "NORA_VANCE": "She knows the appointment date, that Julian is the father, and that she went entirely alone; she deliberately tells Desmond and Lila nothing about where she was, protecting both Julian's engagement and the shaky assumption the neighborhood holds about Tommy, and still hasn't decided what, if anything, she owes Tommy in truth.",
+            "DESMOND_HALE": "He only knows Nora left without explanation and brushed off his offer to help; he has no idea an appointment happened at all, and privately assumes it's just pregnancy errands she'd rather handle herself.",
+            "LILA_CHEN": "She notices Nora is quieter than usual that evening but reads it as pregnancy nerves, not secrecy; she still operates on the unconfirmed assumption that Tommy is the father and has no reason yet to doubt it."
+          },
+          "solution": "Nora is six months pregnant by Julian Reyes, Iris's fiancé, conceived during a location-scouting trip for the auction before Iris had fully returned to the city. Julian does not know Nora is pregnant or that she intends to keep the baby. Nora spent one night with Tommy shortly after his release — unrelated to the pregnancy, since she was already carrying by then — and has let the neighborhood's assumption that Tommy is the father stand uncorrected, both to protect Julian's engagement to Iris and because Tommy has never pushed her to deny it.",
+          "objective_facts": [
+            "Nora is 26 weeks pregnant as of episode 1.",
+            "Conception occurred during a dated location-scouting trip Julian took for the Amaranth auction, roughly six weeks before Iris permanently returned to the city.",
+            "Julian does not know Nora is pregnant.",
+            "Nora and Tommy spent one night together 2 days after his release, after Nora was already pregnant.",
+            "Nora has never confirmed or denied to anyone that Tommy is the father.",
+            "Nora has an ultrasound appointment scheduled for a fixed date within the season, which she has told no one about."
+          ]
+        },
+        {
+          "label": "The Reckoning",
+          "character_knowledge": {
+            "AUGUSTINE_KWOK": "He knows his diagnosis and prognosis in full and knows Desmond is now certain he's lying about his missing afternoons; he offers a vague doctor's-appointment excuse for his back to buy a little more silence, aware the cover is wearing thin.",
+            "DESMOND_HALE": "He doesn't know what Augustine is hiding, only that the excuses no longer add up after last week's lie; he wrongly assumes it's something minor like a flared-up old injury, not anything urgent."
+          },
+          "solution": "Augustine was diagnosed with terminal pancreatic cancer six weeks before episode 1 and given a prognosis of three to four months; he has told no one, including Lila. He has visited the basement archive alone at least once a week since Tommy's release, each time deciding not to hand over the ledger that would clear Tommy's name — because doing so would also destroy Lila's memory of Henry as the husband she still grieves rather than the man who let an innocent teenager take his fall.",
+          "objective_facts": [
+            "Augustine was diagnosed 6 weeks before episode 1's present day.",
+            "His oncologist gave a prognosis of 3 to 4 months.",
+            "Augustine has told no one about the diagnosis.",
+            "The ledger proving Henry and Walter's fraud is in a fireproof box behind a specific loose brick in the basement archive.",
+            "Augustine has visited the basement archive alone at least once a week since Tommy's release, each time leaving the ledger untouched.",
+            "Augustine's next oncology follow-up appointment is scheduled for a fixed date within the season."
+          ]
+        },
+        {
+          "label": "The Frame-Up",
+          "character_knowledge": {
+            "AUGUSTINE_KWOK": "He knows the full truth of the fire, the ledger behind the loose brick, and Ray Odell's payoff, and he continues withholding all of it from both Tommy and Lila, deflecting Tommy's question about Nora and Lila's question about Henry's books in the same day to protect what's left of Lila's grief.",
+            "LILA_CHEN": "She still believes she's chasing a bookkeeping error in Henry's old ledgers tied to Walter's 1998 renovation fund, not a frame-up; she presses Augustine gently again, sensing he's holding something back but not guessing how large it is.",
+            "TOMMY_LAU": "He has learned nothing new about who framed him this episode; he works beside Augustine in the greenhouse without any idea how close he's come to the truth, his questions about Nora's absence a passing curiosity rather than suspicion."
+          },
+          "solution": "Twelve years before episode 1, a fire gutted the Amaranth's east wing. Walter Tanaka and Lila's husband Henry Chen — both facing bankruptcy after Walter secretly embezzled from the building's renovation fund to cover Henry's gambling debts — staged the fire for the insurance payout. Tommy Lau, seventeen at the time, was framed with a planted gas can and a coerced statement from a paid-off security guard; he served twelve years of a fifteen-year sentence for an arson he didn't commit. Building superintendent Augustine Kwok had removed Walter's original embezzlement ledger from his office two nights before the fire, suspecting something was wrong, and has hidden it in the basement archive ever since, unable to prove foul play until Henry's death.",
+          "objective_facts": [
+            "The east-wing fire occurred 12 years before episode 1's present day.",
+            "Walter Tanaka embezzled $180,000 from the building's 1998 renovation fund to cover Henry Chen's gambling debts.",
+            "Walter and Henry jointly arranged the arson for the insurance payout, timed six weeks before the embezzlement was due to be audited.",
+            "The security guard who testified against Tommy, Ray Odell, was paid $5,000 by Walter and has since left the state.",
+            "Augustine removed the original embezzlement ledger from Walter's office two nights before the fire and has hidden it since in a fireproof box behind the loose brick in the basement archive.",
+            "Henry Chen died 4 years ago without ever telling Lila the truth.",
+            "Tommy was released on parole 3 days before episode 1 begins, having served 12 of his 15-year sentence."
+          ]
+        },
+        {
+          "label": "The Auction Clock",
+          "character_knowledge": {
+            "IRIS_TANAKA": "She has records tracing the numbered LLC's debt purchases to a shared account from Julian's briefcase, but hasn't yet connected them to Julian himself; she brings them to Lila and then Desmond for outside eyes, still trusting Julian's version of events over her own doubts.",
+            "LILA_CHEN": "She reads the unfamiliar account records Iris shows her with a bookkeeper's eye and senses a pattern she can't yet name, without knowing whose account it traces back to.",
+            "DESMOND_HALE": "He knows his own basement inspection directly contradicts the fabricated structural report and says so to Iris again, still without a name to put to who commissioned the fabrication."
+          },
+          "solution": "Walter Tanaka died eight months before episode 1, leaving the Amaranth split fifty-fifty between his daughter Iris and a trust whose controlling signatory — hidden behind a numbered LLC — is Julian Reyes, Iris's fiancé. For two years Julian has quietly bought up the building's deferred maintenance debt and paid a structural engineer to fabricate the worst findings in a damning inspection report, engineering a thirty-day forced auction that Iris genuinely believes is her own grief-driven decision, unaware Julian intends to be its winning bidder.",
+          "objective_facts": [
+            "Walter Tanaka died 8 months before episode 1, leaving the Amaranth split 50/50 between Iris and a trust.",
+            "The trust's controlling signatory is Julian Reyes, though its public filings list only a numbered LLC.",
+            "Julian has purchased $340,000 of the building's deferred maintenance debt over the past two years without Iris's knowledge.",
+            "The structural engineer's report cites two fabricated defects that Julian paid the inspector to add.",
+            "The auction is scheduled for exactly 30 days after the will's contest window closes, which is day 1 of episode 1.",
+            "Desmond has independently inspected the basement and found its real structural condition sound, contradicting the report."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "What the Ledger Says",
+      "theme": "The season's two closing threads land in the same breath: Iris exposes Julian's numbered LLC before the auction gavel falls, and Augustine finally opens the fireproof box, reading Walter and Henry's fraud aloud to Tommy and Lila and telling Lila, in the same conversation, that he is dying — while the Ninth Month's question of fatherhood and Nora's due date remain deliberately, visibly unresolved.",
+      "intro_note": "The morning after Nora's solitary ultrasound, day thirty arrives at the Amaranth exactly as scheduled: the auction Iris set in motion is finally here, and Augustine's six-week secret has one day left to hide.",
+      "outro_note": "",
+      "sections": [
+        {
+          "title": "Auction Morning",
+          "what": "Narrator marks day thirty as Desmond sets folding chairs in the lobby; Iris arrives resolved to sell, still unaware Julian intends to be the buyer.",
+          "who": [
+            "DESMOND_HALE",
+            "IRIS_TANAKA"
+          ],
+          "thread": "The Auction Clock",
+          "location": "LOBBY_ATRIUM",
+          "words": null
+        },
+        {
+          "title": "The Loose Brick",
+          "what": "Augustine finds Tommy searching old files again and, without explaining why, pries the loose brick free himself and pockets the fireproof box.",
+          "who": [
+            "AUGUSTINE_KWOK",
+            "TOMMY_LAU"
+          ],
+          "thread": "The Frame-Up",
+          "location": "BASEMENT_ARCHIVE",
+          "words": null
+        },
+        {
+          "title": "What the Ledger Says",
+          "what": "With Lila and Tommy in the basement, Augustine opens the ledger and reads aloud how Walter, Henry, and paid witness Ray Odell built Tommy's frame.",
+          "who": [
+            "AUGUSTINE_KWOK",
+            "TOMMY_LAU",
+            "LILA_CHEN"
+          ],
+          "thread": "The Frame-Up",
+          "location": "BASEMENT_ARCHIVE",
+          "words": {
+            "min": 400,
+            "max": 550,
+            "target": "400 to 550"
+          }
+        },
+        {
+          "title": "Six Weeks",
+          "what": "Alone with Lila after Tommy leaves to absorb the news, Augustine tells her he has terminal cancer, diagnosed six weeks ago and hidden since.",
+          "who": [
+            "AUGUSTINE_KWOK",
+            "LILA_CHEN"
+          ],
+          "thread": "The Reckoning",
+          "location": "BASEMENT_ARCHIVE",
+          "words": {
+            "min": 120,
+            "max": 220,
+            "target": "120 to 220"
+          }
+        },
+        {
+          "title": "The Numbered LLC",
+          "what": "Moments before the gavel falls, Iris takes the floor and publicly names Julian as the numbered LLC's controlling signatory behind the auction.",
+          "who": [
+            "IRIS_TANAKA",
+            "DESMOND_HALE"
+          ],
+          "thread": "The Auction Clock",
+          "location": "LOBBY_ATRIUM",
+          "words": {
+            "min": 150,
+            "max": 250,
+            "target": "150 to 250"
+          }
+        },
+        {
+          "title": "After the Gavel",
+          "what": "In the stunned lobby, Desmond confirms his own basement inspection was sound all along, while Iris grasps how long Julian had been lying.",
+          "who": [
+            "IRIS_TANAKA",
+            "DESMOND_HALE"
+          ],
+          "thread": "The Auction Clock",
+          "location": "LOBBY_ATRIUM",
+          "words": null
+        },
+        {
+          "title": "Whose Clock Now",
+          "what": "In the greenhouse, Nora tells Tommy she went to the ultrasound alone and still won't say whose child it is, leaving him unanswered.",
+          "who": [
+            "NORA_VANCE",
+            "TOMMY_LAU"
+          ],
+          "thread": "The Ninth Month",
+          "location": "ROOFTOP_GREENHOUSE",
+          "words": null
+        },
+        {
+          "title": "What Doesn't Close",
+          "what": "At the diner past midnight, Lila sits with the ledger's truth and Augustine's diagnosis both raw, unsure which loss she's grieving first.",
+          "who": [
+            "LILA_CHEN",
+            "AUGUSTINE_KWOK"
+          ],
+          "thread": "The Reckoning",
+          "location": "CORNER_DINER",
+          "words": {
+            "min": 120,
+            "max": 220,
+            "target": "120 to 220"
+          }
+        }
+      ],
+      "case": [
+        {
+          "label": "The Auction Clock",
+          "character_knowledge": {
+            "IRIS_TANAKA": "She has spent days quietly tracing the numbered LLC's debt purchases to a shared account without confirming the name behind it; standing at the auction, the last piece falls into place in real time and she names Julian publicly before she has fully absorbed the personal betrayal herself.",
+            "DESMOND_HALE": "He has known since his own basement inspection that the structural report was fabricated and has said so without ever learning who paid for it; Iris's public exposure of Julian confirms an instinct he's carried for episodes but could never prove alone."
+          },
+          "solution": "Walter Tanaka died eight months before episode 1, leaving the Amaranth split fifty-fifty between his daughter Iris and a trust whose controlling signatory — hidden behind a numbered LLC — is Julian Reyes, Iris's fiancé. For two years Julian has quietly bought up the building's deferred maintenance debt and paid a structural engineer to fabricate the worst findings in a damning inspection report, engineering a thirty-day forced auction that Iris genuinely believes is her own grief-driven decision, unaware Julian intends to be its winning bidder.",
+          "objective_facts": [
+            "Walter Tanaka died 8 months before episode 1, leaving the Amaranth split 50/50 between Iris and a trust.",
+            "The trust's controlling signatory is Julian Reyes, though its public filings list only a numbered LLC.",
+            "Julian has purchased $340,000 of the building's deferred maintenance debt over the past two years without Iris's knowledge.",
+            "The structural engineer's report cites two fabricated defects that Julian paid the inspector to add.",
+            "The auction is scheduled for exactly 30 days after the will's contest window closes, which is day 1 of episode 1.",
+            "Desmond has independently inspected the basement and found its real structural condition sound, contradicting the report."
+          ]
+        },
+        {
+          "label": "The Frame-Up",
+          "character_knowledge": {
+            "AUGUSTINE_KWOK": "He has hidden the embezzlement ledger for twelve years to protect Lila's memory of Henry, but between Tommy's persistent digging and his own narrowing timeline he decides tonight the truth outweighs that protection, and reads it aloud himself rather than let it be found by accident.",
+            "TOMMY_LAU": "He has only ever known he was framed, not by whom or how; hearing the ledger read aloud gives him his first real confirmation of Walter and Henry's scheme and Ray Odell's paid testimony, though he learns nothing here about Julian or Nora's pregnancy.",
+            "LILA_CHEN": "She arrived suspecting only that Henry's old books hid some financial irregularity tied to Walter's renovation fund; this scene is the first time she learns the full extent — that her husband helped orchestrate an innocent teenager's twelve-year imprisonment — and she has no way to soften it."
+          },
+          "solution": "Twelve years before episode 1, a fire gutted the Amaranth's east wing. Walter Tanaka and Lila's husband Henry Chen — both facing bankruptcy after Walter secretly embezzled from the building's renovation fund to cover Henry's gambling debts — staged the fire for the insurance payout. Tommy Lau, seventeen at the time, was framed with a planted gas can and a coerced statement from a paid-off security guard; he served twelve years of a fifteen-year sentence for an arson he didn't commit. Building superintendent Augustine Kwok had removed Walter's original embezzlement ledger from his office two nights before the fire, suspecting something was wrong, and has hidden it in the basement archive ever since, unable to prove foul play until Henry's death.",
+          "objective_facts": [
+            "The east-wing fire occurred 12 years before episode 1's present day.",
+            "Walter Tanaka embezzled $180,000 from the building's 1998 renovation fund to cover Henry Chen's gambling debts.",
+            "Walter and Henry jointly arranged the arson for the insurance payout, timed six weeks before the embezzlement was due to be audited.",
+            "The security guard who testified against Tommy, Ray Odell, was paid $5,000 by Walter and has since left the state.",
+            "Augustine removed the original embezzlement ledger from Walter's office two nights before the fire and has hidden it since in a fireproof box behind the loose brick in the basement archive.",
+            "Henry Chen died 4 years ago without ever telling Lila the truth.",
+            "Tommy was released on parole 3 days before episode 1 begins, having served 12 of his 15-year sentence."
+          ]
+        },
+        {
+          "label": "The Reckoning",
+          "character_knowledge": {
+            "AUGUSTINE_KWOK": "He has told no one about his diagnosis for six weeks, including Lila; having just chosen to break one silence with the ledger, he decides in the same breath not to leave this second truth unspoken, and tells her plainly that he is dying.",
+            "LILA_CHEN": "She had noticed Augustine tiring and slowing lately but assumed it was age or the greenhouse's demands, not illness; his confession lands as a second, separate blow in the same conversation where she is still absorbing what Henry did."
+          },
+          "solution": "Augustine was diagnosed with terminal pancreatic cancer six weeks before episode 1 and given a prognosis of three to four months; he has told no one, including Lila. He has visited the basement archive alone at least once a week since Tommy's release, each time deciding not to hand over the ledger that would clear Tommy's name — because doing so would also destroy Lila's memory of Henry as the husband she still grieves rather than the man who let an innocent teenager take his fall.",
+          "objective_facts": [
+            "Augustine was diagnosed 6 weeks before episode 1's present day.",
+            "His oncologist gave a prognosis of 3 to 4 months.",
+            "Augustine has told no one about the diagnosis.",
+            "The ledger proving Henry and Walter's fraud is in a fireproof box behind a specific loose brick in the basement archive.",
+            "Augustine has visited the basement archive alone at least once a week since Tommy's release, each time leaving the ledger untouched.",
+            "Augustine's next oncology follow-up appointment is scheduled for a fixed date within the season."
+          ]
+        },
+        {
+          "label": "The Ninth Month",
+          "character_knowledge": {
+            "NORA_VANCE": "She alone knows what the ultrasound showed and still hasn't named the father to anyone; she deflects Tommy's question again, aware the neighborhood's assumption about him is protecting Julian's engagement, though she senses that protection can't hold much longer.",
+            "TOMMY_LAU": "He still doesn't know whether the baby is his; freshly confronted with the truth about his own frame-up, he pushes Nora once more for a direct answer about the child, and leaves the greenhouse without getting one."
+          },
+          "solution": "Nora is six months pregnant by Julian Reyes, Iris's fiancé, conceived during a location-scouting trip for the auction before Iris had fully returned to the city. Julian does not know Nora is pregnant or that she intends to keep the baby. Nora spent one night with Tommy shortly after his release — unrelated to the pregnancy, since she was already carrying by then — and has let the neighborhood's assumption that Tommy is the father stand uncorrected, both to protect Julian's engagement to Iris and because Tommy has never pushed her to deny it.",
+          "objective_facts": [
+            "Nora is 26 weeks pregnant as of episode 1.",
+            "Conception occurred during a dated location-scouting trip Julian took for the Amaranth auction, roughly six weeks before Iris permanently returned to the city.",
+            "Julian does not know Nora is pregnant.",
+            "Nora and Tommy spent one night together 2 days after his release, after Nora was already pregnant.",
+            "Nora has never confirmed or denied to anyone that Tommy is the father.",
+            "Nora has an ultrasound appointment scheduled for a fixed date within the season, which she has told no one about."
+          ]
+        }
+      ]
+    }
+  ]
+}

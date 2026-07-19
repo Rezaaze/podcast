@@ -1,0 +1,2161 @@
+{
+  "series_title": "Split Signal",
+  "language": "English",
+  "mode": "drama",
+  "template": "soap_opera",
+  "writer_persona": "a showrunner for character-driven, relationship-first serial drama blending psychological horror with police procedural, in the vein of prestige ensemble TV",
+  "style_guidelines": [
+    "Every scene serves character relationships first, plot mechanics second — never let exposition replace behavior.",
+    "Dramatic irony over info-dumps: the audience may know more than any one character, but no character casually narrates the full truth of a thread.",
+    "Interior possession scenes (TOLL speaking inside Kestler's mind) must feel physically wrong — interrupted breath, clipped dialogue, sudden shifts in who is 'driving' the body — never explained by the narrator, only felt.",
+    "Soap-opera pacing: most scenes end on an unresolved emotional beat or a small reveal, not a tidy conclusion.",
+    "Police procedural detail stays plausible but stays secondary to the human stakes of the ensemble.",
+    "Secrets erode through small cracks — a slip of the tongue, a wrong assumption corrected too late — never through a character choosing to confess everything at once.",
+    "Let characters be right about the wrong thing: Renata's diagnosis of Adrian, Zhao's read on her own risk, Piper's read on her own heart — all plausible, all incomplete."
+  ],
+  "voices": {
+    "NARRATOR": {
+      "voice": "Ryan",
+      "default_style": "calm, measured, a step removed from the action",
+      "description": "the show's narrator — orients the listener at the start of every scene (who, where, when), never a character in the story"
+    },
+    "DET_ADRIAN_KESTLER": {
+      "voice": "Aiden",
+      "default_style": "guarded, exhausted, holding himself together by will alone",
+      "description": "veteran homicide detective hunting a serial killer who has partially transferred his consciousness into Adrian's own mind; losing time in blackouts he can't explain, terrified of what he's doing during them and of losing his daughter if anyone finds out"
+    },
+    "TOLL": {
+      "voice": "Dylan",
+      "default_style": "cold, amused, precise diction — speaks slow, deliberate, very clear English",
+      "description": "Marcus Toll, born in Beijing, moved to Port Meridian as a teenager; a serial killer whose consciousness is bridged into Detective Kestler's mind after a confrontation gone wrong, growing stronger with every blackout and hungry for full, permanent control of Adrian's body"
+    },
+    "DR_HANA_VOSS": {
+      "voice": "Ono_Anna",
+      "default_style": "clinical, precise, brittle under pressure — speaks slow, deliberate, very clear English",
+      "description": "Japanese-American neuroscientist raised partly in Shanghai, inventor of the Continuum Bridge consciousness-transfer device; helped Toll obtain a prototype believing him a terminal volunteer, now caught between confessing and protecting her research"
+    },
+    "CAPT_LENA_ZHAO": {
+      "voice": "Serena",
+      "default_style": "brisk, commanding, guarded — speaks slow, deliberate, very clear English",
+      "description": "Chinese-American precinct captain born in Guangzhou; two years ago struck a quiet funding deal with Voss's foundation to save her cold-case unit, and has no idea how close it now sits to her own detective's unraveling"
+    },
+    "RENATA_KESTLER_YOON": {
+      "voice": "Sohee",
+      "default_style": "warm but anxious, fiercely protective — speaks slow, deliberate, very clear English",
+      "description": "Adrian's half-sister, Korean-American, born in Seoul but raised for several formative years in Beijing before her adoption into the Kestler family; has filed for emergency custody of his daughter Mia, convinced Adrian has relapsed into old patterns, with no idea what's really happening to him"
+    },
+    "PIPER_ZHANG": {
+      "voice": "Vivian",
+      "default_style": "sharp, curious, restless — speaks slow, deliberate, very clear English",
+      "description": "Chinese-American investigative journalist secretly dating Renata; began the relationship to get close to police department information for a story on a shadowy research foundation, and has since fallen for her, hiding the original motive out of fear"
+    }
+  },
+  "locations": {
+    "PRECINCT_BULLPEN": {
+      "name": "The Bullpen",
+      "description": "Port Meridian PD's homicide floor — flickering fluorescent panels, cork boards thick with case photos and red string, rain streaking the windows behind rows of mismatched desks."
+    },
+    "KESTLER_APARTMENT": {
+      "name": "Adrian's Apartment",
+      "description": "a small waterfront unit kept deliberately bare and dim, blackout curtains always drawn, one locked drawer where Adrian hides everything he can't explain about himself."
+    },
+    "VOSS_LAB": {
+      "name": "The Continuum Lab",
+      "description": "Zenith Horizon's neuroscience wing — sterile white walls washed in cold blue server-light, a padded isolation chair bristling with electrode leads at its center."
+    },
+    "THE_TIDEWATER": {
+      "name": "The Tidewater",
+      "description": "a dockside dive bar with buzzing neon beer signs, a sticky floor, and a jukebox murmuring under low conversation — the one place cops and informants talk off the record."
+    },
+    "RENATA_HOUSE": {
+      "name": "Renata's House",
+      "description": "a warm, cluttered suburban home full of a nine-year-old's toys and school drawings, a custody-hearing notice held to the fridge by a cartoon magnet — deliberately ordinary against everything else in the show."
+    },
+    "TOLL_SAFEHOUSE": {
+      "name": "The Cannery",
+      "description": "an abandoned waterfront cannery, cold and cavernous, water dripping through rusted machinery, one humming generator keeping a hidden second prototype device — and Toll's comatose body — alive in the dark."
+    },
+    "COURTHOUSE": {
+      "name": "Port Meridian Family & Criminal Courts",
+      "description": "an echoing marble hall leading to a stark fluorescent-lit hearing room, hard benches and a raised bench of dark wood, every footstep amplified in the silence."
+    },
+    "PIPER_NEWSROOM": {
+      "name": "The Herald Newsroom",
+      "description": "a glass-walled newsroom lined with monitors and corkboards of redacted documents, desks buried under case files, the low tension of a story everyone can feel circling but no one can quite name."
+    }
+  },
+  "format": {
+    "parts_per_section": 1,
+    "words_per_part_target": "300 to 500",
+    "words_per_part_min": 250,
+    "words_per_part_max": 550
+  },
+  "generation": {
+    "model": "claude-sonnet-5"
+  },
+  "audio": {
+    "api_url": "http://127.0.0.1:42003",
+    "default_style": "Speak clearly and with dramatic weight",
+    "target_lufs": -16.0,
+    "pause_between_chunks_ms": 250,
+    "pause_between_lines_ms": 700,
+    "pause_between_parts_ms": 3000,
+    "pause_between_episodes_ms": 6000,
+    "merge_anthology": false
+  },
+  "output_prefix": "ep",
+  "series_intro": "Port Meridian, a rain-slicked port city where old money, new tech, and old grudges all live three blocks apart. Detective Adrian Kestler has spent eleven months hunting a killer who leaves no forensic trace — and now he's starting to lose time. Missing hours. Blood he can't account for. A voice, when it's quiet enough to hear it, that isn't his own. Somewhere between the precinct, a family court hearing, and a lab that shouldn't exist, four people who love or fear Adrian Kestler are each keeping something from him — and from each other. This is a story about what's left of you when someone else is driving.",
+  "series_outro": "By season's end, Adrian has learned enough of the truth to fight back — the Continuum Bridge is disabled, Toll's foothold broken, though not without cost, and not without lingering doubt about how much of him made it out clean. Captain Zhao's funding arrangement surfaces just far enough to end her career, though the deeper reach of Zenith Horizon stays buried, a thread the audience knows is far from finished. The custody hearing resolves — but not the way anyone expected going in, and Renata and Piper are left facing each other with the truth finally out between them, its damage still unmeasured. Some doors close. Others are left deliberately, unbearably ajar.",
+  "threads": [
+    {
+      "label": "The Continuum Bridge",
+      "solution": "Dr. Hana Voss developed the Continuum Bridge, a device that transfers a neural pattern into a second living brain via close-range electromagnetic scan, intended as a consciousness-preservation option for terminal patients. Marcus Toll, a serial killer under Adrian Kestler's pursuit and secretly dying of an aggressive brain tumor, obtained an unauthorized prototype 'seed emitter' from Voss's foundation by posing as a terminal volunteer for an unrelated trial. During a confrontation with Kestler, Toll used the device on himself, triggering a partial consciousness transfer: his own body went comatose while his neural pattern lodged itself as a second presence in Kestler's mind. That presence strengthens whenever Kestler sleeps deeply or is intoxicated, and has already seized brief control of his body once, using it to kill again — an act Kestler has no memory of. A second prototype device, hidden by Voss and never disclosed to anyone, would complete the transfer permanently and erase Kestler's consciousness if he ever falls into deep sleep within its range.",
+      "objective_facts": [
+        "The Continuum Bridge completes a permanent neural transfer only if the receiving brain is in a receptive state — deep unconsciousness or sedation — within range of an active seed-emitter signal.",
+        "Marcus Toll obtained an unauthorized prototype seed emitter from Zenith Horizon Foundation by posing as a terminal patient volunteering for an unrelated pain-management trial.",
+        "During his confrontation with Detective Kestler, Toll activated the seed emitter on himself, initiating a partial consciousness bridge and leaving his own body comatose at the Cannery.",
+        "Toll's neural pattern persists as a secondary presence inside Kestler's mind, strengthening during Kestler's sleep or intoxication, and capable of temporarily seizing control of Kestler's body.",
+        "While in control of Kestler's body during a blackout, Toll has already killed one more victim — a fact Kestler does not remember and does not yet know occurred.",
+        "Dr. Voss possesses a second, fully functional seed-emitter prototype, which she has hidden from both Kestler and the department out of fear of prosecution and loss of her research.",
+        "If Kestler falls into deep sleep within range of that second device, the transfer would complete permanently, erasing his consciousness and leaving Toll in full, lasting control of his body."
+      ]
+    },
+    {
+      "label": "The Zenith Horizon Money",
+      "solution": "Facing closure of her underfunded cold-case unit two years ago, Captain Lena Zhao signed a private 'research resource sharing' agreement with the Zenith Horizon Foundation, granting foundation researchers off-book access to biological evidence and case files from three unsolved homicides in exchange for funding — material transfers she logged falsely as 'lab consult, no material transfer.' She has never met Dr. Voss and does not know what specific research her samples supported, nor that Marcus Toll or the Continuum Bridge exist; to her, Zenith Horizon is simply 'a neurological research foundation.' She has been quietly steering resources to keep Kestler's task force under her direct oversight — not to protect Kestler, but to control information flow before anyone connects the arrangement back to her.",
+      "objective_facts": [
+        "Two years ago, facing the cold-case unit's closure, Zhao signed a private funding agreement with the Zenith Horizon Foundation that was never disclosed to the department's oversight board.",
+        "Under that agreement, Zhao granted foundation researchers limited off-book access to case files and biological evidence from three unsolved homicides, officially logged as 'lab consult, no material transfer' despite material being transferred.",
+        "Zhao's sole point of contact at the foundation is an administrator with no knowledge of the specific research the samples supported.",
+        "Zhao does not know Marcus Toll's identity, has never heard of the Continuum Bridge, and believes the foundation's work is unrelated to any active case.",
+        "If the funding agreement surfaces, Zhao faces termination and possible criminal charges for evidence mishandling.",
+        "Zhao has been quietly keeping Kestler's task force under her direct, personal oversight specifically to control what information reaches Internal Affairs before anyone traces the arrangement back to her."
+      ]
+    },
+    {
+      "label": "The Custody Petition",
+      "solution": "Eleven days into the season's timeline, Adrian's half-sister Renata Kestler-Yoon filed for emergency custody of his nine-year-old daughter Mia after two disturbing incidents she believes are a relapse into the alcoholism that ended Adrian's marriage four years ago — she has no idea the real cause is Toll's growing control over her brother's body. Renata's girlfriend, journalist Piper Zhang, began the relationship six months ago specifically to get close to a police department source for a story she's building on Zenith Horizon Foundation's city contracts, and has since fallen genuinely in love with Renata — she has not filed any story yet, sitting on a partial lead (the existence of Zhao's funding agreement) out of guilt and fear of losing her. Neither woman knows about the Continuum Bridge or Marcus Toll; Adrian has told no one about his blackouts, afraid of losing Mia or being pulled off the case.",
+      "objective_facts": [
+        "Renata filed the emergency custody petition eleven days ago, citing two incidents witnessed by Mia's school and one 911 call from a neighbor.",
+        "Renata believes Adrian has relapsed into the alcoholism that ended his marriage four years ago; she has no knowledge of the Continuum Bridge, Marcus Toll, or Dr. Voss.",
+        "Piper began her relationship with Renata six months ago after learning she was Detective Kestler's sister, originally hoping for access to police department information for a story on Zenith Horizon Foundation's city contracts.",
+        "Piper has since developed genuine feelings for Renata and has filed no story, sitting on the partial information she's gathered out of guilt and fear of losing the relationship.",
+        "Piper's research has already uncovered the existence of a funding agreement between Zenith Horizon and the police department, but not yet which unit or officer is involved.",
+        "Adrian has told no one, including Renata, about his blackouts or their true cause, out of fear of losing custody of Mia and fear of being taken off the case or institutionalized."
+      ]
+    }
+  ],
+  "episodes": [
+    {
+      "figure": "Missing Hours",
+      "theme": "Establishes Adrian's first inexplicable blackout after a confrontation with Marcus Toll goes wrong, while across town Renata's custody filing formalizes into a hearing date and Piper commits to hiding the real reason her relationship with Renata began.",
+      "intro_note": "",
+      "outro_note": "Kestler tells himself it was only exhaustion, nothing more — but the locked drawer stays locked, and across town Captain Zhao has already begun quietly deciding who gets to watch him next.",
+      "sections": [
+        {
+          "title": "The Tip",
+          "what": "Zhao gives Kestler a fresh lead on Toll's location; he wants to move alone tonight, she insists on backup, he refuses and leaves anyway.",
+          "who": [
+            "DET_ADRIAN_KESTLER",
+            "CAPT_LENA_ZHAO"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "PRECINCT_BULLPEN",
+          "words": null
+        },
+        {
+          "title": "Gone Wrong",
+          "what": "Kestler corners Toll at the Cannery's upper gantry; the confrontation turns violent, Toll triggers something unseen, and Kestler's next memory simply stops.",
+          "who": [
+            "DET_ADRIAN_KESTLER",
+            "TOLL"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "TOLL_SAFEHOUSE",
+          "words": {
+            "min": 140,
+            "max": 260,
+            "target": "140 to 260"
+          }
+        },
+        {
+          "title": "Missing Hours",
+          "what": "Kestler wakes at dawn on his own apartment floor, hours unaccounted for, bruised and disoriented, with no memory of how he got home.",
+          "who": [
+            "DET_ADRIAN_KESTLER"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "KESTLER_APARTMENT",
+          "words": null
+        },
+        {
+          "title": "Signal Spike",
+          "what": "Alone in her lab, Voss watches the hidden seed emitter's readout spike overnight, matching Toll's neural signature, and says nothing to anyone.",
+          "who": [
+            "DR_HANA_VOSS"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "VOSS_LAB",
+          "words": null
+        },
+        {
+          "title": "The Locked Drawer",
+          "what": "Kestler finds torn clothes and unexplained bruises, hides the evidence in his locked drawer, and decides not to tell anyone what happened.",
+          "who": [
+            "DET_ADRIAN_KESTLER"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "KESTLER_APARTMENT",
+          "words": null
+        },
+        {
+          "title": "Last Call",
+          "what": "Drinking alone at the Tidewater, Kestler tries to reconstruct the missing night; for one cold moment, a voice that isn't his answers back.",
+          "who": [
+            "DET_ADRIAN_KESTLER",
+            "TOLL"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "THE_TIDEWATER",
+          "words": null
+        },
+        {
+          "title": "Off His Game",
+          "what": "Back at the precinct, Zhao notices Kestler is rattled and evasive, presses him about the failed Toll takedown; he deflects, blaming exhaustion.",
+          "who": [
+            "DET_ADRIAN_KESTLER",
+            "CAPT_LENA_ZHAO"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "PRECINCT_BULLPEN",
+          "words": null
+        },
+        {
+          "title": "Two Incidents",
+          "what": "Renata shows Piper the school report and the neighbor's 911 call, convinced Adrian has relapsed, and decides tonight to file for custody.",
+          "who": [
+            "RENATA_KESTLER_YOON",
+            "PIPER_ZHANG"
+          ],
+          "thread": "The Custody Petition",
+          "location": "RENATA_HOUSE",
+          "words": null
+        },
+        {
+          "title": "Emergency Filing",
+          "what": "At the courthouse, Renata files the emergency custody petition; the clerk reviews it and sets an official hearing date within the month.",
+          "who": [
+            "RENATA_KESTLER_YOON"
+          ],
+          "thread": "The Custody Petition",
+          "location": "COURTHOUSE",
+          "words": null
+        },
+        {
+          "title": "The Date",
+          "what": "Renata comes home with the hearing date in hand, relieved and afraid at once, while Piper hides her guilt behind quiet reassurance.",
+          "who": [
+            "RENATA_KESTLER_YOON",
+            "PIPER_ZHANG"
+          ],
+          "thread": "The Custody Petition",
+          "location": "RENATA_HOUSE",
+          "words": null
+        },
+        {
+          "title": "Deadline",
+          "what": "Piper's editor demands real proof on the Zenith Horizon contracts by week's end, or the story on the foundation gets killed entirely.",
+          "who": [
+            "PIPER_ZHANG"
+          ],
+          "thread": "The Zenith Horizon Money",
+          "location": "PIPER_NEWSROOM",
+          "words": null
+        },
+        {
+          "title": "A Name in the Margins",
+          "what": "Piper meets a low-level department contact at the Tidewater, fishing for which unit received foundation money, and comes up nearly empty-handed.",
+          "who": [
+            "PIPER_ZHANG"
+          ],
+          "thread": "The Zenith Horizon Money",
+          "location": "THE_TIDEWATER",
+          "words": null
+        },
+        {
+          "title": "What She Won't Say",
+          "what": "Alone at her desk, Piper decides she will never tell Renata their relationship began as research for a story, and closes the file.",
+          "who": [
+            "PIPER_ZHANG"
+          ],
+          "thread": "The Custody Petition",
+          "location": "PIPER_NEWSROOM",
+          "words": null
+        },
+        {
+          "title": "No Material Transfer",
+          "what": "Zhao quietly reviews old evidence logs from the Zenith Horizon deal, checking her falsified paperwork still holds, unsettled by how thin it feels.",
+          "who": [
+            "CAPT_LENA_ZHAO"
+          ],
+          "thread": "The Zenith Horizon Money",
+          "location": "PRECINCT_BULLPEN",
+          "words": null
+        },
+        {
+          "title": "The Choice Not to Report",
+          "what": "Voss weighs reporting the emitter spike to the department, then locks the data away instead, protecting her research over the risk to Kestler.",
+          "who": [
+            "DR_HANA_VOSS"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "VOSS_LAB",
+          "words": null
+        },
+        {
+          "title": "The Phone Call",
+          "what": "Renata calls Adrian to tell him about the hearing date; he insists he's fine, his voice too flat, and she hangs up uneasy.",
+          "who": [
+            "RENATA_KESTLER_YOON",
+            "DET_ADRIAN_KESTLER"
+          ],
+          "thread": "The Custody Petition",
+          "location": "RENATA_HOUSE",
+          "words": {
+            "min": 130,
+            "max": 230,
+            "target": "130 to 230"
+          }
+        },
+        {
+          "title": "What's in the Drawer",
+          "what": "Alone at night, Adrian stares at his locked drawer, unable to shake the feeling that something else drove him home before dawn.",
+          "who": [
+            "DET_ADRIAN_KESTLER"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "KESTLER_APARTMENT",
+          "words": {
+            "min": 120,
+            "max": 220,
+            "target": "120 to 220"
+          }
+        }
+      ],
+      "case": [
+        {
+          "label": "The Continuum Bridge",
+          "character_knowledge": {
+            "DET_ADRIAN_KESTLER": "He knows he lost several hours after the confrontation with Toll and woke on his own apartment floor with no memory of getting there; he'll admit to being exhausted and banged up from the failed takedown, but conceals the blackout itself from everyone, terrified of losing Mia or being pulled off the case. He wrongly assumes it's adrenaline and sleep deprivation catching up with him, with no idea a second consciousness is involved.",
+            "TOLL": "He knows he successfully bridged into Kestler during the confrontation and briefly tasted control of the body before Kestler resurfaced; he reveals nothing of the mechanism, only taunts and tests for cracks when he can surface as a voice. He wrongly savors this as a slow, controllable process, underestimating how soon Voss's hidden device could end it for him.",
+            "DR_HANA_VOSS": "She knows her second, hidden seed emitter registered an overnight signal spike matching Toll's neural signature, confirming the bridge is active; she conceals this reading from both Zhao and Kestler, protecting her research and herself from prosecution. She wrongly believes the transfer is still fully contained, with no idea Kestler has already blacked out and lost time because of it.",
+            "CAPT_LENA_ZHAO": "She knows Kestler came back from the failed Toll takedown rattled, evasive, and off his game; she has no knowledge of the Continuum Bridge, Voss, or any second consciousness. She wrongly reads his behavior as pride and burnout, assuming he just doesn't want to admit he needs time off."
+          },
+          "solution": "Dr. Hana Voss developed the Continuum Bridge, a device that transfers a neural pattern into a second living brain via close-range electromagnetic scan, intended as a consciousness-preservation option for terminal patients. Marcus Toll, a serial killer under Adrian Kestler's pursuit and secretly dying of an aggressive brain tumor, obtained an unauthorized prototype 'seed emitter' from Voss's foundation by posing as a terminal volunteer for an unrelated trial. During a confrontation with Kestler, Toll used the device on himself, triggering a partial consciousness transfer: his own body went comatose while his neural pattern lodged itself as a second presence in Kestler's mind. That presence strengthens whenever Kestler sleeps deeply or is intoxicated, and has already seized brief control of his body once, using it to kill again — an act Kestler has no memory of. A second prototype device, hidden by Voss and never disclosed to anyone, would complete the transfer permanently and erase Kestler's consciousness if he ever falls into deep sleep within its range.",
+          "objective_facts": [
+            "The Continuum Bridge completes a permanent neural transfer only if the receiving brain is in a receptive state — deep unconsciousness or sedation — within range of an active seed-emitter signal.",
+            "Marcus Toll obtained an unauthorized prototype seed emitter from Zenith Horizon Foundation by posing as a terminal patient volunteering for an unrelated pain-management trial.",
+            "During his confrontation with Detective Kestler, Toll activated the seed emitter on himself, initiating a partial consciousness bridge and leaving his own body comatose at the Cannery.",
+            "Toll's neural pattern persists as a secondary presence inside Kestler's mind, strengthening during Kestler's sleep or intoxication, and capable of temporarily seizing control of Kestler's body.",
+            "While in control of Kestler's body during a blackout, Toll has already killed one more victim — a fact Kestler does not remember and does not yet know occurred.",
+            "Dr. Voss possesses a second, fully functional seed-emitter prototype, which she has hidden from both Kestler and the department out of fear of prosecution and loss of her research.",
+            "If Kestler falls into deep sleep within range of that second device, the transfer would complete permanently, erasing his consciousness and leaving Toll in full, lasting control of his body."
+          ]
+        },
+        {
+          "label": "The Custody Petition",
+          "character_knowledge": {
+            "RENATA_KESTLER_YOON": "She knows about the two documented incidents and the neighbor's 911 call, and has now filed for and secured an official emergency hearing date. She genuinely and mistakenly believes Adrian has relapsed into the drinking that ended his marriage, with no knowledge of Toll, Voss, or the Continuum Bridge.",
+            "PIPER_ZHANG": "She knows the hearing date is now set, and privately commits tonight to keep hiding from Renata that their relationship began as research for a story on a police funding arrangement. Her feelings for Renata are real now; what she conceals is only the original motive, not her support through the custody fight.",
+            "DET_ADRIAN_KESTLER": "He knows only that Renata has filed for custody and that a hearing date now exists; too consumed by his own hidden crisis to fully engage, he downplays his reaction on the phone and insists he's fine, unaware of how flat and wrong his voice sounds to her."
+          },
+          "solution": "Eleven days into the season's timeline, Adrian's half-sister Renata Kestler-Yoon filed for emergency custody of his nine-year-old daughter Mia after two disturbing incidents she believes are a relapse into the alcoholism that ended Adrian's marriage four years ago — she has no idea the real cause is Toll's growing control over her brother's body. Renata's girlfriend, journalist Piper Zhang, began the relationship six months ago specifically to get close to a police department source for a story she's building on Zenith Horizon Foundation's city contracts, and has since fallen genuinely in love with Renata — she has not filed any story yet, sitting on a partial lead (the existence of Zhao's funding agreement) out of guilt and fear of losing her. Neither woman knows about the Continuum Bridge or Marcus Toll; Adrian has told no one about his blackouts, afraid of losing Mia or being pulled off the case.",
+          "objective_facts": [
+            "Renata filed the emergency custody petition eleven days ago, citing two incidents witnessed by Mia's school and one 911 call from a neighbor.",
+            "Renata believes Adrian has relapsed into the alcoholism that ended his marriage four years ago; she has no knowledge of the Continuum Bridge, Marcus Toll, or Dr. Voss.",
+            "Piper began her relationship with Renata six months ago after learning she was Detective Kestler's sister, originally hoping for access to police department information for a story on Zenith Horizon Foundation's city contracts.",
+            "Piper has since developed genuine feelings for Renata and has filed no story, sitting on the partial information she's gathered out of guilt and fear of losing the relationship.",
+            "Piper's research has already uncovered the existence of a funding agreement between Zenith Horizon and the police department, but not yet which unit or officer is involved.",
+            "Adrian has told no one, including Renata, about his blackouts or their true cause, out of fear of losing custody of Mia and fear of being taken off the case or institutionalized."
+          ]
+        },
+        {
+          "label": "The Zenith Horizon Money",
+          "character_knowledge": {
+            "CAPT_LENA_ZHAO": "She knows her two-year-old funding arrangement with Zenith Horizon remains logged falsely as 'lab consult, no material transfer,' and privately checks that the paperwork still holds. She conceals the arrangement from everyone, including Kestler, and wrongly believes that as long as she controls what information moves through her unit, no one will trace it back to her this early.",
+            "PIPER_ZHANG": "She knows she's under deadline pressure from her editor to produce real proof on Zenith Horizon's city contracts and is quietly working a low-level department contact for leads. She doesn't yet know which officer or unit the funding touches, and wrongly assumes for now that her digging has nothing to do with Renata's family."
+          },
+          "solution": "Facing closure of her underfunded cold-case unit two years ago, Captain Lena Zhao signed a private 'research resource sharing' agreement with the Zenith Horizon Foundation, granting foundation researchers off-book access to biological evidence and case files from three unsolved homicides in exchange for funding — material transfers she logged falsely as 'lab consult, no material transfer.' She has never met Dr. Voss and does not know what specific research her samples supported, nor that Marcus Toll or the Continuum Bridge exist; to her, Zenith Horizon is simply 'a neurological research foundation.' She has been quietly steering resources to keep Kestler's task force under her direct oversight — not to protect Kestler, but to control information flow before anyone connects the arrangement back to her.",
+          "objective_facts": [
+            "Two years ago, facing the cold-case unit's closure, Zhao signed a private funding agreement with the Zenith Horizon Foundation that was never disclosed to the department's oversight board.",
+            "Under that agreement, Zhao granted foundation researchers limited off-book access to case files and biological evidence from three unsolved homicides, officially logged as 'lab consult, no material transfer' despite material being transferred.",
+            "Zhao's sole point of contact at the foundation is an administrator with no knowledge of the specific research the samples supported.",
+            "Zhao does not know Marcus Toll's identity, has never heard of the Continuum Bridge, and believes the foundation's work is unrelated to any active case.",
+            "If the funding agreement surfaces, Zhao faces termination and possible criminal charges for evidence mishandling.",
+            "Zhao has been quietly keeping Kestler's task force under her direct, personal oversight specifically to control what information reaches Internal Affairs before anyone traces the arrangement back to her."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "Quiet Channels",
+      "theme": "Captain Zhao quietly consolidates control over Kestler's task force to protect a funding arrangement no one else knows exists, while Adrian retreats further into secrecy about his blackout and Renata's suspicion of relapse hardens.",
+      "intro_note": "Adrian woke from that lost night with no answers, only a locked drawer he can't yet bring himself to look inside twice. Across town, the custody hearing is now a date on a calendar — and Piper is still telling herself there's time to come clean before it matters.",
+      "outro_note": "The supervised visit is only days away now, and something in Adrian is quieter than it should be — not gone, just waiting, patient as the tide, for the one night his guard finally slips.",
+      "sections": [
+        {
+          "title": "Sole Command",
+          "what": "Zhao tells Kestler she's pulling his task force under her sole command, citing budget cuts, giving no real reason; he's grateful but faintly uneasy.",
+          "who": [
+            "CAPT_LENA_ZHAO",
+            "DET_ADRIAN_KESTLER"
+          ],
+          "thread": "The Zenith Horizon Money",
+          "location": "PRECINCT_BULLPEN",
+          "words": null
+        },
+        {
+          "title": "The False Logs",
+          "what": "Zhao alone reviews the false lab-consult logs, calculating how much longer she can keep the arrangement buried before it surfaces.",
+          "who": [
+            "CAPT_LENA_ZHAO"
+          ],
+          "thread": "The Zenith Horizon Money",
+          "location": "PRECINCT_BULLPEN",
+          "words": {
+            "min": 150,
+            "max": 250,
+            "target": "150 to 250"
+          }
+        },
+        {
+          "title": "Locked Drawer",
+          "what": "Adrian hides a torn, blood-flecked shirt from the rooftop night deeper in the locked drawer, refusing to look at it twice.",
+          "who": [
+            "DET_ADRIAN_KESTLER"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "KESTLER_APARTMENT",
+          "words": null
+        },
+        {
+          "title": "Second Incident",
+          "what": "Renata gets a call from Mia's school about a second troubling incident, hardening her belief that Adrian has relapsed.",
+          "who": [
+            "RENATA_KESTLER_YOON"
+          ],
+          "thread": "The Custody Petition",
+          "location": "RENATA_HOUSE",
+          "words": null
+        },
+        {
+          "title": "Signal Spike",
+          "what": "Voss watches the second device's dormant signal spike briefly on a monitor and says nothing to anyone, deciding to wait.",
+          "who": [
+            "DR_HANA_VOSS"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "VOSS_LAB",
+          "words": {
+            "min": 130,
+            "max": 220,
+            "target": "130 to 220"
+          }
+        },
+        {
+          "title": "Napkin Timeline",
+          "what": "Adrian nurses a drink alone, trying to outline the missing hours on a napkin, when Toll's voice surfaces mid-sentence.",
+          "who": [
+            "DET_ADRIAN_KESTLER",
+            "TOLL"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "THE_TIDEWATER",
+          "words": null
+        },
+        {
+          "title": "Rerouted",
+          "what": "Zhao quietly reroutes an outside forensic consult request that would have crossed paths with Zenith Horizon, and Kestler notices the odd delay.",
+          "who": [
+            "CAPT_LENA_ZHAO",
+            "DET_ADRIAN_KESTLER"
+          ],
+          "thread": "The Zenith Horizon Money",
+          "location": "PRECINCT_BULLPEN",
+          "words": null
+        },
+        {
+          "title": "Budget Filings",
+          "what": "Piper cross-references city budget filings against police funding, certain a foundation's name is buried in there somewhere, still can't place it.",
+          "who": [
+            "PIPER_ZHANG"
+          ],
+          "thread": "The Zenith Horizon Money",
+          "location": "PIPER_NEWSROOM",
+          "words": null
+        },
+        {
+          "title": "The Lie on the Phone",
+          "what": "Renata calls Adrian about the school incident; he lies smoothly about being fine, and she hears exactly the evasiveness she expected.",
+          "who": [
+            "RENATA_KESTLER_YOON",
+            "DET_ADRIAN_KESTLER"
+          ],
+          "thread": "The Custody Petition",
+          "location": "RENATA_HOUSE",
+          "words": null
+        },
+        {
+          "title": "Documenting Everything",
+          "what": "Renata tells Piper she's now documenting every incident for the hearing, unaware she's confiding in someone hiding a secret of her own.",
+          "who": [
+            "RENATA_KESTLER_YOON",
+            "PIPER_ZHANG"
+          ],
+          "thread": "The Custody Petition",
+          "location": "RENATA_HOUSE",
+          "words": null
+        },
+        {
+          "title": "Needling",
+          "what": "Alone, Adrian tries to reconstruct the blackout timeline on paper; Toll's voice interrupts, cold and amused, needling him about what he doesn't remember.",
+          "who": [
+            "DET_ADRIAN_KESTLER",
+            "TOLL"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "KESTLER_APARTMENT",
+          "words": null
+        },
+        {
+          "title": "Coded Small Talk",
+          "what": "Zhao visits under the pretext of a routine research check-in, and the two women's careful, coded small talk reveals how little either truly knows about the other's stakes.",
+          "who": [
+            "CAPT_LENA_ZHAO",
+            "DR_HANA_VOSS"
+          ],
+          "thread": "The Zenith Horizon Money",
+          "location": "VOSS_LAB",
+          "words": null
+        },
+        {
+          "title": "Centralizing",
+          "what": "Kestler mildly questions why Zhao is centralizing the task force now; she shuts the question down with rank, and he backs off suspicious.",
+          "who": [
+            "DET_ADRIAN_KESTLER",
+            "CAPT_LENA_ZHAO"
+          ],
+          "thread": "The Zenith Horizon Money",
+          "location": "PRECINCT_BULLPEN",
+          "words": null
+        },
+        {
+          "title": "Unauthorized Visit",
+          "what": "Voss makes a quiet, unauthorized visit to check on Toll's comatose body and the hidden device's readings, dread growing at how much stronger the signal has gotten.",
+          "who": [
+            "DR_HANA_VOSS"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "TOLL_SAFEHOUSE",
+          "words": {
+            "min": 150,
+            "max": 250,
+            "target": "150 to 250"
+          }
+        },
+        {
+          "title": "Ordinary Warmth",
+          "what": "Renata watches Piper play with Mia and feels the ordinary warmth she's terrified of losing, while Piper's guilt over her hidden motive sharpens in silence.",
+          "who": [
+            "RENATA_KESTLER_YOON",
+            "PIPER_ZHANG"
+          ],
+          "thread": "The Custody Petition",
+          "location": "RENATA_HOUSE",
+          "words": null
+        },
+        {
+          "title": "Before the Board",
+          "what": "Zhao formally presents the task-force restructuring to the department board, budget language covering her real motive completely; no one questions it.",
+          "who": [
+            "CAPT_LENA_ZHAO"
+          ],
+          "thread": "The Zenith Horizon Money",
+          "location": "PRECINCT_BULLPEN",
+          "words": null
+        },
+        {
+          "title": "Closer Than Before",
+          "what": "Bracing for the upcoming supervised visit, Adrian drinks to steady himself and feels Toll's presence settle closer than it ever has before.",
+          "who": [
+            "DET_ADRIAN_KESTLER",
+            "TOLL"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "KESTLER_APARTMENT",
+          "words": {
+            "min": 120,
+            "max": 200,
+            "target": "120 to 200"
+          }
+        }
+      ],
+      "case": [
+        {
+          "label": "The Zenith Horizon Money",
+          "character_knowledge": {
+            "CAPT_LENA_ZHAO": "Zhao knows exactly why she's centralizing the task force — to keep information from reaching anyone who might trace her funding arrangement with Zenith Horizon back to the falsified evidence logs — but she tells Kestler and the department board it's purely a budget decision. She has never met Marcus Toll and genuinely believes the foundation's research has nothing to do with any active case, so her check-in with Voss is, in her own mind, routine due diligence rather than damage control.",
+            "DET_ADRIAN_KESTLER": "Adrian notices Zhao's sudden interest in centralizing the unit and the odd delay on an outside forensic consult, and finds both slightly off, but he has no reason to suspect anything beyond department politics and is too consumed by his own secret to push. He takes her budget explanation at face value.",
+            "DR_HANA_VOSS": "Voss recognizes Zhao's visit as a check-in tied to their old funding arrangement and plays along with careful, coded small talk, revealing nothing about Toll, the transfer, or the hidden second device. She has no idea Zhao doesn't even know those things exist, and wrongly assumes Zhao's caution is about the same secret she herself is protecting.",
+            "PIPER_ZHANG": "Piper has confirmed a funding trail exists between Zenith Horizon and the police department buried in city budget filings, but she can't yet place which unit or officer is tied to it. She doesn't know the trail leads back to Renata's own family, and is still treating the story as separate from her personal life."
+          },
+          "solution": "Facing closure of her underfunded cold-case unit two years ago, Captain Lena Zhao signed a private 'research resource sharing' agreement with the Zenith Horizon Foundation, granting foundation researchers off-book access to biological evidence and case files from three unsolved homicides in exchange for funding — material transfers she logged falsely as 'lab consult, no material transfer.' She has never met Dr. Voss and does not know what specific research her samples supported, nor that Marcus Toll or the Continuum Bridge exist; to her, Zenith Horizon is simply 'a neurological research foundation.' She has been quietly steering resources to keep Kestler's task force under her direct oversight — not to protect Kestler, but to control information flow before anyone connects the arrangement back to her.",
+          "objective_facts": [
+            "Two years ago, facing the cold-case unit's closure, Zhao signed a private funding agreement with the Zenith Horizon Foundation that was never disclosed to the department's oversight board.",
+            "Under that agreement, Zhao granted foundation researchers limited off-book access to case files and biological evidence from three unsolved homicides, officially logged as 'lab consult, no material transfer' despite material being transferred.",
+            "Zhao's sole point of contact at the foundation is an administrator with no knowledge of the specific research the samples supported.",
+            "Zhao does not know Marcus Toll's identity, has never heard of the Continuum Bridge, and believes the foundation's work is unrelated to any active case.",
+            "If the funding agreement surfaces, Zhao faces termination and possible criminal charges for evidence mishandling.",
+            "Zhao has been quietly keeping Kestler's task force under her direct, personal oversight specifically to control what information reaches Internal Affairs before anyone traces the arrangement back to her."
+          ]
+        },
+        {
+          "label": "The Continuum Bridge",
+          "character_knowledge": {
+            "DET_ADRIAN_KESTLER": "Adrian knows he's lost hours and that there's physical evidence — a torn, blood-flecked shirt — he can't explain, but he's actively hiding it rather than investigating it, terrified of what it means. He forces himself to believe whatever is happening to him is something he did alone, not a second presence in his mind.",
+            "TOLL": "Toll knows precisely what he is and what he's doing to Adrian, and uses these quiet moments to needle him with fragments of truth Adrian isn't ready to hear, careful never to reveal the full mechanism of the Continuum Bridge. He conceals how much stronger he's grown and how close he now sits to full control.",
+            "DR_HANA_VOSS": "Voss can see the second device's signal strengthening on her monitors and understands exactly what that means for whoever is bridged to it, but she tells no one — not Zhao, not Kestler — protecting her research and herself over disclosing a threat to a man she's never met. She wrongly assumes she still has time before the signal reaches a critical threshold."
+          },
+          "solution": "Dr. Hana Voss developed the Continuum Bridge, a device that transfers a neural pattern into a second living brain via close-range electromagnetic scan, intended as a consciousness-preservation option for terminal patients. Marcus Toll, a serial killer under Adrian Kestler's pursuit and secretly dying of an aggressive brain tumor, obtained an unauthorized prototype 'seed emitter' from Voss's foundation by posing as a terminal volunteer for an unrelated trial. During a confrontation with Kestler, Toll used the device on himself, triggering a partial consciousness transfer: his own body went comatose while his neural pattern lodged itself as a second presence in Kestler's mind. That presence strengthens whenever Kestler sleeps deeply or is intoxicated, and has already seized brief control of his body once, using it to kill again — an act Kestler has no memory of. A second prototype device, hidden by Voss and never disclosed to anyone, would complete the transfer permanently and erase Kestler's consciousness if he ever falls into deep sleep within its range.",
+          "objective_facts": [
+            "The Continuum Bridge completes a permanent neural transfer only if the receiving brain is in a receptive state — deep unconsciousness or sedation — within range of an active seed-emitter signal.",
+            "Marcus Toll obtained an unauthorized prototype seed emitter from Zenith Horizon Foundation by posing as a terminal patient volunteering for an unrelated pain-management trial.",
+            "During his confrontation with Detective Kestler, Toll activated the seed emitter on himself, initiating a partial consciousness bridge and leaving his own body comatose at the Cannery.",
+            "Toll's neural pattern persists as a secondary presence inside Kestler's mind, strengthening during Kestler's sleep or intoxication, and capable of temporarily seizing control of Kestler's body.",
+            "While in control of Kestler's body during a blackout, Toll has already killed one more victim — a fact Kestler does not remember and does not yet know occurred.",
+            "Dr. Voss possesses a second, fully functional seed-emitter prototype, which she has hidden from both Kestler and the department out of fear of prosecution and loss of her research.",
+            "If Kestler falls into deep sleep within range of that second device, the transfer would complete permanently, erasing his consciousness and leaving Toll in full, lasting control of his body."
+          ]
+        },
+        {
+          "label": "The Custody Petition",
+          "character_knowledge": {
+            "RENATA_KESTLER_YOON": "Renata has a new incident from Mia's school and a phone call in which Adrian sounds evasive, and both harden her conviction that he's relapsed into drinking — a conclusion that makes complete sense to her and is completely wrong about the cause. She has no idea Piper is holding a secret of her own, and confides in her freely.",
+            "PIPER_ZHANG": "Piper watches Renata's suspicion of Adrian harden and Renata's tenderness with Mia deepen her own guilt over hiding how their relationship began, but she says nothing, unwilling to risk what she's built. She has no idea her unfinished research is quietly circling the same funding arrangement connected to Renata's brother's case.",
+            "DET_ADRIAN_KESTLER": "Adrian lies smoothly to Renata about being fine, drawing on old habits from his drinking days to sound convincing, genuinely believing the lie protects Mia rather than endangers her. He has no idea how close the custody case now sits to real evidence, since he doesn't yet know about the blackout that's coming."
+          },
+          "solution": "Eleven days into the season's timeline, Adrian's half-sister Renata Kestler-Yoon filed for emergency custody of his nine-year-old daughter Mia after two disturbing incidents she believes are a relapse into the alcoholism that ended Adrian's marriage four years ago — she has no idea the real cause is Toll's growing control over her brother's body. Renata's girlfriend, journalist Piper Zhang, began the relationship six months ago specifically to get close to a police department source for a story she's building on Zenith Horizon Foundation's city contracts, and has since fallen genuinely in love with Renata — she has not filed any story yet, sitting on a partial lead (the existence of Zhao's funding agreement) out of guilt and fear of losing her. Neither woman knows about the Continuum Bridge or Marcus Toll; Adrian has told no one about his blackouts, afraid of losing Mia or being pulled off the case.",
+          "objective_facts": [
+            "Renata filed the emergency custody petition eleven days ago, citing two incidents witnessed by Mia's school and one 911 call from a neighbor.",
+            "Renata believes Adrian has relapsed into the alcoholism that ended his marriage four years ago; she has no knowledge of the Continuum Bridge, Marcus Toll, or Dr. Voss.",
+            "Piper began her relationship with Renata six months ago after learning she was Detective Kestler's sister, originally hoping for access to police department information for a story on Zenith Horizon Foundation's city contracts.",
+            "Piper has since developed genuine feelings for Renata and has filed no story, sitting on the partial information she's gathered out of guilt and fear of losing the relationship.",
+            "Piper's research has already uncovered the existence of a funding agreement between Zenith Horizon and the police department, but not yet which unit or officer is involved.",
+            "Adrian has told no one, including Renata, about his blackouts or their true cause, out of fear of losing custody of Mia and fear of being taken off the case or institutionalized."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "What the Body Remembers",
+      "theme": "Adrian wakes at the abandoned Cannery with blood he can't explain, and in the same week a blackout in front of Mia during a supervised visit hands Renata's custody case its first hard evidence — two blackouts, two different kinds of damage.",
+      "intro_note": "Last week, Zhao quietly pulled Kestler's task force under her sole oversight, offering the board budget worries instead of the truth. Adrian kept sinking deeper into silence about the blackout he still can't explain, and Renata's suspicion that he's relapsed only hardened with every call he didn't return.",
+      "outro_note": "Piper stares at the redacted line — a name blacked out, but a department and a dollar figure left standing, close enough to reach for and still too far to prove. Somewhere in the same building, Zhao has no idea how close that paper trail already runs to her name.",
+      "sections": [
+        {
+          "title": "Cold Concrete",
+          "what": "Adrian wakes alone in the abandoned Cannery, dried blood crusted on his hands, no memory of arriving or how he got here.",
+          "who": [
+            "DET_ADRIAN_KESTLER"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "TOLL_SAFEHOUSE",
+          "words": {
+            "min": 130,
+            "max": 210,
+            "target": "130 to 210"
+          }
+        },
+        {
+          "title": "Locked Drawer",
+          "what": "Back in his apartment, Adrian scrubs blood from his knuckles and hides his ruined shirt in the locked drawer, saying nothing.",
+          "who": [
+            "DET_ADRIAN_KESTLER"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "KESTLER_APARTMENT",
+          "words": null
+        },
+        {
+          "title": "Rough Morning",
+          "what": "In the bullpen, Adrian deflects a colleague's question about his rough appearance, steering Zhao's attention onto casework instead of himself.",
+          "who": [
+            "DET_ADRIAN_KESTLER",
+            "CAPT_LENA_ZHAO"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "PRECINCT_BULLPEN",
+          "words": null
+        },
+        {
+          "title": "Under Her Control",
+          "what": "Zhao reviews task force assignments alone, calculating how to keep Kestler's unit under her direct control before questions start circling her.",
+          "who": [
+            "CAPT_LENA_ZHAO"
+          ],
+          "thread": "The Zenith Horizon Money",
+          "location": "PRECINCT_BULLPEN",
+          "words": null
+        },
+        {
+          "title": "Rehearsing the Truth",
+          "what": "At home, Renata rehearses what she'll tell the court supervisor, torn between protecting Mia and dreading what today's visit might reveal.",
+          "who": [
+            "RENATA_KESTLER_YOON"
+          ],
+          "thread": "The Custody Petition",
+          "location": "RENATA_HOUSE",
+          "words": null
+        },
+        {
+          "title": "Redacted Contracts",
+          "what": "In the newsroom, Piper digs deeper into Zenith Horizon's city contracts, guilt gnawing at her for the secret she's still keeping from Renata.",
+          "who": [
+            "PIPER_ZHANG"
+          ],
+          "thread": "The Zenith Horizon Money",
+          "location": "PIPER_NEWSROOM",
+          "words": null
+        },
+        {
+          "title": "Anomalous Readings",
+          "what": "In the lab, Voss studies anomalous signal readings from the seed emitter, uneasy but still unwilling to disclose the second hidden device.",
+          "who": [
+            "DR_HANA_VOSS"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "VOSS_LAB",
+          "words": null
+        },
+        {
+          "title": "Supervised",
+          "what": "At the courthouse, the supervised visit begins tensely; Adrian tries small talk with Mia while the court supervisor watches him closely.",
+          "who": [
+            "DET_ADRIAN_KESTLER",
+            "RENATA_KESTLER_YOON"
+          ],
+          "thread": "The Custody Petition",
+          "location": "COURTHOUSE",
+          "words": null
+        },
+        {
+          "title": "What the Body Remembers",
+          "what": "Mid-sentence, Adrian blacks out in front of Mia and the supervisor, his voice and posture shifting wrong before he catches himself, terrified.",
+          "who": [
+            "DET_ADRIAN_KESTLER",
+            "RENATA_KESTLER_YOON"
+          ],
+          "thread": "The Custody Petition",
+          "location": "COURTHOUSE",
+          "words": {
+            "min": 130,
+            "max": 210,
+            "target": "130 to 210"
+          }
+        },
+        {
+          "title": "On the Record",
+          "what": "The supervisor documents the incident on the spot; Renata, shaken, confronts Adrian afterward, but he has no memory of what she witnessed.",
+          "who": [
+            "DET_ADRIAN_KESTLER",
+            "RENATA_KESTLER_YOON"
+          ],
+          "thread": "The Custody Petition",
+          "location": "COURTHOUSE",
+          "words": null
+        },
+        {
+          "title": "Off the Record",
+          "what": "At the Tidewater, Piper's off-record contact mentions a funding name tied to police cold cases, a thread she doesn't yet know leads to Zhao.",
+          "who": [
+            "PIPER_ZHANG"
+          ],
+          "thread": "The Zenith Horizon Money",
+          "location": "THE_TIDEWATER",
+          "words": null
+        },
+        {
+          "title": "Containment",
+          "what": "Word of the courthouse incident reaches the bullpen; Zhao moves fast to keep the fallout contained inside Kestler's task force, and out of IA's sight.",
+          "who": [
+            "CAPT_LENA_ZHAO",
+            "DET_ADRIAN_KESTLER"
+          ],
+          "thread": "The Zenith Horizon Money",
+          "location": "PRECINCT_BULLPEN",
+          "words": null
+        },
+        {
+          "title": "Cover Story",
+          "what": "Adrian visits Voss under a cover story about the case, quietly testing what she knows without mentioning the blood at the Cannery.",
+          "who": [
+            "DET_ADRIAN_KESTLER",
+            "DR_HANA_VOSS"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "VOSS_LAB",
+          "words": null
+        },
+        {
+          "title": "Leaning In",
+          "what": "At Renata's house, Piper comforts her after the visit, guilt sharpening as Renata leans on her completely, unaware of the secret between them.",
+          "who": [
+            "RENATA_KESTLER_YOON",
+            "PIPER_ZHANG"
+          ],
+          "thread": "The Custody Petition",
+          "location": "RENATA_HOUSE",
+          "words": null
+        },
+        {
+          "title": "The Other Voice, Closer",
+          "what": "At the Cannery, Toll's voice surfaces inside Adrian's mind, cold and amused, savoring how much stronger his grip has grown.",
+          "who": [
+            "DET_ADRIAN_KESTLER",
+            "TOLL"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "TOLL_SAFEHOUSE",
+          "words": null
+        },
+        {
+          "title": "Burned Evidence",
+          "what": "Alone at night, Adrian burns the bloodied shirt in the sink and decides, deliberately, never to report what he can't explain.",
+          "who": [
+            "DET_ADRIAN_KESTLER"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "KESTLER_APARTMENT",
+          "words": {
+            "min": 130,
+            "max": 210,
+            "target": "130 to 210"
+          }
+        },
+        {
+          "title": "One Blacked-Out Line",
+          "what": "In the newsroom, Piper uncovers a redacted line item in an old city contract, and her stomach drops at what it might mean.",
+          "who": [
+            "PIPER_ZHANG"
+          ],
+          "thread": "The Zenith Horizon Money",
+          "location": "PIPER_NEWSROOM",
+          "words": null
+        }
+      ],
+      "case": [
+        {
+          "label": "The Continuum Bridge",
+          "character_knowledge": {
+            "DET_ADRIAN_KESTLER": "He now has physical proof — blood he can't account for — that something happens to him during blackouts, but he still doesn't know what or why, and he deliberately destroys the evidence rather than tell anyone, terrified of what reporting it would cost him.",
+            "TOLL": "He knows exactly what happened at the Cannery — he was in full control — and feels his grip strengthening with each blackout, but as an interior presence he reveals nothing outright, only unsettles.",
+            "DR_HANA_VOSS": "She sees anomalous readings from the seed emitter consistent with a strengthening bridge and suspects Kestler may be the receiving subject, but has no direct proof and continues concealing the second device out of fear of prosecution and losing her research."
+          },
+          "solution": "Dr. Hana Voss developed the Continuum Bridge, a device that transfers a neural pattern into a second living brain via close-range electromagnetic scan, intended as a consciousness-preservation option for terminal patients. Marcus Toll, a serial killer under Adrian Kestler's pursuit and secretly dying of an aggressive brain tumor, obtained an unauthorized prototype 'seed emitter' from Voss's foundation by posing as a terminal volunteer for an unrelated trial. During a confrontation with Kestler, Toll used the device on himself, triggering a partial consciousness transfer: his own body went comatose while his neural pattern lodged itself as a second presence in Kestler's mind. That presence strengthens whenever Kestler sleeps deeply or is intoxicated, and has already seized brief control of his body once, using it to kill again — an act Kestler has no memory of. A second prototype device, hidden by Voss and never disclosed to anyone, would complete the transfer permanently and erase Kestler's consciousness if he ever falls into deep sleep within its range.",
+          "objective_facts": [
+            "The Continuum Bridge completes a permanent neural transfer only if the receiving brain is in a receptive state — deep unconsciousness or sedation — within range of an active seed-emitter signal.",
+            "Marcus Toll obtained an unauthorized prototype seed emitter from Zenith Horizon Foundation by posing as a terminal patient volunteering for an unrelated pain-management trial.",
+            "During his confrontation with Detective Kestler, Toll activated the seed emitter on himself, initiating a partial consciousness bridge and leaving his own body comatose at the Cannery.",
+            "Toll's neural pattern persists as a secondary presence inside Kestler's mind, strengthening during Kestler's sleep or intoxication, and capable of temporarily seizing control of Kestler's body.",
+            "While in control of Kestler's body during a blackout, Toll has already killed one more victim — a fact Kestler does not remember and does not yet know occurred.",
+            "Dr. Voss possesses a second, fully functional seed-emitter prototype, which she has hidden from both Kestler and the department out of fear of prosecution and loss of her research.",
+            "If Kestler falls into deep sleep within range of that second device, the transfer would complete permanently, erasing his consciousness and leaving Toll in full, lasting control of his body."
+          ]
+        },
+        {
+          "label": "The Custody Petition",
+          "character_knowledge": {
+            "DET_ADRIAN_KESTLER": "He blacked out in front of his own daughter with no memory of it happening, and genuinely doesn't understand what's wrong with him — he tries to minimize the incident afterward not out of malice but out of sheer terror of losing Mia.",
+            "RENATA_KESTLER_YOON": "She witnessed the blackout firsthand and now has documented, supervisor-verified evidence for her custody case, which she reads — reasonably, given what she knows — as confirmation of relapse, having no idea a second consciousness is involved.",
+            "PIPER_ZHANG": "She hears about the incident only secondhand from a shaken Renata and offers comfort without full context, while her own guilt over the real reason she got close to Renata keeps deepening as Renata trusts her more completely."
+          },
+          "solution": "Eleven days into the season's timeline, Adrian's half-sister Renata Kestler-Yoon filed for emergency custody of his nine-year-old daughter Mia after two disturbing incidents she believes are a relapse into the alcoholism that ended Adrian's marriage four years ago — she has no idea the real cause is Toll's growing control over her brother's body. Renata's girlfriend, journalist Piper Zhang, began the relationship six months ago specifically to get close to a police department source for a story she's building on Zenith Horizon Foundation's city contracts, and has since fallen genuinely in love with Renata — she has not filed any story yet, sitting on a partial lead (the existence of Zhao's funding agreement) out of guilt and fear of losing her. Neither woman knows about the Continuum Bridge or Marcus Toll; Adrian has told no one about his blackouts, afraid of losing Mia or being pulled off the case.",
+          "objective_facts": [
+            "Renata filed the emergency custody petition eleven days ago, citing two incidents witnessed by Mia's school and one 911 call from a neighbor.",
+            "Renata believes Adrian has relapsed into the alcoholism that ended his marriage four years ago; she has no knowledge of the Continuum Bridge, Marcus Toll, or Dr. Voss.",
+            "Piper began her relationship with Renata six months ago after learning she was Detective Kestler's sister, originally hoping for access to police department information for a story on Zenith Horizon Foundation's city contracts.",
+            "Piper has since developed genuine feelings for Renata and has filed no story, sitting on the partial information she's gathered out of guilt and fear of losing the relationship.",
+            "Piper's research has already uncovered the existence of a funding agreement between Zenith Horizon and the police department, but not yet which unit or officer is involved.",
+            "Adrian has told no one, including Renata, about his blackouts or their true cause, out of fear of losing custody of Mia and fear of being taken off the case or institutionalized."
+          ]
+        },
+        {
+          "label": "The Zenith Horizon Money",
+          "character_knowledge": {
+            "CAPT_LENA_ZHAO": "She continues shielding Kestler's task force from outside scrutiny purely to protect her own funding arrangement, and reads the courthouse incident only as a liability to manage, having no idea it connects to anything beyond Kestler's personal life.",
+            "PIPER_ZHANG": "She's found a name tied to police cold-case funding and a redacted contract line item, moving steadily closer to Zhao's arrangement without yet realizing it, or that the story she started could unravel her own relationship."
+          },
+          "solution": "Facing closure of her underfunded cold-case unit two years ago, Captain Lena Zhao signed a private 'research resource sharing' agreement with the Zenith Horizon Foundation, granting foundation researchers off-book access to biological evidence and case files from three unsolved homicides in exchange for funding — material transfers she logged falsely as 'lab consult, no material transfer.' She has never met Dr. Voss and does not know what specific research her samples supported, nor that Marcus Toll or the Continuum Bridge exist; to her, Zenith Horizon is simply 'a neurological research foundation.' She has been quietly steering resources to keep Kestler's task force under her direct oversight — not to protect Kestler, but to control information flow before anyone connects the arrangement back to her.",
+          "objective_facts": [
+            "Two years ago, facing the cold-case unit's closure, Zhao signed a private funding agreement with the Zenith Horizon Foundation that was never disclosed to the department's oversight board.",
+            "Under that agreement, Zhao granted foundation researchers limited off-book access to case files and biological evidence from three unsolved homicides, officially logged as 'lab consult, no material transfer' despite material being transferred.",
+            "Zhao's sole point of contact at the foundation is an administrator with no knowledge of the specific research the samples supported.",
+            "Zhao does not know Marcus Toll's identity, has never heard of the Continuum Bridge, and believes the foundation's work is unrelated to any active case.",
+            "If the funding agreement surfaces, Zhao faces termination and possible criminal charges for evidence mishandling.",
+            "Zhao has been quietly keeping Kestler's task force under her direct, personal oversight specifically to control what information reaches Internal Affairs before anyone traces the arrangement back to her."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "Redacted",
+      "theme": "Piper's digging into Zenith Horizon surfaces a redacted funding contract that nearly leads back to Zhao, who narrowly intercepts the records request before her name can attach to it.",
+      "intro_note": "Days after the Cannery, Adrian still hasn't explained the blood on his hands to anyone — and the blackout Mia and her visit supervisor witnessed has already handed Renata's lawyers their first hard evidence of what they believe is a relapse.",
+      "outro_note": "Zhao's redirect buys her days, not safety — the paper trail is thinner than she knows, and Piper is circling closer to precinct names than she realizes. Behind his locked apartment door, Adrian stares at hours he still can't account for, certain the next blackout will cost him more than blood on his hands.",
+      "sections": [
+        {
+          "title": "Back on the Floor",
+          "what": "Adrian slips back into the bullpen after the Cannery, brushing off a colleague's concern about his exhaustion, and quietly disposes of the blood-stained gloves unlogged.",
+          "who": [
+            "DET_ADRIAN_KESTLER"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "PRECINCT_BULLPEN",
+          "words": null
+        },
+        {
+          "title": "Unit 4",
+          "what": "Piper cross-references leaked Zenith Horizon filings and finds a redacted line referencing 'Unit 4' cold-case funding, certain it ties back to the police department.",
+          "who": [
+            "PIPER_ZHANG"
+          ],
+          "thread": "The Zenith Horizon Money",
+          "location": "PIPER_NEWSROOM",
+          "words": null
+        },
+        {
+          "title": "The Lawyer's Notes",
+          "what": "Renata reads her lawyer's summary of the supervised-visit blackout report and decides to push the custody hearing forward instead of offering Adrian another chance.",
+          "who": [
+            "RENATA_KESTLER_YOON"
+          ],
+          "thread": "The Custody Petition",
+          "location": "RENATA_HOUSE",
+          "words": null
+        },
+        {
+          "title": "Rising Signal",
+          "what": "Voss watches telemetry from the hidden second device spike overnight, realizing Toll's presence inside Kestler is growing stronger faster than her models predicted.",
+          "who": [
+            "DR_HANA_VOSS"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "VOSS_LAB",
+          "words": null
+        },
+        {
+          "title": "A Borrowed Breath",
+          "what": "Alone in his apartment, Adrian loses a breath mid-sentence as Toll briefly takes his voice, taunting him softly about the blood he can't explain.",
+          "who": [
+            "DET_ADRIAN_KESTLER",
+            "TOLL"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "KESTLER_APARTMENT",
+          "words": {
+            "min": 150,
+            "max": 280,
+            "target": "150 to 280"
+          }
+        },
+        {
+          "title": "Reading It Wrong",
+          "what": "At the Tidewater, Renata vents about the hearing while Piper's guilt over her own hidden agenda surfaces as distracted silence Renata reads as stress.",
+          "who": [
+            "RENATA_KESTLER_YOON",
+            "PIPER_ZHANG"
+          ],
+          "thread": "The Custody Petition",
+          "location": "THE_TIDEWATER",
+          "words": null
+        },
+        {
+          "title": "A Request Surfaces",
+          "what": "Zhao learns a records request has been filed referencing old cold-case evidence transfers and quietly panics that it could expose her funding deal.",
+          "who": [
+            "CAPT_LENA_ZHAO"
+          ],
+          "thread": "The Zenith Horizon Money",
+          "location": "PRECINCT_BULLPEN",
+          "words": null
+        },
+        {
+          "title": "Narrowing the Trail",
+          "what": "Piper lines up the 'Unit 4' contract against precinct assignment records, narrowing her suspicion toward whichever captain oversaw cold cases two years ago.",
+          "who": [
+            "PIPER_ZHANG"
+          ],
+          "thread": "The Zenith Horizon Money",
+          "location": "PIPER_NEWSROOM",
+          "words": null
+        },
+        {
+          "title": "The Intercept",
+          "what": "Zhao intercepts the records request through a favor from records management, redirecting it before her name can attach to the funding arrangement.",
+          "who": [
+            "CAPT_LENA_ZHAO"
+          ],
+          "thread": "The Zenith Horizon Money",
+          "location": "PRECINCT_BULLPEN",
+          "words": {
+            "min": 150,
+            "max": 280,
+            "target": "150 to 280"
+          }
+        },
+        {
+          "title": "A Careful Question",
+          "what": "Adrian visits Voss under the pretext of a forensic consult, carefully probing about memory loss and blackouts while she deflects with clinical reassurance.",
+          "who": [
+            "DET_ADRIAN_KESTLER",
+            "DR_HANA_VOSS"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "VOSS_LAB",
+          "words": null
+        },
+        {
+          "title": "Hearing Strategy",
+          "what": "Renata's lawyer walks her through hearing strategy built around the supervised-visit blackout, urging her to hold firm and stop second-guessing herself.",
+          "who": [
+            "RENATA_KESTLER_YOON"
+          ],
+          "thread": "The Custody Petition",
+          "location": "COURTHOUSE",
+          "words": null
+        },
+        {
+          "title": "The Editor's Deadline",
+          "what": "Piper's editor pressures her to file the Zenith Horizon story now, and she stalls, protecting Renata from a truth not yet fully confirmed.",
+          "who": [
+            "PIPER_ZHANG"
+          ],
+          "thread": "The Zenith Horizon Money",
+          "location": "PIPER_NEWSROOM",
+          "words": null
+        },
+        {
+          "title": "A Second Falsehood",
+          "what": "Zhao falsifies a second evidence log entry to cover the redirected records request, uneasy at how thin her cover story has become.",
+          "who": [
+            "CAPT_LENA_ZHAO"
+          ],
+          "thread": "The Zenith Horizon Money",
+          "location": "PRECINCT_BULLPEN",
+          "words": null
+        },
+        {
+          "title": "Checking the Machine",
+          "what": "Voss secretly visits the Cannery to check on Toll's comatose body and the hidden generator, confirming the bridge device still holds steady.",
+          "who": [
+            "DR_HANA_VOSS"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "TOLL_SAFEHOUSE",
+          "words": null
+        },
+        {
+          "title": "Almost",
+          "what": "At the Tidewater again, Piper almost confesses the real reason she started dating Renata, then loses her nerve and changes the subject.",
+          "who": [
+            "PIPER_ZHANG",
+            "RENATA_KESTLER_YOON"
+          ],
+          "thread": "The Custody Petition",
+          "location": "THE_TIDEWATER",
+          "words": null
+        },
+        {
+          "title": "Deeper in the Drawer",
+          "what": "Back home, Adrian buries the blood-stained clothing deeper in the locked drawer, retreating further from Renata, Zhao, and everyone who might help him.",
+          "who": [
+            "DET_ADRIAN_KESTLER"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "KESTLER_APARTMENT",
+          "words": null
+        },
+        {
+          "title": "Too Close",
+          "what": "Piper realizes the redacted 'Unit 4' funding may trace back to someone inside Adrian's own precinct, horrified at how close the story has come.",
+          "who": [
+            "PIPER_ZHANG"
+          ],
+          "thread": "The Zenith Horizon Money",
+          "location": "PIPER_NEWSROOM",
+          "words": null
+        }
+      ],
+      "case": [
+        {
+          "label": "The Continuum Bridge",
+          "character_knowledge": {
+            "DET_ADRIAN_KESTLER": "He knows he keeps losing time and that he woke at the Cannery with blood he can't explain, and he has hidden that discovery entirely rather than report it, terrified of losing Mia or being pulled off the case. He wrongly believes his blackouts are some kind of breakdown he can solve alone, with no idea a second consciousness is driving him during them.",
+            "DR_HANA_VOSS": "She knows the hidden second device is active and that Toll's presence inside Kestler is strengthening faster than her models predicted, and she continues concealing both the device's existence and her role in supplying Toll's seed emitter out of fear of prosecution. She misreads Adrian's careful questions as ordinary case curiosity, not personal desperation.",
+            "TOLL": "He knows exactly what is happening inside Kestler and that he already killed once while briefly in control, and he uses his fragments of speech to taunt Adrian with pieces of the blood discovery without revealing the full truth of the transfer. He wrongly assumes Adrian is too fractured to piece the pattern together before the transfer completes."
+          },
+          "solution": "Dr. Hana Voss developed the Continuum Bridge, a device that transfers a neural pattern into a second living brain via close-range electromagnetic scan, intended as a consciousness-preservation option for terminal patients. Marcus Toll, a serial killer under Adrian Kestler's pursuit and secretly dying of an aggressive brain tumor, obtained an unauthorized prototype 'seed emitter' from Voss's foundation by posing as a terminal volunteer for an unrelated trial. During a confrontation with Kestler, Toll used the device on himself, triggering a partial consciousness transfer: his own body went comatose while his neural pattern lodged itself as a second presence in Kestler's mind. That presence strengthens whenever Kestler sleeps deeply or is intoxicated, and has already seized brief control of his body once, using it to kill again — an act Kestler has no memory of. A second prototype device, hidden by Voss and never disclosed to anyone, would complete the transfer permanently and erase Kestler's consciousness if he ever falls into deep sleep within its range.",
+          "objective_facts": [
+            "The Continuum Bridge completes a permanent neural transfer only if the receiving brain is in a receptive state — deep unconsciousness or sedation — within range of an active seed-emitter signal.",
+            "Marcus Toll obtained an unauthorized prototype seed emitter from Zenith Horizon Foundation by posing as a terminal patient volunteering for an unrelated pain-management trial.",
+            "During his confrontation with Detective Kestler, Toll activated the seed emitter on himself, initiating a partial consciousness bridge and leaving his own body comatose at the Cannery.",
+            "Toll's neural pattern persists as a secondary presence inside Kestler's mind, strengthening during Kestler's sleep or intoxication, and capable of temporarily seizing control of Kestler's body.",
+            "While in control of Kestler's body during a blackout, Toll has already killed one more victim — a fact Kestler does not remember and does not yet know occurred.",
+            "Dr. Voss possesses a second, fully functional seed-emitter prototype, which she has hidden from both Kestler and the department out of fear of prosecution and loss of her research.",
+            "If Kestler falls into deep sleep within range of that second device, the transfer would complete permanently, erasing his consciousness and leaving Toll in full, lasting control of his body."
+          ]
+        },
+        {
+          "label": "The Zenith Horizon Money",
+          "character_knowledge": {
+            "CAPT_LENA_ZHAO": "She knows a records request referencing old cold-case evidence transfers has surfaced and manages to redirect it before her name attaches, concealing from everyone that she ever signed the funding agreement at all. She wrongly believes intercepting this one request has closed the exposure, unaware Piper is working the same trail from the outside.",
+            "PIPER_ZHANG": "She knows she's found a redacted contract referencing 'Unit 4' cold-case funding and is narrowing in on which precinct captain signed it, while stalling her editor and staying silent with Renata about how close and personal this story has become. She doesn't yet realize the captain she's circling oversees her own girlfriend's brother."
+          },
+          "solution": "Facing closure of her underfunded cold-case unit two years ago, Captain Lena Zhao signed a private 'research resource sharing' agreement with the Zenith Horizon Foundation, granting foundation researchers off-book access to biological evidence and case files from three unsolved homicides in exchange for funding — material transfers she logged falsely as 'lab consult, no material transfer.' She has never met Dr. Voss and does not know what specific research her samples supported, nor that Marcus Toll or the Continuum Bridge exist; to her, Zenith Horizon is simply 'a neurological research foundation.' She has been quietly steering resources to keep Kestler's task force under her direct oversight — not to protect Kestler, but to control information flow before anyone connects the arrangement back to her.",
+          "objective_facts": [
+            "Two years ago, facing the cold-case unit's closure, Zhao signed a private funding agreement with the Zenith Horizon Foundation that was never disclosed to the department's oversight board.",
+            "Under that agreement, Zhao granted foundation researchers limited off-book access to case files and biological evidence from three unsolved homicides, officially logged as 'lab consult, no material transfer' despite material being transferred.",
+            "Zhao's sole point of contact at the foundation is an administrator with no knowledge of the specific research the samples supported.",
+            "Zhao does not know Marcus Toll's identity, has never heard of the Continuum Bridge, and believes the foundation's work is unrelated to any active case.",
+            "If the funding agreement surfaces, Zhao faces termination and possible criminal charges for evidence mishandling.",
+            "Zhao has been quietly keeping Kestler's task force under her direct, personal oversight specifically to control what information reaches Internal Affairs before anyone traces the arrangement back to her."
+          ]
+        },
+        {
+          "label": "The Custody Petition",
+          "character_knowledge": {
+            "RENATA_KESTLER_YOON": "She knows the supervised-visit blackout gives her lawyer real evidence and is resolving to push the hearing forward rather than relent, openly grieving how far things have fallen. She wrongly reads Piper's distracted guilt as ordinary stress about the case rather than a secret about how their relationship began.",
+            "PIPER_ZHANG": "She knows her reporting is edging toward truths that could devastate Renata and almost confesses the real origin of their relationship before losing her nerve again, concealing both her investigation's progress and her growing dread from the woman she loves. She believes she still has time to finish the story quietly before it ever has to touch Renata directly."
+          },
+          "solution": "Eleven days into the season's timeline, Adrian's half-sister Renata Kestler-Yoon filed for emergency custody of his nine-year-old daughter Mia after two disturbing incidents she believes are a relapse into the alcoholism that ended Adrian's marriage four years ago — she has no idea the real cause is Toll's growing control over her brother's body. Renata's girlfriend, journalist Piper Zhang, began the relationship six months ago specifically to get close to a police department source for a story she's building on Zenith Horizon Foundation's city contracts, and has since fallen genuinely in love with Renata — she has not filed any story yet, sitting on a partial lead (the existence of Zhao's funding agreement) out of guilt and fear of losing her. Neither woman knows about the Continuum Bridge or Marcus Toll; Adrian has told no one about his blackouts, afraid of losing Mia or being pulled off the case.",
+          "objective_facts": [
+            "Renata filed the emergency custody petition eleven days ago, citing two incidents witnessed by Mia's school and one 911 call from a neighbor.",
+            "Renata believes Adrian has relapsed into the alcoholism that ended his marriage four years ago; she has no knowledge of the Continuum Bridge, Marcus Toll, or Dr. Voss.",
+            "Piper began her relationship with Renata six months ago after learning she was Detective Kestler's sister, originally hoping for access to police department information for a story on Zenith Horizon Foundation's city contracts.",
+            "Piper has since developed genuine feelings for Renata and has filed no story, sitting on the partial information she's gathered out of guilt and fear of losing the relationship.",
+            "Piper's research has already uncovered the existence of a funding agreement between Zenith Horizon and the police department, but not yet which unit or officer is involved.",
+            "Adrian has told no one, including Renata, about his blackouts or their true cause, out of fear of losing custody of Mia and fear of being taken off the case or institutionalized."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "The Other Voice",
+      "theme": "Adrian pieces together, from a fragment of recovered memory and a victim he can't account for, that someone else has been driving his body during his blackouts — the season's central horror finally has a shape, and nothing after this can be unknown again.",
+      "intro_note": "Last time: Piper's digging into Zenith Horizon surfaced a redacted contract pointing toward 'Unit 4' cold-case funding, and Zhao intercepted the records request just before it could be traced back to her name. Now the ground shifts to Adrian, and to the blackouts he can no longer explain away.",
+      "outro_note": "Adrian knows now what's inside him — and what it's already done. Somewhere in the department, a quiet audit is about to start asking the same kinds of questions he's been asking himself. And in a warm house across town, Piper is running out of time to decide which truth costs her less to tell.",
+      "sections": [
+        {
+          "title": "A Familiar Signature",
+          "what": "Zhao hands Kestler a new homicide file with Toll's exact signature; Kestler stares at photos of a kill he has no memory of committing.",
+          "who": [
+            "CAPT_LENA_ZHAO",
+            "DET_ADRIAN_KESTLER"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "PRECINCT_BULLPEN",
+          "words": null
+        },
+        {
+          "title": "The Cuff",
+          "what": "Adrian wakes at dawn, finds dried blood crusted on his shirt cuff, and scrubs it away alone before anyone can ask him why.",
+          "who": [
+            "DET_ADRIAN_KESTLER"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "KESTLER_APARTMENT",
+          "words": null
+        },
+        {
+          "title": "Paperwork",
+          "what": "Renata sorts custody paperwork at the kitchen table while Piper helps quietly, editing her own guilt out of every kind word she offers.",
+          "who": [
+            "RENATA_KESTLER_YOON",
+            "PIPER_ZHANG"
+          ],
+          "thread": "The Custody Petition",
+          "location": "RENATA_HOUSE",
+          "words": null
+        },
+        {
+          "title": "A Spike in the Dark",
+          "what": "Voss watches a sudden spike on the Cannery's remote monitor, hesitates over the phone, then logs the anomaly as routine interference instead.",
+          "who": [
+            "DR_HANA_VOSS"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "VOSS_LAB",
+          "words": null
+        },
+        {
+          "title": "Unit 4",
+          "what": "Piper's research turns up a fragment naming 'Unit 4' cold-case funding; she stares at it too long before closing the file, unsure.",
+          "who": [
+            "PIPER_ZHANG"
+          ],
+          "thread": "The Zenith Horizon Money",
+          "location": "PIPER_NEWSROOM",
+          "words": null
+        },
+        {
+          "title": "The Torn Awning",
+          "what": "Studying the new victim's crime-scene photos, Kestler freezes at a detail — a torn awning — that surfaces a fragment of memory he can't place.",
+          "who": [
+            "DET_ADRIAN_KESTLER"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "PRECINCT_BULLPEN",
+          "words": null
+        },
+        {
+          "title": "Look at Your Hands",
+          "what": "At the bar mid-drink, TOLL's voice surfaces inside Kestler's mind, taunting him to look closer at his own hands and the blood there.",
+          "who": [
+            "DET_ADRIAN_KESTLER",
+            "TOLL"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "THE_TIDEWATER",
+          "words": {
+            "min": 150,
+            "max": 230,
+            "target": "150 to 230"
+          }
+        },
+        {
+          "title": "Keep It Small",
+          "what": "Zhao presses Kestler to close the case fast, unknowingly protecting her own buried funding deal by keeping his unit small and unwatched.",
+          "who": [
+            "CAPT_LENA_ZHAO",
+            "DET_ADRIAN_KESTLER"
+          ],
+          "thread": "The Zenith Horizon Money",
+          "location": "PRECINCT_BULLPEN",
+          "words": null
+        },
+        {
+          "title": "Out Again",
+          "what": "Alone in the dark, Adrian hears TOLL surface mid-thought, cold and amused, hinting he was 'out' again recently — and enjoyed it.",
+          "who": [
+            "DET_ADRIAN_KESTLER",
+            "TOLL"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "KESTLER_APARTMENT",
+          "words": {
+            "min": 150,
+            "max": 230,
+            "target": "150 to 230"
+          }
+        },
+        {
+          "title": "Marble Hall",
+          "what": "Ahead of the hearing date, Adrian and Renata cross paths in the marble hall; she notices his exhaustion, he deflects, the distance widening.",
+          "who": [
+            "DET_ADRIAN_KESTLER",
+            "RENATA_KESTLER_YOON"
+          ],
+          "thread": "The Custody Petition",
+          "location": "COURTHOUSE",
+          "words": null
+        },
+        {
+          "title": "The Locked Drawer",
+          "what": "Adrian empties his locked drawer, laying blackout dates against news clippings on the floor, forcing a single fragment into a fuller, worse memory.",
+          "who": [
+            "DET_ADRIAN_KESTLER"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "KESTLER_APARTMENT",
+          "words": null
+        },
+        {
+          "title": "The Corkboard",
+          "what": "Charting his own alibi gaps against the victim's time of death on the corkboard, Kestler realizes with horror that he is the killer.",
+          "who": [
+            "DET_ADRIAN_KESTLER"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "PRECINCT_BULLPEN",
+          "words": null
+        },
+        {
+          "title": "A Second Will",
+          "what": "TOLL speaks plainly inside Kestler's mind for the first time, confirming the kill and naming himself as a second will sharing his body.",
+          "who": [
+            "DET_ADRIAN_KESTLER",
+            "TOLL"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "KESTLER_APARTMENT",
+          "words": null
+        },
+        {
+          "title": "The Contact",
+          "what": "Piper meets a contact at the Tidewater and walks away with confirmation that Zenith Horizon money reached a specific precinct unit, unnamed but real.",
+          "who": [
+            "PIPER_ZHANG"
+          ],
+          "thread": "The Zenith Horizon Money",
+          "location": "THE_TIDEWATER",
+          "words": null
+        },
+        {
+          "title": "Rehearsal",
+          "what": "With Mia asleep upstairs, Renata rehearses her testimony aloud; Piper listens, guilt sharpening over everything she still hasn't told her.",
+          "who": [
+            "RENATA_KESTLER_YOON",
+            "PIPER_ZHANG"
+          ],
+          "thread": "The Custody Petition",
+          "location": "RENATA_HOUSE",
+          "words": null
+        },
+        {
+          "title": "Routine Interference",
+          "what": "Alone at night, Voss reviews the spike data again and chooses to bury it rather than warn Kestler or anyone at the department.",
+          "who": [
+            "DR_HANA_VOSS"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "VOSS_LAB",
+          "words": null
+        },
+        {
+          "title": "What's Inside Him",
+          "what": "Kestler sits alone with the truth of what he's done and what's inside him, unable yet to decide whether to confess, run, or fight.",
+          "who": [
+            "DET_ADRIAN_KESTLER"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "PRECINCT_BULLPEN",
+          "words": {
+            "min": 150,
+            "max": 230,
+            "target": "150 to 230"
+          }
+        }
+      ],
+      "case": [
+        {
+          "label": "The Continuum Bridge",
+          "character_knowledge": {
+            "DET_ADRIAN_KESTLER": "This episode Adrian genuinely pieces together that his blackouts correspond to a real killing and that some other will is taking control of his body — he tells no one, hiding the blood-stained cuff and the corkboard evidence from Zhao and everyone else out of fear of losing Mia or being pulled from the case; he wrongly assumes this might be some breakdown of his own making rather than an outside consciousness, since he has no concept of the Continuum Bridge or Voss's device.",
+            "TOLL": "Toll knows everything — his own killing during the blackout, the device, Voss's involvement — and this episode deliberately reveals just enough to torment Adrian, naming himself as a second will sharing the body, while carefully withholding Voss's name and the Cannery's location to protect his own foothold.",
+            "DR_HANA_VOSS": "Voss sees the spike in the hidden second device's readings and correctly understands it means Toll's presence in Kestler is strengthening, but she logs it as routine interference and tells no one, protecting her research and herself rather than warning Kestler of what's happening inside him."
+          },
+          "solution": "Dr. Hana Voss developed the Continuum Bridge, a device that transfers a neural pattern into a second living brain via close-range electromagnetic scan, intended as a consciousness-preservation option for terminal patients. Marcus Toll, a serial killer under Adrian Kestler's pursuit and secretly dying of an aggressive brain tumor, obtained an unauthorized prototype 'seed emitter' from Voss's foundation by posing as a terminal volunteer for an unrelated trial. During a confrontation with Kestler, Toll used the device on himself, triggering a partial consciousness transfer: his own body went comatose while his neural pattern lodged itself as a second presence in Kestler's mind. That presence strengthens whenever Kestler sleeps deeply or is intoxicated, and has already seized brief control of his body once, using it to kill again — an act Kestler has no memory of. A second prototype device, hidden by Voss and never disclosed to anyone, would complete the transfer permanently and erase Kestler's consciousness if he ever falls into deep sleep within its range.",
+          "objective_facts": [
+            "The Continuum Bridge completes a permanent neural transfer only if the receiving brain is in a receptive state — deep unconsciousness or sedation — within range of an active seed-emitter signal.",
+            "Marcus Toll obtained an unauthorized prototype seed emitter from Zenith Horizon Foundation by posing as a terminal patient volunteering for an unrelated pain-management trial.",
+            "During his confrontation with Detective Kestler, Toll activated the seed emitter on himself, initiating a partial consciousness bridge and leaving his own body comatose at the Cannery.",
+            "Toll's neural pattern persists as a secondary presence inside Kestler's mind, strengthening during Kestler's sleep or intoxication, and capable of temporarily seizing control of Kestler's body.",
+            "While in control of Kestler's body during a blackout, Toll has already killed one more victim — a fact Kestler does not remember and does not yet know occurred.",
+            "Dr. Voss possesses a second, fully functional seed-emitter prototype, which she has hidden from both Kestler and the department out of fear of prosecution and loss of her research.",
+            "If Kestler falls into deep sleep within range of that second device, the transfer would complete permanently, erasing his consciousness and leaving Toll in full, lasting control of his body."
+          ]
+        },
+        {
+          "label": "The Zenith Horizon Money",
+          "character_knowledge": {
+            "PIPER_ZHANG": "Piper confirms this episode that Zenith Horizon funding reached a specific precinct unit, correctly suspecting it circles back toward Zhao, but she doesn't yet have a name attached and says nothing of the discovery to Renata, still sitting on everything out of guilt.",
+            "CAPT_LENA_ZHAO": "Zhao pushes Kestler to close the new case quickly, telling herself and him it's about clearance rates when it's really about keeping her unit small, contained, and insulated from scrutiny before her funding arrangement can be traced back to her; she has no idea Piper is already closing in."
+          },
+          "solution": "Facing closure of her underfunded cold-case unit two years ago, Captain Lena Zhao signed a private 'research resource sharing' agreement with the Zenith Horizon Foundation, granting foundation researchers off-book access to biological evidence and case files from three unsolved homicides in exchange for funding — material transfers she logged falsely as 'lab consult, no material transfer.' She has never met Dr. Voss and does not know what specific research her samples supported, nor that Marcus Toll or the Continuum Bridge exist; to her, Zenith Horizon is simply 'a neurological research foundation.' She has been quietly steering resources to keep Kestler's task force under her direct oversight — not to protect Kestler, but to control information flow before anyone connects the arrangement back to her.",
+          "objective_facts": [
+            "Two years ago, facing the cold-case unit's closure, Zhao signed a private funding agreement with the Zenith Horizon Foundation that was never disclosed to the department's oversight board.",
+            "Under that agreement, Zhao granted foundation researchers limited off-book access to case files and biological evidence from three unsolved homicides, officially logged as 'lab consult, no material transfer' despite material being transferred.",
+            "Zhao's sole point of contact at the foundation is an administrator with no knowledge of the specific research the samples supported.",
+            "Zhao does not know Marcus Toll's identity, has never heard of the Continuum Bridge, and believes the foundation's work is unrelated to any active case.",
+            "If the funding agreement surfaces, Zhao faces termination and possible criminal charges for evidence mishandling.",
+            "Zhao has been quietly keeping Kestler's task force under her direct, personal oversight specifically to control what information reaches Internal Affairs before anyone traces the arrangement back to her."
+          ]
+        },
+        {
+          "label": "The Custody Petition",
+          "character_knowledge": {
+            "RENATA_KESTLER_YOON": "Renata prepares her testimony convinced Adrian's visible exhaustion is more evidence of relapse, genuinely believing she's protecting Mia; she has no idea the real cause has nothing to do with alcohol, and she trusts Piper's support completely, unaware of how their relationship began.",
+            "PIPER_ZHANG": "Piper helps Renata prepare for the hearing while privately carrying both her original deception and her new knowledge about Zenith Horizon's reach into the department, saying nothing about either, her guilt deepening the closer the hearing gets."
+          },
+          "solution": "Eleven days into the season's timeline, Adrian's half-sister Renata Kestler-Yoon filed for emergency custody of his nine-year-old daughter Mia after two disturbing incidents she believes are a relapse into the alcoholism that ended Adrian's marriage four years ago — she has no idea the real cause is Toll's growing control over her brother's body. Renata's girlfriend, journalist Piper Zhang, began the relationship six months ago specifically to get close to a police department source for a story she's building on Zenith Horizon Foundation's city contracts, and has since fallen genuinely in love with Renata — she has not filed any story yet, sitting on a partial lead (the existence of Zhao's funding agreement) out of guilt and fear of losing her. Neither woman knows about the Continuum Bridge or Marcus Toll; Adrian has told no one about his blackouts, afraid of losing Mia or being pulled off the case.",
+          "objective_facts": [
+            "Renata filed the emergency custody petition eleven days ago, citing two incidents witnessed by Mia's school and one 911 call from a neighbor.",
+            "Renata believes Adrian has relapsed into the alcoholism that ended his marriage four years ago; she has no knowledge of the Continuum Bridge, Marcus Toll, or Dr. Voss.",
+            "Piper began her relationship with Renata six months ago after learning she was Detective Kestler's sister, originally hoping for access to police department information for a story on Zenith Horizon Foundation's city contracts.",
+            "Piper has since developed genuine feelings for Renata and has filed no story, sitting on the partial information she's gathered out of guilt and fear of losing the relationship.",
+            "Piper's research has already uncovered the existence of a funding agreement between Zenith Horizon and the police department, but not yet which unit or officer is involved.",
+            "Adrian has told no one, including Renata, about his blackouts or their true cause, out of fear of losing custody of Mia and fear of being taken off the case or institutionalized."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "Everything I Didn't Say",
+      "theme": "Internal Affairs opens a quiet audit that forces Zhao into a second, riskier cover-up, while Piper finally admits to Renata that their relationship began as a way to get close to a police source — two secrets breaking open in the same week.",
+      "intro_note": "Adrian knows now — someone else has been driving him during the blackouts, and it has already killed once through his hands. He has told no one. This week, two other secrets in Port Meridian reach their own breaking point.",
+      "outro_note": "Piper is gone, and Renata is alone in a house four days from a hearing. Zhao's second set of falsified records is filed, buried but not safe. And in his dark apartment, Adrian says nothing to anyone — not about what he now knows he's capable of, not about who's asking to come out.",
+      "sections": [
+        {
+          "title": "The Voice Doesn't Leave",
+          "what": "Alone before dawn, Adrian forces himself to stay awake as Toll needles him about what he now knows, testing how much control fear costs him.",
+          "who": [
+            "DET_ADRIAN_KESTLER",
+            "TOLL"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "KESTLER_APARTMENT",
+          "words": null
+        },
+        {
+          "title": "The Memo",
+          "what": "In the bullpen, Zhao reads a quiet notice that Internal Affairs has opened an audit into the cold-case unit's evidence logs and says nothing.",
+          "who": [
+            "CAPT_LENA_ZHAO"
+          ],
+          "thread": "The Zenith Horizon Money",
+          "location": "PRECINCT_BULLPEN",
+          "words": null
+        },
+        {
+          "title": "Small and Ordinary",
+          "what": "Alone at home, Renata folds Mia's laundry and rereads the hearing notice on the fridge, love and dread tangled before Piper walks in.",
+          "who": [
+            "RENATA_KESTLER_YOON"
+          ],
+          "thread": "The Custody Petition",
+          "location": "RENATA_HOUSE",
+          "words": null
+        },
+        {
+          "title": "Keeping It Together",
+          "what": "Adrian brings Zhao a routine case update; she snaps at him to keep the task force spotless right now, giving no reason at all.",
+          "who": [
+            "DET_ADRIAN_KESTLER",
+            "CAPT_LENA_ZHAO"
+          ],
+          "thread": "The Zenith Horizon Money",
+          "location": "PRECINCT_BULLPEN",
+          "words": null
+        },
+        {
+          "title": "Redacted Lines",
+          "what": "At the newsroom, Piper cross-references funding paperwork, narrowing which precinct captain signed the Zenith Horizon deal without yet landing on a name.",
+          "who": [
+            "PIPER_ZHANG"
+          ],
+          "thread": "The Custody Petition",
+          "location": "PIPER_NEWSROOM",
+          "words": null
+        },
+        {
+          "title": "A Reason to Visit",
+          "what": "Adrian brings Voss a fabricated technical question, quietly probing her research for answers without admitting how much he already understands about Toll.",
+          "who": [
+            "DET_ADRIAN_KESTLER",
+            "DR_HANA_VOSS"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "VOSS_LAB",
+          "words": null
+        },
+        {
+          "title": "Before the Hearing",
+          "what": "At the kitchen table, Renata rehearses her custody testimony while Piper watches, small evasions slipping into their ordinary conversation without Renata noticing yet.",
+          "who": [
+            "RENATA_KESTLER_YOON",
+            "PIPER_ZHANG"
+          ],
+          "thread": "The Custody Petition",
+          "location": "RENATA_HOUSE",
+          "words": null
+        },
+        {
+          "title": "After Hours",
+          "what": "Alone after the bullpen empties, Zhao begins altering the same evidence logs she doctored two years ago, her hands shaking as she works.",
+          "who": [
+            "CAPT_LENA_ZHAO"
+          ],
+          "thread": "The Zenith Horizon Money",
+          "location": "PRECINCT_BULLPEN",
+          "words": null
+        },
+        {
+          "title": "What Voss Doesn't Say",
+          "what": "After Adrian leaves, Voss studies data showing his blackouts worsening and again chooses not to disclose the hidden second seed-emitter she's kept buried.",
+          "who": [
+            "DR_HANA_VOSS"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "VOSS_LAB",
+          "words": null
+        },
+        {
+          "title": "A Question Too Direct",
+          "what": "Renata gently presses Piper about her vague sources, unaware she's circling the exact secret Piper has spent six months hiding from her.",
+          "who": [
+            "RENATA_KESTLER_YOON",
+            "PIPER_ZHANG"
+          ],
+          "thread": "The Custody Petition",
+          "location": "RENATA_HOUSE",
+          "words": null
+        },
+        {
+          "title": "The Second Call",
+          "what": "Zhao phones her foundation contact demanding the paper trail be scrubbed on their end too, her composure fracturing audibly mid-call.",
+          "who": [
+            "CAPT_LENA_ZHAO"
+          ],
+          "thread": "The Zenith Horizon Money",
+          "location": "PRECINCT_BULLPEN",
+          "words": {
+            "min": 140,
+            "max": 220,
+            "target": "140 to 220"
+          }
+        },
+        {
+          "title": "Decision at the Bar",
+          "what": "Alone at the Tidewater, Piper drinks through her guilt and finally decides she cannot keep lying to Renata before the hearing.",
+          "who": [
+            "PIPER_ZHANG"
+          ],
+          "thread": "The Custody Petition",
+          "location": "THE_TIDEWATER",
+          "words": null
+        },
+        {
+          "title": "Losing Ground",
+          "what": "Mid-shift at his desk, Adrian nearly blacks out as Toll presses for control, and he barely masks the slip from a passing colleague.",
+          "who": [
+            "DET_ADRIAN_KESTLER",
+            "TOLL"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "PRECINCT_BULLPEN",
+          "words": null
+        },
+        {
+          "title": "Two Fires",
+          "what": "Zhao catches Adrian's near-collapse and publicly covers for him, privately terrified his unraveling could drag Internal Affairs toward her own hidden audit trouble.",
+          "who": [
+            "CAPT_LENA_ZHAO",
+            "DET_ADRIAN_KESTLER"
+          ],
+          "thread": "The Zenith Horizon Money",
+          "location": "PRECINCT_BULLPEN",
+          "words": null
+        },
+        {
+          "title": "Everything I Didn't Say",
+          "what": "Piper finally tells Renata their relationship began as a way to get close to a police source for a Zenith Horizon story.",
+          "who": [
+            "RENATA_KESTLER_YOON",
+            "PIPER_ZHANG"
+          ],
+          "thread": "The Custody Petition",
+          "location": "RENATA_HOUSE",
+          "words": {
+            "min": 170,
+            "max": 260,
+            "target": "170 to 260"
+          }
+        },
+        {
+          "title": "Thrown Out",
+          "what": "The confession detonates into every buried resentment between them, and Renata orders Piper out of the house before either can soften it.",
+          "who": [
+            "RENATA_KESTLER_YOON",
+            "PIPER_ZHANG"
+          ],
+          "thread": "The Custody Petition",
+          "location": "RENATA_HOUSE",
+          "words": null
+        },
+        {
+          "title": "Alone with the Silence",
+          "what": "Renata sits alone in the wreckage, staring at the hearing notice on the fridge, certain Piper's timing was no accident at all.",
+          "who": [
+            "RENATA_KESTLER_YOON"
+          ],
+          "thread": "The Custody Petition",
+          "location": "RENATA_HOUSE",
+          "words": {
+            "min": 130,
+            "max": 210,
+            "target": "130 to 210"
+          }
+        }
+      ],
+      "case": [
+        {
+          "label": "The Zenith Horizon Money",
+          "character_knowledge": {
+            "CAPT_LENA_ZHAO": "Zhao knows Internal Affairs has opened a quiet audit of the cold-case unit's evidence logs and immediately understands it could unravel her funding deal with Zenith Horizon; she hides the real reason for her panic behind procedural language and begins falsifying a second round of records rather than risk exposure. She believes she can control the audit's scope by moving fast, unaware Piper's separate investigation is closing in on the same money from another direction entirely.",
+            "DET_ADRIAN_KESTLER": "Adrian only knows that Zhao has become suddenly, uncharacteristically strict about the task force's paperwork and won't explain why; he assumes it's department politics or budget pressure, having no idea it connects to Voss's foundation or his own case. He's too consumed hiding his own blackouts to press her further."
+          },
+          "solution": "Facing closure of her underfunded cold-case unit two years ago, Captain Lena Zhao signed a private 'research resource sharing' agreement with the Zenith Horizon Foundation, granting foundation researchers off-book access to biological evidence and case files from three unsolved homicides in exchange for funding — material transfers she logged falsely as 'lab consult, no material transfer.' She has never met Dr. Voss and does not know what specific research her samples supported, nor that Marcus Toll or the Continuum Bridge exist; to her, Zenith Horizon is simply 'a neurological research foundation.' She has been quietly steering resources to keep Kestler's task force under her direct oversight — not to protect Kestler, but to control information flow before anyone connects the arrangement back to her.",
+          "objective_facts": [
+            "Two years ago, facing the cold-case unit's closure, Zhao signed a private funding agreement with the Zenith Horizon Foundation that was never disclosed to the department's oversight board.",
+            "Under that agreement, Zhao granted foundation researchers limited off-book access to case files and biological evidence from three unsolved homicides, officially logged as 'lab consult, no material transfer' despite material being transferred.",
+            "Zhao's sole point of contact at the foundation is an administrator with no knowledge of the specific research the samples supported.",
+            "Zhao does not know Marcus Toll's identity, has never heard of the Continuum Bridge, and believes the foundation's work is unrelated to any active case.",
+            "If the funding agreement surfaces, Zhao faces termination and possible criminal charges for evidence mishandling.",
+            "Zhao has been quietly keeping Kestler's task force under her direct, personal oversight specifically to control what information reaches Internal Affairs before anyone traces the arrangement back to her."
+          ]
+        },
+        {
+          "label": "The Custody Petition",
+          "character_knowledge": {
+            "RENATA_KESTLER_YOON": "Renata still believes Adrian's earlier blackout was a relapse and is focused on preparing for the coming hearing, entirely unaware Piper's relationship began as research into a police funding story; when Piper confesses, she learns the full truth for the first time and reacts to a betrayal she never suspected was possible.",
+            "PIPER_ZHANG": "Piper knows exactly why she first got close to Renata and that she's kept it hidden for six months; this episode she decides she can no longer bear the secret and tells Renata everything, aware the timing — days before the custody hearing — will look like the worst possible moment but unwilling to wait any longer."
+          },
+          "solution": "Eleven days into the season's timeline, Adrian's half-sister Renata Kestler-Yoon filed for emergency custody of his nine-year-old daughter Mia after two disturbing incidents she believes are a relapse into the alcoholism that ended Adrian's marriage four years ago — she has no idea the real cause is Toll's growing control over her brother's body. Renata's girlfriend, journalist Piper Zhang, began the relationship six months ago specifically to get close to a police department source for a story she's building on Zenith Horizon Foundation's city contracts, and has since fallen genuinely in love with Renata — she has not filed any story yet, sitting on a partial lead (the existence of Zhao's funding agreement) out of guilt and fear of losing her. Neither woman knows about the Continuum Bridge or Marcus Toll; Adrian has told no one about his blackouts, afraid of losing Mia or being pulled off the case.",
+          "objective_facts": [
+            "Renata filed the emergency custody petition eleven days ago, citing two incidents witnessed by Mia's school and one 911 call from a neighbor.",
+            "Renata believes Adrian has relapsed into the alcoholism that ended his marriage four years ago; she has no knowledge of the Continuum Bridge, Marcus Toll, or Dr. Voss.",
+            "Piper began her relationship with Renata six months ago after learning she was Detective Kestler's sister, originally hoping for access to police department information for a story on Zenith Horizon Foundation's city contracts.",
+            "Piper has since developed genuine feelings for Renata and has filed no story, sitting on the partial information she's gathered out of guilt and fear of losing the relationship.",
+            "Piper's research has already uncovered the existence of a funding agreement between Zenith Horizon and the police department, but not yet which unit or officer is involved.",
+            "Adrian has told no one, including Renata, about his blackouts or their true cause, out of fear of losing custody of Mia and fear of being taken off the case or institutionalized."
+          ]
+        },
+        {
+          "label": "The Continuum Bridge",
+          "character_knowledge": {
+            "DET_ADRIAN_KESTLER": "Adrian now knows a second consciousness is driving his blackouts and that it has killed at least once through him, but he tells no one, still hiding the truth from Zhao, Renata, and Voss alike out of fear of losing Mia or being pulled off the case. He visits Voss under a false pretext, testing what she knows without revealing how much he's already pieced together.",
+            "TOLL": "Toll knows Adrian has finally understood what's happening to him and uses that knowledge to needle and destabilize him rather than hide, growing bolder now that concealment no longer serves his purpose; he does not yet know about the second hidden device Voss possesses.",
+            "DR_HANA_VOSS": "Voss sees Adrian's blackouts accelerating in her monitoring data and correctly suspects he's begun to piece together the truth, but she still conceals the existence of the second seed-emitter prototype, unwilling to risk her research or prosecution by disclosing it even as the danger visibly grows."
+          },
+          "solution": "Dr. Hana Voss developed the Continuum Bridge, a device that transfers a neural pattern into a second living brain via close-range electromagnetic scan, intended as a consciousness-preservation option for terminal patients. Marcus Toll, a serial killer under Adrian Kestler's pursuit and secretly dying of an aggressive brain tumor, obtained an unauthorized prototype 'seed emitter' from Voss's foundation by posing as a terminal volunteer for an unrelated trial. During a confrontation with Kestler, Toll used the device on himself, triggering a partial consciousness transfer: his own body went comatose while his neural pattern lodged itself as a second presence in Kestler's mind. That presence strengthens whenever Kestler sleeps deeply or is intoxicated, and has already seized brief control of his body once, using it to kill again — an act Kestler has no memory of. A second prototype device, hidden by Voss and never disclosed to anyone, would complete the transfer permanently and erase Kestler's consciousness if he ever falls into deep sleep within its range.",
+          "objective_facts": [
+            "The Continuum Bridge completes a permanent neural transfer only if the receiving brain is in a receptive state — deep unconsciousness or sedation — within range of an active seed-emitter signal.",
+            "Marcus Toll obtained an unauthorized prototype seed emitter from Zenith Horizon Foundation by posing as a terminal patient volunteering for an unrelated pain-management trial.",
+            "During his confrontation with Detective Kestler, Toll activated the seed emitter on himself, initiating a partial consciousness bridge and leaving his own body comatose at the Cannery.",
+            "Toll's neural pattern persists as a secondary presence inside Kestler's mind, strengthening during Kestler's sleep or intoxication, and capable of temporarily seizing control of Kestler's body.",
+            "While in control of Kestler's body during a blackout, Toll has already killed one more victim — a fact Kestler does not remember and does not yet know occurred.",
+            "Dr. Voss possesses a second, fully functional seed-emitter prototype, which she has hidden from both Kestler and the department out of fear of prosecution and loss of her research.",
+            "If Kestler falls into deep sleep within range of that second device, the transfer would complete permanently, erasing his consciousness and leaving Toll in full, lasting control of his body."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "After",
+      "theme": "In the fallout of Piper's confession and Adrian's still-unspoken discovery, the ensemble sits with damage already done — Renata alone in a house built for a family that might not survive the hearing, Adrian circling Voss's lab without yet confronting her — no new ground broken, only the cost of what's already happened being counted.",
+      "intro_note": "Piper's confession is still raw between her and Renata, and the Internal Affairs audit has Zhao rewriting her own paper trail for a second time — none of last week's damage has finished landing. This episode watches it land.",
+      "outro_note": "Somewhere in the dark at the Cannery, a second machine keeps humming, waiting on a sleep that hasn't come yet. Adrian is running out of nights he can stay awake through — and out of people he hasn't lied to.",
+      "sections": [
+        {
+          "title": "The Locked Drawer",
+          "what": "Adrian sits before his locked drawer at dawn, unable to open it, replaying the blackout's blank hours while dreading what evidence still waits inside.",
+          "who": [
+            "DET_ADRIAN_KESTLER"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "KESTLER_APARTMENT",
+          "words": null
+        },
+        {
+          "title": "A Voice in the Quiet",
+          "what": "Toll surfaces mid-thought, needling Adrian about the silence he's kept, savoring how much steadier his own grip on the body has grown.",
+          "who": [
+            "DET_ADRIAN_KESTLER",
+            "TOLL"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "KESTLER_APARTMENT",
+          "words": null
+        },
+        {
+          "title": "Empty Rooms",
+          "what": "Renata wanders her too-quiet house past Mia's untouched toys, rereads the hearing notice on the fridge, and finally deletes an unsent message to Piper.",
+          "who": [
+            "RENATA_KESTLER_YOON"
+          ],
+          "thread": "The Custody Petition",
+          "location": "RENATA_HOUSE",
+          "words": null
+        },
+        {
+          "title": "Unfinished Draft",
+          "what": "Piper stares at a half-written story she can't bring herself to file, torn between the truth she already told Renata and the truth she still hasn't.",
+          "who": [
+            "PIPER_ZHANG"
+          ],
+          "thread": "The Custody Petition",
+          "location": "PIPER_NEWSROOM",
+          "words": null
+        },
+        {
+          "title": "Paper Trail",
+          "what": "Alone after hours, Zhao rechecks the altered evidence logs line by line, weighing how much further she can bend the record before it breaks.",
+          "who": [
+            "CAPT_LENA_ZHAO"
+          ],
+          "thread": "The Zenith Horizon Money",
+          "location": "PRECINCT_BULLPEN",
+          "words": null
+        },
+        {
+          "title": "Off His Game",
+          "what": "Zhao presses Adrian about his exhaustion and missed shifts; he deflects with an old excuse, and she lets it go, distracted by her own concealment.",
+          "who": [
+            "CAPT_LENA_ZHAO",
+            "DET_ADRIAN_KESTLER"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "PRECINCT_BULLPEN",
+          "words": null
+        },
+        {
+          "title": "Two Ships",
+          "what": "Piper visits the bullpen for an unrelated quote and passes Zhao in the hallway, neither aware how close their separate secrets already sit to each other.",
+          "who": [
+            "CAPT_LENA_ZHAO",
+            "PIPER_ZHANG"
+          ],
+          "thread": "The Zenith Horizon Money",
+          "location": "PRECINCT_BULLPEN",
+          "words": null
+        },
+        {
+          "title": "Parked Outside",
+          "what": "Adrian sits parked across from the Continuum Lab at midnight, rehearsing the question he can't yet ask Voss, then drives away without going in.",
+          "who": [
+            "DET_ADRIAN_KESTLER"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "VOSS_LAB",
+          "words": null
+        },
+        {
+          "title": "The Readings",
+          "what": "Voss studies fluctuating signal data from the hidden second device alone, aware the pattern is strengthening, and drafts a confession she doesn't send.",
+          "who": [
+            "DR_HANA_VOSS"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "VOSS_LAB",
+          "words": null
+        },
+        {
+          "title": "Last Call",
+          "what": "Adrian orders a soda instead of whiskey, white-knuckling through the urge to blur the hours, terrified of what waits for him on the other side of sleep.",
+          "who": [
+            "DET_ADRIAN_KESTLER"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "THE_TIDEWATER",
+          "words": {
+            "min": 130,
+            "max": 230,
+            "target": "130 to 230"
+          }
+        },
+        {
+          "title": "Hanging Up",
+          "what": "Renata dials Piper's number, listens to it ring once, and hangs up before she can hear her voice.",
+          "who": [
+            "RENATA_KESTLER_YOON"
+          ],
+          "thread": "The Custody Petition",
+          "location": "RENATA_HOUSE",
+          "words": {
+            "min": 130,
+            "max": 230,
+            "target": "130 to 230"
+          }
+        },
+        {
+          "title": "The Draft She Deletes",
+          "what": "A colleague asks if Piper's story is close to done; she lies that it is, then quietly deletes the paragraphs that would drag Renata's family into it.",
+          "who": [
+            "PIPER_ZHANG"
+          ],
+          "thread": "The Custody Petition",
+          "location": "PIPER_NEWSROOM",
+          "words": null
+        },
+        {
+          "title": "The Auditor's Questions",
+          "what": "An Internal Affairs auditor asks Zhao routine follow-up questions about the cold-case unit's evidence logs; she answers smoothly, then feels her hands shake after he leaves.",
+          "who": [
+            "CAPT_LENA_ZHAO"
+          ],
+          "thread": "The Zenith Horizon Money",
+          "location": "PRECINCT_BULLPEN",
+          "words": null
+        },
+        {
+          "title": "Losing the Thread",
+          "what": "Exhausted past reason, Adrian fights sleep at his kitchen table while Toll's voice grows closer and clearer, until he jerks awake, unsure how long he lost.",
+          "who": [
+            "DET_ADRIAN_KESTLER",
+            "TOLL"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "KESTLER_APARTMENT",
+          "words": null
+        },
+        {
+          "title": "The Notice",
+          "what": "Renata's lawyer calls to confirm the hearing date is set and cannot move again; she thanks him and sits alone in her car afterward.",
+          "who": [
+            "RENATA_KESTLER_YOON"
+          ],
+          "thread": "The Custody Petition",
+          "location": "COURTHOUSE",
+          "words": {
+            "min": 130,
+            "max": 230,
+            "target": "130 to 230"
+          }
+        },
+        {
+          "title": "On the Porch",
+          "what": "Piper returns a spare key to Renata's porch instead of knocking; Renata watches from the window, wanting to open the door, and doesn't.",
+          "who": [
+            "RENATA_KESTLER_YOON",
+            "PIPER_ZHANG"
+          ],
+          "thread": "The Custody Petition",
+          "location": "RENATA_HOUSE",
+          "words": null
+        },
+        {
+          "title": "Not Tonight",
+          "what": "Adrian climbs the lab's steps, hand raised to knock on Voss's door, then lowers it and walks back into the rain, still not ready to know.",
+          "who": [
+            "DET_ADRIAN_KESTLER"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "VOSS_LAB",
+          "words": null
+        }
+      ],
+      "case": [
+        {
+          "label": "The Continuum Bridge",
+          "character_knowledge": {
+            "DET_ADRIAN_KESTLER": "Adrian now knows a second consciousness has been driving his blackouts and that it killed someone while in control of his body, but he has told no one — not Renata, not Zhao — out of fear of losing Mia or being pulled off the case; he suspects Voss's lab is connected and has started watching it from outside, but hasn't confronted her, and he's fighting sleep and alcohol to avoid losing more time.",
+            "TOLL": "Toll knows he is gaining ground with every hour Adrian goes without collapsing from exhaustion, and he's content to draw out Adrian's silence and fear rather than force full control yet, confident the balance keeps tipping his way.",
+            "DR_HANA_VOSS": "Voss is monitoring the strengthening signal from the hidden second device and understands exactly what it means for Adrian if he ever sleeps deeply near it, but she has told no one and hasn't decided whether guilt or self-preservation will win; she has no idea Adrian has started watching her lab from outside."
+          },
+          "solution": "Dr. Hana Voss developed the Continuum Bridge, a device that transfers a neural pattern into a second living brain via close-range electromagnetic scan, intended as a consciousness-preservation option for terminal patients. Marcus Toll, a serial killer under Adrian Kestler's pursuit and secretly dying of an aggressive brain tumor, obtained an unauthorized prototype 'seed emitter' from Voss's foundation by posing as a terminal volunteer for an unrelated trial. During a confrontation with Kestler, Toll used the device on himself, triggering a partial consciousness transfer: his own body went comatose while his neural pattern lodged itself as a second presence in Kestler's mind. That presence strengthens whenever Kestler sleeps deeply or is intoxicated, and has already seized brief control of his body once, using it to kill again — an act Kestler has no memory of. A second prototype device, hidden by Voss and never disclosed to anyone, would complete the transfer permanently and erase Kestler's consciousness if he ever falls into deep sleep within its range.",
+          "objective_facts": [
+            "The Continuum Bridge completes a permanent neural transfer only if the receiving brain is in a receptive state — deep unconsciousness or sedation — within range of an active seed-emitter signal.",
+            "Marcus Toll obtained an unauthorized prototype seed emitter from Zenith Horizon Foundation by posing as a terminal patient volunteering for an unrelated pain-management trial.",
+            "During his confrontation with Detective Kestler, Toll activated the seed emitter on himself, initiating a partial consciousness bridge and leaving his own body comatose at the Cannery.",
+            "Toll's neural pattern persists as a secondary presence inside Kestler's mind, strengthening during Kestler's sleep or intoxication, and capable of temporarily seizing control of Kestler's body.",
+            "While in control of Kestler's body during a blackout, Toll has already killed one more victim — a fact Kestler does not remember and does not yet know occurred.",
+            "Dr. Voss possesses a second, fully functional seed-emitter prototype, which she has hidden from both Kestler and the department out of fear of prosecution and loss of her research.",
+            "If Kestler falls into deep sleep within range of that second device, the transfer would complete permanently, erasing his consciousness and leaving Toll in full, lasting control of his body."
+          ]
+        },
+        {
+          "label": "The Zenith Horizon Money",
+          "character_knowledge": {
+            "CAPT_LENA_ZHAO": "Zhao is quietly managing Internal Affairs' routine follow-up questions while privately re-checking her falsified evidence logs for anything that doesn't hold up, growing more afraid with each question of how thin her cover story has become; she still has no idea Piper Zhang or anyone near Kestler is circling the same funding arrangement.",
+            "PIPER_ZHANG": "Piper has confirmed a funding agreement exists between Zenith Horizon and the department but still doesn't know which unit or officer signed it, and passes through the bullpen with no idea the answer is walking past her in Captain Zhao; she's stalled on pursuing it further while she deals with the damage her confession did to Renata."
+          },
+          "solution": "Facing closure of her underfunded cold-case unit two years ago, Captain Lena Zhao signed a private 'research resource sharing' agreement with the Zenith Horizon Foundation, granting foundation researchers off-book access to biological evidence and case files from three unsolved homicides in exchange for funding — material transfers she logged falsely as 'lab consult, no material transfer.' She has never met Dr. Voss and does not know what specific research her samples supported, nor that Marcus Toll or the Continuum Bridge exist; to her, Zenith Horizon is simply 'a neurological research foundation.' She has been quietly steering resources to keep Kestler's task force under her direct oversight — not to protect Kestler, but to control information flow before anyone connects the arrangement back to her.",
+          "objective_facts": [
+            "Two years ago, facing the cold-case unit's closure, Zhao signed a private funding agreement with the Zenith Horizon Foundation that was never disclosed to the department's oversight board.",
+            "Under that agreement, Zhao granted foundation researchers limited off-book access to case files and biological evidence from three unsolved homicides, officially logged as 'lab consult, no material transfer' despite material being transferred.",
+            "Zhao's sole point of contact at the foundation is an administrator with no knowledge of the specific research the samples supported.",
+            "Zhao does not know Marcus Toll's identity, has never heard of the Continuum Bridge, and believes the foundation's work is unrelated to any active case.",
+            "If the funding agreement surfaces, Zhao faces termination and possible criminal charges for evidence mishandling.",
+            "Zhao has been quietly keeping Kestler's task force under her direct, personal oversight specifically to control what information reaches Internal Affairs before anyone traces the arrangement back to her."
+          ]
+        },
+        {
+          "label": "The Custody Petition",
+          "character_knowledge": {
+            "RENATA_KESTLER_YOON": "Renata is alone with the fallout of Piper's confession, still reeling that six months of their relationship began as a way into a police source, and while she hasn't ended things outright, she can't yet let Piper back into the house; she still believes Adrian's blackouts are relapse and nothing more, and the now-fixed hearing date only sharpens her fear of losing Mia.",
+            "PIPER_ZHANG": "Piper knows exactly why Renata won't answer her calls and doesn't blame her, torn between fighting for the relationship and giving Renata the space her confession earned; she still hasn't told Renata, or anyone, the specific shape of what she uncovered — only that she went looking."
+          },
+          "solution": "Eleven days into the season's timeline, Adrian's half-sister Renata Kestler-Yoon filed for emergency custody of his nine-year-old daughter Mia after two disturbing incidents she believes are a relapse into the alcoholism that ended Adrian's marriage four years ago — she has no idea the real cause is Toll's growing control over her brother's body. Renata's girlfriend, journalist Piper Zhang, began the relationship six months ago specifically to get close to a police department source for a story she's building on Zenith Horizon Foundation's city contracts, and has since fallen genuinely in love with Renata — she has not filed any story yet, sitting on a partial lead (the existence of Zhao's funding agreement) out of guilt and fear of losing her. Neither woman knows about the Continuum Bridge or Marcus Toll; Adrian has told no one about his blackouts, afraid of losing Mia or being pulled off the case.",
+          "objective_facts": [
+            "Renata filed the emergency custody petition eleven days ago, citing two incidents witnessed by Mia's school and one 911 call from a neighbor.",
+            "Renata believes Adrian has relapsed into the alcoholism that ended his marriage four years ago; she has no knowledge of the Continuum Bridge, Marcus Toll, or Dr. Voss.",
+            "Piper began her relationship with Renata six months ago after learning she was Detective Kestler's sister, originally hoping for access to police department information for a story on Zenith Horizon Foundation's city contracts.",
+            "Piper has since developed genuine feelings for Renata and has filed no story, sitting on the partial information she's gathered out of guilt and fear of losing the relationship.",
+            "Piper's research has already uncovered the existence of a funding agreement between Zenith Horizon and the police department, but not yet which unit or officer is involved.",
+            "Adrian has told no one, including Renata, about his blackouts or their true cause, out of fear of losing custody of Mia and fear of being taken off the case or institutionalized."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "What's Left of You",
+      "theme": "Adrian and Voss destroy the hidden second seed-emitter at the Cannery to break Toll's hold for good, Zhao's falsified funding logs surface just far enough to end her career while Zenith Horizon's deeper reach stays buried, and the custody hearing resolves in a way no one expected, leaving Renata and Piper to face the truth now fully between them.",
+      "intro_note": "After a week where nothing moved except the cost of what already had — Renata alone in a house built for a family that might not survive the hearing, Adrian circling Voss's lab without yet walking through the door — the waiting ends today. The hearing has a date. The Cannery still hums in the dark. Someone has to go first.",
+      "outro_note": "",
+      "sections": [
+        {
+          "title": "The Knock",
+          "what": "An Internal Affairs investigator arrives unannounced at Zhao's office with a subpoena for the cold-case unit's original evidence logs, no explanation given.",
+          "who": [
+            "CAPT_LENA_ZHAO"
+          ],
+          "thread": "The Zenith Horizon Money",
+          "location": "PRECINCT_BULLPEN",
+          "words": null
+        },
+        {
+          "title": "The Locked Drawer",
+          "what": "Adrian empties his hidden drawer, lays out fragmented evidence of his blackouts across the floor, and calls Voss demanding the full truth at last.",
+          "who": [
+            "DET_ADRIAN_KESTLER"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "KESTLER_APARTMENT",
+          "words": null
+        },
+        {
+          "title": "What You Didn't Tell Me",
+          "what": "Adrian confronts Voss in her lab; cornered, she admits a second seed-emitter exists, hidden at the Cannery, capable of finishing what Toll started.",
+          "who": [
+            "DET_ADRIAN_KESTLER",
+            "DR_HANA_VOSS"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "VOSS_LAB",
+          "words": null
+        },
+        {
+          "title": "Two Doors",
+          "what": "The custody hearing opens; Renata and Adrian avoid each other's eyes across the aisle while Piper watches from the gallery, unwelcome and unsure why she came.",
+          "who": [
+            "RENATA_KESTLER_YOON",
+            "DET_ADRIAN_KESTLER",
+            "PIPER_ZHANG"
+          ],
+          "thread": "The Custody Petition",
+          "location": "COURTHOUSE",
+          "words": null
+        },
+        {
+          "title": "Lab Consult, No Material Transfer",
+          "what": "Zhao is shown her own logged phrase beside evidence proving material actually changed hands, and finds she has no clean way to explain the gap.",
+          "who": [
+            "CAPT_LENA_ZHAO"
+          ],
+          "thread": "The Zenith Horizon Money",
+          "location": "PRECINCT_BULLPEN",
+          "words": null
+        },
+        {
+          "title": "Into the Cannery",
+          "what": "Adrian and Voss find Toll's comatose body and the hidden generator; mid-search, Toll seizes brief control of Adrian's voice to stall them.",
+          "who": [
+            "DET_ADRIAN_KESTLER",
+            "DR_HANA_VOSS",
+            "TOLL"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "TOLL_SAFEHOUSE",
+          "words": null
+        },
+        {
+          "title": "The Witness",
+          "what": "The visit supervisor's testimony about Adrian's blackout is read into record, and Renata hears a detail about his confusion that doesn't fit her relapse theory.",
+          "who": [
+            "RENATA_KESTLER_YOON"
+          ],
+          "thread": "The Custody Petition",
+          "location": "COURTHOUSE",
+          "words": null
+        },
+        {
+          "title": "Chain of Custody",
+          "what": "Evidence tagged at the Cannery traces back through Zhao's cold-case unit, and Adrian realizes, without meaning to, his own case is what's unraveling her.",
+          "who": [
+            "CAPT_LENA_ZHAO",
+            "DET_ADRIAN_KESTLER"
+          ],
+          "thread": "The Zenith Horizon Money",
+          "location": "PRECINCT_BULLPEN",
+          "words": null
+        },
+        {
+          "title": "Not Yours to Take",
+          "what": "Toll fights harder for control as Voss arms the device for destruction, Adrian's voice cutting in and out mid-sentence as the two collide.",
+          "who": [
+            "DET_ADRIAN_KESTLER",
+            "TOLL",
+            "DR_HANA_VOSS"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "TOLL_SAFEHOUSE",
+          "words": {
+            "min": 130,
+            "max": 250,
+            "target": "130 to 250"
+          }
+        },
+        {
+          "title": "What I Am Now",
+          "what": "Adrian testifies, admitting to blackouts he can't fully explain while withholding their true cause, framing them as a medical crisis he's finally addressing.",
+          "who": [
+            "DET_ADRIAN_KESTLER"
+          ],
+          "thread": "The Custody Petition",
+          "location": "COURTHOUSE",
+          "words": null
+        },
+        {
+          "title": "Severed",
+          "what": "Voss destroys the second seed-emitter; Toll's presence in Adrian's mind convulses through him once and goes silent, the bridge broken for good.",
+          "who": [
+            "DET_ADRIAN_KESTLER",
+            "DR_HANA_VOSS"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "TOLL_SAFEHOUSE",
+          "words": {
+            "min": 130,
+            "max": 250,
+            "target": "130 to 250"
+          }
+        },
+        {
+          "title": "Effective Immediately",
+          "what": "Confronted with the full evidence trail, Zhao is suspended pending termination, her funding deal exposed while Zenith Horizon itself stays officially unnamed.",
+          "who": [
+            "CAPT_LENA_ZHAO"
+          ],
+          "thread": "The Zenith Horizon Money",
+          "location": "PRECINCT_BULLPEN",
+          "words": {
+            "min": 130,
+            "max": 250,
+            "target": "130 to 250"
+          }
+        },
+        {
+          "title": "The Ruling",
+          "what": "The judge denies Renata full custody but orders a supervised joint arrangement pending Adrian's ongoing treatment, an outcome neither sibling expected walking in.",
+          "who": [
+            "RENATA_KESTLER_YOON",
+            "DET_ADRIAN_KESTLER"
+          ],
+          "thread": "The Custody Petition",
+          "location": "COURTHOUSE",
+          "words": {
+            "min": 130,
+            "max": 250,
+            "target": "130 to 250"
+          }
+        },
+        {
+          "title": "A Story Half-Told",
+          "what": "Piper learns of Zhao's suspension, recognizes her own research in the fallout, and quietly decides to sit on the deeper Zenith Horizon story a while longer.",
+          "who": [
+            "PIPER_ZHANG"
+          ],
+          "thread": "The Zenith Horizon Money",
+          "location": "PIPER_NEWSROOM",
+          "words": null
+        },
+        {
+          "title": "What You Used Me For",
+          "what": "After the ruling, Renata confronts Piper in her kitchen; the guilt Piper's carried since her confession finally gets a name, and neither woman resolves it.",
+          "who": [
+            "RENATA_KESTLER_YOON",
+            "PIPER_ZHANG"
+          ],
+          "thread": "The Custody Petition",
+          "location": "RENATA_HOUSE",
+          "words": null
+        },
+        {
+          "title": "Quiet House",
+          "what": "Alone that night, Adrian finally lets himself fall into deep sleep for the first time in months, uncertain how much of himself made it through clean.",
+          "who": [
+            "DET_ADRIAN_KESTLER"
+          ],
+          "thread": "The Continuum Bridge",
+          "location": "KESTLER_APARTMENT",
+          "words": null
+        },
+        {
+          "title": "What's Left",
+          "what": "Adrian visits Mia under supervision for the first time since the ruling, a fragile, wordless truce with Renata forming in the doorway behind them.",
+          "who": [
+            "DET_ADRIAN_KESTLER",
+            "RENATA_KESTLER_YOON"
+          ],
+          "thread": "The Custody Petition",
+          "location": "RENATA_HOUSE",
+          "words": null
+        }
+      ],
+      "case": [
+        {
+          "label": "The Continuum Bridge",
+          "character_knowledge": {
+            "DET_ADRIAN_KESTLER": "Adrian already knows a second consciousness has been driving his blackouts and once killed while in control; this episode he learns from Voss that a hidden second device at the Cannery could finish the job permanently, and races to destroy it, still uncertain afterward how much of Toll, if any, made it through with him.",
+            "DR_HANA_VOSS": "Voss has hidden the second prototype for months to protect herself from prosecution and her research from seizure; confronted by Adrian, she admits its existence and location and chooses to help destroy it, though she still downplays how clearly she suspected Toll's real intentions when she gave him the first device.",
+            "TOLL": "Toll knows the second emitter is his last chance at permanent control and fights to stop its destruction, seizing Adrian's body mid-search to stall for time; he has no way to know whether Adrian or Voss can actually find the device before it's too late."
+          },
+          "solution": "Dr. Hana Voss developed the Continuum Bridge, a device that transfers a neural pattern into a second living brain via close-range electromagnetic scan, intended as a consciousness-preservation option for terminal patients. Marcus Toll, a serial killer under Adrian Kestler's pursuit and secretly dying of an aggressive brain tumor, obtained an unauthorized prototype 'seed emitter' from Voss's foundation by posing as a terminal volunteer for an unrelated trial. During a confrontation with Kestler, Toll used the device on himself, triggering a partial consciousness transfer: his own body went comatose while his neural pattern lodged itself as a second presence in Kestler's mind. That presence strengthens whenever Kestler sleeps deeply or is intoxicated, and has already seized brief control of his body once, using it to kill again — an act Kestler has no memory of. A second prototype device, hidden by Voss and never disclosed to anyone, would complete the transfer permanently and erase Kestler's consciousness if he ever falls into deep sleep within its range.",
+          "objective_facts": [
+            "The Continuum Bridge completes a permanent neural transfer only if the receiving brain is in a receptive state — deep unconsciousness or sedation — within range of an active seed-emitter signal.",
+            "Marcus Toll obtained an unauthorized prototype seed emitter from Zenith Horizon Foundation by posing as a terminal patient volunteering for an unrelated pain-management trial.",
+            "During his confrontation with Detective Kestler, Toll activated the seed emitter on himself, initiating a partial consciousness bridge and leaving his own body comatose at the Cannery.",
+            "Toll's neural pattern persists as a secondary presence inside Kestler's mind, strengthening during Kestler's sleep or intoxication, and capable of temporarily seizing control of Kestler's body.",
+            "While in control of Kestler's body during a blackout, Toll has already killed one more victim — a fact Kestler does not remember and does not yet know occurred.",
+            "Dr. Voss possesses a second, fully functional seed-emitter prototype, which she has hidden from both Kestler and the department out of fear of prosecution and loss of her research.",
+            "If Kestler falls into deep sleep within range of that second device, the transfer would complete permanently, erasing his consciousness and leaving Toll in full, lasting control of his body."
+          ]
+        },
+        {
+          "label": "The Zenith Horizon Money",
+          "character_knowledge": {
+            "CAPT_LENA_ZHAO": "Zhao knows her falsified 'lab consult, no material transfer' logs are the one paper trail that ties her to the funding deal; this episode, evidence recovered from the Cannery raid contradicts her own records in a way she can't spin away, and she's suspended without ever learning who Marcus Toll is or what the Continuum Bridge was.",
+            "DET_ADRIAN_KESTLER": "Adrian isn't hunting Zhao — the evidence he and Voss recover at the Cannery for his own case happens to trace back through her unit's chain of custody, and he realizes only in the moment that what he's uncovering for himself is also what ends her career.",
+            "PIPER_ZHANG": "Piper's earlier research into the redacted contract, combined with Zhao's public suspension, gives her enough to name the officer behind the funding deal — but she chooses not to run the deeper Zenith Horizon story yet, still weighing what publishing it would cost Renata's family."
+          },
+          "solution": "Facing closure of her underfunded cold-case unit two years ago, Captain Lena Zhao signed a private 'research resource sharing' agreement with the Zenith Horizon Foundation, granting foundation researchers off-book access to biological evidence and case files from three unsolved homicides in exchange for funding — material transfers she logged falsely as 'lab consult, no material transfer.' She has never met Dr. Voss and does not know what specific research her samples supported, nor that Marcus Toll or the Continuum Bridge exist; to her, Zenith Horizon is simply 'a neurological research foundation.' She has been quietly steering resources to keep Kestler's task force under her direct oversight — not to protect Kestler, but to control information flow before anyone connects the arrangement back to her.",
+          "objective_facts": [
+            "Two years ago, facing the cold-case unit's closure, Zhao signed a private funding agreement with the Zenith Horizon Foundation that was never disclosed to the department's oversight board.",
+            "Under that agreement, Zhao granted foundation researchers limited off-book access to case files and biological evidence from three unsolved homicides, officially logged as 'lab consult, no material transfer' despite material being transferred.",
+            "Zhao's sole point of contact at the foundation is an administrator with no knowledge of the specific research the samples supported.",
+            "Zhao does not know Marcus Toll's identity, has never heard of the Continuum Bridge, and believes the foundation's work is unrelated to any active case.",
+            "If the funding agreement surfaces, Zhao faces termination and possible criminal charges for evidence mishandling.",
+            "Zhao has been quietly keeping Kestler's task force under her direct, personal oversight specifically to control what information reaches Internal Affairs before anyone traces the arrangement back to her."
+          ]
+        },
+        {
+          "label": "The Custody Petition",
+          "character_knowledge": {
+            "RENATA_KESTLER_YOON": "Renata still believes Adrian's blackouts stem from a relapse into old drinking patterns and walks into the hearing convinced of it; testimony about the specific texture of his confusion doesn't fit that theory, and the ruling itself — joint supervised custody instead of the outright win she expected — forces her to sit with doubt she can't yet name.",
+            "DET_ADRIAN_KESTLER": "Adrian testifies about the blackouts without ever naming their true cause, framing them as a medical crisis he's now addressing since the Cannery — true in substance, false in specifics — still terrified of what full disclosure would cost him with Mia and with the department.",
+            "PIPER_ZHANG": "Piper's original deception is already out since her confession, and she attends the hearing knowing her research is now tangled in the same fallout that's ending Zhao's career; when Renata confronts her afterward, she still can't fully answer what would have happened if she'd never fallen for her."
+          },
+          "solution": "Eleven days into the season's timeline, Adrian's half-sister Renata Kestler-Yoon filed for emergency custody of his nine-year-old daughter Mia after two disturbing incidents she believes are a relapse into the alcoholism that ended Adrian's marriage four years ago — she has no idea the real cause is Toll's growing control over her brother's body. Renata's girlfriend, journalist Piper Zhang, began the relationship six months ago specifically to get close to a police department source for a story she's building on Zenith Horizon Foundation's city contracts, and has since fallen genuinely in love with Renata — she has not filed any story yet, sitting on a partial lead (the existence of Zhao's funding agreement) out of guilt and fear of losing her. Neither woman knows about the Continuum Bridge or Marcus Toll; Adrian has told no one about his blackouts, afraid of losing Mia or being pulled off the case.",
+          "objective_facts": [
+            "Renata filed the emergency custody petition eleven days ago, citing two incidents witnessed by Mia's school and one 911 call from a neighbor.",
+            "Renata believes Adrian has relapsed into the alcoholism that ended his marriage four years ago; she has no knowledge of the Continuum Bridge, Marcus Toll, or Dr. Voss.",
+            "Piper began her relationship with Renata six months ago after learning she was Detective Kestler's sister, originally hoping for access to police department information for a story on Zenith Horizon Foundation's city contracts.",
+            "Piper has since developed genuine feelings for Renata and has filed no story, sitting on the partial information she's gathered out of guilt and fear of losing the relationship.",
+            "Piper's research has already uncovered the existence of a funding agreement between Zenith Horizon and the police department, but not yet which unit or officer is involved.",
+            "Adrian has told no one, including Renata, about his blackouts or their true cause, out of fear of losing custody of Mia and fear of being taken off the case or institutionalized."
+          ]
+        }
+      ]
+    }
+  ]
+}

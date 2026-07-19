@@ -1,0 +1,122 @@
+--- SCENE 1 ---
+1. This is the forty-second consecutive morning since the photographs began, roughly six weeks ago — the season's timeline starts here, at the tail end of an established ritual, not its beginning.
+2. At dawn, Noah's phone buzzes with today's image: an unfamiliar face composited over his own body, arriving exactly as it has every morning since.
+3. He carries it to the wall and pins it beside the other forty-plus photographs, extending the grid by one more day.
+4. He studies the new face for a moment, searching for recognition, and finds none yet.
+5. He logs the date and time on the back before leaving for work, treating the ritual as data collection rather than panic.
+6. The sheer scale of the wall — weeks of mornings, all unbroken — shows an obsession that has quietly hardened into routine.
+
+--- SCENE 2 ---
+1. At the precinct, Kai clocks Noah's exhaustion — the dark circles, the distracted stare — and calls him out on it.
+2. Noah deflects, blaming the current homicide case's workload for his rough night.
+3. He hides the real cause: hours spent cross-referencing photographs instead of sleeping.
+4. Kai lets the excuse stand but privately files away that something feels off.
+5. Kai remains completely unaware the photographs exist at all.
+
+--- SCENE 3 ---
+1. In the precinct's underground garage, away from cameras, Danny meets his contact Sonny.
+2. Danny hands over details on Noah's active homicide case.
+3. In exchange, Sonny confirms a fresh reduction to the Wu family's debt.
+4. Danny tells himself this is harmless — a private arrangement that hurts no one.
+5. He has no idea Sonny reports to the same corrupt network implicated in Feng's son's murder.
+6. He hides this meeting completely from Noah, Kai, and his mother.
+
+--- SCENE 4 ---
+1. Alone at night, Noah lays six weeks of photographs out chronologically beside his case notebook.
+2. He cross-references each face against the people he crossed paths with the day before each photo arrived.
+3. A pattern emerges: the face in each photo always matches someone he saw most recently.
+4. He concludes that whoever is doing this is reacting to his own movements in real time.
+5. This is correct as far as it goes, but he wrongly assumes a person is watching him rather than an algorithm recalculating from his actions.
+6. He has no suspicion of Zhao, Feng, or anything called Panopticon.
+
+--- SCENE 5 ---
+1. Zhao runs the morning briefing on the week's homicide case, brisk and clipped as always.
+2. She assigns tasks to Noah and Kai with no deviation from routine procedure.
+3. She gives no indication that a hidden system she controls has already calculated tomorrow's photograph.
+4. She quietly reads Noah's fatigue during the briefing, aware of its cause though she says nothing.
+5. Neither Noah nor Kai has any reason to suspect her involvement.
+
+--- SCENE 6 ---
+1. Noah and Kai examine the week's homicide victim together, trading dark jokes to manage the grimness of the work.
+2. Noah tries to stay focused, but his mind repeatedly drifts back to his own morning photograph.
+3. Kai notices him zoning out and assumes it's ordinary case fatigue.
+4. Noah catches himself and forces his attention back to the evidence, hiding where his thoughts actually went.
+
+--- SCENE 7 ---
+1. Noah visits Feng and shows him today's photograph, seeking the comfort their talks usually bring.
+2. Feng studies the image a beat too long, instantly recognizing it as his own system's output.
+3. He says nothing about that recognition, offering only gentle, noncommittal reassurance.
+4. He hides that he built the very machine generating the image now stalking his friend.
+5. Noah reads only comfort in Feng's response, unaware of the weight behind Feng's hesitation.
+6. Feng's silence is driven by guilt and a belief that staying close is the safest way to protect Noah without reopening his own son's death.
+
+--- SCENE 8 ---
+1. Over diner coffee, Kai gently asks whether Noah's heard anything from Hae.
+2. Noah deflects, steering the conversation elsewhere.
+3. He hides how often he still checks his phone hoping to see her name.
+4. Kai senses the sore spot and doesn't press further.
+5. The moment underscores that the divorce is still unfinalized and the wound still raw.
+
+--- SCENE 9 ---
+1. Alone at home, Hae straightens a framed photo of her late father, lost in thought.
+2. She quietly thinks about Noah's unanswered calls, unwilling to admit to herself she's hoping for one.
+3. Her phone lights up with Danny's name, interrupting the thought.
+4. The moment reveals unresolved feelings for Noah she isn't voicing even privately.
+5. She answers, shifting toward the steadier, simpler dynamic she has with Danny.
+
+--- SCENE 10 ---
+1. In the restaurant's back office, Danny and Hae share a quiet dinner together.
+2. Danny repeatedly checks his phone, visibly unsettled from the earlier meeting with Sonny.
+3. Hae notices his nervousness but chooses not to push him about it.
+4. Neither mentions Noah aloud, though both are privately aware of the space he still occupies.
+5. Danny hides the true source of his stress — the debt, the leaks, all of it — from Hae completely.
+
+--- SCENE 11 ---
+1. Late at night, Danny goes over the restaurant's books alone.
+2. The eighty-thousand-dollar inherited debt is still there on the page, barely reduced despite Sonny's forgiveness.
+3. He reflects that his mother believes this debt was cleared a year ago — a belief he has deliberately let stand.
+4. He weighs the incremental relief against the risk he's taking, still not knowing who Sonny actually answers to.
+5. He closes the books having decided, again, to keep the truth from his mother.
+
+--- SCENE 12 ---
+1. At the precinct, Danny and Noah trade competitive, joking barbs about the open detective-first-grade slot.
+2. Danny's charm covers how urgently he now needs that promotion, tied directly to his family's debt.
+3. Noah treats it as ordinary professional rivalry, unaware of Danny's financial desperation.
+4. Noah also has no idea Danny is dating his estranged wife.
+5. Danny gives nothing away about Hae, and Noah gives nothing away about his own exhaustion or suspicions.
+
+--- SCENE 13 ---
+1. Aya meets Noah for their eleventh in-person interview since the story began.
+2. She gently probes him about the photographs, testing how much he'll disclose.
+3. Noah shares more than he probably should, trusting her more than her role as a reporter warrants.
+4. Aya notices herself softening toward him personally, which complicates her professional instincts.
+5. She holds back from pushing as hard as she normally would, without examining why.
+
+--- SCENE 14 ---
+1. Back at her desk, Aya reviews the latest messages from her anonymous source.
+2. She remains convinced the source is a disgruntled junior officer, not Captain Zhao.
+3. She cross-references the tips against her unpublished evidence, including the partial photo of the Panopticon server room, still failing to connect it to Zhao.
+4. She feels the pressure of her editor's one-week deadline to name a suspect or lose the story.
+5. The audience understands what Aya doesn't: Zhao is steering her coverage as a deliberate pressure valve.
+
+--- SCENE 15 ---
+1. After hours, Zhao descends alone to the precinct's old records basement.
+2. She checks the hidden Panopticon server, confirming it's still running undetected four months in.
+3. She watches Noah's data update in silence, seeing tomorrow's threat calculation take shape in real time.
+4. She weighs keeping Noah unwitting a while longer against the risk of the network noticing before her trap is ready.
+5. The scene confirms in full what has only been implied: Zhao's complete awareness and control of the program.
+
+--- SCENE 16 ---
+1. Kai shows up at Noah's place unannounced, prompted by concern after the day's odd behavior.
+2. He discovers the wall covered in forty-plus pinned photographs for the first time.
+3. He's stunned, realizing how far his partner's private obsession has gone without his knowledge.
+4. Noah is caught off guard and forced to explain at least part of what Kai is seeing.
+5. Kai remains entirely ignorant of Panopticon, Zhao's role, or Feng's involvement — he only sees a partner unraveling.
+6. The discovery shifts their dynamic: Kai now knows something is deeply wrong, even without knowing why.
+
+--- SCENE 17 ---
+1. At midnight, Noah's phone buzzes with the next day's photograph.
+2. The face shown belongs to someone he spoke with only hours earlier that same day.
+3. This confirms his theory that the pattern always tracks his most recent interactions.
+4. His dread deepens at how immediate and personal the connection feels this time.
+5. The audience recognizes the true cause — Panopticon recalculating from his own daily actions — while Noah still believes a person is watching and reacting to him.

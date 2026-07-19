@@ -1,0 +1,867 @@
+--- PART 1 ---
+
+[NARRATOR]
+Previously on Split Signal: three nights ago, the Cannery raid collapsed, and Detective Adrian Kestler surfaced from a blackout with hours he can't account for and a shirt he won't look at twice. Across town, his sister's custody petition now has a hearing date. And journalist Piper Zhang keeps telling herself there's still time to tell the truth before it costs her everything.
+
+[NARRATOR]
+Day fourteen. Captain Lena Zhao — head of the precinct's cold-case unit — has called Kestler into her office.
+
+[SFX: office door clicking shut]
+
+[CAPT_LENA_ZHAO | style: brisk, businesslike]
+Sit down, Adrian. This won't take long.
+
+[DET_ADRIAN_KESTLER | style: tired but composed]
+That's usually how it starts before it takes forever.
+
+[CAPT_LENA_ZHAO | style: even, rehearsed]
+Effective today, the Toll task force reports directly to me. Not through the lieutenant, not through the board liaison. Me.
+
+[DET_ADRIAN_KESTLER | style: careful]
+Any particular reason?
+
+[CAPT_LENA_ZHAO | style: flat, closing the subject before it opens]
+Budget consolidation. Three oversight layers on one unit is waste we can't justify this quarter. I'm cutting two of them.
+
+[SFX: a folder set down on the desk]
+
+[DET_ADRIAN_KESTLER | style: neutral, testing the water]
+That's it? Just — budget?
+
+[CAPT_LENA_ZHAO | style: pleasant, final]
+That's it. You'll answer to me directly from now on. Fewer sign-offs, fewer people reading your reports before they reach anyone who matters.
+
+[DET_ADRIAN_KESTLER | style: quiet relief creeping in]
+Honestly — fewer eyes on my reports right now sounds like a good week.
+
+[CAPT_LENA_ZHAO | style: dry, almost warm]
+I thought it might.
+
+[NARRATOR]
+Kestler exhales, some of the tension leaving his shoulders. Then, just as quickly, something else moves in behind it.
+
+[DET_ADRIAN_KESTLER | style: half to himself, uneasy]
+Funny timing, though. Right after the Cannery.
+
+[CAPT_LENA_ZHAO | style: brief, dismissive]
+Budgets don't wait for convenient timing, Detective. They wait for the fiscal year.
+
+[DET_ADRIAN_KESTLER | style: letting it go, forcing lightness]
+Sure. No — makes sense.
+
+[NARRATOR]
+He nods, already reaching for the door, already telling himself it's nothing. Zhao watches him go, her face giving away exactly as little as she intends it to.
+
+--- PART 2 ---
+
+[NARRATOR]
+Later that night, in her office at the precinct, Captain Zhao sits alone with a file no one else has seen.
+
+[CAPT_LENA_ZHAO | style: low, controlled, talking herself through it]
+Three files. Three names on paper that say "lab consult, no material transfer." Three names that are lies.
+
+[SFX: a folder of papers set down hard on a desk]
+
+[CAPT_LENA_ZHAO | style: quietly counting]
+Records clerk who logged the intake. Evidence tech who signed it out. Whoever eventually reopens those three cases and asks why the samples don't match the log.
+
+[CAPT_LENA_ZHAO | style: firmer, reassuring herself]
+Nobody's asking yet. Centralize the task force, keep it under my hand, and nothing moves through this precinct I don't see first. Six months. Maybe a year, if I'm careful.
+
+[CAPT_LENA_ZHAO | style: quieter, less certain]
+I've never even met the woman who signs the checks. Some administrator on the other end of an email. That's all it ever was. That's all it has to stay.
+
+[CAPT_LENA_ZHAO | style: barely audible]
+So why does it feel like it's closing in from somewhere I can't see.
+
+[SFX: a drawer sliding shut, a key turning in a lock]
+
+[CAPT_LENA_ZHAO | style: flat, done for the night]
+Six months. That's all I need.
+
+--- PART 3 ---
+
+[NARRATOR]
+Three days after the Cannery. Adrian's apartment, past midnight. He is alone, kneeling in front of his dresser.
+
+[SFX: a drawer sliding open on a metal track]
+
+[DET_ADRIAN_KESTLER | style: low, tightly controlled]
+Okay. Just — okay.
+
+[DET_ADRIAN_KESTLER | style: forcing steadiness]
+It's a shirt. It's just a shirt.
+
+[DET_ADRIAN_KESTLER | style: quieter, almost clinical]
+Torn at the collar. Torn at the — right, both sleeves. That tracks. Went over the railing, caught on the pipe, that's — that's the fight. That's consistent.
+
+[DET_ADRIAN_KESTLER | style: voice tightening]
+That's consistent with the fight.
+
+[DET_ADRIAN_KESTLER | style: barely audible]
+There's more of it than I remember. On the — God, on the collar, down the — that's not a graze. That's not one graze, that's —
+
+[DET_ADRIAN_KESTLER | style: cutting himself off, sharp]
+Don't. Don't count it. You don't need to count it.
+
+[DET_ADRIAN_KESTLER | style: quiet, pleading with himself]
+You went in bleeding. You came out bleeding. That's the job. That's every takedown that's ever gone sideways in twenty years, that's —
+
+[DET_ADRIAN_KESTLER | style: breaking off, unsteady]
+That's not what this is and you know it.
+
+[DET_ADRIAN_KESTLER | style: hardening, deliberate]
+No. No — I don't know anything. I know I don't remember three hours. That's a fact. Everything else is just —
+
+[DET_ADRIAN_KESTLER | style: exhausted]
+— just a story I'm scaring myself with at one in the morning.
+
+He pushes the shirt further down, beneath a folded stack of other clothes, until it disappears from view.
+
+[DET_ADRIAN_KESTLER | style: firmer, like a decision]
+Nobody sees it. Nobody needs to see it. Not IA, not Zhao, not —
+
+[DET_ADRIAN_KESTLER | style: voice catching]
+— not Mia. Especially not Mia.
+
+[DET_ADRIAN_KESTLER | style: quiet, almost a prayer]
+I just need a few more days. I get the timeline straight, I figure out what happened, and this — this stays a drawer. That's all it is. A drawer.
+
+[SFX: a drawer sliding shut, then a small lock clicking]
+
+[DET_ADRIAN_KESTLER | style: hollow, unconvinced by his own words]
+I'm protecting my job. That's all this is.
+
+[NARRATOR]
+He stays kneeling there a moment longer, one hand flat against the locked drawer, before he finally gets up and turns out the light.
+
+--- PART 4 ---
+
+[NARRATOR]
+Across the city, that same afternoon, in the cramped office of a mid-town design firm — Adrian's half-sister, Renata Kestler-Yoon, is proofing a client layout when her phone lights up with an unfamiliar number.
+
+[SFX: a phone buzzing insistently against a desk]
+
+[RENATA_KESTLER_YOON | style: brisk, professional]
+Renata Kestler-Yoon.
+
+[RENATA_KESTLER_YOON | style: shifting, alert]
+Yes — I'm her emergency contact. Is Mia all right?
+
+[RENATA_KESTLER_YOON | style: listening, tightening]
+Okay. Okay, slow down. What kind of "incident"?
+
+[RENATA_KESTLER_YOON | style: quiet, grim]
+She threw her lunch tray. At another kid.
+
+[RENATA_KESTLER_YOON | style: careful, controlled]
+And she wouldn't say why.
+
+[RENATA_KESTLER_YOON | style: flat, resigned]
+No — I understand. Thank you for calling. I'll come get her.
+
+[NARRATOR]
+She sets the phone down slowly, staring at nothing.
+
+[RENATA_KESTLER_YOON | style: muttering, bitter]
+Twice in seven days.
+
+[RENATA_KESTLER_YOON | style: hard, certain]
+Twice.
+
+[NARRATOR]
+She pulls a slim folder from her bag — the one she's been keeping since the first call — and opens it on the desk.
+
+[SFX: a folder of papers being set down and opened]
+
+[RENATA_KESTLER_YOON | style: to herself, methodical, wounded underneath]
+First incident, the seventh. Now this. Both times right after she's been at his place.
+
+[RENATA_KESTLER_YOON | style: low, angry at the unfairness of it]
+A kid doesn't throw a tray at another kid because she's fine, Adrian.
+
+[NARRATOR]
+She takes out a pen and writes, her handwriting getting harder as she presses.
+
+[RENATA_KESTLER_YOON | style: narrating what she's writing, clipped]
+"Second reported incident. Consistent pattern. Consistent with stress in the home."
+
+[RENATA_KESTLER_YOON | style: quieter now, almost pleading with an absent version of him]
+You promised me the last time. You looked me in the eye.
+
+[NARRATOR]
+For a moment her anger softens into something closer to grief.
+
+[RENATA_KESTLER_YOON | style: soft, hurt]
+I don't want to be right about this.
+
+[NARRATOR]
+Then she closes the folder, and her voice hardens again.
+
+[RENATA_KESTLER_YOON | style: resolved, steel returning]
+But I am. And Mia doesn't get to be the one who pays for it.
+
+[RENATA_KESTLER_YOON | style: firm, decisive]
+I'm calling the school back. Then I'm calling my lawyer.
+
+[NARRATOR]
+She slides the folder back into her bag, already reaching for her coat.
+
+--- PART 5 ---
+
+[NARRATOR]
+In a private lab wing of the Zenith Horizon Foundation, Dr. Hana Voss checks on her research alone after hours — the inventor whose device now lies at the center of a secret only she carries.
+
+[DR_HANA_VOSS | style: focused, clinical]
+Come on. Show me something honest.
+
+[SFX: a soft electronic chime, brief]
+
+[DR_HANA_VOSS | style: sudden alertness, quiet]
+No. No, that's not baseline.
+
+[DR_HANA_VOSS | style: murmuring to herself, tense]
+That's him. That's his pattern.
+
+[DR_HANA_VOSS | style: careful, measuring]
+Stronger than the morning after the Cannery. Almost double.
+
+[DR_HANA_VOSS | style: a long exhale, torn]
+Report it, and I explain an unauthorized emitter. I explain a volunteer who was never a volunteer.
+
+[DR_HANA_VOSS | style: rationalizing, quiet]
+It's a spike. Spikes settle. I've seen it settle before.
+
+[DR_HANA_VOSS | style: quieter, less convinced]
+I've seen it settle before.
+
+[DR_HANA_VOSS | style: firm, closing the thought]
+I'll watch it. Just a little longer. I'll know the moment it matters.
+
+[NARRATOR]
+She saves the reading, closes the file, and tells herself, once more, that there is still time.
+
+--- PART 6 ---
+
+[NARRATOR]
+Adrian's apartment, later the same night. Alone at the kitchen table, a drink in front of him, he tries to put the missing hours from the Cannery in order.
+
+[DET_ADRIAN_KESTLER | style: low, half to himself]
+Okay. Okay, walk it back.
+
+[SFX: pen scratching on paper]
+
+[DET_ADRIAN_KESTLER | style: muttering, working it out]
+Rooftop access at nine. Toll's on the east side, I've got him — I've got him for maybe four minutes, then it's just... gone. Gone until I'm three blocks south with a torn shirt and no memory of the stairs.
+
+[DET_ADRIAN_KESTLER | style: quieter, uncertain]
+Four minutes doesn't tear a shirt like that.
+
+[SFX: ice shifting in a glass]
+
+[DET_ADRIAN_KESTLER | style: testing the words out loud]
+So say it's longer. Say it's — twenty minutes. Thirty. What happens in thirty minutes I don't —
+
+[TOLL | style: cold, amused, close]
+Closer to fifty. And you already know that, don't you. You've known since you counted the ice in your glass that night and it had melted more than four minutes' worth.
+
+[DET_ADRIAN_KESTLER | style: sharp intake, freezing]
+—
+
+[SFX: chair leg scraping an inch on the floor]
+
+[DET_ADRIAN_KESTLER | style: barely audible, shaken]
+No. No, that's — I didn't think that. I didn't think any of that.
+
+[TOLL | style: unhurried, savoring it]
+You did. You just didn't let yourself hear it in your own voice. That's the difference between us, Adrian. I don't flinch from what I already know.
+
+[DET_ADRIAN_KESTLER | style: forcing steadiness, almost pleading with himself]
+Stress. It's — it's stress, it's the case, nobody's been sleeping right, I'm putting words in my own head because I want an answer so bad I'm inventing one.
+
+[TOLL | style: soft, almost gentle, more unsettling for it]
+Keep telling yourself that. It's cute. Fifty minutes, Adrian. Ask yourself sometime what a man can do in fifty minutes when nobody's driving.
+
+[SFX: glass set down hard on the table]
+
+[DET_ADRIAN_KESTLER | style: voice cracking, trying to laugh it off]
+Talking to myself. Great. That's — that's healthy. That's a completely normal thing a person does.
+
+[NARRATOR]
+He pushes the napkin away, unfinished, and doesn't pick the pen back up.
+
+--- PART 7 ---
+
+[NARRATOR]
+Back at the precinct, later the same afternoon. Captain Zhao sits at her desk with a forensic consult request open on her screen — one that would route outside evidence through a lab tied to old case files she'd rather no one reopen.
+
+[CAPT_LENA_ZHAO | style: brisk, all business]
+This is going out at the wrong time. Push it to next cycle — flag it as pending resource allocation.
+
+[SFX: a mouse click, then a keyboard clatter]
+
+[CAPT_LENA_ZHAO | style: muttering, to herself]
+Timeline. That's all this is. Protecting the timeline.
+
+[NARRATOR]
+Kestler passes her open door on his way to the coffee machine and stops when he sees the same request still sitting untouched on the shared board.
+
+[DET_ADRIAN_KESTLER | style: casual, half-distracted]
+Hey — that outside consult on the rooftop trace evidence. Wasn't that supposed to go out Tuesday?
+
+[CAPT_LENA_ZHAO | style: even, practiced]
+There's a backlog on the external lab side. I'm holding it a few more days.
+
+[DET_ADRIAN_KESTLER | style: mild curiosity]
+A few more days feels like a while, for trace off an active scene.
+
+[CAPT_LENA_ZHAO | style: smooth, closing the subject]
+Budget review's not final till Friday. I'd rather not double-spend a consult I might redirect anyway.
+
+[SFX: a folder closing with a soft thump]
+
+[DET_ADRIAN_KESTLER | style: shrugging it off]
+Sure. Makes sense.
+
+[NARRATOR]
+He lingers a beat longer than the conversation calls for.
+
+[DET_ADRIAN_KESTLER | style: quiet, almost to himself]
+Just seems like everything's moving slower since you took this over.
+
+[CAPT_LENA_ZHAO | style: firm but not unkind]
+Everything's moving the way it needs to. Go get your coffee, Adrian.
+
+[NARRATOR]
+He does, and doesn't push further — there's nothing here that looks like more than a captain tightening her own ship.
+
+[DET_ADRIAN_KESTLER | style: under his breath, walking away]
+Odd week for a backlog.
+
+[NARRATOR]
+Zhao waits until his footsteps fade, then pulls the request back up and stares at it a moment longer than the task requires.
+
+[CAPT_LENA_ZHAO | style: low, private]
+Just a few more weeks of quiet. That's all I need.
+
+[SFX: a drawer sliding shut and latching]
+
+[NARRATOR]
+She minimizes the window, and the request disappears from anyone's view but her own — one more thread pulled taut, one more question deferred instead of answered.
+
+--- PART 8 ---
+
+[NARRATOR]
+Later that night, in the cramped spare room investigative journalist Piper Zhang — Renata's girlfriend — uses as an office, she sits alone with three years of city budget filings spread across her desk, the rest of the apartment already dark.
+
+[PIPER_ZHANG | style: muttering, methodical]
+Line item forty-one. "Neurological research partnership, disbursement schedule C." That's the third time that phrasing shows up this year.
+
+[PIPER_ZHANG | style: low, focused]
+Zenith Horizon. There you are again.
+
+[SFX: a highlighter cap clicking]
+
+[PIPER_ZHANG | style: quietly frustrated]
+Okay. So the foundation's name is threaded through department funding somewhere. That much I can prove. What I can't prove is where it lands.
+
+[PIPER_ZHANG | style: reading aloud, clipped]
+"General fund, specialized units." That's it. That's the whole description. Could be forensics. Could be cyber crimes. Could be traffic enforcement, for all this tells me.
+
+[SFX: a stack of paper set down hard]
+
+[PIPER_ZHANG | style: exhaling frustration, still restrained]
+Six months of this. I have a name and a number and no unit attached to either.
+
+[PIPER_ZHANG | style: dialing, businesslike]
+Hey, it's me. I know it's late. I'm still stuck on the Zenith Horizon thread — the money's real, it's in the filings, but the department scrubbed which unit it's tied to. I need someone who can pull the unredacted budget requests, not just the public summary. Call me back when you're up.
+
+[SFX: a phone set down on wood]
+
+[PIPER_ZHANG | style: to herself, tired]
+It has to be a specific officer. Foundations don't fund "general policing." They fund something they want access to.
+
+[PIPER_ZHANG | style: quiet, almost admitting it]
+And I keep telling myself that's all this is. A story. Numbers on a page.
+
+[PIPER_ZHANG | style: firmer, pushing the thought down]
+It's not about her. It can't be about her.
+
+[PIPER_ZHANG | style: resigned]
+I'm not going to find the rest of it tonight.
+
+[SFX: a folder snapping shut]
+
+[NARRATOR]
+She stacks the filings into a single folder and pushes it to the far edge of the desk, out of reach for now, the name still circling with nowhere yet to land.
+
+--- PART 9 ---
+
+[NARRATOR]
+Back at Adrian's apartment, the phone rings as he stands over the sink, not eating. It's Renata, calling about Mia.
+
+[SFX: a phone buzzing on a countertop]
+
+[RENATA_KESTLER_YOON | style: tight, controlled]
+The school called me again today. Second time this month.
+
+[DET_ADRIAN_KESTLER | style: calm, easy, a little too smooth]
+What happened.
+
+[RENATA_KESTLER_YOON | style: clipped]
+Mia threw her lunch tray at another kid in the cafeteria. Hit him square in the face. She wouldn't tell them why.
+
+[DET_ADRIAN_KESTLER | style: measured, reassuring]
+Kids have bad days. She's nine, Ren, she's got a whole inner life we don't get to see.
+
+[RENATA_KESTLER_YOON | style: quiet, testing him]
+That's what you said last time too.
+
+[DET_ADRIAN_KESTLER | style: even, unhurried]
+Because it's usually true.
+
+[RENATA_KESTLER_YOON]
+Is it true for you right now.
+
+[DET_ADRIAN_KESTLER | style: light, almost amused]
+Meaning what.
+
+[RENATA_KESTLER_YOON | style: careful, watching for the crack]
+Meaning you sound fine. You always sound fine on the phone.
+
+[DET_ADRIAN_KESTLER | style: warm, practiced]
+Because I am fine. Long week, that's all. Case has me stretched thin, I haven't slept great — nothing more dramatic than that.
+
+[RENATA_KESTLER_YOON | style: flat, unconvinced]
+You used to say that before, too. Right before things got bad.
+
+[DET_ADRIAN_KESTLER | style: patient, a hint of hurt]
+That's not fair. I've been steady. I go to work, I pick her up when I can, I'm not — I'm not doing that again.
+
+[RENATA_KESTLER_YOON | style: quiet, not backing down]
+I didn't say you were drinking.
+
+[DET_ADRIAN_KESTLER | style: gentle, deflecting]
+You didn't have to.
+
+A pause stretches between them, neither filling it.
+
+[RENATA_KESTLER_YOON | style: tired, resigned]
+I just want her to feel safe, Adrian. That's the only thing I care about here.
+
+[DET_ADRIAN_KESTLER | style: soft, sincere-sounding]
+So do I. More than anything. I promise you, whatever's going on with her, it isn't coming from me.
+
+[RENATA_KESTLER_YOON | style: cool, closing the door on the conversation]
+Okay. I'll talk to you before the visit.
+
+[SFX: a phone call ending with a soft click]
+
+[NARRATOR]
+Neither one says what they actually believe. Adrian hangs up certain he's bought himself room. Renata sets the phone down certain she's heard exactly what she expected.
+
+--- PART 10 ---
+
+[NARRATOR]
+Later that evening, in Renata's apartment, her girlfriend Piper — a journalist — finds her at the kitchen table, a legal pad in front of her and Mia's school calendar open on her laptop.
+
+[RENATA_KESTLER_YOON | style: focused, clipped]
+I started a file tonight. Real dates, real times. If this ends up in front of a judge, I'm not going to be the sister who "just felt something was wrong."
+
+[PIPER_ZHANG | style: gentle, careful]
+Okay. Walk me through it.
+
+[SFX: a legal pad sliding across a wooden table]
+
+[RENATA_KESTLER_YOON | style: reciting, controlled]
+Two calls from the school now. First time, Mia wouldn't change for gym, wouldn't say why. Today she hid under the table the whole period, wouldn't come out for the teacher. That's not who she is.
+
+[PIPER_ZHANG | style: soft]
+No. It's not.
+
+[RENATA_KESTLER_YOON | style: building]
+And then there's Adrian. I called him right after the second call. Got the voice — flat, rehearsed. "I'm fine, Ren. Long shift, that's all." Like he'd practiced it in a mirror before he picked up.
+
+[PIPER_ZHANG | style: quiet]
+Maybe he had.
+
+[RENATA_KESTLER_YOON | style: tired, sure]
+I know that voice. I grew up on that voice. He thinks four years wiped it out of my memory.
+
+[PIPER_ZHANG | style: warm]
+It sounds like you've been keeping track of more than just two calls.
+
+[RENATA_KESTLER_YOON | style: quieter, honest]
+Three missed pickups since spring. A neighbor's 911 call I only heard about secondhand. I should've started this file months ago.
+
+[SFX: a mug set down on the table]
+
+[PIPER_ZHANG | style: steady, reassuring]
+You're not building this over nothing, Ren. Two calls from a school, a man who won't say where he was — a judge is going to see exactly what you're seeing.
+
+[RENATA_KESTLER_YOON | style: cracking slightly]
+I keep thinking — what if I'm wrong. What if I take her from him over nothing at all.
+
+[PIPER_ZHANG | style: gentle, guarded underneath]
+Then you'll have been careful for nothing. That's not the worst thing that could happen here.
+
+[RENATA_KESTLER_YOON | style: relieved, small laugh]
+God. I don't know what I'd do, saying all this out loud to anyone else.
+
+[PIPER_ZHANG | style: warm, quietly heavy]
+You don't have to say it to anyone else. Just me.
+
+[RENATA_KESTLER_YOON | style: soft]
+Thank you. For not thinking I'm crazy.
+
+[PIPER_ZHANG | style: careful, sincere]
+You're the least crazy person I know. You're just scared for a kid you love.
+
+[SFX: a phone buzzing once against the table]
+
+[RENATA_KESTLER_YOON | style: tensing]
+School again. Give me one second.
+
+[PIPER_ZHANG | style: quiet, alone with it]
+Take your time.
+
+--- PART 11 ---
+
+[NARRATOR]
+Adrian's apartment, later that same night. Alone at the kitchen table, he tries again to map the missing hours, the napkin in front of him covered in crossed-out times.
+
+[DET_ADRIAN_KESTLER | style: low, muttering to himself]
+Okay. Okay. Rooftop access, that's — that's nine, maybe nine-oh-five. Then nothing until I'm coming down the fire escape.
+
+[DET_ADRIAN_KESTLER | style: frustrated, pressing pen harder]
+Closer to fifty minutes. Fifty minutes just gone, and my knuckles are split like I hit a wall, and there's blood on a shirt I can't explain, and —
+
+[DET_ADRIAN_KESTLER | style: quieter, almost pleading with himself]
+Just line it up. Just once, make it line up.
+
+[TOLL | style: cold, amused, very close]
+You're drawing it wrong.
+
+[DET_ADRIAN_KESTLER | style: sharp intake, startled]
+Who said that.
+
+[DET_ADRIAN_KESTLER | style: shaken, trying to sound rational]
+No. No, that's — that's not a voice, that's tired, that's two nights without sleep talking to itself.
+
+[TOLL | style: unhurried, savoring it]
+You had it at nine. It was closer to nine-fifteen. Small thing. Doesn't change much.
+
+[DET_ADRIAN_KESTLER | style: breath catching, forcing steadiness]
+It doesn't change anything, because it isn't real. I'm — I'm reconstructing a timeline, that's all this is, my brain filling gaps with —
+
+[TOLL | style: soft, needling]
+Filling gaps. Sure. Ask yourself who's doing the filling.
+
+[DET_ADRIAN_KESTLER | style: voice cracking slightly]
+Stop it. Just stop.
+
+[TOLL | style: almost gentle, which is worse]
+You don't want the timeline, Adrian. You want someone to tell you it isn't as bad as the shirt looks.
+
+[DET_ADRIAN_KESTLER | style: quiet, cornered]
+It isn't— I don't even know what it looks like. I didn't count.
+
+[TOLL | style: low laugh, receding slightly]
+No. You didn't.
+
+[DET_ADRIAN_KESTLER | style: long exhale, unsteady]
+Fifty minutes. Say it's fifty minutes and nothing else, and maybe I can breathe again.
+
+[DET_ADRIAN_KESTLER | style: flat, rehearsed, talking himself down]
+Exhaustion. Intrusive thoughts. That's a documented thing, that's — cops go through it after bad nights, it's normal, it's —
+
+[DET_ADRIAN_KESTLER | style: barely audible]
+It's normal.
+
+[NARRATOR]
+He sets the pen down without finishing the line, the napkin still short the better part of an hour he cannot account for.
+
+--- PART 12 ---
+
+[NARRATOR]
+Zenith Horizon's research wing, midafternoon. A precinct captain — the one who oversees Detective Kestler — arrives to check on the foundation whose money quietly keeps her unit alive.
+
+[CAPT_LENA_ZHAO | style: brisk, professional]
+Dr. Voss. I won't take much of your time. I was in the district, thought I'd stop in.
+
+[DR_HANA_VOSS | style: composed, faintly wary]
+Captain Zhao. Always a pleasant surprise. Can I get you coffee, or is this a working visit?
+
+[CAPT_LENA_ZHAO | style: measured]
+A little of both. Mostly I wanted to see how the partnership's holding up on your end. It's been quiet.
+
+[DR_HANA_VOSS | style: careful, light]
+Quiet is good, in research. Loud usually means something's on fire.
+
+[CAPT_LENA_ZHAO]
+That's fair. I just like to check the temperature now and then. Given what it costs both of us if anyone ever asks the wrong question.
+
+[DR_HANA_VOSS | style: still light, but watching her]
+No one's asked me anything. Have they asked you?
+
+[CAPT_LENA_ZHAO | style: dry]
+Not yet. I'd like to keep it that way a while longer.
+
+[SFX: a lab door closing softly down the hall]
+
+[DR_HANA_VOSS | style: neutral]
+Understandable. We're not exactly advertising the arrangement either.
+
+[CAPT_LENA_ZHAO | style: probing gently]
+Your side of it — is it still contained? No expansions, no new hands touching the file?
+
+[DR_HANA_VOSS | style: even, controlled]
+Contained is the word I'd use, yes. It's a small project. Fewer people than you'd think.
+
+[CAPT_LENA_ZHAO]
+Good. Small is safer. I've had to make some adjustments on my end to keep it that way — nothing that touches you directly.
+
+[DR_HANA_VOSS | style: curious, cautious]
+Adjustments?
+
+[CAPT_LENA_ZHAO | style: deflecting smoothly]
+Internal. Staffing, mostly. Nothing worth boring you with.
+
+[DR_HANA_VOSS | style: relieved, masked as polite]
+As long as it doesn't touch the samples, I'm not worried.
+
+[CAPT_LENA_ZHAO]
+It won't. That's the whole point.
+
+[NARRATOR]
+A pause settles, each woman reading the other's caution as confirmation of her own private fear.
+
+[DR_HANA_VOSS | style: gracious, closing]
+I appreciate you coming by in person. It's more than most partners bother with.
+
+[CAPT_LENA_ZHAO | style: standing, formal warmth]
+I like knowing what I'm protecting. Even from a distance.
+
+[DR_HANA_VOSS]
+I'll walk you out.
+
+[SFX: two sets of footsteps starting down a tiled corridor]
+
+[NARRATOR]
+Zhao leaves believing she's confirmed a contained, unrelated research grant. Voss watches her go, certain she's just steered a dangerous woman safely around a secret neither of them has named.
+
+--- PART 13 ---
+
+[NARRATOR]
+Late afternoon at the precinct, three days into Zhao's new arrangement. Her office door stands half open — Kestler leans into the doorway rather than stepping all the way in.
+
+[DET_ADRIAN_KESTLER | style: casual, testing the water]
+Got a minute, Captain?
+
+[CAPT_LENA_ZHAO | style: brisk, not looking up]
+If it's short. I've got the board memo to finish before five.
+
+[SFX: a stack of folders dropped onto a desk]
+
+[DET_ADRIAN_KESTLER | style: light, almost joking]
+It's the task force thing. You taking direct command, effective immediately — that's a lot of reshuffling to hang on one budget line.
+
+[CAPT_LENA_ZHAO | style: even, already reaching for her pen]
+It's exactly the amount of reshuffling a budget line requires when three units are fighting over the same overtime pool and I'm the one who has to answer for it.
+
+[DET_ADRIAN_KESTLER | style: careful, not pushing yet]
+I'm not arguing the math. I just can't remember the last time you put your own name on a task force instead of running it through a lieutenant. Alvarez, maybe. And that one had bodies piling up in a walk-in freezer.
+
+[CAPT_LENA_ZHAO | style: cooler, a warning under the calm]
+This one has a budget piling up, and my name's already on the line for it either way. Is that going to be a problem for you, Detective?
+
+[NARRATOR]
+A short silence. He hears the shift — his first name gone, her rank set back down between them like a closed door.
+
+[DET_ADRIAN_KESTLER | style: backing off, hands-up tone]
+No problem. Forget I asked.
+
+[CAPT_LENA_ZHAO | style: final, eyes back on her papers]
+Then we're done here. Close it on your way out.
+
+[NARRATOR]
+He does, standing a moment on the other side of the glass before he walks off down the hall, the question still sitting in him with nowhere to go.
+
+[DET_ADRIAN_KESTLER | style: low, muttering to himself, half a laugh with no humor in it]
+Budget line. Sure.
+
+--- PART 14 ---
+
+[NARRATOR | style: measured, neutral]
+Past midnight, in a private storage wing off the foundation's own building — the room where Marcus Toll's body has lain in a coma since the Cannery, kept off every official record. Dr. Voss lets herself in alone, badge and key overridden by her own authorization.
+
+[SFX: a heavy door unlatching, muffled]
+
+[DR_HANA_VOSS | style: low, talking herself through it]
+No orderly tonight. Good. Just us.
+
+[DR_HANA_VOSS | style: clinical, quiet]
+Vitals unchanged. Still holding at threshold coma. That part's fine.
+
+[DR_HANA_VOSS | style: bracing herself]
+Now let's see what you're not telling the remote feed.
+
+[SFX: a low electronic hum rising, then leveling off]
+
+[DR_HANA_VOSS | style: quiet horror under tight control]
+That's not stable. That's not — that's climbing again. Faster than last week's reading.
+
+[DR_HANA_VOSS | style: barely a whisper, shaken]
+Whoever's tangled up on the other end of this doesn't have as long as I've been telling myself.
+
+[DR_HANA_VOSS | style: resolve hardening into concealment]
+And I still don't know who that is. So there's nothing to report. Not yet. Not until I understand what I'm looking at.
+
+[DR_HANA_VOSS | style: firm, final, quiet]
+Nobody was here tonight.
+
+[SFX: the door easing shut, latch clicking]
+
+--- PART 15 ---
+
+[NARRATOR]
+Sunday afternoon, at Renata's apartment. Mia is staying over while the custody matter moves through the courts, and Piper — Renata's girlfriend, though few at the department know it — has come by for the day.
+
+[NARRATOR]
+Mia's laughter carries in from the next room, high and unguarded.
+
+[RENATA_KESTLER_YOON | style: soft, almost surprised at herself]
+You're terrible at hiding. She can see your feet under the curtain.
+
+[PIPER_ZHANG | style: playful, breathless]
+She absolutely cannot. I am a professional.
+
+[SFX: a small child's shriek of laughter, then quick footsteps on hardwood]
+
+[RENATA_KESTLER_YOON | style: warm, quiet]
+A professional what, exactly.
+
+[PIPER_ZHANG | style: mock-offended, still catching her breath]
+Hide-and-seek consultant. I have references.
+
+[NARRATOR]
+Renata leans in the doorway, watching them.
+
+[RENATA_KESTLER_YOON | style: to herself, low, unguarded]
+Look at you.
+
+[PIPER_ZHANG | style: gentle, turning]
+What?
+
+[RENATA_KESTLER_YOON | style: quiet, honest]
+Nothing. You're just good with her. It's — I don't know. It undoes me a little, watching it.
+
+[PIPER_ZHANG | style: soft, deflecting with warmth]
+She's easy to be good with. She makes it easy.
+
+[NARRATOR]
+Renata crosses the room and sits on the arm of the couch, close enough to touch Piper's shoulder.
+
+[RENATA_KESTLER_YOON | style: quieter, more serious underneath]
+I keep thinking about what happens if the hearing goes badly. If I lose the extra time with her. And then I think about you being here for it, and it's the only part that doesn't feel like it's falling apart.
+
+[PIPER_ZHANG | style: careful, warm but tight]
+I'm not going anywhere.
+
+[RENATA_KESTLER_YOON | style: half-laughing, half-serious]
+Good. Because I built more of my life around this than I meant to. Around us. It sneaks up on you.
+
+[NARRATOR]
+In the next room, Mia calls out that she's found a better hiding spot and demands a rematch. Piper starts to rise, then hesitates, looking at Renata a beat too long.
+
+[PIPER_ZHANG | style: quiet, something heavier under the lightness]
+Renata —
+
+[RENATA_KESTLER_YOON | style: easy, already smiling toward the doorway]
+Go. She'll start counting for you if you make her wait.
+
+[NARRATOR]
+Piper holds the look another second, then lets it go, and follows the sound of the child's voice.
+
+[PIPER_ZHANG | style: bright again, performed for Mia's benefit]
+Okay, okay — I'm coming, no fair starting without me.
+
+[NARRATOR]
+Renata stays on the arm of the couch, listening to the two of them, unaware of anything unfinished in the room she just watched Piper leave.
+
+--- PART 16 ---
+
+[NARRATOR]
+Later that afternoon, in the precinct's boardroom, Captain Zhao stands before the department oversight board to make official what she started three days earlier with Kestler.
+
+[CAPT_LENA_ZHAO | style: composed, procedural]
+Thank you for fitting this in on short notice. I'll keep it brief. Effective immediately, I'm proposing the Toll task force move to a single point of command — mine — folding the outside consult budget and the overtime pool into one line I track directly.
+
+[CAPT_LENA_ZHAO | style: measured, rehearsed]
+Right now we're running three separate approval chains for a unit half that size. Every week lost to paperwork is a week Toll stays uncaught on the street. This isn't a change in scope. It's a change in who signs off, and how fast.
+
+[CAPT_LENA_ZHAO | style: even, unreadable]
+The funding stays within existing lines. Nothing new, nothing that needs a separate item for anyone downstream to track or question. I've reviewed the current caseload personally — there's nothing in it that needs a second set of eyes beyond mine and the lead detective's.
+
+[CAPT_LENA_ZHAO | style: patient, pre-empting]
+I know consolidation raises the obvious question — more authority in one office, less oversight spread across it. My answer is simple. The oversight doesn't disappear. It moves to weekly reporting, direct to this board, instead of scattered across three desks that don't always talk to each other.
+
+[SFX: a folder sliding across the table]
+
+[CAPT_LENA_ZHAO | style: brisk, anticipating an objection that doesn't come]
+That outside forensics consult that's been sitting in queue folds into this as well. It'll clear faster under one signature than three — that delay's been on me, and I'd like it fixed.
+
+[CAPT_LENA_ZHAO | style: firm, sincere]
+Kestler's team is close. I don't intend to let procedure slow that down a single extra day.
+
+[CAPT_LENA_ZHAO | style: brisk, closing the topic]
+I have the revised org chart here if anyone wants it in writing, but I'd rather not spend the board's time on it today. Any objections before I bring this to a vote?
+
+[CAPT_LENA_ZHAO | style: quietly satisfied, still guarded]
+None. Then let's call it. All in favor of consolidating task force oversight under my office, effective today.
+
+[SFX: a gavel rap]
+
+[CAPT_LENA_ZHAO | style: flat, private relief bleeding through]
+Motion carries. Thank you all — that's everything from me.
+
+[CAPT_LENA_ZHAO | style: barely audible, to herself]
+Good. That buys me some room. Now I just need it to hold.
+
+--- PART 17 ---
+
+[NARRATOR]
+Night, Adrian's apartment. The supervised visit is two days away. He sits alone with a glass and the quiet.
+
+[DET_ADRIAN_KESTLER | style: low, rehearsing]
+Just enough to stop my hands shaking. That's all this is.
+
+[SFX: ice settling in a glass]
+
+[DET_ADRIAN_KESTLER | style: quieter, unconvinced]
+One drink. Mia sees me steady, that's the whole point.
+
+[DET_ADRIAN_KESTLER | style: breath catching]
+Something's—
+
+[TOLL | style: calm, close, almost intimate]
+There it is.
+
+[DET_ADRIAN_KESTLER | style: startled, low]
+Don't. Not tonight.
+
+[TOLL | style: unhurried, amused]
+I'm not going anywhere, Adrian. I'm getting comfortable.
+
+[DET_ADRIAN_KESTLER | style: forcing composure, tight]
+It's the drink. It's just the drink.
+
+[TOLL | style: soft, certain]
+Keep telling yourself that. I'll still be here after.
+
+[DET_ADRIAN_KESTLER | style: barely audible]
+Please. Not now.
+
+[NARRATOR | style: even, quiet]
+He doesn't finish the glass. He doesn't need to. The presence doesn't fade this time — it settles, patient, waiting for the one night his guard finally slips. The supervised visit is only days away. And something in Adrian is quieter than it should be.
+

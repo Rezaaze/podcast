@@ -1,0 +1,2297 @@
+{
+  "series_title": "The Midnight Frame",
+  "language": "English",
+  "mode": "drama",
+  "template": "soap_opera",
+  "writer_persona": "a showrunner for character-driven, relationship-first serial drama in the vein of prestige ensemble TV, running a ticking-clock thriller premise underneath soap-opera romantic entanglements, family debt, and institutional betrayal",
+  "style_guidelines": [
+    "Each scene should meaningfully advance at most one or two threads — never all four at once — and quieter domestic scenes should breathe between thriller beats.",
+    "Build dramatic irony relentlessly: let the audience watch a character act on information another character in the same scene doesn't have.",
+    "Keep the 'photograph' mechanism eerie but grounded in mundane textures — coffee going cold, a phone buzzing at dawn — rather than overtly supernatural staging.",
+    "Reveal what characters want and what they're hiding through subtext and deflection in dialogue, never through a character stating the plot outright.",
+    "End most scenes on a small escalation, reversal, or unanswered question rather than a full resolution.",
+    "Alternate pacing deliberately between charged confrontations and slower emotional scenes so the season doesn't read as one continuous chase."
+  ],
+  "voices": {
+    "NARRATOR": {
+      "voice": "Ryan",
+      "default_style": "calm, measured, a step removed from the action",
+      "description": "the show's narrator — orients the listener at the start of every scene (who, where, when), never a character in the story"
+    },
+    "NOAH_KESTREL": {
+      "voice": "Aiden",
+      "default_style": "grim, controlled, quietly rattled — a cop trying to stay procedural about his own murder",
+      "description": "Harbor City homicide detective who wakes every morning to a timestamped photo of his own murdered body; grows convinced the killer keeps changing because of his own choices, but has no idea the photos come from an algorithm his captain secretly revived, or that the old man he confides in built it"
+    },
+    "LILY_ZHAO": {
+      "voice": "Vivian",
+      "default_style": "commanding, clipped, gives away nothing — speaks slow, deliberate, very clear English",
+      "description": "Harbor City homicide captain, immigrated from Guangzhou in her twenties and outworked her way to command; secretly running a decommissioned predictive-threat program to expose a corrupt network she believes killed a young officer ten years ago, using Noah as an unwitting test subject without his consent"
+    },
+    "KAI_CHEN": {
+      "voice": "Dylan",
+      "default_style": "loyal, dry humor masking exhaustion — speaks slow, deliberate, very clear English",
+      "description": "Noah's partner and closest friend, moved to Harbor City from Beijing as a teenager; trusts Noah completely and has no idea how deep Zhao's operation runs or how compromised Danny has become"
+    },
+    "HAE_SONG": {
+      "voice": "Yuna",
+      "default_style": "guarded warmth, quick to deflect — speaks slow, deliberate, very clear English",
+      "description": "Noah's estranged wife, Korean-American; left him eight months ago believing it was over his workaholism, unaware he spent department funds investigating her father's death, and now quietly involved with Danny Wu partly to stay close to answers Noah won't give her"
+    },
+    "MR_FENG": {
+      "voice": "Uncle_Fu",
+      "default_style": "gentle, cryptic, an old man's patience masking guilt",
+      "description": "elderly owner of a curio-and-antique-camera shop, immigrated from China decades ago; built the predictive-threat system years ago for the department and lost his own son to the network it was meant to expose, now plays kindly confidant to Noah while hiding that he designed what stalks him"
+    },
+    "DANNY_WU": {
+      "voice": "Eric",
+      "default_style": "ambitious, charming, undercurrent of anxiety — speaks slow, deliberate, very clear English",
+      "description": "young detective competing with Noah for the same promotion; his family's restaurant carries an inherited debt to a lender tied to the very network under investigation, and he's been leaking case details to shrink it, unaware his leaks helped choose which 'killers' appeared in Noah's photographs — and secretly dating Hae"
+    },
+    "AYA_MORITA": {
+      "voice": "Aiko",
+      "default_style": "probing, warm on the surface, relentless underneath — speaks slow, deliberate, very clear English",
+      "description": "Herald reporter who has chased the 'Midnight Photographer' story for six months, unaware her anonymous source is Captain Zhao herself; her growing feelings for Noah, her main subject, complicate her instinct to publish everything she knows"
+    }
+  },
+  "locations": {
+    "PRECINCT": {
+      "name": "The Precinct Bullpen",
+      "description": "a fluorescent-lit maze of mismatched desks and case corkboards where the coffee is always burnt and the blinds never quite close all the way against the parking-lot glare."
+    },
+    "NOAHS_APARTMENT": {
+      "name": "Noah's Apartment",
+      "description": "a cramped one-bedroom with the blinds permanently drawn, every wall papered in printed photographs and red string, lit only by a single desk lamp."
+    },
+    "FENGS_SHOP": {
+      "name": "Feng's Photo & Curio Shop",
+      "description": "a cluttered antique storefront of dusty view cameras and yellowed prints, its back room lit by a single red darkroom bulb that never turns off."
+    },
+    "TIDEWATER_DINER": {
+      "name": "The Tidewater Diner",
+      "description": "an all-night diner near the docks with cracked red vinyl booths and a buzzing neon sign, where off-duty cops decompress under harsh white light."
+    },
+    "HAES_HOUSE": {
+      "name": "Hae's House",
+      "description": "a small, warmly lit suburban home with kids' drawings on the fridge and family photos on every shelf — a domestic order that pointedly contrasts Noah's apartment."
+    },
+    "WU_RESTAURANT": {
+      "name": "The Wu Family Restaurant",
+      "description": "a bustling Chinatown dining room strung with red paper lanterns and the clatter of a busy kitchen, warm and loud on the floor, tense and quiet in the back office."
+    },
+    "MORGUE": {
+      "name": "The City Morgue",
+      "description": "a sterile basement suite of steel tables and harsh overhead light, the hum of refrigeration units the only sound between examinations."
+    },
+    "HERALD_NEWSROOM": {
+      "name": "The Herald Newsroom",
+      "description": "an open-plan floor of glowing monitors and ringing phones under stark white light, deadline energy radiating from every corner even at 2 a.m."
+    }
+  },
+  "format": {
+    "parts_per_section": 1,
+    "words_per_part_target": "300 to 500",
+    "words_per_part_min": 250,
+    "words_per_part_max": 550
+  },
+  "generation": {
+    "model": "claude-sonnet-5",
+    "use_beats": true
+  },
+  "audio": {
+    "api_url": "http://127.0.0.1:42003",
+    "default_style": "Speak clearly and with dramatic weight",
+    "target_lufs": -16.0,
+    "pause_between_chunks_ms": 250,
+    "pause_between_lines_ms": 700,
+    "pause_between_parts_ms": 3000,
+    "pause_between_episodes_ms": 6000,
+    "merge_anthology": false
+  },
+  "output_prefix": "ep",
+  "series_intro": "Every morning at dawn, Harbor City homicide detective Noah Kestrel receives a photograph of his own murdered body — timestamped for midnight that same night, the killer's face never the same twice. He has one day to survive whoever it is this time, knowing that every move he makes to stay alive reshuffles the danger for tomorrow. Around him, a captain with a secret program, an estranged wife with a secret grief, a rival with a secret debt, and a reporter chasing a story that's getting too close to her own heart all carry pieces of a truth none of them can see whole. This is a season about what people hide from the ones who love them — and what happens when a man is forced to live, over and over, exactly one day ahead of his own death.",
+  "series_outro": "By season's end, Zhao's hidden program is exposed publicly — forced into the open not by her design but by Aya's front-page story — costing Zhao her command even as it cracks the corrupt network open for the first time. Feng's role as the system's architect comes to light, closing the decade-old wound of his son's murder but leaving Noah unsure whether to trust the old man again. Danny's debt is called in by his lender in the season's final days, forcing him to choose between his family and finally telling the truth, a choice that ends his rivalry with Noah but not cleanly. Hae and Noah reach a fragile, unresolved truce — not reconciliation, not closure, just the first honest conversation they've had in a year. The corrupt network itself is wounded, not destroyed: several names are named, several more remain unnamed, and the season closes on Noah receiving one final photograph — no timestamp, no face, just an empty street he doesn't yet recognize.",
+  "threads": [
+    {
+      "label": "The Midnight Photograph",
+      "solution": "The photographs are not prophecy but daily output of an experimental predictive-threat program called Panopticon, built years ago by Feng for the department's cold-case unit and never fully decommissioned after it was shut down for civil-liberties violations. It cross-references Noah's movements, phone metadata, and known grudges to calculate who is most likely to kill him within the next 24 hours, then renders a photorealistic composite as proof. Captain Zhao secretly kept a hidden instance running from a server in the precinct's old records basement, using Noah as an unwitting test subject to flush out a network of corrupt officers — the same network she believes killed Feng's son, a rookie cop, ten years ago — because Noah is the one detective in the precinct with no ties to that network. Each day's photo reflects a genuinely real threat, not a false alarm, but the identity keeps shifting because Noah's own survival actions each day reshuffle who has the strongest motive and opportunity for the next day, exactly as Panopticon recalculates. Zhao intends to let the algorithm and Noah's investigation eventually expose the entire network; she has not told him he is bait, and Feng — the confidant Noah trusts — has not told him he built the very system stalking him.",
+      "objective_facts": [
+        "Panopticon was built by Feng fifteen years ago as an internal cold-case predictive tool and officially shut down six years ago after a lawsuit over its surveillance methods.",
+        "Zhao has secretly kept a hidden instance of Panopticon running from a server in the precinct's old records-storage basement for the past four months.",
+        "Each morning's photograph is generated from real-time surveillance and metadata about Noah, recalculated every 24 hours based on his prior day's actions.",
+        "Feng's son, a rookie officer, was murdered ten years ago by members of the same corrupt network Zhao is now trying to expose.",
+        "Noah was selected as the system's test subject specifically because he has no personal or financial ties to anyone in the corrupt network.",
+        "Every person who has appeared as a 'killer' in the photographs has been, at the moment the photo was generated, a real and currently highest-probability threat to Noah — not a fabrication."
+      ]
+    },
+    {
+      "label": "The Estrangement",
+      "solution": "Hae left Noah eight months ago, and precinct gossip attributes it to his workaholism, but the real reason is that she discovered Noah had secretly diverted department discretionary funds to hire a private investigator digging into her late father's death — a death Noah suspected was connected to the same corrupt network Zhao is hunting. He hid this from her because the investigator's early findings suggested her father may have been complicit in the network's activity, not merely its victim, and Noah couldn't bring himself to tell her. Hae has since started seeing Danny Wu, drawn in part to the normalcy of his family's restaurant, but also — without fully admitting it to herself — to stay closer to the case information Noah still won't share with her. Danny genuinely cares for Hae, but is also using the relationship, half-consciously, to stay a step ahead of Noah professionally.",
+      "objective_facts": [
+        "Hae and Noah separated eight months ago; their divorce has not been finalized.",
+        "Noah spent fourteen thousand dollars of a discretionary case fund on a private investigator looking into Hae's father's death, without departmental authorization or Hae's knowledge.",
+        "The investigator's notes, which Noah has shown no one, suggest Hae's father may have laundered money for the network implicated in Feng's son's murder.",
+        "Hae has been in a relationship with Danny Wu for three months.",
+        "Danny has not told Noah or Captain Zhao that he is dating Hae."
+      ]
+    },
+    {
+      "label": "The Wu Family Debt",
+      "solution": "Danny Wu's drive to outshine Noah for the detective-first-grade promotion isn't only career ambition — his family's restaurant carries an eighty-thousand-dollar debt inherited from his late father, owed to a lender connected to the corrupt-cop network under investigation. For two years, Danny has been quietly passing selected case details to a contact known only as 'Sonny' in exchange for incremental forgiveness of that debt, telling himself he's protecting his family without truly compromising any case. He does not know that Sonny reports directly to the same network responsible for Feng's son's murder, and he has no idea that at least two of the individuals who appeared as 'killers' in Noah's morning photographs were selected in part using information he unknowingly leaked.",
+      "objective_facts": [
+        "The Wu family restaurant owes eighty thousand dollars, inherited from Danny's late father, to a lender tied to the corrupt-cop network under investigation.",
+        "Danny has been passing precinct case details to a contact named Sonny in exchange for debt forgiveness for the past two years.",
+        "Danny does not know Sonny reports directly to the network responsible for Feng's son's murder.",
+        "Two individuals who appeared as 'killers' in Noah's morning photographs were selected in part using information Danny unknowingly leaked.",
+        "Danny's mother believes the family debt was paid off a year ago; it was not."
+      ]
+    },
+    {
+      "label": "The Front Page",
+      "solution": "Aya Morita, the Herald reporter chasing the 'Midnight Photographer' murders for six months, has been anonymously fed partial case details by Captain Zhao herself — not out of malice, but strategy: Zhao wants enough public pressure on the corrupt network that it can't quietly bury the case if her hidden Panopticon operation is ever exposed, and she is using Aya, without Aya's knowledge, as a pressure valve and eventual public shield. Aya believes her source is a disgruntled junior officer. She has become so invested in the story that she's developed real feelings for Noah, her main subject, and is torn between the professional instinct to publish everything she has — which would blow Zhao's operation open before it's ready — and her growing loyalty to him.",
+      "objective_facts": [
+        "Aya has published four stories on the 'Midnight Photographer' case over six months, based on unnamed departmental sources.",
+        "Captain Zhao is Aya's anonymous source, though Aya believes her source is a disgruntled junior officer.",
+        "Aya has an unpublished folder of evidence, including a partial photo of the Panopticon server room, that she has not yet connected to Zhao.",
+        "Aya and Noah have met in person eleven times since the story began, ostensibly for interviews.",
+        "Aya's editor has given her one week to file a story naming a suspect or the paper will hand the story to a rival reporter."
+      ]
+    }
+  ],
+  "episodes": [
+    {
+      "figure": "Six Weeks of Mornings",
+      "theme": "The premiere plants two secrets taking firmer hold rather than surfacing: Noah's obsessive cataloguing of his own murder photographs convinces him the killer's identity reacts to his own movements, while Danny's routine hand-off to Sonny establishes the quiet betrayal running underneath his rivalry with Noah.",
+      "intro_note": "",
+      "outro_note": "Tomorrow, another wire transfer will leave a fund no one's supposed to touch — and a reporter's faith in her anonymous source will get one detail stronger, whether it deserves to or not.",
+      "sections": [
+        {
+          "title": "Six Weeks of Mornings",
+          "what": "At dawn Noah's phone buzzes with today's photograph — a stranger's face over his own body — and he pins it beside forty other mornings.",
+          "who": [
+            "NOAH_KESTREL"
+          ],
+          "thread": "The Midnight Photograph",
+          "location": "NOAHS_APARTMENT",
+          "words": null
+        },
+        {
+          "title": "Burnt Coffee, Same Routine",
+          "what": "Kai needles Noah about looking wrecked again; Noah deflects with procedural talk, unwilling to admit he barely slept cataloguing photographs.",
+          "who": [
+            "NOAH_KESTREL",
+            "KAI_CHEN"
+          ],
+          "thread": "The Midnight Photograph",
+          "location": "PRECINCT",
+          "words": null
+        },
+        {
+          "title": "The Parking Garage",
+          "what": "In the precinct's underground garage, Danny hands his contact Sonny details of Noah's active case for a cut of the family's debt.",
+          "who": [
+            "DANNY_WU"
+          ],
+          "thread": "The Wu Family Debt",
+          "location": "PRECINCT",
+          "words": {
+            "min": 130,
+            "max": 220,
+            "target": "130 to 220"
+          }
+        },
+        {
+          "title": "Cross-Referencing",
+          "what": "Alone at night, Noah lines up six weeks of photographs against his case notebook and realizes the killer's face always matches whoever he saw most recently.",
+          "who": [
+            "NOAH_KESTREL"
+          ],
+          "thread": "The Midnight Photograph",
+          "location": "NOAHS_APARTMENT",
+          "words": null
+        },
+        {
+          "title": "The Case Board",
+          "what": "Zhao reviews the current homicide case with Noah and Kai, brisk and clipped, giving no hint she already knows who tomorrow's photograph will show.",
+          "who": [
+            "NOAH_KESTREL",
+            "KAI_CHEN",
+            "LILY_ZHAO"
+          ],
+          "thread": "The Midnight Photograph",
+          "location": "PRECINCT",
+          "words": null
+        },
+        {
+          "title": "Cold Tables",
+          "what": "Noah and Kai examine the week's homicide victim, trading dry gallows humor while Noah's mind keeps drifting to his own morning photograph.",
+          "who": [
+            "NOAH_KESTREL",
+            "KAI_CHEN"
+          ],
+          "thread": "The Midnight Photograph",
+          "location": "MORGUE",
+          "words": null
+        },
+        {
+          "title": "The Shop Bell",
+          "what": "Noah shows Feng today's photograph seeking comfort; Feng studies it a beat too long before offering gentle reassurance that gives nothing away.",
+          "who": [
+            "NOAH_KESTREL",
+            "MR_FENG"
+          ],
+          "thread": "The Midnight Photograph",
+          "location": "FENGS_SHOP",
+          "words": null
+        },
+        {
+          "title": "Two Coffees, One Empty Chair",
+          "what": "Over diner coffee, Kai gently asks if Noah's heard from Hae; Noah changes the subject, unwilling to admit how much he still checks his phone.",
+          "who": [
+            "NOAH_KESTREL",
+            "KAI_CHEN"
+          ],
+          "thread": "The Estrangement",
+          "location": "TIDEWATER_DINER",
+          "words": null
+        },
+        {
+          "title": "Family Photos on the Fridge",
+          "what": "Alone at home, Hae straightens a photo of her late father, thinking of Noah's unanswered calls before her phone lights up with Danny's name.",
+          "who": [
+            "HAE_SONG"
+          ],
+          "thread": "The Estrangement",
+          "location": "HAES_HOUSE",
+          "words": {
+            "min": 130,
+            "max": 220,
+            "target": "130 to 220"
+          }
+        },
+        {
+          "title": "After Hours",
+          "what": "In the restaurant's back office, Danny and Hae share a quiet dinner; she notices him checking his phone nervously but doesn't push.",
+          "who": [
+            "DANNY_WU",
+            "HAE_SONG"
+          ],
+          "thread": "The Estrangement",
+          "location": "WU_RESTAURANT",
+          "words": null
+        },
+        {
+          "title": "The Ledger",
+          "what": "Danny reviews the restaurant's books alone at night, the inherited debt still glaring on the page despite his mother's belief it was paid off.",
+          "who": [
+            "DANNY_WU"
+          ],
+          "thread": "The Wu Family Debt",
+          "location": "WU_RESTAURANT",
+          "words": null
+        },
+        {
+          "title": "Rivalry, Lightly Worn",
+          "what": "Danny and Noah trade barbed banter about the open detective-first-grade slot, Danny's charm masking how badly he needs the promotion now.",
+          "who": [
+            "NOAH_KESTREL",
+            "DANNY_WU",
+            "KAI_CHEN"
+          ],
+          "thread": "The Wu Family Debt",
+          "location": "PRECINCT",
+          "words": null
+        },
+        {
+          "title": "Eleven Coffees",
+          "what": "Aya meets Noah for another interview, probing gently about the photographs while noticing herself softening toward her own subject.",
+          "who": [
+            "AYA_MORITA",
+            "NOAH_KESTREL"
+          ],
+          "thread": "The Front Page",
+          "location": "TIDEWATER_DINER",
+          "words": null
+        },
+        {
+          "title": "A Source Worth Trusting",
+          "what": "Back at her desk, Aya reviews her anonymous tipster's messages, certain she's found a disgruntled junior officer rather than her captain's boss.",
+          "who": [
+            "AYA_MORITA"
+          ],
+          "thread": "The Front Page",
+          "location": "HERALD_NEWSROOM",
+          "words": null
+        },
+        {
+          "title": "Basement Hum",
+          "what": "Alone after hours, Zhao descends to the old records basement and checks the hidden Panopticon feed, watching Noah's data update in silence.",
+          "who": [
+            "LILY_ZHAO"
+          ],
+          "thread": "The Midnight Photograph",
+          "location": "PRECINCT",
+          "words": null
+        },
+        {
+          "title": "Forty-One Mornings",
+          "what": "Kai visits unannounced and finds the wall of photographs for the first time, stunned by how far Noah's private obsession has quietly gone.",
+          "who": [
+            "NOAH_KESTREL",
+            "KAI_CHEN"
+          ],
+          "thread": "The Midnight Photograph",
+          "location": "NOAHS_APARTMENT",
+          "words": null
+        },
+        {
+          "title": "Tomorrow's Face",
+          "what": "At midnight, Noah's phone buzzes with the next photograph; the face is someone he spoke to only hours earlier, confirming his theory and his dread.",
+          "who": [
+            "NOAH_KESTREL"
+          ],
+          "thread": "The Midnight Photograph",
+          "location": "NOAHS_APARTMENT",
+          "words": {
+            "min": 130,
+            "max": 220,
+            "target": "130 to 220"
+          }
+        }
+      ],
+      "case": [
+        {
+          "label": "The Midnight Photograph",
+          "character_knowledge": {
+            "NOAH_KESTREL": "He knows only what forty-plus pinned photographs tell him: a different face each morning, always someone he crossed paths with recently, which by tonight convinces him the killer is reacting to his own choices rather than predicting anything fixed. He freely shares the photographs and his suspicions with Kai and Feng because he trusts them completely, and has no idea Panopticon exists, that Zhao runs it, or that Feng built it — his theory about causation is correct, but he wrongly assumes a person is watching and reacting to him in real time rather than an algorithm.",
+            "LILY_ZHAO": "She knows exactly why the faces keep changing — Panopticon recalculates from Noah's own movements every twenty-four hours — and deliberately keeps him in the dark, treating each briefing as routine casework because she needs him unwitting to draw the network out. She's aware his obsessive cataloguing could eventually lead him toward the truth, a risk she's decided to accept rather than shut the program down.",
+            "MR_FENG": "He recognizes the photographs as unmistakably his own system's output the moment Noah shows him one, but says nothing beyond gentle reassurance, unwilling to admit he built the very machine hunting his friend. He believes staying close to Noah as a confidant is the safest way to watch over him without reopening the wound of his son's murder.",
+            "KAI_CHEN": "He knows Noah looks exhausted and evasive but has no idea why beyond ordinary case stress, and when he finds the wall of photographs he's genuinely stunned — he has no knowledge of Panopticon, Zhao's program, or Feng's involvement, and simply believes his partner is spiraling privately."
+          },
+          "solution": "The photographs are not prophecy but daily output of an experimental predictive-threat program called Panopticon, built years ago by Feng for the department's cold-case unit and never fully decommissioned after it was shut down for civil-liberties violations. It cross-references Noah's movements, phone metadata, and known grudges to calculate who is most likely to kill him within the next 24 hours, then renders a photorealistic composite as proof. Captain Zhao secretly kept a hidden instance running from a server in the precinct's old records basement, using Noah as an unwitting test subject to flush out a network of corrupt officers — the same network she believes killed Feng's son, a rookie cop, ten years ago — because Noah is the one detective in the precinct with no ties to that network. Each day's photo reflects a genuinely real threat, not a false alarm, but the identity keeps shifting because Noah's own survival actions each day reshuffle who has the strongest motive and opportunity for the next day, exactly as Panopticon recalculates. Zhao intends to let the algorithm and Noah's investigation eventually expose the entire network; she has not told him he is bait, and Feng — the confidant Noah trusts — has not told him he built the very system stalking him.",
+          "objective_facts": [
+            "Panopticon was built by Feng fifteen years ago as an internal cold-case predictive tool and officially shut down six years ago after a lawsuit over its surveillance methods.",
+            "Zhao has secretly kept a hidden instance of Panopticon running from a server in the precinct's old records-storage basement for the past four months.",
+            "Each morning's photograph is generated from real-time surveillance and metadata about Noah, recalculated every 24 hours based on his prior day's actions.",
+            "Feng's son, a rookie officer, was murdered ten years ago by members of the same corrupt network Zhao is now trying to expose.",
+            "Noah was selected as the system's test subject specifically because he has no personal or financial ties to anyone in the corrupt network.",
+            "Every person who has appeared as a 'killer' in the photographs has been, at the moment the photo was generated, a real and currently highest-probability threat to Noah — not a fabrication."
+          ]
+        },
+        {
+          "label": "The Wu Family Debt",
+          "character_knowledge": {
+            "DANNY_WU": "He knows precisely what he's doing — trading case details to Sonny for debt forgiveness — and tells himself it's harmless because no one gets hurt, actively hiding it from Noah, Kai, and his own mother, who wrongly believes the family debt was cleared a year ago. He has no idea Sonny reports to the same corrupt network under investigation, or that his leaks have already shaped who appeared in Noah's photographs."
+          },
+          "solution": "Danny Wu's drive to outshine Noah for the detective-first-grade promotion isn't only career ambition — his family's restaurant carries an eighty-thousand-dollar debt inherited from his late father, owed to a lender connected to the corrupt-cop network under investigation. For two years, Danny has been quietly passing selected case details to a contact known only as 'Sonny' in exchange for incremental forgiveness of that debt, telling himself he's protecting his family without truly compromising any case. He does not know that Sonny reports directly to the same network responsible for Feng's son's murder, and he has no idea that at least two of the individuals who appeared as 'killers' in Noah's morning photographs were selected in part using information he unknowingly leaked.",
+          "objective_facts": [
+            "The Wu family restaurant owes eighty thousand dollars, inherited from Danny's late father, to a lender tied to the corrupt-cop network under investigation.",
+            "Danny has been passing precinct case details to a contact named Sonny in exchange for debt forgiveness for the past two years.",
+            "Danny does not know Sonny reports directly to the network responsible for Feng's son's murder.",
+            "Two individuals who appeared as 'killers' in Noah's morning photographs were selected in part using information Danny unknowingly leaked.",
+            "Danny's mother believes the family debt was paid off a year ago; it was not."
+          ]
+        },
+        {
+          "label": "The Estrangement",
+          "character_knowledge": {
+            "HAE_SONG": "She still believes, along with the rest of the precinct, that Noah's workaholism alone ended their marriage, with no idea he spent department money investigating her father's death or what the investigator's notes imply. She's openly building a relationship with Danny for his steadiness, while privately still checking for missed calls from Noah she won't admit she's hoping for.",
+            "NOAH_KESTREL": "He knows the real reason he and Hae separated — the money he diverted to investigate her father, and what the investigator's notes suggest about him — and deliberately keeps it from her and everyone else, letting the precinct's workaholism narrative stand because it's easier than the truth. He has no idea she's seeing Danny.",
+            "DANNY_WU": "He knows he's dating Hae and that it complicates things professionally and personally, but hasn't told Noah or Zhao, partly out of guilt and partly because the relationship genuinely matters to him beyond any advantage it might offer. He has no idea her own reasons for staying close to him are more tangled than simple affection."
+          },
+          "solution": "Hae left Noah eight months ago, and precinct gossip attributes it to his workaholism, but the real reason is that she discovered Noah had secretly diverted department discretionary funds to hire a private investigator digging into her late father's death — a death Noah suspected was connected to the same corrupt network Zhao is hunting. He hid this from her because the investigator's early findings suggested her father may have been complicit in the network's activity, not merely its victim, and Noah couldn't bring himself to tell her. Hae has since started seeing Danny Wu, drawn in part to the normalcy of his family's restaurant, but also — without fully admitting it to herself — to stay closer to the case information Noah still won't share with her. Danny genuinely cares for Hae, but is also using the relationship, half-consciously, to stay a step ahead of Noah professionally.",
+          "objective_facts": [
+            "Hae and Noah separated eight months ago; their divorce has not been finalized.",
+            "Noah spent fourteen thousand dollars of a discretionary case fund on a private investigator looking into Hae's father's death, without departmental authorization or Hae's knowledge.",
+            "The investigator's notes, which Noah has shown no one, suggest Hae's father may have laundered money for the network implicated in Feng's son's murder.",
+            "Hae has been in a relationship with Danny Wu for three months.",
+            "Danny has not told Noah or Captain Zhao that he is dating Hae."
+          ]
+        },
+        {
+          "label": "The Front Page",
+          "character_knowledge": {
+            "AYA_MORITA": "She believes her anonymous source is a disgruntled junior officer feeding her real departmental leaks, with no idea it's actually Captain Zhao steering her coverage strategically. She's aware her feelings for Noah are complicating her instinct to publish everything she has on him, and is choosing, for now, to hold back rather than examine why."
+          },
+          "solution": "Aya Morita, the Herald reporter chasing the 'Midnight Photographer' murders for six months, has been anonymously fed partial case details by Captain Zhao herself — not out of malice, but strategy: Zhao wants enough public pressure on the corrupt network that it can't quietly bury the case if her hidden Panopticon operation is ever exposed, and she is using Aya, without Aya's knowledge, as a pressure valve and eventual public shield. Aya believes her source is a disgruntled junior officer. She has become so invested in the story that she's developed real feelings for Noah, her main subject, and is torn between the professional instinct to publish everything she has — which would blow Zhao's operation open before it's ready — and her growing loyalty to him.",
+          "objective_facts": [
+            "Aya has published four stories on the 'Midnight Photographer' case over six months, based on unnamed departmental sources.",
+            "Captain Zhao is Aya's anonymous source, though Aya believes her source is a disgruntled junior officer.",
+            "Aya has an unpublished folder of evidence, including a partial photo of the Panopticon server room, that she has not yet connected to Zhao.",
+            "Aya and Noah have met in person eleven times since the story began, ostensibly for interviews.",
+            "Aya's editor has given her one week to file a story naming a suspect or the paper will hand the story to a rival reporter."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "What the Withdrawal Was For",
+      "theme": "Domestic and newsroom secrets both deepen in parallel: Noah funnels more hidden money toward the investigator digging into Hae's father, and Aya's false trust in her anonymous source hardens after a tip checks out, each character burying a lie a little further before anyone notices.",
+      "intro_note": "Six weeks of mornings taught Noah that the face in his photograph moves with his own choices — today's face is someone he's never seen before, and the clock on it is already running.",
+      "outro_note": "Two lies just went unnoticed — but somewhere in the numbers Noah trusts and the tip Aya believes, the first cracks are already spreading toward the surface.",
+      "sections": [
+        {
+          "title": "The Sixth Face",
+          "what": "Noah opens the day's photograph at dawn, a stranger's face timestamped for midnight, and calls Kai to flag tonight's threat before his shift starts.",
+          "who": [
+            "NOAH_KESTREL"
+          ],
+          "thread": "The Midnight Photograph",
+          "location": "NOAHS_APARTMENT",
+          "words": null
+        },
+        {
+          "title": "A Number With No Name",
+          "what": "Alone before roll call, Zhao drafts an anonymous tip about the case and sends it through a burner line meant only for her reporter.",
+          "who": [
+            "LILY_ZHAO"
+          ],
+          "thread": "The Front Page",
+          "location": "PRECINCT",
+          "words": {
+            "min": 140,
+            "max": 240,
+            "target": "140 to 240"
+          }
+        },
+        {
+          "title": "The Tip Lands",
+          "what": "Aya reads the encrypted message from her unnamed source and decides to verify the detail before trusting it enough to write.",
+          "who": [
+            "AYA_MORITA"
+          ],
+          "thread": "The Front Page",
+          "location": "HERALD_NEWSROOM",
+          "words": null
+        },
+        {
+          "title": "Second Opinion",
+          "what": "Noah shows Feng the newest photograph and admits the killer's face keeps shifting; Feng studies it too long before offering only comfort.",
+          "who": [
+            "NOAH_KESTREL",
+            "MR_FENG"
+          ],
+          "thread": "The Midnight Photograph",
+          "location": "FENGS_SHOP",
+          "words": null
+        },
+        {
+          "title": "The Dummy Case",
+          "what": "Noah opens a closed case file under a false number, quietly requesting access to its discretionary fund for a payment only he understands.",
+          "who": [
+            "NOAH_KESTREL"
+          ],
+          "thread": "The Estrangement",
+          "location": "PRECINCT",
+          "words": null
+        },
+        {
+          "title": "The Ledger Danny Hides",
+          "what": "Alone in the back office, Danny checks the restaurant's books and confirms the family debt is still owed, exactly as his mother must never learn.",
+          "who": [
+            "DANNY_WU"
+          ],
+          "thread": "The Wu Family Debt",
+          "location": "WU_RESTAURANT",
+          "words": {
+            "min": 140,
+            "max": 240,
+            "target": "140 to 240"
+          }
+        },
+        {
+          "title": "Easy Questions",
+          "what": "Over takeout at her house, Hae gently asks Danny what Noah's latest case involves, and he answers without noticing how carefully she's listening.",
+          "who": [
+            "HAE_SONG",
+            "DANNY_WU"
+          ],
+          "thread": "The Estrangement",
+          "location": "HAES_HOUSE",
+          "words": null
+        },
+        {
+          "title": "What the Withdrawal Was For",
+          "what": "Alone at his laptop past midnight, Noah wires twenty-two hundred dollars from the dummy case fund to the investigator digging into Hae's father.",
+          "who": [
+            "NOAH_KESTREL"
+          ],
+          "thread": "The Estrangement",
+          "location": "NOAHS_APARTMENT",
+          "words": null
+        },
+        {
+          "title": "Checks Out",
+          "what": "At the diner, Aya gets Kai to casually confirm a detail from her source, and it matches the record exactly, cementing her trust in the wrong tip.",
+          "who": [
+            "AYA_MORITA",
+            "KAI_CHEN"
+          ],
+          "thread": "The Front Page",
+          "location": "TIDEWATER_DINER",
+          "words": null
+        },
+        {
+          "title": "A Confidential Informant",
+          "what": "Kai spots the missing twenty-two hundred dollars in the case ledger and presses Noah, who claims it paid a confidential informant, and Kai believes him.",
+          "who": [
+            "NOAH_KESTREL",
+            "KAI_CHEN"
+          ],
+          "thread": "The Estrangement",
+          "location": "PRECINCT",
+          "words": null
+        },
+        {
+          "title": "A Story That Might Hurt Him",
+          "what": "Back at her desk, Aya drafts notes toward the story and hesitates over Noah's name, torn between the scoop and what she feels for him.",
+          "who": [
+            "AYA_MORITA"
+          ],
+          "thread": "The Front Page",
+          "location": "HERALD_NEWSROOM",
+          "words": null
+        },
+        {
+          "title": "How Are You Holding Up",
+          "what": "Zhao stops Noah in the bullpen and asks how he's coping with the photos, her concern sounding warm while she already knows tonight's answer.",
+          "who": [
+            "LILY_ZHAO",
+            "NOAH_KESTREL"
+          ],
+          "thread": "The Midnight Photograph",
+          "location": "PRECINCT",
+          "words": null
+        },
+        {
+          "title": "Almost Told Her",
+          "what": "Danny takes Hae to dinner at the restaurant and nearly confesses something about the debt, then loses his nerve and orders more tea instead.",
+          "who": [
+            "DANNY_WU",
+            "HAE_SONG"
+          ],
+          "thread": "The Wu Family Debt",
+          "location": "WU_RESTAURANT",
+          "words": null
+        },
+        {
+          "title": "The Man in the Photo",
+          "what": "Noah and Kai review what little they know about tonight's photographed stranger, and Kai's clipped answers make clear he's still stung by the earlier lie.",
+          "who": [
+            "NOAH_KESTREL",
+            "KAI_CHEN"
+          ],
+          "thread": "The Midnight Photograph",
+          "location": "MORGUE",
+          "words": null
+        },
+        {
+          "title": "Her Father's Face",
+          "what": "Alone at home, Hae takes out an old photo of her father and studies it, unsettled by something in Danny's careless question earlier that night.",
+          "who": [
+            "HAE_SONG"
+          ],
+          "thread": "The Estrangement",
+          "location": "HAES_HOUSE",
+          "words": {
+            "min": 140,
+            "max": 240,
+            "target": "140 to 240"
+          }
+        },
+        {
+          "title": "A Thaw at the Counter",
+          "what": "Late at the diner, Noah tries to smooth things over with Kai, and the tension eases slightly, though the lie between them hasn't gone anywhere.",
+          "who": [
+            "NOAH_KESTREL",
+            "KAI_CHEN"
+          ],
+          "thread": "The Estrangement",
+          "location": "TIDEWATER_DINER",
+          "words": null
+        },
+        {
+          "title": "Blank Wall Space",
+          "what": "Back home, Noah stares at the empty patch of wall waiting for tomorrow's photograph, aware that tonight's threat is already reshaping into something new.",
+          "who": [
+            "NOAH_KESTREL"
+          ],
+          "thread": "The Midnight Photograph",
+          "location": "NOAHS_APARTMENT",
+          "words": {
+            "min": 130,
+            "max": 220,
+            "target": "130 to 220"
+          }
+        }
+      ],
+      "case": [
+        {
+          "label": "The Estrangement",
+          "character_knowledge": {
+            "NOAH_KESTREL": "Knows he just wired another twenty-two hundred dollars from a falsified case-fund entry to the investigator digging into Hae's father, and that the investigator's early notes hint her father may have been complicit rather than purely a victim; he conceals all of this from Kai, claiming the money paid a confidential informant because he can't face what the truth would do to either of them.",
+            "KAI_CHEN": "Notices the ledger discrepancy and presses Noah about it directly; has no reason yet to doubt his partner and genuinely accepts the confidential-informant explanation, moving on reassured.",
+            "HAE_SONG": "Doesn't know about the wire transfer or the investigator; is quietly drawing case details out of Danny, driven by an urge to stay close to answers Noah won't give her that she hasn't fully admitted to herself.",
+            "DANNY_WU": "Answers Hae's questions about Noah's case honestly and without suspicion, unaware her interest is anything but casual, and has no idea Noah is spending case funds tied to her father."
+          },
+          "solution": "Hae left Noah eight months ago, and precinct gossip attributes it to his workaholism, but the real reason is that she discovered Noah had secretly diverted department discretionary funds to hire a private investigator digging into her late father's death — a death Noah suspected was connected to the same corrupt network Zhao is hunting. He hid this from her because the investigator's early findings suggested her father may have been complicit in the network's activity, not merely its victim, and Noah couldn't bring himself to tell her. Hae has since started seeing Danny Wu, drawn in part to the normalcy of his family's restaurant, but also — without fully admitting it to herself — to stay closer to the case information Noah still won't share with her. Danny genuinely cares for Hae, but is also using the relationship, half-consciously, to stay a step ahead of Noah professionally.",
+          "objective_facts": [
+            "Hae and Noah separated eight months ago; their divorce has not been finalized.",
+            "Noah spent fourteen thousand dollars of a discretionary case fund on a private investigator looking into Hae's father's death, without departmental authorization or Hae's knowledge.",
+            "The investigator's notes, which Noah has shown no one, suggest Hae's father may have laundered money for the network implicated in Feng's son's murder.",
+            "Hae has been in a relationship with Danny Wu for three months.",
+            "Danny has not told Noah or Captain Zhao that he is dating Hae."
+          ]
+        },
+        {
+          "label": "The Front Page",
+          "character_knowledge": {
+            "LILY_ZHAO": "Deliberately feeds Aya a specific, verifiable case detail through the anonymous channel, calculating that a confirmed tip will deepen Aya's trust and keep her digging in directions Zhao can still steer; Aya has no idea the source is her captain rather than a junior officer.",
+            "AYA_MORITA": "Receives the tip and gets it casually confirmed by Kai without revealing why she's asking, then treats the exact match as proof her source is credible — genuinely believing the leak comes from a disgruntled junior officer inside the department.",
+            "KAI_CHEN": "Answers Aya's offhand question honestly, having no idea it will be used to validate a leak, and doesn't consider the exchange significant enough to mention to anyone."
+          },
+          "solution": "Aya Morita, the Herald reporter chasing the 'Midnight Photographer' murders for six months, has been anonymously fed partial case details by Captain Zhao herself — not out of malice, but strategy: Zhao wants enough public pressure on the corrupt network that it can't quietly bury the case if her hidden Panopticon operation is ever exposed, and she is using Aya, without Aya's knowledge, as a pressure valve and eventual public shield. Aya believes her source is a disgruntled junior officer. She has become so invested in the story that she's developed real feelings for Noah, her main subject, and is torn between the professional instinct to publish everything she has — which would blow Zhao's operation open before it's ready — and her growing loyalty to him.",
+          "objective_facts": [
+            "Aya has published four stories on the 'Midnight Photographer' case over six months, based on unnamed departmental sources.",
+            "Captain Zhao is Aya's anonymous source, though Aya believes her source is a disgruntled junior officer.",
+            "Aya has an unpublished folder of evidence, including a partial photo of the Panopticon server room, that she has not yet connected to Zhao.",
+            "Aya and Noah have met in person eleven times since the story began, ostensibly for interviews.",
+            "Aya's editor has given her one week to file a story naming a suspect or the paper will hand the story to a rival reporter."
+          ]
+        },
+        {
+          "label": "The Midnight Photograph",
+          "character_knowledge": {
+            "NOAH_KESTREL": "Receives another unfamiliar face in the day's photograph and, still working from his six-week theory, assumes it reflects a threat generated by his own recent choices; has no idea it comes from a live department program or that Feng built it.",
+            "MR_FENG": "Recognizes something in the newest photograph he won't name aloud, and offers Noah gentle reassurance instead of the truth, unable to admit he designed the very system producing these images.",
+            "LILY_ZHAO": "Privately checks on Noah's wellbeing in the bullpen while already knowing exactly what tonight's photograph contains, maintaining the appearance of a concerned captain rather than the operator watching him."
+          },
+          "solution": "The photographs are not prophecy but daily output of an experimental predictive-threat program called Panopticon, built years ago by Feng for the department's cold-case unit and never fully decommissioned after it was shut down for civil-liberties violations. It cross-references Noah's movements, phone metadata, and known grudges to calculate who is most likely to kill him within the next 24 hours, then renders a photorealistic composite as proof. Captain Zhao secretly kept a hidden instance running from a server in the precinct's old records basement, using Noah as an unwitting test subject to flush out a network of corrupt officers — the same network she believes killed Feng's son, a rookie cop, ten years ago — because Noah is the one detective in the precinct with no ties to that network. Each day's photo reflects a genuinely real threat, not a false alarm, but the identity keeps shifting because Noah's own survival actions each day reshuffle who has the strongest motive and opportunity for the next day, exactly as Panopticon recalculates. Zhao intends to let the algorithm and Noah's investigation eventually expose the entire network; she has not told him he is bait, and Feng — the confidant Noah trusts — has not told him he built the very system stalking him.",
+          "objective_facts": [
+            "Panopticon was built by Feng fifteen years ago as an internal cold-case predictive tool and officially shut down six years ago after a lawsuit over its surveillance methods.",
+            "Zhao has secretly kept a hidden instance of Panopticon running from a server in the precinct's old records-storage basement for the past four months.",
+            "Each morning's photograph is generated from real-time surveillance and metadata about Noah, recalculated every 24 hours based on his prior day's actions.",
+            "Feng's son, a rookie officer, was murdered ten years ago by members of the same corrupt network Zhao is now trying to expose.",
+            "Noah was selected as the system's test subject specifically because he has no personal or financial ties to anyone in the corrupt network.",
+            "Every person who has appeared as a 'killer' in the photographs has been, at the moment the photo was generated, a real and currently highest-probability threat to Noah — not a fabrication."
+          ]
+        },
+        {
+          "label": "The Wu Family Debt",
+          "character_knowledge": {
+            "DANNY_WU": "Confirms alone that the family's debt is still fully owed despite his mother's belief it was settled, and carries the weight of that gap without telling Hae or anyone else how deep it runs.",
+            "HAE_SONG": "Senses Danny is holding something back over dinner but doesn't know what, and her own secrets keep her from pressing him about it."
+          },
+          "solution": "Danny Wu's drive to outshine Noah for the detective-first-grade promotion isn't only career ambition — his family's restaurant carries an eighty-thousand-dollar debt inherited from his late father, owed to a lender connected to the corrupt-cop network under investigation. For two years, Danny has been quietly passing selected case details to a contact known only as 'Sonny' in exchange for incremental forgiveness of that debt, telling himself he's protecting his family without truly compromising any case. He does not know that Sonny reports directly to the same network responsible for Feng's son's murder, and he has no idea that at least two of the individuals who appeared as 'killers' in Noah's morning photographs were selected in part using information he unknowingly leaked.",
+          "objective_facts": [
+            "The Wu family restaurant owes eighty thousand dollars, inherited from Danny's late father, to a lender tied to the corrupt-cop network under investigation.",
+            "Danny has been passing precinct case details to a contact named Sonny in exchange for debt forgiveness for the past two years.",
+            "Danny does not know Sonny reports directly to the network responsible for Feng's son's murder.",
+            "Two individuals who appeared as 'killers' in Noah's morning photographs were selected in part using information Danny unknowingly leaked.",
+            "Danny's mother believes the family debt was paid off a year ago; it was not."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "Old Archive Backups",
+      "theme": "Two hidden facts nearly surface and are narrowly contained: Noah's metadata discovery gets deflected by Zhao's cover story about old archives, and Danny's leak to Sonny almost gets caught by Kai, each near-miss forcing its keeper to double down on the lie protecting it.",
+      "intro_note": "Another twenty-two hundred dollars gone from a fund that doesn't exist on paper, another lie fed to Kai without blinking — and across town, Aya's source just proved himself right again, tightening a trust built on a name that isn't real.",
+      "outro_note": "The archive story held, the informant story held — for now. But not every deflection in that precinct is quite what it seems, and a debt keeps ticking toward a name no one in that bullpen has said out loud yet.",
+      "sections": [
+        {
+          "title": "Timestamp in the Grain",
+          "what": "Noah scans the morning photograph's file data and finds a recurring server-ping timestamp buried deep in its metadata, unnerved by the pattern.",
+          "who": [
+            "NOAH_KESTREL"
+          ],
+          "thread": "The Midnight Photograph",
+          "location": "NOAHS_APARTMENT",
+          "words": null
+        },
+        {
+          "title": "Burnt Coffee, Bright Eyes",
+          "what": "Kai notices Noah's jittery focus over coffee and needles him about sleep; Noah deflects, folding the metadata printout into his jacket unseen.",
+          "who": [
+            "NOAH_KESTREL",
+            "KAI_CHEN"
+          ],
+          "thread": "The Midnight Photograph",
+          "location": "PRECINCT",
+          "words": null
+        },
+        {
+          "title": "Old Archive Backups",
+          "what": "Noah shows Zhao the recurring timestamp; she calmly claims it's an artifact of old case-archive backups and redirects him before he can push further.",
+          "who": [
+            "NOAH_KESTREL",
+            "LILY_ZHAO"
+          ],
+          "thread": "The Midnight Photograph",
+          "location": "PRECINCT",
+          "words": {
+            "min": 150,
+            "max": 250,
+            "target": "150 to 250"
+          }
+        },
+        {
+          "title": "A Question for the Old Man",
+          "what": "Noah mentions the timestamp and Zhao's explanation to Feng, hoping for reassurance; Feng's gentle deflection leaves Noah more unsettled than before.",
+          "who": [
+            "NOAH_KESTREL",
+            "MR_FENG"
+          ],
+          "thread": "The Midnight Photograph",
+          "location": "FENGS_SHOP",
+          "words": null
+        },
+        {
+          "title": "The Call from Sonny",
+          "what": "Alone in the restaurant's back office, Danny takes a call from Sonny arranging a diner drop-off, his easy charm cracking once the line goes dead.",
+          "who": [
+            "DANNY_WU"
+          ],
+          "thread": "The Wu Family Debt",
+          "location": "WU_RESTAURANT",
+          "words": null
+        },
+        {
+          "title": "Dinner at Hae's",
+          "what": "Danny and Hae share a quiet dinner; when he lies about needing to step out later, Hae senses the evasion but chooses not to press it.",
+          "who": [
+            "HAE_SONG",
+            "DANNY_WU"
+          ],
+          "thread": "The Estrangement",
+          "location": "HAES_HOUSE",
+          "words": null
+        },
+        {
+          "title": "Left at the Counter",
+          "what": "Danny leaves a photocopied case folder at the diner counter for a stranger who nods once and pockets it; Kai walks in and clocks the exchange.",
+          "who": [
+            "DANNY_WU",
+            "KAI_CHEN"
+          ],
+          "thread": "The Wu Family Debt",
+          "location": "TIDEWATER_DINER",
+          "words": null
+        },
+        {
+          "title": "An Old Confidential Informant",
+          "what": "Kai presses Danny about the folder; Danny claims it was for an old confidential informant, and Kai, uneasy but out of options, lets it go.",
+          "who": [
+            "DANNY_WU",
+            "KAI_CHEN"
+          ],
+          "thread": "The Wu Family Debt",
+          "location": "TIDEWATER_DINER",
+          "words": {
+            "min": 150,
+            "max": 250,
+            "target": "150 to 250"
+          }
+        },
+        {
+          "title": "Something I Can't Place",
+          "what": "Back at his desk, Kai mentions a vague unease about Danny without naming what he saw; Noah, distracted by his own secret, barely registers it.",
+          "who": [
+            "NOAH_KESTREL",
+            "KAI_CHEN"
+          ],
+          "thread": "The Wu Family Debt",
+          "location": "PRECINCT",
+          "words": null
+        },
+        {
+          "title": "A Detail That Checks Out",
+          "what": "Aya's anonymous source feeds her a fresh detail about the precinct's basement records room, and she cross-checks it, unaware she's tightening a leash Zhao is holding.",
+          "who": [
+            "AYA_MORITA"
+          ],
+          "thread": "The Front Page",
+          "location": "HERALD_NEWSROOM",
+          "words": null
+        },
+        {
+          "title": "Eleven and Counting",
+          "what": "Aya meets Noah for another interview and gently probes his guarded mood; neither says what's really wrong, but something between them softens further.",
+          "who": [
+            "NOAH_KESTREL",
+            "AYA_MORITA"
+          ],
+          "thread": "The Front Page",
+          "location": "TIDEWATER_DINER",
+          "words": null
+        },
+        {
+          "title": "Folding the Printout Away",
+          "what": "Alone at night, Noah rereads the timestamp, unconvinced by Zhao's explanation, and hides the printout behind a photograph on the wall instead of letting it go.",
+          "who": [
+            "NOAH_KESTREL"
+          ],
+          "thread": "The Midnight Photograph",
+          "location": "NOAHS_APARTMENT",
+          "words": null
+        },
+        {
+          "title": "Made the Drop",
+          "what": "Danny calls Sonny to confirm the drop went unnoticed, relief curdling into guilt as he hangs up and forces a smile for the dinner rush outside.",
+          "who": [
+            "DANNY_WU"
+          ],
+          "thread": "The Wu Family Debt",
+          "location": "WU_RESTAURANT",
+          "words": null
+        },
+        {
+          "title": "A Text Not Sent",
+          "what": "Hae stares at an unfinished text to Noah about their unresolved divorce paperwork, deletes it, and turns instead to the drawings taped on her fridge.",
+          "who": [
+            "HAE_SONG"
+          ],
+          "thread": "The Estrangement",
+          "location": "HAES_HOUSE",
+          "words": null
+        },
+        {
+          "title": "One Week, Maybe Less",
+          "what": "Aya's editor warns her the story window is closing faster than she thinks, pushing her to chase her source harder before someone else breaks it first.",
+          "who": [
+            "AYA_MORITA"
+          ],
+          "thread": "The Front Page",
+          "location": "HERALD_NEWSROOM",
+          "words": null
+        },
+        {
+          "title": "The Basement Feed",
+          "what": "Alone after Noah leaves, Zhao checks the hidden Panopticon feed on her phone, exhaling only once she confirms the archive story held.",
+          "who": [
+            "LILY_ZHAO"
+          ],
+          "thread": "The Midnight Photograph",
+          "location": "PRECINCT",
+          "words": {
+            "min": 150,
+            "max": 250,
+            "target": "150 to 250"
+          }
+        }
+      ],
+      "case": [
+        {
+          "label": "The Midnight Photograph",
+          "character_knowledge": {
+            "NOAH_KESTREL": "Genuinely found the recurring server-ping timestamp himself and now suspects the photos aren't random, but he trusts Zhao's archive-backup explanation just enough to table it for now, even though it nags at him; he still has no idea Zhao runs Panopticon or that Feng built it.",
+            "LILY_ZHAO": "Knows exactly what the timestamp is, a signature of her own hidden Panopticon instance, and deliberately lies to Noah calling it an old-archive artifact to protect the operation, aware the deflection worked but that he isn't fully convinced.",
+            "MR_FENG": "Recognizes from Noah's description that the timestamp likely belongs to a system he designed himself, and deflects gently rather than lying outright, unwilling yet to admit what he built or why."
+          },
+          "solution": "The photographs are not prophecy but daily output of an experimental predictive-threat program called Panopticon, built years ago by Feng for the department's cold-case unit and never fully decommissioned after it was shut down for civil-liberties violations. It cross-references Noah's movements, phone metadata, and known grudges to calculate who is most likely to kill him within the next 24 hours, then renders a photorealistic composite as proof. Captain Zhao secretly kept a hidden instance running from a server in the precinct's old records basement, using Noah as an unwitting test subject to flush out a network of corrupt officers — the same network she believes killed Feng's son, a rookie cop, ten years ago — because Noah is the one detective in the precinct with no ties to that network. Each day's photo reflects a genuinely real threat, not a false alarm, but the identity keeps shifting because Noah's own survival actions each day reshuffle who has the strongest motive and opportunity for the next day, exactly as Panopticon recalculates. Zhao intends to let the algorithm and Noah's investigation eventually expose the entire network; she has not told him he is bait, and Feng — the confidant Noah trusts — has not told him he built the very system stalking him.",
+          "objective_facts": [
+            "Panopticon was built by Feng fifteen years ago as an internal cold-case predictive tool and officially shut down six years ago after a lawsuit over its surveillance methods.",
+            "Zhao has secretly kept a hidden instance of Panopticon running from a server in the precinct's old records-storage basement for the past four months.",
+            "Each morning's photograph is generated from real-time surveillance and metadata about Noah, recalculated every 24 hours based on his prior day's actions.",
+            "Feng's son, a rookie officer, was murdered ten years ago by members of the same corrupt network Zhao is now trying to expose.",
+            "Noah was selected as the system's test subject specifically because he has no personal or financial ties to anyone in the corrupt network.",
+            "Every person who has appeared as a 'killer' in the photographs has been, at the moment the photo was generated, a real and currently highest-probability threat to Noah — not a fabrication."
+          ]
+        },
+        {
+          "label": "The Wu Family Debt",
+          "character_knowledge": {
+            "DANNY_WU": "Knows precisely what he handed off and to whom, and manufactures the confidential-informant story on the spot to protect the truth from Kai, telling himself the lie is small compared to what's actually at stake for his family.",
+            "KAI_CHEN": "Saw enough to feel something is wrong but not enough to be sure, and reluctantly accepts Danny's informant story because he has no evidence and doesn't want to believe his partner's rival, and Noah's friend, is lying to him."
+          },
+          "solution": "Danny Wu's drive to outshine Noah for the detective-first-grade promotion isn't only career ambition — his family's restaurant carries an eighty-thousand-dollar debt inherited from his late father, owed to a lender connected to the corrupt-cop network under investigation. For two years, Danny has been quietly passing selected case details to a contact known only as 'Sonny' in exchange for incremental forgiveness of that debt, telling himself he's protecting his family without truly compromising any case. He does not know that Sonny reports directly to the same network responsible for Feng's son's murder, and he has no idea that at least two of the individuals who appeared as 'killers' in Noah's morning photographs were selected in part using information he unknowingly leaked.",
+          "objective_facts": [
+            "The Wu family restaurant owes eighty thousand dollars, inherited from Danny's late father, to a lender tied to the corrupt-cop network under investigation.",
+            "Danny has been passing precinct case details to a contact named Sonny in exchange for debt forgiveness for the past two years.",
+            "Danny does not know Sonny reports directly to the network responsible for Feng's son's murder.",
+            "Two individuals who appeared as 'killers' in Noah's morning photographs were selected in part using information Danny unknowingly leaked.",
+            "Danny's mother believes the family debt was paid off a year ago; it was not."
+          ]
+        },
+        {
+          "label": "The Estrangement",
+          "character_knowledge": {
+            "HAE_SONG": "Senses Danny's evasion about needing to leave later but chooses not to press it, partly out of her own guardedness and partly because she's grown used to living with things half-said; she still doesn't know Noah spent money investigating her father.",
+            "DANNY_WU": "Lies to Hae about his evening plans to protect her from a debt and a leak he can't explain without exposing himself, genuinely caring for her while also, without fully admitting it, valuing how close she keeps him to Noah's world."
+          },
+          "solution": "Hae left Noah eight months ago, and precinct gossip attributes it to his workaholism, but the real reason is that she discovered Noah had secretly diverted department discretionary funds to hire a private investigator digging into her late father's death — a death Noah suspected was connected to the same corrupt network Zhao is hunting. He hid this from her because the investigator's early findings suggested her father may have been complicit in the network's activity, not merely its victim, and Noah couldn't bring himself to tell her. Hae has since started seeing Danny Wu, drawn in part to the normalcy of his family's restaurant, but also — without fully admitting it to herself — to stay closer to the case information Noah still won't share with her. Danny genuinely cares for Hae, but is also using the relationship, half-consciously, to stay a step ahead of Noah professionally.",
+          "objective_facts": [
+            "Hae and Noah separated eight months ago; their divorce has not been finalized.",
+            "Noah spent fourteen thousand dollars of a discretionary case fund on a private investigator looking into Hae's father's death, without departmental authorization or Hae's knowledge.",
+            "The investigator's notes, which Noah has shown no one, suggest Hae's father may have laundered money for the network implicated in Feng's son's murder.",
+            "Hae has been in a relationship with Danny Wu for three months.",
+            "Danny has not told Noah or Captain Zhao that he is dating Hae."
+          ]
+        },
+        {
+          "label": "The Front Page",
+          "character_knowledge": {
+            "AYA_MORITA": "Trusts the detail her source fed her because it checks out against records, reinforcing her false belief that a disgruntled junior officer is her source and pushing her closer to the basement server without connecting it to Zhao.",
+            "NOAH_KESTREL": "Enjoys Aya's company more than he'd admit and lets his guard down slightly around her, but says nothing about the timestamp or Zhao's explanation, keeping the case's inner workings, and his own doubt, entirely to himself."
+          },
+          "solution": "Aya Morita, the Herald reporter chasing the 'Midnight Photographer' murders for six months, has been anonymously fed partial case details by Captain Zhao herself — not out of malice, but strategy: Zhao wants enough public pressure on the corrupt network that it can't quietly bury the case if her hidden Panopticon operation is ever exposed, and she is using Aya, without Aya's knowledge, as a pressure valve and eventual public shield. Aya believes her source is a disgruntled junior officer. She has become so invested in the story that she's developed real feelings for Noah, her main subject, and is torn between the professional instinct to publish everything she has — which would blow Zhao's operation open before it's ready — and her growing loyalty to him.",
+          "objective_facts": [
+            "Aya has published four stories on the 'Midnight Photographer' case over six months, based on unnamed departmental sources.",
+            "Captain Zhao is Aya's anonymous source, though Aya believes her source is a disgruntled junior officer.",
+            "Aya has an unpublished folder of evidence, including a partial photo of the Panopticon server room, that she has not yet connected to Zhao.",
+            "Aya and Noah have met in person eleven times since the story began, ostensibly for interviews.",
+            "Aya's editor has given her one week to file a story naming a suspect or the paper will hand the story to a rival reporter."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "A Night Off the Clock",
+      "theme": "A deliberately quiet, character-first episode with no thread turning point, letting Hae and Danny's domestic ease, Noah and Aya's growing rapport, and Noah and Kai's friendship breathe before the season's central relationship is upended.",
+      "intro_note": "After Noah's server-ping discovery got quietly deflected as old archive backups and Danny talked his way out of Kai's suspicion at the diner counter, both men return to routine — the case pauses, if only for a night, to let ordinary life catch up.",
+      "outro_note": "The night off ends where it always does — Noah alone before the blank wall, dawn's photograph only hours away, and somewhere across town, an old man in a curio shop who has never once told him the truth.",
+      "sections": [
+        {
+          "title": "Squad Room Ribbing",
+          "what": "Kai teases Noah about barricading himself indoors every night and half-jokingly orders him to take one real evening off, no wall of photographs, no case files.",
+          "who": [
+            "NOAH_KESTREL",
+            "KAI_CHEN"
+          ],
+          "thread": "The Midnight Photograph",
+          "location": "PRECINCT",
+          "words": null
+        },
+        {
+          "title": "Eggs and Silence",
+          "what": "Over runny eggs, Kai circles back to Zhao's archive-backup explanation, half-joking, half-probing, but Noah waves it off and steers them toward easier, off-duty conversation instead.",
+          "who": [
+            "NOAH_KESTREL",
+            "KAI_CHEN"
+          ],
+          "thread": "The Midnight Photograph",
+          "location": "TIDEWATER_DINER",
+          "words": null
+        },
+        {
+          "title": "Slow Morning",
+          "what": "Hae and Danny share a lazy Saturday breakfast at her kitchen table, Danny visibly unguarded for once, and Hae lets herself enjoy the ordinary domestic quiet without flinching.",
+          "who": [
+            "HAE_SONG",
+            "DANNY_WU"
+          ],
+          "thread": "The Estrangement",
+          "location": "HAES_HOUSE",
+          "words": null
+        },
+        {
+          "title": "The Ledger, Once",
+          "what": "Alone in the restaurant's back office, Danny quietly reconciles the books, sees exactly how much of the debt remains, and lets his mother keep believing it's already gone.",
+          "who": [
+            "DANNY_WU"
+          ],
+          "thread": "The Wu Family Debt",
+          "location": "WU_RESTAURANT",
+          "words": {
+            "min": 150,
+            "max": 220,
+            "target": "150 to 220"
+          }
+        },
+        {
+          "title": "An Idea at Her Desk",
+          "what": "At her newsroom desk past deadline, Aya drafts a text inviting Noah to dinner instead of another interview, hesitates over the wording, then sends it anyway.",
+          "who": [
+            "AYA_MORITA"
+          ],
+          "thread": "The Front Page",
+          "location": "HERALD_NEWSROOM",
+          "words": {
+            "min": 150,
+            "max": 220,
+            "target": "150 to 220"
+          }
+        },
+        {
+          "title": "Off the Record",
+          "what": "Over diner coffee, Noah and Aya let the conversation drift away from the case entirely, trading small honest details about themselves, both surprised by how easy it feels.",
+          "who": [
+            "NOAH_KESTREL",
+            "AYA_MORITA"
+          ],
+          "thread": "The Front Page",
+          "location": "TIDEWATER_DINER",
+          "words": null
+        },
+        {
+          "title": "A Text Mid-Shift",
+          "what": "Kai catches Noah grinning at a text mid-shift and needles him about it relentlessly; Noah deflects with a shrug but doesn't manage to wipe the smile away.",
+          "who": [
+            "NOAH_KESTREL",
+            "KAI_CHEN"
+          ],
+          "thread": "The Front Page",
+          "location": "PRECINCT",
+          "words": null
+        },
+        {
+          "title": "Wall of Mornings",
+          "what": "Alone with the red string and pinned photographs, Noah studies the wall one more time, then deliberately grabs his coat and leaves it uncovered for the night.",
+          "who": [
+            "NOAH_KESTREL"
+          ],
+          "thread": "The Midnight Photograph",
+          "location": "NOAHS_APARTMENT",
+          "words": {
+            "min": 150,
+            "max": 220,
+            "target": "150 to 220"
+          }
+        },
+        {
+          "title": "In Off Nights",
+          "what": "Hae and Danny settle in for takeout and an old board game, her laugh looser than it's been in months, neither one mentioning Noah or the precinct at all.",
+          "who": [
+            "HAE_SONG",
+            "DANNY_WU"
+          ],
+          "thread": "The Estrangement",
+          "location": "HAES_HOUSE",
+          "words": null
+        },
+        {
+          "title": "The Ledger Again",
+          "what": "Late at night, Danny opens the lender's statement again, calculates how far the debt still stretches, and imagines, briefly, what actually telling his mother would cost them.",
+          "who": [
+            "DANNY_WU"
+          ],
+          "thread": "The Wu Family Debt",
+          "location": "WU_RESTAURANT",
+          "words": {
+            "min": 150,
+            "max": 220,
+            "target": "150 to 220"
+          }
+        },
+        {
+          "title": "Two Beers In",
+          "what": "Two beers into the evening, Kai finally asks about Hae directly, and Noah, looser than usual, admits for the first time how much he still misses her.",
+          "who": [
+            "NOAH_KESTREL",
+            "KAI_CHEN"
+          ],
+          "thread": "The Estrangement",
+          "location": "TIDEWATER_DINER",
+          "words": null
+        },
+        {
+          "title": "Second Text",
+          "what": "Unable to concentrate on any other assignment, Aya texts Noah again, proposing one more dinner before her editor's deadline swallows her week whole.",
+          "who": [
+            "AYA_MORITA"
+          ],
+          "thread": "The Front Page",
+          "location": "HERALD_NEWSROOM",
+          "words": {
+            "min": 130,
+            "max": 200,
+            "target": "130 to 200"
+          }
+        },
+        {
+          "title": "Closer Than Sources",
+          "what": "At a corner booth, Noah and Aya talk longer than either intends, the line between reporter and subject blurring further, both quietly aware of what neither says aloud.",
+          "who": [
+            "NOAH_KESTREL",
+            "AYA_MORITA"
+          ],
+          "thread": "The Front Page",
+          "location": "TIDEWATER_DINER",
+          "words": null
+        },
+        {
+          "title": "A Name Not Said",
+          "what": "Watching Danny doze off on her couch mid-movie, Hae catches herself thinking of Noah instead, startled by the thought, and quietly pushes it back down.",
+          "who": [
+            "HAE_SONG"
+          ],
+          "thread": "The Estrangement",
+          "location": "HAES_HOUSE",
+          "words": {
+            "min": 150,
+            "max": 220,
+            "target": "150 to 220"
+          }
+        },
+        {
+          "title": "A Feeling About Danny",
+          "what": "On a quiet late shift, Kai voices a vague, unshakable unease about Danny's recent behavior; Noah brushes it off as promotion-season nerves and changes the subject.",
+          "who": [
+            "NOAH_KESTREL",
+            "KAI_CHEN"
+          ],
+          "thread": "The Wu Family Debt",
+          "location": "PRECINCT",
+          "words": null
+        },
+        {
+          "title": "Dawn Approaches",
+          "what": "Noah comes home well past midnight, the night's ease already fading, and stands a long moment before the blank space on his wall where tomorrow's photograph will go.",
+          "who": [
+            "NOAH_KESTREL"
+          ],
+          "thread": "The Midnight Photograph",
+          "location": "NOAHS_APARTMENT",
+          "words": {
+            "min": 150,
+            "max": 220,
+            "target": "150 to 220"
+          }
+        },
+        {
+          "title": "Not Ready to Print",
+          "what": "Alone with her case files after midnight, Aya rereads everything she still hasn't published, torn between the story she's chasing and what she's begun to feel for Noah.",
+          "who": [
+            "AYA_MORITA"
+          ],
+          "thread": "The Front Page",
+          "location": "HERALD_NEWSROOM",
+          "words": {
+            "min": 150,
+            "max": 220,
+            "target": "150 to 220"
+          }
+        }
+      ],
+      "case": [
+        {
+          "label": "The Midnight Photograph",
+          "character_knowledge": {
+            "NOAH_KESTREL": "Noah still doesn't buy Zhao's archive-backup explanation for the metadata anomaly he found, but he deliberately sets that suspicion aside tonight for a rare evening off, keeping his unease from Kai rather than reopening the argument; he has no idea Zhao runs a hidden Panopticon instance or that Feng designed it.",
+            "KAI_CHEN": "Kai openly voices mild skepticism about Zhao's archive-backup story but trusts the chain of command enough not to push further, and worries about Noah's exhaustion in purely human terms, unaware there's any hidden program or corrupt network behind the photographs at all."
+          },
+          "solution": "The photographs are not prophecy but daily output of an experimental predictive-threat program called Panopticon, built years ago by Feng for the department's cold-case unit and never fully decommissioned after it was shut down for civil-liberties violations. It cross-references Noah's movements, phone metadata, and known grudges to calculate who is most likely to kill him within the next 24 hours, then renders a photorealistic composite as proof. Captain Zhao secretly kept a hidden instance running from a server in the precinct's old records basement, using Noah as an unwitting test subject to flush out a network of corrupt officers — the same network she believes killed Feng's son, a rookie cop, ten years ago — because Noah is the one detective in the precinct with no ties to that network. Each day's photo reflects a genuinely real threat, not a false alarm, but the identity keeps shifting because Noah's own survival actions each day reshuffle who has the strongest motive and opportunity for the next day, exactly as Panopticon recalculates. Zhao intends to let the algorithm and Noah's investigation eventually expose the entire network; she has not told him he is bait, and Feng — the confidant Noah trusts — has not told him he built the very system stalking him.",
+          "objective_facts": [
+            "Panopticon was built by Feng fifteen years ago as an internal cold-case predictive tool and officially shut down six years ago after a lawsuit over its surveillance methods.",
+            "Zhao has secretly kept a hidden instance of Panopticon running from a server in the precinct's old records-storage basement for the past four months.",
+            "Each morning's photograph is generated from real-time surveillance and metadata about Noah, recalculated every 24 hours based on his prior day's actions.",
+            "Feng's son, a rookie officer, was murdered ten years ago by members of the same corrupt network Zhao is now trying to expose.",
+            "Noah was selected as the system's test subject specifically because he has no personal or financial ties to anyone in the corrupt network.",
+            "Every person who has appeared as a 'killer' in the photographs has been, at the moment the photo was generated, a real and currently highest-probability threat to Noah — not a fabrication."
+          ]
+        },
+        {
+          "label": "The Estrangement",
+          "character_knowledge": {
+            "HAE_SONG": "Hae genuinely enjoys the ease of her life with Danny tonight and believes she left Noah simply over his obsessive absence, but she conceals from Danny a stray, unbidden thought of Noah, telling herself it means nothing; she still knows nothing about the investigator or her father's file.",
+            "DANNY_WU": "Danny has no reason to doubt that Hae wants to be with him for its own sake tonight and feels genuinely present and happy, unaware that his own family's secret debt ties him to the same network complicating Noah's case or that Hae's stillness sometimes hides a thought of someone else.",
+            "NOAH_KESTREL": "Noah admits to Kai, more honestly than usual, how much he still misses Hae, but withholds entirely what the investigator's notes suggest about her father, still convinced that telling her the truth would cost him whatever fragile chance at repair remains."
+          },
+          "solution": "Hae left Noah eight months ago, and precinct gossip attributes it to his workaholism, but the real reason is that she discovered Noah had secretly diverted department discretionary funds to hire a private investigator digging into her late father's death — a death Noah suspected was connected to the same corrupt network Zhao is hunting. He hid this from her because the investigator's early findings suggested her father may have been complicit in the network's activity, not merely its victim, and Noah couldn't bring himself to tell her. Hae has since started seeing Danny Wu, drawn in part to the normalcy of his family's restaurant, but also — without fully admitting it to herself — to stay closer to the case information Noah still won't share with her. Danny genuinely cares for Hae, but is also using the relationship, half-consciously, to stay a step ahead of Noah professionally.",
+          "objective_facts": [
+            "Hae and Noah separated eight months ago; their divorce has not been finalized.",
+            "Noah spent fourteen thousand dollars of a discretionary case fund on a private investigator looking into Hae's father's death, without departmental authorization or Hae's knowledge.",
+            "The investigator's notes, which Noah has shown no one, suggest Hae's father may have laundered money for the network implicated in Feng's son's murder.",
+            "Hae has been in a relationship with Danny Wu for three months.",
+            "Danny has not told Noah or Captain Zhao that he is dating Hae."
+          ]
+        },
+        {
+          "label": "The Front Page",
+          "character_knowledge": {
+            "AYA_MORITA": "Aya knows she's letting personal feeling steer what should be a professional relationship and privately decides tonight isn't about the story at all, but she still believes her anonymous source is a disgruntled junior officer, unaware it's Zhao and unaware how close her looming deadline sits to the truth.",
+            "NOAH_KESTREL": "Noah enjoys Aya's company honestly and doesn't register the risk of growing close to a reporter actively chasing his own case, entirely unaware she's edging toward evidence of the hidden program built around him."
+          },
+          "solution": "Aya Morita, the Herald reporter chasing the 'Midnight Photographer' murders for six months, has been anonymously fed partial case details by Captain Zhao herself — not out of malice, but strategy: Zhao wants enough public pressure on the corrupt network that it can't quietly bury the case if her hidden Panopticon operation is ever exposed, and she is using Aya, without Aya's knowledge, as a pressure valve and eventual public shield. Aya believes her source is a disgruntled junior officer. She has become so invested in the story that she's developed real feelings for Noah, her main subject, and is torn between the professional instinct to publish everything she has — which would blow Zhao's operation open before it's ready — and her growing loyalty to him.",
+          "objective_facts": [
+            "Aya has published four stories on the 'Midnight Photographer' case over six months, based on unnamed departmental sources.",
+            "Captain Zhao is Aya's anonymous source, though Aya believes her source is a disgruntled junior officer.",
+            "Aya has an unpublished folder of evidence, including a partial photo of the Panopticon server room, that she has not yet connected to Zhao.",
+            "Aya and Noah have met in person eleven times since the story began, ostensibly for interviews.",
+            "Aya's editor has given her one week to file a story naming a suspect or the paper will hand the story to a rival reporter."
+          ]
+        },
+        {
+          "label": "The Wu Family Debt",
+          "character_knowledge": {
+            "DANNY_WU": "Danny knows exactly how much of the family's debt to the lender still remains and that his mother wrongly believes it was settled a year ago; he lets her keep believing it, telling himself a confession would only hurt her without changing the amount actually owed."
+          },
+          "solution": "Danny Wu's drive to outshine Noah for the detective-first-grade promotion isn't only career ambition — his family's restaurant carries an eighty-thousand-dollar debt inherited from his late father, owed to a lender connected to the corrupt-cop network under investigation. For two years, Danny has been quietly passing selected case details to a contact known only as 'Sonny' in exchange for incremental forgiveness of that debt, telling himself he's protecting his family without truly compromising any case. He does not know that Sonny reports directly to the same network responsible for Feng's son's murder, and he has no idea that at least two of the individuals who appeared as 'killers' in Noah's morning photographs were selected in part using information he unknowingly leaked.",
+          "objective_facts": [
+            "The Wu family restaurant owes eighty thousand dollars, inherited from Danny's late father, to a lender tied to the corrupt-cop network under investigation.",
+            "Danny has been passing precinct case details to a contact named Sonny in exchange for debt forgiveness for the past two years.",
+            "Danny does not know Sonny reports directly to the network responsible for Feng's son's murder.",
+            "Two individuals who appeared as 'killers' in Noah's morning photographs were selected in part using information Danny unknowingly leaked.",
+            "Danny's mother believes the family debt was paid off a year ago; it was not."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "The Man Behind the Lens",
+      "theme": "The season's midpoint swing: Feng's shaking hands over the print grain of Noah's newest photograph reveal that the one man Noah trusts unconditionally didn't merely recognize the system stalking him, he built it, a betrayal that recolors every scene that came before it and every one still to come.",
+      "intro_note": "After a rare night off the clock — Hae and Danny easy over dinner, Noah letting himself enjoy an evening with Aya, the old comfort with Kai still holding — Noah wakes to another photograph and does what he's done a dozen times before: takes it to the one man he trusts to make sense of it.",
+      "outro_note": "Noah has a name now, one he never wanted, pinned to his own wall for the first time — and no idea yet how many other lies are waiting to come loose around him.",
+      "sections": [
+        {
+          "title": "The Grain",
+          "what": "Dawn photo arrives; Noah notices the print's odd film-grain texture, a technical detail he can't place but can't ignore either.",
+          "who": [
+            "NOAH_KESTREL"
+          ],
+          "thread": "The Midnight Photograph",
+          "location": "NOAHS_APARTMENT",
+          "words": null
+        },
+        {
+          "title": "Squad Room Ribbing",
+          "what": "Kai teases Noah about Aya's frequent calls; Noah admits he's taking the new photo to Feng, deflecting from how unsettled he actually is.",
+          "who": [
+            "NOAH_KESTREL",
+            "KAI_CHEN"
+          ],
+          "thread": "The Front Page",
+          "location": "PRECINCT",
+          "words": null
+        },
+        {
+          "title": "A Text Pocketed",
+          "what": "Danny and Hae share a quiet breakfast; a text from Sonny lights up his phone and he pockets it before she can see the name.",
+          "who": [
+            "DANNY_WU",
+            "HAE_SONG"
+          ],
+          "thread": "The Wu Family Debt",
+          "location": "HAES_HOUSE",
+          "words": null
+        },
+        {
+          "title": "The Ultimatum Clock",
+          "what": "Aya's editor presses her again about the ultimatum clock ticking down; Aya insists her source is reliable, unaware 'the junior officer' is really Captain Zhao.",
+          "who": [
+            "AYA_MORITA"
+          ],
+          "thread": "The Front Page",
+          "location": "HERALD_NEWSROOM",
+          "words": null
+        },
+        {
+          "title": "Back Office Call",
+          "what": "In the back office, Danny takes Sonny's call and hands over another case detail, hating himself but telling himself it changes nothing.",
+          "who": [
+            "DANNY_WU"
+          ],
+          "thread": "The Wu Family Debt",
+          "location": "WU_RESTAURANT",
+          "words": {
+            "min": 150,
+            "max": 300,
+            "target": "150 to 300"
+          }
+        },
+        {
+          "title": "Coffee and a Coat",
+          "what": "Noah meets Kai for coffee and mentions offhand that he needs to swing by Hae's for a coat; Kai needles him gently about reconciliation.",
+          "who": [
+            "NOAH_KESTREL",
+            "KAI_CHEN"
+          ],
+          "thread": "The Estrangement",
+          "location": "TIDEWATER_DINER",
+          "words": null
+        },
+        {
+          "title": "At the Door",
+          "what": "Hae hands Noah his coat at the door; a charged, careful exchange about nothing and everything, neither saying what they actually mean.",
+          "who": [
+            "NOAH_KESTREL",
+            "HAE_SONG"
+          ],
+          "thread": "The Estrangement",
+          "location": "HAES_HOUSE",
+          "words": {
+            "min": 150,
+            "max": 300,
+            "target": "150 to 300"
+          }
+        },
+        {
+          "title": "Second Opinion",
+          "what": "Noah lays the morning's photograph on Feng's counter, asking for a second opinion on the print's grain the way he has a dozen times before.",
+          "who": [
+            "NOAH_KESTREL",
+            "MR_FENG"
+          ],
+          "thread": "The Midnight Photograph",
+          "location": "FENGS_SHOP",
+          "words": null
+        },
+        {
+          "title": "Shaking Hands",
+          "what": "Feng's hands shake as he studies the grain under his loupe, recognizing the exact signature of a camera rig only he ever built.",
+          "who": [
+            "NOAH_KESTREL",
+            "MR_FENG"
+          ],
+          "thread": "The Midnight Photograph",
+          "location": "FENGS_SHOP",
+          "words": null
+        },
+        {
+          "title": "The Old Colleague",
+          "what": "Noah presses Feng on what rattled him; Feng deflects with a half-formed story about an old colleague, but the crack in his calm doesn't close.",
+          "who": [
+            "NOAH_KESTREL",
+            "MR_FENG"
+          ],
+          "thread": "The Midnight Photograph",
+          "location": "FENGS_SHOP",
+          "words": null
+        },
+        {
+          "title": "Takeout Order",
+          "what": "Kai stops by for takeout and catches Danny mid-call, tense and evasive; Danny again talks his way past Kai's suspicion.",
+          "who": [
+            "DANNY_WU",
+            "KAI_CHEN"
+          ],
+          "thread": "The Wu Family Debt",
+          "location": "WU_RESTAURANT",
+          "words": null
+        },
+        {
+          "title": "Just Off",
+          "what": "Noah returns rattled and tells Kai only that Feng seemed 'off,' withholding the real weight of what he now suspects.",
+          "who": [
+            "NOAH_KESTREL",
+            "KAI_CHEN"
+          ],
+          "thread": "The Midnight Photograph",
+          "location": "PRECINCT",
+          "words": {
+            "min": 130,
+            "max": 280,
+            "target": "130 to 280"
+          }
+        },
+        {
+          "title": "Old Equipment",
+          "what": "Aya's anonymous source sends a cryptic new tip hinting at old equipment still running somewhere in the precinct, and she can't tell yet if it's a real lead.",
+          "who": [
+            "AYA_MORITA"
+          ],
+          "thread": "The Front Page",
+          "location": "HERALD_NEWSROOM",
+          "words": null
+        },
+        {
+          "title": "Not Quite an Interview",
+          "what": "Aya meets Noah under the pretense of an interview; their rapport deepens, but his distraction over Feng slips through despite himself.",
+          "who": [
+            "NOAH_KESTREL",
+            "AYA_MORITA"
+          ],
+          "thread": "The Front Page",
+          "location": "TIDEWATER_DINER",
+          "words": null
+        },
+        {
+          "title": "Losing His Nerve",
+          "what": "Danny almost tells Hae about the family debt and Sonny, then loses his nerve; she senses the retreat but doesn't push.",
+          "who": [
+            "DANNY_WU",
+            "HAE_SONG"
+          ],
+          "thread": "The Wu Family Debt",
+          "location": "HAES_HOUSE",
+          "words": null
+        },
+        {
+          "title": "After Closing",
+          "what": "Noah returns alone after closing, drawn back by instinct, and finds a spare camera component in the workshop that matches nothing sold commercially.",
+          "who": [
+            "NOAH_KESTREL"
+          ],
+          "thread": "The Midnight Photograph",
+          "location": "FENGS_SHOP",
+          "words": null
+        },
+        {
+          "title": "A New Name on the Wall",
+          "what": "Noah adds Feng's shop to his wall of red string for the first time, staring at the one name he never thought he'd pin there.",
+          "who": [
+            "NOAH_KESTREL"
+          ],
+          "thread": "The Midnight Photograph",
+          "location": "NOAHS_APARTMENT",
+          "words": null
+        }
+      ],
+      "case": [
+        {
+          "label": "The Midnight Photograph",
+          "character_knowledge": {
+            "NOAH_KESTREL": "Noah trusts Feng completely as his one outside confidant on the photographs and has had no reason to doubt that trust; today, watching Feng's hands shake over the print grain, he realizes with cold certainty that Feng didn't just recognize the camera rig's signature, he built it — though he has no idea why, or that Feng lost his own son to the network the system was meant to expose.",
+            "MR_FENG": "Feng recognizes the print grain instantly because he designed and built the camera rig himself fifteen years ago for Panopticon, and he knows exactly what it means that a live composite is still being generated; he deflects Noah's questions with a half-invented story about an old colleague's design, desperate to protect Noah while burying his own guilt over his son's death.",
+            "KAI_CHEN": "Kai has no knowledge of Feng's connection to the photographs and reads Noah's rattled mood after the shop visit only as more of the same obsessive fixation Noah's had for weeks; he senses something is off but has learned not to push when Noah goes quiet like this."
+          },
+          "solution": "The photographs are not prophecy but daily output of an experimental predictive-threat program called Panopticon, built years ago by Feng for the department's cold-case unit and never fully decommissioned after it was shut down for civil-liberties violations. It cross-references Noah's movements, phone metadata, and known grudges to calculate who is most likely to kill him within the next 24 hours, then renders a photorealistic composite as proof. Captain Zhao secretly kept a hidden instance running from a server in the precinct's old records basement, using Noah as an unwitting test subject to flush out a network of corrupt officers — the same network she believes killed Feng's son, a rookie cop, ten years ago — because Noah is the one detective in the precinct with no ties to that network. Each day's photo reflects a genuinely real threat, not a false alarm, but the identity keeps shifting because Noah's own survival actions each day reshuffle who has the strongest motive and opportunity for the next day, exactly as Panopticon recalculates. Zhao intends to let the algorithm and Noah's investigation eventually expose the entire network; she has not told him he is bait, and Feng — the confidant Noah trusts — has not told him he built the very system stalking him.",
+          "objective_facts": [
+            "Panopticon was built by Feng fifteen years ago as an internal cold-case predictive tool and officially shut down six years ago after a lawsuit over its surveillance methods.",
+            "Zhao has secretly kept a hidden instance of Panopticon running from a server in the precinct's old records-storage basement for the past four months.",
+            "Each morning's photograph is generated from real-time surveillance and metadata about Noah, recalculated every 24 hours based on his prior day's actions.",
+            "Feng's son, a rookie officer, was murdered ten years ago by members of the same corrupt network Zhao is now trying to expose.",
+            "Noah was selected as the system's test subject specifically because he has no personal or financial ties to anyone in the corrupt network.",
+            "Every person who has appeared as a 'killer' in the photographs has been, at the moment the photo was generated, a real and currently highest-probability threat to Noah — not a fabrication."
+          ]
+        },
+        {
+          "label": "The Estrangement",
+          "character_knowledge": {
+            "NOAH_KESTREL": "Noah still hides the real reason he hired the investigator into Hae's father, letting her believe — as everyone does — that their split was only about his hours; picking up his coat, he wants to say something honest and says nothing, telling himself there'll be a better moment.",
+            "HAE_SONG": "Hae genuinely doesn't know about the private investigator or the fourteen thousand dollars, and reads Noah's evasiveness today as the same old withholding that ended their marriage; she has no idea the coat she's handing back holds anything more than fabric."
+          },
+          "solution": "Hae left Noah eight months ago, and precinct gossip attributes it to his workaholism, but the real reason is that she discovered Noah had secretly diverted department discretionary funds to hire a private investigator digging into her late father's death — a death Noah suspected was connected to the same corrupt network Zhao is hunting. He hid this from her because the investigator's early findings suggested her father may have been complicit in the network's activity, not merely its victim, and Noah couldn't bring himself to tell her. Hae has since started seeing Danny Wu, drawn in part to the normalcy of his family's restaurant, but also — without fully admitting it to herself — to stay closer to the case information Noah still won't share with her. Danny genuinely cares for Hae, but is also using the relationship, half-consciously, to stay a step ahead of Noah professionally.",
+          "objective_facts": [
+            "Hae and Noah separated eight months ago; their divorce has not been finalized.",
+            "Noah spent fourteen thousand dollars of a discretionary case fund on a private investigator looking into Hae's father's death, without departmental authorization or Hae's knowledge.",
+            "The investigator's notes, which Noah has shown no one, suggest Hae's father may have laundered money for the network implicated in Feng's son's murder.",
+            "Hae has been in a relationship with Danny Wu for three months.",
+            "Danny has not told Noah or Captain Zhao that he is dating Hae."
+          ]
+        },
+        {
+          "label": "The Wu Family Debt",
+          "character_knowledge": {
+            "DANNY_WU": "Danny knows exactly what he's trading away every time he takes Sonny's call, and he's begun rationalizing it as protecting his family rather than betraying his badge; he almost tells Hae the truth today but stops himself, still believing he can end the leaks before anyone gets hurt.",
+            "HAE_SONG": "Hae has no idea about the family debt or Sonny, only that Danny keeps retreating behind a wall she recognizes too well from her marriage; she chooses not to push, telling herself she's giving him space rather than repeating old mistakes.",
+            "KAI_CHEN": "Kai still doesn't know what Danny's hiding, but his instinct from the diner folder incident hasn't faded — catching Danny mid-call today only sharpens a suspicion he can't yet name or prove."
+          },
+          "solution": "Danny Wu's drive to outshine Noah for the detective-first-grade promotion isn't only career ambition — his family's restaurant carries an eighty-thousand-dollar debt inherited from his late father, owed to a lender connected to the corrupt-cop network under investigation. For two years, Danny has been quietly passing selected case details to a contact known only as 'Sonny' in exchange for incremental forgiveness of that debt, telling himself he's protecting his family without truly compromising any case. He does not know that Sonny reports directly to the same network responsible for Feng's son's murder, and he has no idea that at least two of the individuals who appeared as 'killers' in Noah's morning photographs were selected in part using information he unknowingly leaked.",
+          "objective_facts": [
+            "The Wu family restaurant owes eighty thousand dollars, inherited from Danny's late father, to a lender tied to the corrupt-cop network under investigation.",
+            "Danny has been passing precinct case details to a contact named Sonny in exchange for debt forgiveness for the past two years.",
+            "Danny does not know Sonny reports directly to the network responsible for Feng's son's murder.",
+            "Two individuals who appeared as 'killers' in Noah's morning photographs were selected in part using information Danny unknowingly leaked.",
+            "Danny's mother believes the family debt was paid off a year ago; it was not."
+          ]
+        },
+        {
+          "label": "The Front Page",
+          "character_knowledge": {
+            "AYA_MORITA": "Aya believes her anonymous source is a disgruntled junior officer feeding her carefully verified details, unaware it's Captain Zhao steering her toward the story Zhao needs told; the new, vaguer tip about old equipment somewhere in the precinct unsettles her without yet giving her anything she can print.",
+            "NOAH_KESTREL": "Noah enjoys Aya's company more than he'd admit and has started treating their meetings as something closer to friendship than interviews; he has no idea she's chasing a story that runs straight through his own captain, and today he lets his guard slip just enough for her to notice something's wrong."
+          },
+          "solution": "Aya Morita, the Herald reporter chasing the 'Midnight Photographer' murders for six months, has been anonymously fed partial case details by Captain Zhao herself — not out of malice, but strategy: Zhao wants enough public pressure on the corrupt network that it can't quietly bury the case if her hidden Panopticon operation is ever exposed, and she is using Aya, without Aya's knowledge, as a pressure valve and eventual public shield. Aya believes her source is a disgruntled junior officer. She has become so invested in the story that she's developed real feelings for Noah, her main subject, and is torn between the professional instinct to publish everything she has — which would blow Zhao's operation open before it's ready — and her growing loyalty to him.",
+          "objective_facts": [
+            "Aya has published four stories on the 'Midnight Photographer' case over six months, based on unnamed departmental sources.",
+            "Captain Zhao is Aya's anonymous source, though Aya believes her source is a disgruntled junior officer.",
+            "Aya has an unpublished folder of evidence, including a partial photo of the Panopticon server room, that she has not yet connected to Zhao.",
+            "Aya and Noah have met in person eleven times since the story began, ostensibly for interviews.",
+            "Aya's editor has given her one week to file a story naming a suspect or the paper will hand the story to a rival reporter."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "Torn Paper",
+      "theme": "In the shockwave of the midpoint, complications compound on two fronts: Hae's discovery of the investigator's receipt forces Noah into a second, bigger lie to protect the first, while Aya's break-in yields a photograph of the very server room Noah now knows exists, without her realizing how close she's standing to Zhao.",
+      "intro_note": "Feng's hands were still shaking over the print grain when Noah left the shop — the old man who taught him to read photographs had just, without saying so, admitted he built the rig that renders them. Noah has told no one. He carries that alone into a day that's about to hand him two more secrets he can't carry cleanly.",
+      "outro_note": "Aya's deadline is down to a week and shrinking, and now there's a photograph in her files of a server rack humming behind file boxes she still can't explain. Behind the Wu Family Restaurant, Sonny's patience is thinner than Danny wants to admit. And in a quiet house on the edge of town, Noah's second lie is already curdling into something he won't be able to take back.",
+      "sections": [
+        {
+          "title": "Newsroom Deadline",
+          "what": "Aya rereads her editor's message renewing his one-week deadline, the newsroom's fluorescent hum pressing her toward any lead, however thin.",
+          "who": [
+            "AYA_MORITA"
+          ],
+          "thread": "The Front Page",
+          "location": "HERALD_NEWSROOM",
+          "words": null
+        },
+        {
+          "title": "The Abandoned Request",
+          "what": "Digging through public-records filings, Aya finds a years-old request for cold-case files that the department never actually closed or denied.",
+          "who": [
+            "AYA_MORITA"
+          ],
+          "thread": "The Front Page",
+          "location": "HERALD_NEWSROOM",
+          "words": null
+        },
+        {
+          "title": "Down in the Basement",
+          "what": "Citing the dormant request, Aya talks her way past a bored records clerk into the precinct's old storage basement with her phone raised.",
+          "who": [
+            "AYA_MORITA"
+          ],
+          "thread": "The Front Page",
+          "location": "PRECINCT",
+          "words": null
+        },
+        {
+          "title": "A Humming Rack",
+          "what": "Behind stacked file boxes, Aya's camera catches a humming server rack she can't identify, snapping the photo before anyone notices her there.",
+          "who": [
+            "AYA_MORITA"
+          ],
+          "thread": "The Front Page",
+          "location": "PRECINCT",
+          "words": null
+        },
+        {
+          "title": "Coffee Gone Cold",
+          "what": "Noah stares at his morning photograph over coffee gone cold, unable to stop replaying Feng's shaking hands identifying the rig that hunts him.",
+          "who": [
+            "NOAH_KESTREL"
+          ],
+          "thread": "The Midnight Photograph",
+          "location": "TIDEWATER_DINER",
+          "words": null
+        },
+        {
+          "title": "What Aren't You Saying",
+          "what": "Kai presses his distracted partner about his mood, but Noah deflects, unwilling to say aloud that the man he trusts built the machine stalking him.",
+          "who": [
+            "NOAH_KESTREL",
+            "KAI_CHEN"
+          ],
+          "thread": "The Midnight Photograph",
+          "location": "PRECINCT",
+          "words": null
+        },
+        {
+          "title": "Procedural",
+          "what": "Zhao brushes past Noah's pointed questions about the photograph's origins, ordering him to file his report and treat today like any other.",
+          "who": [
+            "NOAH_KESTREL",
+            "LILY_ZHAO"
+          ],
+          "thread": "The Midnight Photograph",
+          "location": "PRECINCT",
+          "words": null
+        },
+        {
+          "title": "The Wu Family Table",
+          "what": "Danny smiles through the dinner rush, rehearsing excuses for Sonny's next call while plates clatter and lanterns glow around him unaware.",
+          "who": [
+            "DANNY_WU"
+          ],
+          "thread": "The Wu Family Debt",
+          "location": "WU_RESTAURANT",
+          "words": null
+        },
+        {
+          "title": "Paid Off",
+          "what": "A cheerful text from his mother thanking him for finally clearing the family debt lands like a gut-punch Danny has no way to correct.",
+          "who": [
+            "DANNY_WU"
+          ],
+          "thread": "The Wu Family Debt",
+          "location": "WU_RESTAURANT",
+          "words": {
+            "min": 160,
+            "max": 280,
+            "target": "160 to 280"
+          }
+        },
+        {
+          "title": "A Borrowed Coat",
+          "what": "Tidying Noah's forgotten coat, Hae feels stiff paper caught in the lining and pulls out a torn, half-legible receipt from its pocket.",
+          "who": [
+            "HAE_SONG"
+          ],
+          "thread": "The Estrangement",
+          "location": "HAES_HOUSE",
+          "words": null
+        },
+        {
+          "title": "Torn Paper",
+          "what": "Hae unfolds the receipt, reads a private investigator's letterhead, and goes cold realizing Noah has been hiding something about her father.",
+          "who": [
+            "HAE_SONG"
+          ],
+          "thread": "The Estrangement",
+          "location": "HAES_HOUSE",
+          "words": null
+        },
+        {
+          "title": "The Knock",
+          "what": "Hae calls Noah over on a thin pretext, the torn receipt laid flat on the kitchen table waiting for him to notice it.",
+          "who": [
+            "HAE_SONG"
+          ],
+          "thread": "The Estrangement",
+          "location": "HAES_HOUSE",
+          "words": {
+            "min": 150,
+            "max": 260,
+            "target": "150 to 260"
+          }
+        },
+        {
+          "title": "Second Lie",
+          "what": "Confronted with the receipt, Noah admits hiring an investigator but claims it was only about a break-in, burying the deeper truth in a second lie.",
+          "who": [
+            "NOAH_KESTREL",
+            "HAE_SONG"
+          ],
+          "thread": "The Estrangement",
+          "location": "HAES_HOUSE",
+          "words": null
+        },
+        {
+          "title": "A Call in the Alley",
+          "what": "Stepping into the alley for a hushed call, Danny's easy charm drains as he promises Sonny he can get more, and soon.",
+          "who": [
+            "DANNY_WU"
+          ],
+          "thread": "The Wu Family Debt",
+          "location": "WU_RESTAURANT",
+          "words": {
+            "min": 150,
+            "max": 280,
+            "target": "150 to 280"
+          }
+        },
+        {
+          "title": "What She Won't Say",
+          "what": "Alone at her desk, Aya studies the humming-rack photo, torn between filing it toward her deadline and holding it back a little longer.",
+          "who": [
+            "AYA_MORITA"
+          ],
+          "thread": "The Front Page",
+          "location": "HERALD_NEWSROOM",
+          "words": null
+        },
+        {
+          "title": "Two Detectives, One Table",
+          "what": "Meeting Noah for what looks like routine follow-up, Aya's growing feelings for him keep her from mentioning what she found in the basement.",
+          "who": [
+            "AYA_MORITA",
+            "NOAH_KESTREL"
+          ],
+          "thread": "The Front Page",
+          "location": "TIDEWATER_DINER",
+          "words": null
+        },
+        {
+          "title": "The Weight of Knowing",
+          "what": "Alone with his wall of photographs, Noah studies Feng's rig signature again, torn between confronting the old man and staying quiet a while longer.",
+          "who": [
+            "NOAH_KESTREL"
+          ],
+          "thread": "The Midnight Photograph",
+          "location": "NOAHS_APARTMENT",
+          "words": null
+        }
+      ],
+      "case": [
+        {
+          "label": "The Midnight Photograph",
+          "character_knowledge": {
+            "NOAH_KESTREL": "Since Feng's shaking hands over the print grain, Noah is now privately convinced his confidant designed the very rig producing his death photographs, though he has told no one and hasn't yet decided whether to confront him. He grows more suspicious that Zhao's 'old archive backup' explanation for the server-ping metadata was a deliberate misdirection, but keeps this suspicion to himself out of uncertainty rather than trust.",
+            "LILY_ZHAO": "Zhao knows the full truth of Panopticon and her use of Noah as an unwitting test subject, and has no idea he now suspects Feng specifically of building it. She continues to redirect his procedural questions with brisk authority, treating his distraction as ordinary case stress rather than a sign he's circling closer to the truth.",
+            "KAI_CHEN": "Kai only sees that his partner is more withdrawn than usual and assumes it's the accumulated weight of the case and the divorce, pressing gently because he trusts Noah completely and has no idea Feng is involved at all."
+          },
+          "solution": "The photographs are not prophecy but daily output of an experimental predictive-threat program called Panopticon, built years ago by Feng for the department's cold-case unit and never fully decommissioned after it was shut down for civil-liberties violations. It cross-references Noah's movements, phone metadata, and known grudges to calculate who is most likely to kill him within the next 24 hours, then renders a photorealistic composite as proof. Captain Zhao secretly kept a hidden instance running from a server in the precinct's old records basement, using Noah as an unwitting test subject to flush out a network of corrupt officers — the same network she believes killed Feng's son, a rookie cop, ten years ago — because Noah is the one detective in the precinct with no ties to that network. Each day's photo reflects a genuinely real threat, not a false alarm, but the identity keeps shifting because Noah's own survival actions each day reshuffle who has the strongest motive and opportunity for the next day, exactly as Panopticon recalculates. Zhao intends to let the algorithm and Noah's investigation eventually expose the entire network; she has not told him he is bait, and Feng — the confidant Noah trusts — has not told him he built the very system stalking him.",
+          "objective_facts": [
+            "Panopticon was built by Feng fifteen years ago as an internal cold-case predictive tool and officially shut down six years ago after a lawsuit over its surveillance methods.",
+            "Zhao has secretly kept a hidden instance of Panopticon running from a server in the precinct's old records-storage basement for the past four months.",
+            "Each morning's photograph is generated from real-time surveillance and metadata about Noah, recalculated every 24 hours based on his prior day's actions.",
+            "Feng's son, a rookie officer, was murdered ten years ago by members of the same corrupt network Zhao is now trying to expose.",
+            "Noah was selected as the system's test subject specifically because he has no personal or financial ties to anyone in the corrupt network.",
+            "Every person who has appeared as a 'killer' in the photographs has been, at the moment the photo was generated, a real and currently highest-probability threat to Noah — not a fabrication."
+          ]
+        },
+        {
+          "label": "The Estrangement",
+          "character_knowledge": {
+            "HAE_SONG": "Hae has just discovered concrete proof — a torn investigator's receipt — that Noah hired someone in secret, and confronts him believing whatever he admits to will finally be the whole truth. She accepts his claim that it was only about a break-in at face value, still unaware the investigator was actually looking into her late father's death and possible ties to a corrupt network.",
+            "NOAH_KESTREL": "Cornered by the receipt, Noah admits to hiring a private investigator but deliberately lies about the reason, claiming it concerned a break-in rather than her father's death, because he still can't bring himself to tell Hae what the investigator's notes actually suggested. He knows this new lie only buries the first one deeper and doesn't yet know how he'll sustain it."
+          },
+          "solution": "Hae left Noah eight months ago, and precinct gossip attributes it to his workaholism, but the real reason is that she discovered Noah had secretly diverted department discretionary funds to hire a private investigator digging into her late father's death — a death Noah suspected was connected to the same corrupt network Zhao is hunting. He hid this from her because the investigator's early findings suggested her father may have been complicit in the network's activity, not merely its victim, and Noah couldn't bring himself to tell her. Hae has since started seeing Danny Wu, drawn in part to the normalcy of his family's restaurant, but also — without fully admitting it to herself — to stay closer to the case information Noah still won't share with her. Danny genuinely cares for Hae, but is also using the relationship, half-consciously, to stay a step ahead of Noah professionally.",
+          "objective_facts": [
+            "Hae and Noah separated eight months ago; their divorce has not been finalized.",
+            "Noah spent fourteen thousand dollars of a discretionary case fund on a private investigator looking into Hae's father's death, without departmental authorization or Hae's knowledge.",
+            "The investigator's notes, which Noah has shown no one, suggest Hae's father may have laundered money for the network implicated in Feng's son's murder.",
+            "Hae has been in a relationship with Danny Wu for three months.",
+            "Danny has not told Noah or Captain Zhao that he is dating Hae."
+          ]
+        },
+        {
+          "label": "The Wu Family Debt",
+          "character_knowledge": {
+            "DANNY_WU": "Danny knows the family debt is nowhere near resolved and that Sonny expects more from him soon, information he can't share with anyone at the restaurant. He lets his mother believe the debt was paid off a year ago rather than correct her, and dreads how much further he'll have to bend to keep that comforting lie standing."
+          },
+          "solution": "Danny Wu's drive to outshine Noah for the detective-first-grade promotion isn't only career ambition — his family's restaurant carries an eighty-thousand-dollar debt inherited from his late father, owed to a lender connected to the corrupt-cop network under investigation. For two years, Danny has been quietly passing selected case details to a contact known only as 'Sonny' in exchange for incremental forgiveness of that debt, telling himself he's protecting his family without truly compromising any case. He does not know that Sonny reports directly to the same network responsible for Feng's son's murder, and he has no idea that at least two of the individuals who appeared as 'killers' in Noah's morning photographs were selected in part using information he unknowingly leaked.",
+          "objective_facts": [
+            "The Wu family restaurant owes eighty thousand dollars, inherited from Danny's late father, to a lender tied to the corrupt-cop network under investigation.",
+            "Danny has been passing precinct case details to a contact named Sonny in exchange for debt forgiveness for the past two years.",
+            "Danny does not know Sonny reports directly to the network responsible for Feng's son's murder.",
+            "Two individuals who appeared as 'killers' in Noah's morning photographs were selected in part using information Danny unknowingly leaked.",
+            "Danny's mother believes the family debt was paid off a year ago; it was not."
+          ]
+        },
+        {
+          "label": "The Front Page",
+          "character_knowledge": {
+            "AYA_MORITA": "Aya has just photographed a humming server rack in the precinct's old records basement without any idea it's connected to her anonymous source, whom she still believes is a disgruntled junior officer rather than Captain Zhao. Her editor's one-week ultimatum pushes her to consider using the photo, but her growing feelings for Noah make her hesitate to bring any of it to him directly.",
+            "NOAH_KESTREL": "Noah has no idea Aya has found physical evidence of a server room in his own precinct's basement, and no idea his captain is her anonymous source. He enjoys her company and their easy rapport without registering how close she's circling the truth he himself only half-suspects."
+          },
+          "solution": "Aya Morita, the Herald reporter chasing the 'Midnight Photographer' murders for six months, has been anonymously fed partial case details by Captain Zhao herself — not out of malice, but strategy: Zhao wants enough public pressure on the corrupt network that it can't quietly bury the case if her hidden Panopticon operation is ever exposed, and she is using Aya, without Aya's knowledge, as a pressure valve and eventual public shield. Aya believes her source is a disgruntled junior officer. She has become so invested in the story that she's developed real feelings for Noah, her main subject, and is torn between the professional instinct to publish everything she has — which would blow Zhao's operation open before it's ready — and her growing loyalty to him.",
+          "objective_facts": [
+            "Aya has published four stories on the 'Midnight Photographer' case over six months, based on unnamed departmental sources.",
+            "Captain Zhao is Aya's anonymous source, though Aya believes her source is a disgruntled junior officer.",
+            "Aya has an unpublished folder of evidence, including a partial photo of the Panopticon server room, that she has not yet connected to Zhao.",
+            "Aya and Noah have met in person eleven times since the story began, ostensibly for interviews.",
+            "Aya's editor has given her one week to file a story naming a suspect or the paper will hand the story to a rival reporter."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "The Morning Edition",
+      "theme": "Pressure crosses into crisis on two threads at once: Aya's front-page story exposes the department's hidden surveillance program to the public before Zhao is ready, while Sonny's ultimatum forces Danny toward the season's final, hardest choice about his family's debt.",
+      "intro_note": "Hae's discovery of the investigator's receipt still hangs unresolved, buried under the second lie Noah told to cover the first. And the photograph Aya lifted of a humming server room from her aborted break-in sits in her files, one connection away from a name she doesn't have yet.",
+      "outro_note": "By nightfall the exposé is the only thing anyone in the precinct will talk about, and Zhao's composure is fraying at the seams. Danny has seventy-two hours to find Sonny's 'one last piece' or watch his family lose everything — and somewhere in that pressure, tomorrow's photograph on Noah's wall is already being decided.",
+      "sections": [
+        {
+          "title": "Before the Presses Roll",
+          "what": "Alone at her desk past midnight, Aya rereads her surveillance-program exposé one final time and hits send to her editor anyway.",
+          "who": [
+            "AYA_MORITA"
+          ],
+          "thread": "The Front Page",
+          "location": "HERALD_NEWSROOM",
+          "words": null
+        },
+        {
+          "title": "The Dawn Ritual",
+          "what": "Noah's morning photograph arrives again, the face different but the timestamp the same, and he pins it beside forty others without flinching.",
+          "who": [
+            "NOAH_KESTREL"
+          ],
+          "thread": "The Midnight Photograph",
+          "location": "NOAHS_APARTMENT",
+          "words": {
+            "min": 140,
+            "max": 220,
+            "target": "140 to 220"
+          }
+        },
+        {
+          "title": "Ink on the Bullpen Floor",
+          "what": "A folded Herald hits Noah's desk at shift change; the front page names an illegal department surveillance program and the bullpen goes silent.",
+          "who": [
+            "NOAH_KESTREL",
+            "KAI_CHEN"
+          ],
+          "thread": "The Front Page",
+          "location": "PRECINCT",
+          "words": null
+        },
+        {
+          "title": "Behind the Glass",
+          "what": "Alone behind her office glass, Zhao reads the story that could end her career and picks up a phone she doesn't dial.",
+          "who": [
+            "LILY_ZHAO"
+          ],
+          "thread": "The Front Page",
+          "location": "PRECINCT",
+          "words": null
+        },
+        {
+          "title": "Seventy-Two Hours",
+          "what": "Sonny calls Danny in the restaurant's back office demanding the full debt in seventy-two hours, or one last, bigger secret instead.",
+          "who": [
+            "DANNY_WU"
+          ],
+          "thread": "The Wu Family Debt",
+          "location": "WU_RESTAURANT",
+          "words": {
+            "min": 130,
+            "max": 210,
+            "target": "130 to 210"
+          }
+        },
+        {
+          "title": "Reading Between Headlines",
+          "what": "Over cold coffee, Kai marvels at the exposé while Noah privately recognizes details only someone inside the department could have known.",
+          "who": [
+            "NOAH_KESTREL",
+            "KAI_CHEN"
+          ],
+          "thread": "The Front Page",
+          "location": "TIDEWATER_DINER",
+          "words": null
+        },
+        {
+          "title": "Front-Page Family",
+          "what": "Hae reads the surveillance-program story over breakfast, and it drags her back to Noah's buried investigator receipt and every question she still can't ask.",
+          "who": [
+            "HAE_SONG"
+          ],
+          "thread": "The Estrangement",
+          "location": "HAES_HOUSE",
+          "words": null
+        },
+        {
+          "title": "Snapping in the Kitchen",
+          "what": "Rattled after Sonny's call, Danny snaps at a line cook; Hae stops by unannounced and senses something's wrong, but he waves it off.",
+          "who": [
+            "DANNY_WU",
+            "HAE_SONG"
+          ],
+          "thread": "The Wu Family Debt",
+          "location": "WU_RESTAURANT",
+          "words": null
+        },
+        {
+          "title": "Byline of the Year",
+          "what": "Aya's editor toasts her front page while colleagues congratulate her, but she can only think of how Noah will look at her tomorrow.",
+          "who": [
+            "AYA_MORITA"
+          ],
+          "thread": "The Front Page",
+          "location": "HERALD_NEWSROOM",
+          "words": null
+        },
+        {
+          "title": "Grain and Guilt",
+          "what": "Noah lays the morning's Herald on Feng's counter and watches the old man's hands go still before he changes the subject again.",
+          "who": [
+            "NOAH_KESTREL",
+            "MR_FENG"
+          ],
+          "thread": "The Midnight Photograph",
+          "location": "FENGS_SHOP",
+          "words": null
+        },
+        {
+          "title": "No Comment",
+          "what": "Zhao gathers her detectives and orders total silence to the press, her calm a thin cover for how close the story cuts to her.",
+          "who": [
+            "LILY_ZHAO",
+            "NOAH_KESTREL",
+            "KAI_CHEN"
+          ],
+          "thread": "The Front Page",
+          "location": "PRECINCT",
+          "words": null
+        },
+        {
+          "title": "A Body That Doesn't Fit",
+          "what": "Examining a body tied to Noah's case, Kai flags a detail that shouldn't have leaked anywhere, and neither of them suspects why it did.",
+          "who": [
+            "NOAH_KESTREL",
+            "KAI_CHEN"
+          ],
+          "thread": "The Midnight Photograph",
+          "location": "MORGUE",
+          "words": null
+        },
+        {
+          "title": "The Price of Forgiveness",
+          "what": "Alone after closing, Danny stares at Noah's open case file on his phone, weighing what 'one last piece' Sonny actually wants from him.",
+          "who": [
+            "DANNY_WU"
+          ],
+          "thread": "The Wu Family Debt",
+          "location": "WU_RESTAURANT",
+          "words": null
+        },
+        {
+          "title": "Almost Telling Her",
+          "what": "Danny nearly tells Hae about the debt and the deadline, but stops himself at the last second and turns it into a joke instead.",
+          "who": [
+            "DANNY_WU",
+            "HAE_SONG"
+          ],
+          "thread": "The Wu Family Debt",
+          "location": "TIDEWATER_DINER",
+          "words": null
+        },
+        {
+          "title": "Chasing the Source",
+          "what": "Off the books, Kai presses Aya to name her source, certain the leak is inside the precinct; she protects Zhao without knowing she's doing it.",
+          "who": [
+            "KAI_CHEN",
+            "AYA_MORITA"
+          ],
+          "thread": "The Front Page",
+          "location": "HERALD_NEWSROOM",
+          "words": null
+        },
+        {
+          "title": "The Ping Again",
+          "what": "Alone with his corkboard, Noah connects the exposé to the server timestamp Zhao once waved away, and starts to doubt her excuse.",
+          "who": [
+            "NOAH_KESTREL"
+          ],
+          "thread": "The Midnight Photograph",
+          "location": "NOAHS_APARTMENT",
+          "words": null
+        },
+        {
+          "title": "What the Story Cost",
+          "what": "Aya meets Noah expecting fury over the story; instead he asks her, quietly, exactly how much more she knows that she hasn't printed.",
+          "who": [
+            "NOAH_KESTREL",
+            "AYA_MORITA"
+          ],
+          "thread": "The Front Page",
+          "location": "TIDEWATER_DINER",
+          "words": null
+        }
+      ],
+      "case": [
+        {
+          "label": "The Front Page",
+          "character_knowledge": {
+            "AYA_MORITA": "She genuinely believes her anonymous source is a disgruntled junior officer and built this story from months of tips plus her own server-room photo, with no idea Zhao is behind any of it; she publishes despite unease about Noah because her editor's deadline forced the choice, and she's now torn between pride in the scoop and dread of his reaction.",
+            "LILY_ZHAO": "She engineered this exposure by feeding Aya details for months, meaning to force public pressure onto the corrupt network on her own timetable, but the story running now — ahead of her plan and before Panopticon is safely wound down — genuinely frightens her, a fear she conceals behind orders for total silence.",
+            "NOAH_KESTREL": "He reads the story and recognizes specifics that could only come from inside the department, growing convinced there's a leak close to him, but has no idea the 'illegal program' described is the very system behind his own morning photographs, or that his captain is the source.",
+            "KAI_CHEN": "He's genuinely rattled by the exposé and assumes it's the work of a whistleblower or hostile outside digging; he has no suspicion that Zhao is involved and no reason yet to connect any of it to Danny."
+          },
+          "solution": "Aya Morita, the Herald reporter chasing the 'Midnight Photographer' murders for six months, has been anonymously fed partial case details by Captain Zhao herself — not out of malice, but strategy: Zhao wants enough public pressure on the corrupt network that it can't quietly bury the case if her hidden Panopticon operation is ever exposed, and she is using Aya, without Aya's knowledge, as a pressure valve and eventual public shield. Aya believes her source is a disgruntled junior officer. She has become so invested in the story that she's developed real feelings for Noah, her main subject, and is torn between the professional instinct to publish everything she has — which would blow Zhao's operation open before it's ready — and her growing loyalty to him.",
+          "objective_facts": [
+            "Aya has published four stories on the 'Midnight Photographer' case over six months, based on unnamed departmental sources.",
+            "Captain Zhao is Aya's anonymous source, though Aya believes her source is a disgruntled junior officer.",
+            "Aya has an unpublished folder of evidence, including a partial photo of the Panopticon server room, that she has not yet connected to Zhao.",
+            "Aya and Noah have met in person eleven times since the story began, ostensibly for interviews.",
+            "Aya's editor has given her one week to file a story naming a suspect or the paper will hand the story to a rival reporter."
+          ]
+        },
+        {
+          "label": "The Wu Family Debt",
+          "character_knowledge": {
+            "DANNY_WU": "He knows Sonny's ultimatum is real and immediate — full balance in seventy-two hours or one last, larger piece of information — and hides the scale of it from everyone around him; he still tells himself his past leaks never truly compromised a case, unaware two of Noah's photographed 'killers' were chosen partly from what he handed over.",
+            "HAE_SONG": "She senses Danny is under real strain today and asks about it, but reads his deflection as ordinary work pressure; she has no idea about the debt, about Sonny, or about anything he's ever leaked."
+          },
+          "solution": "Danny Wu's drive to outshine Noah for the detective-first-grade promotion isn't only career ambition — his family's restaurant carries an eighty-thousand-dollar debt inherited from his late father, owed to a lender connected to the corrupt-cop network under investigation. For two years, Danny has been quietly passing selected case details to a contact known only as 'Sonny' in exchange for incremental forgiveness of that debt, telling himself he's protecting his family without truly compromising any case. He does not know that Sonny reports directly to the same network responsible for Feng's son's murder, and he has no idea that at least two of the individuals who appeared as 'killers' in Noah's morning photographs were selected in part using information he unknowingly leaked.",
+          "objective_facts": [
+            "The Wu family restaurant owes eighty thousand dollars, inherited from Danny's late father, to a lender tied to the corrupt-cop network under investigation.",
+            "Danny has been passing precinct case details to a contact named Sonny in exchange for debt forgiveness for the past two years.",
+            "Danny does not know Sonny reports directly to the network responsible for Feng's son's murder.",
+            "Two individuals who appeared as 'killers' in Noah's morning photographs were selected in part using information Danny unknowingly leaked.",
+            "Danny's mother believes the family debt was paid off a year ago; it was not."
+          ]
+        },
+        {
+          "label": "The Midnight Photograph",
+          "character_knowledge": {
+            "NOAH_KESTREL": "He increasingly suspects Zhao's old explanation for the server-metadata ping was a cover story, especially set against the exposé's description of a hidden department program, but still has no idea Feng designed the system or that he himself is being deliberately used as bait.",
+            "MR_FENG": "He recognizes exactly what the newspaper is describing because he built it, and Noah bringing the story to his counter deepens a guilt he still can't bring himself to voice; he deflects again, protecting Noah from a truth that would cost him everything to admit.",
+            "KAI_CHEN": "He flags an inconsistency in the case evidence without any idea it traces back to a leak, and has no suspicion yet that Panopticon, Danny, or the exposé connect to the body in front of him."
+          },
+          "solution": "The photographs are not prophecy but daily output of an experimental predictive-threat program called Panopticon, built years ago by Feng for the department's cold-case unit and never fully decommissioned after it was shut down for civil-liberties violations. It cross-references Noah's movements, phone metadata, and known grudges to calculate who is most likely to kill him within the next 24 hours, then renders a photorealistic composite as proof. Captain Zhao secretly kept a hidden instance running from a server in the precinct's old records basement, using Noah as an unwitting test subject to flush out a network of corrupt officers — the same network she believes killed Feng's son, a rookie cop, ten years ago — because Noah is the one detective in the precinct with no ties to that network. Each day's photo reflects a genuinely real threat, not a false alarm, but the identity keeps shifting because Noah's own survival actions each day reshuffle who has the strongest motive and opportunity for the next day, exactly as Panopticon recalculates. Zhao intends to let the algorithm and Noah's investigation eventually expose the entire network; she has not told him he is bait, and Feng — the confidant Noah trusts — has not told him he built the very system stalking him.",
+          "objective_facts": [
+            "Panopticon was built by Feng fifteen years ago as an internal cold-case predictive tool and officially shut down six years ago after a lawsuit over its surveillance methods.",
+            "Zhao has secretly kept a hidden instance of Panopticon running from a server in the precinct's old records-storage basement for the past four months.",
+            "Each morning's photograph is generated from real-time surveillance and metadata about Noah, recalculated every 24 hours based on his prior day's actions.",
+            "Feng's son, a rookie officer, was murdered ten years ago by members of the same corrupt network Zhao is now trying to expose.",
+            "Noah was selected as the system's test subject specifically because he has no personal or financial ties to anyone in the corrupt network.",
+            "Every person who has appeared as a 'killer' in the photographs has been, at the moment the photo was generated, a real and currently highest-probability threat to Noah — not a fabrication."
+          ]
+        },
+        {
+          "label": "The Estrangement",
+          "character_knowledge": {
+            "HAE_SONG": "Reading the exposé reopens her unresolved anger over Noah's secretive spending on the investigator, and she still believes his second lie from episode six — that it was only about a break-in — with no idea the real investigation concerns her own father.",
+            "NOAH_KESTREL": "Consumed by the story's fallout and Feng's reaction, he hasn't reached out to Hae today despite knowing the article will likely unsettle her too, letting the distance between them stretch a little further without meaning to.",
+            "DANNY_WU": "Ordinarily he stays close to Hae partly to keep near whatever answers Noah won't give her, but today Sonny's ultimatum consumes him completely, and he hides his crisis from her instead of using the relationship at all."
+          },
+          "solution": "Hae left Noah eight months ago, and precinct gossip attributes it to his workaholism, but the real reason is that she discovered Noah had secretly diverted department discretionary funds to hire a private investigator digging into her late father's death — a death Noah suspected was connected to the same corrupt network Zhao is hunting. He hid this from her because the investigator's early findings suggested her father may have been complicit in the network's activity, not merely its victim, and Noah couldn't bring himself to tell her. Hae has since started seeing Danny Wu, drawn in part to the normalcy of his family's restaurant, but also — without fully admitting it to herself — to stay closer to the case information Noah still won't share with her. Danny genuinely cares for Hae, but is also using the relationship, half-consciously, to stay a step ahead of Noah professionally.",
+          "objective_facts": [
+            "Hae and Noah separated eight months ago; their divorce has not been finalized.",
+            "Noah spent fourteen thousand dollars of a discretionary case fund on a private investigator looking into Hae's father's death, without departmental authorization or Hae's knowledge.",
+            "The investigator's notes, which Noah has shown no one, suggest Hae's father may have laundered money for the network implicated in Feng's son's murder.",
+            "Hae has been in a relationship with Danny Wu for three months.",
+            "Danny has not told Noah or Captain Zhao that he is dating Hae."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "An Empty Street",
+      "theme": "The season converges without fully resolving: Zhao admits to Noah that he was bait all along, Noah and Hae share a fragile, unreconciled honesty at last, and Danny's confession ends his rivalry with Noah but not cleanly, while the corrupt network survives wounded and Noah receives one final, unmarked photograph of a street he doesn't yet recognize.",
+      "intro_note": "Yesterday's Herald hit newsstands with Aya's story exposing a hidden department surveillance program, and Sonny gave Danny seventy-two hours to settle the family debt with one last piece of information. Now the fallout lands on everyone at once.",
+      "outro_note": "",
+      "sections": [
+        {
+          "title": "Morning Edition Hits",
+          "what": "Bullpen buzzes over Aya's front-page story naming a hidden department surveillance program; Noah reads it cold while Kai stares, stunned.",
+          "who": [
+            "NOAH_KESTREL",
+            "KAI_CHEN"
+          ],
+          "thread": "The Front Page",
+          "location": "PRECINCT",
+          "words": null
+        },
+        {
+          "title": "Called Upstairs",
+          "what": "Summoned upstairs over the story's fallout, Zhao brushes off Noah's questions and retreats toward the basement stairwell instead of answering.",
+          "who": [
+            "LILY_ZHAO",
+            "NOAH_KESTREL"
+          ],
+          "thread": "The Front Page",
+          "location": "PRECINCT",
+          "words": {
+            "min": 140,
+            "max": 230,
+            "target": "140 to 230"
+          }
+        },
+        {
+          "title": "Forcing the Door",
+          "what": "Noah forces the basement door open and finds Zhao live-monitoring the humming Panopticon feed, confronting her outright about what she's hiding.",
+          "who": [
+            "NOAH_KESTREL",
+            "LILY_ZHAO"
+          ],
+          "thread": "The Midnight Photograph",
+          "location": "PRECINCT",
+          "words": null
+        },
+        {
+          "title": "Four Months",
+          "what": "Cornered, Zhao admits she's used Noah as bait for four months to flush out the network that killed Feng's son.",
+          "who": [
+            "LILY_ZHAO",
+            "NOAH_KESTREL"
+          ],
+          "thread": "The Midnight Photograph",
+          "location": "PRECINCT",
+          "words": {
+            "min": 130,
+            "max": 220,
+            "target": "130 to 220"
+          }
+        },
+        {
+          "title": "What It Cost",
+          "what": "Noah confronts Feng at the shop, demanding why his old friend let the system he built keep stalking him unchecked.",
+          "who": [
+            "NOAH_KESTREL",
+            "MR_FENG"
+          ],
+          "thread": "The Midnight Photograph",
+          "location": "FENGS_SHOP",
+          "words": null
+        },
+        {
+          "title": "Closing Time",
+          "what": "After closing, Danny stares at ledgers proving the family debt was never cleared, deciding to end Sonny's hold before it ends him.",
+          "who": [
+            "DANNY_WU"
+          ],
+          "thread": "The Wu Family Debt",
+          "location": "WU_RESTAURANT",
+          "words": null
+        },
+        {
+          "title": "Walking In",
+          "what": "Danny walks into the bullpen and tells Noah and Captain Zhao everything: two years of leaked case details traded to Sonny for debt relief.",
+          "who": [
+            "DANNY_WU",
+            "NOAH_KESTREL",
+            "LILY_ZHAO"
+          ],
+          "thread": "The Wu Family Debt",
+          "location": "PRECINCT",
+          "words": null
+        },
+        {
+          "title": "No Clean Ending",
+          "what": "The confession lands hard as Noah realizes leaked details shaped his own murder photographs, and Danny's promotion bid quietly dies.",
+          "who": [
+            "NOAH_KESTREL",
+            "DANNY_WU",
+            "LILY_ZHAO"
+          ],
+          "thread": "The Wu Family Debt",
+          "location": "PRECINCT",
+          "words": null
+        },
+        {
+          "title": "First Table",
+          "what": "Noah and Hae sit across from each other for the first time since the separation, silence heavier than the cooling coffee between them.",
+          "who": [
+            "NOAH_KESTREL",
+            "HAE_SONG"
+          ],
+          "thread": "The Estrangement",
+          "location": "TIDEWATER_DINER",
+          "words": null
+        },
+        {
+          "title": "Not Only a Victim",
+          "what": "Noah finally tells Hae the real reason he hired the investigator: that her father may not have only been a victim.",
+          "who": [
+            "NOAH_KESTREL",
+            "HAE_SONG"
+          ],
+          "thread": "The Estrangement",
+          "location": "TIDEWATER_DINER",
+          "words": null
+        },
+        {
+          "title": "She Stays",
+          "what": "Hae absorbs the accusation about her father, furious and shaken, but she doesn't get up and leave the booth.",
+          "who": [
+            "HAE_SONG",
+            "NOAH_KESTREL"
+          ],
+          "thread": "The Estrangement",
+          "location": "TIDEWATER_DINER",
+          "words": {
+            "min": 120,
+            "max": 200,
+            "target": "120 to 200"
+          }
+        },
+        {
+          "title": "Too Precisely Sourced",
+          "what": "Aya's editor presses for a named suspect while she quietly realizes her source's precision tracks too closely to command staff.",
+          "who": [
+            "AYA_MORITA"
+          ],
+          "thread": "The Front Page",
+          "location": "HERALD_NEWSROOM",
+          "words": null
+        },
+        {
+          "title": "Anonymous No Longer",
+          "what": "Aya corners Zhao off the record, half-guessing and half-confirming that her anonymous source has been the captain all along.",
+          "who": [
+            "AYA_MORITA",
+            "LILY_ZHAO"
+          ],
+          "thread": "The Front Page",
+          "location": "PRECINCT",
+          "words": {
+            "min": 140,
+            "max": 230,
+            "target": "140 to 230"
+          }
+        },
+        {
+          "title": "Relieved of Command",
+          "what": "Word comes down that Zhao is being stripped of command pending review, and Kai learns for the first time what she built underground.",
+          "who": [
+            "LILY_ZHAO",
+            "KAI_CHEN"
+          ],
+          "thread": "The Front Page",
+          "location": "PRECINCT",
+          "words": null
+        },
+        {
+          "title": "What Kai Didn't Know",
+          "what": "Kai confronts Noah, hurt that his partner and their captain both kept him blind to Panopticon for four whole months.",
+          "who": [
+            "KAI_CHEN",
+            "NOAH_KESTREL"
+          ],
+          "thread": "The Midnight Photograph",
+          "location": "PRECINCT",
+          "words": null
+        },
+        {
+          "title": "The Wall Comes Down",
+          "what": "Noah begins peeling photographs off his apartment walls, the case still technically open but the ritual of guessing finally ending.",
+          "who": [
+            "NOAH_KESTREL"
+          ],
+          "thread": "The Midnight Photograph",
+          "location": "NOAHS_APARTMENT",
+          "words": null
+        },
+        {
+          "title": "An Empty Street",
+          "what": "At dawn a final photograph arrives: no timestamp, no face, just an empty street Noah doesn't yet recognize.",
+          "who": [
+            "NOAH_KESTREL"
+          ],
+          "thread": "The Midnight Photograph",
+          "location": "NOAHS_APARTMENT",
+          "words": {
+            "min": 100,
+            "max": 180,
+            "target": "100 to 180"
+          }
+        }
+      ],
+      "case": [
+        {
+          "label": "The Midnight Photograph",
+          "character_knowledge": {
+            "NOAH_KESTREL": "Noah has spent months certain the photographs react to his own choices; today he forces his way to the truth and learns Captain Zhao has been running a hidden instance of Panopticon from the basement for four months, using him as bait to expose the network that killed Feng's son, and that some of the leaked case details shaping his 'killers' came from inside his own precinct. He already suspected Feng built the underlying system since the print-grain discovery, but hearing Zhao confirm the scale of it is new and destabilizing. He does not yet know the network's full membership, only that it survives this exposure wounded, not destroyed.",
+            "LILY_ZHAO": "Zhao knows everything: that Panopticon is live, that Noah was chosen as bait because he has no ties to the network, and that her four months of silence were a calculated risk she'd make again to honor a rookie cop's murder ten years ago. Cornered by Noah, she finally admits the operation outright rather than deflecting as she did with the server-ping metadata earlier in the season, but she still downplays how much of her own freedom she's gambling now that Aya's story has made the program impossible to keep fully buried.",
+            "MR_FENG": "Feng already confessed, through his shaking hands, that he built the very system stalking Noah; this episode he goes further, admitting the full weight of why he let it run — his son's murder, his belief that Zhao's operation was the only path left to justice the department wouldn't pursue openly. He doesn't excuse Zhao's decision to use Noah without consent, but he also doesn't fully disown his own part in designing a weapon that could be aimed at anyone.",
+            "KAI_CHEN": "Kai learns for the first time, only in this episode's fallout, that a hidden predictive-surveillance program has been running under his own captain's authority and that his partner has secretly been its unwitting subject for months. He wrongly assumes at first that Noah knew and hid it from him too, and it takes Noah's own shock to convince Kai that his partner was blindsided exactly like he was."
+          },
+          "solution": "The photographs are not prophecy but daily output of an experimental predictive-threat program called Panopticon, built years ago by Feng for the department's cold-case unit and never fully decommissioned after it was shut down for civil-liberties violations. It cross-references Noah's movements, phone metadata, and known grudges to calculate who is most likely to kill him within the next 24 hours, then renders a photorealistic composite as proof. Captain Zhao secretly kept a hidden instance running from a server in the precinct's old records basement, using Noah as an unwitting test subject to flush out a network of corrupt officers — the same network she believes killed Feng's son, a rookie cop, ten years ago — because Noah is the one detective in the precinct with no ties to that network. Each day's photo reflects a genuinely real threat, not a false alarm, but the identity keeps shifting because Noah's own survival actions each day reshuffle who has the strongest motive and opportunity for the next day, exactly as Panopticon recalculates. Zhao intends to let the algorithm and Noah's investigation eventually expose the entire network; she has not told him he is bait, and Feng — the confidant Noah trusts — has not told him he built the very system stalking him.",
+          "objective_facts": [
+            "Panopticon was built by Feng fifteen years ago as an internal cold-case predictive tool and officially shut down six years ago after a lawsuit over its surveillance methods.",
+            "Zhao has secretly kept a hidden instance of Panopticon running from a server in the precinct's old records-storage basement for the past four months.",
+            "Each morning's photograph is generated from real-time surveillance and metadata about Noah, recalculated every 24 hours based on his prior day's actions.",
+            "Feng's son, a rookie officer, was murdered ten years ago by members of the same corrupt network Zhao is now trying to expose.",
+            "Noah was selected as the system's test subject specifically because he has no personal or financial ties to anyone in the corrupt network.",
+            "Every person who has appeared as a 'killer' in the photographs has been, at the moment the photo was generated, a real and currently highest-probability threat to Noah — not a fabrication."
+          ]
+        },
+        {
+          "label": "The Estrangement",
+          "character_knowledge": {
+            "NOAH_KESTREL": "Noah finally tells Hae the truth he's buried under two prior lies: that the investigator he hired wasn't looking into a break-in but into her father's death, and that the early findings suggest her father may not have only been a victim of the network but complicit in it. He still doesn't know Hae has spent the last three months with Danny Wu, so he has no idea how much this revelation lands on top of a relationship he can't see.",
+            "HAE_SONG": "Hae hears, for the first time, the real reason behind Noah's secret spending and his two earlier lies, and the accusation against her father's memory shakes her badly enough that every instinct says to walk out. She stays anyway — she doesn't tell Noah why, but part of it is that she still hasn't told him about Danny, and leaving now would feel like running from more than one truth at once."
+          },
+          "solution": "Hae left Noah eight months ago, and precinct gossip attributes it to his workaholism, but the real reason is that she discovered Noah had secretly diverted department discretionary funds to hire a private investigator digging into her late father's death — a death Noah suspected was connected to the same corrupt network Zhao is hunting. He hid this from her because the investigator's early findings suggested her father may have been complicit in the network's activity, not merely its victim, and Noah couldn't bring himself to tell her. Hae has since started seeing Danny Wu, drawn in part to the normalcy of his family's restaurant, but also — without fully admitting it to herself — to stay closer to the case information Noah still won't share with her. Danny genuinely cares for Hae, but is also using the relationship, half-consciously, to stay a step ahead of Noah professionally.",
+          "objective_facts": [
+            "Hae and Noah separated eight months ago; their divorce has not been finalized.",
+            "Noah spent fourteen thousand dollars of a discretionary case fund on a private investigator looking into Hae's father's death, without departmental authorization or Hae's knowledge.",
+            "The investigator's notes, which Noah has shown no one, suggest Hae's father may have laundered money for the network implicated in Feng's son's murder.",
+            "Hae has been in a relationship with Danny Wu for three months.",
+            "Danny has not told Noah or Captain Zhao that he is dating Hae."
+          ]
+        },
+        {
+          "label": "The Wu Family Debt",
+          "character_knowledge": {
+            "DANNY_WU": "Facing Sonny's seventy-two-hour ultimatum, Danny walks into the precinct and tells Noah and Zhao everything: two years of leaking case details in exchange for debt forgiveness, and that his mother still believes the debt was paid off a year ago. He doesn't yet know his leaks helped select at least two of the 'killers' in Noah's photographs until Noah says so in the same room, and he says nothing about Hae — that isn't the confession he came to make.",
+            "NOAH_KESTREL": "Noah hears the confession as both vindication and a fresh wound — Danny's two years of leaks explain gaps in his own case files, and he realizes some of his morning photographs were shaped, even indirectly, by information Danny handed to Sonny. He still has no idea Danny has been seeing Hae for three months; that piece of the picture stays outside this scene entirely.",
+            "LILY_ZHAO": "Zhao absorbs Danny's confession as a lead into Sonny's side of the network rather than purely a discipline problem, weighing whether prosecuting him now would cost her more information than it's worth. She doesn't tell Danny that his leaked details were, unknowingly, one more thread she could have traced sooner had her own hidden operation not been so compartmentalized."
+          },
+          "solution": "Danny Wu's drive to outshine Noah for the detective-first-grade promotion isn't only career ambition — his family's restaurant carries an eighty-thousand-dollar debt inherited from his late father, owed to a lender connected to the corrupt-cop network under investigation. For two years, Danny has been quietly passing selected case details to a contact known only as 'Sonny' in exchange for incremental forgiveness of that debt, telling himself he's protecting his family without truly compromising any case. He does not know that Sonny reports directly to the same network responsible for Feng's son's murder, and he has no idea that at least two of the individuals who appeared as 'killers' in Noah's morning photographs were selected in part using information he unknowingly leaked.",
+          "objective_facts": [
+            "The Wu family restaurant owes eighty thousand dollars, inherited from Danny's late father, to a lender tied to the corrupt-cop network under investigation.",
+            "Danny has been passing precinct case details to a contact named Sonny in exchange for debt forgiveness for the past two years.",
+            "Danny does not know Sonny reports directly to the network responsible for Feng's son's murder.",
+            "Two individuals who appeared as 'killers' in Noah's morning photographs were selected in part using information Danny unknowingly leaked.",
+            "Danny's mother believes the family debt was paid off a year ago; it was not."
+          ]
+        },
+        {
+          "label": "The Front Page",
+          "character_knowledge": {
+            "AYA_MORITA": "Aya's front-page story is already out, but this episode she starts connecting details her anonymous source fed her too precisely to be a disgruntled junior officer, and corners Zhao off the record with a guess she can't yet fully confirm. She still hasn't decided whether to publish Zhao's name, torn between the story that made her career and her unresolved feelings for the man at its center.",
+            "LILY_ZHAO": "Zhao knows Aya is closing in on her as the source and chooses not to deny it outright when confronted, gambling that Aya's hesitation about Noah will buy her time even as her command is already being stripped over the story's fallout. She doesn't reveal how deliberately she used Aya as a pressure valve from the start.",
+            "KAI_CHEN": "Kai reads the morning edition's exposure of a hidden department program with the rest of the bullpen, having no idea yet that it's connected to his own partner or his captain until the truth reaches him later the same day."
+          },
+          "solution": "Aya Morita, the Herald reporter chasing the 'Midnight Photographer' murders for six months, has been anonymously fed partial case details by Captain Zhao herself — not out of malice, but strategy: Zhao wants enough public pressure on the corrupt network that it can't quietly bury the case if her hidden Panopticon operation is ever exposed, and she is using Aya, without Aya's knowledge, as a pressure valve and eventual public shield. Aya believes her source is a disgruntled junior officer. She has become so invested in the story that she's developed real feelings for Noah, her main subject, and is torn between the professional instinct to publish everything she has — which would blow Zhao's operation open before it's ready — and her growing loyalty to him.",
+          "objective_facts": [
+            "Aya has published four stories on the 'Midnight Photographer' case over six months, based on unnamed departmental sources.",
+            "Captain Zhao is Aya's anonymous source, though Aya believes her source is a disgruntled junior officer.",
+            "Aya has an unpublished folder of evidence, including a partial photo of the Panopticon server room, that she has not yet connected to Zhao.",
+            "Aya and Noah have met in person eleven times since the story began, ostensibly for interviews.",
+            "Aya's editor has given her one week to file a story naming a suspect or the paper will hand the story to a rival reporter."
+          ]
+        }
+      ]
+    }
+  ]
+}
