@@ -69,8 +69,15 @@ Der Rewrite baut den *bewiesenen* Teil des Blueprints (§1–8) sauber neu, mit 
 
 ## Offen
 
-Nur die empirisch **gegatete Phase 8** (§12 Charaktertiefe / §13 Seams). Start ausschließlich,
+Die empirisch **gegatete Phase 8** (§12 Charaktertiefe / §13 Seams). Start ausschließlich,
 wenn der **§12-Falsifikationstest (T8.0)** grün ist — der braucht einen echten Modell-Vergleich
-(stated vs. inferred motive an einer realen Episode). Ebenso **T2.11** (§10.6 ein/zwei
-Conceive-Pfade): technisch entsperrt (Provider existiert), braucht echten Lauf. Nicht vorab
-bauen — erst messen (siehe Blueprint §12-Kopf und §10.6-Note).
+(stated vs. inferred motive an einer realen Episode). Nicht vorab bauen — erst messen
+(siehe Blueprint §12-Kopf).
+
+**T2.11 (§10.6) ist entschieden (19.07.2026, erster echter Lauf via ClaudeCliModel): ZWEI
+Pfade bleiben.** Der decomposed Pfad degeneriert für simple Formate NICHT sauber — er
+dramatisierte eine mode=narration-Serie (Cast+Dialog statt Ein-Stimmen-Narration), und
+canon/arc trugen ~5,4 KB echtes Gewicht. Messdaten im Implementierungsplan (T2.11),
+Beleg-Serie: `data/series/t211_libraries/`. **Offener Folge-Task:** One-Shot-Pfad für
+simple Formate (narration/import) — bis dahin nur case-based Formate durch
+`factory/cli/create_series.py` schicken.

@@ -1,0 +1,40 @@
+{
+  "sections": [
+    {
+      "location": "alexandria",
+      "thread": "The paradox of preservation",
+      "title": "The Budget Behind the Scrolls",
+      "turning_point": "tp1",
+      "what": "Hypatia shows Mele the Mouseion's real end: Roman fiscal strangulation, not fire. Scholars carried texts outward; exodus became the first preservation strategy.",
+      "who": [
+        "NARRATOR",
+        "Hypatia",
+        "Mele"
+      ],
+      "word_budget": 150
+    },
+    {
+      "location": "bayt_al_hikma",
+      "thread": "Knowledge as political object",
+      "title": "The Horoscope and the Translation",
+      "turning_point": "tp2",
+      "what": "Ibn al-Nadim tells Mele that al-Mamun's translation drive began with an astrological warning about a Greek rival — statecraft that outlived its own political motives.",
+      "who": [
+        "NARRATOR",
+        "Ibn al-Nadim",
+        "Mele"
+      ],
+      "word_budget": 150
+    },
+    {
+      "thread": "Who is allowed inside",
+      "title": "What the Patrons Leave Behind",
+      "what": "Mele connects both stops: patron ambition funds knowledge and endangers it equally — the entanglement that will shadow every library ahead.",
+      "who": [
+        "NARRATOR",
+        "Mele"
+      ],
+      "word_budget": 120
+    }
+  ]
+}

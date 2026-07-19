@@ -1,0 +1,47 @@
+{
+  "lines": [
+    {
+      "speaker": "NARRATOR",
+      "text": "Baghdad. The House of Wisdom. A city that had decided, for a moment, that the past was worth paying for."
+    },
+    {
+      "speaker": "Ibn al-Nadim",
+      "style": "dry, conspiratorial",
+      "text": "You want to know why al-Mamun sent his agents into Byzantium for manuscripts? I'll tell you the real reason. Not the noble one."
+    },
+    {
+      "speaker": "Mele",
+      "style": "curious",
+      "text": "There's a difference?"
+    },
+    {
+      "speaker": "Ibn al-Nadim",
+      "style": "wry",
+      "text": "Always. An astrologer told him a Greek philosopher would defeat him in a dream. He woke and ordered translations. Statecraft dressed as scholarship."
+    },
+    {
+      "speaker": "Mele",
+      "style": "half-laughing",
+      "text": "So the whole translation movement — Euclid, Galen, Aristotle — started because a caliph had a bad night's sleep?"
+    },
+    {
+      "speaker": "Ibn al-Nadim",
+      "style": "quiet, pointed",
+      "text": "The motive was fear. The result was a library. History rarely asks which was which."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "The political anxiety that launched the work outlasted the caliph who felt it. The translations remained. The fear, eventually, did not."
+    },
+    {
+      "speaker": "Mele",
+      "style": "slow, realizing",
+      "text": "Preservation by accident again."
+    },
+    {
+      "speaker": "Ibn al-Nadim",
+      "style": "dry",
+      "text": "Or by ambition. The difference is smaller than scholars like to admit."
+    }
+  ]
+}

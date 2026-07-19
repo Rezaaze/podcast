@@ -1,0 +1,34 @@
+{
+  "episodes": [
+    {
+      "figure": "Hypatia",
+      "theme": "Preservation by accident — how the great collections of Alexandria and Baghdad survived not through intention but through dispersal, copying, and the selfishness of patrons who wanted credit for what they could not destroy"
+    },
+    {
+      "figure": "Mele",
+      "theme": "The hidden argument of access — tracing who was kept outside the Bodleian, the Escorial, and the Congressional Library, and why the open-access movement is the latest unresolved chapter of a dispute as old as the first locked scroll-room"
+    }
+  ],
+  "turning_points": [
+    {
+      "description": "Hypatia reveals that the Mouseion's decline was not fire but fiscal — Ptolemaic subsidies quietly withdrawn as Rome tightened its grip, forcing scholars to carry texts outward rather than inward; the first migration-as-preservation",
+      "episode": 1,
+      "id": "tp1"
+    },
+    {
+      "description": "Ibn al-Nadim shows that al-Mamun's translation orders were driven by a horoscope predicting a Greek-speaking rival — knowledge weaponised by astrology, yet the translated texts outlived every political motive that funded them",
+      "episode": 1,
+      "id": "tp2"
+    },
+    {
+      "description": "Mele confronts Sor Juana with the Bodleian's 1877 admission of women — nearly three centuries after Sor Juana was silenced and her books confiscated — forcing the question of whether open access is progress or merely delayed repetition",
+      "episode": 2,
+      "id": "tp3"
+    },
+    {
+      "description": "Gottfried learns that Jefferson's sale of his library to rebuild Congress was a private profit on a public loss, collapsing the republican ideal of knowledge-for-all into the same patron-entanglement that defined every prior institution",
+      "episode": 2,
+      "id": "tp4"
+    }
+  ]
+}

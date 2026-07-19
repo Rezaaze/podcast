@@ -3,8 +3,10 @@
 > **STATUS (Stand: letzte Session):** Phase 0–7 **fertig** + echter Provider-Adapter (§10.8).
 > **154 Tests grün.** Code liegt in [`../rewrite/`](../rewrite/) (Kontext: `../rewrite/CLAUDE.md`).
 > Der bewiesene Teil (§1–8 + §10-Revisionen + §7.1 + §14) ist komplett und mit echtem Claude
-> lauffähig (`pip install anthropic` + Credentials). **Offen:** die gegatete Phase 8 (§12/§13)
-> und T2.11 (§10.6) — beide brauchen einen echten Modell-Vergleich, kein Vorbauen.
+> lauffähig (`pip install anthropic` + Credentials). **T2.11 (§10.6) ist ENTSCHIEDEN
+> (19.07.2026, echter Lauf): zwei Pfade bleiben** — siehe Task unten. **Offen:** die
+> gegatete Phase 8 (§12/§13, braucht T8.0) und der One-Shot-Pfad für simple Formate
+> (Folge der T2.11-Entscheidung, noch nicht gebaut).
 
 > Umsetzungsplan zum [redesign-blueprint.md](redesign-blueprint.md). **Ground-up-Rewrite**,
 > Umfang: erst die *bewiesenen* Cleanups (§10-Revisionen von Anfang an eingebaut,
@@ -183,11 +185,27 @@ Allokation, damit Event-Allokation *nie* an eine Batch-Grenze leckt (§9 Falle #
 - [x] **T2.10 — Checkpointing (§ Stage A).** Canon/Arc/jede Episode als eigene Cache-Einheit,
       gekeyt auf *Call-Parameter*. → `factory/core/checkpoint.py` (Test: 2. Lauf ruft Modell
       0× — alles aus Cache).
-- [~] **T2.11 — §10.6-Entscheidung (der Test).** **Bewusst deferred:** der Test verlangt
-      einen *echten* Modell-Vergleich (Qualität/Kosten simpler Formate durch den decomposed
-      Pfad). Der decomposed Pfad ist gebaut+bewiesen; Import/One-shot + die Messung folgen,
-      sobald der echte Provider-Adapter existiert (siehe §10.8-Anmerkung). Ehrliches Gate
-      statt Scheinentscheidung.
+- [x] **T2.11 — §10.6-Entscheidung (der Test). ERGEBNIS: ZWEI PFADE BLEIBEN.**
+      Gemessen 19.07.2026 am ersten echten Lauf (ClaudeCliModel/sonnet, Serie
+      `t211_libraries`: Topic "great libraries", `--format narration --mode narration`,
+      2 Episoden à ~3 Min) gegen einen äquivalenten One-Shot-Call:
+      - **(a) Qualität: decomposed VERZERRT das simple Format.** Trotz mode=narration
+        erfand der Kanon einen 5-Personen-Cast mit Stimmen + 6 Locations + Threads,
+        und Stage B schrieb DIALOG (Ep0: 6 Sprecher, nur 5/18 Zeilen NARRATOR) statt
+        Ein-Stimmen-Narration. Der One-Shot-Call respektierte die Narration-Vorgabe
+        (reine figure/theme/sections-Struktur, kein Cast).
+      - **(b) Kosten: 4 Concept-Calls + mehrere Minuten (decomposed) vs. 1 Call/12s/
+        1,3 KB (one-shot)** für dieselbe Konzept-Aufgabe.
+      - **(c) Degenerierte Dokumente sind NICHT klein:** canon 3,5 KB + arc 1,9 KB +
+        2 Episoden-Konzepte ≈ 7,9 KB — canon/arc tragen echtes Gewicht, genau die
+        "neue Kompensation", vor der das §10.6-Verdict warnt.
+      **Konsequenz:** Blueprint-Verdict (specialization, not redundancy) empirisch
+      bestätigt — kein Merge. **Folge-Task:** One-Shot-Pfad für simple Formate
+      (narration/import) im Rewrite bauen; bis dahin können nur case-based Formate
+      durch `factory/cli/create_series.py` laufen. Nebenbefund desselben Laufs: der
+      decomposed Pfad erzwingt die mode=narration-Vorgabe nicht (Kanon-Prompt kennt
+      kein "kein Cast") — beim Bau des One-Shot-Pfads simple Formate dorthin ROUTEN
+      statt den Kanon-Prompt aufzurüsten.
 
 **TEST-GATE 2** ✅ — 77/77 Tests grün (23 neu + 54 Regression):
 - Deterministisch: T2.8-Dup-Check fängt einen künstlich duplizierten Turning-Point;
