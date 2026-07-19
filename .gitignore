@@ -31,6 +31,8 @@ cloud/.tracked_instances.json
 cloud/.race_instance_ids
 # Lock-Datei des nebenläufigen figure_history-Zugriffs.
 data/*.lock
+# Index-Locks der Libraries (character/location/sfx) — reiner Laufzeit-Zustand.
+**/.index.lock
 
 # Laufzeit-Zustand der Cockpit-Steuerung (webui/launcher.py, maschinenlokal):
 # gemerkte PIDs der gestarteten Cockpits + deren Logs.
