@@ -1,0 +1,277 @@
+{
+  "lines": [
+    {
+      "speaker": "NARRATOR",
+      "style": "quiet",
+      "text": "The chapel is the only room in St. Brendan's that does not announce itself with a function. No board. No bay numbers. No overhead fluorescents humming their particular frequency of institutional indifference. Two rows of pew. An unlit candle on the sill. A woman already seated."
+    },
+    {
+      "speaker": "THEO",
+      "style": "low",
+      "text": "I didn't know you'd be here."
+    },
+    {
+      "speaker": "AGNES",
+      "style": "calm",
+      "text": "I'm always here at this hour."
+    },
+    {
+      "speaker": "THEO",
+      "style": "low",
+      "text": "I should go."
+    },
+    {
+      "speaker": "AGNES",
+      "style": "calm",
+      "text": "You should sit."
+    },
+    {
+      "speaker": "NARRATOR",
+      "style": "quiet",
+      "text": "A beat. He sits one row behind her — not quite facing her, not quite avoiding her either. The complaint is in his locker. He has known this for six hours."
+    },
+    {
+      "speaker": "THEO",
+      "style": "low",
+      "text": "There's a form."
+    },
+    {
+      "speaker": "AGNES",
+      "style": "calm",
+      "text": "I know about the form."
+    },
+    {
+      "speaker": "THEO",
+      "style": "low",
+      "text": "I haven't filed it."
+    },
+    {
+      "speaker": "AGNES",
+      "style": "calm",
+      "text": "I know that too."
+    },
+    {
+      "speaker": "NARRATOR",
+      "style": "quiet",
+      "text": "She turns — not fully, just enough to let him know the angle has changed."
+    },
+    {
+      "speaker": "AGNES",
+      "style": "measured",
+      "text": "The diversion in February. Ward 4-North. The man who came in cardiac, routed through the 3-West corridor because Harte had closed Bay Seven."
+    },
+    {
+      "speaker": "THEO",
+      "style": "low",
+      "text": "You knew."
+    },
+    {
+      "speaker": "AGNES",
+      "style": "calm",
+      "text": "His wife sat with me for four hours afterward. I know what a death looks like when the room it happened in wasn't the right room."
+    },
+    {
+      "speaker": "NARRATOR",
+      "style": "quiet",
+      "text": "Theo rests his forearms on the pew in front of him. His hands are open — a gesture that belongs to neither prayer nor accusation. Somewhere above them the building breathes: the ventilation system, the elevator shaft, the weight of a hospital at three in the morning."
+    },
+    {
+      "speaker": "THEO",
+      "style": "low",
+      "text": "The form names that death."
+    },
+    {
+      "speaker": "AGNES",
+      "style": "calm",
+      "text": "It should."
+    },
+    {
+      "speaker": "THEO",
+      "style": "low",
+      "text": "If I file it, Harte already knows it's coming. The performance review landed this afternoon."
+    },
+    {
+      "speaker": "AGNES",
+      "style": "calm",
+      "text": "I heard."
+    },
+    {
+      "speaker": "THEO",
+      "style": "low",
+      "text": "Then you understand why I'm sitting here instead of at the administrator's desk."
+    },
+    {
+      "speaker": "AGNES",
+      "style": "calm",
+      "text": "I understand why you think you are."
+    },
+    {
+      "speaker": "NARRATOR",
+      "speed": 0.9,
+      "style": "quiet",
+      "text": "A long silence. The candle on the sill is not lit. It holds its shape. That is the only thing unlit candles can offer."
+    },
+    {
+      "speaker": "AGNES",
+      "style": "measured",
+      "text": "There's a second name."
+    },
+    {
+      "speaker": "THEO",
+      "style": "low",
+      "text": "What?"
+    },
+    {
+      "speaker": "AGNES",
+      "style": "measured",
+      "text": "Upstairs. Right now. 4-North again — same corridor, same routing logic, because the policy hasn't changed. A woman named Renata Sobol. Sixty-three. Came in four hours ago with a rhythm Maeve flagged as high priority. Waiting on a monitored bed that Harte's occupancy numbers say doesn't exist."
+    },
+    {
+      "speaker": "NARRATOR",
+      "style": "quiet",
+      "text": "Theo does not stand. He does not move at all. This is different from stillness. This is something locked."
+    },
+    {
+      "speaker": "THEO",
+      "style": "low",
+      "text": "How do you know that name?"
+    },
+    {
+      "speaker": "AGNES",
+      "style": "calm",
+      "text": "The same way I know every name. People come here when the machinery stops working and they've run out of corridors. A nurse sat in that pew at eleven o'clock. Couldn't tell me what to do. Could only tell me what was happening."
+    },
+    {
+      "speaker": "THEO",
+      "style": "low",
+      "text": "Renata Sobol."
+    },
+    {
+      "speaker": "AGNES",
+      "style": "calm",
+      "text": "She has a daughter. The daughter is in the waiting room now, doing what families do when no one tells them enough."
+    },
+    {
+      "speaker": "NARRATOR",
+      "style": "quiet",
+      "text": "The building hums around them. Theo looks at the unlit candle for a long time."
+    },
+    {
+      "speaker": "THEO",
+      "style": "low",
+      "text": "If I file tonight—"
+    },
+    {
+      "speaker": "AGNES",
+      "style": "calm",
+      "text": "Something happens. Yes."
+    },
+    {
+      "speaker": "THEO",
+      "style": "low",
+      "text": "Or nothing happens. They receive it. They log it. They refer it. Harte's lawyers have seen fifty of these."
+    },
+    {
+      "speaker": "AGNES",
+      "style": "calm",
+      "text": "Perhaps."
+    },
+    {
+      "speaker": "THEO",
+      "style": "low",
+      "text": "The first man died. The form has his name. That wasn't enough to make me sign it."
+    },
+    {
+      "speaker": "AGNES",
+      "style": "measured",
+      "text": "And now there's a second name."
+    },
+    {
+      "speaker": "THEO",
+      "style": "low",
+      "text": "She might be fine."
+    },
+    {
+      "speaker": "AGNES",
+      "style": "calm",
+      "text": "She might."
+    },
+    {
+      "speaker": "NARRATOR",
+      "speed": 0.9,
+      "style": "quiet",
+      "text": "Neither of them fills the silence that follows, which is not the same as leaving it empty. Agnes turns back toward the front of the chapel. Her hands are folded — not in prayer, more the way a person holds something carried too long."
+    },
+    {
+      "speaker": "AGNES",
+      "style": "calm",
+      "text": "I'm not going to tell you what the form means. You already know what it means."
+    },
+    {
+      "speaker": "THEO",
+      "style": "low",
+      "text": "It means I've documented two patients harmed by a policy I watched being written and did nothing."
+    },
+    {
+      "speaker": "AGNES",
+      "style": "calm",
+      "text": "You've been doing something. Slowly. In the way people do things when they're afraid."
+    },
+    {
+      "speaker": "THEO",
+      "style": "low",
+      "text": "That's not a defence."
+    },
+    {
+      "speaker": "AGNES",
+      "style": "calm",
+      "text": "No. It isn't."
+    },
+    {
+      "speaker": "NARRATOR",
+      "style": "quiet",
+      "text": "He stands. His uniform carries the particular creases of a long shift. He looks at the door — not the one he came through, but the one at the back, the staff stairwell, the one that goes up."
+    },
+    {
+      "speaker": "THEO",
+      "style": "low",
+      "text": "4-North."
+    },
+    {
+      "speaker": "AGNES",
+      "style": "calm",
+      "text": "Room 408. Last I heard."
+    },
+    {
+      "speaker": "THEO",
+      "style": "low",
+      "text": "If I go up there—"
+    },
+    {
+      "speaker": "AGNES",
+      "style": "calm",
+      "text": "You'll know her face. And then you'll know what you already know, with one more thing added."
+    },
+    {
+      "speaker": "NARRATOR",
+      "style": "quiet",
+      "text": "He doesn't answer. He straightens — a small adjustment that is not quite resolution and not quite its absence. He moves toward the back door. At the threshold he stops."
+    },
+    {
+      "speaker": "THEO",
+      "style": "low",
+      "text": "The form has a date line. I haven't put anything on it."
+    },
+    {
+      "speaker": "AGNES",
+      "style": "calm",
+      "text": "There's still tonight."
+    },
+    {
+      "speaker": "NARRATOR",
+      "speed": 0.88,
+      "style": "quiet",
+      "text": "He pushes through the door. The chapel stays as it was — the unlit candle, two rows of pew, a woman who holds names the way the building holds its wiring: everywhere, unseen, necessary. Above her, on the fourth floor, a bed is occupied by someone whose name she has already learned to carry."
+    }
+  ]
+}

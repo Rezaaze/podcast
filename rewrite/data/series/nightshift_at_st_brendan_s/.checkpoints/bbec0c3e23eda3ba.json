@@ -1,0 +1,89 @@
+{
+  "sections": [
+    {
+      "location": "er_floor",
+      "thread": "Reza's Second Chance",
+      "title": "Postponed",
+      "what": "Reza gets the call: his probation hearing is pushed six weeks. He has time he didn't ask for and no idea what to do with it.",
+      "who": [
+        "am_adam"
+      ],
+      "word_budget": 350
+    },
+    {
+      "location": "er_floor",
+      "thread": "Maeve–Dana History",
+      "title": "The Night Shift Takes the Board",
+      "what": "Maeve takes handover. Dana rolls in a trauma. They work the bay in practiced silence. The shift's shape is already bad.",
+      "who": [
+        "af_sarah",
+        "am_michael",
+        "af_nicole"
+      ],
+      "word_budget": 500
+    },
+    {
+      "location": "er_floor",
+      "thread": "Reza's Second Chance",
+      "title": "Intern Year — The Ward at 2 a.m.",
+      "what": "Flashback. Reza as an intern, bone-tired, charting after a code. He remembers the chaos but not the entry that will undo him.",
+      "who": [
+        "am_adam"
+      ],
+      "word_budget": 500
+    },
+    {
+      "location": "break_room",
+      "thread": "Reza's Second Chance",
+      "title": "Present — The Old Chart",
+      "what": "Reza pulls the archived file. Reads one entry. The handwriting isn't his. He sits with that longer than he means to.",
+      "who": [
+        "am_adam"
+      ],
+      "word_budget": 450
+    },
+    {
+      "location": "er_floor",
+      "thread": "Maeve's Relapse Arc",
+      "title": "Mid-Shift: Maeve's Wall",
+      "what": "A pediatric case goes wrong. Maeve holds it for the family, then walks. Theo covers the board without being asked.",
+      "who": [
+        "af_sarah",
+        "am_michael"
+      ],
+      "word_budget": 500
+    },
+    {
+      "location": "er_floor",
+      "thread": "Reza's Second Chance",
+      "title": "Intern Year — What the Record Said",
+      "what": "Past Reza flags the discrepancy to the attending. The attending rewrites the note. Reza signs below it. He didn't know it was a lie.",
+      "who": [
+        "am_adam"
+      ],
+      "word_budget": 500
+    },
+    {
+      "location": "ambulance_bay",
+      "thread": "Maeve's Relapse Arc",
+      "title": "Four Years End in a Parking Lot",
+      "turning_point": "tp_03",
+      "what": "Maeve sits in her car. Opens the bottle she has carried for a month. Drinks. Dana sees her walk back inside and says nothing.",
+      "who": [
+        "af_sarah",
+        "af_nicole"
+      ],
+      "word_budget": 500
+    },
+    {
+      "location": "break_room",
+      "thread": "Reza's Second Chance",
+      "title": "Authorship",
+      "what": "Reza closes the chart. Someone else wrote the error. He still signed it. He has to decide what that makes him.",
+      "who": [
+        "am_adam"
+      ],
+      "word_budget": 400
+    }
+  ]
+}

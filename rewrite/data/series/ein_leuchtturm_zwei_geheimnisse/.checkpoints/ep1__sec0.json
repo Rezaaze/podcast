@@ -1,0 +1,63 @@
+{
+  "lines": [
+    {
+      "speaker": "NARRATOR",
+      "text": "Der Leuchtturm steht am Ende der Klippenstraße, als hätte ihn jemand dort abgestellt und vergessen. Mara Voss parkt ihren Wagen im Schotter und schaut hinauf."
+    },
+    {
+      "speaker": "Mara Voss",
+      "text": "Herr Seyn?"
+    },
+    {
+      "speaker": "Viktor Seyn",
+      "style": "flat",
+      "text": "Ich bin hier."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "Er tritt aus der Eingangstür. Kein Lächeln, kein Händedruck. Nur ein kurzes Nicken, das alles erledigen soll."
+    },
+    {
+      "speaker": "Viktor Seyn",
+      "style": "flat",
+      "text": "Treppe braucht neue Stufen. Fensterdichtungen. Fassade ab dem zweiten Absatz."
+    },
+    {
+      "speaker": "Mara Voss",
+      "text": "Ich mache mir zunächst selbst ein Bild. Darf ich alles besichtigen?"
+    },
+    {
+      "speaker": "Viktor Seyn",
+      "text": "Erdgeschoss, Laterne, Galerie. Den Keller lassen Sie aus."
+    },
+    {
+      "speaker": "Mara Voss",
+      "text": "Feuchtigkeitsschäden beginnen oft im Fundament, Herr Seyn. Wenn ich nicht nachsehe—"
+    },
+    {
+      "speaker": "Viktor Seyn",
+      "text": "Der Keller gehört nicht zum Auftrag."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "Er geht ihr voraus. Mara folgt, notiert. Die Tür hinter ihr fällt ins Schloss."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "Unter ihren Schritten — da ist etwas. Tief. Gedämpft. Wie ein Atem, der durch Stein muss."
+    },
+    {
+      "speaker": "Mara Voss",
+      "style": "quiet",
+      "text": "Hören Sie das?"
+    },
+    {
+      "speaker": "Viktor Seyn",
+      "text": "Nein."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "Er sagt es zu schnell."
+    }
+  ]
+}

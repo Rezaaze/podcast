@@ -1,0 +1,84 @@
+{
+  "lines": [
+    {
+      "speaker": "NARRATOR",
+      "text": "Not the code. This is three weeks before the code. A different patient. A different floor."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "Mrs. Callahan is fifty-one, admitted for observation following a cardiac event. She survives. That is not the part Reza will have to account for."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "He is charting at the end of a thirty-hour stretch when he finds the entry. A dosage note, positioned above his own in the record, timestamped three minutes before his admission entry. Which is impossible. Reza was the first physician through the door."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "He reads it twice. Then a third time. Then he walks it down the hall to the attending."
+    },
+    {
+      "speaker": "am_adam",
+      "text": "There's an entry above mine. The timestamp doesn't match the admission sequence. I was first in."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "Dr. Hartmann runs surgical overflow. He is fifty, and certain in the particular way that comes from twenty years of being the person everyone defers to. He takes the chart. Reads the entry. Places it on the counter."
+    },
+    {
+      "speaker": "am_michael",
+      "text": "The system's been logging timestamps wrong for weeks. IT flagged it. You didn't hear?"
+    },
+    {
+      "speaker": "am_adam",
+      "text": "No."
+    },
+    {
+      "speaker": "am_michael",
+      "text": "Not your fault. I'll correct it."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "Hartmann picks up a pen. He doesn't strike through the existing entry. He rewrites it — same dosage, different framing, different time code — and dates the amendment an hour after the original. Then he slides the chart back across."
+    },
+    {
+      "speaker": "am_michael",
+      "text": "Sign below mine. Continuity of record."
+    },
+    {
+      "speaker": "am_adam",
+      "text": "Should I — is this standard for —"
+    },
+    {
+      "speaker": "am_michael",
+      "text": "Documentation fix. Not a clinical change. The patient is fine. The record should reflect what actually happened."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "Reza signs."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "He goes home. He sleeps. Mrs. Callahan is discharged four days later. The chart goes to archive. Reza rotates to the next service and does not think about the timestamp again for twelve years."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "The entry Hartmann rewrote was not a documentation fix. It covered a dosage error — one that, left unaltered, would have opened a negligence inquiry into his department. The rewrite sealed that inquiry before it could start. Reza's signature placed him on the same page as the falsification."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "He was twenty-six. He trusted the attending the way every intern trusts the person who holds their evaluations."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "He is thirty-eight now. Hartmann is on the hospital board. Hartmann sits on the committee reviewing Reza's reinstatement hearing — the one just pushed back six weeks, the one Reza thought he was waiting on."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "Reza reads his own name at the bottom of the amended record."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "He has not been waiting. He has been waited for."
+    }
+  ]
+}

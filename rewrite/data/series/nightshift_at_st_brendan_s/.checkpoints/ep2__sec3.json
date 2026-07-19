@@ -1,0 +1,116 @@
+{
+  "lines": [
+    {
+      "speaker": "NARRATOR",
+      "text": "The call comes at 02:14. Not an alarm, not a code — just a phone placed face-down on the nursing station counter, and a charge nurse from Ward Seven who speaks in the flat register of someone who has already said the words once and hates having to say them again."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "Ward Seven. Cardiology overflow."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "Sixty-three-year-old man. Chest pain onset four hours prior. Diverted from the ER at triage — bay four closed, no capacity — sent up the hill to a ward staffed for post-op recovery, not for active cardiac. The defibrillator on that floor had been last recertified fourteen months ago. The crash cart sat in the corridor behind a supply trolley."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "He coded at 01:58. They worked him for sixteen minutes."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "Maeve hears this at the nursing station. Her back is to Theo when the charge nurse hangs up. For a moment nobody moves. The overhead fluorescents do what they always do: illuminate everything with complete indifference."
+    },
+    {
+      "speaker": "af_sarah",
+      "text": "Which bay did he come through?"
+    },
+    {
+      "speaker": "am_echo",
+      "text": "Four. Triage routed him at twenty-two hundred. Bay four was amber — held for observation, per the policy."
+    },
+    {
+      "speaker": "af_sarah",
+      "text": "Per whose policy."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "Theo already knows the answer. He has been watching bay four's amber tile on the board since the start of shift. He counted the patients who arrived after it was locked and had to be rerouted — four of them, two admitted, two sent home. He wrote one name on a notepad and then crossed it out and did not write another."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "Maeve walks to the board. She pulls up the triage log on the terminal — not the summary, the raw timestamped record — and scrolls to twenty-one forty-five. Bay four: closed. Notation: per H. protocol, effective 0900 today. She reads it twice. Her finger stays on the screen a moment longer than necessary, then lifts away."
+    },
+    {
+      "speaker": "am_michael",
+      "text": "Maeve."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "She turns. Theo watches her with the expression of a man who has already assembled the argument and wishes he hadn't."
+    },
+    {
+      "speaker": "af_sarah",
+      "text": "When did you know?"
+    },
+    {
+      "speaker": "am_michael",
+      "text": "I suspected. I didn't have the—"
+    },
+    {
+      "speaker": "af_sarah",
+      "text": "When."
+    },
+    {
+      "speaker": "am_michael",
+      "text": "Three hours ago. Maybe four."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "The words sit between them. Neither presses further. The room has a particular way of absorbing things like this — not swallowing them, exactly, more like suspending them in the fluorescent air, where they hang visible to anyone willing to look up."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "Maeve logs out of the terminal. Her hands are steady. In twelve years she has learned to keep her hands steady when everything else is not."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "At the nurses' station, someone refills a coffee cup. Down the corridor a monitor chirps twice and settles. The ambient noise of a functioning department fills the gap the phone call left, and for thirty seconds the ER sounds completely normal."
+    },
+    {
+      "speaker": "am_echo",
+      "text": "I'll file the incident report."
+    },
+    {
+      "speaker": "af_sarah",
+      "text": "Yes."
+    },
+    {
+      "speaker": "am_echo",
+      "text": "It'll route to administration. Harte's office."
+    },
+    {
+      "speaker": "af_sarah",
+      "text": "I know where it routes."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "He files it anyway. Three sentences. Patient identifier, ward, time of death. No commentary. The system timestamps it at 02:19 and generates a reference number that will sit in a queue until someone decides it warrants a second look."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "Maeve returns to the floor. Bay four's amber tile still glows on the board. Nobody has cleared it. Nobody has added a patient to it. It holds its square of screen real estate with the same bureaucratic patience it has held since nine o'clock that morning, when Harte signed the protocol into effect and went home for the night."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "A new patient arrives in bay two. Fifty-one years old, hypertensive, frightened. Maeve introduces herself, checks the BP cuff, asks the right questions in the right order. The man's hand trembles on the bed rail and she steadies it with two fingers and says his name until the trembling slows."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "The room absorbed the death at 02:19. Quietly. Without ceremony. It will absorb the next thing the same way. That is what rooms like this are built for."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "Bay four glows amber. Maeve works."
+    }
+  ]
+}

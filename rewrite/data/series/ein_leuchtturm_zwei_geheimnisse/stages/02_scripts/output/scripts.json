@@ -1,0 +1,578 @@
+{
+  "episodes": [
+    {
+      "episode": 0,
+      "sections": [
+        {
+          "lines": [
+            {
+              "speaker": "NARRATOR",
+              "style": "calm",
+              "text": "Das Dorf riecht nach Salz und altem Holz. Mara Voss lenkt ihren Wagen durch die einzige Straße, die diesen Namen verdient — Kopfsteinpflaster, halb vom Gras zurückerobert, Häuser mit zugezogenen Vorhängen. Ein Schild: Havenör. Population nicht mehr aktualisiert."
+            },
+            {
+              "speaker": "NARRATOR",
+              "text": "Sie parkt vor dem, was früher ein Gasthaus gewesen sein muss. Das Schild hängt schief. Drinnen brennt Licht."
+            },
+            {
+              "speaker": "Mara Voss",
+              "text": "Hallo? Ich bin die Architektin — Mara Voss. Ich soll heute ankommen. Jemand hat mir eine Adresse geschickt."
+            },
+            {
+              "speaker": "NARRATOR",
+              "text": "Eine Frau mittleren Alters tritt hinter dem Tresen hervor. Sie wischt die Hände an einem Tuch ab und mustert Mara von oben bis unten, ohne zu lächeln."
+            },
+            {
+              "speaker": "Dorfbewohnerin",
+              "style": "flat",
+              "text": "Wissen wir. Der Leuchtturm am Nordkap. Sanierung, haben sie gesagt."
+            },
+            {
+              "speaker": "Mara Voss",
+              "text": "Genau. Strukturelle Begutachtung zuerst, dann Kostenvoranschlag. Gibt es jemanden, der mir den Zugang aufsperrt?"
+            },
+            {
+              "speaker": "Dorfbewohnerin",
+              "style": "flat",
+              "text": "Viktor hat den Schlüssel. Viktor Seyn. Er wohnt oben am Hang."
+            },
+            {
+              "speaker": "NARRATOR",
+              "text": "Kurze Pause. Die Frau dreht sich um, als wäre das Gespräch beendet."
+            },
+            {
+              "speaker": "Mara Voss",
+              "text": "Und — wie lange steht der Turm leer?"
+            },
+            {
+              "speaker": "Dorfbewohnerin",
+              "style": "flat",
+              "text": "Lang genug."
+            },
+            {
+              "speaker": "NARRATOR",
+              "text": "Mara wartet auf mehr. Es kommt nichts. Durch das Fenster sieht sie zwei Männer auf der Straße stehenbleiben und in ihre Richtung schauen. Als ihr Blick sie trifft, gehen sie weiter. Keine Geste. Kein Nicken. Als hätte sie das alles nur eingebildet."
+            },
+            {
+              "speaker": "Mara Voss",
+              "text": "Gut. Dann fahre ich jetzt zu Herrn Seyn."
+            },
+            {
+              "speaker": "NARRATOR",
+              "text": "Sie nimmt ihre Tasche, tritt zurück in die Kälte und atmet die Meeresluft tief ein. Irgendwo in der Ferne steht der Turm. Noch unsichtbar. Aber sie spürt ihn bereits."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "speaker": "NARRATOR",
+              "style": "calm",
+              "text": "Die schwere Holztür des Leuchtturms steht einen Spalt offen, als Mara den Kiesweg hinaufgeht. Jemand hat auf sie gewartet."
+            },
+            {
+              "speaker": "VIKTOR",
+              "style": "neutral",
+              "text": "Frau Voss. Ich habe Sie schon vom Fenster aus gesehen."
+            },
+            {
+              "speaker": "MARA",
+              "style": "calm",
+              "text": "Herr Seyn, nehme ich an. Sie sind früh auf."
+            },
+            {
+              "speaker": "VIKTOR",
+              "style": "neutral",
+              "text": "Hier ist man immer früh auf. Kommen Sie herein."
+            },
+            {
+              "speaker": "NARRATOR",
+              "style": "calm",
+              "text": "Viktor Seyn ist Ende fünfzig, breitschultrig, mit einem Gesicht, das Wind und Salz gegerbt haben. Er hält die Tür auf und tritt sofort zur Seite, als wolle er sicherstellen, dass Mara vor ihm geht."
+            },
+            {
+              "speaker": "MARA",
+              "style": "calm",
+              "text": "Der Turm ist größer als auf den Plänen. Zwei Stockwerke Erdgeschoss?"
+            },
+            {
+              "speaker": "VIKTOR",
+              "style": "neutral",
+              "text": "Das untere ist nicht begehbar. Feuchtigkeit. Alter Schaden. Nichts, was für Ihre Arbeit relevant wäre."
+            },
+            {
+              "speaker": "NARRATOR",
+              "style": "calm",
+              "text": "Er sagt es zu schnell. Mara hört es, sagt aber nichts. Sie lässt ihren Blick durch den runden Raum wandern: Steinwände, ein alter Tisch, Werkzeug an Haken. An der westlichen Seite eine Tür — massiv, neu verputzt um den Rahmen herum."
+            },
+            {
+              "speaker": "MARA",
+              "style": "calm",
+              "text": "Und diese Tür?"
+            },
+            {
+              "speaker": "VIKTOR",
+              "style": "neutral",
+              "text": "Abstellraum. Leer."
+            },
+            {
+              "speaker": "NARRATOR",
+              "style": "calm",
+              "text": "Er dreht sich um, bevor sie fragen kann, ob sie ihn öffnen darf. Schon geht er zur Wendeltreppe."
+            },
+            {
+              "speaker": "VIKTOR",
+              "style": "neutral",
+              "text": "Das obere Stockwerk zeige ich Ihnen als nächstes. Da beginnt die eigentliche Arbeit."
+            },
+            {
+              "speaker": "MARA",
+              "style": "calm",
+              "text": "Einen Moment noch."
+            },
+            {
+              "speaker": "NARRATOR",
+              "style": "calm",
+              "text": "Sie tritt drei Schritte auf die Tür zu. Der Mörtel um den Rahmen ist heller als der Rest der Wand. Frisch. Vielleicht zwei, drei Jahre alt. Viktor steht am Fuß der Treppe und rührt sich nicht. Aber seine Hand umfasst das Geländer so fest, dass die Knöchel weiß werden."
+            },
+            {
+              "speaker": "MARA",
+              "style": "calm",
+              "text": "Sie haben Recht. Fangen wir oben an."
+            },
+            {
+              "speaker": "NARRATOR",
+              "style": "calm",
+              "text": "Sie lächelt ihn an. Er lächelt zurück. Keiner von beiden meint es so."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "speaker": "NARRATOR",
+              "style": "calm",
+              "text": "Der Wind kommt von See her. Jonas Falk steht am äußersten Rand des Kliffweges, wo das Geländer längst verrostet und weggefallen ist. Unter ihm: Felsen. Vor ihm: der Turm."
+            },
+            {
+              "speaker": "NARRATOR",
+              "text": "Er öffnet das Notizbuch. Seite vierzig. Die ersten neununddreißig hat er zu Hause, in einer Schachtel unter dem Bett. Er schreibt nicht mit dem Stift — er drückt. Als ob die Zahlen sich ins Papier graben müssten, um wahr zu sein."
+            },
+            {
+              "speaker": "Jonas Falk",
+              "speed": 0.88,
+              "style": "murmur",
+              "text": "Vierzehn Uhr sieben. Erdgeschoss, zweites Fenster von links. Vorhang bewegt."
+            },
+            {
+              "speaker": "NARRATOR",
+              "text": "Er wartet. Der Turm gibt nichts preis. Das ist es, was ihn alarmiert hat — nicht das, was er sieht, sondern der Rhythmus dessen, was er nicht sieht."
+            },
+            {
+              "speaker": "Jonas Falk",
+              "speed": 0.85,
+              "style": "murmur",
+              "text": "Zu regelmäßig für Zufall. Zu unregelmäßig für eine Maschine."
+            },
+            {
+              "speaker": "NARRATOR",
+              "text": "Eine Möwe schießt tief über ihn hinweg. Er zuckt nicht. Er hat gelernt, ruhig zu bleiben, wenn etwas nahe kommt."
+            },
+            {
+              "speaker": "NARRATOR",
+              "text": "Vierzehn Uhr neun. Das Fenster dunkel. Jonas streicht die letzte Eintragung nicht durch. Er umkreist sie."
+            },
+            {
+              "speaker": "Jonas Falk",
+              "speed": 0.9,
+              "style": "murmur",
+              "text": "Noch zwei Tage. Dann hab ich das Muster."
+            },
+            {
+              "speaker": "NARRATOR",
+              "text": "Er klappt das Notizbuch zu. Der Wind dreht sich. Irgendwo im Turm bewegt sich ein Schatten."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "speaker": "NARRATOR",
+              "style": "neutral",
+              "text": "Das obere Stockwerk des Leuchtturms riecht nach altem Öl und Salz. Elise Dorn kniet hinter dem runden Fensterrahmen, die Stirn fast am Glas. In ihren Händen: ein flaches Gerät, kaum größer als ein Taschenbuch. Schwarzes Gehäuse, keine Beschriftung."
+            },
+            {
+              "speaker": "ELISE",
+              "style": "whisper",
+              "text": "Frequenz zwei-vier-null. Gut."
+            },
+            {
+              "speaker": "NARRATOR",
+              "style": "neutral",
+              "text": "Sie dreht am Regler, millimeterweise. Der Sender summt – ein leiser, gleichmäßiger Ton, den nur sie hören kann. Oder der ins Mauerwerk kriecht, unsichtbar, unaufhaltsam. Sie stellt sich vor, wie das Signal die Wände durchwandert. Wie es hinausgeht über das Meer."
+            },
+            {
+              "speaker": "ELISE",
+              "style": "whisper",
+              "text": "Sechzehn Stunden. Dann kommt die Antwort. Wenn sie kommt."
+            },
+            {
+              "speaker": "NARRATOR",
+              "style": "neutral",
+              "text": "Ein Laut. Unten. Ein Schritt – schwer, langsam – auf Stein. Elise hält inne. Die Finger erstarren am Regler. Sie zählt. Einen Herzschlag. Zwei. Den dritten."
+            },
+            {
+              "speaker": "ELISE",
+              "style": "whisper",
+              "text": "Ruhig."
+            },
+            {
+              "speaker": "NARRATOR",
+              "style": "neutral",
+              "text": "Der Schritt wiederholt sich. Dann noch einer. Die Treppe. Jemand kommt die Treppe hinauf. Elise drückt den Sender an die Brust und bewegt sich nicht. Das Summen im Mauerwerk hört auf. Oder sie bildet es sich ein. Beides ist schlimm."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "speaker": "NARRATOR",
+              "text": "Der Leuchtturm liegt still, als Viktor zurückkommt. Kein Wind mehr, nur das ferne Klatschen der Wellen gegen den Fels. Er hat gewartet, bis die letzten Lichter im Dorf erloschen sind."
+            },
+            {
+              "speaker": "NARRATOR",
+              "text": "Er schließt die Tür hinter sich, ohne Licht zu machen. Er kennt den Weg. Jeden Schritt, jeden Knarz im Boden, jede Stelle, wo die Decke zu tief hängt."
+            },
+            {
+              "speaker": "NARRATOR",
+              "text": "Im Erdgeschoss bleibt er stehen. Vor der Wand."
+            },
+            {
+              "speaker": "NARRATOR",
+              "text": "Sie ist nicht alt. Das ist das Erste, was ihm damals aufgefallen ist, als er alt genug war, es zu verstehen. Der Mörtel ist sauberer als der Rest. Die Steine passen zu genau. Jemand hat sich Zeit genommen."
+            },
+            {
+              "speaker": "NARRATOR",
+              "text": "Er zieht den Schlüssel aus der Jacke. Klein, fast lächerlich klein für das, was er bedeutet. Messing, poliert von Jahrzehnten in einer Handtasche, dann in einer Schublade, dann in seiner Faust."
+            },
+            {
+              "speaker": "Viktor Seyn",
+              "style": "leise, fast unhörbar",
+              "text": "Ich weiß, dass du da bist."
+            },
+            {
+              "speaker": "NARRATOR",
+              "text": "Er sagt es zur Wand. Nicht als Frage."
+            },
+            {
+              "speaker": "NARRATOR",
+              "text": "Er legt die freie Hand flach gegen die Steine. Das Mauerwerk ist kalt, kälter als die Luft. Irgendwo dahinter müsste es atmen, denkt er. Irgendwo dahinter ist alles, was sie ihm nicht erklärt hat."
+            },
+            {
+              "speaker": "NARRATOR",
+              "text": "Der Schlüssel passt nirgendwohin. Das hat er immer gewusst. Kein Schloss in dieser Wand, kein Schloss mehr im ganzen Turm. Sie hat ihm trotzdem den Schlüssel hinterlassen."
+            },
+            {
+              "speaker": "Viktor Seyn",
+              "style": "ruhig, erschöpft",
+              "text": "Was hast du mir damit sagen wollen."
+            },
+            {
+              "speaker": "NARRATOR",
+              "text": "Die Wand antwortet nicht. Das Summen, das er manchmal zu hören glaubt, bleibt aus. Nur sein eigener Atem, und die Stille, die schwerer wiegt als alles andere."
+            }
+          ]
+        }
+      ],
+      "summary": {
+        "closing_excerpt": "antwortet nicht. Das Summen, das er manchmal zu hören glaubt, bleibt aus. Nur sein eigener Atem, und die Stille, die schwerer wiegt als alles andere.",
+        "episode": 0,
+        "figure": "Viktor Seyn",
+        "section_titles": [
+          "Ankunft im toten Dorf",
+          "Der Mann mit dem Schlüssel",
+          "Der Beobachter am Klippenweg",
+          "Das Summen im Mauerwerk",
+          "Viktor allein vor der Wand"
+        ],
+        "theme": "Das Gewicht eines Schweigens, das drei Jahrzehnte lang als Schutz getarnt war"
+      },
+      "text": "Das Dorf riecht nach Salz und altem Holz. Mara Voss lenkt ihren Wagen durch die einzige Straße, die diesen Namen verdient — Kopfsteinpflaster, halb vom Gras zurückerobert, Häuser mit zugezogenen Vorhängen. Ein Schild: Havenör. Population nicht mehr aktualisiert. Sie parkt vor dem, was früher ein Gasthaus gewesen sein muss. Das Schild hängt schief. Drinnen brennt Licht. Hallo? Ich bin die Architektin — Mara Voss. Ich soll heute ankommen. Jemand hat mir eine Adresse geschickt. Eine Frau mittleren Alters tritt hinter dem Tresen hervor. Sie wischt die Hände an einem Tuch ab und mustert Mara von oben bis unten, ohne zu lächeln. Wissen wir. Der Leuchtturm am Nordkap. Sanierung, haben sie gesagt. Genau. Strukturelle Begutachtung zuerst, dann Kostenvoranschlag. Gibt es jemanden, der mir den Zugang aufsperrt? Viktor hat den Schlüssel. Viktor Seyn. Er wohnt oben am Hang. Kurze Pause. Die Frau dreht sich um, als wäre das Gespräch beendet. Und — wie lange steht der Turm leer? Lang genug. Mara wartet auf mehr. Es kommt nichts. Durch das Fenster sieht sie zwei Männer auf der Straße stehenbleiben und in ihre Richtung schauen. Als ihr Blick sie trifft, gehen sie weiter. Keine Geste. Kein Nicken. Als hätte sie das alles nur eingebildet. Gut. Dann fahre ich jetzt zu Herrn Seyn. Sie nimmt ihre Tasche, tritt zurück in die Kälte und atmet die Meeresluft tief ein. Irgendwo in der Ferne steht der Turm. Noch unsichtbar. Aber sie spürt ihn bereits. Die schwere Holztür des Leuchtturms steht einen Spalt offen, als Mara den Kiesweg hinaufgeht. Jemand hat auf sie gewartet. Frau Voss. Ich habe Sie schon vom Fenster aus gesehen. Herr Seyn, nehme ich an. Sie sind früh auf. Hier ist man immer früh auf. Kommen Sie herein. Viktor Seyn ist Ende fünfzig, breitschultrig, mit einem Gesicht, das Wind und Salz gegerbt haben. Er hält die Tür auf und tritt sofort zur Seite, als wolle er sicherstellen, dass Mara vor ihm geht. Der Turm ist größer als auf den Plänen. Zwei Stockwerke Erdgeschoss? Das untere ist nicht begehbar. Feuchtigkeit. Alter Schaden. Nichts, was für Ihre Arbeit relevant wäre. Er sagt es zu schnell. Mara hört es, sagt aber nichts. Sie lässt ihren Blick durch den runden Raum wandern: Steinwände, ein alter Tisch, Werkzeug an Haken. An der westlichen Seite eine Tür — massiv, neu verputzt um den Rahmen herum. Und diese Tür? Abstellraum. Leer. Er dreht sich um, bevor sie fragen kann, ob sie ihn öffnen darf. Schon geht er zur Wendeltreppe. Das obere Stockwerk zeige ich Ihnen als nächstes. Da beginnt die eigentliche Arbeit. Einen Moment noch. Sie tritt drei Schritte auf die Tür zu. Der Mörtel um den Rahmen ist heller als der Rest der Wand. Frisch. Vielleicht zwei, drei Jahre alt. Viktor steht am Fuß der Treppe und rührt sich nicht. Aber seine Hand umfasst das Geländer so fest, dass die Knöchel weiß werden. Sie haben Recht. Fangen wir oben an. Sie lächelt ihn an. Er lächelt zurück. Keiner von beiden meint es so. Der Wind kommt von See her. Jonas Falk steht am äußersten Rand des Kliffweges, wo das Geländer längst verrostet und weggefallen ist. Unter ihm: Felsen. Vor ihm: der Turm. Er öffnet das Notizbuch. Seite vierzig. Die ersten neununddreißig hat er zu Hause, in einer Schachtel unter dem Bett. Er schreibt nicht mit dem Stift — er drückt. Als ob die Zahlen sich ins Papier graben müssten, um wahr zu sein. Vierzehn Uhr sieben. Erdgeschoss, zweites Fenster von links. Vorhang bewegt. Er wartet. Der Turm gibt nichts preis. Das ist es, was ihn alarmiert hat — nicht das, was er sieht, sondern der Rhythmus dessen, was er nicht sieht. Zu regelmäßig für Zufall. Zu unregelmäßig für eine Maschine. Eine Möwe schießt tief über ihn hinweg. Er zuckt nicht. Er hat gelernt, ruhig zu bleiben, wenn etwas nahe kommt. Vierzehn Uhr neun. Das Fenster dunkel. Jonas streicht die letzte Eintragung nicht durch. Er umkreist sie. Noch zwei Tage. Dann hab ich das Muster. Er klappt das Notizbuch zu. Der Wind dreht sich. Irgendwo im Turm bewegt sich ein Schatten. Das obere Stockwerk des Leuchtturms riecht nach altem Öl und Salz. Elise Dorn kniet hinter dem runden Fensterrahmen, die Stirn fast am Glas. In ihren Händen: ein flaches Gerät, kaum größer als ein Taschenbuch. Schwarzes Gehäuse, keine Beschriftung. Frequenz zwei-vier-null. Gut. Sie dreht am Regler, millimeterweise. Der Sender summt – ein leiser, gleichmäßiger Ton, den nur sie hören kann. Oder der ins Mauerwerk kriecht, unsichtbar, unaufhaltsam. Sie stellt sich vor, wie das Signal die Wände durchwandert. Wie es hinausgeht über das Meer. Sechzehn Stunden. Dann kommt die Antwort. Wenn sie kommt. Ein Laut. Unten. Ein Schritt – schwer, langsam – auf Stein. Elise hält inne. Die Finger erstarren am Regler. Sie zählt. Einen Herzschlag. Zwei. Den dritten. Ruhig. Der Schritt wiederholt sich. Dann noch einer. Die Treppe. Jemand kommt die Treppe hinauf. Elise drückt den Sender an die Brust und bewegt sich nicht. Das Summen im Mauerwerk hört auf. Oder sie bildet es sich ein. Beides ist schlimm. Der Leuchtturm liegt still, als Viktor zurückkommt. Kein Wind mehr, nur das ferne Klatschen der Wellen gegen den Fels. Er hat gewartet, bis die letzten Lichter im Dorf erloschen sind. Er schließt die Tür hinter sich, ohne Licht zu machen. Er kennt den Weg. Jeden Schritt, jeden Knarz im Boden, jede Stelle, wo die Decke zu tief hängt. Im Erdgeschoss bleibt er stehen. Vor der Wand. Sie ist nicht alt. Das ist das Erste, was ihm damals aufgefallen ist, als er alt genug war, es zu verstehen. Der Mörtel ist sauberer als der Rest. Die Steine passen zu genau. Jemand hat sich Zeit genommen. Er zieht den Schlüssel aus der Jacke. Klein, fast lächerlich klein für das, was er bedeutet. Messing, poliert von Jahrzehnten in einer Handtasche, dann in einer Schublade, dann in seiner Faust. Ich weiß, dass du da bist. Er sagt es zur Wand. Nicht als Frage. Er legt die freie Hand flach gegen die Steine. Das Mauerwerk ist kalt, kälter als die Luft. Irgendwo dahinter müsste es atmen, denkt er. Irgendwo dahinter ist alles, was sie ihm nicht erklärt hat. Der Schlüssel passt nirgendwohin. Das hat er immer gewusst. Kein Schloss in dieser Wand, kein Schloss mehr im ganzen Turm. Sie hat ihm trotzdem den Schlüssel hinterlassen. Was hast du mir damit sagen wollen. Die Wand antwortet nicht. Das Summen, das er manchmal zu hören glaubt, bleibt aus. Nur sein eigener Atem, und die Stille, die schwerer wiegt als alles andere."
+    },
+    {
+      "episode": 1,
+      "sections": [
+        {
+          "lines": [
+            {
+              "speaker": "NARRATOR",
+              "text": "Der Leuchtturm steht am Ende der Klippenstraße, als hätte ihn jemand dort abgestellt und vergessen. Mara Voss parkt ihren Wagen im Schotter und schaut hinauf."
+            },
+            {
+              "speaker": "Mara Voss",
+              "text": "Herr Seyn?"
+            },
+            {
+              "speaker": "Viktor Seyn",
+              "style": "flat",
+              "text": "Ich bin hier."
+            },
+            {
+              "speaker": "NARRATOR",
+              "text": "Er tritt aus der Eingangstür. Kein Lächeln, kein Händedruck. Nur ein kurzes Nicken, das alles erledigen soll."
+            },
+            {
+              "speaker": "Viktor Seyn",
+              "style": "flat",
+              "text": "Treppe braucht neue Stufen. Fensterdichtungen. Fassade ab dem zweiten Absatz."
+            },
+            {
+              "speaker": "Mara Voss",
+              "text": "Ich mache mir zunächst selbst ein Bild. Darf ich alles besichtigen?"
+            },
+            {
+              "speaker": "Viktor Seyn",
+              "text": "Erdgeschoss, Laterne, Galerie. Den Keller lassen Sie aus."
+            },
+            {
+              "speaker": "Mara Voss",
+              "text": "Feuchtigkeitsschäden beginnen oft im Fundament, Herr Seyn. Wenn ich nicht nachsehe—"
+            },
+            {
+              "speaker": "Viktor Seyn",
+              "text": "Der Keller gehört nicht zum Auftrag."
+            },
+            {
+              "speaker": "NARRATOR",
+              "text": "Er geht ihr voraus. Mara folgt, notiert. Die Tür hinter ihr fällt ins Schloss."
+            },
+            {
+              "speaker": "NARRATOR",
+              "text": "Unter ihren Schritten — da ist etwas. Tief. Gedämpft. Wie ein Atem, der durch Stein muss."
+            },
+            {
+              "speaker": "Mara Voss",
+              "style": "quiet",
+              "text": "Hören Sie das?"
+            },
+            {
+              "speaker": "Viktor Seyn",
+              "text": "Nein."
+            },
+            {
+              "speaker": "NARRATOR",
+              "text": "Er sagt es zu schnell."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "speaker": "NARRATOR",
+              "text": "Der Keller riecht nach Kalk und stehendem Wasser. Mara lässt das Maßband laufen, notiert, rechnet."
+            },
+            {
+              "speaker": "MARA",
+              "text": "Die Außenwand hier — vier Meter dreißig. Aber von innen komme ich auf drei neunzig."
+            },
+            {
+              "speaker": "NARRATOR",
+              "text": "Viktor lehnt im Türrahmen. Er bewegt sich nicht."
+            },
+            {
+              "speaker": "MARA",
+              "text": "Vierzig Zentimeter Differenz. Das ist keine Dämmschicht."
+            },
+            {
+              "speaker": "NARRATOR",
+              "text": "Sie folgt der Wand mit der Taschenlampe. Die Fugen sind anders hier. Jünger. Die Steine wurden irgendwann eingesetzt — sorgfältig, aber nicht von derselben Hand."
+            },
+            {
+              "speaker": "MARA",
+              "text": "Sehen Sie das? Die Mörtelstruktur — nachträglich. Jemand hat hier zugemauert. Irgendwann nach dem Originalbestand."
+            },
+            {
+              "speaker": "NARRATOR",
+              "text": "Viktor schweigt. Mara dreht sich zu ihm — und hält inne. Er ist weiß geworden."
+            },
+            {
+              "speaker": "VIKTOR",
+              "style": "low",
+              "text": "Die Wand ist stabil. Das steht im Baubericht."
+            },
+            {
+              "speaker": "MARA",
+              "text": "Welchen Baubericht? Ich habe keine Unterlagen für diesen Abschnitt bekommen."
+            },
+            {
+              "speaker": "VIKTOR",
+              "text": "Ich lasse Ihnen alles zukommen."
+            },
+            {
+              "speaker": "MARA",
+              "text": "Herr Seyn — wenn hier ein vermauerter Durchgang ist, muss ich das in die Tragwerksanalyse aufnehmen. Was war das ursprünglich? Ein Nebenraum? Ein Zugang zur—"
+            },
+            {
+              "speaker": "VIKTOR",
+              "speed": 0.9,
+              "style": "low",
+              "text": "Es gibt keine Unterlagen mehr."
+            },
+            {
+              "speaker": "NARRATOR",
+              "text": "Die Art, wie er das sagt. Nicht als Antwort. Als Riegel."
+            },
+            {
+              "speaker": "VIKTOR",
+              "text": "Wir machen für heute Schluss."
+            },
+            {
+              "speaker": "NARRATOR",
+              "text": "Er wartet ihre Reaktion nicht ab. Seine Schritte auf der Treppe klingen schwerer als beim Abstieg. Mara steht allein im Keller. Vor der Wand. In den Rissen läuft alter Mörtel wie geheilte Schnitte — zu glatt, zu absichtlich."
+            },
+            {
+              "speaker": "MARA",
+              "speed": 0.85,
+              "style": "low",
+              "text": "Was liegt dahinter."
+            },
+            {
+              "speaker": "NARRATOR",
+              "text": "Kein Fragezeichen in ihrer Stimme. Nur das leise Ankündigen einer Gewissheit, die sich nicht mehr aufhalten lässt."
+            }
+          ]
+        },
+        {
+          "lines": [
+            {
+              "speaker": "NARRATOR",
+              "style": "neutral",
+              "text": "Das Licht im Turm fällt schräg. Mittags schon, und Elise Dorn steht so, als hätte sie die ganze Nacht nicht geschlafen. Jonas Falk kommt die Treppe herauf, ohne zu klopfen. Er hat nie geklopft."
+            },
+            {
+              "speaker": "JONAS",
+              "text": "Sie haben drei Nächte gebraucht, bis Sie das Muster geändert haben. Zu spät."
+            },
+            {
+              "speaker": "ELISE",
+              "text": "Ich weiß nicht, wovon Sie reden."
+            },
+            {
+              "speaker": "JONAS",
+              "text": "Das hier. Frequenz, Uhrzeit, Dauer. Vierzehn Einträge. Ihr Signal, Elise. Gut getarnt — aber nicht gut genug für jemanden, der weiß, wonach er sucht."
+            },
+            {
+              "speaker": "ELISE",
+              "text": "Das beweist nichts."
+            },
+            {
+              "speaker": "JONAS",
+              "text": "Die Behörde sieht das anders. Ich habe bereits einen Entwurf vorbereitet. Drei Klicks, und der Bericht geht raus. Ihr Name steht oben."
+            },
+            {
+              "speaker": "NARRATOR",
+              "style": "neutral",
+              "text": "Elise wendet sich nicht um. Aber ihre Hand, die eben noch die Treppenwange hielt, gibt nach. Ein fast unmerklicher Reflex. Jonas sieht es."
+            },
+            {
+              "speaker": "ELISE",
+              "text": "Was wollen Sie."
+            },
+            {
+              "speaker": "JONAS",
+              "text": "Informationen. Was hier wirklich läuft. Wer Ihnen den Sender gegeben hat, und warum er auf einer Frequenz sendet, die seit 1993 gesperrt ist."
+            },
+            {
+              "speaker": "ELISE",
+              "text": "Sie wissen nicht, was Sie da aufmachen."
+            },
+            {
+              "speaker": "JONAS",
+              "text": "Dann erklären Sie es mir. Vierundzwanzig Stunden. Danach entscheide ich."
+            },
+            {
+              "speaker": "NARRATOR",
+              "style": "neutral",
+              "text": "Kein Ultimatum klingt so kalt wie eines, das ohne Zorn gesprochen wird. Jonas lehnt sich gegen die Wand, die Arme locker, das Gesicht offen. Als hätte er Zeit. Als wäre das hier nur ein Gespräch unter Bekannten."
+            },
+            {
+              "speaker": "ELISE",
+              "text": "Wenn ich rede — was passiert mit dem, was Sie haben?"
+            },
+            {
+              "speaker": "JONAS",
+              "text": "Das hängt davon ab, was Sie mir sagen."
+            },
+            {
+              "speaker": "ELISE",
+              "text": "Das ist keine Garantie."
+            },
+            {
+              "speaker": "JONAS",
+              "text": "Nein. Mehr bekommt niemand in dieser Lage. Auch ich nicht."
+            },
+            {
+              "speaker": "ELISE",
+              "text": "Sie sagten, Sie wissen, auf welcher Frequenz gesendet wird. Das stimmt nicht, oder. Sie haben eine Zahl — aber nicht den Kontext dahinter."
+            },
+            {
+              "speaker": "JONAS",
+              "text": "Dann geben Sie mir den Kontext. Das ist Ihr Angebot, falls Sie eines haben. Ich höre zu."
+            },
+            {
+              "speaker": "NARRATOR",
+              "style": "neutral",
+              "text": "Zwischen ihnen: das leise Ticken des alten Uhrwerks hoch oben in der Laterne. Als ob die Zeit selbst abwägt, wem sie noch gehört und wem schon nicht mehr."
+            }
+          ]
+        }
+      ],
+      "summary": {
+        "closing_excerpt": "leise Ticken des alten Uhrwerks hoch oben in der Laterne. Als ob die Zeit selbst abwägt, wem sie noch gehört und wem schon nicht mehr.",
+        "episode": 1,
+        "figure": "Mara Voss",
+        "section_titles": [
+          "Ankunft",
+          "Was die Wand verbirgt",
+          "Das Druckmittel"
+        ],
+        "theme": "Wer die Wahrheit aufdeckt, trägt danach mit, was darunter lag"
+      },
+      "text": "Der Leuchtturm steht am Ende der Klippenstraße, als hätte ihn jemand dort abgestellt und vergessen. Mara Voss parkt ihren Wagen im Schotter und schaut hinauf. Herr Seyn? Ich bin hier. Er tritt aus der Eingangstür. Kein Lächeln, kein Händedruck. Nur ein kurzes Nicken, das alles erledigen soll. Treppe braucht neue Stufen. Fensterdichtungen. Fassade ab dem zweiten Absatz. Ich mache mir zunächst selbst ein Bild. Darf ich alles besichtigen? Erdgeschoss, Laterne, Galerie. Den Keller lassen Sie aus. Feuchtigkeitsschäden beginnen oft im Fundament, Herr Seyn. Wenn ich nicht nachsehe— Der Keller gehört nicht zum Auftrag. Er geht ihr voraus. Mara folgt, notiert. Die Tür hinter ihr fällt ins Schloss. Unter ihren Schritten — da ist etwas. Tief. Gedämpft. Wie ein Atem, der durch Stein muss. Hören Sie das? Nein. Er sagt es zu schnell. Der Keller riecht nach Kalk und stehendem Wasser. Mara lässt das Maßband laufen, notiert, rechnet. Die Außenwand hier — vier Meter dreißig. Aber von innen komme ich auf drei neunzig. Viktor lehnt im Türrahmen. Er bewegt sich nicht. Vierzig Zentimeter Differenz. Das ist keine Dämmschicht. Sie folgt der Wand mit der Taschenlampe. Die Fugen sind anders hier. Jünger. Die Steine wurden irgendwann eingesetzt — sorgfältig, aber nicht von derselben Hand. Sehen Sie das? Die Mörtelstruktur — nachträglich. Jemand hat hier zugemauert. Irgendwann nach dem Originalbestand. Viktor schweigt. Mara dreht sich zu ihm — und hält inne. Er ist weiß geworden. Die Wand ist stabil. Das steht im Baubericht. Welchen Baubericht? Ich habe keine Unterlagen für diesen Abschnitt bekommen. Ich lasse Ihnen alles zukommen. Herr Seyn — wenn hier ein vermauerter Durchgang ist, muss ich das in die Tragwerksanalyse aufnehmen. Was war das ursprünglich? Ein Nebenraum? Ein Zugang zur— Es gibt keine Unterlagen mehr. Die Art, wie er das sagt. Nicht als Antwort. Als Riegel. Wir machen für heute Schluss. Er wartet ihre Reaktion nicht ab. Seine Schritte auf der Treppe klingen schwerer als beim Abstieg. Mara steht allein im Keller. Vor der Wand. In den Rissen läuft alter Mörtel wie geheilte Schnitte — zu glatt, zu absichtlich. Was liegt dahinter. Kein Fragezeichen in ihrer Stimme. Nur das leise Ankündigen einer Gewissheit, die sich nicht mehr aufhalten lässt. Das Licht im Turm fällt schräg. Mittags schon, und Elise Dorn steht so, als hätte sie die ganze Nacht nicht geschlafen. Jonas Falk kommt die Treppe herauf, ohne zu klopfen. Er hat nie geklopft. Sie haben drei Nächte gebraucht, bis Sie das Muster geändert haben. Zu spät. Ich weiß nicht, wovon Sie reden. Das hier. Frequenz, Uhrzeit, Dauer. Vierzehn Einträge. Ihr Signal, Elise. Gut getarnt — aber nicht gut genug für jemanden, der weiß, wonach er sucht. Das beweist nichts. Die Behörde sieht das anders. Ich habe bereits einen Entwurf vorbereitet. Drei Klicks, und der Bericht geht raus. Ihr Name steht oben. Elise wendet sich nicht um. Aber ihre Hand, die eben noch die Treppenwange hielt, gibt nach. Ein fast unmerklicher Reflex. Jonas sieht es. Was wollen Sie. Informationen. Was hier wirklich läuft. Wer Ihnen den Sender gegeben hat, und warum er auf einer Frequenz sendet, die seit 1993 gesperrt ist. Sie wissen nicht, was Sie da aufmachen. Dann erklären Sie es mir. Vierundzwanzig Stunden. Danach entscheide ich. Kein Ultimatum klingt so kalt wie eines, das ohne Zorn gesprochen wird. Jonas lehnt sich gegen die Wand, die Arme locker, das Gesicht offen. Als hätte er Zeit. Als wäre das hier nur ein Gespräch unter Bekannten. Wenn ich rede — was passiert mit dem, was Sie haben? Das hängt davon ab, was Sie mir sagen. Das ist keine Garantie. Nein. Mehr bekommt niemand in dieser Lage. Auch ich nicht. Sie sagten, Sie wissen, auf welcher Frequenz gesendet wird. Das stimmt nicht, oder. Sie haben eine Zahl — aber nicht den Kontext dahinter. Dann geben Sie mir den Kontext. Das ist Ihr Angebot, falls Sie eines haben. Ich höre zu. Zwischen ihnen: das leise Ticken des alten Uhrwerks hoch oben in der Laterne. Als ob die Zeit selbst abwägt, wem sie noch gehört und wem schon nicht mehr."
+    }
+  ],
+  "phrase_reports": [
+    "no 3-gram repeated ≥2× across 0 episode(s).",
+    "8 repeated 3-gram(s) across 1 episode(s):\n- \"dreht sich um\" (used 2×)\n- \"steht der turm\" (used 2×)\n- \"er sagt es\" (used 2×)\n- \"um den rahmen\" (used 2×)\n- \"das obere stockwerk\" (used 2×)\n- \"als der rest\" (used 2×)\n- \"das was er\" (used 2×)\n- \"nicht das summen\" (used 2×)"
+  ],
+  "reviews": {
+    "0": [
+      {
+        "message": "Kanon-Widerspruch (Thread 1, Hard Fact 1): Laut Kanon wurde der Keller 1995 zugemauert — der Mörtel müsste also ~30 Jahre alt sein. Im Text beschreibt Mara den Mörtel um den Türrahmen aber explizit als 'frisch. Vielleicht zwei, drei Jahre alt.' Das widerspricht dem Kanonatum direkt und deutlich.",
+        "section": 2
+      },
+      {
+        "message": "Hard Fact 3 (Thread 1) nicht eingelöst: Der Kanon nennt als Maras Fund 'Risse in der vermauerten Wand'. Im Text bemerkt sie stattdessen den helleren, neueren Mörtel um den Rahmen — keine Risse. Das ist ein anderes Indiz, das die im Kanon festgelegte Entdeckungsform verfehlt.",
+        "section": 2
+      },
+      {
+        "message": "Viktor nennt den Raum hinter der Tür 'Abstellraum — leer'. Laut Kanon-Resolution liegt dort seit 30 Jahren eine Leiche. Viktor weiß davon. Die Formulierung 'leer' ist als Lüge dramaturgisch korrekt — kein Fehler, aber das Wort sollte in Folgefolgen nicht versehentlich als Wahrheit behandelt werden.",
+        "section": 2
+      }
+    ],
+    "1": [
+      {
+        "message": "Thread 1 – Hard Fact fehlt: 'Der Keller wurde 1995 zugemauert, kurz nach dem Verschwinden des Leuchtturmwärters.' Das Jahr und das Verschwinden des Wärters werden nirgends angedeutet. Viktor nennt nur 'es gibt keine Unterlagen mehr', ohne jeden Zeitbezug. Wenn dieser Fakt später tragend ist, braucht er hier eine Ankerpflöckung — z. B. ein Detail, das Mara die Epoche erschließt (Mörteltyp, Material, Jahreszahl an einem Balken)."
+      },
+      {
+        "message": "Thread 1 – Hard Fact fehlt: 'Viktor Seyn hat den Schlüssel zum alten Zugang — ein Erbstück seiner Mutter.' Weder Schlüssel noch Mutter tauchen im Text auf. Viktors emotionale Reaktion ('weiß geworden') lässt Schuld spüren, legt aber keinen Hinweis auf das Erbstück. Wenn der Schlüssel in einer späteren Episode bedeutsam wird, fehlt hier der Keim dafür."
+      },
+      {
+        "message": "Thread 2 – Charakter-Anker schwach: Jonas' Rolle als Journalist ist nicht etabliert. 'Der Bericht geht raus' klingt nach Behörde, nicht nach Redaktion. Ein einziges Wort (Notizblock, Verlag, 'meine Zeitung') würde den Kontext setzen und das Druckmittel klarer machen."
+      },
+      {
+        "message": "Kollisions-Mechanismus fehlt (Hard Fact Thread 2): 'Die beiden Geheimnisse kollidieren, als Maras Renovierung beide ans Licht zu bringen droht.' Die zwei Stränge — Keller/Viktor und Sender/Elise — laufen in dieser Episode vollständig parallel, ohne Berührungspunkt. Mara als gemeinsamer Auslöser ist im Elise-Jonas-Abschnitt nicht spürbar. Ein einziger Verweis (z. B. Jonas erwähnt, dass 'die Renovierungsarbeiten' den Sender bald sichtbar machen) würde den strukturellen Zusammenhang herstellen, ohne die Auflösung vorwegzunehmen."
+      }
+    ]
+  }
+}

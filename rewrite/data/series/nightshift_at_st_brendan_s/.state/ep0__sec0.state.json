@@ -1,0 +1,9 @@
+{
+  "meta": {
+    "badness": 0.07450980392156863,
+    "detail": "too short: 472 words < 510 (target 600); write more, add a concrete beat"
+  },
+  "produced": "ep0/sec0",
+  "status": "degraded",
+  "unit_id": "ep0/sec0"
+}

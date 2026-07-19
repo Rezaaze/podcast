@@ -1,0 +1,814 @@
+{
+  "capabilities": [
+    "needs_continuity_review",
+    "has_knowledge_split"
+  ],
+  "cast": [
+    {
+      "role": "Dr. Maeve Callahan — Senior ER attending, 40s, carries the night shift on her back and a secret drinking problem in her locker",
+      "voice": "af_sarah"
+    },
+    {
+      "role": "Nurse Theo Okafor — Charge nurse, 30s, the emotional spine of the unit, hiding a whistleblower complaint he hasn't filed yet",
+      "voice": "am_michael"
+    },
+    {
+      "role": "Dr. Reza Shirazi — Second-year resident, brilliant and brittle, on academic probation after a near-miss",
+      "voice": "am_adam"
+    },
+    {
+      "role": "Sister Agnes — Retired nun turned night-shift chaplain, 70s, knows every secret in the building",
+      "voice": "af_bella"
+    },
+    {
+      "role": "Paramedic Dana Voss — Freelance contractor, brings in the complicated cases and complicated history with Maeve",
+      "voice": "af_nicole"
+    },
+    {
+      "role": "Administrator Clive Harte — Night-shift operations manager, cutting beds to hit quarterly targets",
+      "voice": "am_echo"
+    }
+  ],
+  "episodes": [
+    {
+      "figure": "Dana Voss arrives at St. Brendan's on a frozen February night, her first call a multi-vehicle pile-up that forces her and Maeve to work side by side without a single personal word exchanged.",
+      "intro": "St. Brendan's ER, February. A frozen night that will not stay quiet.",
+      "outro": "The rig pulls out. The bay doors close. The season's central wound is open before anyone has named it.",
+      "sections": [
+        {
+          "location": "ambulance_bay",
+          "thread": "Maeve–Dana History",
+          "title": "Frozen Ground",
+          "what": "Dana arrives at the ambulance bay on a bitter February night. Theo clocks her name on the manifest. Maeve is nowhere in sight yet.",
+          "who": [
+            "Dana Voss",
+            "Theo Okafor"
+          ],
+          "word_budget": 600
+        },
+        {
+          "location": "er_floor",
+          "thread": "Maeve–Dana History",
+          "title": "Bay One",
+          "what": "Multi-vehicle pile-up floods the bays. Dana's rig first through. She and Maeve take the critical together — one look, no words about Cork.",
+          "who": [
+            "Dana Voss",
+            "Maeve Callahan",
+            "Theo Okafor",
+            "Reza Shirazi"
+          ],
+          "word_budget": 800
+        },
+        {
+          "location": "er_floor",
+          "thread": "Maeve–Dana History",
+          "title": "The Choreography",
+          "what": "They work the trauma in clinical silence, moving with muscle memory of a shared past. Everyone in the bay feels the unspoken weight.",
+          "who": [
+            "Maeve Callahan",
+            "Dana Voss",
+            "Reza Shirazi",
+            "Theo Okafor"
+          ],
+          "word_budget": 900
+        },
+        {
+          "location": "er_floor",
+          "thread": "Reza's Second Chance",
+          "title": "The Spine Holds",
+          "what": "Reza struggles with a secondary patient; Theo steadies him. Sister Agnes crosses the bay and sees what no one else is naming.",
+          "who": [
+            "Reza Shirazi",
+            "Theo Okafor",
+            "Sister Agnes"
+          ],
+          "word_budget": 700
+        },
+        {
+          "location": "break_room",
+          "thread": "Maeve–Dana History",
+          "title": "Off the Clock",
+          "what": "Pile-up clears. Dana signs transfer paperwork at the nurses' station. Maeve passes without stopping. Nothing is said.",
+          "who": [
+            "Dana Voss",
+            "Maeve Callahan",
+            "Theo Okafor"
+          ],
+          "word_budget": 600
+        },
+        {
+          "location": "ambulance_bay",
+          "thread": "Maeve–Dana History",
+          "title": "Last Rig Out",
+          "what": "Dana walks back to her rig through the ambulance bay. Cold air. She pauses at the threshold but does not look back.",
+          "who": [
+            "Dana Voss"
+          ],
+          "word_budget": 600
+        }
+      ],
+      "theme": "Reunion as denial — two people fluent in trauma who have forgotten how to speak to each other about anything that matters."
+    },
+    {
+      "figure": "Harte implements a new bay-closure policy during a peak-demand night; Theo watches the gap between policy and patient safety widen in real time and begins assembling evidence he doesn't yet have the courage to use.",
+      "intro": "St. Brendan's, 22:17. The night board is full.",
+      "outro": "Dawn is four hours away. The bay-closure order is still on the whiteboard.",
+      "sections": [
+        {
+          "location": "er_floor",
+          "thread": "Harte's Bed-Cut Conspiracy",
+          "title": "Peak Load",
+          "what": "The ER is at capacity on the busiest night in weeks. Maeve runs triage alone. Staff scramble. The system is cracking before Harte appears.",
+          "who": [
+            "Maeve",
+            "Theo",
+            "Reza"
+          ],
+          "word_budget": 700
+        },
+        {
+          "location": "admin_corridor",
+          "thread": "Harte's Bed-Cut Conspiracy",
+          "title": "The Order",
+          "what": "Harte closes two bays to hit overnight efficiency targets. Maeve objects. Theo silently logs the order. The gap between policy and patient safety opens.",
+          "who": [
+            "Harte",
+            "Maeve",
+            "Theo"
+          ],
+          "word_budget": 650
+        },
+        {
+          "location": "ambulance_bay",
+          "thread": "Maeve–Dana History",
+          "title": "Bay Arrival",
+          "turning_point": "tp_01",
+          "what": "Dana rolls a critical trauma through the ambulance bay. Her eyes find Maeve's. Neither speaks to the history. The bay fills with urgent, careful work.",
+          "who": [
+            "Dana",
+            "Maeve",
+            "Theo"
+          ],
+          "word_budget": 700
+        },
+        {
+          "location": "er_floor",
+          "thread": "Maeve–Dana History",
+          "title": "Enforced Silence",
+          "what": "Maeve and Dana work the trauma together. Every exchange is clinical, exact. The Cork past hums beneath each instruction. No one names what the room already knows.",
+          "who": [
+            "Maeve",
+            "Dana",
+            "Reza"
+          ],
+          "word_budget": 800
+        },
+        {
+          "location": "break_room",
+          "thread": "Theo's Whistleblower Dilemma",
+          "title": "Evidence Without Courage",
+          "what": "Theo watches a diverted patient deteriorate. He traces the delay directly to Harte's bay closure. He begins composing the complaint he cannot yet bring himself to file.",
+          "who": [
+            "Theo",
+            "Sister Agnes"
+          ],
+          "word_budget": 650
+        },
+        {
+          "location": "er_floor",
+          "thread": "Maeve–Dana History",
+          "title": "The Wound Left Open",
+          "what": "The trauma stabilises. Dana departs without a word. Theo watches Maeve watch her go. The season's central wound is visible to everyone. Nothing is named.",
+          "who": [
+            "Maeve",
+            "Dana",
+            "Theo"
+          ],
+          "word_budget": 700
+        }
+      ],
+      "theme": "Institutional complicity — how a system absorbs individual harm and calls it efficiency."
+    },
+    {
+      "figure": "Maeve's sobriety breaks quietly, alone, without drama or witness — or so she believes. The episode follows her through a shift in which every small victory over herself is undercut by what she did in the parking lot.",
+      "intro": "St. Brendan's ER, night shift. Maeve Callahan is four years sober and has not told anyone that the number feels less certain than it did this morning.",
+      "outro": "Two lockers locked. Two things that cannot be unseen by the people who did them. The shift ends. St. Brendan's does not notice.",
+      "sections": [
+        {
+          "location": "er_floor",
+          "thread": "Maeve's Relapse Arc",
+          "title": "The Long Walk In",
+          "what": "Maeve arrives for night shift already brittle. The locker holds what she has not touched in four years. She does not open it yet.",
+          "who": [
+            "af_sarah",
+            "am_michael"
+          ],
+          "word_budget": 450
+        },
+        {
+          "location": "er_floor",
+          "thread": "Harte's Bed-Cut Conspiracy",
+          "title": "Triage Arithmetic",
+          "what": "A held bay forces a divert. Maeve traces Harte's logic in real time and does not like where it leads.",
+          "who": [
+            "af_sarah",
+            "am_michael",
+            "am_echo"
+          ],
+          "word_budget": 600
+        },
+        {
+          "location": "er_floor",
+          "thread": "Maeve's Relapse Arc",
+          "title": "Every Small Victory",
+          "what": "Maeve works cleanly — a difficult airway, a seizing child. Each win feels provisional, credit borrowed against something she already owes.",
+          "who": [
+            "af_sarah",
+            "am_adam",
+            "am_michael"
+          ],
+          "word_budget": 650
+        },
+        {
+          "location": "er_floor",
+          "thread": "Harte's Bed-Cut Conspiracy",
+          "title": "The Death",
+          "what": "A patient dies on a diverted ward. The triage trail leads directly to Harte's bed-cut. The room absorbs it without a word.",
+          "who": [
+            "af_sarah",
+            "am_michael",
+            "am_echo"
+          ],
+          "word_budget": 700
+        },
+        {
+          "location": "ambulance_bay",
+          "thread": "Maeve's Relapse Arc",
+          "title": "Burning",
+          "what": "Maeve steps outside. The cold air does not help. She stands by her car and then goes back in empty-handed. Not yet.",
+          "who": [
+            "af_sarah",
+            "af_nicole"
+          ],
+          "word_budget": 500
+        },
+        {
+          "location": "break_room",
+          "thread": "Theo's Whistleblower Dilemma",
+          "title": "3 A.M. Draft",
+          "turning_point": "tp_02",
+          "what": "Theo writes the complaint in the break room. He names Harte, names the death, signs it. Then seals the envelope and locks it away.",
+          "who": [
+            "am_michael",
+            "af_bella"
+          ],
+          "word_budget": 700
+        },
+        {
+          "location": "ambulance_bay",
+          "thread": "Maeve's Relapse Arc",
+          "title": "The Parking Lot",
+          "what": "Before the shift ends Maeve goes back to her car. Four years end quietly and alone. She walks back in. Nobody saw.",
+          "who": [
+            "af_sarah"
+          ],
+          "word_budget": 600
+        }
+      ],
+      "theme": "The private architecture of relapse — how four years of discipline can dissolve in one moment of silence."
+    },
+    {
+      "figure": "Reza's probation hearing is postponed; he uses the breathing room to dig into his intern year and discovers the falsification. The episode splits between his past self on the ward and his present self reading the evidence.",
+      "intro": "",
+      "outro": "",
+      "sections": [
+        {
+          "location": "er_floor",
+          "thread": "Reza's Second Chance",
+          "title": "Postponed",
+          "what": "Reza gets the call: his probation hearing is pushed six weeks. He has time he didn't ask for and no idea what to do with it.",
+          "who": [
+            "am_adam"
+          ],
+          "word_budget": 350
+        },
+        {
+          "location": "er_floor",
+          "thread": "Maeve–Dana History",
+          "title": "The Night Shift Takes the Board",
+          "what": "Maeve takes handover. Dana rolls in a trauma. They work the bay in practiced silence. The shift's shape is already bad.",
+          "who": [
+            "af_sarah",
+            "am_michael",
+            "af_nicole"
+          ],
+          "word_budget": 500
+        },
+        {
+          "location": "er_floor",
+          "thread": "Reza's Second Chance",
+          "title": "Intern Year — The Ward at 2 a.m.",
+          "what": "Flashback. Reza as an intern, bone-tired, charting after a code. He remembers the chaos but not the entry that will undo him.",
+          "who": [
+            "am_adam"
+          ],
+          "word_budget": 500
+        },
+        {
+          "location": "break_room",
+          "thread": "Reza's Second Chance",
+          "title": "Present — The Old Chart",
+          "what": "Reza pulls the archived file. Reads one entry. The handwriting isn't his. He sits with that longer than he means to.",
+          "who": [
+            "am_adam"
+          ],
+          "word_budget": 450
+        },
+        {
+          "location": "er_floor",
+          "thread": "Maeve's Relapse Arc",
+          "title": "Mid-Shift: Maeve's Wall",
+          "what": "A pediatric case goes wrong. Maeve holds it for the family, then walks. Theo covers the board without being asked.",
+          "who": [
+            "af_sarah",
+            "am_michael"
+          ],
+          "word_budget": 500
+        },
+        {
+          "location": "er_floor",
+          "thread": "Reza's Second Chance",
+          "title": "Intern Year — What the Record Said",
+          "what": "Past Reza flags the discrepancy to the attending. The attending rewrites the note. Reza signs below it. He didn't know it was a lie.",
+          "who": [
+            "am_adam"
+          ],
+          "word_budget": 500
+        },
+        {
+          "location": "ambulance_bay",
+          "thread": "Maeve's Relapse Arc",
+          "title": "Four Years End in a Parking Lot",
+          "turning_point": "tp_03",
+          "what": "Maeve sits in her car. Opens the bottle she has carried for a month. Drinks. Dana sees her walk back inside and says nothing.",
+          "who": [
+            "af_sarah",
+            "af_nicole"
+          ],
+          "word_budget": 500
+        },
+        {
+          "location": "break_room",
+          "thread": "Reza's Second Chance",
+          "title": "Authorship",
+          "what": "Reza closes the chart. Someone else wrote the error. He still signed it. He has to decide what that makes him.",
+          "who": [
+            "am_adam"
+          ],
+          "word_budget": 400
+        }
+      ],
+      "theme": "Authorship of guilt — who owns a mistake when someone else wrote the record."
+    },
+    {
+      "figure": "Sister Agnes becomes the quiet axis of the episode, holding Theo's secret and watching Harte's pressure campaign from the chapel. Reza begins testing whether the board member will talk.",
+      "intro": "",
+      "outro": "",
+      "sections": [
+        {
+          "location": "break_room",
+          "thread": "Reza's Second Chance",
+          "title": "Night Records",
+          "what": "Reza retrieves archived charts from his intern year, alone after shift. He's reconstructing the near-miss methodically, driven by probation and a suspicion he can't yet name.",
+          "who": [
+            "Dr. Reza Shirazi"
+          ],
+          "word_budget": 400
+        },
+        {
+          "location": "chapel",
+          "thread": "Theo's Whistleblower Dilemma",
+          "title": "Agnes at the Threshold",
+          "what": "Agnes watches the ER from the chapel doorway, reading stress patterns in the unit. She notes Harte circling Theo's station more than usual tonight.",
+          "who": [
+            "Sister Agnes",
+            "Administrator Clive Harte"
+          ],
+          "word_budget": 350
+        },
+        {
+          "location": "admin_corridor",
+          "thread": "Harte's Bed-Cut Conspiracy",
+          "title": "Performance Review, Informal",
+          "what": "Harte corners Theo in the admin corridor, framing the meeting as managerial concern. The subtext is unmistakable: stop asking questions about the diverted ward.",
+          "who": [
+            "Administrator Clive Harte",
+            "Nurse Theo Okafor"
+          ],
+          "word_budget": 550
+        },
+        {
+          "location": "break_room",
+          "thread": "Reza's Second Chance",
+          "title": "The Wrong Handwriting",
+          "turning_point": "tp_04",
+          "what": "Reza finds a chart entry in unfamiliar handwriting dated the night of his near-miss. The entry exonerates him and implicates someone else entirely.",
+          "who": [
+            "Dr. Reza Shirazi"
+          ],
+          "word_budget": 650
+        },
+        {
+          "location": "chapel",
+          "thread": "Theo's Whistleblower Dilemma",
+          "title": "What Agnes Knows",
+          "what": "Theo slips into the chapel after Harte's ambush. Agnes already knows what was said; she tells him Harte's pressure follows a pattern she has seen before.",
+          "who": [
+            "Nurse Theo Okafor",
+            "Sister Agnes"
+          ],
+          "word_budget": 450
+        },
+        {
+          "location": "break_room",
+          "thread": "Reza's Second Chance",
+          "title": "The Board Member's Name",
+          "what": "Reza matches the handwriting to a current staff list. The name belongs to a board member — the attending who supervised his intern year.",
+          "who": [
+            "Dr. Reza Shirazi"
+          ],
+          "word_budget": 450
+        },
+        {
+          "location": "admin_corridor",
+          "thread": "Reza's Second Chance",
+          "title": "First Approach",
+          "what": "Reza engineers a casual encounter with the board member in the admin corridor. He floats an oblique question; the response tells him the man knows exactly who Reza is.",
+          "who": [
+            "Dr. Reza Shirazi",
+            "Administrator Clive Harte"
+          ],
+          "word_budget": 650
+        },
+        {
+          "location": "chapel",
+          "thread": "Theo's Whistleblower Dilemma",
+          "title": "Agnes and the Shape of the Building",
+          "what": "Agnes tells Theo that secrets don't stay buried — they migrate to whoever the institution can least afford to lose. She means him specifically.",
+          "who": [
+            "Sister Agnes",
+            "Nurse Theo Okafor"
+          ],
+          "word_budget": 500
+        },
+        {
+          "location": "break_room",
+          "thread": "Reza's Second Chance",
+          "title": "What the Chart Means Now",
+          "what": "Reza sits alone with the chart, deciding what first approach actually costs when the other person has thirty years of institutional armor.",
+          "who": [
+            "Dr. Reza Shirazi"
+          ],
+          "word_budget": 200
+        }
+      ],
+      "theme": "The weight of knowing — how institutional secrets concentrate in the people least protected by the institution."
+    },
+    {
+      "figure": "The second patient is a named character the audience has met — a regular night-shift presence, not a dramatic stranger. Theo's filing is bureaucratic and unheroic and entirely real.",
+      "intro": "",
+      "outro": "",
+      "sections": [
+        {
+          "location": "er_floor",
+          "thread": "Theo's Whistleblower Dilemma",
+          "title": "Night Rounds",
+          "what": "Theo recognizes the second patient — a regular face — now rerouted to a diverted ward by Harte's bed policy. He cannot follow.",
+          "who": [
+            "Theo Okafor",
+            "Dr. Maeve Callahan"
+          ],
+          "word_budget": 650
+        },
+        {
+          "location": "break_room",
+          "thread": "Theo's Whistleblower Dilemma",
+          "title": "The Locker",
+          "what": "Theo rereads his draft complaint alone. Maeve enters unexpectedly. He shuts the locker. Neither speaks about what matters.",
+          "who": [
+            "Theo Okafor",
+            "Dr. Maeve Callahan"
+          ],
+          "word_budget": 700
+        },
+        {
+          "location": "chapel",
+          "thread": "Theo's Whistleblower Dilemma",
+          "title": "The Chapel",
+          "turning_point": "tp_05",
+          "what": "Theo confesses the unfiled complaint to Agnes. She already knows the first death and names the second patient now deteriorating upstairs.",
+          "who": [
+            "Theo Okafor",
+            "Sister Agnes"
+          ],
+          "word_budget": 950
+        },
+        {
+          "location": "admin_corridor",
+          "thread": "Harte's Bed-Cut Conspiracy",
+          "title": "The Summons",
+          "turning_point": "tp_05",
+          "what": "Harte's assistant delivers the performance review notice mid-shift. Theo walks the admin corridor. The meeting has not started; the warning already has.",
+          "who": [
+            "Theo Okafor",
+            "Administrator Clive Harte"
+          ],
+          "word_budget": 850
+        },
+        {
+          "location": "er_floor",
+          "thread": "Theo's Whistleblower Dilemma",
+          "title": "Back on the Floor",
+          "what": "Theo returns. He checks the diverted patient's status through back channels. He pulls the complaint from his locker and reads it once more.",
+          "who": [
+            "Theo Okafor",
+            "Nurse Theo Okafor"
+          ],
+          "word_budget": 550
+        },
+        {
+          "location": "break_room",
+          "thread": "Theo's Whistleblower Dilemma",
+          "title": "Three Minutes to Six",
+          "what": "Theo dates the form but does not sign it. He puts it in his breast pocket. The shift continues around him.",
+          "who": [
+            "Theo Okafor"
+          ],
+          "word_budget": 500
+        }
+      ],
+      "theme": "The filing — small administrative acts as the only available form of courage."
+    },
+    {
+      "figure": "Maeve carries the resuscitation scene. Reza's confrontation with the board member is filmed as a single long corridor walk. Both characters reach the same threshold — the point where honesty costs something concrete — and each responds differently.",
+      "intro": "",
+      "outro": "",
+      "sections": [
+        {
+          "location": "break_room",
+          "thread": "Theo's Whistleblower Dilemma",
+          "title": "The Diverted Ward",
+          "what": "Theo confirms the second patient is deteriorating on the cut ward. He stands at his locker, complaint still unsigned.",
+          "who": [
+            "Theo",
+            "Sister Agnes"
+          ],
+          "word_budget": 550
+        },
+        {
+          "location": "er_floor",
+          "thread": "Maeve's Relapse Arc",
+          "title": "The Resuscitation",
+          "what": "Maeve runs the bay. She catches a near-error — barely. Only she knows why her hands weren't steady.",
+          "who": [
+            "Maeve",
+            "Reza",
+            "Dana"
+          ],
+          "word_budget": 750
+        },
+        {
+          "location": "admin_corridor",
+          "thread": "Reza's Second Chance",
+          "title": "The Long Walk",
+          "what": "Reza walks the admin corridor alone toward the board-member attending. One long, uninterrupted hallway.",
+          "who": [
+            "Reza"
+          ],
+          "word_budget": 650
+        },
+        {
+          "location": "er_floor",
+          "thread": "Reza's Second Chance",
+          "title": "Threshold",
+          "what": "Maeve stabilizes her patient. Reza refuses the board's quiet offer on the record. Same line, two crossings.",
+          "who": [
+            "Reza",
+            "Maeve",
+            "Dana"
+          ],
+          "word_budget": 700
+        },
+        {
+          "location": "break_room",
+          "thread": "Theo's Whistleblower Dilemma",
+          "title": "5:51 a.m.",
+          "what": "The second patient dies. Theo gets the call. The complaint is still in his locker.",
+          "who": [
+            "Theo",
+            "Sister Agnes"
+          ],
+          "word_budget": 600
+        },
+        {
+          "location": "break_room",
+          "thread": "Theo's Whistleblower Dilemma",
+          "title": "6:04 a.m.",
+          "turning_point": "tp_06",
+          "what": "Theo submits the complaint. No ceremony. He sends it and sits down.",
+          "who": [
+            "Theo"
+          ],
+          "word_budget": 500
+        },
+        {
+          "location": "admin_corridor",
+          "thread": "Harte's Bed-Cut Conspiracy",
+          "title": "The Machine",
+          "what": "Hospital legal and operations begin moving within the hour. Harte is informed before dawn.",
+          "who": [
+            "Harte",
+            "Theo"
+          ],
+          "word_budget": 450
+        }
+      ],
+      "theme": "The moment before choice — how people behave in the last seconds they can still lie to themselves."
+    },
+    {
+      "figure": "Maeve, Theo, and Reza each face a different kind of morning: loss of status, institutional vindication, and cleared record. The acquisition collapses offscreen. Dana brings two coffees to the ambulance bay.",
+      "intro": "",
+      "outro": "",
+      "sections": [
+        {
+          "location": "er_floor",
+          "thread": "Maeve's Relapse Arc",
+          "title": "The Same Lights",
+          "what": "Morning shift begins. Maeve arrives looking steady. The ER runs as always — same lights, same noise, different weight underneath.",
+          "who": [
+            "Maeve",
+            "Theo",
+            "Dana"
+          ],
+          "word_budget": 450
+        },
+        {
+          "location": "break_room",
+          "thread": "Theo's Whistleblower Dilemma",
+          "title": "What the Break Room Knows",
+          "what": "Staff have heard fragments: a complaint, an investigation. No one says Harte's name aloud. Theo makes coffee and says nothing.",
+          "who": [
+            "Theo",
+            "Reza",
+            "Sister Agnes"
+          ],
+          "word_budget": 500
+        },
+        {
+          "location": "er_floor",
+          "thread": "Maeve's Relapse Arc",
+          "title": "Resuscitation",
+          "turning_point": "tp_07",
+          "what": "Cardiac resus. Maeve nearly gives a lethal drug combination. She catches it, adjusts, says nothing. Only she knows why her hands shook.",
+          "who": [
+            "Maeve",
+            "Reza",
+            "Theo"
+          ],
+          "word_budget": 700
+        },
+        {
+          "location": "admin_corridor",
+          "thread": "Reza's Second Chance",
+          "title": "A Quiet Resolution",
+          "turning_point": "tp_07",
+          "what": "The board-member attending finds Reza privately and offers to close probation quietly. Reza refuses — he wants it on the record.",
+          "who": [
+            "Reza"
+          ],
+          "word_budget": 600
+        },
+        {
+          "location": "break_room",
+          "thread": "Theo's Whistleblower Dilemma",
+          "title": "Theo's Vindication, Which Feels Like Nothing",
+          "what": "HR confirms formal investigation. Theo expected relief. Instead he feels the weight of what comes next and who gets caught in it.",
+          "who": [
+            "Theo",
+            "Sister Agnes"
+          ],
+          "word_budget": 500
+        },
+        {
+          "location": "chapel",
+          "thread": "Maeve's Relapse Arc",
+          "title": "The Chapel, After",
+          "what": "Sister Agnes finds Maeve sitting alone. No confession — two women with what they know. Agnes says one sentence. Maeve doesn't answer.",
+          "who": [
+            "Maeve",
+            "Sister Agnes"
+          ],
+          "word_budget": 500
+        },
+        {
+          "location": "admin_corridor",
+          "thread": "Harte's Bed-Cut Conspiracy",
+          "title": "What Collapses Quietly",
+          "what": "Word filters through: the acquisition is off. Harte takes a call. The corridor outside his office goes quiet. No announcement, no drama.",
+          "who": [
+            "Clive Harte"
+          ],
+          "word_budget": 450
+        },
+        {
+          "location": "ambulance_bay",
+          "thread": "Maeve–Dana History",
+          "title": "Two Coffees",
+          "what": "Dana brings two coffees to the ambulance bay. Maeve is already there. They sit in the cold. Neither explains why.",
+          "who": [
+            "Dana",
+            "Maeve"
+          ],
+          "word_budget": 500
+        }
+      ],
+      "theme": "Accountability without catharsis — what remains after the reckoning, which is ordinary life with the same people in a slightly different configuration."
+    }
+  ],
+  "identity": {
+    "format": "soap_opera",
+    "language": "en",
+    "mode": "drama",
+    "title": "Nightshift at St. Brendan's"
+  },
+  "locations": [
+    {
+      "description": "St. Brendan's Emergency Room — fluorescent-lit chaos, curtained bays, the permanent smell of antiseptic and anxiety",
+      "key": "er_floor"
+    },
+    {
+      "description": "Staff break room behind the nurses' station — burnt coffee, a dying microwave, the real decisions get made here",
+      "key": "break_room"
+    },
+    {
+      "description": "Ground-floor chapel, rarely used for prayer, often used for conversations no one wants overheard",
+      "key": "chapel"
+    },
+    {
+      "description": "Exterior loading dock — cold air, cigarette breaks, the threshold between outside world and hospital reality",
+      "key": "ambulance_bay"
+    },
+    {
+      "description": "Third-floor corridor outside Harte's office — where policies that kill people are written on whiteboards",
+      "key": "admin_corridor"
+    }
+  ],
+  "schema_version": 1,
+  "threads": [
+    {
+      "hard_facts": [
+        "Maeve has been sober for four years before the series begins",
+        "Her ex-husband filed the original complaint that ended her hospital privileges in Cork",
+        "Dana knows and has been enabling her silence"
+      ],
+      "label": "Maeve's Relapse Arc",
+      "resolution": "Maeve's drinking escalates through the season until a critical decision under impairment forces her to choose between covering it up and coming clean — she chooses truth, enters a monitored programme, loses her attending status temporarily"
+    },
+    {
+      "hard_facts": [
+        "The complaint names Harte by name",
+        "Theo's immigration status makes retaliation existentially threatening to him",
+        "Sister Agnes is the only person he has told"
+      ],
+      "label": "Theo's Whistleblower Dilemma",
+      "resolution": "Theo's complaint about Harte's bed-cuts causing a preventable death sits unsigned for six episodes; a second death forces him to file it, triggering an investigation that reshapes the hospital's power structure"
+    },
+    {
+      "hard_facts": [
+        "The original near-miss involved a falsified chart, not Reza's clinical error",
+        "The attending who falsified it is now on the hospital board",
+        "Maeve suspects but has never confronted him"
+      ],
+      "label": "Reza's Second Chance",
+      "resolution": "Reza's probation is secretly tied to a cover-up from his intern year; across the season he reconstructs what really happened and accepts responsibility publicly, clearing his record honestly rather than politically"
+    },
+    {
+      "hard_facts": [
+        "The acquisition target is a private US chain",
+        "Harte genuinely believes fewer beds means faster throughput — he has convinced himself it is clinical, not financial",
+        "Three patients have been harmed by the policy before the season begins"
+      ],
+      "label": "Harte's Bed-Cut Conspiracy",
+      "resolution": "Harte is executing a board directive to make the ER financially unattractive ahead of a private-equity acquisition; when this becomes public via Theo's complaint, the acquisition collapses and Harte resigns"
+    },
+    {
+      "hard_facts": [
+        "Dana left Cork without explanation — Maeve never knew the real reason",
+        "Dana's contractor status is her deliberate choice: she refuses to be institutionally trapped again",
+        "Their first scene together in the ER is a reunion neither acknowledges aloud"
+      ],
+      "label": "Maeve–Dana History",
+      "resolution": "It emerges that Maeve and Dana were together during Maeve's Cork posting; Dana transferred to St. Brendan's partially to keep an eye on her; by the finale they acknowledge the relationship ended because Maeve chose the bottle over Dana, and begin cautiously rebuilding"
+    }
+  ]
+}

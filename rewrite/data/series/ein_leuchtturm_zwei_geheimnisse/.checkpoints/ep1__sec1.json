@@ -1,0 +1,77 @@
+{
+  "lines": [
+    {
+      "speaker": "NARRATOR",
+      "text": "Der Keller riecht nach Kalk und stehendem Wasser. Mara lässt das Maßband laufen, notiert, rechnet."
+    },
+    {
+      "speaker": "MARA",
+      "text": "Die Außenwand hier — vier Meter dreißig. Aber von innen komme ich auf drei neunzig."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "Viktor lehnt im Türrahmen. Er bewegt sich nicht."
+    },
+    {
+      "speaker": "MARA",
+      "text": "Vierzig Zentimeter Differenz. Das ist keine Dämmschicht."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "Sie folgt der Wand mit der Taschenlampe. Die Fugen sind anders hier. Jünger. Die Steine wurden irgendwann eingesetzt — sorgfältig, aber nicht von derselben Hand."
+    },
+    {
+      "speaker": "MARA",
+      "text": "Sehen Sie das? Die Mörtelstruktur — nachträglich. Jemand hat hier zugemauert. Irgendwann nach dem Originalbestand."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "Viktor schweigt. Mara dreht sich zu ihm — und hält inne. Er ist weiß geworden."
+    },
+    {
+      "speaker": "VIKTOR",
+      "style": "low",
+      "text": "Die Wand ist stabil. Das steht im Baubericht."
+    },
+    {
+      "speaker": "MARA",
+      "text": "Welchen Baubericht? Ich habe keine Unterlagen für diesen Abschnitt bekommen."
+    },
+    {
+      "speaker": "VIKTOR",
+      "text": "Ich lasse Ihnen alles zukommen."
+    },
+    {
+      "speaker": "MARA",
+      "text": "Herr Seyn — wenn hier ein vermauerter Durchgang ist, muss ich das in die Tragwerksanalyse aufnehmen. Was war das ursprünglich? Ein Nebenraum? Ein Zugang zur—"
+    },
+    {
+      "speaker": "VIKTOR",
+      "speed": 0.9,
+      "style": "low",
+      "text": "Es gibt keine Unterlagen mehr."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "Die Art, wie er das sagt. Nicht als Antwort. Als Riegel."
+    },
+    {
+      "speaker": "VIKTOR",
+      "text": "Wir machen für heute Schluss."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "Er wartet ihre Reaktion nicht ab. Seine Schritte auf der Treppe klingen schwerer als beim Abstieg. Mara steht allein im Keller. Vor der Wand. In den Rissen läuft alter Mörtel wie geheilte Schnitte — zu glatt, zu absichtlich."
+    },
+    {
+      "speaker": "MARA",
+      "speed": 0.85,
+      "style": "low",
+      "text": "Was liegt dahinter."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "Kein Fragezeichen in ihrer Stimme. Nur das leise Ankündigen einer Gewissheit, die sich nicht mehr aufhalten lässt."
+    }
+  ]
+}

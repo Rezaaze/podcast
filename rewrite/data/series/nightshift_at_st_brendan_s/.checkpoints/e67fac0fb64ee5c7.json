@@ -1,0 +1,71 @@
+{
+  "sections": [
+    {
+      "location": "er_floor",
+      "thread": "Theo's Whistleblower Dilemma",
+      "title": "Night Rounds",
+      "what": "Theo recognizes the second patient — a regular face — now rerouted to a diverted ward by Harte's bed policy. He cannot follow.",
+      "who": [
+        "Theo Okafor",
+        "Dr. Maeve Callahan"
+      ],
+      "word_budget": 650
+    },
+    {
+      "location": "break_room",
+      "thread": "Theo's Whistleblower Dilemma",
+      "title": "The Locker",
+      "what": "Theo rereads his draft complaint alone. Maeve enters unexpectedly. He shuts the locker. Neither speaks about what matters.",
+      "who": [
+        "Theo Okafor",
+        "Dr. Maeve Callahan"
+      ],
+      "word_budget": 700
+    },
+    {
+      "location": "chapel",
+      "thread": "Theo's Whistleblower Dilemma",
+      "title": "The Chapel",
+      "turning_point": "tp_05",
+      "what": "Theo confesses the unfiled complaint to Agnes. She already knows the first death and names the second patient now deteriorating upstairs.",
+      "who": [
+        "Theo Okafor",
+        "Sister Agnes"
+      ],
+      "word_budget": 950
+    },
+    {
+      "location": "admin_corridor",
+      "thread": "Harte's Bed-Cut Conspiracy",
+      "title": "The Summons",
+      "turning_point": "tp_05",
+      "what": "Harte's assistant delivers the performance review notice mid-shift. Theo walks the admin corridor. The meeting has not started; the warning already has.",
+      "who": [
+        "Theo Okafor",
+        "Administrator Clive Harte"
+      ],
+      "word_budget": 850
+    },
+    {
+      "location": "er_floor",
+      "thread": "Theo's Whistleblower Dilemma",
+      "title": "Back on the Floor",
+      "what": "Theo returns. He checks the diverted patient's status through back channels. He pulls the complaint from his locker and reads it once more.",
+      "who": [
+        "Theo Okafor",
+        "Nurse Theo Okafor"
+      ],
+      "word_budget": 550
+    },
+    {
+      "location": "break_room",
+      "thread": "Theo's Whistleblower Dilemma",
+      "title": "Three Minutes to Six",
+      "what": "Theo dates the form but does not sign it. He puts it in his breast pocket. The shift continues around him.",
+      "who": [
+        "Theo Okafor"
+      ],
+      "word_budget": 500
+    }
+  ]
+}

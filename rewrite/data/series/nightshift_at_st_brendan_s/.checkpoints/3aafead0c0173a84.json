@@ -1,0 +1,100 @@
+{
+  "sections": [
+    {
+      "location": "break_room",
+      "thread": "Reza's Second Chance",
+      "title": "Night Records",
+      "what": "Reza retrieves archived charts from his intern year, alone after shift. He's reconstructing the near-miss methodically, driven by probation and a suspicion he can't yet name.",
+      "who": [
+        "Dr. Reza Shirazi"
+      ],
+      "word_budget": 400
+    },
+    {
+      "location": "chapel",
+      "thread": "Theo's Whistleblower Dilemma",
+      "title": "Agnes at the Threshold",
+      "what": "Agnes watches the ER from the chapel doorway, reading stress patterns in the unit. She notes Harte circling Theo's station more than usual tonight.",
+      "who": [
+        "Sister Agnes",
+        "Administrator Clive Harte"
+      ],
+      "word_budget": 350
+    },
+    {
+      "location": "admin_corridor",
+      "thread": "Harte's Bed-Cut Conspiracy",
+      "title": "Performance Review, Informal",
+      "what": "Harte corners Theo in the admin corridor, framing the meeting as managerial concern. The subtext is unmistakable: stop asking questions about the diverted ward.",
+      "who": [
+        "Administrator Clive Harte",
+        "Nurse Theo Okafor"
+      ],
+      "word_budget": 550
+    },
+    {
+      "location": "break_room",
+      "thread": "Reza's Second Chance",
+      "title": "The Wrong Handwriting",
+      "turning_point": "tp_04",
+      "what": "Reza finds a chart entry in unfamiliar handwriting dated the night of his near-miss. The entry exonerates him and implicates someone else entirely.",
+      "who": [
+        "Dr. Reza Shirazi"
+      ],
+      "word_budget": 650
+    },
+    {
+      "location": "chapel",
+      "thread": "Theo's Whistleblower Dilemma",
+      "title": "What Agnes Knows",
+      "what": "Theo slips into the chapel after Harte's ambush. Agnes already knows what was said; she tells him Harte's pressure follows a pattern she has seen before.",
+      "who": [
+        "Nurse Theo Okafor",
+        "Sister Agnes"
+      ],
+      "word_budget": 450
+    },
+    {
+      "location": "break_room",
+      "thread": "Reza's Second Chance",
+      "title": "The Board Member's Name",
+      "what": "Reza matches the handwriting to a current staff list. The name belongs to a board member — the attending who supervised his intern year.",
+      "who": [
+        "Dr. Reza Shirazi"
+      ],
+      "word_budget": 450
+    },
+    {
+      "location": "admin_corridor",
+      "thread": "Reza's Second Chance",
+      "title": "First Approach",
+      "what": "Reza engineers a casual encounter with the board member in the admin corridor. He floats an oblique question; the response tells him the man knows exactly who Reza is.",
+      "who": [
+        "Dr. Reza Shirazi",
+        "Administrator Clive Harte"
+      ],
+      "word_budget": 650
+    },
+    {
+      "location": "chapel",
+      "thread": "Theo's Whistleblower Dilemma",
+      "title": "Agnes and the Shape of the Building",
+      "what": "Agnes tells Theo that secrets don't stay buried — they migrate to whoever the institution can least afford to lose. She means him specifically.",
+      "who": [
+        "Sister Agnes",
+        "Nurse Theo Okafor"
+      ],
+      "word_budget": 500
+    },
+    {
+      "location": "break_room",
+      "thread": "Reza's Second Chance",
+      "title": "What the Chart Means Now",
+      "what": "Reza sits alone with the chart, deciding what first approach actually costs when the other person has thirty years of institutional armor.",
+      "who": [
+        "Dr. Reza Shirazi"
+      ],
+      "word_budget": 200
+    }
+  ]
+}

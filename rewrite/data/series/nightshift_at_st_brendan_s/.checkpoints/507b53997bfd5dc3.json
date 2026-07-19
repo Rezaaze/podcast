@@ -1,0 +1,78 @@
+{
+  "intro": "St. Brendan's, 22:17. The night board is full.",
+  "outro": "Dawn is four hours away. The bay-closure order is still on the whiteboard.",
+  "sections": [
+    {
+      "location": "er_floor",
+      "thread": "Harte's Bed-Cut Conspiracy",
+      "title": "Peak Load",
+      "what": "The ER is at capacity on the busiest night in weeks. Maeve runs triage alone. Staff scramble. The system is cracking before Harte appears.",
+      "who": [
+        "Maeve",
+        "Theo",
+        "Reza"
+      ],
+      "word_budget": 700
+    },
+    {
+      "location": "admin_corridor",
+      "thread": "Harte's Bed-Cut Conspiracy",
+      "title": "The Order",
+      "what": "Harte closes two bays to hit overnight efficiency targets. Maeve objects. Theo silently logs the order. The gap between policy and patient safety opens.",
+      "who": [
+        "Harte",
+        "Maeve",
+        "Theo"
+      ],
+      "word_budget": 650
+    },
+    {
+      "location": "ambulance_bay",
+      "thread": "Maeve–Dana History",
+      "title": "Bay Arrival",
+      "turning_point": "tp_01",
+      "what": "Dana rolls a critical trauma through the ambulance bay. Her eyes find Maeve's. Neither speaks to the history. The bay fills with urgent, careful work.",
+      "who": [
+        "Dana",
+        "Maeve",
+        "Theo"
+      ],
+      "word_budget": 700
+    },
+    {
+      "location": "er_floor",
+      "thread": "Maeve–Dana History",
+      "title": "Enforced Silence",
+      "what": "Maeve and Dana work the trauma together. Every exchange is clinical, exact. The Cork past hums beneath each instruction. No one names what the room already knows.",
+      "who": [
+        "Maeve",
+        "Dana",
+        "Reza"
+      ],
+      "word_budget": 800
+    },
+    {
+      "location": "break_room",
+      "thread": "Theo's Whistleblower Dilemma",
+      "title": "Evidence Without Courage",
+      "what": "Theo watches a diverted patient deteriorate. He traces the delay directly to Harte's bay closure. He begins composing the complaint he cannot yet bring himself to file.",
+      "who": [
+        "Theo",
+        "Sister Agnes"
+      ],
+      "word_budget": 650
+    },
+    {
+      "location": "er_floor",
+      "thread": "Maeve–Dana History",
+      "title": "The Wound Left Open",
+      "what": "The trauma stabilises. Dana departs without a word. Theo watches Maeve watch her go. The season's central wound is visible to everyone. Nothing is named.",
+      "who": [
+        "Maeve",
+        "Dana",
+        "Theo"
+      ],
+      "word_budget": 700
+    }
+  ]
+}

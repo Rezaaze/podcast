@@ -1,0 +1,119 @@
+{
+  "lines": [
+    {
+      "speaker": "NARRATOR",
+      "style": "neutral",
+      "text": "The admin corridor runs behind the ER floor like a seam no one is meant to see. Strip lighting. A laminate noticeboard. The smell of coffee gone cold. At twenty-three forty-one, Administrator Harte walks it with a tablet under one arm and the particular posture of a man who has already decided."
+    },
+    {
+      "speaker": "HARTE",
+      "style": "flat",
+      "text": "Dr. Brennan. Good. I was going to find you."
+    },
+    {
+      "speaker": "MAEVE",
+      "style": "clipped",
+      "text": "I have four patients waiting on beds that don't exist. Whatever this is, keep it short."
+    },
+    {
+      "speaker": "HARTE",
+      "style": "flat",
+      "text": "Bays six and seven. I'm closing them for the night."
+    },
+    {
+      "speaker": "NARRATOR",
+      "style": "neutral",
+      "text": "Maeve stops walking. A beat of silence in which the floor hum of the building becomes audible."
+    },
+    {
+      "speaker": "MAEVE",
+      "style": "quiet",
+      "text": "You're what."
+    },
+    {
+      "speaker": "HARTE",
+      "style": "measured",
+      "text": "Overnight efficiency review. We're running the department at a structural deficit. Two bays, non-critical, consolidated to free up staffing hours. It's a temporary measure."
+    },
+    {
+      "speaker": "MAEVE",
+      "style": "controlled anger",
+      "text": "Temporary. On the night we've had twelve ambulance arrivals in four hours and Reza is running triage off a clipboard because our second triage screen is still broken from Tuesday."
+    },
+    {
+      "speaker": "HARTE",
+      "style": "flat",
+      "text": "The review parameters were set at board level. I'm not asking you to agree with them."
+    },
+    {
+      "speaker": "MAEVE",
+      "style": "cold",
+      "text": "Then what are you asking me?"
+    },
+    {
+      "speaker": "HARTE",
+      "style": "flat",
+      "text": "To acknowledge the instruction. Theo — log the time."
+    },
+    {
+      "speaker": "NARRATOR",
+      "style": "neutral",
+      "text": "Theo has been standing three steps back, tablet already open. He has been logging since Harte said the word closing. He logs the time. He logs Harte's words. He logs Maeve's silence. He does not look up."
+    },
+    {
+      "speaker": "MAEVE",
+      "style": "measured",
+      "text": "If someone diverts because we've got no bay, that's on the record too."
+    },
+    {
+      "speaker": "HARTE",
+      "style": "flat",
+      "text": "Everything is on the record. That's the point of the record."
+    },
+    {
+      "speaker": "MAEVE",
+      "style": "controlled anger",
+      "text": "A chest pain came in forty minutes ago. Sixty-two years old. We have him in bay seven because bay seven is the only place we had. Where would you like me to put him while you consolidate?"
+    },
+    {
+      "speaker": "HARTE",
+      "style": "flat",
+      "text": "Bay seven is grandfathered until he's cleared. The closure applies to new intake."
+    },
+    {
+      "speaker": "MAEVE",
+      "style": "quiet",
+      "text": "And when new intake arrives in the next ten minutes?"
+    },
+    {
+      "speaker": "HARTE",
+      "style": "flat",
+      "text": "You manage it. That's what triage is for."
+    },
+    {
+      "speaker": "NARRATOR",
+      "style": "neutral",
+      "text": "He turns. The corridor receives him. Maeve watches his back until the double doors swing closed and the seam of the building swallows him again. Theo is still writing. His stylus moves with the careful, deliberate stroke of a person composing something he is not yet sure what to do with. He logs Harte's final instruction. He logs the time. He logs: Dr. Brennan objected. Then he stops, finger hovering, because objected is not a clinical term and the form has no field for what just happened, which is that policy and a person in a bay with a narrowing artery are now occupying the same corridor and neither one will yield."
+    },
+    {
+      "speaker": "MAEVE",
+      "style": "quiet",
+      "text": "Theo."
+    },
+    {
+      "speaker": "THEO",
+      "style": "low",
+      "text": "I logged it."
+    },
+    {
+      "speaker": "MAEVE",
+      "style": "flat",
+      "text": "Good."
+    },
+    {
+      "speaker": "NARRATOR",
+      "style": "neutral",
+      "text": "She goes back to the floor. The corridor empties. The noticeboard holds its rota unchanged. The gap between what was ordered and what is possible has no name on any form Theo can find, so he creates a new field and types: discrepancy noted, and saves it, and carries it back into the noise."
+    }
+  ]
+}

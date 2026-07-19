@@ -1,0 +1,86 @@
+{
+  "intro": "St. Brendan's ER, night shift. Maeve Callahan is four years sober and has not told anyone that the number feels less certain than it did this morning.",
+  "outro": "Two lockers locked. Two things that cannot be unseen by the people who did them. The shift ends. St. Brendan's does not notice.",
+  "sections": [
+    {
+      "location": "er_floor",
+      "thread": "Maeve's Relapse Arc",
+      "title": "The Long Walk In",
+      "what": "Maeve arrives for night shift already brittle. The locker holds what she has not touched in four years. She does not open it yet.",
+      "who": [
+        "af_sarah",
+        "am_michael"
+      ],
+      "word_budget": 450
+    },
+    {
+      "location": "er_floor",
+      "thread": "Harte's Bed-Cut Conspiracy",
+      "title": "Triage Arithmetic",
+      "what": "A held bay forces a divert. Maeve traces Harte's logic in real time and does not like where it leads.",
+      "who": [
+        "af_sarah",
+        "am_michael",
+        "am_echo"
+      ],
+      "word_budget": 600
+    },
+    {
+      "location": "er_floor",
+      "thread": "Maeve's Relapse Arc",
+      "title": "Every Small Victory",
+      "what": "Maeve works cleanly — a difficult airway, a seizing child. Each win feels provisional, credit borrowed against something she already owes.",
+      "who": [
+        "af_sarah",
+        "am_adam",
+        "am_michael"
+      ],
+      "word_budget": 650
+    },
+    {
+      "location": "er_floor",
+      "thread": "Harte's Bed-Cut Conspiracy",
+      "title": "The Death",
+      "what": "A patient dies on a diverted ward. The triage trail leads directly to Harte's bed-cut. The room absorbs it without a word.",
+      "who": [
+        "af_sarah",
+        "am_michael",
+        "am_echo"
+      ],
+      "word_budget": 700
+    },
+    {
+      "location": "ambulance_bay",
+      "thread": "Maeve's Relapse Arc",
+      "title": "Burning",
+      "what": "Maeve steps outside. The cold air does not help. She stands by her car and then goes back in empty-handed. Not yet.",
+      "who": [
+        "af_sarah",
+        "af_nicole"
+      ],
+      "word_budget": 500
+    },
+    {
+      "location": "break_room",
+      "thread": "Theo's Whistleblower Dilemma",
+      "title": "3 A.M. Draft",
+      "turning_point": "tp_02",
+      "what": "Theo writes the complaint in the break room. He names Harte, names the death, signs it. Then seals the envelope and locks it away.",
+      "who": [
+        "am_michael",
+        "af_bella"
+      ],
+      "word_budget": 700
+    },
+    {
+      "location": "ambulance_bay",
+      "thread": "Maeve's Relapse Arc",
+      "title": "The Parking Lot",
+      "what": "Before the shift ends Maeve goes back to her car. Four years end quietly and alone. She walks back in. Nobody saw.",
+      "who": [
+        "af_sarah"
+      ],
+      "word_budget": 600
+    }
+  ]
+}

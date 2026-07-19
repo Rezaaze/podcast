@@ -1,0 +1,54 @@
+{
+  "cast": [
+    {
+      "role": "Mara Voss",
+      "voice": "af_heart"
+    },
+    {
+      "role": "Jonas Falk",
+      "voice": "am_adam"
+    },
+    {
+      "role": "Elise Dorn",
+      "voice": "af_sky"
+    },
+    {
+      "role": "Viktor Seyn",
+      "voice": "am_echo"
+    }
+  ],
+  "locations": [
+    {
+      "description": "Alter Leuchtturm an der Steilküste, seit Jahren außer Betrieb, Untergeschoss vermauert",
+      "key": "lighthouse"
+    },
+    {
+      "description": "Kleines Küstendorf, halb verlassen, mit einem alten Fischereihafen",
+      "key": "village"
+    },
+    {
+      "description": "Schmaler Pfad entlang der Klippe zwischen Dorf und Leuchtturm",
+      "key": "cliffside_path"
+    }
+  ],
+  "threads": [
+    {
+      "hard_facts": [
+        "Der Keller wurde 1995 zugemauert, kurz nach dem Verschwinden des Leuchtturmwärters",
+        "Viktor Seyn hat den Schlüssel zum alten Zugang — ein Erbstück seiner Mutter",
+        "Mara findet beim Renovierungsauftrag Risse in der vermauerten Wand"
+      ],
+      "label": "Das erste Geheimnis: Der vermauerte Keller",
+      "resolution": "Im Keller des Leuchtturms liegt seit 30 Jahren eine Leiche — Viktor Seyns Vater, der verschwundene Leuchtturmwärter. Viktor weiß es, hat aber geschwiegen, um seine Mutter zu schützen."
+    },
+    {
+      "hard_facts": [
+        "Elise hat einen versteckten Funksender im oberen Stockwerk installiert",
+        "Jonas beobachtet den Leuchtturm seit Wochen und kennt Elises Zeitplan",
+        "Die beiden Geheimnisse kollidieren, als Maras Renovierung beide ans Licht zu bringen droht"
+      ],
+      "label": "Das zweite Geheimnis: Das gestohlene Signal",
+      "resolution": "Elise Dorn benutzt den Leuchtturm heimlich als Sendemast für illegale Kommunikation — sie ist Informantin und fürchtet, aufgeflogen zu sein. Jonas Falk, ein Journalist, hat sie entdeckt und schweigt als Gegenleistung für exklusive Informationen."
+    }
+  ]
+}
