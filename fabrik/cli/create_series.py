@@ -29,6 +29,7 @@ import argparse
 import concurrent.futures
 import hashlib
 import json
+import math
 import os
 import re
 import shutil
@@ -1191,6 +1192,16 @@ def check_turning_point_coverage(data: dict, arc: dict, model: str, effort: Opti
         print("  ⚠️  Wendepunkt-Abdeckungs-Check: alle Voting-Läufe fehlgeschlagen — übersprungen.")
         return []
 
+    # Schwelle relativ zu den ERFOLGREICHEN Läufen (gleiche Quote wie
+    # threshold/votes, mind. 2): der feste Wert 4 gegen einen durch Timeouts
+    # geschrumpften Nenner hieße sonst, dass bei 3 von 5 erfolgreichen Läufen
+    # selbst ein EINSTIMMIGER Fund (3/3) stillschweigend verworfen wird.
+    effective_threshold = threshold
+    if len(all_votes) < votes:
+        effective_threshold = max(2, math.ceil(threshold / votes * len(all_votes)))
+        print(f"  ⚠️  Wendepunkt-Abdeckung: nur {len(all_votes)}/{votes} Voting-Läufe "
+              f"erfolgreich — Schwelle angepasst auf {effective_threshold}.")
+
     issues = []
     for tp in turning_points:
         event_key = _normalize_ws(tp.get("event", "")).lower()
@@ -1204,7 +1215,7 @@ def check_turning_point_coverage(data: dict, arc: dict, model: str, effort: Opti
         if not tally:
             continue
         (verdict, eps), count = max(tally.items(), key=lambda kv: kv[1])
-        if count < threshold:
+        if count < effective_threshold:
             continue
         assigned_ep = tp.get("episode")
         if verdict == "duplicate":

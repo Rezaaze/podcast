@@ -212,19 +212,27 @@ def merge_parts_to_episode(part_paths, episode_path, pause_between_parts_ms, tar
         print(f"  Outro-Jingle: {os.path.basename(outro_path)} ({len(outro)/1000:.1f}s)")
 
     mastered = master_episode(combined, target_lufs)
-    mastered.export(episode_path, format="mp3", bitrate="192k")
+    # temp + os.replace: main()s Resume-Check ist nur `os.path.exists` — eine
+    # beim Kill truncierte MP3 gälte sonst für immer als fertig.
+    tmp_episode_path = episode_path + ".tmp"
+    mastered.export(tmp_episode_path, format="mp3", bitrate="192k")
+    os.replace(tmp_episode_path, episode_path)
     size_mb = os.path.getsize(episode_path) / (1024 * 1024)
     duration_min = len(mastered) / 1000 / 60
     print(f"Gesamtepisode gespeichert: {os.path.basename(episode_path)} ({size_mb:.1f} MB, {duration_min:.1f} Min.)")
-    for path in part_paths:
-        os.remove(path)
-    print(f"{len(part_paths)} Einzeldateien gelöscht.")
 
+    # Offsets VOR dem Löschen der Part-WAVs persistieren — ein Kill dazwischen
+    # ließe sonst weder WAVs noch Offsets zurück und die Post-Merge-Schritte
+    # könnten nie nachgeholt werden (siehe Post-Merge-Invariante in CLAUDE.md).
     offsets_path = part_offsets_path(episode_path)
     tmp_offsets_path = offsets_path + ".tmp"
     with open(tmp_offsets_path, "w", encoding="utf-8") as f:
         json.dump(part_offsets, f)
     os.replace(tmp_offsets_path, offsets_path)
+
+    for path in part_paths:
+        os.remove(path)
+    print(f"{len(part_paths)} Einzeldateien gelöscht.")
 
     return part_offsets
 

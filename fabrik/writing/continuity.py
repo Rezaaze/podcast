@@ -218,7 +218,8 @@ def unknown_place_names(data: dict, scripts: dict[int, str]) -> list[tuple[str, 
             if last not in suffixes:
                 continue
             head = phrase.split()[0].lower()
-            if head in _GENERIC_HEADS or head in _LEADING_FUNCTION_WORDS:
+            if (head in _GENERIC_HEADS or head in _LEADING_FUNCTION_WORDS
+                    or phrase.split()[0] in _SENTENCE_STARTERS):
                 phrase = " ".join(phrase.split()[1:])
             if not phrase or len(phrase.split()) < 2:
                 continue
@@ -340,7 +341,7 @@ def canon_time_anchors(data: dict) -> tuple[dict[str, list[tuple[float, str]]], 
     — Begründung im Docstring dort."""
     anchors: dict[str, list[tuple[float, str]]] = defaultdict(list)
     threads_by_name: dict[str, set[str]] = defaultdict(set)
-    for thread in (data.get("threads") or []):
+    for t_idx, thread in enumerate(data.get("threads") or []):
         facts = list(thread.get("objective_facts") or [])
         if isinstance(thread.get("solution"), str):
             facts.append(thread["solution"])
@@ -349,7 +350,9 @@ def canon_time_anchors(data: dict) -> tuple[dict[str, list[tuple[float, str]]], 
             durations = _durations_with_pos(clause)
             if not durations:
                 continue
-            for name_match in re.finditer(r"\b[A-Z][a-z]{3,}\b", clause):
+            # {2,}: auch kurze Eigennamen wie "Aya" müssen ankern können —
+            # der Docstring-Motivfall oben wäre mit {3,} nie gefunden worden.
+            for name_match in re.finditer(r"\b[A-Z][a-z]{2,}\b", clause):
                 name = name_match.group(0)
                 if name.lower() in _GENERIC_HEADS or name in _SENTENCE_STARTERS:
                     continue
@@ -357,7 +360,11 @@ def canon_time_anchors(data: dict) -> tuple[dict[str, list[tuple[float, str]]], 
                          if abs(pos - name_match.start()) <= FACT_PROXIMITY_CHARS]
                 if not nearby:
                     continue
-                threads_by_name[name.lower()].add(thread.get("label", ""))
+                # Fallback auf den Index: label-lose Threads dürfen nicht alle
+                # auf "" kollabieren, sonst zählt der Mehrfach-Thread-Filter
+                # in _usable_anchors zwei fremde Threads als einen.
+                threads_by_name[name.lower()].add(
+                    thread.get("label") or f"#thread-{t_idx}")
                 for days, phrase in nearby:
                     if (days, phrase) not in anchors[name.lower()]:
                         anchors[name.lower()].append((days, phrase))
@@ -492,9 +499,10 @@ def build_continuity_report(data: dict, scripts: dict[int, str]) -> str:
     lines.append("3. Zeitangaben, die dem Kanon widersprechen")
     if times:
         for item in times:
+            canon_joined = '" / "'.join(item["canon"])
             lines.append(f"   !! Episode {item['episode']}, \"{item['anchor']}\": "
                          f"Prosa \"{item['prose']}\" ({_fmt_days(item['prose_days'])}), "
-                         f"Kanon \"{'\" / \"'.join(item['canon'])}\"")
+                         f"Kanon \"{canon_joined}\"")
             lines.append(f"      …{item['quote']}…")
     else:
         lines.append("   Keine.")

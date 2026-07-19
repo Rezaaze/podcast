@@ -901,7 +901,10 @@ def assemble_part(idx, jobs, segments, part_end_cues, part_path, filename, serie
         combined = combined + AudioSegment.silent(
             duration=max(c["lead_ms"] for c in end_before))
 
-    combined.export(part_path, format="wav")
+    # Sidecar-JSONs ZUERST, die Part-WAV als Letztes und atomar: die Existenz
+    # der WAV ist das Skip-Signal beim Resume (Phase A / already_done_parts) —
+    # stünde sie vor den JSONs, ließe ein Kill dazwischen den Part für immer
+    # als "fertig, aber ohne Subs/Cues/Speaker" zurück.
     with open(subs_json_path(series, episode_name, idx), "w", encoding="utf-8") as f:
         json.dump(sub_records, f, ensure_ascii=False, indent=1)
     if mode == "drama":
@@ -909,6 +912,9 @@ def assemble_part(idx, jobs, segments, part_end_cues, part_path, filename, serie
             json.dump(cues, f, ensure_ascii=False, indent=1)
         with open(speakers_json_path(series, episode_name, idx), "w", encoding="utf-8") as f:
             json.dump(merge_speaker_spans(speaker_spans), f, ensure_ascii=False, indent=1)
+    tmp_part_path = part_path + ".tmp"
+    combined.export(tmp_part_path, format="wav")
+    os.replace(tmp_part_path, part_path)
     size = os.path.getsize(part_path) // 1024
     print(f"  Gespeichert: {filename} ({size} KB)")
     clear_checkpoint(series.checkpoint_dir, episode_name, idx)
@@ -1190,7 +1196,12 @@ def main():
             if not job.get("silence_ms"):
                 gen_time += elapsed
                 gen_count += 1
-            segment.export(ckpt, format="wav")
+            # temp + os.replace: eine beim Kill truncierte Checkpoint-WAV
+            # würde beim Resume `AudioSegment.from_file` crashen lassen —
+            # bei jedem Rerun erneut, bis jemand die Datei von Hand löscht.
+            tmp_ckpt = ckpt + ".tmp"
+            segment.export(tmp_ckpt, format="wav")
+            os.replace(tmp_ckpt, ckpt)
             segments_by_part[part_idx][c_idx] = segment
         else:
             print(f"\n  FEHLER bei Chunk {c_idx}: '{job['text'][:60]}'")

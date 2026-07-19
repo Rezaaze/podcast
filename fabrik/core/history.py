@@ -38,8 +38,14 @@ def load_figure_history() -> list:
 
 
 def save_figure_history(history: list):
-    with open(FIGURE_HISTORY_FILE, "w", encoding="utf-8") as f:
+    # temp + os.replace: ein harter Kill mitten im Write darf die komplette
+    # serienübergreifende Historie nicht zerstören — load_figure_history()
+    # fällt bei kaputtem JSON stillschweigend auf [] zurück, der Verlust
+    # bliebe unbemerkt.
+    tmp = FIGURE_HISTORY_FILE + ".tmp"
+    with open(tmp, "w", encoding="utf-8") as f:
         json.dump(history, f, ensure_ascii=False, indent=2)
+    os.replace(tmp, FIGURE_HISTORY_FILE)
 
 
 def warn_on_repeated_figures(data: dict):

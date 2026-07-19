@@ -207,7 +207,15 @@ class Job:
         if self.command_id in AUTO_TTS_COMMANDS:
             import tts_control
             self._log("── Qwen3-TTS wird für die Vertonung benötigt ──")
-            if not tts_control.start_tts(log=self._log):
+            # try/except um start/stop: wirft tts_control eine Exception,
+            # terminiert dieser Thread sonst OHNE "done"-Event — und jeder
+            # SSE-Subscriber hinge für immer in q.get() (Stream ohne Timeout).
+            try:
+                started = tts_control.start_tts(log=self._log)
+            except Exception as exc:
+                self._log(f"❌ TTS-Start fehlgeschlagen: {exc}")
+                started = False
+            if not started:
                 self.state = "error"
                 self._emit("done", {"returncode": -1})
                 return
@@ -217,7 +225,10 @@ class Job:
         if self.command_id in AUTO_TTS_COMMANDS:
             import tts_control
             self._log("── Vertonung fertig, stoppe Qwen3-TTS wieder ──")
-            tts_control.stop_tts(log=self._log)
+            try:
+                tts_control.stop_tts(log=self._log)
+            except Exception as exc:
+                self._log(f"⚠️ TTS-Stopp fehlgeschlagen: {exc}")
             self._emit("done", {"returncode": self.returncode})
 
     def _run_pyfunc(self):

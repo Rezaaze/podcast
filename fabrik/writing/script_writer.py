@@ -689,7 +689,10 @@ def find_noise(items, language: str) -> list[str]:
     Section-Tiefe-/Kanon-Drift-Checks — die sind strukturell unmöglich
     geworden, das hier ist reines Rauschen, das nur ein Textscan fängt."""
     issues = []
-    is_cjk_language = any(w in (language or "").lower() for w in ("chinese", "mandarin"))
+    # Alle Sprachen, deren Schrift _CJK_LEAK_RE selbst matcht — sonst würde
+    # jede korrekte japanische/koreanische Zeile als "Rauschen" retryt.
+    is_cjk_language = any(w in (language or "").lower()
+                          for w in ("chinese", "mandarin", "japanese", "korean"))
     for item in items:
         if item.kind != "speech":
             continue
