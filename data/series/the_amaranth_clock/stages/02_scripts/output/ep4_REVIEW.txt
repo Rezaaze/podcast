@@ -1,0 +1,5 @@
+3 Hinweis(e):
+
+- Part 7: Narrator says 'day eight of the season' here, but Parts 1, 3, and 6 all state 'day eight since Tommy's release' / 'Eight days into Tommy's parole' for the same scene-day — these can't both be true since the case file fixes Tommy's release at 3 days before season day 1 (so day eight of the season would be roughly day ten since release, not day eight).
+- Part 3: The auction countdown 'twenty-two days now until the Amaranth's auction closes out' doesn't match the 30-day-from-day-1 auction deadline given the episode's own day-of-season count (day eight, per Part 2's 'two days' gap from episode 3's day six) — that math yields twenty-three days remaining, not twenty-two.
+- Part 5: Augustine's solo line 'Henry, whatever you thought you owed Walter — I'm the one still paying for it' explicitly names both Henry and Walter together in a debt/obligation frame, unambiguously gesturing at the embezzlement-for-gambling-debts solution well before the season's intended reveal.

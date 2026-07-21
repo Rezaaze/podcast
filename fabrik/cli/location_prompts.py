@@ -17,9 +17,10 @@ Ist OPENAI_API_KEY gesetzt (und --no-images nicht angegeben), wird für jeden
 Ort sofort ein PNG über gpt-image-1-mini erzeugt (im Querformat, passend als
 Video-Hintergrund) und als series/<slug>/locations/<ORT_KEY>.png abgelegt —
 ohne Key bleibt es wie bisher bei den Text-Prompts zum manuellen Einfügen bei
-einem Bildmodell deiner Wahl. Dort findet sie das Lolfi-Video-Rendering und
-wechselt automatisch den Hintergrund, wenn die Handlung an diesen Ort
-springt (Location-Timeline aus podcast_maker.py/batch.py).
+einem Bildmodell deiner Wahl. Nützlich für Cover-Kunst, Social-Media-Assets
+oder einen eigenen Video-Export, der den Hintergrund anhand der
+Location-Timeline (podcast_maker.py/batch.py) wechselt, wenn die Handlung an
+diesen Ort springt.
 
 Braucht kein .venv — nur die Claude CLI (wie generate_episode.py); die
 Bildgenerierung selbst nutzt nur stdlib (urllib), kein zusätzliches Paket.
@@ -32,7 +33,7 @@ import sys
 import time
 
 from fabrik.core import config, paths
-from fabrik.writing import image_backends
+from fabrik.writing import image_backends, location_library
 from fabrik.writing.script_writer import call_claude, MAX_RETRIES, RETRY_DELAY
 
 PROMPTS_FILENAME = "PROMPTS.txt"
@@ -40,7 +41,7 @@ IMAGE_SIZE = "1536x1024"  # Querformat -- wird als Video-Hintergrund verwendet, 
 
 
 def locations_dir(series):
-    return os.path.join(series.root, "locations")
+    return series.locations_dir
 
 
 def prompts_file(series):
@@ -140,44 +141,64 @@ def main():
         return
 
     out_file = prompts_file(series)
-    if os.path.exists(out_file) and not args.force:
-        print(f"Location-Prompts existieren bereits: {out_file}")
-        print("Neu generieren mit --force.")
-        return
+    expected_keys = set(locations)
 
-    model = data.get("generation", {}).get("model", config.DEFAULTS["model"])
-    print(f"Serie: {series.slug} — {len(locations)} Ort(e): {', '.join(locations)}")
-    print(f"Generiere Location-Prompts (Modell: {model}) ...")
-
-    prompt = build_prompt(data, locations)
+    # Vorhandene PROMPTS.txt heißt nur "der TEXT ist fertig" — nicht "die
+    # Bilder sind fertig" (die Datei wird auch im reinen Text-Modus ohne
+    # OPENAI_API_KEY geschrieben). Ein Re-Lauf, nachdem der Key nachträglich
+    # gesetzt wurde, muss die vorhandenen Prompts wiederverwenden können,
+    # statt sie erneut per Claude zu erzeugen — und darf danach nicht
+    # abbrechen, sondern MUSS bei der Bildgenerierung unten ankommen.
     blocks = {}
-    for attempt in range(1, MAX_RETRIES + 1):
-        output = call_claude(prompt, model)
-        if output:
-            blocks = parse_blocks(output, set(locations))
-            if len(blocks) == len(locations):
-                break
-            missing = sorted(set(locations) - set(blocks))
-            print(f"Versuch {attempt}/{MAX_RETRIES}: Blöcke fehlen für {', '.join(missing)}.")
+    if os.path.exists(out_file) and not args.force:
+        with open(out_file, "r", encoding="utf-8") as f:
+            existing = f.read()
+        blocks = parse_blocks(existing, expected_keys)
+        if len(blocks) == len(expected_keys):
+            print(f"Location-Prompts bereits vorhanden: {out_file} (--force zum Neu-Generieren) "
+                  f"— prüfe/erzeuge fehlende Hintergrundbilder ...")
         else:
-            print(f"Versuch {attempt}/{MAX_RETRIES}: keine Ausgabe.")
-        if attempt < MAX_RETRIES:
-            time.sleep(RETRY_DELAY)
+            missing = sorted(expected_keys - set(blocks))
+            print(f"Vorhandene Prompts decken nicht alle Orte ab (fehlen: {', '.join(missing)}, "
+                  f"z.B. neue Locations aus einer inzwischen geänderten episodes.json) — "
+                  f"generiere Prompts neu ...")
+            blocks = {}
 
-    if len(blocks) != len(locations):
-        print("FEHLER: Location-Prompts unvollständig — erneut starten.")
-        sys.exit(1)
+    if not blocks:
+        # light_model: reine Bild-Prompt-Texte, keine kreative Skript-Arbeit — braucht
+        # nicht das teure Schreibmodell.
+        model = data.get("generation", {}).get("light_model", config.DEFAULTS["light_model"])
+        print(f"Serie: {series.slug} — {len(locations)} Ort(e): {', '.join(locations)}")
+        print(f"Generiere Location-Prompts (Modell: {model}) ...")
 
-    os.makedirs(locations_dir(series), exist_ok=True)
-    with open(out_file, "w", encoding="utf-8") as f:
-        f.write(f"# Location-Bild-Prompts — {data.get('series_title', series.slug)}\n")
-        f.write("# Jedes Bild extern generieren und hier im Ordner ablegen als: <ORT_KEY>.png\n")
-        f.write("# (z.B. " + f"{next(iter(locations))}.png" + ") — Lolfi wechselt den Hintergrund\n")
-        f.write("# dann automatisch, wenn die Handlung an diesen Ort springt.\n\n")
-        for key in locations:
-            f.write(f"=== {key} ===\n{blocks[key]}\n\n")
+        prompt = build_prompt(data, locations)
+        for attempt in range(1, MAX_RETRIES + 1):
+            output = call_claude(prompt, model)
+            if output:
+                blocks = parse_blocks(output, expected_keys)
+                if len(blocks) == len(expected_keys):
+                    break
+                missing = sorted(expected_keys - set(blocks))
+                print(f"Versuch {attempt}/{MAX_RETRIES}: Blöcke fehlen für {', '.join(missing)}.")
+            else:
+                print(f"Versuch {attempt}/{MAX_RETRIES}: keine Ausgabe.")
+            if attempt < MAX_RETRIES:
+                time.sleep(RETRY_DELAY)
 
-    print(f"\nGespeichert: {out_file}")
+        if len(blocks) != len(expected_keys):
+            print("FEHLER: Location-Prompts unvollständig — erneut starten.")
+            sys.exit(1)
+
+        os.makedirs(locations_dir(series), exist_ok=True)
+        with open(out_file, "w", encoding="utf-8") as f:
+            f.write(f"# Location-Bild-Prompts — {data.get('series_title', series.slug)}\n")
+            f.write("# Jedes Bild extern generieren und hier im Ordner ablegen als: <ORT_KEY>.png\n")
+            f.write("# (z.B. " + f"{next(iter(locations))}.png" + ") — für Cover-Kunst,\n")
+            f.write("# Social-Media-Assets oder einen eigenen Video-Export.\n\n")
+            for key in locations:
+                f.write(f"=== {key} ===\n{blocks[key]}\n\n")
+
+        print(f"\nGespeichert: {out_file}")
 
     if args.no_images or not image_backends.api_key_available():
         for key in locations:
@@ -190,20 +211,41 @@ def main():
                   "PNGs unter den genannten Dateinamen in locations/ ablegen.")
         return
 
-    print(f"\nErzeuge Hintergrundbilder (gpt-image-1-mini, {IMAGE_SIZE}) ...")
+    print(f"\nErzeuge Hintergrundbilder (gpt-image-1-mini, {IMAGE_SIZE}) — vor jeder Anfrage "
+          f"wird zuerst die serienübergreifende Orts-Bibliothek geprüft "
+          f"(data/location_library/) ...")
     failed = []
-    for key in locations:
+    reused = 0
+    for key, lcfg in locations.items():
         img_path = os.path.join(locations_dir(series), f"{key}.png")
         if os.path.exists(img_path):
             print(f"  {key}: übersprungen (existiert bereits)")
             continue
+
+        description = lcfg.get("description", "")
+        lib_hash, lib_entry = location_library.find_match(description) if description else (None, None)
+
         try:
-            image_backends.save_image(blocks[key], img_path, size=IMAGE_SIZE)
+            if lib_hash:
+                location_library.copy_from_library(lib_hash, img_path)
+                match_desc = lib_entry.get("description", "")
+                print(f"  {key}: aus Bibliothek wiederverwendet"
+                      f"{f' (≈ \"{match_desc[:60]}\")' if match_desc else ''} → locations/{key}.png")
+                reused += 1
+                continue
+
+            png_bytes = image_backends.generate_image(blocks[key], size=IMAGE_SIZE)
+            with open(img_path, "wb") as f:
+                f.write(png_bytes)
+            if description:
+                location_library.register(description, png_bytes)
             print(f"  {key}: gespeichert → locations/{key}.png")
         except RuntimeError as exc:
             print(f"  {key}: FEHLER — {exc}")
             failed.append(key)
 
+    if reused:
+        print(f"\n{reused} Hintergrundbild(er) aus der Bibliothek wiederverwendet (kein API-Call nötig).")
     if failed:
         print(f"\n{len(failed)} Hintergrundbild(er) fehlgeschlagen ({', '.join(failed)}) — "
               f"Skript erneut starten (fertige Bilder werden übersprungen).")

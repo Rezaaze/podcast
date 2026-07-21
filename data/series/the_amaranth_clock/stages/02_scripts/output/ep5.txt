@@ -1,0 +1,447 @@
+--- PART 1 ---
+
+[NARRATOR]
+Previously, on The Amaranth Clock: Tommy searched the tenant files with Lila and came away no closer to the ledger he needs, one shelf short of the loose brick that hides it. Julian looked at Nora across the lobby and still saw nothing but a woman standing a little differently than she used to.
+
+[NARRATOR]
+Ten days into the auction countdown, morning light barely reaches the basement of the Amaranth. Desmond Hale, the building's manager for eighteen years, comes down alone with a flashlight he doesn't strictly need.
+
+[SFX: a heavy metal door groaning open on old hinges]
+
+[DESMOND_HALE | style: low, methodical]
+Same wall. Same story it told me the last time.
+
+[DESMOND_HALE | style: focused]
+Report says spider cracking, east corner, running up toward the joist.
+
+[SFX: a palm dragging slowly across rough concrete]
+
+[DESMOND_HALE | style: measured, faintly irritated]
+Smooth as the day I poured coffee down here and called it a break.
+
+[DESMOND_HALE | style: muttering to himself]
+No hairline. No spalling. Nothing but paint and dust.
+
+[DESMOND_HALE | style: steady, deliberate]
+Let's try the corner they flagged twice.
+
+[SFX: footsteps on concrete, then stopping]
+
+[DESMOND_HALE | style: quiet certainty]
+Same as before. Solid.
+
+[DESMOND_HALE | style: dry]
+Funny how a wall can fail on paper and hold up everything above it in real life.
+
+[SFX: a phone camera shutter click x4]
+
+[DESMOND_HALE | style: careful, cataloguing]
+One for the corner. One for the seam. One wide, so nobody can say I picked my angle.
+
+[DESMOND_HALE | style: thoughtful, guarded]
+I don't know what I'm building here. A file. A question. Maybe just something to look at when they tell me the wall's coming down and I know better.
+
+[DESMOND_HALE | style: firmer]
+Eighteen years, I know every groan this place makes when it's actually in trouble. This isn't one of them.
+
+[SFX: the flashlight clicking off]
+
+[DESMOND_HALE | style: resolved]
+Enough pictures for now. Time to hear it from the man who signed his name to the lie.
+
+[NARRATOR]
+He climbs back toward the stairwell, the beam of his flashlight the only thing that's moved in that basement in weeks.
+
+--- PART 2 ---
+
+[NARRATOR]
+Ten days into the countdown toward auction, Desmond climbs back up from the basement and shuts himself in his cramped office off the lobby. He still has the engineer's number saved from the original inspection.
+
+[SFX: a phone dialing, then ringing twice]
+
+[DESMOND_HALE | style: businesslike, controlled]
+Mr. Pruitt. Desmond Hale, over at the Amaranth. Got your report open in front of me.
+
+[DESMOND_HALE | style: precise, pressing]
+Says here hairline cracking, east foundation wall, section three. I was down there an hour ago. I don't see it.
+
+[DESMOND_HALE | style: flat, unimpressed]
+No, I'm not asking about load tolerances. I'm asking why the wall in your photograph doesn't match the wall in my basement.
+
+[DESMOND_HALE | style: cornered patience]
+Fine. Different question. Who hired you for this inspection?
+
+[DESMOND_HALE | style: sharpening]
+I didn't ask who signed the invoice. I asked who called you first.
+
+[DESMOND_HALE | style: harder now]
+Who saw that basement before I did, Mr. Pruitt?
+
+[SFX: a phone call disconnecting with a click]
+
+[DESMOND_HALE | style: low, to himself]
+Another appointment. Sure.
+
+[NARRATOR]
+Desmond sets the receiver down slowly, no closer to a name, but further than ever from believing the report's word over his own two hands.
+
+--- PART 3 ---
+
+[NARRATOR]
+Ten days into the countdown, the Corner Diner sits half-full in the slow stretch before lunch. Tommy Lau, three days short of two weeks out, sits again in the booth by the window — the same one Lila gave him his first morning back.
+
+[TOMMY_LAU | style: settled, low-key]
+Same booth again. You keeping this one open for me on purpose?
+
+[LILA_CHEN | style: dry, affectionate]
+It opens itself. Nobody else wants the wobble.
+
+[SFX: a ceramic cup set down firmly on a table]
+
+[LILA_CHEN | style: matter-of-fact]
+Drink it before it goes cold.
+
+[TOMMY_LAU]
+I didn't order this.
+
+[LILA_CHEN | style: already turning away]
+I know what you didn't order.
+
+[TOMMY_LAU | style: quiet amusement]
+You gonna ring it up eventually, or is this a running tab I don't know about?
+
+[LILA_CHEN]
+Some things don't go on the tab.
+
+[TOMMY_LAU | style: gentler, careful]
+You don't have to do that.
+
+[LILA_CHEN | style: brisk, deflecting]
+I'm not doing anything. It's coffee.
+
+[NARRATOR]
+Neither moves to say more. The lunch rush hasn't started; the diner hums low around them.
+
+[TOMMY_LAU | style: light, testing the ground]
+Slow morning.
+
+[LILA_CHEN]
+Tuesdays are always slow. Thursdays too, lately.
+
+[TOMMY_LAU]
+You still doing the early prep yourself, or'd you finally hire someone.
+
+[LILA_CHEN | style: a small laugh, tired]
+Hired a boy in March. Lasted six weeks. Now it's just me and the early prep.
+
+[TOMMY_LAU]
+Sounds about right.
+
+[NARRATOR]
+A pause stretches, comfortable on its surface, weighted underneath.
+
+[TOMMY_LAU | style: measured, careful]
+You ever think about how long it's been? Since I used to come in here after school.
+
+[LILA_CHEN | style: guarded but soft]
+I think about a lot of things, Tommy.
+
+[TOMMY_LAU]
+Yeah.
+
+[NARRATOR]
+He doesn't push further. She doesn't offer more. Both let it sit exactly where it is.
+
+[TOMMY_LAU | style: changing subject, easy]
+Coffee's good, by the way. Better than I remember.
+
+[LILA_CHEN | style: relieved to shift, wry]
+I've had twelve years to get better at something.
+
+[TOMMY_LAU | style: soft laugh]
+Guess we both have.
+
+[NARRATOR]
+Lila straightens the napkin dispenser that doesn't need straightening, in no hurry to leave the booth.
+
+[LILA_CHEN | style: quieter, almost to herself]
+Eat something more than toast today. You're too thin.
+
+[TOMMY_LAU | style: touched, deflecting it]
+Yes, ma'am.
+
+[NARRATOR]
+She holds there a beat past what the coffee required, looking at him the way someone looks at a debt they've never said out loud. Then she turns back toward the counter without another word, leaving him alone with the cup and everything neither of them named.
+
+--- PART 4 ---
+
+[NARRATOR]
+Day ten of the countdown, midafternoon. Twenty-seven weeks along now, Nora Vance climbs to the rooftop greenhouse the way she has all season, chasing air that doesn't smell like her own apartment. Inside, Augustine Kwok — the building's longest-tenured resident, the man who built this greenhouse with his own hands — moves down the row of beds with a watering can.
+
+[SFX: a greenhouse door hinge creaking open]
+
+[NORA_VANCE | style: tired but easy]
+You're going to drown the basil at this rate.
+
+[AUGUSTINE_KWOK | style: dry, unhurried]
+Basil forgives. Tomatoes hold a grudge.
+
+[NORA_VANCE | style: amused]
+Is that a metaphor or an actual fact about tomatoes.
+
+[AUGUSTINE_KWOK | style: wry]
+With tomatoes, it's never just one or the other.
+
+[NARRATOR]
+He moves to the next bed, and Nora notices the pause before he lifts the can again — longer than it used to be.
+
+[NORA_VANCE | style: light, curious]
+You always this slow, or is it just today.
+
+[AUGUSTINE_KWOK | style: even, deflecting]
+Slow is a word for people in a hurry to somewhere else. I'm not.
+
+[NORA_VANCE | style: half-laughing]
+Fair enough.
+
+[SFX: water trickling into soil from a watering can]
+
+[NARRATOR]
+He sets the can down between beds, resting a hand on the frame a beat too long before picking it back up.
+
+[AUGUSTINE_KWOK | style: casual, testing]
+They still say thirty days on that auction business, or did somebody move the number again.
+
+[NORA_VANCE | style: flat, resigned]
+Thirty days, last I heard. Feels shorter every time somebody says it out loud.
+
+[AUGUSTINE_KWOK]
+Everything feels shorter than it is. That's just age talking.
+
+[NORA_VANCE | style: gently teasing]
+You're not that old.
+
+[AUGUSTINE_KWOK | style: dry]
+Tell my knees that.
+
+[NARRATOR]
+Outside, clouds move over the rooftop glass, and for a moment neither of them says anything at all.
+
+[NORA_VANCE | style: distracted, half to herself]
+Supposed to rain again tonight.
+
+[AUGUSTINE_KWOK | style: mild]
+Good. Saves me the can.
+
+[NARRATOR]
+Nora watches him a second longer — the stiffness in how he straightens, the care in how he sets each foot — and something in her flags it without quite reaching the surface. But her mind is elsewhere today, circling its own private arithmetic, and the thought passes through her without catching.
+
+[NORA_VANCE | style: soft, letting it go]
+You'd tell me if something was actually wrong, though. Right.
+
+[AUGUSTINE_KWOK | style: steady, practiced]
+Nothing's wrong that a little rain won't fix.
+
+[NARRATOR]
+He picks the can back up. She lets it go, and for now, so does the room.
+
+--- PART 5 ---
+
+[NARRATOR]
+Still in the rooftop greenhouse, ten days into the auction countdown. Nora lingers near the tomato beds while Augustine reaches for a shelf above the potting bench.
+
+[AUGUSTINE_KWOK | style: straining, then a sharp intake of breath]
+Just need the — the big bag, top shelf—
+
+[SFX: a bag scraping against a metal shelf, then a body knocking into it]
+
+[NORA_VANCE | style: alarmed, urgent]
+Augustine!
+
+[SFX: quick footsteps on wood planking]
+
+[NORA_VANCE | style: gripping tight, breathless]
+I've got you — I've got you, don't move yet.
+
+[AUGUSTINE_KWOK | style: tight, forcing steadiness]
+I'm alright. Give me a second.
+
+[NORA_VANCE | style: still shaken]
+That wasn't — you went down hard. Should I get Desmond?
+
+[AUGUSTINE_KWOK | style: waving her off, practiced ease]
+No, no. It's this back of mine, that's all. Old shelf, old man, bad angle.
+
+[NORA_VANCE | style: unconvinced but softening]
+That didn't look like your back.
+
+[AUGUSTINE_KWOK | style: light, deflecting]
+Twenty years of hauling soil up here, it adds up. Sit me in the sun a minute, I'll be planting again by supper.
+
+[NORA_VANCE | style: reluctant, letting it go]
+If you say so. But I'm carrying that bag from now on.
+
+[AUGUSTINE_KWOK | style: faint, grateful smile in the voice]
+Deal.
+
+--- PART 6 ---
+
+[NARRATOR]
+Ten days into the countdown, minutes after the greenhouse, Nora comes down to the lobby, where the stopped clock above the mailboxes still holds its four-forty-seven. Tommy is already there, sorting through a stack of parole paperwork he's supposed to mail back by Friday.
+
+[SFX: a brass mailbox door clicking shut]
+
+[TOMMY_LAU | style: alert, concerned]
+Nora. Hey — you okay? You're gripping that railing like it owes you money.
+
+[NORA_VANCE | style: catching herself, forcing steadiness]
+I'm fine. Just came down too fast.
+
+[TOMMY_LAU | style: unconvinced]
+You don't look fine. You're white as the wall behind you.
+
+[NORA_VANCE | style: deflecting, quick]
+It's Augustine. He was up in the greenhouse, reaching for a bag of soil, and he just — dropped. Caught himself on the shelf before he really fell, but it scared me half to death.
+
+[TOMMY_LAU | style: worry shifting immediately]
+Dropped how? Did he hit his head, is he hurt?
+
+[NORA_VANCE | style: still shaken, softer]
+He said it was his back. Waved me off like it was nothing, wanted to keep watering like nothing happened. But it didn't look like a sore back to me, Tommy. It looked like it hurt somewhere else.
+
+[TOMMY_LAU | style: thinking out loud]
+He's not exactly young anymore. Maybe he just twisted something, reaching up over his head like that.
+
+[NORA_VANCE | style: uncertain]
+Maybe. That's probably all it was.
+
+[TOMMY_LAU | style: decisive, protective]
+I'll swing by and check on him after I mail these. Man's been climbing those ladders for thirty years — he's not gonna admit it if something's actually wrong.
+
+[NORA_VANCE | style: relieved to have somewhere else to point]
+Would you? I didn't want to push. He gets prickly if you fuss over him.
+
+[TOMMY_LAU | style: dry, familiar]
+He does. Always has, long as I've known him.
+
+[NORA_VANCE | style: managing a small laugh]
+Careful how you bring it up, then.
+
+[TOMMY_LAU | style: gentler now]
+I will. You sure you're alright, though? Your hands are still shaking a little.
+
+[NORA_VANCE | style: brushing it off]
+Just startled, that's all. I'll sit down for a minute upstairs. I'm fine, really.
+
+[SFX: a stack of envelopes tapped even against the counter]
+
+[TOMMY_LAU | style: letting it go, but watching her]
+Okay. If you say so. Go sit.
+
+[NARRATOR]
+Neither of them notices that the conversation has moved entirely off of Nora and onto someone else — not because she meant to hide anything this time, but because it's become the easiest place for her attention to land, and the mailboxes offer no reason for either of them to look any closer.
+
+--- PART 7 ---
+
+[NARRATOR | style: measured]
+Ten days into the countdown to the auction, the basement archive holds its usual chill. Augustine Kwok, the building's longest-tenured resident, kneels by an open cabinet, sorting tenant files that Tommy combed through days before, hunting for something that wasn't there.
+
+[SFX: a metal file drawer sliding open]
+
+[DESMOND_HALE | style: clipped, still worked up]
+Figured I'd find you down here. You're always down here lately.
+
+[AUGUSTINE_KWOK | style: unbothered]
+Somebody has to keep these in order. Tommy left them a mess.
+
+[DESMOND_HALE | style: pacing energy in his voice]
+I just got off the phone with the engineer. The one who wrote the structural report.
+
+[AUGUSTINE_KWOK | style: mildly curious]
+And?
+
+[DESMOND_HALE | style: frustrated]
+And nothing. I read him the two defects, word for word, asked him to walk me through how he found them. He starts talking about load coefficients and moisture ingress like I didn't spend eighteen years with my hands in this foundation.
+
+[AUGUSTINE_KWOK]
+Engineers like to sound smarter than the room.
+
+[DESMOND_HALE | style: pressing, low]
+It wasn't that. I asked him straight — who hired him. Who let him into that basement before I ever saw the place. He wouldn't say. Kept circling back to the report speaking for itself.
+
+[SFX: a folder dropped onto a stack]
+
+[AUGUSTINE_KWOK | style: neutral, unhurried]
+Maybe it does.
+
+[DESMOND_HALE | style: firm]
+No. I put my hand on that wall myself, twice now. There's nothing there that matches what's on his paper. A man doesn't dodge a simple question like that unless somebody told him not to answer it.
+
+[AUGUSTINE_KWOK]
+Sounds like you already know more than he's telling you.
+
+[DESMOND_HALE | style: exhaling frustration, careful]
+I know enough to not like it. I'm not saying anybody paid for anything. I've got no proof of that, and I'm not the kind of man who says a thing he can't back up. I just know the report and the wall don't agree, and somebody wants it that way.
+
+[AUGUSTINE_KWOK | style: distant, mild]
+Buildings this old collect all kinds of stories, Desmond. Doesn't mean every one of them is true.
+
+[DESMOND_HALE | style: quieter, tired]
+Maybe. But this one's got a signature nobody wants to put a name to.
+
+[AUGUSTINE_KWOK]
+Keep asking. You usually get where you're going.
+
+[DESMOND_HALE | style: half a laugh, no real humor in it]
+Eventually. Just wish eventually moved faster.
+
+[NARRATOR | style: measured]
+Augustine returns to the files, the loose brick and its fireproof box no more than a few steps behind him, untouched, unspoken, as close to Desmond's suspicion as it has ever come without either man knowing it.
+
+--- PART 8 ---
+
+[NARRATOR]
+Late on the tenth night of the countdown, the Corner Diner sits nearly empty, its window sign already flipped to closed. Lila Chen, the diner's owner and one of Henry's oldest friends, is stacking chairs while Tommy Lau lingers in the booth he claimed his first day back from prison.
+
+[SFX: a chair leg scraping against tile]
+
+[LILA_CHEN | style: brisk, practical]
+You're not going to make me sweep around your feet, are you.
+
+[TOMMY_LAU | style: distracted, low]
+Give me five more minutes. I keep losing the thread of what I'm doing.
+
+[LILA_CHEN | style: wry]
+That's usually a sign a person should go to bed.
+
+[TOMMY_LAU | style: hesitant, careful]
+Can I ask you something. Not as the diner owner. As somebody who's known me since I was a kid.
+
+[LILA_CHEN | style: attentive, steady]
+You can ask me anything, Tommy. Sit down properly if you're going to.
+
+[SFX: a mug set down on the counter]
+
+[TOMMY_LAU | style: reluctant, working it out loud]
+I keep doing the math. On the baby. The night Nora and I were together, and how far along she says she is now. And I've run the numbers three different ways and it doesn't land right. It doesn't add up to me.
+
+[LILA_CHEN | style: soft-spoken but firm]
+Tommy. Every man who's about to become a father does this math. It scares people, that's all it is.
+
+[TOMMY_LAU | style: pressing, uncertain]
+I'm not scared of being a father. I'm scared I'm wrong about being one.
+
+[LILA_CHEN | style: patient]
+Then you already know what you have to do. You don't sit in my booth running numbers on a napkin. You go to her, and you ask her straight out. Whatever she tells you, you'll know. Guessing is the only thing that'll eat you alive.
+
+[TOMMY_LAU | style: quietly resolved]
+And if she doesn't want to answer.
+
+[LILA_CHEN | style: direct]
+Then that's an answer too. But you don't get to decide that for her by staying silent yourself.
+
+[SFX: the diner's front bell chiming softly as Lila locks the door]
+
+[NARRATOR]
+Tommy sits with the math long after the diner has gone dark and Lila has gone home. By morning, the question stops being one he only turns over alone. Tomorrow, he decides, he is going to ask Nora outright — and this time, he will not accept silence as her answer.
+

@@ -25,7 +25,7 @@ REQUIRED SCHEMA (follow exactly):
 
 {
   "series_title": "string — compelling, cinematic title for the entire anthology",
-  "language": "string — e.g. English, Deutsch, Français",
+  "language": "English",
   "writer_persona": "string — the creative role/voice (e.g. 'a brilliant scriptwriter for high-end, HBO-style documentaries')",
   "style_guidelines": [
     "string — one concise rule per entry",
@@ -39,7 +39,7 @@ REQUIRED SCHEMA (follow exactly):
     "words_per_part_max": 520
   },
   "generation": {
-    "model": "claude-sonnet-5"
+    "model": "{{DEFAULT_MODEL}}"
   },
   "audio": {
     "api_url": "http://127.0.0.1:42003",
@@ -78,7 +78,7 @@ SCHEMA RULES:
   not more, regardless of how many figures the topic could support. Select
   the {{EPISODE_COUNT}} strongest, most distinct fits for the anthology.
 - Each episode must have {{SECTION_COUNT}} sections, sized for a ~{{EPISODE_MINUTES}}-minute episode. Map the FIVE-ACT STRUCTURE below onto however many sections that is: at 5 sections it's one act each; for more, split the busier acts (2-4, rising conflict/obsession/collapse) into multiple sections instead of padding; for fewer, merge adjacent acts. Always keep act 1 (hook) as the first section and act 5 (legacy) as the last.
-- section_styles: must have the same count as sections — one style string per section
+- section_styles: must have the same count as sections — one style string per section. NOTE: styles only reach the rendered audio when audio.voice is a BUILT-IN speaker — a cloned voice (like the default "MyVoice") reproduces its reference recording's prosody and ignores style instructions. Choose them anyway (they take effect the moment a built-in voice is configured), but don't rely on them for meaning.
 - intro_note: empty string "" for the FIRST episode only
 - outro_note: empty string "" for the LAST episode only
 - output_prefix: use "figur" unless the topic clearly calls for something else (e.g. "event", "place")

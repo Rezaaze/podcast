@@ -38,7 +38,7 @@ import os
 import re
 import sys
 
-from fabrik.core import config, history, paths, textproc
+from fabrik.core import config, history, paths, textproc, workspace
 from fabrik.writing import script_writer
 
 DEFAULT_WORDS_PER_EPISODE = 4000
@@ -119,16 +119,6 @@ def build_section_titles(num_chunks, parts_per_section):
     return titles
 
 
-def unique_slug(title: str) -> str:
-    base = paths.slugify(title)
-    slug = base
-    counter = 2
-    while slug in paths.list_series():
-        slug = f"{base}_{counter}"
-        counter += 1
-    return slug
-
-
 def main():
     parser = argparse.ArgumentParser(
         description="Bestehenden Text (Ordner oder Datei) als neue Serie importieren, ohne Claude Inhalt erfinden zu lassen."
@@ -163,7 +153,7 @@ def main():
     print(f"   → {len(sources)} Episode(n) erkannt.")
 
     persona = "an experienced audiobook producer adapting existing prose for podcast listeners"
-    slug = unique_slug(args.series_title)
+    slug = paths.unique_slug(args.series_title)
     series = paths.Series(slug).ensure_dirs()
 
     episodes = []
@@ -241,12 +231,14 @@ def main():
             print(f"  - {e}")
         sys.exit(1)
 
+    workspace.scaffold_workspace(series, data, args.template)
     with open(series.episodes_file, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
     paths.write_latest(slug)
 
     print(f"\n✅  Neue Serie importiert: data/series/{slug}/  (\"{args.series_title}\")")
-    print(f"    {len(episodes)} Episode(n), Skripte liegen bereits fertig in scripts/.")
+    print(f"    {len(episodes)} Episode(n), Skripte liegen bereits fertig in "
+          f"stages/02_scripts/output/.")
     print(f"    data/series/LATEST zeigt jetzt auf '{slug}'.")
     print(f"\n⚠️  audio.voice ist auf den Platzhalter 'MyVoice' gesetzt — in "
           f"data/series/{slug}/episodes.json auf deine tatsächliche Qwen3-TTS-Stimme "

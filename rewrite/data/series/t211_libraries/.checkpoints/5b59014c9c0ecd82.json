@@ -1,0 +1,83 @@
+{
+  "cast": [
+    {
+      "role": "NARRATOR",
+      "voice": "neutral"
+    },
+    {
+      "role": "Hypatia",
+      "voice": "en_female_scholarly"
+    },
+    {
+      "role": "Ibn al-Nadim",
+      "voice": "en_male_measured"
+    },
+    {
+      "role": "Sor Juana",
+      "voice": "en_female_warm"
+    },
+    {
+      "role": "Gottfried",
+      "voice": "en_male_precise"
+    },
+    {
+      "role": "Mele",
+      "voice": "en_female_curious"
+    }
+  ],
+  "locations": [
+    {
+      "description": "The great harbour city of ancient Egypt, seat of the Mouseion and its daughter library — a cosmopolitan crossroads where scrolls arrived with every merchant ship",
+      "key": "alexandria"
+    },
+    {
+      "description": "The House of Wisdom in ninth-century Baghdad, a palace annex of translation halls, observatories, and map rooms humming with the scratch of reed pens",
+      "key": "bayt_al_hikma"
+    },
+    {
+      "description": "The monastic university complex in Bihar, its red-brick towers visible for miles, home to nine million volumes before the fires came",
+      "key": "nalanda"
+    },
+    {
+      "description": "Philip II's austere granite monastery-palace outside Madrid, whose library vaults held forbidden manuscripts alongside royal correspondence",
+      "key": "escorial"
+    },
+    {
+      "description": "The refounded Oxford library of 1602, its Jacobean reading rooms kept deliberately unheated so readers would not linger too long",
+      "key": "bodleian"
+    },
+    {
+      "description": "The Capitol building's north wing in early-nineteenth-century Washington, whose small but symbolically charged collection was ash by 1814 and rebuilt from Jefferson's personal shelves",
+      "key": "congressional"
+    }
+  ],
+  "threads": [
+    {
+      "hard_facts": [
+        "The Library of Alexandria likely declined gradually through budget cuts and neglect rather than a single fire",
+        "The Bayt al-Hikma translation movement outlasted the Mongol sack through scholars who had already dispersed",
+        "Nalanda's destruction in 1193 is documented by Tibetan sources; some monks carried texts to Tibet"
+      ],
+      "label": "The paradox of preservation",
+      "resolution": "Every library that survived did so by accident, compromise, or migration — the deliberate act of preservation alone has never been enough; the series closes on a digital-archive librarian who grasps this fully"
+    },
+    {
+      "hard_facts": [
+        "Ptolemy III allegedly detained travellers to copy their scrolls",
+        "Al-Mamun's translation programme was partly motivated by astrological statecraft",
+        "Jefferson sold his library to Congress at a personal profit while the nation was in debt"
+      ],
+      "label": "Knowledge as political object",
+      "resolution": "Each institution reflects the ambitions of its patron — imperial, caliphal, royal, republican — and the series traces how that entanglement both funds and endangers the books"
+    },
+    {
+      "hard_facts": [
+        "Women were formally excluded from the Bodleian until 1877",
+        "Nalanda accepted students from across Asia regardless of caste, an unusual policy for its era",
+        "The Library of Congress reading room opened to the public in 1800 but was destroyed before most could use it"
+      ],
+      "label": "Who is allowed inside",
+      "resolution": "Access has always been the hidden argument — the series ends with open-access movements as the latest chapter in a very old dispute, unresolved"
+    }
+  ]
+}

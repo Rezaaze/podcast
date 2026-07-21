@@ -1,0 +1,2324 @@
+{
+  "series_title": "The Meridian Blend",
+  "language": "English",
+  "mode": "drama",
+  "template": "soap_opera",
+  "writer_persona": "a showrunner for character-driven, relationship-first serial drama in the vein of prestige ensemble TV, blending boardroom intrigue with intimate multigenerational family melodrama",
+  "style_guidelines": [
+    "Every scene serves at least one character's private agenda — no scene exists purely to deliver plot information to the listener.",
+    "Dialogue is indirect: characters deflect, half-answer, and change the subject when a topic gets too close to their own secret, rather than stating their true feelings outright.",
+    "Cut between threads mid-tension — end a scene on an unresolved beat before shifting location or storyline, then return to it later rather than resolving immediately.",
+    "No character has access to the full truth of any thread; let the audience assemble the complete picture faster than anyone inside the story.",
+    "Business jargon (shares, due diligence, board votes) stays grounded in what it costs the people involved personally — never let a boardroom scene feel like it's only about money.",
+    "Warmth and cruelty coexist in the same family — even antagonists get scenes that justify themselves to themselves.",
+    "The NARRATOR only orients time, place, and who is present — it never explains motive, emotion, or backstory a character hasn't yet voiced aloud."
+  ],
+  "voices": {
+    "NARRATOR": {
+      "voice": "Ryan",
+      "default_style": "calm, measured, a step removed from the action",
+      "description": "the show's narrator — orients the listener at the start of every scene (who, where, when), never a character in the story"
+    },
+    "MEI_ZHAO": {
+      "voice": "Vivian",
+      "default_style": "warm but guarded, articulate, speaks slow and deliberate with very clear English",
+      "description": "34, Vice President of Operations at Meridian Tea and heir apparent, granddaughter of founder Baoshan Zhao. Raised partly in Hong Kong by her grandmother before moving to Seattle at fourteen, which shapes her accent. Ambitious and fiercely loyal to the company's legacy, she is falling for the very man sent to help dismantle it, and has no idea her aunt is the buyout's hidden ally."
+    },
+    "DANIEL_VANCE": {
+      "voice": "Aiden",
+      "default_style": "charming, controlled, occasional cracks of conscience beneath the polish",
+      "description": "35, protégé and minority-stake heir at Harlow-Vance Imports, leading due diligence on the Meridian acquisition. Fell for Mei a year before either knew the other's company was a rival. Feeds Mei small warnings about the takeover without disclosing how far his boss intends to take it — or that Victoria knows about their history at all."
+    },
+    "WEN_ZHAO": {
+      "voice": "Dylan",
+      "default_style": "weary authority, precise diction, a native Beijing accent",
+      "description": "59, current CEO of Meridian Tea, Baoshan's son and Mei's father. Immigrated from Guangzhou in his twenties. Believes the hostile buyout is a purely external threat and has no idea a member of his own family controls the deciding block of shares — or what his father did to found the company he has spent his life protecting."
+    },
+    "CLARA_LIN_ZHAO": {
+      "voice": "Serena",
+      "default_style": "brisk and composed on the surface, with a coldness that surfaces only when unwatched",
+      "description": "56, Meridian's CFO, raised as Baoshan's niece within the Zhao family. Discovered two years ago that she was actually born Clara Lin, adopted after her birth parents died amid the very unrest her adoptive father profited from. Has told no one the truth except Victoria Harlow, with whom she has secretly allied to force a boardroom vote and claim restitution."
+    },
+    "VICTORIA_HARLOW": {
+      "voice": "Sohee",
+      "default_style": "precise, unhurried, the confidence of someone used to winning quietly",
+      "description": "54, majority owner and CEO of Harlow-Vance Imports, orchestrating the hostile buyout of Meridian Tea. Emigrated from Seoul as a young finance professional before building her import empire in Seattle. Treats Daniel's rapport with Mei as a useful asset without knowing its full depth, and has spent eighteen months quietly assembling a controlling share bloc she has not yet made public."
+    },
+    "BAOSHAN_ZHAO": {
+      "voice": "Uncle_Fu",
+      "default_style": "frail but sharp when it matters, long pauses, the weight of an old man carrying an old debt",
+      "description": "83, founder of Meridian Tea, Wen's father and Mei's grandfather, now in declining health. The only person alive who knows the full truth of the 1968 shipments and of Clara's real parentage — a truth he has protected for over fifty years and may not have the strength left to keep protecting."
+    }
+  },
+  "locations": {
+    "MERIDIAN_WAREHOUSE": {
+      "name": "The Meridian Warehouse",
+      "description": "a five-story brick waterfront warehouse stacked with towers of tea crates, the air thick with fermenting pu-erh and cedar dust, forklifts humming beneath bare industrial rafters."
+    },
+    "ZHAO_FAMILY_HOME": {
+      "name": "The Zhao Family House",
+      "description": "a rambling 1970s house on Beacon Hill with mismatched additions from three generations, lacquered family photos crowding every wall, the kitchen always smelling of ginger and old paper."
+    },
+    "HARLOW_VANCE_TOWER": {
+      "name": "Harlow-Vance Tower",
+      "description": "a glass-and-steel high-rise boardroom downtown, floor-to-ceiling windows overlooking Elliott Bay, everything cold chrome and recessed lighting built to intimidate."
+    },
+    "THE_JASMINE_ROOM": {
+      "name": "The Jasmine Room",
+      "description": "Meridian's public tasting room in the International District, low lamplight, mismatched porcelain cups, and a curtained back table where quiet conversations happen out of sight of customers."
+    },
+    "FOG_PIER": {
+      "name": "Pier 91 Customs Dock",
+      "description": "a foggy container terminal where cargo ships still unload Meridian's shipments, gull cries and foghorns over rust-streaked steel, the one place the company's oldest history still physically arrives."
+    }
+  },
+  "format": {
+    "parts_per_section": 1,
+    "words_per_part_target": "300 to 500",
+    "words_per_part_min": 250,
+    "words_per_part_max": 550
+  },
+  "generation": {
+    "model": "claude-sonnet-5"
+  },
+  "audio": {
+    "api_url": "http://127.0.0.1:42003",
+    "default_style": "Speak clearly and with dramatic weight",
+    "target_lufs": -16.0,
+    "pause_between_chunks_ms": 250,
+    "pause_between_lines_ms": 700,
+    "pause_between_parts_ms": 3000,
+    "pause_between_episodes_ms": 6000,
+    "merge_anthology": false
+  },
+  "output_prefix": "ep",
+  "series_intro": "Seattle, present day. Fog rolls off Elliott Bay onto a waterfront warehouse that smells of oolong and cedar — three generations deep in the Zhao family's hands, and about to be pulled apart. Across the water, a glass tower is quietly buying up the pieces. Over ten episodes, a hostile takeover will drag Meridian Tea's oldest secrets into the light: a romance across enemy lines that was never supposed to happen, a sister who was never told what she truly is, and a vote that could end a family business built, fifty years ago, on more than just tea leaves.",
+  "series_outro": "The season closes on the emergency board vote Victoria Harlow spent eighteen months engineering — control of Meridian Tea decided in a single afternoon, though not the way anyone at the table expected. The 1968 Smuggling Secret finally surfaces, but only partially, and not to everyone who deserves to hear it. The Forbidden Romance survives the vote in some form, though at a cost neither Mei nor Daniel anticipated paying. What the season leaves open: whether Clara ever tells Wen the truth in her own voice, what Baoshan takes to his grave regardless, and whether the company that comes out the other side still deserves to call itself family-run.",
+  "threads": [
+    {
+      "label": "The 1968 Smuggling Secret",
+      "solution": "In March 1968, Baoshan Zhao smuggled looted antiques out of Guangzhou concealed beneath false crate bottoms in six tea shipments, amid the chaos of the Cultural Revolution, and sold them to a private Seattle collector to raise Meridian Tea's founding capital. Among the looted pieces were heirlooms belonging to the Lin family, whose parents died in unrest that same year. Wracked with guilt, Baoshan quietly adopted their infant daughter, falsified her birth record to list her as his biological niece, and raised her as Clara Zhao without ever telling her the truth. Two years ago, while digitizing the company archive, Clara found the original customs manifest and the antiques sale receipt, and cross-referenced them against her own adoption file — she has told no one except, eventually, Victoria Harlow.",
+      "objective_facts": [
+        "In March 1968, Baoshan Zhao imported six tea shipments from Guangzhou to Seattle with false crate bottoms concealing antiques.",
+        "The 1968 customs manifests, still in Meridian's archive, list the concealed cargo as 'assorted ceramics' under an import code Meridian has never used for any product before or since.",
+        "Baoshan sold the smuggled antiques to a private Seattle collector named Walter Pruitt in July 1968; the sale receipt, kept in a locked drawer at the Zhao family house, financed Meridian's first warehouse lease.",
+        "The infant later known as Clara Zhao was born Clara Lin in Guangzhou in January 1968 to Wei Lin and Su Lin, who both died in a factory fire during that year's unrest.",
+        "Baoshan personally arranged Clara's 1969 adoption paperwork in Seattle, falsifying her birth record to list her as his biological niece rather than the daughter of the family whose property he had taken.",
+        "Clara found the original 1968 customs manifest and the Pruitt sale receipt two years ago while digitizing Meridian's archives, and cross-referenced them against her own sealed adoption file.",
+        "Clara has never confronted Baoshan or Wen with what she found; the only person she has told is Victoria Harlow."
+      ]
+    },
+    {
+      "label": "The Forbidden Romance",
+      "solution": "Mei Zhao and Daniel Vance met at the Hong Kong International Tea Auction fourteen months ago, before either knew the other's surname belonged to a rival company, and kept in private contact for four months before Victoria Harlow assigned Daniel to lead due diligence on a possible Meridian acquisition. Daniel recognized Mei's name immediately and chose not to disclose the prior relationship to Victoria. Since the buyout began, he has passed Mei two pieces of confidential information about its timeline without Victoria's knowledge, but has withheld the fact that Victoria's true goal is full acquisition and dissolution of the Meridian brand, not the minority partnership she has publicly proposed.",
+      "objective_facts": [
+        "Mei Zhao and Daniel Vance met at the Hong Kong International Tea Auction fourteen months ago, before either knew the other's company was a business rival.",
+        "They kept in private contact for four months before Victoria Harlow assigned Daniel to lead due diligence on a potential Meridian acquisition.",
+        "Daniel recognized Mei's surname the moment he was assigned the deal and did not disclose their prior relationship to Victoria.",
+        "Neither Wen Zhao nor Clara Lin-Zhao knows that Mei and Daniel have any history together.",
+        "Daniel has passed Mei two pieces of confidential information about the buyout timeline without Victoria's knowledge.",
+        "Daniel has not told Mei that Victoria's actual objective is full acquisition and dissolution of the Meridian brand, not the minority partnership Victoria has proposed publicly.",
+        "Victoria Harlow knows Daniel and Mei have some personal rapport and considers it a useful asset, but does not know its full history or depth."
+      ]
+    },
+    {
+      "label": "The Boardroom Coup",
+      "solution": "Over eighteen months, Victoria Harlow acquired 19% of Meridian Tea's outstanding shares through three shell entities with no public link to Harlow-Vance Imports. Four months ago she secured a private letter of intent from Clara Lin-Zhao, who controls an 11% family share block inherited from Baoshan's late wife: Clara agreed to vote her shares with Harlow-Vance in exchange for a four-million-dollar payout and a public statement acknowledging the Lin family's 1968 losses. Combined, their blocks give the buyout side the 30% needed to force an emergency board vote under Meridian's bylaws, which triggers within sixty days of a formal offer being filed — a filing Victoria has deliberately not yet made public. Wen Zhao has no knowledge that a member of his own family controls the deciding share block.",
+      "objective_facts": [
+        "Over eighteen months, Victoria Harlow acquired 19% of Meridian Tea's outstanding shares through three shell entities not publicly linked to Harlow-Vance Imports.",
+        "Clara Lin-Zhao controls an 11% family share block inherited from Baoshan's late wife.",
+        "Combined, Victoria's and Clara's share blocks total 30%, sufficient under Meridian's bylaws to force an emergency board vote.",
+        "Clara signed a private letter of intent with Victoria Harlow four months ago, agreeing to vote her shares with Harlow-Vance in exchange for a four-million-dollar payout and a public statement acknowledging the Lin family's 1968 losses.",
+        "The letter of intent is stored in a safety deposit box Clara accesses under her birth name, Lin, which none of the Zhaos know she uses.",
+        "Meridian's bylaws require an emergency board vote within sixty days of a formal buyout offer being filed.",
+        "Victoria Harlow has not yet publicly filed the formal buyout offer, deliberately delaying the sixty-day clock while she finalizes her share position.",
+        "Wen Zhao believes the hostile buyout is a purely external threat and has no knowledge that a member of his own family controls the deciding share block."
+      ]
+    }
+  ],
+  "episodes": [
+    {
+      "figure": "Assigned",
+      "theme": "Daniel is assigned to lead due diligence on Meridian and secretly agrees with Mei to hide their prior history from Victoria, launching the forbidden romance thread even as the family closes ranks around Baoshan's declining health without yet questioning the company's founding story.",
+      "intro_note": "",
+      "outro_note": "Baoshan's stumble at dinner is not the last of it — before Beacon Hill sees sunrise again, a doctor will be called to the house, and across the water Victoria Harlow is quietly signing off on the last piece of a stake she has spent eighteen months building in silence.",
+      "sections": [
+        {
+          "title": "The Assignment",
+          "what": "Victoria hands Daniel the Meridian due-diligence lead; he masks recognizing Mei's name and says nothing about their past.",
+          "who": [
+            "VICTORIA_HARLOW",
+            "DANIEL_VANCE"
+          ],
+          "thread": "The Forbidden Romance",
+          "location": "HARLOW_VANCE_TOWER",
+          "words": null
+        },
+        {
+          "title": "Warehouse Warning",
+          "what": "Wen warns Mei that Harlow-Vance's due-diligence team arrives this week and tells her to keep the warehouse floor spotless.",
+          "who": [
+            "WEN_ZHAO",
+            "MEI_ZHAO"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "MERIDIAN_WAREHOUSE",
+          "words": null
+        },
+        {
+          "title": "Trembling Hand",
+          "what": "At family dinner Baoshan's hand trembles pouring tea; Wen and Clara smooth over the moment while Mei watches, unconvinced.",
+          "who": [
+            "BAOSHAN_ZHAO",
+            "WEN_ZHAO",
+            "CLARA_LIN_ZHAO",
+            "MEI_ZHAO"
+          ],
+          "thread": "The 1968 Smuggling Secret",
+          "location": "ZHAO_FAMILY_HOME",
+          "words": null
+        },
+        {
+          "title": "Just Business",
+          "what": "Alone in his office, Daniel rationalizes staying silent about Mei, telling himself the assignment is strictly business, nothing more.",
+          "who": [
+            "DANIEL_VANCE"
+          ],
+          "thread": "The Forbidden Romance",
+          "location": "HARLOW_VANCE_TOWER",
+          "words": null
+        },
+        {
+          "title": "Strangers, Officially",
+          "what": "Wen introduces Daniel to Mei at the tasting room; both perform careful strangers while colleagues and Wen look on.",
+          "who": [
+            "WEN_ZHAO",
+            "MEI_ZHAO",
+            "DANIEL_VANCE"
+          ],
+          "thread": "The Forbidden Romance",
+          "location": "THE_JASMINE_ROOM",
+          "words": null
+        },
+        {
+          "title": "Cut Short",
+          "what": "Clara ends a hushed call the instant Wen enters the kitchen, insisting it was nothing, her composure only briefly slipping.",
+          "who": [
+            "CLARA_LIN_ZHAO",
+            "WEN_ZHAO"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "ZHAO_FAMILY_HOME",
+          "words": {
+            "min": 150,
+            "max": 250,
+            "target": "150 to 250"
+          }
+        },
+        {
+          "title": "Steadying Her Voice",
+          "what": "Reviewing the due-diligence schedule with Wen, Mei's voice catches at Daniel's name before she steadies it and moves on.",
+          "who": [
+            "MEI_ZHAO",
+            "WEN_ZHAO"
+          ],
+          "thread": "The Forbidden Romance",
+          "location": "MERIDIAN_WAREHOUSE",
+          "words": null
+        },
+        {
+          "title": "Rumors on the Water",
+          "what": "At the foggy pier, Wen tells Baoshan he's heard rumors of outside buyers circling, worried but certain the family controls its shares.",
+          "who": [
+            "WEN_ZHAO",
+            "BAOSHAN_ZHAO"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "FOG_PIER",
+          "words": null
+        },
+        {
+          "title": "After Hours",
+          "what": "After hours, Daniel returns to the empty tasting room; Mei confronts him about pretending not to know her.",
+          "who": [
+            "DANIEL_VANCE",
+            "MEI_ZHAO"
+          ],
+          "thread": "The Forbidden Romance",
+          "location": "THE_JASMINE_ROOM",
+          "words": null
+        },
+        {
+          "title": "A Useful Rapport",
+          "what": "Victoria tells Daniel his easy rapport with Meridian's people will be useful, unaware how far that history actually runs.",
+          "who": [
+            "VICTORIA_HARLOW",
+            "DANIEL_VANCE"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "HARLOW_VANCE_TOWER",
+          "words": null
+        },
+        {
+          "title": "The Curtained Table",
+          "what": "At the curtained back table, Daniel and Mei agree to play strangers publicly while keeping what's between them private.",
+          "who": [
+            "DANIEL_VANCE",
+            "MEI_ZHAO"
+          ],
+          "thread": "The Forbidden Romance",
+          "location": "THE_JASMINE_ROOM",
+          "words": null
+        },
+        {
+          "title": "Watching Him Doze",
+          "what": "Late at night, Clara sits with Baoshan as he dozes, her guilt sharpening the tenderness she can't yet explain to him.",
+          "who": [
+            "CLARA_LIN_ZHAO",
+            "BAOSHAN_ZHAO"
+          ],
+          "thread": "The 1968 Smuggling Secret",
+          "location": "ZHAO_FAMILY_HOME",
+          "words": null
+        },
+        {
+          "title": "What She Agreed To",
+          "what": "Alone in the warehouse after closing, Mei turns over the day's secret, uncertain what she's just agreed to protect.",
+          "who": [
+            "MEI_ZHAO"
+          ],
+          "thread": "The Forbidden Romance",
+          "location": "MERIDIAN_WAREHOUSE",
+          "words": {
+            "min": 150,
+            "max": 250,
+            "target": "150 to 250"
+          }
+        }
+      ],
+      "case": [
+        {
+          "label": "The Forbidden Romance",
+          "character_knowledge": {
+            "MEI_ZHAO": "She knows she and Daniel share a real past from Hong Kong and has just agreed with him to perform total unfamiliarity in front of her father and colleagues; she conceals this from everyone at Meridian, including Wen, and doesn't yet know how far Victoria intends to take the deal.",
+            "DANIEL_VANCE": "He recognized Mei's name the moment Victoria assigned him the deal and chose not to disclose their history, and has now privately agreed with Mei to pose as strangers; he conceals the full truth from Victoria and hasn't told Mei that Victoria's real goal goes beyond a minority partnership.",
+            "VICTORIA_HARLOW": "She knows Daniel and Mei have some personal rapport from the tea industry and sees it as a useful asset for the deal, but has no idea how deep or recent that connection actually is, or that Daniel is actively concealing it from her.",
+            "WEN_ZHAO": "He believes Daniel is simply the outside due-diligence lead his daughter is meeting for the first time today, with no suspicion that Mei and Daniel have any prior relationship at all."
+          },
+          "solution": "Mei Zhao and Daniel Vance met at the Hong Kong International Tea Auction fourteen months ago, before either knew the other's surname belonged to a rival company, and kept in private contact for four months before Victoria Harlow assigned Daniel to lead due diligence on a possible Meridian acquisition. Daniel recognized Mei's name immediately and chose not to disclose the prior relationship to Victoria. Since the buyout began, he has passed Mei two pieces of confidential information about its timeline without Victoria's knowledge, but has withheld the fact that Victoria's true goal is full acquisition and dissolution of the Meridian brand, not the minority partnership she has publicly proposed.",
+          "objective_facts": [
+            "Mei Zhao and Daniel Vance met at the Hong Kong International Tea Auction fourteen months ago, before either knew the other's company was a business rival.",
+            "They kept in private contact for four months before Victoria Harlow assigned Daniel to lead due diligence on a potential Meridian acquisition.",
+            "Daniel recognized Mei's surname the moment he was assigned the deal and did not disclose their prior relationship to Victoria.",
+            "Neither Wen Zhao nor Clara Lin-Zhao knows that Mei and Daniel have any history together.",
+            "Daniel has passed Mei two pieces of confidential information about the buyout timeline without Victoria's knowledge.",
+            "Daniel has not told Mei that Victoria's actual objective is full acquisition and dissolution of the Meridian brand, not the minority partnership Victoria has proposed publicly.",
+            "Victoria Harlow knows Daniel and Mei have some personal rapport and considers it a useful asset, but does not know its full history or depth."
+          ]
+        },
+        {
+          "label": "The Boardroom Coup",
+          "character_knowledge": {
+            "WEN_ZHAO": "He knows Harlow-Vance has sent a due-diligence team and treats the buyout attempt as a straightforward external threat to manage, with no suspicion that any Meridian shares outside his control are already aligned against the family.",
+            "VICTORIA_HARLOW": "She knows her share position is nearly complete and is quietly directing Daniel's assignment as part of that strategy, but keeps the existence and extent of her shell-entity holdings, and her arrangement with Clara, from everyone at Meridian including Daniel.",
+            "CLARA_LIN_ZHAO": "She is already secretly committed to voting her inherited share block with Victoria in exchange for restitution, and moves to hide even a routine call about it the moment a family member appears, though she reveals nothing of its content this episode.",
+            "DANIEL_VANCE": "He knows Victoria has assigned him to lead due diligence and senses she is moving faster and more privately than she admits, but he has not been told about her shell entities or her arrangement with Clara."
+          },
+          "solution": "Over eighteen months, Victoria Harlow acquired 19% of Meridian Tea's outstanding shares through three shell entities with no public link to Harlow-Vance Imports. Four months ago she secured a private letter of intent from Clara Lin-Zhao, who controls an 11% family share block inherited from Baoshan's late wife: Clara agreed to vote her shares with Harlow-Vance in exchange for a four-million-dollar payout and a public statement acknowledging the Lin family's 1968 losses. Combined, their blocks give the buyout side the 30% needed to force an emergency board vote under Meridian's bylaws, which triggers within sixty days of a formal offer being filed — a filing Victoria has deliberately not yet made public. Wen Zhao has no knowledge that a member of his own family controls the deciding share block.",
+          "objective_facts": [
+            "Over eighteen months, Victoria Harlow acquired 19% of Meridian Tea's outstanding shares through three shell entities not publicly linked to Harlow-Vance Imports.",
+            "Clara Lin-Zhao controls an 11% family share block inherited from Baoshan's late wife.",
+            "Combined, Victoria's and Clara's share blocks total 30%, sufficient under Meridian's bylaws to force an emergency board vote.",
+            "Clara signed a private letter of intent with Victoria Harlow four months ago, agreeing to vote her shares with Harlow-Vance in exchange for a four-million-dollar payout and a public statement acknowledging the Lin family's 1968 losses.",
+            "The letter of intent is stored in a safety deposit box Clara accesses under her birth name, Lin, which none of the Zhaos know she uses.",
+            "Meridian's bylaws require an emergency board vote within sixty days of a formal buyout offer being filed.",
+            "Victoria Harlow has not yet publicly filed the formal buyout offer, deliberately delaying the sixty-day clock while she finalizes her share position.",
+            "Wen Zhao believes the hostile buyout is a purely external threat and has no knowledge that a member of his own family controls the deciding share block."
+          ]
+        },
+        {
+          "label": "The 1968 Smuggling Secret",
+          "character_knowledge": {
+            "BAOSHAN_ZHAO": "His health is visibly declining and he says nothing yet about the 1968 shipments or Clara's true parentage, though the strain of carrying both secrets shows in small physical moments the family notices without understanding.",
+            "CLARA_LIN_ZHAO": "She has known for two years that she was born Clara Lin and that Baoshan smuggled looted antiques to found the company, and she watches his declining health with guilt she cannot explain to anyone at the table.",
+            "WEN_ZHAO": "He sees only his father's ordinary frailty and worries about his health as a son would, with no inkling of the 1968 smuggling or that Clara is not his biological cousin.",
+            "MEI_ZHAO": "She notices her grandfather's stumble at dinner and worries about his health like everyone else, with no knowledge of the 1968 secret or Clara's real parentage."
+          },
+          "solution": "In March 1968, Baoshan Zhao smuggled looted antiques out of Guangzhou concealed beneath false crate bottoms in six tea shipments, amid the chaos of the Cultural Revolution, and sold them to a private Seattle collector to raise Meridian Tea's founding capital. Among the looted pieces were heirlooms belonging to the Lin family, whose parents died in unrest that same year. Wracked with guilt, Baoshan quietly adopted their infant daughter, falsified her birth record to list her as his biological niece, and raised her as Clara Zhao without ever telling her the truth. Two years ago, while digitizing the company archive, Clara found the original customs manifest and the antiques sale receipt, and cross-referenced them against her own adoption file — she has told no one except, eventually, Victoria Harlow.",
+          "objective_facts": [
+            "In March 1968, Baoshan Zhao imported six tea shipments from Guangzhou to Seattle with false crate bottoms concealing antiques.",
+            "The 1968 customs manifests, still in Meridian's archive, list the concealed cargo as 'assorted ceramics' under an import code Meridian has never used for any product before or since.",
+            "Baoshan sold the smuggled antiques to a private Seattle collector named Walter Pruitt in July 1968; the sale receipt, kept in a locked drawer at the Zhao family house, financed Meridian's first warehouse lease.",
+            "The infant later known as Clara Zhao was born Clara Lin in Guangzhou in January 1968 to Wei Lin and Su Lin, who both died in a factory fire during that year's unrest.",
+            "Baoshan personally arranged Clara's 1969 adoption paperwork in Seattle, falsifying her birth record to list her as his biological niece rather than the daughter of the family whose property he had taken.",
+            "Clara found the original 1968 customs manifest and the Pruitt sale receipt two years ago while digitizing Meridian's archives, and cross-referenced them against her own sealed adoption file.",
+            "Clara has never confronted Baoshan or Wen with what she found; the only person she has told is Victoria Harlow."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "What the Old Man Won't Burn",
+      "theme": "Baoshan's health scare nearly destroys the 1968 evidence Clara has silently guarded for two years, while across town Victoria quietly completes the last shell-entity purchase that locks Harlow-Vance's hostile position into place.",
+      "intro_note": "Daniel has just taken the assignment that puts him inside Meridian's due diligence, and he and Mei have agreed to bury their history from everyone around them — including her own family, still gathered close around Baoshan as his health keeps fading.",
+      "outro_note": "The records survive the night, and Harlow-Vance's position is fully locked into place — but across town, Daniel Vance is already deciding how far he'll bend the rules for a woman his boss has no idea he still loves.",
+      "sections": [
+        {
+          "title": "Breakfast Collapse",
+          "what": "Baoshan collapses briefly at breakfast; Wen calls for a doctor while Mei hovers, and Baoshan insists he's fine, revealing nothing.",
+          "who": [
+            "BAOSHAN_ZHAO",
+            "WEN_ZHAO",
+            "MEI_ZHAO"
+          ],
+          "thread": "The 1968 Smuggling Secret",
+          "location": "ZHAO_FAMILY_HOME",
+          "words": null
+        },
+        {
+          "title": "Nineteen Percent",
+          "what": "Victoria finalizes the third shell entity's purchase by phone, quietly securing the last shares that push Harlow-Vance past nineteen percent.",
+          "who": [
+            "VICTORIA_HARLOW"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "HARLOW_VANCE_TOWER",
+          "words": null
+        },
+        {
+          "title": "Strangers on the Floor",
+          "what": "Daniel arrives for due diligence at the warehouse; he and Mei trade clipped professional lines, masking warmth neither dares show aloud.",
+          "who": [
+            "MEI_ZHAO",
+            "DANIEL_VANCE"
+          ],
+          "thread": "The Forbidden Romance",
+          "location": "MERIDIAN_WAREHOUSE",
+          "words": null
+        },
+        {
+          "title": "Burn It",
+          "what": "Shaken by his collapse, Baoshan tells Clara he wants the old 1968 customs records burned before he dies, and she goes still.",
+          "who": [
+            "BAOSHAN_ZHAO",
+            "CLARA_LIN_ZHAO"
+          ],
+          "thread": "The 1968 Smuggling Secret",
+          "location": "THE_JASMINE_ROOM",
+          "words": null
+        },
+        {
+          "title": "Machinery in Place",
+          "what": "Victoria privately tells Daniel the shell purchase has closed, the buyout machinery now fully in place, and to keep working Mei.",
+          "who": [
+            "VICTORIA_HARLOW",
+            "DANIEL_VANCE"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "HARLOW_VANCE_TOWER",
+          "words": null
+        },
+        {
+          "title": "Settling Old Debts",
+          "what": "Wen presses his father about why he suddenly talks of settling old debts, and Baoshan deflects, guilt flickering beneath his exhaustion.",
+          "who": [
+            "WEN_ZHAO",
+            "BAOSHAN_ZHAO"
+          ],
+          "thread": "The 1968 Smuggling Secret",
+          "location": "ZHAO_FAMILY_HOME",
+          "words": null
+        },
+        {
+          "title": "Oddly Familiar",
+          "what": "Mei confides to Clara that the due-diligence lead feels oddly familiar, without naming Daniel, and Clara reassures her a little too quickly.",
+          "who": [
+            "MEI_ZHAO",
+            "CLARA_LIN_ZHAO"
+          ],
+          "thread": "The Forbidden Romance",
+          "location": "THE_JASMINE_ROOM",
+          "words": null
+        },
+        {
+          "title": "Too Cleanly Covered",
+          "what": "Daniel walks the fogged customs dock for his due-diligence report, unsettled by how cleanly Victoria's shell entities have covered their tracks.",
+          "who": [
+            "DANIEL_VANCE"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "FOG_PIER",
+          "words": null
+        },
+        {
+          "title": "What She Doesn't Say",
+          "what": "Alone with Baoshan that night, Clara talks him out of burning the 1968 records, urging patience without revealing why they matter to her.",
+          "who": [
+            "BAOSHAN_ZHAO",
+            "CLARA_LIN_ZHAO"
+          ],
+          "thread": "The 1968 Smuggling Secret",
+          "location": "ZHAO_FAMILY_HOME",
+          "words": null
+        },
+        {
+          "title": "Reading the Paperwork",
+          "what": "Wen reviews due-diligence paperwork with Mei, uneasy at how fast Harlow-Vance is moving, neither aware their own family holds the deciding shares.",
+          "who": [
+            "WEN_ZHAO",
+            "MEI_ZHAO"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "MERIDIAN_WAREHOUSE",
+          "words": null
+        },
+        {
+          "title": "A Useful Rapport",
+          "what": "Victoria hands Daniel a folder on Meridian's ownership structure, remarking on his useful rapport with Mei without knowing how deep it runs.",
+          "who": [
+            "VICTORIA_HARLOW",
+            "DANIEL_VANCE"
+          ],
+          "thread": "The Forbidden Romance",
+          "location": "HARLOW_VANCE_TOWER",
+          "words": null
+        },
+        {
+          "title": "The Ledger He Kept",
+          "what": "That night Baoshan sits alone with the ledger he didn't burn, the weight of his fifty-year secret pressing harder than his illness.",
+          "who": [
+            "BAOSHAN_ZHAO"
+          ],
+          "thread": "The 1968 Smuggling Secret",
+          "location": "ZHAO_FAMILY_HOME",
+          "words": null
+        },
+        {
+          "title": "Fog at the Pier",
+          "what": "Mei and Daniel meet quietly at the pier at dusk, the fog hiding them as they linger a moment too long before parting.",
+          "who": [
+            "MEI_ZHAO",
+            "DANIEL_VANCE"
+          ],
+          "thread": "The Forbidden Romance",
+          "location": "FOG_PIER",
+          "words": null
+        }
+      ],
+      "case": [
+        {
+          "label": "The 1968 Smuggling Secret",
+          "character_knowledge": {
+            "BAOSHAN_ZHAO": "Knows the whole truth — the false crate bottoms, the Pruitt sale, Clara's real parentage — and, shaken by his own mortality, wants the 1968 records destroyed to take the secret with him rather than risk it surfacing; he has no idea Clara already knows everything he's trying to protect.",
+            "CLARA_LIN_ZHAO": "Knows the complete truth from the manifest and her sealed adoption file, and hides that entirely from Baoshan while talking him out of burning the records — she needs them intact as proof for her own claim, though she can't tell him why.",
+            "WEN_ZHAO": "Knows nothing of the 1968 truth; sees only his father's failing health and unfamiliar talk of 'settling old debts,' which he wrongly assumes is just an old man's fear of dying, not a literal reckoning with the past.",
+            "MEI_ZHAO": "Knows nothing beyond her grandfather's health scare frightening the household tonight; has no idea any old records or family secret are at stake."
+          },
+          "solution": "In March 1968, Baoshan Zhao smuggled looted antiques out of Guangzhou concealed beneath false crate bottoms in six tea shipments, amid the chaos of the Cultural Revolution, and sold them to a private Seattle collector to raise Meridian Tea's founding capital. Among the looted pieces were heirlooms belonging to the Lin family, whose parents died in unrest that same year. Wracked with guilt, Baoshan quietly adopted their infant daughter, falsified her birth record to list her as his biological niece, and raised her as Clara Zhao without ever telling her the truth. Two years ago, while digitizing the company archive, Clara found the original customs manifest and the antiques sale receipt, and cross-referenced them against her own adoption file — she has told no one except, eventually, Victoria Harlow.",
+          "objective_facts": [
+            "In March 1968, Baoshan Zhao imported six tea shipments from Guangzhou to Seattle with false crate bottoms concealing antiques.",
+            "The 1968 customs manifests, still in Meridian's archive, list the concealed cargo as 'assorted ceramics' under an import code Meridian has never used for any product before or since.",
+            "Baoshan sold the smuggled antiques to a private Seattle collector named Walter Pruitt in July 1968; the sale receipt, kept in a locked drawer at the Zhao family house, financed Meridian's first warehouse lease.",
+            "The infant later known as Clara Zhao was born Clara Lin in Guangzhou in January 1968 to Wei Lin and Su Lin, who both died in a factory fire during that year's unrest.",
+            "Baoshan personally arranged Clara's 1969 adoption paperwork in Seattle, falsifying her birth record to list her as his biological niece rather than the daughter of the family whose property he had taken.",
+            "Clara found the original 1968 customs manifest and the Pruitt sale receipt two years ago while digitizing Meridian's archives, and cross-referenced them against her own sealed adoption file.",
+            "Clara has never confronted Baoshan or Wen with what she found; the only person she has told is Victoria Harlow."
+          ]
+        },
+        {
+          "label": "The Boardroom Coup",
+          "character_knowledge": {
+            "VICTORIA_HARLOW": "Knows she has now secured 19% through her shell entities, which combined with Clara's hidden 11% gives her the 30% needed to force a vote; tells Daniel only that the position is 'secure,' concealing both the shell structure's details and Clara's involvement from him.",
+            "DANIEL_VANCE": "Knows Victoria has reached 19% and that the buyout machinery is fully in place, ready to move; has no idea a hidden family share block exists that would push the deal past 30%, or that Victoria already has an ally inside the Zhao family.",
+            "WEN_ZHAO": "Knows only that Harlow-Vance is aggressively buying up shares and worries about the company's exposure; wrongly believes the threat is purely external, with no notion that a family member's shares could tip the balance.",
+            "MEI_ZHAO": "Shares her father's read of the buyout as an external corporate threat to be managed through due diligence; has no knowledge of Victoria's shell entities reaching 19% or of any hidden family share block."
+          },
+          "solution": "Over eighteen months, Victoria Harlow acquired 19% of Meridian Tea's outstanding shares through three shell entities with no public link to Harlow-Vance Imports. Four months ago she secured a private letter of intent from Clara Lin-Zhao, who controls an 11% family share block inherited from Baoshan's late wife: Clara agreed to vote her shares with Harlow-Vance in exchange for a four-million-dollar payout and a public statement acknowledging the Lin family's 1968 losses. Combined, their blocks give the buyout side the 30% needed to force an emergency board vote under Meridian's bylaws, which triggers within sixty days of a formal offer being filed — a filing Victoria has deliberately not yet made public. Wen Zhao has no knowledge that a member of his own family controls the deciding share block.",
+          "objective_facts": [
+            "Over eighteen months, Victoria Harlow acquired 19% of Meridian Tea's outstanding shares through three shell entities not publicly linked to Harlow-Vance Imports.",
+            "Clara Lin-Zhao controls an 11% family share block inherited from Baoshan's late wife.",
+            "Combined, Victoria's and Clara's share blocks total 30%, sufficient under Meridian's bylaws to force an emergency board vote.",
+            "Clara signed a private letter of intent with Victoria Harlow four months ago, agreeing to vote her shares with Harlow-Vance in exchange for a four-million-dollar payout and a public statement acknowledging the Lin family's 1968 losses.",
+            "The letter of intent is stored in a safety deposit box Clara accesses under her birth name, Lin, which none of the Zhaos know she uses.",
+            "Meridian's bylaws require an emergency board vote within sixty days of a formal buyout offer being filed.",
+            "Victoria Harlow has not yet publicly filed the formal buyout offer, deliberately delaying the sixty-day clock while she finalizes her share position.",
+            "Wen Zhao believes the hostile buyout is a purely external threat and has no knowledge that a member of his own family controls the deciding share block."
+          ]
+        },
+        {
+          "label": "The Forbidden Romance",
+          "character_knowledge": {
+            "MEI_ZHAO": "Knows her history with Daniel is real and must stay hidden from her family; genuinely rattled that his due-diligence questions feel too personal, though she doesn't yet suspect he's protecting her with the little he's told her.",
+            "DANIEL_VANCE": "Knows the full weight of what he's hiding — his history with Mei and Victoria's true intentions — and manages a fragile double life between warehouse professionalism and stolen moments at the pier, revealing nothing of substance yet.",
+            "CLARA_LIN_ZHAO": "Senses Mei is uneasy about someone connected to the deal but doesn't know it's Daniel specifically; reassures her out of real affection, unaware her own reassurance rests on a lie of omission alongside her niece's.",
+            "VICTORIA_HARLOW": "Knows Daniel and Mei have some rapport and treats it as a useful asset for the deal; has no idea it's an established relationship stretching back over a year, not a passing courtesy."
+          },
+          "solution": "Mei Zhao and Daniel Vance met at the Hong Kong International Tea Auction fourteen months ago, before either knew the other's surname belonged to a rival company, and kept in private contact for four months before Victoria Harlow assigned Daniel to lead due diligence on a possible Meridian acquisition. Daniel recognized Mei's name immediately and chose not to disclose the prior relationship to Victoria. Since the buyout began, he has passed Mei two pieces of confidential information about its timeline without Victoria's knowledge, but has withheld the fact that Victoria's true goal is full acquisition and dissolution of the Meridian brand, not the minority partnership she has publicly proposed.",
+          "objective_facts": [
+            "Mei Zhao and Daniel Vance met at the Hong Kong International Tea Auction fourteen months ago, before either knew the other's company was a business rival.",
+            "They kept in private contact for four months before Victoria Harlow assigned Daniel to lead due diligence on a potential Meridian acquisition.",
+            "Daniel recognized Mei's surname the moment he was assigned the deal and did not disclose their prior relationship to Victoria.",
+            "Neither Wen Zhao nor Clara Lin-Zhao knows that Mei and Daniel have any history together.",
+            "Daniel has passed Mei two pieces of confidential information about the buyout timeline without Victoria's knowledge.",
+            "Daniel has not told Mei that Victoria's actual objective is full acquisition and dissolution of the Meridian brand, not the minority partnership Victoria has proposed publicly.",
+            "Victoria Harlow knows Daniel and Mei have some personal rapport and considers it a useful asset, but does not know its full history or depth."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "A Small Kindness",
+      "theme": "Daniel risks his position by passing Mei her first piece of confidential buyout information, deepening a romance neither of them can afford, while the rest of the family keeps operating in the dark about the deal's true scope.",
+      "intro_note": "Baoshan's hands never reached the matches — Clara talked him back from burning the old customs papers before anyone else in the house even knew he meant to. Across the water, Victoria Harlow closed her last shell purchase in silence: Harlow-Vance now holds nineteen percent of Meridian Tea, and the machinery for a hostile move is fully assembled, though no one at Beacon Hill has any idea.",
+      "outro_note": "Mei doesn't know what she's looking for in the old archive boxes — only that something about her grandfather's face, and the deadline Daniel shouldn't have told her, doesn't add up. She has no idea how close her hands already are to the truth everyone else in this family has spent decades keeping buried.",
+      "sections": [
+        {
+          "title": "Warehouse Morning",
+          "what": "Wen presses Mei about the due-diligence team's compressed timeline; she reassures him it's routine pressure, hiding her own unease at seeing Daniel again today.",
+          "who": [
+            "WEN_ZHAO",
+            "MEI_ZHAO"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "MERIDIAN_WAREHOUSE",
+          "words": null
+        },
+        {
+          "title": "Coffee, Not Business",
+          "what": "In the tasting room's front counter, Mei and Daniel trade clipped, professional small talk for the staff's benefit, their eyes saying what neither can voice aloud.",
+          "who": [
+            "MEI_ZHAO",
+            "DANIEL_VANCE"
+          ],
+          "thread": "The Forbidden Romance",
+          "location": "THE_JASMINE_ROOM",
+          "words": null
+        },
+        {
+          "title": "Victoria's Ledger",
+          "what": "Victoria briefs Daniel on an accelerated due-diligence schedule tied to her locked nineteen percent share position, framing the urgency as routine process rather than a closing window.",
+          "who": [
+            "VICTORIA_HARLOW",
+            "DANIEL_VANCE"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "HARLOW_VANCE_TOWER",
+          "words": null
+        },
+        {
+          "title": "What the Schedule Says",
+          "what": "Alone at the fogbound pier, Daniel weighs his loyalty to Victoria against what he owes Mei, before deciding to warn her about the accelerated timeline.",
+          "who": [
+            "DANIEL_VANCE"
+          ],
+          "thread": "The Forbidden Romance",
+          "location": "FOG_PIER",
+          "words": {
+            "min": 140,
+            "max": 220,
+            "target": "140 to 220"
+          }
+        },
+        {
+          "title": "The Back Table",
+          "what": "At the curtained back table, Daniel quietly hands Mei the real due-diligence deadline no one at Meridian has been told, risking his position to protect her.",
+          "who": [
+            "DANIEL_VANCE",
+            "MEI_ZHAO"
+          ],
+          "thread": "The Forbidden Romance",
+          "location": "THE_JASMINE_ROOM",
+          "words": null
+        },
+        {
+          "title": "Ginger and Old Paper",
+          "what": "Over ginger tea in the kitchen, Clara calmly reassures a frustrated Wen that Meridian's footing is solid, her composure masking the guilt of her hidden arrangement.",
+          "who": [
+            "CLARA_LIN_ZHAO",
+            "WEN_ZHAO"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "ZHAO_FAMILY_HOME",
+          "words": null
+        },
+        {
+          "title": "Baoshan's Rest",
+          "what": "Baoshan asks Mei to sit with him a while, deflecting her questions about his health scare with old stories, never explaining what truly shook him.",
+          "who": [
+            "BAOSHAN_ZHAO",
+            "MEI_ZHAO"
+          ],
+          "thread": "The 1968 Smuggling Secret",
+          "location": "ZHAO_FAMILY_HOME",
+          "words": null
+        },
+        {
+          "title": "Numbers Don't Lie",
+          "what": "Victoria tests Daniel by casually invoking Mei's name during a strategy review, watching closely for any flicker that might betray more than professional rapport.",
+          "who": [
+            "VICTORIA_HARLOW",
+            "DANIEL_VANCE"
+          ],
+          "thread": "The Forbidden Romance",
+          "location": "HARLOW_VANCE_TOWER",
+          "words": null
+        },
+        {
+          "title": "After Hours",
+          "what": "Alone among the tea crates after closing, Mei turns Daniel's warning over in her mind, unsure how to act on information she can't explain having.",
+          "who": [
+            "MEI_ZHAO"
+          ],
+          "thread": "The Forbidden Romance",
+          "location": "MERIDIAN_WAREHOUSE",
+          "words": {
+            "min": 140,
+            "max": 220,
+            "target": "140 to 220"
+          }
+        },
+        {
+          "title": "Dockside",
+          "what": "In the fog off Pier 91, Mei confronts Daniel about what they're both risking, and he admits the closeness between them has stopped feeling like a secret he can control.",
+          "who": [
+            "MEI_ZHAO",
+            "DANIEL_VANCE"
+          ],
+          "thread": "The Forbidden Romance",
+          "location": "FOG_PIER",
+          "words": null
+        },
+        {
+          "title": "Family Dinner",
+          "what": "At a tense Zhao family dinner, Mei nearly repeats what Daniel told her before catching herself, leaving Wen and Clara to wonder what she's holding back.",
+          "who": [
+            "WEN_ZHAO",
+            "MEI_ZHAO",
+            "CLARA_LIN_ZHAO",
+            "BAOSHAN_ZHAO"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "ZHAO_FAMILY_HOME",
+          "words": null
+        },
+        {
+          "title": "Closing the Books",
+          "what": "Alone in her office at day's end, Victoria reviews the tightened timeline with satisfaction, unaware that one piece of it has already reached Meridian.",
+          "who": [
+            "VICTORIA_HARLOW"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "HARLOW_VANCE_TOWER",
+          "words": {
+            "min": 140,
+            "max": 220,
+            "target": "140 to 220"
+          }
+        },
+        {
+          "title": "What She'll Find",
+          "what": "Back at the warehouse, Mei decides to pull older archive boxes for due diligence herself, restless with a suspicion about her grandfather she can't yet name.",
+          "who": [
+            "MEI_ZHAO"
+          ],
+          "thread": "The 1968 Smuggling Secret",
+          "location": "MERIDIAN_WAREHOUSE",
+          "words": null
+        }
+      ],
+      "case": [
+        {
+          "label": "The Forbidden Romance",
+          "character_knowledge": {
+            "MEI_ZHAO": "Mei now genuinely knows Daniel has given her real, risky information about a compressed buyout timeline, and she conceals from her father and aunt that she and Daniel have any relationship at all, performing strangers in public. She wrongly believes the timeline he shared is the full shape of Harlow-Vance's intentions, with no idea Daniel is withholding that Victoria means to dissolve Meridian entirely rather than partner with it.",
+            "DANIEL_VANCE": "Daniel genuinely warns Mei about the accelerated due-diligence schedule, risking his standing at Harlow-Vance to protect her. He conceals from Victoria that he has any ongoing contact with Mei whatsoever, and conceals from Mei herself that Victoria's true goal is dissolution, not partnership — telling himself the timeline warning is a small enough kindness not to count as real betrayal.",
+            "VICTORIA_HARLOW": "Victoria knows Daniel and Mei share some personal rapport and treats it as a useful asset, deliberately invoking Mei's name to gauge Daniel's reaction. She does not yet suspect he has leaked anything real, and wrongly assumes their connection is shallow and entirely under her control."
+          },
+          "solution": "Mei Zhao and Daniel Vance met at the Hong Kong International Tea Auction fourteen months ago, before either knew the other's surname belonged to a rival company, and kept in private contact for four months before Victoria Harlow assigned Daniel to lead due diligence on a possible Meridian acquisition. Daniel recognized Mei's name immediately and chose not to disclose the prior relationship to Victoria. Since the buyout began, he has passed Mei two pieces of confidential information about its timeline without Victoria's knowledge, but has withheld the fact that Victoria's true goal is full acquisition and dissolution of the Meridian brand, not the minority partnership she has publicly proposed.",
+          "objective_facts": [
+            "Mei Zhao and Daniel Vance met at the Hong Kong International Tea Auction fourteen months ago, before either knew the other's company was a business rival.",
+            "They kept in private contact for four months before Victoria Harlow assigned Daniel to lead due diligence on a potential Meridian acquisition.",
+            "Daniel recognized Mei's surname the moment he was assigned the deal and did not disclose their prior relationship to Victoria.",
+            "Neither Wen Zhao nor Clara Lin-Zhao knows that Mei and Daniel have any history together.",
+            "Daniel has passed Mei two pieces of confidential information about the buyout timeline without Victoria's knowledge.",
+            "Daniel has not told Mei that Victoria's actual objective is full acquisition and dissolution of the Meridian brand, not the minority partnership Victoria has proposed publicly.",
+            "Victoria Harlow knows Daniel and Mei have some personal rapport and considers it a useful asset, but does not know its full history or depth."
+          ]
+        },
+        {
+          "label": "The Boardroom Coup",
+          "character_knowledge": {
+            "WEN_ZHAO": "Wen genuinely believes the tightened due-diligence pace is simply Harlow-Vance pressuring Meridian from the outside, and he pushes Mei and Clara to hold the line. He has no knowledge that any family member holds shares tied to the buyout, and remains wrongly certain the entire threat originates outside the family.",
+            "CLARA_LIN_ZHAO": "Clara outwardly reassures Wen that Meridian's position is stable while privately holding the knowledge of her own signed letter of intent with Victoria. She conceals that arrangement from every member of the family, letting her usual brisk composure cover the guilt she won't voice.",
+            "VICTORIA_HARLOW": "Victoria is quietly accelerating the due-diligence and offer timeline now that her share position, combined with Clara's block, has reached the threshold she needs. She keeps the true pace hidden from Meridian by instructing Daniel to present it as routine process rather than a closing window.",
+            "MEI_ZHAO": "Mei experiences the tightening due-diligence schedule firsthand and reports it to her father as ordinary pressure from a rival company. She has no awareness that the acceleration is tied to a share threshold Harlow-Vance has already secured, or that a member of her own family is involved in it at all."
+          },
+          "solution": "Over eighteen months, Victoria Harlow acquired 19% of Meridian Tea's outstanding shares through three shell entities with no public link to Harlow-Vance Imports. Four months ago she secured a private letter of intent from Clara Lin-Zhao, who controls an 11% family share block inherited from Baoshan's late wife: Clara agreed to vote her shares with Harlow-Vance in exchange for a four-million-dollar payout and a public statement acknowledging the Lin family's 1968 losses. Combined, their blocks give the buyout side the 30% needed to force an emergency board vote under Meridian's bylaws, which triggers within sixty days of a formal offer being filed — a filing Victoria has deliberately not yet made public. Wen Zhao has no knowledge that a member of his own family controls the deciding share block.",
+          "objective_facts": [
+            "Over eighteen months, Victoria Harlow acquired 19% of Meridian Tea's outstanding shares through three shell entities not publicly linked to Harlow-Vance Imports.",
+            "Clara Lin-Zhao controls an 11% family share block inherited from Baoshan's late wife.",
+            "Combined, Victoria's and Clara's share blocks total 30%, sufficient under Meridian's bylaws to force an emergency board vote.",
+            "Clara signed a private letter of intent with Victoria Harlow four months ago, agreeing to vote her shares with Harlow-Vance in exchange for a four-million-dollar payout and a public statement acknowledging the Lin family's 1968 losses.",
+            "The letter of intent is stored in a safety deposit box Clara accesses under her birth name, Lin, which none of the Zhaos know she uses.",
+            "Meridian's bylaws require an emergency board vote within sixty days of a formal buyout offer being filed.",
+            "Victoria Harlow has not yet publicly filed the formal buyout offer, deliberately delaying the sixty-day clock while she finalizes her share position.",
+            "Wen Zhao believes the hostile buyout is a purely external threat and has no knowledge that a member of his own family controls the deciding share block."
+          ]
+        },
+        {
+          "label": "The 1968 Smuggling Secret",
+          "character_knowledge": {
+            "BAOSHAN_ZHAO": "Baoshan is still shaken from nearly destroying the old customs records and seeks quiet reassurance from Mei without explaining why the papers matter so deeply to him. He deliberately lets her read his unease as simple frailty, concealing the fifty-year-old guilt underneath.",
+            "CLARA_LIN_ZHAO": "Clara continues to carry the full truth of her origins and the manifest she found two years ago, saying nothing to Wen or Mei and giving no outward sign of it beyond her usual composure.",
+            "MEI_ZHAO": "Mei reads her grandfather's unease as ordinary sentiment about his declining health, with no awareness that his distance ties to a decades-old secret involving the company's founding and her aunt's true parentage."
+          },
+          "solution": "In March 1968, Baoshan Zhao smuggled looted antiques out of Guangzhou concealed beneath false crate bottoms in six tea shipments, amid the chaos of the Cultural Revolution, and sold them to a private Seattle collector to raise Meridian Tea's founding capital. Among the looted pieces were heirlooms belonging to the Lin family, whose parents died in unrest that same year. Wracked with guilt, Baoshan quietly adopted their infant daughter, falsified her birth record to list her as his biological niece, and raised her as Clara Zhao without ever telling her the truth. Two years ago, while digitizing the company archive, Clara found the original customs manifest and the antiques sale receipt, and cross-referenced them against her own adoption file — she has told no one except, eventually, Victoria Harlow.",
+          "objective_facts": [
+            "In March 1968, Baoshan Zhao imported six tea shipments from Guangzhou to Seattle with false crate bottoms concealing antiques.",
+            "The 1968 customs manifests, still in Meridian's archive, list the concealed cargo as 'assorted ceramics' under an import code Meridian has never used for any product before or since.",
+            "Baoshan sold the smuggled antiques to a private Seattle collector named Walter Pruitt in July 1968; the sale receipt, kept in a locked drawer at the Zhao family house, financed Meridian's first warehouse lease.",
+            "The infant later known as Clara Zhao was born Clara Lin in Guangzhou in January 1968 to Wei Lin and Su Lin, who both died in a factory fire during that year's unrest.",
+            "Baoshan personally arranged Clara's 1969 adoption paperwork in Seattle, falsifying her birth record to list her as his biological niece rather than the daughter of the family whose property he had taken.",
+            "Clara found the original 1968 customs manifest and the Pruitt sale receipt two years ago while digitizing Meridian's archives, and cross-referenced them against her own sealed adoption file.",
+            "Clara has never confronted Baoshan or Wen with what she found; the only person she has told is Victoria Harlow."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "Ceramics, Unexplained",
+      "theme": "Mei's due-diligence digging surfaces a fragment of the 1968 manifest that Clara barely manages to explain away, tightening the gap between what Clara knows and what the rest of the family suspects.",
+      "intro_note": "Daniel's warning still sits between them — a first crack in the wall he's supposed to be building against her family's company. Mei carries it into the one place she trusts completely: the archive, where the paperwork is supposed to only ever tell the truth.",
+      "outro_note": "The box is gone, the fragment is filed away, and Clara has told herself it's handled. But watching her father struggle to finish a sentence at dinner, she isn't sure anymore whose secret she's protecting — his, or the one Victoria is paying her to keep.",
+      "sections": [
+        {
+          "title": "The Archive Boxes",
+          "what": "Mei works alone through decades of archive boxes for due diligence, meticulous and unhurried, until her fingers land on a brittle, water-stained folder near the bottom.",
+          "who": [
+            "MEI_ZHAO"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "MERIDIAN_WAREHOUSE",
+          "words": null
+        },
+        {
+          "title": "Ceramics, Unexplained",
+          "what": "Mei studies the manifest fragment, notices ceramics listed under an import code Meridian has never used before, and decides to ask Clara about it directly.",
+          "who": [
+            "MEI_ZHAO"
+          ],
+          "thread": "The 1968 Smuggling Secret",
+          "location": "MERIDIAN_WAREHOUSE",
+          "words": null
+        },
+        {
+          "title": "Clean Timeline",
+          "what": "Victoria presses Daniel for a clean, fast due-diligence timeline; Daniel assures her nothing unusual has surfaced, quietly aware how close Mei is getting to the truth.",
+          "who": [
+            "VICTORIA_HARLOW",
+            "DANIEL_VANCE"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "HARLOW_VANCE_TOWER",
+          "words": null
+        },
+        {
+          "title": "A Question in the Kitchen",
+          "what": "Mei shows Clara the manifest fragment and asks about the ceramics import code; Clara calmly calls it an old clerical error and steers the conversation elsewhere.",
+          "who": [
+            "MEI_ZHAO",
+            "CLARA_LIN_ZHAO"
+          ],
+          "thread": "The 1968 Smuggling Secret",
+          "location": "ZHAO_FAMILY_HOME",
+          "words": null
+        },
+        {
+          "title": "Quietly Removed",
+          "what": "Alone after hours, Clara pulls the entire box from the archive shelves and quietly relocates it where no due-diligence team will ever think to look.",
+          "who": [
+            "CLARA_LIN_ZHAO"
+          ],
+          "thread": "The 1968 Smuggling Secret",
+          "location": "MERIDIAN_WAREHOUSE",
+          "words": {
+            "min": 140,
+            "max": 230,
+            "target": "140 to 230"
+          }
+        },
+        {
+          "title": "Jasmine Room, After Hours",
+          "what": "Mei mentions the odd manifest to Daniel over tea, treating it as a funny footnote in old paperwork; Daniel files the detail away without saying why it matters.",
+          "who": [
+            "MEI_ZHAO",
+            "DANIEL_VANCE"
+          ],
+          "thread": "The Forbidden Romance",
+          "location": "THE_JASMINE_ROOM",
+          "words": null
+        },
+        {
+          "title": "Purely External",
+          "what": "Wen updates Baoshan on the hostile bid's mounting public pressure, certain the danger is purely external, while Baoshan listens in silence, guarding what only he still knows.",
+          "who": [
+            "WEN_ZHAO",
+            "BAOSHAN_ZHAO"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "ZHAO_FAMILY_HOME",
+          "words": null
+        },
+        {
+          "title": "Close Call, Reported",
+          "what": "Clara tells Victoria how close Mei came to the manifest; Victoria calmly reassures her the box is gone and the acquisition timeline remains untouched.",
+          "who": [
+            "CLARA_LIN_ZHAO",
+            "VICTORIA_HARLOW"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "THE_JASMINE_ROOM",
+          "words": null
+        },
+        {
+          "title": "Checking On Him",
+          "what": "Rattled, Clara sits with Baoshan under the pretense of checking on his health, quietly searching his face for any sign he suspects what she almost lost.",
+          "who": [
+            "CLARA_LIN_ZHAO",
+            "BAOSHAN_ZHAO"
+          ],
+          "thread": "The 1968 Smuggling Secret",
+          "location": "ZHAO_FAMILY_HOME",
+          "words": null
+        },
+        {
+          "title": "What Daniel Doesn't Say",
+          "what": "Victoria asks Daniel directly whether Mei has noticed anything unusual in the archives; Daniel downplays it, protecting Mei without admitting even to himself exactly why.",
+          "who": [
+            "VICTORIA_HARLOW",
+            "DANIEL_VANCE"
+          ],
+          "thread": "The Forbidden Romance",
+          "location": "HARLOW_VANCE_TOWER",
+          "words": null
+        },
+        {
+          "title": "The Missing Box",
+          "what": "Mei returns to photograph the fragment properly and finds the entire box gone from the shelf, her curiosity sharpening into quiet, wary suspicion.",
+          "who": [
+            "MEI_ZHAO"
+          ],
+          "thread": "The 1968 Smuggling Secret",
+          "location": "MERIDIAN_WAREHOUSE",
+          "words": {
+            "min": 130,
+            "max": 200,
+            "target": "130 to 200"
+          }
+        },
+        {
+          "title": "Sunday Almost",
+          "what": "The family gathers for Sunday dinner, warmth and tension sitting side by side as Wen jokes about the takeover while Clara watches Mei a beat too closely.",
+          "who": [
+            "WEN_ZHAO",
+            "MEI_ZHAO",
+            "CLARA_LIN_ZHAO",
+            "BAOSHAN_ZHAO"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "ZHAO_FAMILY_HOME",
+          "words": null
+        },
+        {
+          "title": "Pier 91, Alone",
+          "what": "Alone at the pier where Meridian's oldest shipments once arrived, Clara stares at the fog-bound water, the closeness of Mei's discovery finally settling into real fear.",
+          "who": [
+            "CLARA_LIN_ZHAO"
+          ],
+          "thread": "The 1968 Smuggling Secret",
+          "location": "FOG_PIER",
+          "words": {
+            "min": 130,
+            "max": 220,
+            "target": "130 to 220"
+          }
+        }
+      ],
+      "case": [
+        {
+          "label": "The 1968 Smuggling Secret",
+          "character_knowledge": {
+            "MEI_ZHAO": "Mei genuinely knows only that she found a manifest fragment listing 'assorted ceramics' under an import code Meridian has never used anywhere else, and she means to flag it as a due-diligence irregularity; she has no idea it points to smuggling, her aunt's true parentage, or her grandfather's guilt, and wrongly assumes Clara's brush-off means it's nothing more than an old clerical mistake.",
+            "CLARA_LIN_ZHAO": "Clara knows this is the exact manifest fragment she found two years ago, proof of the smuggled antiques and her own falsified adoption, and she deliberately downplays it to Mei as clerical clutter while quietly pulling the whole box from circulation to make sure it can't surface again; underneath her composure she is badly rattled by how close it came.",
+            "BAOSHAN_ZHAO": "Baoshan carries the full truth of the 1968 shipments and Clara's real parentage, but this episode he has no idea Mei has stumbled onto any fragment of it; when Clara sits with him afterward searching his face for suspicion, he wrongly reads her unease as simple worry over his failing health."
+          },
+          "solution": "In March 1968, Baoshan Zhao smuggled looted antiques out of Guangzhou concealed beneath false crate bottoms in six tea shipments, amid the chaos of the Cultural Revolution, and sold them to a private Seattle collector to raise Meridian Tea's founding capital. Among the looted pieces were heirlooms belonging to the Lin family, whose parents died in unrest that same year. Wracked with guilt, Baoshan quietly adopted their infant daughter, falsified her birth record to list her as his biological niece, and raised her as Clara Zhao without ever telling her the truth. Two years ago, while digitizing the company archive, Clara found the original customs manifest and the antiques sale receipt, and cross-referenced them against her own adoption file — she has told no one except, eventually, Victoria Harlow.",
+          "objective_facts": [
+            "In March 1968, Baoshan Zhao imported six tea shipments from Guangzhou to Seattle with false crate bottoms concealing antiques.",
+            "The 1968 customs manifests, still in Meridian's archive, list the concealed cargo as 'assorted ceramics' under an import code Meridian has never used for any product before or since.",
+            "Baoshan sold the smuggled antiques to a private Seattle collector named Walter Pruitt in July 1968; the sale receipt, kept in a locked drawer at the Zhao family house, financed Meridian's first warehouse lease.",
+            "The infant later known as Clara Zhao was born Clara Lin in Guangzhou in January 1968 to Wei Lin and Su Lin, who both died in a factory fire during that year's unrest.",
+            "Baoshan personally arranged Clara's 1969 adoption paperwork in Seattle, falsifying her birth record to list her as his biological niece rather than the daughter of the family whose property he had taken.",
+            "Clara found the original 1968 customs manifest and the Pruitt sale receipt two years ago while digitizing Meridian's archives, and cross-referenced them against her own sealed adoption file.",
+            "Clara has never confronted Baoshan or Wen with what she found; the only person she has told is Victoria Harlow."
+          ]
+        },
+        {
+          "label": "The Forbidden Romance",
+          "character_knowledge": {
+            "MEI_ZHAO": "Mei still meets Daniel in confidence and values the buyout timeline he risked passing her, but she has no sense that Victoria's true goal is dissolution rather than partnership; she mentions the odd manifest to him casually, as an amusing footnote rather than anything either of them should worry about.",
+            "DANIEL_VANCE": "Daniel continues concealing both the depth of his history with Mei and Victoria's real endgame from his boss, and when Mei mentions the ceramics anomaly he quietly files the detail away as potentially significant without letting on why it interests him or admitting it to Mei."
+          },
+          "solution": "Mei Zhao and Daniel Vance met at the Hong Kong International Tea Auction fourteen months ago, before either knew the other's surname belonged to a rival company, and kept in private contact for four months before Victoria Harlow assigned Daniel to lead due diligence on a possible Meridian acquisition. Daniel recognized Mei's name immediately and chose not to disclose the prior relationship to Victoria. Since the buyout began, he has passed Mei two pieces of confidential information about its timeline without Victoria's knowledge, but has withheld the fact that Victoria's true goal is full acquisition and dissolution of the Meridian brand, not the minority partnership she has publicly proposed.",
+          "objective_facts": [
+            "Mei Zhao and Daniel Vance met at the Hong Kong International Tea Auction fourteen months ago, before either knew the other's company was a business rival.",
+            "They kept in private contact for four months before Victoria Harlow assigned Daniel to lead due diligence on a potential Meridian acquisition.",
+            "Daniel recognized Mei's surname the moment he was assigned the deal and did not disclose their prior relationship to Victoria.",
+            "Neither Wen Zhao nor Clara Lin-Zhao knows that Mei and Daniel have any history together.",
+            "Daniel has passed Mei two pieces of confidential information about the buyout timeline without Victoria's knowledge.",
+            "Daniel has not told Mei that Victoria's actual objective is full acquisition and dissolution of the Meridian brand, not the minority partnership Victoria has proposed publicly.",
+            "Victoria Harlow knows Daniel and Mei have some personal rapport and considers it a useful asset, but does not know its full history or depth."
+          ]
+        },
+        {
+          "label": "The Boardroom Coup",
+          "character_knowledge": {
+            "VICTORIA_HARLOW": "Victoria knows the full shape of the coup and is pressing Daniel for a clean, fast due-diligence process with nothing left to chance; she doesn't know the specific manifest incident but senses Clara's nerves and moves quickly to steady her, treating the near-miss as a manageable hiccup rather than a warning.",
+            "CLARA_LIN_ZHAO": "Clara remains covertly committed to her letter of intent with Victoria, and this episode's close call with Mei sharpens her fear of exposure without yet shaking her resolve; she tells Victoria exactly what happened but not how deeply it has unsettled her.",
+            "DANIEL_VANCE": "Daniel keeps leading due diligence and reporting sanitized progress to Victoria, still withholding from her the true depth of his connection to Mei, and when she asks pointedly whether Mei has noticed anything unusual, he downplays it to protect Mei without admitting even to himself exactly why that matters so much.",
+            "WEN_ZHAO": "Wen remains certain the hostile bid is a purely external threat from Harlow-Vance alone, briefing Baoshan on the mounting public pressure with no suspicion that a member of his own family controls part of the deciding share block."
+          },
+          "solution": "Over eighteen months, Victoria Harlow acquired 19% of Meridian Tea's outstanding shares through three shell entities with no public link to Harlow-Vance Imports. Four months ago she secured a private letter of intent from Clara Lin-Zhao, who controls an 11% family share block inherited from Baoshan's late wife: Clara agreed to vote her shares with Harlow-Vance in exchange for a four-million-dollar payout and a public statement acknowledging the Lin family's 1968 losses. Combined, their blocks give the buyout side the 30% needed to force an emergency board vote under Meridian's bylaws, which triggers within sixty days of a formal offer being filed — a filing Victoria has deliberately not yet made public. Wen Zhao has no knowledge that a member of his own family controls the deciding share block.",
+          "objective_facts": [
+            "Over eighteen months, Victoria Harlow acquired 19% of Meridian Tea's outstanding shares through three shell entities not publicly linked to Harlow-Vance Imports.",
+            "Clara Lin-Zhao controls an 11% family share block inherited from Baoshan's late wife.",
+            "Combined, Victoria's and Clara's share blocks total 30%, sufficient under Meridian's bylaws to force an emergency board vote.",
+            "Clara signed a private letter of intent with Victoria Harlow four months ago, agreeing to vote her shares with Harlow-Vance in exchange for a four-million-dollar payout and a public statement acknowledging the Lin family's 1968 losses.",
+            "The letter of intent is stored in a safety deposit box Clara accesses under her birth name, Lin, which none of the Zhaos know she uses.",
+            "Meridian's bylaws require an emergency board vote within sixty days of a formal buyout offer being filed.",
+            "Victoria Harlow has not yet publicly filed the formal buyout offer, deliberately delaying the sixty-day clock while she finalizes her share position.",
+            "Wen Zhao believes the hostile buyout is a purely external threat and has no knowledge that a member of his own family controls the deciding share block."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "What She Signed",
+      "theme": "Baoshan's decline pushes Clara to the edge of abandoning her secret arrangement with Victoria, but Victoria's reminder of what restitution means to her recommits Clara to the boardroom coup even as guilt gnaws at her closer to home.",
+      "intro_note": "Mei's question about the unexplained ceramics code still hangs unanswered, the archive box already pulled from circulation before she can look again — and at the Zhao house, a sudden turn in Baoshan's health is about to force everyone's hand.",
+      "outro_note": "Clara has signed on again, the guilt riding home with her instead of loosening — and this Sunday the whole family will sit at the same table, none of them yet counting how many secrets are already circling the room.",
+      "sections": [
+        {
+          "title": "A Bad Morning",
+          "what": "Baoshan collapses briefly at breakfast; the family scrambles, and Clara watches her father's fragility crack her resolve to keep her secret arrangement.",
+          "who": [
+            "BAOSHAN_ZHAO",
+            "WEN_ZHAO",
+            "MEI_ZHAO",
+            "CLARA_LIN_ZHAO"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "ZHAO_FAMILY_HOME",
+          "words": null
+        },
+        {
+          "title": "What He Won't Say",
+          "what": "Alone with Clara after the scare, Baoshan murmurs about a debt he never paid; she steadies him without asking what he means, guilt tightening.",
+          "who": [
+            "BAOSHAN_ZHAO",
+            "CLARA_LIN_ZHAO"
+          ],
+          "thread": "The 1968 Smuggling Secret",
+          "location": "ZHAO_FAMILY_HOME",
+          "words": null
+        },
+        {
+          "title": "Under the Weather",
+          "what": "Mei tells Daniel about her grandfather's collapse, seeking comfort; Daniel listens, torn between real feeling and what he still hasn't told her.",
+          "who": [
+            "MEI_ZHAO",
+            "DANIEL_VANCE"
+          ],
+          "thread": "The Forbidden Romance",
+          "location": "THE_JASMINE_ROOM",
+          "words": null
+        },
+        {
+          "title": "Useful",
+          "what": "Victoria presses Daniel to keep leaning on his rapport with Mei for information, treating the relationship as leverage rather than something real.",
+          "who": [
+            "VICTORIA_HARLOW",
+            "DANIEL_VANCE"
+          ],
+          "thread": "The Forbidden Romance",
+          "location": "HARLOW_VANCE_TOWER",
+          "words": null
+        },
+        {
+          "title": "The Call",
+          "what": "Alone among the tea crates, Clara stares at her phone for a long moment before finally dialing Victoria to arrange an urgent meeting.",
+          "who": [
+            "CLARA_LIN_ZHAO"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "MERIDIAN_WAREHOUSE",
+          "words": {
+            "min": 140,
+            "max": 220,
+            "target": "140 to 220"
+          }
+        },
+        {
+          "title": "Getting Out",
+          "what": "Clara tells Victoria she wants to void the letter of intent because of Baoshan's failing health; Victoria stays composed and asks what Clara truly owes him.",
+          "who": [
+            "CLARA_LIN_ZHAO",
+            "VICTORIA_HARLOW"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "HARLOW_VANCE_TOWER",
+          "words": null
+        },
+        {
+          "title": "Fog and Nothing Said",
+          "what": "Daniel meets Mei at the dock for a stolen quiet moment, the unspoken weight of the deal and his hidden loyalties settling between them.",
+          "who": [
+            "MEI_ZHAO",
+            "DANIEL_VANCE"
+          ],
+          "thread": "The Forbidden Romance",
+          "location": "FOG_PIER",
+          "words": null
+        },
+        {
+          "title": "What She Signed",
+          "what": "Victoria reminds Clara what restitution means for the family she was taken from, and Clara recommits to the letter of intent, shaken but resolved.",
+          "who": [
+            "CLARA_LIN_ZHAO",
+            "VICTORIA_HARLOW"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "THE_JASMINE_ROOM",
+          "words": null
+        },
+        {
+          "title": "Whatever Comes",
+          "what": "Wen sits with his father and promises the company will survive whatever threat is circling, unaware the threat already sits inside his own family.",
+          "who": [
+            "WEN_ZHAO",
+            "BAOSHAN_ZHAO"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "ZHAO_FAMILY_HOME",
+          "words": null
+        },
+        {
+          "title": "A Folder Closed Fast",
+          "what": "Clara lingers over an old folder from the archive until Mei nearly walks in, and she shuts it away before her niece can see what's inside.",
+          "who": [
+            "CLARA_LIN_ZHAO",
+            "MEI_ZHAO"
+          ],
+          "thread": "The 1968 Smuggling Secret",
+          "location": "THE_JASMINE_ROOM",
+          "words": null
+        },
+        {
+          "title": "Watching Him Sleep",
+          "what": "That night Clara sits beside a sleeping Baoshan, guilt closing her throat, and leaves the room without waking him or saying what she came to say.",
+          "who": [
+            "CLARA_LIN_ZHAO",
+            "BAOSHAN_ZHAO"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "ZHAO_FAMILY_HOME",
+          "words": {
+            "min": 150,
+            "max": 240,
+            "target": "150 to 240"
+          }
+        },
+        {
+          "title": "Before Sunday",
+          "what": "Mei and Daniel share a quiet, uneasy goodnight at the pier, the fog and the coming family gathering pressing in on both of them differently.",
+          "who": [
+            "MEI_ZHAO",
+            "DANIEL_VANCE"
+          ],
+          "thread": "The Forbidden Romance",
+          "location": "FOG_PIER",
+          "words": null
+        }
+      ],
+      "case": [
+        {
+          "label": "The Boardroom Coup",
+          "character_knowledge": {
+            "CLARA_LIN_ZHAO": "She genuinely wavers this episode — her father's decline makes the payout and public statement feel like betrayal rather than restitution, and she voices doubt to Victoria without ever revealing why the arrangement matters so personally to her. She conceals the letter of intent's existence from her entire family, and by the end she has recommitted, though she privately still tells herself she could walk away later if she truly needed to.",
+            "VICTORIA_HARLOW": "She knows exactly how to hold Clara to the agreement, reminding her of the Lin family's stolen history without naming the full extent of what Baoshan actually did or revealing her own filing timeline. She wrongly reads Clara's hesitation as simple nerves rather than genuine love for the family she's about to help dismantle.",
+            "WEN_ZHAO": "He remains entirely convinced the buyout is a purely external threat from Harlow-Vance and reassures his ailing father the company will weather it; he has no idea Clara controls the deciding family share block, and nothing this episode disturbs that blind spot."
+          },
+          "solution": "Over eighteen months, Victoria Harlow acquired 19% of Meridian Tea's outstanding shares through three shell entities with no public link to Harlow-Vance Imports. Four months ago she secured a private letter of intent from Clara Lin-Zhao, who controls an 11% family share block inherited from Baoshan's late wife: Clara agreed to vote her shares with Harlow-Vance in exchange for a four-million-dollar payout and a public statement acknowledging the Lin family's 1968 losses. Combined, their blocks give the buyout side the 30% needed to force an emergency board vote under Meridian's bylaws, which triggers within sixty days of a formal offer being filed — a filing Victoria has deliberately not yet made public. Wen Zhao has no knowledge that a member of his own family controls the deciding share block.",
+          "objective_facts": [
+            "Over eighteen months, Victoria Harlow acquired 19% of Meridian Tea's outstanding shares through three shell entities not publicly linked to Harlow-Vance Imports.",
+            "Clara Lin-Zhao controls an 11% family share block inherited from Baoshan's late wife.",
+            "Combined, Victoria's and Clara's share blocks total 30%, sufficient under Meridian's bylaws to force an emergency board vote.",
+            "Clara signed a private letter of intent with Victoria Harlow four months ago, agreeing to vote her shares with Harlow-Vance in exchange for a four-million-dollar payout and a public statement acknowledging the Lin family's 1968 losses.",
+            "The letter of intent is stored in a safety deposit box Clara accesses under her birth name, Lin, which none of the Zhaos know she uses.",
+            "Meridian's bylaws require an emergency board vote within sixty days of a formal buyout offer being filed.",
+            "Victoria Harlow has not yet publicly filed the formal buyout offer, deliberately delaying the sixty-day clock while she finalizes her share position.",
+            "Wen Zhao believes the hostile buyout is a purely external threat and has no knowledge that a member of his own family controls the deciding share block."
+          ]
+        },
+        {
+          "label": "The 1968 Smuggling Secret",
+          "character_knowledge": {
+            "CLARA_LIN_ZHAO": "Watching Baoshan grow frailer, she is newly afraid he will die before she ever confronts him, and his murmured, unfinished words about an old debt nearly draw the truth out of her — she deflects rather than pressing him, unwilling to reveal what she already knows from the manifest and her adoption file. She also nearly gets caught this episode with an old folder from the archive and hides it from Mei rather than explain it.",
+            "BAOSHAN_ZHAO": "Weakened and increasingly aware his time is short, he lets a fragment of guilt slip aloud about a debt he never paid, without naming what it was or to whom, unaware that Clara already possesses the documents that would explain exactly what he means.",
+            "MEI_ZHAO": "She has no idea what the folder Clara hides from her contains and reads Clara's evasiveness as simple grief over Baoshan rather than anything connected to the ceramics import code she found last episode; she does not yet connect the two."
+          },
+          "solution": "In March 1968, Baoshan Zhao smuggled looted antiques out of Guangzhou concealed beneath false crate bottoms in six tea shipments, amid the chaos of the Cultural Revolution, and sold them to a private Seattle collector to raise Meridian Tea's founding capital. Among the looted pieces were heirlooms belonging to the Lin family, whose parents died in unrest that same year. Wracked with guilt, Baoshan quietly adopted their infant daughter, falsified her birth record to list her as his biological niece, and raised her as Clara Zhao without ever telling her the truth. Two years ago, while digitizing the company archive, Clara found the original customs manifest and the antiques sale receipt, and cross-referenced them against her own adoption file — she has told no one except, eventually, Victoria Harlow.",
+          "objective_facts": [
+            "In March 1968, Baoshan Zhao imported six tea shipments from Guangzhou to Seattle with false crate bottoms concealing antiques.",
+            "The 1968 customs manifests, still in Meridian's archive, list the concealed cargo as 'assorted ceramics' under an import code Meridian has never used for any product before or since.",
+            "Baoshan sold the smuggled antiques to a private Seattle collector named Walter Pruitt in July 1968; the sale receipt, kept in a locked drawer at the Zhao family house, financed Meridian's first warehouse lease.",
+            "The infant later known as Clara Zhao was born Clara Lin in Guangzhou in January 1968 to Wei Lin and Su Lin, who both died in a factory fire during that year's unrest.",
+            "Baoshan personally arranged Clara's 1969 adoption paperwork in Seattle, falsifying her birth record to list her as his biological niece rather than the daughter of the family whose property he had taken.",
+            "Clara found the original 1968 customs manifest and the Pruitt sale receipt two years ago while digitizing Meridian's archives, and cross-referenced them against her own sealed adoption file.",
+            "Clara has never confronted Baoshan or Wen with what she found; the only person she has told is Victoria Harlow."
+          ]
+        },
+        {
+          "label": "The Forbidden Romance",
+          "character_knowledge": {
+            "MEI_ZHAO": "She turns to Daniel for real comfort about her grandfather without knowing that Victoria treats their rapport as a tool, and she still has no idea Daniel is withholding Victoria's true goal of dissolving Meridian entirely.",
+            "DANIEL_VANCE": "He genuinely comforts Mei out of real feeling while also complying with Victoria's instruction to keep using the relationship for information, and he continues withholding both Victoria's actual endgame and the fact that Victoria considers their bond a business asset.",
+            "VICTORIA_HARLOW": "She sees Daniel's closeness with Mei only as useful leverage for the acquisition, with no awareness of its emotional depth or of the confidential buyout information Daniel has already leaked to Mei."
+          },
+          "solution": "Mei Zhao and Daniel Vance met at the Hong Kong International Tea Auction fourteen months ago, before either knew the other's surname belonged to a rival company, and kept in private contact for four months before Victoria Harlow assigned Daniel to lead due diligence on a possible Meridian acquisition. Daniel recognized Mei's name immediately and chose not to disclose the prior relationship to Victoria. Since the buyout began, he has passed Mei two pieces of confidential information about its timeline without Victoria's knowledge, but has withheld the fact that Victoria's true goal is full acquisition and dissolution of the Meridian brand, not the minority partnership she has publicly proposed.",
+          "objective_facts": [
+            "Mei Zhao and Daniel Vance met at the Hong Kong International Tea Auction fourteen months ago, before either knew the other's company was a business rival.",
+            "They kept in private contact for four months before Victoria Harlow assigned Daniel to lead due diligence on a potential Meridian acquisition.",
+            "Daniel recognized Mei's surname the moment he was assigned the deal and did not disclose their prior relationship to Victoria.",
+            "Neither Wen Zhao nor Clara Lin-Zhao knows that Mei and Daniel have any history together.",
+            "Daniel has passed Mei two pieces of confidential information about the buyout timeline without Victoria's knowledge.",
+            "Daniel has not told Mei that Victoria's actual objective is full acquisition and dissolution of the Meridian brand, not the minority partnership Victoria has proposed publicly.",
+            "Victoria Harlow knows Daniel and Mei have some personal rapport and considers it a useful asset, but does not know its full history or depth."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "Sunday at Beacon Hill",
+      "theme": "A quiet family Sunday at the Zhao house lets old wounds and old warmth sit side by side — no new secret surfaces, but the accumulated tension of the takeover, the romance, and Baoshan's health presses on every conversation without breaking.",
+      "intro_note": "A week after Clara quietly recommits to Victoria in the shadow of Baoshan's decline, the Zhao family gathers at Beacon Hill for an ordinary Sunday — one where everyone at the table is carrying something they have no intention of putting down.",
+      "outro_note": "The dishes get washed, the tea gets poured, and the afternoon ends the way it began, gently, nothing spoken that shouldn't be. But the ledger keeps running whether anyone at that table admits it or not, and Wen is closer than he knows to noticing the numbers don't add up the way he thinks.",
+      "sections": [
+        {
+          "title": "Sunday Arrivals",
+          "what": "Family gathers for Sunday dinner; Wen hovers over Baoshan's frailty while Mei arrives late, distracted, deflecting questions about where she's been all morning.",
+          "who": [
+            "WEN_ZHAO",
+            "BAOSHAN_ZHAO",
+            "MEI_ZHAO",
+            "CLARA_LIN_ZHAO"
+          ],
+          "thread": "The Forbidden Romance",
+          "location": "ZHAO_FAMILY_HOME",
+          "words": null
+        },
+        {
+          "title": "The Kitchen Ledger",
+          "what": "Clara helps cook and gently probes Wen about company stress; he reassures her the buyout is nothing the family can't weather together.",
+          "who": [
+            "CLARA_LIN_ZHAO",
+            "WEN_ZHAO"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "ZHAO_FAMILY_HOME",
+          "words": null
+        },
+        {
+          "title": "A Text Under the Table",
+          "what": "Mei hides a buzzing phone during dinner; Baoshan notices her distraction and gently asks if there's someone, and she deflects with a joke.",
+          "who": [
+            "MEI_ZHAO",
+            "BAOSHAN_ZHAO"
+          ],
+          "thread": "The Forbidden Romance",
+          "location": "ZHAO_FAMILY_HOME",
+          "words": null
+        },
+        {
+          "title": "The Locked Drawer",
+          "what": "Baoshan quietly checks his study drawer still holds the old sale receipt; Wen finds him there and Baoshan claims he wanted an old photo.",
+          "who": [
+            "BAOSHAN_ZHAO",
+            "WEN_ZHAO"
+          ],
+          "thread": "The 1968 Smuggling Secret",
+          "location": "ZHAO_FAMILY_HOME",
+          "words": null
+        },
+        {
+          "title": "Cups on the Sill",
+          "what": "Mei slips away from dinner to meet Daniel briefly under cover of a supply run, their stolen warmth shadowed by what neither will say.",
+          "who": [
+            "MEI_ZHAO",
+            "DANIEL_VANCE"
+          ],
+          "thread": "The Forbidden Romance",
+          "location": "THE_JASMINE_ROOM",
+          "words": null
+        },
+        {
+          "title": "The Porch Call",
+          "what": "Clara steps onto the porch to take Victoria's call; Victoria reminds her the timeline is tightening and presses her to hold steady.",
+          "who": [
+            "CLARA_LIN_ZHAO",
+            "VICTORIA_HARLOW"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "ZHAO_FAMILY_HOME",
+          "words": {
+            "min": 130,
+            "max": 250,
+            "target": "150 to 250"
+          }
+        },
+        {
+          "title": "Photographs on the Wall",
+          "what": "Baoshan and Mei look through old family photos; he almost speaks of 1968 but changes course the instant Wen walks into the room.",
+          "who": [
+            "BAOSHAN_ZHAO",
+            "MEI_ZHAO",
+            "WEN_ZHAO"
+          ],
+          "thread": "The 1968 Smuggling Secret",
+          "location": "ZHAO_FAMILY_HOME",
+          "words": null
+        },
+        {
+          "title": "Yard Talk",
+          "what": "Wen vents to Mei in the yard about outside pressure on the company, unaware the deciding threat already sits inside his own family.",
+          "who": [
+            "WEN_ZHAO",
+            "MEI_ZHAO"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "ZHAO_FAMILY_HOME",
+          "words": null
+        },
+        {
+          "title": "What the Girls Don't Say",
+          "what": "Mei and Clara wash dishes together; Clara senses Mei is hiding something and lets it go, recognizing the same instinct to protect a secret.",
+          "who": [
+            "MEI_ZHAO",
+            "CLARA_LIN_ZHAO"
+          ],
+          "thread": "The Forbidden Romance",
+          "location": "ZHAO_FAMILY_HOME",
+          "words": null
+        },
+        {
+          "title": "The Old Man's Quiet",
+          "what": "Baoshan sits alone on the back steps, weighing how much longer he can carry both secrets before his body decides for him.",
+          "who": [
+            "BAOSHAN_ZHAO"
+          ],
+          "thread": "The 1968 Smuggling Secret",
+          "location": "ZHAO_FAMILY_HOME",
+          "words": {
+            "min": 130,
+            "max": 250,
+            "target": "150 to 250"
+          }
+        },
+        {
+          "title": "Tea for the Table",
+          "what": "Baoshan insists on brewing a specific old tea himself, waving off help, and Wen watches his father's hands shake, worry unspoken.",
+          "who": [
+            "BAOSHAN_ZHAO",
+            "WEN_ZHAO"
+          ],
+          "thread": "The 1968 Smuggling Secret",
+          "location": "ZHAO_FAMILY_HOME",
+          "words": null
+        },
+        {
+          "title": "A Toast Neither Means",
+          "what": "Wen raises a toast to no one taking what's ours, and Clara forces a smile, swallowing the toast along with her guilt.",
+          "who": [
+            "WEN_ZHAO",
+            "CLARA_LIN_ZHAO",
+            "BAOSHAN_ZHAO",
+            "MEI_ZHAO"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "ZHAO_FAMILY_HOME",
+          "words": null
+        },
+        {
+          "title": "Goodnight, Beacon Hill",
+          "what": "As the family disperses, Mei lingers with Baoshan on the porch, and he tells her love complicates everything worth having, unaware how literally that lands.",
+          "who": [
+            "MEI_ZHAO",
+            "BAOSHAN_ZHAO"
+          ],
+          "thread": "The Forbidden Romance",
+          "location": "ZHAO_FAMILY_HOME",
+          "words": {
+            "min": 130,
+            "max": 250,
+            "target": "150 to 250"
+          }
+        }
+      ],
+      "case": [
+        {
+          "label": "The 1968 Smuggling Secret",
+          "character_knowledge": {
+            "BAOSHAN_ZHAO": "Baoshan alone knows the full truth of the 1968 shipments and that Clara is the Lin family's daughter; this Sunday he nearly speaks of the past to Mei over the photographs but pulls back the moment Wen enters, and privately he wonders, alone on the steps, how much longer his failing body will let him keep protecting a secret he is no longer sure is his to keep.",
+            "CLARA_LIN_ZHAO": "Clara knows she was born Clara Lin and has kept both that fact and the manifest she found two years ago hidden from Wen and Baoshan; today she says nothing of it, watching Baoshan's hands shake over the tea with a guilt she can't name aloud even as she pours his cup.",
+            "WEN_ZHAO": "Wen has no idea his father is hiding anything beyond ordinary sentimentality; he reads Baoshan's moment at the study drawer and the tremor over the teapot as simple old age and nostalgia, worried only about his father's health, not his secrets.",
+            "MEI_ZHAO": "Mei still carries the unresolved memory of the manifest fragment Clara deflected weeks ago; she doesn't raise it today, but she notices how quickly both Baoshan and Clara steer conversation away from anything touching the old archive, without understanding why that pattern keeps repeating."
+          },
+          "solution": "In March 1968, Baoshan Zhao smuggled looted antiques out of Guangzhou concealed beneath false crate bottoms in six tea shipments, amid the chaos of the Cultural Revolution, and sold them to a private Seattle collector to raise Meridian Tea's founding capital. Among the looted pieces were heirlooms belonging to the Lin family, whose parents died in unrest that same year. Wracked with guilt, Baoshan quietly adopted their infant daughter, falsified her birth record to list her as his biological niece, and raised her as Clara Zhao without ever telling her the truth. Two years ago, while digitizing the company archive, Clara found the original customs manifest and the antiques sale receipt, and cross-referenced them against her own adoption file — she has told no one except, eventually, Victoria Harlow.",
+          "objective_facts": [
+            "In March 1968, Baoshan Zhao imported six tea shipments from Guangzhou to Seattle with false crate bottoms concealing antiques.",
+            "The 1968 customs manifests, still in Meridian's archive, list the concealed cargo as 'assorted ceramics' under an import code Meridian has never used for any product before or since.",
+            "Baoshan sold the smuggled antiques to a private Seattle collector named Walter Pruitt in July 1968; the sale receipt, kept in a locked drawer at the Zhao family house, financed Meridian's first warehouse lease.",
+            "The infant later known as Clara Zhao was born Clara Lin in Guangzhou in January 1968 to Wei Lin and Su Lin, who both died in a factory fire during that year's unrest.",
+            "Baoshan personally arranged Clara's 1969 adoption paperwork in Seattle, falsifying her birth record to list her as his biological niece rather than the daughter of the family whose property he had taken.",
+            "Clara found the original 1968 customs manifest and the Pruitt sale receipt two years ago while digitizing Meridian's archives, and cross-referenced them against her own sealed adoption file.",
+            "Clara has never confronted Baoshan or Wen with what she found; the only person she has told is Victoria Harlow."
+          ]
+        },
+        {
+          "label": "The Forbidden Romance",
+          "character_knowledge": {
+            "MEI_ZHAO": "Mei is still hiding her relationship with Daniel from her entire family; she manages her phone and her absence carefully at dinner, and deflects Baoshan's gentle question with a joke rather than risk the truth surfacing at the one table where it would do the most damage.",
+            "DANIEL_VANCE": "Daniel steals a brief, unofficial meeting with Mei knowing every minute together is a risk to both of them; he continues withholding from her that Victoria's real endgame is dissolving Meridian entirely, telling himself today isn't the day to say it.",
+            "BAOSHAN_ZHAO": "Baoshan senses only that his granddaughter seems distracted and lovestruck; his question to her is pure warmth and curiosity, with no inkling that whoever she's hiding is tied to the very company circling theirs."
+          },
+          "solution": "Mei Zhao and Daniel Vance met at the Hong Kong International Tea Auction fourteen months ago, before either knew the other's surname belonged to a rival company, and kept in private contact for four months before Victoria Harlow assigned Daniel to lead due diligence on a possible Meridian acquisition. Daniel recognized Mei's name immediately and chose not to disclose the prior relationship to Victoria. Since the buyout began, he has passed Mei two pieces of confidential information about its timeline without Victoria's knowledge, but has withheld the fact that Victoria's true goal is full acquisition and dissolution of the Meridian brand, not the minority partnership she has publicly proposed.",
+          "objective_facts": [
+            "Mei Zhao and Daniel Vance met at the Hong Kong International Tea Auction fourteen months ago, before either knew the other's company was a business rival.",
+            "They kept in private contact for four months before Victoria Harlow assigned Daniel to lead due diligence on a potential Meridian acquisition.",
+            "Daniel recognized Mei's surname the moment he was assigned the deal and did not disclose their prior relationship to Victoria.",
+            "Neither Wen Zhao nor Clara Lin-Zhao knows that Mei and Daniel have any history together.",
+            "Daniel has passed Mei two pieces of confidential information about the buyout timeline without Victoria's knowledge.",
+            "Daniel has not told Mei that Victoria's actual objective is full acquisition and dissolution of the Meridian brand, not the minority partnership Victoria has proposed publicly.",
+            "Victoria Harlow knows Daniel and Mei have some personal rapport and considers it a useful asset, but does not know its full history or depth."
+          ]
+        },
+        {
+          "label": "The Boardroom Coup",
+          "character_knowledge": {
+            "CLARA_LIN_ZHAO": "Clara remains committed to her letter of intent with Victoria and takes her call away from the family without explanation; sitting through Wen's toast to a threat he thinks is purely external costs her more than she lets show.",
+            "VICTORIA_HARLOW": "Victoria checks in to make sure Clara hasn't wavered again after last week's scare over Baoshan's health, reminding her the timeline is tightening, with no awareness of how much the ordinary warmth of a family Sunday is straining Clara's resolve from the inside.",
+            "WEN_ZHAO": "Wen genuinely believes the buyout pressure is an outside threat the family will weather together, reassuring Clara and toasting to it with no knowledge that the deciding share block sits inside his own family, let alone in her hands."
+          },
+          "solution": "Over eighteen months, Victoria Harlow acquired 19% of Meridian Tea's outstanding shares through three shell entities with no public link to Harlow-Vance Imports. Four months ago she secured a private letter of intent from Clara Lin-Zhao, who controls an 11% family share block inherited from Baoshan's late wife: Clara agreed to vote her shares with Harlow-Vance in exchange for a four-million-dollar payout and a public statement acknowledging the Lin family's 1968 losses. Combined, their blocks give the buyout side the 30% needed to force an emergency board vote under Meridian's bylaws, which triggers within sixty days of a formal offer being filed — a filing Victoria has deliberately not yet made public. Wen Zhao has no knowledge that a member of his own family controls the deciding share block.",
+          "objective_facts": [
+            "Over eighteen months, Victoria Harlow acquired 19% of Meridian Tea's outstanding shares through three shell entities not publicly linked to Harlow-Vance Imports.",
+            "Clara Lin-Zhao controls an 11% family share block inherited from Baoshan's late wife.",
+            "Combined, Victoria's and Clara's share blocks total 30%, sufficient under Meridian's bylaws to force an emergency board vote.",
+            "Clara signed a private letter of intent with Victoria Harlow four months ago, agreeing to vote her shares with Harlow-Vance in exchange for a four-million-dollar payout and a public statement acknowledging the Lin family's 1968 losses.",
+            "The letter of intent is stored in a safety deposit box Clara accesses under her birth name, Lin, which none of the Zhaos know she uses.",
+            "Meridian's bylaws require an emergency board vote within sixty days of a formal buyout offer being filed.",
+            "Victoria Harlow has not yet publicly filed the formal buyout offer, deliberately delaying the sixty-day clock while she finalizes her share position.",
+            "Wen Zhao believes the hostile buyout is a purely external threat and has no knowledge that a member of his own family controls the deciding share block."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "The Second Signature",
+      "theme": "Wen uncovers that Harlow-Vance's shares plus an unidentified family block already meet the threshold to force a vote, and the discovery that a Zhao is betraying the family from within detonates through every relationship in the house for the rest of the season.",
+      "intro_note": "The quiet of Sunday at Beacon Hill didn't survive the week. By Monday, a discrepancy was sitting in Meridian's own share registry — small enough to miss, large enough to turn Wen Zhao's suspicion in a direction he never expected: inward, toward his own family.",
+      "outro_note": "Wen now has a number with no name attached to it, and a father whose silence no longer reads as simple grief. Somewhere beneath fifty years of careful omission, Baoshan Zhao is running out of time to decide how much of the truth he can afford to give away — and how much he still has to keep.",
+      "sections": [
+        {
+          "title": "Numbers That Don't Add Up",
+          "what": "Clara brings Wen a share-registry anomaly as routine business, but his questions cut sharper than she expects, and she stalls, citing incomplete data.",
+          "who": [
+            "WEN_ZHAO",
+            "CLARA_LIN_ZHAO"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "MERIDIAN_WAREHOUSE",
+          "words": null
+        },
+        {
+          "title": "Old Habits",
+          "what": "Mei and Daniel steal a quiet hour at the family house, tenderness deepening even as Daniel senses Victoria's grip on the timeline tightening around them.",
+          "who": [
+            "MEI_ZHAO",
+            "DANIEL_VANCE"
+          ],
+          "thread": "The Forbidden Romance",
+          "location": "ZHAO_FAMILY_HOME",
+          "words": null
+        },
+        {
+          "title": "The Filing",
+          "what": "Victoria tells Daniel she's near ready to file the formal offer, and he pushes back gently, worried the timing will expose more than she intends.",
+          "who": [
+            "VICTORIA_HARLOW",
+            "DANIEL_VANCE"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "HARLOW_VANCE_TOWER",
+          "words": null
+        },
+        {
+          "title": "What the Old Man Notices",
+          "what": "Baoshan gently presses Clara about her distraction, and she deflects into small talk, guilt tightening under his gaze though he reads it as worry for him.",
+          "who": [
+            "BAOSHAN_ZHAO",
+            "CLARA_LIN_ZHAO"
+          ],
+          "thread": "The 1968 Smuggling Secret",
+          "location": "ZHAO_FAMILY_HOME",
+          "words": null
+        },
+        {
+          "title": "Second Look",
+          "what": "Wen asks Mei to help trace the anonymous shell purchases behind the buyout, and she agrees eagerly, unaware she is helping close in on her own aunt.",
+          "who": [
+            "WEN_ZHAO",
+            "MEI_ZHAO"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "MERIDIAN_WAREHOUSE",
+          "words": null
+        },
+        {
+          "title": "The Trust Nobody Recognizes",
+          "what": "Wen finds an unfamiliar family trust name in the share registry and asks Clara directly what it is; she nearly breaks before pointing him toward old estate paperwork.",
+          "who": [
+            "WEN_ZHAO",
+            "CLARA_LIN_ZHAO"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "MERIDIAN_WAREHOUSE",
+          "words": null
+        },
+        {
+          "title": "A Warning Without a Name",
+          "what": "Daniel warns Mei that the takeover is accelerating faster than she thinks, careful to stop short of naming Victoria's true endgame or his own growing dread.",
+          "who": [
+            "DANIEL_VANCE",
+            "MEI_ZHAO"
+          ],
+          "thread": "The Forbidden Romance",
+          "location": "THE_JASMINE_ROOM",
+          "words": null
+        },
+        {
+          "title": "Thirty Percent",
+          "what": "Wen tells Baoshan the buyout side already commands the votes to force an emergency meeting, and his father's fear reads less like surprise than recognition.",
+          "who": [
+            "WEN_ZHAO",
+            "BAOSHAN_ZHAO"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "ZHAO_FAMILY_HOME",
+          "words": null
+        },
+        {
+          "title": "The Family Block",
+          "what": "Alone in the archive, Wen matches the unfamiliar trust to a share class only Zhao descendants can hold, and understands with horror that family sold him out.",
+          "who": [
+            "WEN_ZHAO"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "MERIDIAN_WAREHOUSE",
+          "words": {
+            "min": 130,
+            "max": 230,
+            "target": "150 to 220"
+          }
+        },
+        {
+          "title": "Dinner Interrupted",
+          "what": "At a tense family dinner, Wen announces that someone in the family is voting against them, and suspicion ripples silently across four faces at the table.",
+          "who": [
+            "WEN_ZHAO",
+            "MEI_ZHAO",
+            "CLARA_LIN_ZHAO",
+            "BAOSHAN_ZHAO"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "ZHAO_FAMILY_HOME",
+          "words": null
+        },
+        {
+          "title": "What Victoria Doesn't Know Yet",
+          "what": "Word reaches Victoria that Wen suspects a family leak, and she recalculates her filing timeline calmly while Daniel worries what deeper scrutiny might cost him and Mei.",
+          "who": [
+            "VICTORIA_HARLOW",
+            "DANIEL_VANCE"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "HARLOW_VANCE_TOWER",
+          "words": null
+        },
+        {
+          "title": "Alone With the Ledger",
+          "what": "Late that night, Clara sits with the letter of intent she has never shown anyone, shaken by how close Wen's questions came to finding her out.",
+          "who": [
+            "CLARA_LIN_ZHAO"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "ZHAO_FAMILY_HOME",
+          "words": {
+            "min": 130,
+            "max": 230,
+            "target": "150 to 220"
+          }
+        },
+        {
+          "title": "Pier at Dusk",
+          "what": "Away from the house, Mei confides her fear that a traitor sits inside her own family, never guessing that the man beside her keeps secrets of his own.",
+          "who": [
+            "MEI_ZHAO",
+            "DANIEL_VANCE"
+          ],
+          "thread": "The Forbidden Romance",
+          "location": "FOG_PIER",
+          "words": null
+        }
+      ],
+      "case": [
+        {
+          "label": "The Boardroom Coup",
+          "character_knowledge": {
+            "WEN_ZHAO": "Discovers this episode that Harlow-Vance's shell-entity holdings combined with an unidentified family share block already total the 30% needed to force an emergency vote, and becomes consumed with tracing the second signature. He genuinely does not know who inside the family it is, and as the block's provenance leads back to his late mother's estate paperwork, he wrongly begins to suspect his own father authorized or knows more than he's saying, when in truth Baoshan has no knowledge of Clara's arrangement at all.",
+            "CLARA_LIN_ZHAO": "Knows she is the second signature and that her letter of intent with Victoria is exactly what Wen is circling closer to finding. She conceals this completely while outwardly helping him 'investigate,' steering him toward confusing estate paperwork and downplaying the trust's significance, terrified each question brings him nearer to her name.",
+            "MEI_ZHAO": "Has no idea her aunt holds the deciding family share block; she genuinely believes she's helping her father trace anonymous shell purchases tied to Harlow-Vance, unaware her own due-diligence work is quietly closing the net on someone she loves.",
+            "VICTORIA_HARLOW": "Knows the full shape of her arrangement with Clara and the exact math behind the 30% threshold. Learning that Wen is now actively investigating, she treats it as a manageable risk rather than a crisis, weighing whether to accelerate the formal filing before any trail can reach Clara.",
+            "DANIEL_VANCE": "Understands the mechanics of Victoria's shell-entity purchases from his due-diligence work but has never been told that Clara is the family ally holding the other share block; he only knows that Wen's growing suspicion raises the risk that closer scrutiny of the deal could also expose his own concealed history with Mei.",
+            "BAOSHAN_ZHAO": "Has no knowledge of Clara's arrangement with Victoria or that a family share block is forcing the vote. When Wen's suspicion lands near him because of his late wife's estate paperwork, his evasiveness comes only from the older secret he is guarding — his fear reads as guilt to Wen, though it belongs to 1968, not to any boardroom betrayal."
+          },
+          "solution": "Over eighteen months, Victoria Harlow acquired 19% of Meridian Tea's outstanding shares through three shell entities with no public link to Harlow-Vance Imports. Four months ago she secured a private letter of intent from Clara Lin-Zhao, who controls an 11% family share block inherited from Baoshan's late wife: Clara agreed to vote her shares with Harlow-Vance in exchange for a four-million-dollar payout and a public statement acknowledging the Lin family's 1968 losses. Combined, their blocks give the buyout side the 30% needed to force an emergency board vote under Meridian's bylaws, which triggers within sixty days of a formal offer being filed — a filing Victoria has deliberately not yet made public. Wen Zhao has no knowledge that a member of his own family controls the deciding share block.",
+          "objective_facts": [
+            "Over eighteen months, Victoria Harlow acquired 19% of Meridian Tea's outstanding shares through three shell entities not publicly linked to Harlow-Vance Imports.",
+            "Clara Lin-Zhao controls an 11% family share block inherited from Baoshan's late wife.",
+            "Combined, Victoria's and Clara's share blocks total 30%, sufficient under Meridian's bylaws to force an emergency board vote.",
+            "Clara signed a private letter of intent with Victoria Harlow four months ago, agreeing to vote her shares with Harlow-Vance in exchange for a four-million-dollar payout and a public statement acknowledging the Lin family's 1968 losses.",
+            "The letter of intent is stored in a safety deposit box Clara accesses under her birth name, Lin, which none of the Zhaos know she uses.",
+            "Meridian's bylaws require an emergency board vote within sixty days of a formal buyout offer being filed.",
+            "Victoria Harlow has not yet publicly filed the formal buyout offer, deliberately delaying the sixty-day clock while she finalizes her share position.",
+            "Wen Zhao believes the hostile buyout is a purely external threat and has no knowledge that a member of his own family controls the deciding share block."
+          ]
+        },
+        {
+          "label": "The Forbidden Romance",
+          "character_knowledge": {
+            "MEI_ZHAO": "Continues her secret relationship with Daniel, leaning on him for comfort as the family tension mounts, without any idea that the buyout machine now alarming her father is the very one Daniel serves, or that he is withholding how far Victoria truly intends to go.",
+            "DANIEL_VANCE": "Feels his position tightening on two fronts: Wen's investigation raises the odds that either the deal's structure or his history with Mei could surface, and he keeps warning her only in generalities, unwilling yet to admit that Victoria intends to dissolve Meridian entirely rather than partner with it."
+          },
+          "solution": "Mei Zhao and Daniel Vance met at the Hong Kong International Tea Auction fourteen months ago, before either knew the other's surname belonged to a rival company, and kept in private contact for four months before Victoria Harlow assigned Daniel to lead due diligence on a possible Meridian acquisition. Daniel recognized Mei's name immediately and chose not to disclose the prior relationship to Victoria. Since the buyout began, he has passed Mei two pieces of confidential information about its timeline without Victoria's knowledge, but has withheld the fact that Victoria's true goal is full acquisition and dissolution of the Meridian brand, not the minority partnership she has publicly proposed.",
+          "objective_facts": [
+            "Mei Zhao and Daniel Vance met at the Hong Kong International Tea Auction fourteen months ago, before either knew the other's company was a business rival.",
+            "They kept in private contact for four months before Victoria Harlow assigned Daniel to lead due diligence on a potential Meridian acquisition.",
+            "Daniel recognized Mei's surname the moment he was assigned the deal and did not disclose their prior relationship to Victoria.",
+            "Neither Wen Zhao nor Clara Lin-Zhao knows that Mei and Daniel have any history together.",
+            "Daniel has passed Mei two pieces of confidential information about the buyout timeline without Victoria's knowledge.",
+            "Daniel has not told Mei that Victoria's actual objective is full acquisition and dissolution of the Meridian brand, not the minority partnership Victoria has proposed publicly.",
+            "Victoria Harlow knows Daniel and Mei have some personal rapport and considers it a useful asset, but does not know its full history or depth."
+          ]
+        },
+        {
+          "label": "The 1968 Smuggling Secret",
+          "character_knowledge": {
+            "BAOSHAN_ZHAO": "Still alone carries the truth of the 1968 shipments and Clara's real parentage. He notices Clara's fraying composure this episode and reads it entirely as worry over his failing health, unaware it is fear of exposure from an entirely different secret of her own.",
+            "CLARA_LIN_ZHAO": "Continues hiding both her true parentage and her hidden alliance with Victoria from Baoshan. His gentle, health-driven concern this episode nearly cracks her composure, and she deliberately lets him believe his mistaken assumption is correct rather than correct it."
+          },
+          "solution": "In March 1968, Baoshan Zhao smuggled looted antiques out of Guangzhou concealed beneath false crate bottoms in six tea shipments, amid the chaos of the Cultural Revolution, and sold them to a private Seattle collector to raise Meridian Tea's founding capital. Among the looted pieces were heirlooms belonging to the Lin family, whose parents died in unrest that same year. Wracked with guilt, Baoshan quietly adopted their infant daughter, falsified her birth record to list her as his biological niece, and raised her as Clara Zhao without ever telling her the truth. Two years ago, while digitizing the company archive, Clara found the original customs manifest and the antiques sale receipt, and cross-referenced them against her own adoption file — she has told no one except, eventually, Victoria Harlow.",
+          "objective_facts": [
+            "In March 1968, Baoshan Zhao imported six tea shipments from Guangzhou to Seattle with false crate bottoms concealing antiques.",
+            "The 1968 customs manifests, still in Meridian's archive, list the concealed cargo as 'assorted ceramics' under an import code Meridian has never used for any product before or since.",
+            "Baoshan sold the smuggled antiques to a private Seattle collector named Walter Pruitt in July 1968; the sale receipt, kept in a locked drawer at the Zhao family house, financed Meridian's first warehouse lease.",
+            "The infant later known as Clara Zhao was born Clara Lin in Guangzhou in January 1968 to Wei Lin and Su Lin, who both died in a factory fire during that year's unrest.",
+            "Baoshan personally arranged Clara's 1969 adoption paperwork in Seattle, falsifying her birth record to list her as his biological niece rather than the daughter of the family whose property he had taken.",
+            "Clara found the original 1968 customs manifest and the Pruitt sale receipt two years ago while digitizing Meridian's archives, and cross-referenced them against her own sealed adoption file.",
+            "Clara has never confronted Baoshan or Wen with what she found; the only person she has told is Victoria Harlow."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "Half the Truth",
+      "theme": "Fearing he is running out of time, Baoshan finally tells Wen a partial version of the 1968 smuggling story, surfacing the company's founding sin without yet naming Clara as the daughter of the family he wronged.",
+      "intro_note": "Wen is still reeling from what the share numbers told him last week — someone inside his own family is voting to hand Meridian to Harlow-Vance, and he doesn't yet know who.",
+      "outro_note": "Baoshan has told his son half of a fifty-year-old secret, and kept the other half — the half with a name — locked behind his teeth. Across town, Daniel Vance is running out of ways to keep the rest of the truth from the one person he can't afford to lose.",
+      "sections": [
+        {
+          "title": "The Question Wen Can't Ask",
+          "what": "Wen confronts Baoshan about family loyalty after the share discovery, but can't bring himself to name his suspicion aloud yet.",
+          "who": [
+            "WEN_ZHAO",
+            "BAOSHAN_ZHAO"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "ZHAO_FAMILY_HOME",
+          "words": null
+        },
+        {
+          "title": "Warehouse Static",
+          "what": "Mei notices her father's clipped mood and presses Daniel for what he knows about the deal's timeline, testing his loyalty.",
+          "who": [
+            "MEI_ZHAO",
+            "DANIEL_VANCE"
+          ],
+          "thread": "The Forbidden Romance",
+          "location": "MERIDIAN_WAREHOUSE",
+          "words": null
+        },
+        {
+          "title": "Victoria's Patience",
+          "what": "Victoria presses Daniel for updates on Wen's suspicions and reminds him his usefulness depends on results, not sentiment.",
+          "who": [
+            "VICTORIA_HARLOW",
+            "DANIEL_VANCE"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "HARLOW_VANCE_TOWER",
+          "words": null
+        },
+        {
+          "title": "An Old Man's Arithmetic",
+          "what": "Alone, Baoshan counts the days his doctor gave him and decides the 1968 truth cannot die with him unspoken any longer.",
+          "who": [
+            "BAOSHAN_ZHAO"
+          ],
+          "thread": "The 1968 Smuggling Secret",
+          "location": "ZHAO_FAMILY_HOME",
+          "words": {
+            "min": 150,
+            "max": 250,
+            "target": "150 to 250"
+          }
+        },
+        {
+          "title": "The Safety Deposit Box",
+          "what": "Clara meets Victoria at the Jasmine Room's back table, unnerved that Wen is suddenly asking pointed questions about old shareholder records.",
+          "who": [
+            "CLARA_LIN_ZHAO",
+            "VICTORIA_HARLOW"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "THE_JASMINE_ROOM",
+          "words": null
+        },
+        {
+          "title": "Fog and Foghorns",
+          "what": "Baoshan walks the customs dock where the 1968 shipments once landed, rehearsing to himself the words he still can't say to Wen.",
+          "who": [
+            "BAOSHAN_ZHAO"
+          ],
+          "thread": "The 1968 Smuggling Secret",
+          "location": "FOG_PIER",
+          "words": {
+            "min": 150,
+            "max": 250,
+            "target": "150 to 250"
+          }
+        },
+        {
+          "title": "Half the Truth",
+          "what": "Baoshan tells Wen about the false crate bottoms, the Pruitt sale, and the money that built the first warehouse, but not about Clara.",
+          "who": [
+            "BAOSHAN_ZHAO",
+            "WEN_ZHAO"
+          ],
+          "thread": "The 1968 Smuggling Secret",
+          "location": "ZHAO_FAMILY_HOME",
+          "words": null
+        },
+        {
+          "title": "What Wen Can't Unhear",
+          "what": "Reeling, Wen sits alone with the smuggling confession, unaware the same secret conceals who his own niece really is.",
+          "who": [
+            "WEN_ZHAO"
+          ],
+          "thread": "The 1968 Smuggling Secret",
+          "location": "ZHAO_FAMILY_HOME",
+          "words": {
+            "min": 150,
+            "max": 250,
+            "target": "150 to 250"
+          }
+        },
+        {
+          "title": "What You're Allowed to Know",
+          "what": "Daniel visits Mei at the warehouse and nearly admits how deep Victoria's plan goes, then pulls back at the last second.",
+          "who": [
+            "DANIEL_VANCE",
+            "MEI_ZHAO"
+          ],
+          "thread": "The Forbidden Romance",
+          "location": "MERIDIAN_WAREHOUSE",
+          "words": null
+        },
+        {
+          "title": "Closer Than She Thinks",
+          "what": "Wen tells Clara, without naming her as a suspect, that he now believes someone inside the family betrayed them, watching her reaction closely.",
+          "who": [
+            "WEN_ZHAO",
+            "CLARA_LIN_ZHAO"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "ZHAO_FAMILY_HOME",
+          "words": null
+        },
+        {
+          "title": "Ceramics, Again",
+          "what": "Mei finds her father unusually shaken and asks Clara what happened, and Clara deflects with practiced calm while hiding her own fear.",
+          "who": [
+            "MEI_ZHAO",
+            "CLARA_LIN_ZHAO"
+          ],
+          "thread": "The 1968 Smuggling Secret",
+          "location": "THE_JASMINE_ROOM",
+          "words": null
+        },
+        {
+          "title": "The Old Debt Named",
+          "what": "Baoshan, exhausted, tells Clara privately that he has finally spoken to Wen about 1968, though not about her, leaving her stricken.",
+          "who": [
+            "BAOSHAN_ZHAO",
+            "CLARA_LIN_ZHAO"
+          ],
+          "thread": "The 1968 Smuggling Secret",
+          "location": "ZHAO_FAMILY_HOME",
+          "words": null
+        },
+        {
+          "title": "The Clock Victoria Hears",
+          "what": "Victoria learns from Daniel that Wen is closing in on the family traitor and decides to file the buyout offer sooner than planned.",
+          "who": [
+            "VICTORIA_HARLOW",
+            "DANIEL_VANCE"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "HARLOW_VANCE_TOWER",
+          "words": null
+        }
+      ],
+      "case": [
+        {
+          "label": "The 1968 Smuggling Secret",
+          "character_knowledge": {
+            "BAOSHAN_ZHAO": "He knows the complete truth of the 1968 shipments and of Clara's true parentage. Fearing he is running out of time, he decides this episode to tell Wen a partial version — the false crate bottoms, the Pruitt sale, the money that built the first warehouse — but deliberately withholds that Clara is the Lin family's daughter, protecting a truth that isn't his alone to give away.",
+            "WEN_ZHAO": "He learns for the first time that his father smuggled looted antiques in 1968 and used the proceeds to found Meridian, and is devastated by it. He has no idea the story connects to Clara at all, and wrongly believes his father has now told him everything there is to know.",
+            "CLARA_LIN_ZHAO": "She already knows the full truth herself and has told no one but Victoria. This episode she learns Baoshan has finally spoken to Wen about the 1968 shipments and is terrified her own name is one step closer to surfacing, though Baoshan reassures her it wasn't mentioned.",
+            "MEI_ZHAO": "She notices her father is shaken after a private conversation with Baoshan but is told nothing specific, and wrongly assumes it's ordinary stress from the takeover rather than a decades-old family secret."
+          },
+          "solution": "In March 1968, Baoshan Zhao smuggled looted antiques out of Guangzhou concealed beneath false crate bottoms in six tea shipments, amid the chaos of the Cultural Revolution, and sold them to a private Seattle collector to raise Meridian Tea's founding capital. Among the looted pieces were heirlooms belonging to the Lin family, whose parents died in unrest that same year. Wracked with guilt, Baoshan quietly adopted their infant daughter, falsified her birth record to list her as his biological niece, and raised her as Clara Zhao without ever telling her the truth. Two years ago, while digitizing the company archive, Clara found the original customs manifest and the antiques sale receipt, and cross-referenced them against her own adoption file — she has told no one except, eventually, Victoria Harlow.",
+          "objective_facts": [
+            "In March 1968, Baoshan Zhao imported six tea shipments from Guangzhou to Seattle with false crate bottoms concealing antiques.",
+            "The 1968 customs manifests, still in Meridian's archive, list the concealed cargo as 'assorted ceramics' under an import code Meridian has never used for any product before or since.",
+            "Baoshan sold the smuggled antiques to a private Seattle collector named Walter Pruitt in July 1968; the sale receipt, kept in a locked drawer at the Zhao family house, financed Meridian's first warehouse lease.",
+            "The infant later known as Clara Zhao was born Clara Lin in Guangzhou in January 1968 to Wei Lin and Su Lin, who both died in a factory fire during that year's unrest.",
+            "Baoshan personally arranged Clara's 1969 adoption paperwork in Seattle, falsifying her birth record to list her as his biological niece rather than the daughter of the family whose property he had taken.",
+            "Clara found the original 1968 customs manifest and the Pruitt sale receipt two years ago while digitizing Meridian's archives, and cross-referenced them against her own sealed adoption file.",
+            "Clara has never confronted Baoshan or Wen with what she found; the only person she has told is Victoria Harlow."
+          ]
+        },
+        {
+          "label": "The Boardroom Coup",
+          "character_knowledge": {
+            "WEN_ZHAO": "He knows the share math proves a family member is voting against him, and this episode begins actively testing the people closest to him, including Clara, without naming his suspicion aloud or having concrete proof yet.",
+            "CLARA_LIN_ZHAO": "She knows she is the second signature and grows increasingly afraid as Wen's questions edge closer to the truth, deflecting his direct probe while giving nothing away and revealing nothing of her fear to him.",
+            "VICTORIA_HARLOW": "She knows the full architecture of the buyout and that her sixty-day clock hasn't started yet. On hearing from Daniel that Wen is closing in, she decides delaying the filing is now a liability rather than a safeguard.",
+            "DANIEL_VANCE": "He knows the mechanics of Victoria's share position at a high level but reports to her only what he judges safe, torn between duty to Harlow-Vance and his instinct to protect Mei from what's coming."
+          },
+          "solution": "Over eighteen months, Victoria Harlow acquired 19% of Meridian Tea's outstanding shares through three shell entities with no public link to Harlow-Vance Imports. Four months ago she secured a private letter of intent from Clara Lin-Zhao, who controls an 11% family share block inherited from Baoshan's late wife: Clara agreed to vote her shares with Harlow-Vance in exchange for a four-million-dollar payout and a public statement acknowledging the Lin family's 1968 losses. Combined, their blocks give the buyout side the 30% needed to force an emergency board vote under Meridian's bylaws, which triggers within sixty days of a formal offer being filed — a filing Victoria has deliberately not yet made public. Wen Zhao has no knowledge that a member of his own family controls the deciding share block.",
+          "objective_facts": [
+            "Over eighteen months, Victoria Harlow acquired 19% of Meridian Tea's outstanding shares through three shell entities not publicly linked to Harlow-Vance Imports.",
+            "Clara Lin-Zhao controls an 11% family share block inherited from Baoshan's late wife.",
+            "Combined, Victoria's and Clara's share blocks total 30%, sufficient under Meridian's bylaws to force an emergency board vote.",
+            "Clara signed a private letter of intent with Victoria Harlow four months ago, agreeing to vote her shares with Harlow-Vance in exchange for a four-million-dollar payout and a public statement acknowledging the Lin family's 1968 losses.",
+            "The letter of intent is stored in a safety deposit box Clara accesses under her birth name, Lin, which none of the Zhaos know she uses.",
+            "Meridian's bylaws require an emergency board vote within sixty days of a formal buyout offer being filed.",
+            "Victoria Harlow has not yet publicly filed the formal buyout offer, deliberately delaying the sixty-day clock while she finalizes her share position.",
+            "Wen Zhao believes the hostile buyout is a purely external threat and has no knowledge that a member of his own family controls the deciding share block."
+          ]
+        },
+        {
+          "label": "The Forbidden Romance",
+          "character_knowledge": {
+            "MEI_ZHAO": "She trusts Daniel more than she admits to herself and senses he's holding something back about the buyout's true scope, though she wrongly assumes whatever he's hiding is smaller than it actually is.",
+            "DANIEL_VANCE": "He comes close to telling Mei that Victoria intends to dissolve Meridian entirely rather than partner with it, but pulls back at the last moment, continuing to conceal the full extent of Victoria's plan from her."
+          },
+          "solution": "Mei Zhao and Daniel Vance met at the Hong Kong International Tea Auction fourteen months ago, before either knew the other's surname belonged to a rival company, and kept in private contact for four months before Victoria Harlow assigned Daniel to lead due diligence on a possible Meridian acquisition. Daniel recognized Mei's name immediately and chose not to disclose the prior relationship to Victoria. Since the buyout began, he has passed Mei two pieces of confidential information about its timeline without Victoria's knowledge, but has withheld the fact that Victoria's true goal is full acquisition and dissolution of the Meridian brand, not the minority partnership she has publicly proposed.",
+          "objective_facts": [
+            "Mei Zhao and Daniel Vance met at the Hong Kong International Tea Auction fourteen months ago, before either knew the other's company was a business rival.",
+            "They kept in private contact for four months before Victoria Harlow assigned Daniel to lead due diligence on a potential Meridian acquisition.",
+            "Daniel recognized Mei's surname the moment he was assigned the deal and did not disclose their prior relationship to Victoria.",
+            "Neither Wen Zhao nor Clara Lin-Zhao knows that Mei and Daniel have any history together.",
+            "Daniel has passed Mei two pieces of confidential information about the buyout timeline without Victoria's knowledge.",
+            "Daniel has not told Mei that Victoria's actual objective is full acquisition and dissolution of the Meridian brand, not the minority partnership Victoria has proposed publicly.",
+            "Victoria Harlow knows Daniel and Mei have some personal rapport and considers it a useful asset, but does not know its full history or depth."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "What Victoria Really Wants",
+      "theme": "Daniel finally tells Mei that Victoria intends to dissolve Meridian entirely rather than partner with it, rupturing the romance's last comfortable lie and forcing Mei to choose between exposing him and protecting him.",
+      "intro_note": "Half a truth still sits heavy on Wen — enough now to sense Meridian's founding conceals something, not enough to know who close to him is finishing what his father started.",
+      "outro_note": "The filing clock is running, the vote is set, and Mei now carries a truth Victoria doesn't know she has — the only question left is who breaks first when the boardroom doors finally close.",
+      "sections": [
+        {
+          "title": "The Clock Starts",
+          "what": "Victoria tells Daniel the buyout offer is now formally filed, starting the sixty-day clock, and orders him to keep Mei distracted until the vote is scheduled.",
+          "who": [
+            "VICTORIA_HARLOW",
+            "DANIEL_VANCE"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "HARLOW_VANCE_TOWER",
+          "words": null
+        },
+        {
+          "title": "More Than He Said",
+          "what": "Wen presses his father for the rest of the 1968 story he was given, but Baoshan retreats behind his failing health and asks for more time.",
+          "who": [
+            "WEN_ZHAO",
+            "BAOSHAN_ZHAO"
+          ],
+          "thread": "The 1968 Smuggling Secret",
+          "location": "ZHAO_FAMILY_HOME",
+          "words": null
+        },
+        {
+          "title": "The Safer Path",
+          "what": "Victoria formally pitches the board a minority partnership, and Wen cautiously welcomes it as the safer path while Mei sits through it uneasy and unconvinced.",
+          "who": [
+            "VICTORIA_HARLOW",
+            "WEN_ZHAO",
+            "MEI_ZHAO"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "HARLOW_VANCE_TOWER",
+          "words": null
+        },
+        {
+          "title": "Almost",
+          "what": "Rattled by Victoria's pitch, Mei privately presses Daniel for reassurance about the deal, and he nearly confesses the truth before deflecting at the last second.",
+          "who": [
+            "MEI_ZHAO",
+            "DANIEL_VANCE"
+          ],
+          "thread": "The Forbidden Romance",
+          "location": "THE_JASMINE_ROOM",
+          "words": null
+        },
+        {
+          "title": "Reading the Ledger",
+          "what": "Wen asks Clara to help trace which family member's shares pushed the buyout past thirty percent, and she steers his search away from herself without lying outright.",
+          "who": [
+            "WEN_ZHAO",
+            "CLARA_LIN_ZHAO"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "MERIDIAN_WAREHOUSE",
+          "words": null
+        },
+        {
+          "title": "How Much He Knows",
+          "what": "Alarmed that Wen now knows part of the 1968 story, Clara presses Baoshan on exactly how much he revealed, fearing her own secret edges closer to daylight.",
+          "who": [
+            "CLARA_LIN_ZHAO",
+            "BAOSHAN_ZHAO"
+          ],
+          "thread": "The 1968 Smuggling Secret",
+          "location": "ZHAO_FAMILY_HOME",
+          "words": null
+        },
+        {
+          "title": "What He Stands to Inherit",
+          "what": "Victoria warns Daniel not to let sentiment slow the deal, reminding him what he stands to inherit at the firm if he closes it cleanly and on time.",
+          "who": [
+            "VICTORIA_HARLOW",
+            "DANIEL_VANCE"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "HARLOW_VANCE_TOWER",
+          "words": null
+        },
+        {
+          "title": "What Victoria Really Wants",
+          "what": "Daniel finally tells Mei that Victoria means to dissolve Meridian entirely, not partner with it, and Mei realizes every warning he's given her was already too small.",
+          "who": [
+            "DANIEL_VANCE",
+            "MEI_ZHAO"
+          ],
+          "thread": "The Forbidden Romance",
+          "location": "FOG_PIER",
+          "words": {
+            "min": 400,
+            "max": 550,
+            "target": "400 to 550"
+          }
+        },
+        {
+          "title": "Grandfather's Comfort",
+          "what": "Reeling, Mei seeks out her grandfather for comfort without explaining why, and his cryptic insistence on protecting the company only deepens her guilt over Daniel.",
+          "who": [
+            "MEI_ZHAO",
+            "BAOSHAN_ZHAO"
+          ],
+          "thread": "The Forbidden Romance",
+          "location": "ZHAO_FAMILY_HOME",
+          "words": null
+        },
+        {
+          "title": "Anything Unusual",
+          "what": "Still chasing the mystery share block, Wen asks Mei if she's noticed anything unusual in the family's finances, and she deflects, distracted by her own unraveling secret.",
+          "who": [
+            "WEN_ZHAO",
+            "MEI_ZHAO"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "MERIDIAN_WAREHOUSE",
+          "words": null
+        },
+        {
+          "title": "On My Terms",
+          "what": "Mei tells Daniel she won't expose him publicly, but only if he helps her find a way to save Meridian from the inside before the vote.",
+          "who": [
+            "MEI_ZHAO",
+            "DANIEL_VANCE"
+          ],
+          "thread": "The Forbidden Romance",
+          "location": "THE_JASMINE_ROOM",
+          "words": null
+        },
+        {
+          "title": "The Filing Window",
+          "what": "Victoria confirms the emergency vote is now formally scheduled within the filing window, and Clara's resolve wavers as the cost of betraying her family closes in.",
+          "who": [
+            "VICTORIA_HARLOW",
+            "CLARA_LIN_ZHAO"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "HARLOW_VANCE_TOWER",
+          "words": null
+        },
+        {
+          "title": "More Time",
+          "what": "Wen returns to press his father once more, but Baoshan, exhausted, admits only that he needs more time, leaving the rest of the truth unresolved.",
+          "who": [
+            "WEN_ZHAO",
+            "BAOSHAN_ZHAO"
+          ],
+          "thread": "The 1968 Smuggling Secret",
+          "location": "ZHAO_FAMILY_HOME",
+          "words": {
+            "min": 150,
+            "max": 220,
+            "target": "150 to 220"
+          }
+        }
+      ],
+      "case": [
+        {
+          "label": "The Forbidden Romance",
+          "character_knowledge": {
+            "MEI_ZHAO": "By episode's end Mei knows, directly from Daniel, that Victoria intends to dissolve Meridian entirely rather than partner with it; she conceals this from her father and the board and has decided — for now — to protect Daniel rather than expose him, on the condition he helps her fight the deal from inside. She wrongly assumed the two earlier warnings Daniel gave her were the worst of what he was hiding.",
+            "DANIEL_VANCE": "Has finally told Mei the truth about Victoria's real objective, relieving himself of the secret but placing his job and his standing with Victoria at real risk; he still hides from Victoria that he's crossed this line, and has not yet told Mei how far he's willing to go to help her stop the deal.",
+            "VICTORIA_HARLOW": "Knows the offer is now formally filed and is pushing Daniel to keep Mei occupied and unsuspecting until the vote; she wrongly believes Daniel remains fully loyal and has no idea he has already told Mei the truth she was counting on him to conceal."
+          },
+          "solution": "Mei Zhao and Daniel Vance met at the Hong Kong International Tea Auction fourteen months ago, before either knew the other's surname belonged to a rival company, and kept in private contact for four months before Victoria Harlow assigned Daniel to lead due diligence on a possible Meridian acquisition. Daniel recognized Mei's name immediately and chose not to disclose the prior relationship to Victoria. Since the buyout began, he has passed Mei two pieces of confidential information about its timeline without Victoria's knowledge, but has withheld the fact that Victoria's true goal is full acquisition and dissolution of the Meridian brand, not the minority partnership she has publicly proposed.",
+          "objective_facts": [
+            "Mei Zhao and Daniel Vance met at the Hong Kong International Tea Auction fourteen months ago, before either knew the other's company was a business rival.",
+            "They kept in private contact for four months before Victoria Harlow assigned Daniel to lead due diligence on a potential Meridian acquisition.",
+            "Daniel recognized Mei's surname the moment he was assigned the deal and did not disclose their prior relationship to Victoria.",
+            "Neither Wen Zhao nor Clara Lin-Zhao knows that Mei and Daniel have any history together.",
+            "Daniel has passed Mei two pieces of confidential information about the buyout timeline without Victoria's knowledge.",
+            "Daniel has not told Mei that Victoria's actual objective is full acquisition and dissolution of the Meridian brand, not the minority partnership Victoria has proposed publicly.",
+            "Victoria Harlow knows Daniel and Mei have some personal rapport and considers it a useful asset, but does not know its full history or depth."
+          ]
+        },
+        {
+          "label": "The Boardroom Coup",
+          "character_knowledge": {
+            "WEN_ZHAO": "Knows, since discovering it two episodes ago, that a family member's share block combined with Harlow-Vance's holdings reaches the thirty percent threshold to force a vote, and is actively searching records with Clara's help — unaware she herself is that signature. Baoshan's partial 1968 confession has deepened his suspicion that the traitor and the company's old debts are connected, though he can't yet see how.",
+            "CLARA_LIN_ZHAO": "Knows she is the second signature and has known the 1968 truth for two years; she deflects Wen's search away from her own name while appearing to help him, and conceals from him and from Baoshan how badly the combination of Wen's digging and Victoria's locked-in filing date is fraying her nerve.",
+            "VICTORIA_HARLOW": "Knows the offer has been formally filed and the emergency vote is now scheduled within the sixty-day window; she presses Clara to hold firm on the letter of intent and has no idea Wen is actively hunting for the identity of the family shareholder working against him.",
+            "MEI_ZHAO": "Knows only that her father is quietly searching for irregularities in the family's shares; distracted by what she's just learned from Daniel, she deflects his questions without realizing how close his search may be running to the truth."
+          },
+          "solution": "Over eighteen months, Victoria Harlow acquired 19% of Meridian Tea's outstanding shares through three shell entities with no public link to Harlow-Vance Imports. Four months ago she secured a private letter of intent from Clara Lin-Zhao, who controls an 11% family share block inherited from Baoshan's late wife: Clara agreed to vote her shares with Harlow-Vance in exchange for a four-million-dollar payout and a public statement acknowledging the Lin family's 1968 losses. Combined, their blocks give the buyout side the 30% needed to force an emergency board vote under Meridian's bylaws, which triggers within sixty days of a formal offer being filed — a filing Victoria has deliberately not yet made public. Wen Zhao has no knowledge that a member of his own family controls the deciding share block.",
+          "objective_facts": [
+            "Over eighteen months, Victoria Harlow acquired 19% of Meridian Tea's outstanding shares through three shell entities not publicly linked to Harlow-Vance Imports.",
+            "Clara Lin-Zhao controls an 11% family share block inherited from Baoshan's late wife.",
+            "Combined, Victoria's and Clara's share blocks total 30%, sufficient under Meridian's bylaws to force an emergency board vote.",
+            "Clara signed a private letter of intent with Victoria Harlow four months ago, agreeing to vote her shares with Harlow-Vance in exchange for a four-million-dollar payout and a public statement acknowledging the Lin family's 1968 losses.",
+            "The letter of intent is stored in a safety deposit box Clara accesses under her birth name, Lin, which none of the Zhaos know she uses.",
+            "Meridian's bylaws require an emergency board vote within sixty days of a formal buyout offer being filed.",
+            "Victoria Harlow has not yet publicly filed the formal buyout offer, deliberately delaying the sixty-day clock while she finalizes her share position.",
+            "Wen Zhao believes the hostile buyout is a purely external threat and has no knowledge that a member of his own family controls the deciding share block."
+          ]
+        },
+        {
+          "label": "The 1968 Smuggling Secret",
+          "character_knowledge": {
+            "WEN_ZHAO": "Knows the partial version Baoshan gave him — the false crate bottoms, the Pruitt sale, the money that built the first warehouse — and pushes for the rest, wrongly assuming his father is protecting only his own reputation rather than shielding Clara's true parentage.",
+            "BAOSHAN_ZHAO": "Knows the full truth of 1968 and of Clara's real parentage; having told Wen a partial version, he is now torn between his failing health running out before he can tell the rest, and the possibility that silence is still the kinder mercy — and stalls Wen with claims of exhaustion.",
+            "CLARA_LIN_ZHAO": "Knows her own true parentage and Baoshan's role in the 1968 smuggling, and now knows Wen has been told part of the story; she hides from Baoshan how frightened this makes her, fearing Wen might connect the old ceramics manifest to her own sealed birth records before the vote ever happens."
+          },
+          "solution": "In March 1968, Baoshan Zhao smuggled looted antiques out of Guangzhou concealed beneath false crate bottoms in six tea shipments, amid the chaos of the Cultural Revolution, and sold them to a private Seattle collector to raise Meridian Tea's founding capital. Among the looted pieces were heirlooms belonging to the Lin family, whose parents died in unrest that same year. Wracked with guilt, Baoshan quietly adopted their infant daughter, falsified her birth record to list her as his biological niece, and raised her as Clara Zhao without ever telling her the truth. Two years ago, while digitizing the company archive, Clara found the original customs manifest and the antiques sale receipt, and cross-referenced them against her own adoption file — she has told no one except, eventually, Victoria Harlow.",
+          "objective_facts": [
+            "In March 1968, Baoshan Zhao imported six tea shipments from Guangzhou to Seattle with false crate bottoms concealing antiques.",
+            "The 1968 customs manifests, still in Meridian's archive, list the concealed cargo as 'assorted ceramics' under an import code Meridian has never used for any product before or since.",
+            "Baoshan sold the smuggled antiques to a private Seattle collector named Walter Pruitt in July 1968; the sale receipt, kept in a locked drawer at the Zhao family house, financed Meridian's first warehouse lease.",
+            "The infant later known as Clara Zhao was born Clara Lin in Guangzhou in January 1968 to Wei Lin and Su Lin, who both died in a factory fire during that year's unrest.",
+            "Baoshan personally arranged Clara's 1969 adoption paperwork in Seattle, falsifying her birth record to list her as his biological niece rather than the daughter of the family whose property he had taken.",
+            "Clara found the original 1968 customs manifest and the Pruitt sale receipt two years ago while digitizing Meridian's archives, and cross-referenced them against her own sealed adoption file.",
+            "Clara has never confronted Baoshan or Wen with what she found; the only person she has told is Victoria Harlow."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "The Vote",
+      "theme": "At the emergency board vote, Clara's identity as the deciding shareholder is exposed in front of Wen and the vote breaks in a direction no one at the table expected, while Daniel publicly breaks from Harlow-Vance to stand with Mei at a cost neither of them anticipated paying.",
+      "intro_note": "Daniel has told Mei the truth she was never supposed to learn: Victoria means to dissolve Meridian entirely, not partner with it. Mei is left to decide, hours before the emergency board vote convenes, whether to protect Daniel or expose him.",
+      "outro_note": "",
+      "sections": [
+        {
+          "title": "Before the Storm",
+          "what": "Victoria briefs Daniel on vote-day strategy at Harlow-Vance Tower; his practiced calm barely masks that he has already decided to betray her plan.",
+          "who": [
+            "VICTORIA_HARLOW",
+            "DANIEL_VANCE"
+          ],
+          "thread": "The Forbidden Romance",
+          "location": "HARLOW_VANCE_TOWER",
+          "words": null
+        },
+        {
+          "title": "The Old House, Before Dawn",
+          "what": "At the Zhao house before dawn, Wen frets over the unnamed second signature forcing today's vote while Baoshan, frail, nearly tells him everything and stops.",
+          "who": [
+            "BAOSHAN_ZHAO",
+            "WEN_ZHAO"
+          ],
+          "thread": "The 1968 Smuggling Secret",
+          "location": "ZHAO_FAMILY_HOME",
+          "words": null
+        },
+        {
+          "title": "One Last Warning",
+          "what": "In the empty Meridian Warehouse before the vote, Daniel tells Mei he'll break with Victoria publicly today; Mei, terrified for him, tries to talk him out of it.",
+          "who": [
+            "MEI_ZHAO",
+            "DANIEL_VANCE"
+          ],
+          "thread": "The Forbidden Romance",
+          "location": "MERIDIAN_WAREHOUSE",
+          "words": null
+        },
+        {
+          "title": "Clara's Reckoning",
+          "what": "Victoria calls Clara at the Jasmine Room to confirm her vote as promised; Clara agrees aloud while privately doubting she can go through with it.",
+          "who": [
+            "CLARA_LIN_ZHAO",
+            "VICTORIA_HARLOW"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "THE_JASMINE_ROOM",
+          "words": {
+            "min": 150,
+            "max": 260,
+            "target": "150 to 250"
+          }
+        },
+        {
+          "title": "The Emergency Vote Opens",
+          "what": "At Harlow-Vance Tower the emergency board convenes as Victoria formally files the buyout offer and reveals the thirty percent bloc forcing the vote; Wen demands the second signature's name.",
+          "who": [
+            "VICTORIA_HARLOW",
+            "WEN_ZHAO",
+            "MEI_ZHAO",
+            "CLARA_LIN_ZHAO",
+            "DANIEL_VANCE"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "HARLOW_VANCE_TOWER",
+          "words": null
+        },
+        {
+          "title": "Daniel Breaks Rank",
+          "what": "Daniel publicly reveals that Victoria intends full dissolution of Meridian, not the partnership she proposed, breaking openly with Harlow-Vance to stand beside Mei before the board.",
+          "who": [
+            "DANIEL_VANCE",
+            "VICTORIA_HARLOW",
+            "MEI_ZHAO",
+            "WEN_ZHAO"
+          ],
+          "thread": "The Forbidden Romance",
+          "location": "HARLOW_VANCE_TOWER",
+          "words": null
+        },
+        {
+          "title": "Victoria's Reckoning",
+          "what": "Cornered by Daniel's defection, Victoria strips him of his role and his stake in Harlow-Vance on the spot, coldly recalculating her strategy without him.",
+          "who": [
+            "VICTORIA_HARLOW",
+            "DANIEL_VANCE"
+          ],
+          "thread": "The Forbidden Romance",
+          "location": "HARLOW_VANCE_TOWER",
+          "words": {
+            "min": 150,
+            "max": 260,
+            "target": "150 to 250"
+          }
+        },
+        {
+          "title": "The Second Signature Named",
+          "what": "Backed into a corner, Victoria names Clara as the holder of the deciding eleven percent, exposing her secret arrangement to Wen in front of the entire board.",
+          "who": [
+            "VICTORIA_HARLOW",
+            "CLARA_LIN_ZHAO",
+            "WEN_ZHAO",
+            "MEI_ZHAO"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "HARLOW_VANCE_TOWER",
+          "words": null
+        },
+        {
+          "title": "Wen's Fury",
+          "what": "Reeling, Wen confronts Clara over her betrayal; she admits to signing away her shares but refuses to explain why the money matters so much to her.",
+          "who": [
+            "WEN_ZHAO",
+            "CLARA_LIN_ZHAO"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "HARLOW_VANCE_TOWER",
+          "words": {
+            "min": 150,
+            "max": 260,
+            "target": "150 to 250"
+          }
+        },
+        {
+          "title": "The Vote Breaks",
+          "what": "Faced with Wen's presence, Clara casts her shares against full dissolution, demanding only restitution and acknowledgment, denying Victoria the supermajority she spent eighteen months engineering.",
+          "who": [
+            "CLARA_LIN_ZHAO",
+            "VICTORIA_HARLOW",
+            "WEN_ZHAO",
+            "MEI_ZHAO"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "HARLOW_VANCE_TOWER",
+          "words": null
+        },
+        {
+          "title": "What Baoshan Knew",
+          "what": "Reeling at home, Wen presses Baoshan on why Clara would betray the family for money; Baoshan admits there is more to the story he still hasn't told him.",
+          "who": [
+            "BAOSHAN_ZHAO",
+            "WEN_ZHAO"
+          ],
+          "thread": "The 1968 Smuggling Secret",
+          "location": "ZHAO_FAMILY_HOME",
+          "words": null
+        },
+        {
+          "title": "Open, At Last",
+          "what": "Jobless and disinherited, Daniel finds Mei among the warehouse's tea crates; stripped of everything he had to lose, they choose to stay together in the open.",
+          "who": [
+            "MEI_ZHAO",
+            "DANIEL_VANCE"
+          ],
+          "thread": "The Forbidden Romance",
+          "location": "MERIDIAN_WAREHOUSE",
+          "words": null
+        },
+        {
+          "title": "Fog Lifting",
+          "what": "At Pier 91 as a shipment arrives through the fog, Mei and Wen watch Meridian survive intact but changed, its future and Clara's silence still unresolved.",
+          "who": [
+            "MEI_ZHAO",
+            "WEN_ZHAO"
+          ],
+          "thread": "The Boardroom Coup",
+          "location": "FOG_PIER",
+          "words": {
+            "min": 150,
+            "max": 260,
+            "target": "150 to 250"
+          }
+        }
+      ],
+      "case": [
+        {
+          "label": "The Boardroom Coup",
+          "character_knowledge": {
+            "VICTORIA_HARLOW": "Knows the full mechanics of her eighteen-month share acquisition and Clara's letter of intent, and has engineered today's vote to force dissolution; cornered by Daniel's defection, she gambles on naming Clara publicly, not expecting Clara to then vote against her.",
+            "CLARA_LIN_ZHAO": "Knows she controls the deciding eleven percent and has covertly promised her shares to Victoria for restitution and a public statement, but with Wen watching she can't bring herself to cast the full-dissolution vote and instead demands only partial terms, still withholding why the money matters to her.",
+            "WEN_ZHAO": "Enters believing the buyout is purely external and learns for the first time, in front of the entire board, that Clara holds the deciding shares; he doesn't yet understand why she'd betray the family, only that she has.",
+            "MEI_ZHAO": "Already suspects the buyout's true scope from Daniel's earlier warnings and watches the vote unfold with growing alarm as Clara's identity is exposed, though she still doesn't know the 1968 reason behind Clara's arrangement with Victoria.",
+            "DANIEL_VANCE": "Knows the mechanics of the thirty percent threshold from his due diligence work but is genuinely blindsided when Victoria names Clara as the second signature, since his own intelligence never reached that far into the family's internal shares."
+          },
+          "solution": "Over eighteen months, Victoria Harlow acquired 19% of Meridian Tea's outstanding shares through three shell entities with no public link to Harlow-Vance Imports. Four months ago she secured a private letter of intent from Clara Lin-Zhao, who controls an 11% family share block inherited from Baoshan's late wife: Clara agreed to vote her shares with Harlow-Vance in exchange for a four-million-dollar payout and a public statement acknowledging the Lin family's 1968 losses. Combined, their blocks give the buyout side the 30% needed to force an emergency board vote under Meridian's bylaws, which triggers within sixty days of a formal offer being filed — a filing Victoria has deliberately not yet made public. Wen Zhao has no knowledge that a member of his own family controls the deciding share block.",
+          "objective_facts": [
+            "Over eighteen months, Victoria Harlow acquired 19% of Meridian Tea's outstanding shares through three shell entities not publicly linked to Harlow-Vance Imports.",
+            "Clara Lin-Zhao controls an 11% family share block inherited from Baoshan's late wife.",
+            "Combined, Victoria's and Clara's share blocks total 30%, sufficient under Meridian's bylaws to force an emergency board vote.",
+            "Clara signed a private letter of intent with Victoria Harlow four months ago, agreeing to vote her shares with Harlow-Vance in exchange for a four-million-dollar payout and a public statement acknowledging the Lin family's 1968 losses.",
+            "The letter of intent is stored in a safety deposit box Clara accesses under her birth name, Lin, which none of the Zhaos know she uses.",
+            "Meridian's bylaws require an emergency board vote within sixty days of a formal buyout offer being filed.",
+            "Victoria Harlow has not yet publicly filed the formal buyout offer, deliberately delaying the sixty-day clock while she finalizes her share position.",
+            "Wen Zhao believes the hostile buyout is a purely external threat and has no knowledge that a member of his own family controls the deciding share block."
+          ]
+        },
+        {
+          "label": "The Forbidden Romance",
+          "character_knowledge": {
+            "DANIEL_VANCE": "Has decided, before the vote even opens, to publicly disclose Victoria's true dissolution plan and side with Mei, fully aware it will cost him his position and his stake in the Harlow-Vance inheritance line.",
+            "MEI_ZHAO": "Knows Daniel plans to break with Victoria today and is torn between fear for what it will cost him and relief that the lie between them is finally ending in the open.",
+            "VICTORIA_HARLOW": "Has always treated Daniel's rapport with Mei as a useful asset without grasping its depth, and is genuinely blindsided when he turns that rapport into open defection at the worst possible moment for her."
+          },
+          "solution": "Mei Zhao and Daniel Vance met at the Hong Kong International Tea Auction fourteen months ago, before either knew the other's surname belonged to a rival company, and kept in private contact for four months before Victoria Harlow assigned Daniel to lead due diligence on a possible Meridian acquisition. Daniel recognized Mei's name immediately and chose not to disclose the prior relationship to Victoria. Since the buyout began, he has passed Mei two pieces of confidential information about its timeline without Victoria's knowledge, but has withheld the fact that Victoria's true goal is full acquisition and dissolution of the Meridian brand, not the minority partnership she has publicly proposed.",
+          "objective_facts": [
+            "Mei Zhao and Daniel Vance met at the Hong Kong International Tea Auction fourteen months ago, before either knew the other's company was a business rival.",
+            "They kept in private contact for four months before Victoria Harlow assigned Daniel to lead due diligence on a potential Meridian acquisition.",
+            "Daniel recognized Mei's surname the moment he was assigned the deal and did not disclose their prior relationship to Victoria.",
+            "Neither Wen Zhao nor Clara Lin-Zhao knows that Mei and Daniel have any history together.",
+            "Daniel has passed Mei two pieces of confidential information about the buyout timeline without Victoria's knowledge.",
+            "Daniel has not told Mei that Victoria's actual objective is full acquisition and dissolution of the Meridian brand, not the minority partnership Victoria has proposed publicly.",
+            "Victoria Harlow knows Daniel and Mei have some personal rapport and considers it a useful asset, but does not know its full history or depth."
+          ]
+        },
+        {
+          "label": "The 1968 Smuggling Secret",
+          "character_knowledge": {
+            "BAOSHAN_ZHAO": "Still holds the full truth of the 1968 shipments and Clara's real parentage, and watching Wen learn only that Clara betrayed the family — without the reason why — reopens his fifty-year debate over whether to finally tell him everything.",
+            "WEN_ZHAO": "Leaves the vote knowing only that Clara sided against him for money he doesn't understand, and presses Baoshan afterward, sensing correctly that his father is still withholding a piece of the story larger than the boardroom betrayal."
+          },
+          "solution": "In March 1968, Baoshan Zhao smuggled looted antiques out of Guangzhou concealed beneath false crate bottoms in six tea shipments, amid the chaos of the Cultural Revolution, and sold them to a private Seattle collector to raise Meridian Tea's founding capital. Among the looted pieces were heirlooms belonging to the Lin family, whose parents died in unrest that same year. Wracked with guilt, Baoshan quietly adopted their infant daughter, falsified her birth record to list her as his biological niece, and raised her as Clara Zhao without ever telling her the truth. Two years ago, while digitizing the company archive, Clara found the original customs manifest and the antiques sale receipt, and cross-referenced them against her own adoption file — she has told no one except, eventually, Victoria Harlow.",
+          "objective_facts": [
+            "In March 1968, Baoshan Zhao imported six tea shipments from Guangzhou to Seattle with false crate bottoms concealing antiques.",
+            "The 1968 customs manifests, still in Meridian's archive, list the concealed cargo as 'assorted ceramics' under an import code Meridian has never used for any product before or since.",
+            "Baoshan sold the smuggled antiques to a private Seattle collector named Walter Pruitt in July 1968; the sale receipt, kept in a locked drawer at the Zhao family house, financed Meridian's first warehouse lease.",
+            "The infant later known as Clara Zhao was born Clara Lin in Guangzhou in January 1968 to Wei Lin and Su Lin, who both died in a factory fire during that year's unrest.",
+            "Baoshan personally arranged Clara's 1969 adoption paperwork in Seattle, falsifying her birth record to list her as his biological niece rather than the daughter of the family whose property he had taken.",
+            "Clara found the original 1968 customs manifest and the Pruitt sale receipt two years ago while digitizing Meridian's archives, and cross-referenced them against her own sealed adoption file.",
+            "Clara has never confronted Baoshan or Wen with what she found; the only person she has told is Victoria Harlow."
+          ]
+        }
+      ]
+    }
+  ]
+}

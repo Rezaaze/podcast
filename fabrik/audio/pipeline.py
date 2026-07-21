@@ -22,6 +22,17 @@ RETRY_DELAY_CAP = 30  # oberes Limit für den Backoff, falls MAX_RETRIES mal ste
 FADE_MS = 15
 PEAK_CEILING_DBFS = -1.0
 
+# Pro-Chunk-Lautstärkeangleichung: master_episode() kompressiert/normalisiert
+# nur die FERTIGE Gesamtepisode — laute Momente werden gedämpft, leise Zeilen
+# aber nicht angehoben, und unterschiedliche TTS-Ausgabepegel je Stimme/Style
+# bleiben bis dahin unangetastet nebeneinander stehen. CHUNK_NORM_TARGET_DBFS
+# zieht jeden einzelnen Chunk sanft in Richtung eines gemeinsamen Zielpegels,
+# BEVOR die Chunks zur Episode zusammengefügt werden — CHUNK_NORM_MAX_GAIN_DB
+# deckelt den Eingriff, damit stilistisch gewollte Dynamik (Flüstern vs.
+# Schreien) erhalten bleibt und nur echte Ausreißer eingefangen werden.
+CHUNK_NORM_TARGET_DBFS = -20.0
+CHUNK_NORM_MAX_GAIN_DB = 6.0
+
 
 def trim_silence(segment):
     start_trim = silence.detect_leading_silence(segment, silence_threshold=-40)
@@ -68,6 +79,38 @@ def master_episode(segment, target_lufs):
     return effects.normalize(compressed)
 
 
+def normalize_chunk_loudness(segment, target_dbfs=CHUNK_NORM_TARGET_DBFS,
+                             max_gain_db=CHUNK_NORM_MAX_GAIN_DB):
+    """Gleicht die Lautstärke EINES TTS-Chunks sanft an target_dbfs an, mit
+    auf max_gain_db gedeckeltem Gain (siehe Konstanten-Kommentar oben) — für
+    sehr kurze Chunks nutzt das die simple mittlere pydub-dBFS statt eines
+    vollen LUFS-Meters (pyloudnorm braucht für ITU-R-BS.1770-Gating deutlich
+    längere Blöcke, als ein einzelner Satz-Chunk oft liefert)."""
+    if segment.dBFS == float("-inf"):
+        return segment  # reine Stille (z.B. Pausen-Chunk) — nichts anzugleichen
+    gain = max(-max_gain_db, min(max_gain_db, target_dbfs - segment.dBFS))
+    return segment.apply_gain(gain)
+
+
+def postprocess_chunk(segment, text, speed=None):
+    """Die Per-Chunk-Nachbearbeitung, die JEDES frisch generierte Segment
+    durchlaufen muss, bevor es committed/gecheckpointet wird: Silence-Trim,
+    Plausibilitätsprüfung, Loudness-Angleichung. Als eigener Helper, damit
+    der Batch-Pfad (podcast_maker ruft backend.generate_chunk_batch direkt)
+    exakt dieselbe Kette anwendet wie der Einzel-Pfad (generate_chunk unten)
+    — sonst klingen Cloud-gebatchte Episoden anders als lokal vertonte
+    (Pegel-Sprünge, ungetrimmte Ränder) und schlechte Samples landen
+    ungeprüft im Checkpoint.
+
+    Gibt (segment, None) zurück oder (None, grund), wenn das Segment
+    verdächtig ist (Aufrufer regeneriert dann, statt es zu verwenden)."""
+    segment = trim_silence(segment)
+    suspicious, reason = is_suspicious_duration(segment, text, speed=speed)
+    if suspicious:
+        return None, reason
+    return normalize_chunk_loudness(segment), None
+
+
 def generate_chunk(backend, voice, text, style=None, speed=None):
     """Generiert Audio über das gewählte TTS-Backend mit Retry +
     Plausibilitätsprüfung.
@@ -89,10 +132,9 @@ def generate_chunk(backend, voice, text, style=None, speed=None):
     for attempt in range(1, MAX_RETRIES + 1):
         segment, error = backend.generate_chunk(voice, text, style=style, speed=speed)
         if segment is not None:
-            segment = trim_silence(segment)
-            suspicious, reason = is_suspicious_duration(segment, text, speed=speed)
-            if not suspicious:
-                return segment
+            processed, reason = postprocess_chunk(segment, text, speed=speed)
+            if processed is not None:
+                return processed
             print(f"\n    Versuch {attempt}: Verdächtige Ausgabe – {reason}")
             # Server hat geantwortet, nur der Sample war schlecht — sofort erneut
             # versuchen statt zu warten (siehe Docstring oben).
@@ -124,8 +166,11 @@ def load_part_offsets(episode_path):
     path = part_offsets_path(episode_path)
     if not os.path.exists(path):
         return None
-    with open(path, "r", encoding="utf-8") as f:
-        return json.load(f)
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except json.JSONDecodeError:
+        return None
 
 
 def merge_parts_to_episode(part_paths, episode_path, pause_between_parts_ms, target_lufs,
@@ -167,31 +212,45 @@ def merge_parts_to_episode(part_paths, episode_path, pause_between_parts_ms, tar
         print(f"  Outro-Jingle: {os.path.basename(outro_path)} ({len(outro)/1000:.1f}s)")
 
     mastered = master_episode(combined, target_lufs)
-    mastered.export(episode_path, format="mp3", bitrate="192k")
+    # temp + os.replace: main()s Resume-Check ist nur `os.path.exists` — eine
+    # beim Kill truncierte MP3 gälte sonst für immer als fertig.
+    tmp_episode_path = episode_path + ".tmp"
+    mastered.export(tmp_episode_path, format="mp3", bitrate="192k")
+    os.replace(tmp_episode_path, episode_path)
     size_mb = os.path.getsize(episode_path) / (1024 * 1024)
     duration_min = len(mastered) / 1000 / 60
     print(f"Gesamtepisode gespeichert: {os.path.basename(episode_path)} ({size_mb:.1f} MB, {duration_min:.1f} Min.)")
+
+    # Offsets VOR dem Löschen der Part-WAVs persistieren — ein Kill dazwischen
+    # ließe sonst weder WAVs noch Offsets zurück und die Post-Merge-Schritte
+    # könnten nie nachgeholt werden (siehe Post-Merge-Invariante in CLAUDE.md).
+    offsets_path = part_offsets_path(episode_path)
+    tmp_offsets_path = offsets_path + ".tmp"
+    with open(tmp_offsets_path, "w", encoding="utf-8") as f:
+        json.dump(part_offsets, f)
+    os.replace(tmp_offsets_path, offsets_path)
+
     for path in part_paths:
         os.remove(path)
     print(f"{len(part_paths)} Einzeldateien gelöscht.")
-
-    with open(part_offsets_path(episode_path), "w", encoding="utf-8") as f:
-        json.dump(part_offsets, f)
 
     return part_offsets
 
 
 def parse_meta_file(meta_path):
-    """Liest TITEL/BESCHREIBUNG aus einer *_META.txt (Format wie von
-    script_writer.generate_episode_meta() geschrieben)."""
+    """Liest TITEL/BESCHREIBUNG/FRAGE aus einer *_META.txt (Format wie von
+    script_writer.generate_episode_meta() geschrieben). FRAGE ist optional
+    (ältere META-Dateien ohne Zuschauer-Frage) -- dann None."""
     if not os.path.exists(meta_path):
-        return None, None
+        return None, None, None
     with open(meta_path, "r", encoding="utf-8") as f:
         content = f.read()
-    match = re.search(r"TITEL:\s*(.+?)\s*BESCHREIBUNG:\s*(.+)", content, re.DOTALL)
+    match = re.search(r"TITEL:\s*(.+?)\s*BESCHREIBUNG:\s*(.+?)(?:\n\s*FRAGE:\s*(.+))?\s*$",
+                      content, re.DOTALL)
     if not match:
-        return None, None
-    return match.group(1).strip(), match.group(2).strip()
+        return None, None, None
+    question = match.group(3).strip() if match.group(3) else None
+    return match.group(1).strip(), match.group(2).strip(), question
 
 
 def extract_episode_number(input_file, prefix):

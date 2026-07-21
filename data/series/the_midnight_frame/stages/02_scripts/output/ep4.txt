@@ -1,0 +1,977 @@
+--- PART 1 ---
+
+[NARRATOR]
+Previously on The Midnight Frame: Noah found a timestamp in his own case archive that didn't match the story he was told. Captain Zhao called it an old server glitch. Danny Wu, competing with Noah for the same promotion, talked his way past a partner's suspicion at a diner counter. For one night, both men let it go.
+
+[NARRATOR]
+It's Saturday morning, day forty-five of the photographs. Noah Kestrel's apartment, just past nine. A folded printout sits tucked behind a picture frame on the wall, exactly where he left it last night.
+
+[SFX: a fist knocking on a door, three times]
+
+[NOAH_KESTREL | style: groggy, unamused]
+It's not even ten.
+
+[KAI_CHEN | style: breezy, teasing]
+It's ten fourteen. And you're already dressed, which means you've been up staring at that wall since six. Move.
+
+[SFX: a door opening]
+
+[NARRATOR]
+Kai Chen, Noah's partner and closest friend on the force, lets himself in without waiting for an invitation.
+
+[KAI_CHEN | style: mock-serious]
+Okay. This is an intervention. I've decided.
+
+[NOAH_KESTREL | style: dry]
+An intervention for what.
+
+[KAI_CHEN]
+For this. The grid. The vigil. You live like a guy waiting for a verdict.
+
+[NOAH_KESTREL | style: flat, deflecting]
+I live like a guy with an open case.
+
+[KAI_CHEN | style: pushing, warm]
+An open case that doesn't need you standing sentry over a corkboard every night till two. One evening, Noah. No files. No wall. No photograph. You go somewhere, you talk to a human being who isn't me, and you come back tomorrow still a detective, I promise.
+
+[NOAH_KESTREL | style: guarded]
+There's stuff in there I still need to sit with.
+
+[KAI_CHEN | style: firmer now]
+Sit with it Monday. Tonight you're a person who owns a jacket and knows how to leave a building.
+
+[NOAH_KESTREL | style: reluctant sigh]
+Kai—
+
+[KAI_CHEN]
+I will physically remove you from this apartment.
+
+[NOAH_KESTREL | style: giving in, tired amusement]
+Fine. One night. You can stop looking at me like that.
+
+[KAI_CHEN | style: satisfied]
+That's all I wanted. Get eggs with me first, you look like a man who hasn't eaten since Tuesday.
+
+[NARRATOR]
+Noah glances once more at the frame on the wall, and the paper hidden behind it, before following Kai out the door.
+
+--- PART 2 ---
+
+[NARRATOR]
+Later that morning, Noah and Kai sit across from each other in a window booth at the diner two blocks from the precinct, plates of runny eggs going cold between them.
+
+[KAI_CHEN | style: playful, digging]
+You ever think about how Zhao's whole "old backup server" story sounds like something out of a ghost movie? Like, "the machine just woke up, nobody touched it."
+
+[NOAH_KESTREL | style: even, unbothered on the surface]
+It's IT. Half of what they say sounds like a ghost movie.
+
+[SFX: a fork set down against a plate]
+
+[KAI_CHEN | style: watching him closely, still light]
+Yeah, but you didn't laugh. I made a joke about a haunted server and you just — nodded.
+
+[NOAH_KESTREL | style: shrugging it off]
+I'm eating breakfast, Kai. Not everything's a tell.
+
+[KAI_CHEN | style: teasing but genuinely curious]
+Everything's a tell with you. That's kind of your whole thing.
+
+[NOAH_KESTREL | style: dry, deflecting]
+My whole thing is these eggs are somehow both raw and cold. Focus on the real crime.
+
+[KAI_CHEN | style: laughing, letting it go]
+Fair. Fair, that's — actually kind of impressive, timing-wise.
+
+[NARRATOR]
+Noah lets a beat of silence sit, then reaches for his coffee, steering the table somewhere easier.
+
+[NOAH_KESTREL | style: casual, changing the subject]
+You still owe me twenty bucks from the game, by the way.
+
+[KAI_CHEN | style: mock offense]
+I do not owe you twenty bucks. I owe you maybe twelve, and that's generous.
+
+[NOAH_KESTREL | style: half a smile]
+It was twenty when you made the bet and it's twenty now. Inflation doesn't work backwards for you.
+
+[KAI_CHEN | style: grinning, relaxing into it]
+Alright, alright — man's dodging a haunted server story and lecturing me about economics. Big morning for you.
+
+[SFX: a mug set down on the table]
+
+[NOAH_KESTREL | style: lighter now, genuine]
+It's a slow one. I'll take it.
+
+[NARRATOR]
+Kai steals a piece of toast off Noah's plate without asking, and for a while the two of them talk about nothing that matters — a rematch, a mutual friend's terrible new haircut, whether the diner's coffee has gotten worse or their standards have just gone up.
+
+[KAI_CHEN | style: content, easy]
+This is nice. See? This is what I meant. No files, no wall, no anything.
+
+[NOAH_KESTREL | style: quiet, meaning it more than he expects to]
+Yeah. It is.
+
+[NARRATOR]
+Neither the printout tucked behind a photograph back at the apartment, nor the wall it belongs to, comes up again for the rest of the meal.
+
+--- PART 3 ---
+
+[NARRATOR]
+Saturday morning, a few blocks from the precinct — Hae's apartment. Danny Wu, a young detective competing with Noah for the same promotion, sits at her kitchen table in yesterday's shirt, in no hurry to be anywhere else.
+
+[HAE_SONG | style: warm, unhurried]
+You're going to let those eggs go cold arguing with yourself about it.
+
+[DANNY_WU | style: relaxed, half-laughing]
+I'm not arguing with myself. I'm deciding if I want more coffee or a nap.
+
+[HAE_SONG | style: teasing]
+Radical. Both are available.
+
+[DANNY_WU | style: content]
+Both. Obviously both.
+
+[SFX: a ceramic mug set down on a wooden table]
+
+[HAE_SONG | style: soft]
+You're in a good mood.
+
+[DANNY_WU | style: easy, unguarded]
+Is that suspicious now?
+
+[HAE_SONG | style: amused]
+A little. You're usually checking your phone by now.
+
+[DANNY_WU | style: quiet realization, pleased]
+Huh. Guess I'm not.
+
+[HAE_SONG | style: gentle]
+I noticed.
+
+[DANNY_WU | style: warm]
+Noticed and didn't say anything until now?
+
+[HAE_SONG | style: light]
+I was enjoying it too much to interrupt it.
+
+[SFX: a fork set down against a plate]
+
+[DANNY_WU | style: sincere, low]
+This is nice. Just — this. No place to be.
+
+[HAE_SONG | style: matching his stillness]
+No place to be.
+
+[DANNY_WU | style: playful]
+Careful, you'll get used to it and then what will I do.
+
+[HAE_SONG | style: laughing softly]
+Suffer, probably.
+
+[DANNY_WU | style: mock offended]
+Brutal woman.
+
+[HAE_SONG | style: fond]
+You knew that going in.
+
+[DANNY_WU | style: settling, contented]
+I did. Best decision I made all year, honestly.
+
+[HAE_SONG | style: quiet, genuine]
+Mine too.
+
+[NARRATOR]
+Neither says another word for a while — just the small sounds of a Saturday morning, unremarkable and unbothered, stretching out between them.
+
+[DANNY_WU | style: sleepy, comfortable]
+Don't suppose you'd let me actually take that nap.
+
+[HAE_SONG | style: warm]
+On my couch, with my blanket, like you own the place?
+
+[DANNY_WU | style: grinning]
+That's the dream, yeah.
+
+[HAE_SONG | style: soft laugh]
+Go. I'll wake you up before you drool on the good pillow.
+
+[DANNY_WU | style: content, drifting]
+No promises I won't anyway.
+
+[SFX: a chair sliding back gently on the kitchen floor]
+
+[NARRATOR]
+He drifts toward the couch, unhurried, and Hae watches him go — the morning asking nothing more of either of them than this.
+
+--- PART 4 ---
+
+[NARRATOR]
+Saturday afternoon, the back office of the Wu family restaurant, dining-room noise a low hum through the wall. Danny alone with the books.
+
+[SFX: a ledger page turning]
+
+[DANNY_WU | style: quiet, methodical]
+Sixty-one. Still sixty-one thousand.
+
+[DANNY_WU | style: flat, doing math under his breath]
+Two years of Sonny's little discounts, and it's barely moved.
+
+[SFX: a calculator's buttons clicking, several presses]
+
+[DANNY_WU | style: bitter, low]
+Nineteen thousand off in two years. At this rate I'm forty before it's zero.
+
+[DANNY_WU | style: tired, almost a question to no one]
+And what happens to the other sixty-one if I stop calling him back.
+
+[SFX: a knock, the door opening]
+
+[DANNY_WU | style: instantly warmer, covering fast]
+Just doing the month-end, Ma. Numbers look good. Better than good.
+
+[SFX: the door clicking shut]
+
+[DANNY_WU | style: quiet, guilt he won't sit with]
+Better than good. Sure.
+
+[DANNY_WU | style: resolved, shutting something down in himself]
+Let her keep thinking it's paid. What does the real number buy her — sixty-one thousand and a look on her face I can't take back. Nothing good comes from her carrying this too.
+
+[SFX: the ledger closing]
+
+[DANNY_WU | style: steadying himself, quiet]
+And Hae doesn't need it either. Not tonight. Not any night, if I can help it.
+
+[NARRATOR]
+He slides the ledger into the bottom drawer, turns the key, and goes back out to the dining room like nothing sits underneath it.
+
+--- PART 5 ---
+
+[NARRATOR]
+Saturday evening, the Herald newsroom mostly empty. At her desk, the reporter who has spent six months chasing the Midnight Photographer case stares at an unfinished draft with Noah's name in the header.
+
+[AYA_MORITA | style: tired, restless]
+Four paragraphs. Same four paragraphs I had an hour ago.
+
+[SFX: a chair creaking as she leans back]
+
+[AYA_MORITA | style: quiet, private]
+Forget it. Not tonight.
+
+[NARRATOR]
+She minimizes the document and opens a new message instead — no notebook, no recorder, nothing shaped like an interview.
+
+[AYA_MORITA | style: muttering, self-conscious]
+"Skip the case tonight, get dinner instead?" No. Too eager.
+
+[SFX: a phone buzzing faintly against the desk, unrelated notification]
+
+[AYA_MORITA | style: wry, catching herself]
+Delete. Try again.
+
+[AYA_MORITA | style: softer, more honest]
+"Off the record. Just dinner. My treat."
+
+[NARRATOR]
+She reads it back twice, thumb hovering, aware of exactly how far this sits from anything her editor would call reporting.
+
+[AYA_MORITA | style: resigned, decided]
+He'll say yes. Or he won't. Either way—
+
+[SFX: a single soft tap, message sending]
+
+[AYA_MORITA | style: exhaling, almost relieved]
+There. Just dinner.
+
+[NARRATOR]
+She closes the laptop on the unfinished draft, the deadline still ticking somewhere she isn't looking, certain — for tonight, at least — that the person on her mind is not a story.
+
+--- PART 6 ---
+
+[NARRATOR]
+Later that evening, a diner booth near the harbor. Noah Kestrel sits across from Aya Morita, the reporter who has covered his case for six months — tonight, no notebook between them.
+
+[AYA_MORITA | style: relaxed, curious]
+You take it black. I noticed that back in March and never asked why.
+
+[NOAH_KESTREL | style: easy, a little surprised at himself]
+My mother drank it black. Guess it stuck. Boring answer.
+
+[AYA_MORITA | style: warm]
+Not boring. Just — human. I don't think I've ever heard you mention your mother.
+
+[NOAH_KESTREL | style: quiet, unguarded]
+Not much to mention. She raised me in an apartment above a laundromat and made sure I could throw a punch and set a table. In that order.
+
+[AYA_MORITA | style: laughing softly]
+That explains a lot, actually.
+
+[NOAH_KESTREL | style: dry]
+Careful. That's the most personal thing I've said to a reporter in a year.
+
+[AYA_MORITA | style: gentle, teasing]
+I'm off the clock. Scout's honor.
+
+[SFX: a coffee cup set down on a formica tabletop]
+
+[NOAH_KESTREL | style: curious, genuine]
+Your turn. Why journalism. Real answer, not the one you give at parties.
+
+[AYA_MORITA | style: reflective]
+My dad used to read three papers a day at breakfast, arguing with the columns like they could hear him. I think I just wanted to be one of the voices he argued with.
+
+[NOAH_KESTREL | style: soft]
+That's a good reason.
+
+[AYA_MORITA | style: quiet]
+It felt like one, once.
+
+[NARRATOR]
+Neither reaches for the case, the wall, or the deadline sitting behind each of them.
+
+[NOAH_KESTREL | style: light, almost boyish]
+Okay — worst job you had before this.
+
+[AYA_MORITA | style: amused]
+I sold novelty umbrellas outside a stadium. Commission only. I was terrible at it.
+
+[NOAH_KESTREL | style: grinning]
+I refuse to believe you were terrible at anything.
+
+[AYA_MORITA | style: mock offended]
+I once tried to sell an umbrella to a man already holding an umbrella.
+
+[NOAH_KESTREL | style: laughing, surprised by his own laugh]
+Okay. That's — that's genuinely terrible.
+
+[SFX: a spoon clinking gently against a cup]
+
+[AYA_MORITA | style: softer, watching him]
+You laugh different when you're not thinking about the wall.
+
+[NOAH_KESTREL | style: caught, honest]
+I'm trying not to think about much of anything tonight.
+
+[AYA_MORITA | style: quiet, private thought half-spoken]
+Good. Me too.
+
+[NARRATOR]
+For a long moment, neither says anything else — the silence easy, not searching for a story.
+
+[NOAH_KESTREL | style: content, low]
+This is nice. I forgot this was a thing people did.
+
+[AYA_MORITA | style: gentle, a little unsteady]
+Yeah. Me too.
+
+--- PART 7 ---
+
+[NARRATOR]
+Back at the precinct, midway through the shift, the bullpen hums with phones and paperwork. Noah sits at his desk, half-hidden behind a stack of case folders — and Kai, his partner, is close enough to notice everything.
+
+[KAI_CHEN | style: casual, half-distracted]
+You want the Reyes file or should I just keep pretending it doesn't exist.
+
+[NOAH_KESTREL | style: distracted, warm]
+Keep pretending. Works for me.
+
+[SFX: a phone buzzing once on a desk]
+
+[NARRATOR]
+Noah glances down at his phone. Whatever he sees there changes his face before he can stop it.
+
+[KAI_CHEN | style: delighted, pouncing]
+Whoa. Hold on. Hold on, hold on.
+
+[NOAH_KESTREL | style: guarded, trying to sound bored]
+What.
+
+[KAI_CHEN | style: gleeful]
+That. That right there. You're smiling at your phone like it just paid off your mortgage.
+
+[NOAH_KESTREL | style: flat, unconvincing]
+I'm reading a text, Kai.
+
+[KAI_CHEN | style: teasing, relentless]
+A text. Sure. From who. Is it the captain finally admitting the archive thing was a cover story? Is it your dentist? You don't smile like that at your dentist.
+
+[NOAH_KESTREL | style: dry, deflecting]
+You'd be surprised. I really like my dentist.
+
+[KAI_CHEN | style: laughing]
+No. No, come on. Look at you. You look like a guy who got asked to prom.
+
+[NOAH_KESTREL | style: shrugging it off]
+It's nothing. Somebody being funny. That's allowed, isn't it.
+
+[KAI_CHEN | style: mock-offended]
+Not from you it isn't. You've had one setting since Hae left and it's "grim." This is a whole new setting. I want the name.
+
+[NOAH_KESTREL | style: firm but light]
+Not happening.
+
+[NARRATOR]
+Noah locks the phone screen and sets it face-down, but the corner of his mouth hasn't fully surrendered, and Kai sees it.
+
+[KAI_CHEN | style: satisfied, quieter]
+Okay. Fine. Keep your secret. But I'm writing this down. Day forty-five. Noah Kestrel smiled at a phone in the middle of a homicide shift.
+
+[NOAH_KESTREL | style: amused, tired]
+Put it in the file. Right next to Reyes.
+
+[KAI_CHEN | style: warm, genuine]
+Seriously though. Good for you. Whatever it is.
+
+[NOAH_KESTREL | style: quiet, almost surprised at himself]
+Yeah. It's — yeah. It's fine.
+
+[NARRATOR]
+For a moment the tension of the last few weeks — the ledger, the questions neither of them finished asking — seems to lift entirely from the room. Kai lets it go, still needling him under his breath as he turns back to his own desk, no closer to a name, no idea whose message put that look on his partner's face, or what her byline usually runs under.
+
+--- PART 8 ---
+
+[NARRATOR]
+Evening now, Noah's apartment, the wall of mornings lit only by a single lamp. He is alone, no reason yet to leave.
+
+[NOAH_KESTREL | style: quiet, talking himself through it]
+Forty-five days.
+
+[NOAH_KESTREL | style: low, tired]
+Same faces. Same string. Same nothing.
+
+[SFX: a photograph corner lifting and settling back against the wall]
+
+[NOAH_KESTREL | style: guarded, almost to the printout itself]
+You stay right where I put you.
+
+[NARRATOR]
+Behind one photo, the folded metadata printout — the one he's shown no one.
+
+[NOAH_KESTREL | style: weighing it, reluctant]
+I could cover it. Sheet, towel, anything.
+
+[NOAH_KESTREL | style: deciding, flatter]
+Or I could just — not.
+
+[SFX: a coat being pulled off a hook]
+
+[NOAH_KESTREL | style: firmer, convincing himself]
+One night. Kai's right. It'll still be here.
+
+[NARRATOR]
+He doesn't reach for the sheet. He doesn't reach for his phone either.
+
+[NOAH_KESTREL | style: rueful, under his breath]
+Wall wins every other night. Not tonight.
+
+[SFX: keys lifted off a table, a door opening]
+
+[NOAH_KESTREL | style: quieter, almost surprised at himself]
+Leave it open. See what that costs.
+
+[NARRATOR]
+The grid stays exposed behind him, forty-five mornings pinned in place, as the door clicks shut on an evening he still can't quite explain to anyone — including himself.
+
+--- PART 9 ---
+
+[NARRATOR]
+Saturday evening, Hae's apartment. Cartons of takeout cool on the table beside a battered board game pulled down from a closet shelf.
+
+[HAE_SONG | style: playful, relaxed]
+You're not allowed to buy your way out of jail again. That's not a rule, Danny, you're just making that up.
+
+[DANNY_WU | style: grinning, easy]
+It's called negotiation. It's a legitimate strategy.
+
+[HAE_SONG | style: laughing]
+It's called you're losing and you know it.
+
+[SFX: dice rattling in a cup, then scattering on a table]
+
+[DANNY_WU | style: mock offended]
+Six and four. That's not losing, that's a comeback in progress.
+
+[HAE_SONG | style: warm, teasing]
+A comeback requires you to have been ahead at some point.
+
+[DANNY_WU | style: laughing]
+Details.
+
+[NARRATOR]
+She refills their cups from a carton of noodles, still laughing.
+
+[HAE_SONG | style: content, unguarded]
+Okay. Your turn. Try not to land on anything I own.
+
+[DANNY_WU | style: soft, genuine]
+No promises.
+
+[NARRATOR]
+He moves his piece around the board, slower than the game requires, in no hurry for the night to end.
+
+[DANNY_WU | style: quiet, easy]
+This is nice. I don't think I've sat still like this in — I don't even know how long.
+
+[HAE_SONG | style: gentle]
+Me neither.
+
+[NARRATOR]
+She says it simply, without elaborating, and lets the quiet sit there instead of filling it.
+
+[DANNY_WU | style: light]
+No phones. No shift starting in an hour. Just this.
+
+[HAE_SONG | style: smiling]
+Just this.
+
+[SFX: a chopstick tapping lightly against a takeout carton]
+
+[NARRATOR]
+He fishes the last dumpling out before she can, holding it up like a trophy.
+
+[DANNY_WU | style: triumphant, joking]
+Spoils of war.
+
+[HAE_SONG | style: laughing, loose]
+That's low. Even for you.
+
+[DANNY_WU | style: pleased with himself]
+I contain multitudes.
+
+[NARRATOR]
+Her laugh comes easy and full, the kind that doesn't need coaxing.
+
+[HAE_SONG | style: soft, present]
+I like this version of you. The one who isn't checking his phone every five minutes.
+
+[DANNY_WU | style: quiet, sincere]
+I like this version of tonight, period.
+
+[NARRATOR]
+Neither says anything more than that. The board game goes on, unhurried, the apartment holding nothing but the two of them and the sound of dice.
+
+--- PART 10 ---
+
+[NARRATOR]
+Later that night, the take-out containers long since cleared away, Hae asleep down the hall, Danny sits alone in the dark of her kitchen — the same easy quiet that carried the evening now empty around him.
+
+[NARRATOR]
+He wakes his phone, the lender's account glowing back at him.
+
+[SFX: a phone unlocking with a soft chime]
+
+[DANNY_WU | style: low, doing the math again]
+Sixty-one. Still sixty-one, near enough it doesn't matter.
+
+[DANNY_WU | style: quiet, bitter]
+Two years of Sonny's "incremental." Read it as a number and it barely moves.
+
+[DANNY_WU | style: rehearsing under his breath, then faltering]
+Ma. The debt isn't — it was never actually —
+
+[DANNY_WU | style: flat, cutting himself off]
+No. Not tonight. Not any night, if I'm honest.
+
+[NARRATOR]
+He weighs it anyway — what she'd lose believing it, against what she'd lose not believing it. Against whatever Sonny still is on the other end of all this, and how long "incremental" is willing to last.
+
+[SFX: a phone screen dimming and locking]
+
+[DANNY_WU | style: hollow, resigned]
+Same as it was. Same as it'll keep being.
+
+[NARRATOR]
+He sets the phone face-down on the counter and glances once toward the hallway, toward Hae, still sleeping, still certain the night was exactly what it looked like.
+
+--- PART 11 ---
+
+[NARRATOR]
+Later that same evening, the diner has thinned out. Noah and Kai sit across from each other in a back booth, two empty bottles between them and a third on the way.
+
+[KAI_CHEN | style: relaxed, teasing]
+You know, this is the first time in a month I've seen you order a second beer.
+
+[NOAH_KESTREL | style: dry, loosened up]
+Don't make it a thing.
+
+[KAI_CHEN | style: amused]
+It's a thing. I'm marking the calendar.
+
+[SFX: a beer bottle set down on a wooden table]
+
+[NOAH_KESTREL | style: quiet laugh]
+Mark it. See if I care.
+
+[KAI_CHEN | style: gentler, testing the water]
+Can I ask you something. And you don't have to turn it into a whole precinct briefing.
+
+[NOAH_KESTREL | style: wary but easy]
+That depends on the something.
+
+[KAI_CHEN | style: careful, direct]
+Hae. You ever talk about her anymore. Like actually talk, not just — deflect and change the subject like you usually do.
+
+[NOAH_KESTREL | style: long pause, then honest]
+No. Not really.
+
+[KAI_CHEN | style: waiting, no pressure]
+So talk.
+
+[NOAH_KESTREL | style: quieter, unguarded]
+I miss her, Kai. Not in the — not in some poetic way. I miss the stupid stuff. She used to steal my side of the bed even though hers was identical. She'd fall asleep with the TV on and deny it in the morning like I imagined the whole thing.
+
+[KAI_CHEN | style: soft, listening]
+That's — yeah. That's real missing.
+
+[NOAH_KESTREL | style: rougher, admitting more than he means to]
+I haven't said that out loud before. Not to anyone.
+
+[KAI_CHEN | style: gentle]
+Not even to yourself?
+
+[NOAH_KESTREL | style: half a laugh, no humor in it]
+Especially not to myself.
+
+[NARRATOR]
+Kai doesn't push. He just nods, turning his bottle slowly on the table.
+
+[KAI_CHEN | style: measured, not prying]
+You don't have to tell me the rest. Whatever the rest is.
+
+[NOAH_KESTREL | style: relieved, tired]
+There's no rest. There's just — missing her. That's the whole file.
+
+[KAI_CHEN | style: warm]
+Alright. Then that's what we'll call it.
+
+[NARRATOR]
+Noah looks at him for a second, something loosening in his shoulders that hasn't loosened in months.
+
+[NOAH_KESTREL | style: low, sincere]
+Thanks for not making this weird.
+
+[KAI_CHEN | style: grinning]
+I'm saving weird for the third beer.
+
+[SFX: a bottle cap hitting a table twice]
+
+[NOAH_KESTREL | style: amused, shaking his head]
+There it is.
+
+--- PART 12 ---
+
+[NARRATOR]
+Later that night, the newsroom has thinned to a handful of desks. Aya Morita, the reporter who has spent six months chasing Noah's case, sits alone with an unfinished story open on her screen.
+
+[AYA_MORITA | style: distracted, unable to settle]
+Come on. Focus.
+
+[NARRATOR]
+She scrolls up instead, to the thread from the diner.
+
+[AYA_MORITA | style: quiet, private amusement]
+"Nothing tied to the case." Since when do I write messages like that.
+
+[AYA_MORITA | style: hesitant, then resolved | speed: 0.9]
+One more. Before the week eats me alive.
+
+[SFX: a phone keyboard tapping, brief]
+
+[AYA_MORITA | style: murmured, half to herself]
+This is supposed to be professional distance. I know that.
+
+[AYA_MORITA | style: soft, deciding anyway]
+Not tonight, though. Tonight it's just dinner.
+
+[SFX: a phone message sending, soft chime]
+
+[NARRATOR]
+She sets the phone face-down on the desk, deliberately not watching it.
+
+[AYA_MORITA | style: trying to sound casual, failing]
+He'll probably say he's working.
+
+[NARRATOR]
+Her eyes drift to the byline sitting unfinished above the draft — his name, waiting.
+
+[AYA_MORITA | style: quiet resolve]
+Later. Not tonight.
+
+[NARRATOR]
+She turns the monitor dark and reaches for her coat, the deadline, the source, the story — all of it left exactly where she found it.
+
+--- PART 13 ---
+
+[NARRATOR]
+Later that same night, a corner booth at the diner. Noah and Aya, the reporter who's been chasing his case for months, have been talking long after the food went cold.
+
+[AYA_MORITA | style: relaxed, half-laughing]
+Okay, but you have to admit that's a terrible answer. Everyone's got a favorite bad movie. You can't just say "I don't watch movies."
+
+[NOAH_KESTREL | style: dry, amused]
+I watch movies. I watch the first twenty minutes of movies. Then I fall asleep on the couch and wake up during the credits, convinced I understood the whole thing.
+
+[AYA_MORITA | style: laughing]
+That is a deeply unserious way to live.
+
+[NOAH_KESTREL | style: warm, unguarded]
+It's worked out for me so far.
+
+[SFX: a coffee cup set down gently on a table]
+
+[NARRATOR]
+A waitress refills their cups without a word and moves on. Neither one seems to notice the hour.
+
+[AYA_MORITA | style: quieter, more careful]
+Can I ask you something not for the record.
+
+[NOAH_KESTREL | style: cautious, but not closed off]
+You always say that right before you ask something for the record.
+
+[AYA_MORITA | style: soft laugh, then sincere]
+Not this time. I just — I wanted to know if this is weird. Us. Sitting here like this isn't an interview.
+
+[NOAH_KESTREL | style: measured, honest]
+It stopped being an interview about four dinners ago. I just didn't want to be the one to say it first.
+
+[NARRATOR]
+A pause settles between them, longer than either seems to mind.
+
+[AYA_MORITA | style: gentle, almost hesitant]
+I keep telling myself I should be taking notes right now. Force of habit.
+
+[NOAH_KESTREL | style: quiet, teasing]
+And are you?
+
+[AYA_MORITA | style: soft, honest]
+No. I haven't thought about the story once tonight.
+
+[NOAH_KESTREL | style: low, sincere]
+Good. Neither have I. About any of it.
+
+[NARRATOR]
+For a moment neither of them speaks, the diner's low hum filling the space where words might have gone.
+
+[AYA_MORITA | style: light, deflecting the moment]
+You know most of my sources would kill to have this much of my attention.
+
+[NOAH_KESTREL | style: wry]
+I'm not a source tonight.
+
+[AYA_MORITA | style: soft, almost to herself]
+No. You're not.
+
+[NARRATOR]
+She looks at him a beat too long, then glances away, reaching for her coffee instead.
+
+[NOAH_KESTREL | style: gentle, curious]
+What.
+
+[AYA_MORITA | style: careful, deflecting]
+Nothing. I just — it's late. I should probably let you get some sleep before your wall starts talking to you again.
+
+[NOAH_KESTREL | style: soft laugh, a little sad underneath]
+It doesn't talk. It just waits.
+
+[NARRATOR]
+He says it lightly, but something in his voice doesn't quite match the joke. Aya notices, and doesn't push.
+
+[AYA_MORITA | style: warm, quiet]
+Same time next week. If you want.
+
+[NOAH_KESTREL | style: quiet, meaning it]
+Yeah. I want.
+
+[NARRATOR]
+Neither moves to leave right away. The check sits untouched on the table between them.
+
+--- PART 14 ---
+
+[NARRATOR]
+Later that night, in Hae's apartment, the television throws blue light across the room. Danny has drifted off beside her, the day finally catching up with him.
+
+[HAE_SONG | style: soft, amused]
+Danny.
+
+[HAE_SONG | style: quiet, fond]
+You're missing the ending.
+
+[NARRATOR]
+He doesn't stir. Hae watches him a moment, his breathing even, one hand still loose around the popcorn bowl.
+
+[HAE_SONG | style: tender, half to herself]
+Whole day like this and you still can't make it to the credits.
+
+[NARRATOR]
+She reaches to mute the television, and her gaze catches on the line of his jaw, softened in sleep — and for one unguarded second, it isn't his face she's seeing.
+
+[HAE_SONG | style: startled, barely audible]
+Oh.
+
+[NARRATOR]
+She sits back, blinking, the thought already dissolving even as it lands.
+
+[HAE_SONG | style: shaken, quiet]
+Where did that come from.
+
+[NARRATOR]
+She glances at Danny again, checking, absurdly, that he hasn't somehow heard it. He hasn't moved.
+
+[HAE_SONG | style: firm, quiet, convincing herself]
+Nothing. It's nothing.
+
+[NARRATOR]
+She pulls the throw blanket up over his shoulder, her hand lingering there a beat longer than the gesture requires.
+
+[HAE_SONG | style: gentle, settling]
+Long day. That's all that was.
+
+[NARRATOR]
+She turns back to the muted screen, the light flickering silver over both of them, and says nothing more.
+
+--- PART 15 ---
+
+[NARRATOR]
+Late shift, the squad room down to a handful of desk lamps. Noah's partner, Kai, is the only other detective still at his desk.
+
+[KAI_CHEN | style: casual, testing the water]
+Can I ask you something, and you don't make a joke out of it?
+
+[NOAH_KESTREL | style: relaxed, still riding the day's ease]
+Depends on the something.
+
+[KAI_CHEN | style: careful, circling]
+Wu. Danny. You noticed anything off with him lately?
+
+[NOAH_KESTREL | style: mild amusement]
+Off how? He's been off since the promotion board got announced.
+
+[KAI_CHEN | style: searching for the right words]
+Not that kind of off. I don't know. He's got this — I catch him somewhere he shouldn't be, phone out, and he's got a story ready before I even ask. Too ready.
+
+[NOAH_KESTREL | style: unbothered]
+That's called covering your ass in this job, Kai. You've done it. I've done it.
+
+[KAI_CHEN | style: pressing gently]
+Maybe. I keep telling myself that.
+
+[NARRATOR]
+Kai hesitates, weighing how much to say about what he actually saw.
+
+[KAI_CHEN | style: half-committing]
+There was a thing at the diner. Small thing. Probably nothing.
+
+[NOAH_KESTREL | style: light, deflecting]
+Probably nothing sounds like exactly what it is, then.
+
+[KAI_CHEN | style: frustrated with himself]
+I can't even put my finger on it. That's what bugs me.
+
+[NOAH_KESTREL | style: settling it, warm but firm]
+Look — everybody gets weird when there's a badge on the line. Danny wants first grade bad. Guys get sloppy, cagey, jumpy. Doesn't make it a case.
+
+[KAI_CHEN | style: reluctantly conceding]
+Yeah. Maybe that's all it is.
+
+[NOAH_KESTREL | style: shifting gears, lighter]
+You eat yet? I'm starving and I refuse to let this be the one good day I get turned into a stakeout on Danny Wu's tax returns.
+
+[KAI_CHEN | style: laughing despite himself]
+There it is. Ten minutes of peace and you're already making jokes again.
+
+[NOAH_KESTREL | style: standing, grabbing his jacket]
+Ten minutes is my limit for feelings, Kai. You know this about me.
+
+[NARRATOR]
+Kai laughs and lets the subject drop out loud, though something in his face says he hasn't let it go inside.
+
+[KAI_CHEN | style: quiet, half to himself]
+Yeah. Sure.
+
+[NARRATOR]
+Neither of them says Sonny's name, or the word debt, or anything close to it. The unease stays folded up small, tucked away like everything else tonight neither man is ready to look at directly.
+
+--- PART 16 ---
+
+[NARRATOR]
+Well past midnight, Noah lets himself back into his apartment, alone. The ease of the evening is already thinning at the edges.
+
+[NOAH_KESTREL | style: quiet, keys still in hand]
+Home.
+
+[SFX: a door clicking shut, a deadbolt turning]
+
+[NOAH_KESTREL | style: tired, half a laugh to himself]
+Kai's gonna ask if I had fun. I'm gonna have to lie and say yes.
+
+[NOAH_KESTREL | style: softer, almost surprised]
+Wasn't even a lie.
+
+[NARRATOR]
+He crosses to the wall of mornings. It's exactly as he left it — uncovered, the printout still hidden behind one photograph, untouched.
+
+[SFX: a light switch clicking on]
+
+[NOAH_KESTREL | style: low, addressing the wall like it's listening]
+Didn't cover you. Told myself I would.
+
+[NOAH_KESTREL | style: guarded, tired]
+One night off doesn't mean I trust you.
+
+[NARRATOR]
+He stands before the one blank space at the end of the row, where tomorrow's face hasn't arrived yet.
+
+[NOAH_KESTREL | style: barely audible]
+Few hours left before you tell me who it is this time.
+
+[NOAH_KESTREL | style: quieter still, almost to himself]
+Doesn't change anything. Does it.
+
+[SFX: a phone set down hard on a wooden table]
+
+[NARRATOR]
+He doesn't move for a long moment, the question still hanging, unanswered, in the empty space on the wall.
+
+--- PART 17 ---
+
+[NARRATOR]
+Past midnight, in the Herald's newsroom, Aya sits alone at her desk. The story she's been chasing for six months waits open in front of her, unfinished.
+
+[AYA_MORITA | style: quiet, methodical]
+Whisper's not a name. It's a nothing. A ghost account.
+
+[AYA_MORITA | style: tired, low]
+Junior officer, embarrassed, doesn't want his name attached. That's all it ever was.
+
+[NARRATOR]
+She scrolls to a photo saved among her files — a server room, taken from an angle that shows almost nothing.
+
+[AYA_MORITA | style: frustrated, searching]
+Half a room. No sign. No badge. Could be anywhere in the building.
+
+[SFX: a laptop trackpad clicking softly, repeated]
+
+[AYA_MORITA | style: distracted, softer]
+Could be nothing.
+
+[NARRATOR]
+She sets the photo aside and opens her drafts folder, where an unfinished piece still carries Noah's name in the headline.
+
+[AYA_MORITA | style: conflicted, honest with herself]
+I keep telling myself I need one more source before I run it.
+
+[AYA_MORITA | style: quieter, almost a confession]
+Maybe I just don't want to run it at all.
+
+[NARRATOR]
+Her phone lights up beside the keyboard with an email preview — her editor, a subject line about deadlines, a name she doesn't recognize attached as "backup."
+
+[AYA_MORITA | style: flat, resigned]
+A week. Less than that now.
+
+[SFX: a phone screen locking with a soft click]
+
+[NARRATOR]
+She doesn't open it. She closes the draft instead, the cursor blinking once over Noah's name before the screen goes dark, and sits a moment longer in the empty newsroom, deciding nothing at all.
+

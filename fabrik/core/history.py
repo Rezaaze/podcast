@@ -1,11 +1,30 @@
 """Serien-übergreifende Figuren-Historie (figure_history.json im Projekt-Root):
 verhindert, dass dieselbe Figur in immer neuen Podcasts wieder auftaucht."""
 
+import fcntl
 import json
 import os
+from contextlib import contextmanager
 from datetime import datetime
 
 from .paths import FIGURE_HISTORY_FILE
+
+_LOCK_FILE = FIGURE_HISTORY_FILE + ".lock"
+
+
+@contextmanager
+def _locked():
+    """Exklusiver Cross-Prozess-Lock um den Read-Modify-Write-Zyklus von
+    record_figure(). generate_episode.py --jobs N startet parallele
+    Subprozesse, die alle gegen dieselbe figure_history.json schreiben —
+    ohne Lock überschreibt der zweite Write kommentarlos, was der erste
+    gerade hinzugefügt hat."""
+    with open(_LOCK_FILE, "a") as lock_f:
+        fcntl.flock(lock_f, fcntl.LOCK_EX)
+        try:
+            yield
+        finally:
+            fcntl.flock(lock_f, fcntl.LOCK_UN)
 
 
 def load_figure_history() -> list:
@@ -19,8 +38,14 @@ def load_figure_history() -> list:
 
 
 def save_figure_history(history: list):
-    with open(FIGURE_HISTORY_FILE, "w", encoding="utf-8") as f:
+    # temp + os.replace: ein harter Kill mitten im Write darf die komplette
+    # serienübergreifende Historie nicht zerstören — load_figure_history()
+    # fällt bei kaputtem JSON stillschweigend auf [] zurück, der Verlust
+    # bliebe unbemerkt.
+    tmp = FIGURE_HISTORY_FILE + ".tmp"
+    with open(tmp, "w", encoding="utf-8") as f:
         json.dump(history, f, ensure_ascii=False, indent=2)
+    os.replace(tmp, FIGURE_HISTORY_FILE)
 
 
 def warn_on_repeated_figures(data: dict):
@@ -42,12 +67,13 @@ def warn_on_repeated_figures(data: dict):
 
 def record_figure(figure: str, series_title: str):
     """Einmal pro Figur+Serie, kein Duplikat bei erneutem Lauf derselben Episode."""
-    history = load_figure_history()
-    if any(h["figure"] == figure and h["series_title"] == series_title for h in history):
-        return
-    history.append({
-        "figure": figure,
-        "series_title": series_title,
-        "created": datetime.now().isoformat(timespec="seconds"),
-    })
-    save_figure_history(history)
+    with _locked():
+        history = load_figure_history()
+        if any(h["figure"] == figure and h["series_title"] == series_title for h in history):
+            return
+        history.append({
+            "figure": figure,
+            "series_title": series_title,
+            "created": datetime.now().isoformat(timespec="seconds"),
+        })
+        save_figure_history(history)

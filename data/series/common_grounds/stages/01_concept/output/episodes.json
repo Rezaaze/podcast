@@ -1,0 +1,368 @@
+{
+  "series_title": "Common Grounds",
+  "language": "English",
+  "mode": "drama",
+  "template": "soap_opera",
+  "writer_persona": "a showrunner for character-driven, relationship-first serial drama in the vein of prestige ensemble TV, who treats a small business as a pressure cooker for family-style loyalty and betrayal",
+  "style_guidelines": [
+    "Every scene should escalate an interpersonal stake, not just deliver plot information",
+    "Dialogue carries subtext — characters rarely say exactly what they mean, especially about money and feelings",
+    "Cut scenes at the moment of maximum tension; let the NARRATOR bridge time and place, never emotion",
+    "Give each character their own vocabulary and rhythm so voices are distinguishable without tags",
+    "Let secrets leak sideways — through a slip of the tongue, an overheard call, a document left open — never through convenient confession",
+    "End each episode on an unresolved question that recontextualizes what came before"
+  ],
+  "voices": {
+    "NARRATOR": {
+      "voice": "Ryan",
+      "default_style": "calm, measured, a step removed from the action",
+      "description": "the show's narrator — orients the listener at the start of every scene (who, where, when), never a character in the story"
+    },
+    "MEI_LIN": {
+      "voice": "Vivian",
+      "default_style": "warm but firm, speaks slow, deliberate, very clear English, protective when the co-op's soul feels threatened",
+      "description": "co-founder and managing partner, the emotional anchor of the café who believes the co-op is more than a business. Second-generation Chinese-American, grew up speaking Cantonese at home, carries a light lingering accent. Doesn't yet know about Jordan's hidden loan or the unsigned Wu paperwork."
+    },
+    "JORDAN_REYES": {
+      "voice": "Aiden",
+      "default_style": "brisk, confident on the surface, clipped and evasive when cornered about money",
+      "description": "co-founder and the co-op's de facto finance lead, pragmatic to a fault. Has quietly carried an undisclosed loan for three years and let the partners believe the Wu buy-back was finalized when it was not — and is running out of ways to keep both hidden."
+    },
+    "SORA_KIM": {
+      "voice": "Sohee",
+      "default_style": "quick-witted, guarded, speaks slow, deliberate, very clear English",
+      "description": "co-owner and head roaster, Korean-American, immigrated with her family as a child. Secretly in a relationship with fellow partner David Lin for four months, terrified it'll cost her a vote she badly wants to cast on her own terms."
+    },
+    "DAVID_LIN": {
+      "voice": "Dylan",
+      "default_style": "easygoing in public, quietly anxious underneath, speaks slow, deliberate, very clear English",
+      "description": "co-owner and floor/operations manager, Chinese-American, raised bilingual by grandparents who ran a restaurant. Secretly seeing Sora, and privately haunted by a co-op romance years ago that ended in a buyout fight and nearly sank the business — a history Sora doesn't fully know."
+    },
+    "DANIEL_WU": {
+      "voice": "Eric",
+      "default_style": "careful, formal, still translating some phrases mentally, simmering under a controlled surface",
+      "description": "estranged nephew of the café's late founding investor Grace Wu, raised partly in Chengdu before immigrating as a teenager. Arrives holding his aunt's old paperwork, believing — correctly — that her ownership stake was never legally bought out before she died."
+    },
+    "LINDA_CHU": {
+      "voice": "Serena",
+      "default_style": "measured, careful, speaks slow, deliberate, very clear English, deflects smoothly under pressure",
+      "description": "the co-op's longtime bookkeeper, Chinese-American. Has known for eight years that Grace Wu's buy-back document was never countersigned, and has quietly helped keep both that gap and Jordan's later loan off the books shown to other partners — out of loyalty, habit, and fear of being blamed."
+    }
+  },
+  "locations": {
+    "THE_COUNTER": {
+      "name": "The Counter",
+      "description": "the café's public floor — exposed brick, mismatched thrifted armchairs, a hand-chalked menu board, and big street-facing windows that flood the room with morning light and let every regular see straight in."
+    },
+    "THE_ROASTERY": {
+      "name": "The Roastery",
+      "description": "the cramped back room customers never see — dim under a single hanging bulb, dominated by the hulking drum roaster and towering sacks of green coffee, thick with the smell of scorched beans and unfinished conversations."
+    }
+  },
+  "format": {
+    "parts_per_section": 1,
+    "words_per_part_target": "300 to 500",
+    "words_per_part_min": 250,
+    "words_per_part_max": 550
+  },
+  "generation": {
+    "model": "claude-sonnet-5"
+  },
+  "audio": {
+    "api_url": "http://127.0.0.1:42003",
+    "default_style": "Speak clearly and with dramatic weight",
+    "target_lufs": -16.0,
+    "pause_between_chunks_ms": 250,
+    "pause_between_lines_ms": 700,
+    "pause_between_parts_ms": 3000,
+    "pause_between_episodes_ms": 6000,
+    "merge_anthology": false
+  },
+  "output_prefix": "ep",
+  "series_intro": "A worker-owned café on a corner that's survived two recessions and one very bad breakup between its founders. Everyone behind the counter owns a piece of the place — which means everyone has something to lose. This season: a stranger with old paperwork, a partner with a secret debt, and two co-owners falling for each other at the worst possible time. The coffee's still good. Everything else is up for a vote.",
+  "series_outro": "The vote on Meridian Roasters is cast, and the co-op survives it — but not everyone who walked in still owns what they thought they did, and not every partnership on the floor looks the same going out as it did coming in. The inheritance claim is settled on paper; what it cost between the people who signed it isn't. The romance is finally out in the open — whether that makes things easier is left for next season.",
+  "threads": [
+    {
+      "label": "The Wu Inheritance Claim",
+      "solution": "Grace Wu, one of the café's three founding investors, agreed verbally to sell her ownership stake back to the co-op eight years ago when she retired, but died of a sudden stroke three weeks before the paperwork was finalized. Jordan, eager to close the books cleanly, told the other partners the buy-back was complete and had bookkeeper Linda Chu draft the transfer documents — but Grace never countersigned them; she was in the hospital when they were ready. Linda noticed the missing signature at the time, flagged it once to Jordan, was told to 'handle it quietly,' and has kept the unsigned copies locked in a drawer for eight years, telling no one else. Legally, Grace's 15% stake never actually transferred; it passed into her estate, and her nephew Daniel Wu — her only living relative and sole heir under her old will — is the rightful owner of that 15%, regardless of what he does or doesn't yet know about how it was buried.",
+      "objective_facts": [
+        "Grace Wu held a legally registered 15% ownership stake in the co-op until her death eight years ago.",
+        "The buy-back transfer document Jordan has long claimed was completed was drafted by Linda Chu but was never countersigned by Grace before she died.",
+        "Linda flagged the missing signature to Jordan at the time and was told to handle it quietly; she has kept the unsigned copies in a locked drawer ever since.",
+        "Grace's will named her nephew Daniel Wu as sole heir to her estate, including any unresolved ownership interests.",
+        "No co-op partner besides Jordan and Linda has ever seen the unsigned transfer document."
+      ]
+    },
+    {
+      "label": "The Hidden Loan and the Buyout Offer",
+      "solution": "Three years ago, facing a cash crunch after a costly roaster failure, Jordan took out a private loan against the café's equipment without bringing it to a full partner vote — technically violating the co-op's bylaws, which require unanimous consent for debt above a set threshold. He's been quietly servicing it since, with Linda's help keeping it off the financial reports shown to other partners. Now a regional chain, Meridian Roasters, has offered to buy the café's lease, equipment, and brand for a sum that would clear the loan with money left over. Jordan is leaning hard toward pushing the partners to accept — not for the café's future, but to settle the debt before Daniel's inheritance claim forces a legal audit that would expose both the unsigned buy-back and the loan in the same breath.",
+      "objective_facts": [
+        "Three years ago, Jordan took out a private loan against the café's roasting equipment to cover an emergency equipment replacement.",
+        "The loan amount exceeded the co-op bylaws' threshold requiring a full partner vote, which never happened.",
+        "Linda has helped keep the loan off the standard financial reports shown to the other partners for three years.",
+        "Meridian Roasters has offered to buy the café's lease, equipment, and brand for a sum sufficient to pay off the loan in full.",
+        "Jordan has not disclosed the existence of the loan to Mei, Sora, or David."
+      ]
+    },
+    {
+      "label": "Sora and David's Secret",
+      "solution": "Sora and David began a relationship four months ago, after closing together on a slow winter night, but have kept it hidden because co-op bylaws require partners in a romantic relationship to disclose it and recuse themselves from votes where a conflict of interest could arise — and with the Meridian Roasters vote approaching, neither wants to lose their vote or have their judgment questioned. David has an added reason to be cautious: six years ago, a relationship between two former co-op partners ended in an acrimonious buyout that nearly bankrupted the café, an event only David, Mei, and Jordan witnessed firsthand. Sora doesn't know that specific history — only that David tenses whenever workplace relationships come up, and she's never pressed him on why.",
+      "objective_facts": [
+        "Sora Kim and David Lin began a romantic relationship four months ago.",
+        "Co-op bylaws require partners in a romantic relationship to disclose it and recuse themselves from votes with a potential conflict of interest.",
+        "Neither Sora nor David has disclosed the relationship to Mei or Jordan.",
+        "Six years ago, a relationship between two former co-op partners ended in an acrimonious buyout that nearly bankrupted the café; Mei, Jordan, and David witnessed it, Sora did not.",
+        "The upcoming vote on the Meridian Roasters offer is the specific vote both are trying to avoid being disqualified from."
+      ]
+    }
+  ],
+  "episodes": [
+    {
+      "figure": "A Stranger's Claim",
+      "theme": "Daniel Wu's unannounced arrival with his late aunt Grace's old paperwork cracks open the co-op's founding myth just as Mei's discovery of loan documents forces Jordan to admit a debt he's kept hidden for three years, while Sora and David narrowly survive a close call that nearly exposes the relationship they've been hiding.",
+      "intro_note": "",
+      "outro_note": "Daniel's papers are still on the table when the lights go out over The Counter — and somewhere between Jordan's forced confession and Linda's silence, nobody has yet said the word 'audit' out loud, though everyone in that back room is already thinking it.",
+      "sections": [
+        {
+          "title": "The Stranger at the Counter",
+          "what": "Daniel Wu arrives at The Counter with his aunt Grace's old paperwork, telling Mei, Sora, and David her buy-back was never finalized.",
+          "who": [
+            "DANIEL_WU",
+            "MEI_LIN",
+            "SORA_KIM",
+            "DAVID_LIN"
+          ],
+          "thread": "The Wu Inheritance Claim",
+          "location": "THE_COUNTER",
+          "words": null
+        },
+        {
+          "title": "Two in the Dark",
+          "what": "Sora and David steal a stolen moment in the Roastery; Mei's footsteps send them scrambling apart seconds before she walks in.",
+          "who": [
+            "SORA_KIM",
+            "DAVID_LIN",
+            "MEI_LIN"
+          ],
+          "thread": "Sora and David's Secret",
+          "location": "THE_ROASTERY",
+          "words": {
+            "min": 150,
+            "max": 250,
+            "target": "150 to 250"
+          }
+        },
+        {
+          "title": "Left Open",
+          "what": "Mei finds loan documents left open in the Roastery office nook and confronts Jordan, who admits the hidden equipment loan he's carried three years.",
+          "who": [
+            "MEI_LIN",
+            "JORDAN_REYES"
+          ],
+          "thread": "The Hidden Loan and the Buyout Offer",
+          "location": "THE_ROASTERY",
+          "words": null
+        },
+        {
+          "title": "What the Drawer Knows",
+          "what": "As Daniel leaves paperwork copies behind, Mei presses Linda for details on Grace's old buy-back, and Linda deflects, guarding the drawer's secret.",
+          "who": [
+            "MEI_LIN",
+            "LINDA_CHU",
+            "DANIEL_WU"
+          ],
+          "thread": "The Wu Inheritance Claim",
+          "location": "THE_COUNTER",
+          "words": {
+            "min": 150,
+            "max": 250,
+            "target": "150 to 250"
+          }
+        }
+      ],
+      "case": [
+        {
+          "label": "The Wu Inheritance Claim",
+          "character_knowledge": {
+            "DANIEL_WU": "Genuinely and correctly believes his aunt Grace's 15% stake was never legally transferred, and has come with her old paperwork to prove it — he freely states this. He doesn't yet know about Jordan's hidden loan or that his claim's timing could trigger an audit exposing it.",
+            "MEI_LIN": "Has believed for eight years that Grace's buy-back was cleanly completed, so Daniel's claim genuinely stuns her; she has no idea Linda holds an unsigned document, and her first instinct is to wonder if Daniel is mistaken or exaggerating rather than suspect Jordan.",
+            "SORA_KIM": "Is as blindsided as Mei by Daniel's claim and knows nothing about the unsigned paperwork, but is privately more rattled by the timing — any scrutiny on the partners right now is dangerous for the secret she's keeping.",
+            "DAVID_LIN": "Genuinely shocked by Daniel's arrival like the others, but the sudden instability in the co-op's founding story stirs his old fear of a partnership fight tearing the business apart again, sharpening his need to keep his own secret buried a little longer.",
+            "JORDAN_REYES": "Knows for a fact the buy-back was never countersigned and has told the partners otherwise for eight years; he plays shocked and defensive in front of Daniel while privately calculating how close this claim brings everyone to an audit he can't survive.",
+            "LINDA_CHU": "Has known for eight years that Grace never signed the transfer and has kept the copies locked away at Jordan's request; she says nothing to Mei or Daniel, deflecting smoothly, and wrongly believes she can still manage the situation quietly rather than let it become the partners' problem."
+          },
+          "solution": "Grace Wu, one of the café's three founding investors, agreed verbally to sell her ownership stake back to the co-op eight years ago when she retired, but died of a sudden stroke three weeks before the paperwork was finalized. Jordan, eager to close the books cleanly, told the other partners the buy-back was complete and had bookkeeper Linda Chu draft the transfer documents — but Grace never countersigned them; she was in the hospital when they were ready. Linda noticed the missing signature at the time, flagged it once to Jordan, was told to 'handle it quietly,' and has kept the unsigned copies locked in a drawer for eight years, telling no one else. Legally, Grace's 15% stake never actually transferred; it passed into her estate, and her nephew Daniel Wu — her only living relative and sole heir under her old will — is the rightful owner of that 15%, regardless of what he does or doesn't yet know about how it was buried.",
+          "objective_facts": [
+            "Grace Wu held a legally registered 15% ownership stake in the co-op until her death eight years ago.",
+            "The buy-back transfer document Jordan has long claimed was completed was drafted by Linda Chu but was never countersigned by Grace before she died.",
+            "Linda flagged the missing signature to Jordan at the time and was told to handle it quietly; she has kept the unsigned copies in a locked drawer ever since.",
+            "Grace's will named her nephew Daniel Wu as sole heir to her estate, including any unresolved ownership interests.",
+            "No co-op partner besides Jordan and Linda has ever seen the unsigned transfer document."
+          ]
+        },
+        {
+          "label": "The Hidden Loan and the Buyout Offer",
+          "character_knowledge": {
+            "MEI_LIN": "Stumbles onto the actual loan paperwork by accident and, for the first time, genuinely learns a private loan exists against the roasting equipment; she doesn't yet know its size, its age, or its connection to Meridian or to Daniel's claim.",
+            "JORDAN_REYES": "Has carried this undisclosed loan for three years without a partner vote and is caught red-handed by Mei; he admits the loan exists but downplays how long it's been running and says nothing about Meridian or the audit risk driving his urgency."
+          },
+          "solution": "Three years ago, facing a cash crunch after a costly roaster failure, Jordan took out a private loan against the café's equipment without bringing it to a full partner vote — technically violating the co-op's bylaws, which require unanimous consent for debt above a set threshold. He's been quietly servicing it since, with Linda's help keeping it off the financial reports shown to other partners. Now a regional chain, Meridian Roasters, has offered to buy the café's lease, equipment, and brand for a sum that would clear the loan with money left over. Jordan is leaning hard toward pushing the partners to accept — not for the café's future, but to settle the debt before Daniel's inheritance claim forces a legal audit that would expose both the unsigned buy-back and the loan in the same breath.",
+          "objective_facts": [
+            "Three years ago, Jordan took out a private loan against the café's roasting equipment to cover an emergency equipment replacement.",
+            "The loan amount exceeded the co-op bylaws' threshold requiring a full partner vote, which never happened.",
+            "Linda has helped keep the loan off the standard financial reports shown to the other partners for three years.",
+            "Meridian Roasters has offered to buy the café's lease, equipment, and brand for a sum sufficient to pay off the loan in full.",
+            "Jordan has not disclosed the existence of the loan to Mei, Sora, or David."
+          ]
+        },
+        {
+          "label": "Sora and David's Secret",
+          "character_knowledge": {
+            "SORA_KIM": "Has been secretly involved with David for four months and is hiding it specifically to protect her vote on the coming Meridian offer; she nearly gets caught with him in the Roastery and scrambles to cover, unaware of the deeper history making David so on edge.",
+            "DAVID_LIN": "Shares Sora's secret and the same fear of losing his vote, but is additionally haunted by a past co-op romance-turned-buyout fight that nearly sank the café — something Sora doesn't know — which is why he reacts fastest to hide them both when Mei's footsteps approach.",
+            "MEI_LIN": "Has no idea Sora and David are involved and nearly walks in on them without realizing what she almost saw; she's too distracted by Daniel's claim and the loan discovery to register anything unusual in the Roastery."
+          },
+          "solution": "Sora and David began a relationship four months ago, after closing together on a slow winter night, but have kept it hidden because co-op bylaws require partners in a romantic relationship to disclose it and recuse themselves from votes where a conflict of interest could arise — and with the Meridian Roasters vote approaching, neither wants to lose their vote or have their judgment questioned. David has an added reason to be cautious: six years ago, a relationship between two former co-op partners ended in an acrimonious buyout that nearly bankrupted the café, an event only David, Mei, and Jordan witnessed firsthand. Sora doesn't know that specific history — only that David tenses whenever workplace relationships come up, and she's never pressed him on why.",
+          "objective_facts": [
+            "Sora Kim and David Lin began a romantic relationship four months ago.",
+            "Co-op bylaws require partners in a romantic relationship to disclose it and recuse themselves from votes with a potential conflict of interest.",
+            "Neither Sora nor David has disclosed the relationship to Mei or Jordan.",
+            "Six years ago, a relationship between two former co-op partners ended in an acrimonious buyout that nearly bankrupted the café; Mei, Jordan, and David witnessed it, Sora did not.",
+            "The upcoming vote on the Meridian Roasters offer is the specific vote both are trying to avoid being disqualified from."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "The Vote",
+      "theme": "With the Meridian Roasters vote bearing down, Linda's confession about Grace's never-signed buy-back hands Daniel a legitimate claim to the co-op in the same breath that Jordan is forced to admit his loan was hidden specifically to survive the audit that claim would trigger, while Sora and David choose to disclose their relationship on their own terms before it can be used against them.",
+      "intro_note": "Daniel Wu's inheritance claim, Jordan's admission of a hidden loan, and Sora and David's near-miss in the Roastery all still hang over The Counter as the partners prepare to vote on the Meridian Roasters offer.",
+      "outro_note": "",
+      "sections": [
+        {
+          "title": "Before the Vote",
+          "what": "In the Roastery, Sora and David resolve to tell Mei and Jordan about their relationship themselves, refusing to let the vote expose it first.",
+          "who": [
+            "SORA_KIM",
+            "DAVID_LIN"
+          ],
+          "thread": "Sora and David's Secret",
+          "location": "THE_ROASTERY",
+          "words": null
+        },
+        {
+          "title": "Linda's Drawer",
+          "what": "Confronted about the buy-back, Linda breaks down and produces the unsigned document she's hidden for eight years, confirming Daniel legally owns Grace's fifteen percent.",
+          "who": [
+            "LINDA_CHU",
+            "MEI_LIN",
+            "JORDAN_REYES",
+            "SORA_KIM",
+            "DAVID_LIN",
+            "DANIEL_WU"
+          ],
+          "thread": "The Wu Inheritance Claim",
+          "location": "THE_COUNTER",
+          "words": null
+        },
+        {
+          "title": "The Real Reason",
+          "what": "Cornered by the fallout, Jordan admits he pushed the Meridian sale to pay off a hidden loan before Daniel's claim could trigger an exposing audit.",
+          "who": [
+            "JORDAN_REYES",
+            "MEI_LIN",
+            "SORA_KIM",
+            "DAVID_LIN",
+            "DANIEL_WU"
+          ],
+          "thread": "The Hidden Loan and the Buyout Offer",
+          "location": "THE_COUNTER",
+          "words": null
+        },
+        {
+          "title": "Coming Clean",
+          "what": "Before anyone else can, Sora and David tell Mei and Jordan they've been together for four months, bracing for how it changes the vote.",
+          "who": [
+            "SORA_KIM",
+            "DAVID_LIN",
+            "MEI_LIN",
+            "JORDAN_REYES"
+          ],
+          "thread": "Sora and David's Secret",
+          "location": "THE_COUNTER",
+          "words": null
+        },
+        {
+          "title": "The Vote",
+          "what": "With every secret now on the table, the partners cast their vote on the Meridian Roasters offer, and the co-op's future hangs on the count.",
+          "who": [
+            "MEI_LIN",
+            "JORDAN_REYES",
+            "SORA_KIM",
+            "DAVID_LIN",
+            "DANIEL_WU"
+          ],
+          "thread": "The Hidden Loan and the Buyout Offer",
+          "location": "THE_COUNTER",
+          "words": null
+        }
+      ],
+      "case": [
+        {
+          "label": "The Wu Inheritance Claim",
+          "character_knowledge": {
+            "LINDA_CHU": "Linda knows the buy-back document was never countersigned and that she's kept it locked away for eight years on Jordan's instruction; the pressure of Daniel's claim finally breaks her into revealing it herself, unable to keep protecting Jordan at Daniel's expense.",
+            "JORDAN_REYES": "Jordan knows the buy-back was never finalized and has let the partners believe otherwise for eight years; he can no longer deny it once Linda produces the document, and knows this exposure is exactly what he'd been racing the Meridian sale to outrun.",
+            "MEI_LIN": "Mei is blindsided to learn the founding myth she believed — that Grace's stake was cleanly bought back — was false all along, and realizes Jordan and Linda both knew and said nothing.",
+            "DANIEL_WU": "Daniel has believed since arriving that his aunt's stake was never properly transferred, and Linda's document is the first hard proof he's been given; he now knows, with certainty, that he legally holds fifteen percent of the co-op.",
+            "SORA_KIM": "Sora learns for the first time that Grace's buy-back was never real and that Jordan and Linda sat on that secret for eight years, shaking her trust in Jordan just as she's about to reveal a secret of her own.",
+            "DAVID_LIN": "David is stunned to learn the inheritance claim is legitimate and that Jordan let it stay buried for years, which sharpens his own private fear about how the co-op handles hidden things once they finally surface."
+          },
+          "solution": "Grace Wu, one of the café's three founding investors, agreed verbally to sell her ownership stake back to the co-op eight years ago when she retired, but died of a sudden stroke three weeks before the paperwork was finalized. Jordan, eager to close the books cleanly, told the other partners the buy-back was complete and had bookkeeper Linda Chu draft the transfer documents — but Grace never countersigned them; she was in the hospital when they were ready. Linda noticed the missing signature at the time, flagged it once to Jordan, was told to 'handle it quietly,' and has kept the unsigned copies locked in a drawer for eight years, telling no one else. Legally, Grace's 15% stake never actually transferred; it passed into her estate, and her nephew Daniel Wu — her only living relative and sole heir under her old will — is the rightful owner of that 15%, regardless of what he does or doesn't yet know about how it was buried.",
+          "objective_facts": [
+            "Grace Wu held a legally registered 15% ownership stake in the co-op until her death eight years ago.",
+            "The buy-back transfer document Jordan has long claimed was completed was drafted by Linda Chu but was never countersigned by Grace before she died.",
+            "Linda flagged the missing signature to Jordan at the time and was told to handle it quietly; she has kept the unsigned copies in a locked drawer ever since.",
+            "Grace's will named her nephew Daniel Wu as sole heir to her estate, including any unresolved ownership interests.",
+            "No co-op partner besides Jordan and Linda has ever seen the unsigned transfer document."
+          ]
+        },
+        {
+          "label": "The Hidden Loan and the Buyout Offer",
+          "character_knowledge": {
+            "JORDAN_REYES": "Jordan admits aloud, for the first time, that he's pushing the Meridian sale specifically to pay off his hidden loan before Daniel's claim forces a legal audit that would expose both the loan and the buried buy-back at once.",
+            "MEI_LIN": "Mei already knew about the loan itself but now understands its full urgency — Jordan wasn't just hiding a debt, he was racing to bury it before Daniel's claim triggered an audit that would expose everything.",
+            "SORA_KIM": "Sora learns the real motive behind Jordan's push for the sale for the first time, and it hardens her resolve to vote with clear eyes rather than let panic decide the co-op's future.",
+            "DAVID_LIN": "David hears Jordan's admission and recognizes the same instinct to protect the co-op by hiding its problems that nearly cost it everything six years ago, though he says nothing about that history.",
+            "DANIEL_WU": "Daniel realizes his inheritance claim is the very thing that forced Jordan's hand, and understands his arrival has accelerated a vote that will decide the fate of the fifteen percent stake now legally his."
+          },
+          "solution": "Three years ago, facing a cash crunch after a costly roaster failure, Jordan took out a private loan against the café's equipment without bringing it to a full partner vote — technically violating the co-op's bylaws, which require unanimous consent for debt above a set threshold. He's been quietly servicing it since, with Linda's help keeping it off the financial reports shown to other partners. Now a regional chain, Meridian Roasters, has offered to buy the café's lease, equipment, and brand for a sum that would clear the loan with money left over. Jordan is leaning hard toward pushing the partners to accept — not for the café's future, but to settle the debt before Daniel's inheritance claim forces a legal audit that would expose both the unsigned buy-back and the loan in the same breath.",
+          "objective_facts": [
+            "Three years ago, Jordan took out a private loan against the café's roasting equipment to cover an emergency equipment replacement.",
+            "The loan amount exceeded the co-op bylaws' threshold requiring a full partner vote, which never happened.",
+            "Linda has helped keep the loan off the standard financial reports shown to the other partners for three years.",
+            "Meridian Roasters has offered to buy the café's lease, equipment, and brand for a sum sufficient to pay off the loan in full.",
+            "Jordan has not disclosed the existence of the loan to Mei, Sora, or David."
+          ]
+        },
+        {
+          "label": "Sora and David's Secret",
+          "character_knowledge": {
+            "SORA_KIM": "Sora chooses to tell Mei and Jordan about her relationship with David herself, before it can be used against her in the vote; she still doesn't know why David seems more afraid of this reveal than she is.",
+            "DAVID_LIN": "David discloses the relationship alongside Sora but privately carries the weight of the buyout fight six years ago that a hidden co-op romance once caused, a history he still hasn't told her.",
+            "MEI_LIN": "Mei is surprised but not truly shocked to learn about Sora and David, and has to decide in the moment how much it should matter to a vote that's already overloaded with revelations.",
+            "JORDAN_REYES": "Jordan, already exposed by his own secrets this episode, reacts to Sora and David's disclosure with more relief than judgment — it's one less hidden thing left standing between the partners."
+          },
+          "solution": "Sora and David began a relationship four months ago, after closing together on a slow winter night, but have kept it hidden because co-op bylaws require partners in a romantic relationship to disclose it and recuse themselves from votes where a conflict of interest could arise — and with the Meridian Roasters vote approaching, neither wants to lose their vote or have their judgment questioned. David has an added reason to be cautious: six years ago, a relationship between two former co-op partners ended in an acrimonious buyout that nearly bankrupted the café, an event only David, Mei, and Jordan witnessed firsthand. Sora doesn't know that specific history — only that David tenses whenever workplace relationships come up, and she's never pressed him on why.",
+          "objective_facts": [
+            "Sora Kim and David Lin began a romantic relationship four months ago.",
+            "Co-op bylaws require partners in a romantic relationship to disclose it and recuse themselves from votes with a potential conflict of interest.",
+            "Neither Sora nor David has disclosed the relationship to Mei or Jordan.",
+            "Six years ago, a relationship between two former co-op partners ended in an acrimonious buyout that nearly bankrupted the café; Mei, Jordan, and David witnessed it, Sora did not.",
+            "The upcoming vote on the Meridian Roasters offer is the specific vote both are trying to avoid being disqualified from."
+          ]
+        }
+      ]
+    }
+  ]
+}

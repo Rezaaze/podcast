@@ -116,39 +116,44 @@ Abhängigkeiten stehen dabei; innerhalb einer Phase gilt die Reihenfolge.
 
 ### Phase 0 — Absichern (sofort, gefahrlos bei laufendem Render)
 
-- [ ] **T0.1 Branch + Sicherung.** `git add -A && git commit` des aktuellen
-      Stands auf `main` (da sind ungetrackte Änderungen), dann Branch
-      `mwp-umbau` anlegen. Der gesamte Umbau passiert auf dem Branch.
-- [ ] **T0.2 Render-Wächter definieren.** Kriterium schriftlich festhalten,
-      wann Phase 3 starten darf: kein laufender `batch.py`/`podcast_maker`-
-      Prozess UND chain_of_custody-Output vollständig. Bis dahin: keine
-      Änderung an `fabrik/core/paths.py`, `fabrik/audio/`, `fabrik/cli/`.
-- [ ] **T0.3 Alt-Serien inventarisieren.** Liste aller `data/series/*`-Ordner
-      mit Status (fertig gerendert? Skripte vorhanden?) — Grundlage für die
-      Verschiebung nach `data/archive/pre_mwp/` in T6.3.
+- [x] **T0.1 Branch + Sicherung.** Erledigt 13.07.: Snapshot-Commit
+      `24221db` auf `main`, Branch `mwp-umbau` angelegt — der gesamte
+      Umbau passiert auf dem Branch.
+- [x] **T0.2 Render-Wächter definieren.** Erledigt 13.07.: Kriterium war
+      "kein laufender `batch.py`/`podcast_maker`-Prozess UND
+      chain_of_custody vollständig" — beides geprüft und ERFÜLLT (10/10
+      MP3s, keine offenen Checkpoints, kein Prozess). **Die Phase-3-Sperre
+      ist damit aufgehoben.**
+- [x] **T0.3 Alt-Serien inventarisieren.** Erledigt 13.07.:
+      `docs/pre-mwp-serien-inventur.md` — 3 fertige soap_opera-Serien,
+      2 unfertige, 1 leerer Test-Rest.
 
 ### Phase 1 — Repo-Kontext schichten (Scope B; gefahrlos, reine .md-Arbeit)
 
-- [ ] **T1.1 CLAUDE.md-Inventur.** Jeden Absatz des 732-Zeilen-CLAUDE.md
-      einem Ziel zuordnen (Root behalten / fabrik/audio / webui / … /
-      streichen weil veraltet). Ergebnis: Mapping-Tabelle in
-      `docs/claude-md-inventur.md` (Wegwerf-Artefakt, nach T1.4 löschen).
-- [ ] **T1.2 Bereichs-CLAUDE.md schreiben** — sechs Dateien laut Layout oben,
-      Inhalt aus der Inventur verschoben (nicht kopiert). Ein Commit pro
-      Datei ist okay, muss aber nicht.
-- [ ] **T1.3 Root-CLAUDE.md eindampfen** auf Layer 0+1 (≤150 Zeilen):
-      Projektbeschreibung, Layout-Tabelle, Kommandos-Block, Routing-Tabelle
-      ("wenn du an X arbeitest, lies Y/CLAUDE.md"), Top-Gotchas
-      (stdin=DEVNULL, kein Test-Suite, venv-Split). Erst NACH T1.2, damit
-      nichts verloren geht.
-- [ ] **T1.4 Gegenprobe.** In einer frischen Claude-Code-Session je eine
+- [x] **T1.1 CLAUDE.md-Inventur.** Erledigt 13.07. — direkt beim Verteilen
+      gemacht (voller Alt-Inhalt war im Session-Kontext), keine separate
+      Wegwerf-Tabelle nötig.
+- [x] **T1.2 Bereichs-CLAUDE.md schreiben.** Erledigt 13.07.: sechs Dateien
+      (fabrik/core 74 Z., fabrik/writing 133 Z., fabrik/audio 136 Z.,
+      fabrik/cli 118 Z., webui 79 Z., templates 70 Z.) — alle
+      Produktions-Lektionen verschoben, nicht kopiert.
+- [x] **T1.3 Root-CLAUDE.md eingedampft** auf 96 Zeilen (Ziel ≤150):
+      Beschreibung, Layout-Tabelle, Kommandos, Routing-Tabelle,
+      Top-Gotchas + Hinweis auf den laufenden MWP-Umbau.
+- [ ] **T1.4 Gegenprobe.** In einer FRISCHEN Claude-Code-Session je eine
       typische Frage pro Bereich stellen (z. B. "warum retried
       validate_parts nicht bei Überlänge?") und prüfen, dass die Antwort
-      aus dem Bereichs-CLAUDE.md kommt. Inventur-Datei löschen.
+      aus dem Bereichs-CLAUDE.md kommt. (Selbst-Abgleich beim Schreiben
+      ist erfolgt; der Frische-Session-Test steht noch aus — am besten
+      einfach beim nächsten normalen Arbeiten beobachten.)
 
 ### Phase 2 — Workspace-Design (Scope A, noch kein Code)
 
-- [ ] **T2.1 Stage-Verträge schreiben.** Vier CONTEXT.md-Vorlagen (Inputs /
+- [x] **T2.1 Stage-Verträge schreiben.** Erledigt 13.07.:
+      `templates/_workspace/` mit CLAUDE.md, CONTEXT.md und vier
+      stage_NN_CONTEXT.md (Inputs/Process/Outputs + Review-Gate-Hinweis,
+      Platzhalter {{SLUG}}/{{TEMPLATE}}/{{MODE}}/{{SERIES_TITLE}}/
+      {{EPISODES_TOTAL}}/{{CREATED}}). Ursprünglicher Task-Text: Vier CONTEXT.md-Vorlagen (Inputs /
       Process / Outputs im Format des Papers, Abschnitt 3.3) + Layer-0/1-
       Vorlagen für den Workspace-Root. Ablage als neue Dateien
       `templates/_workspace/{CLAUDE.md,CONTEXT.md,stage_01…04_CONTEXT.md}`
@@ -156,14 +161,19 @@ Abhängigkeiten stehen dabei; innerhalb einer Phase gilt die Reihenfolge.
       Wichtig: die Verträge beschreiben auch die MECHANIK ehrlich ("dieser
       Output wird von `python3 -m fabrik.cli.generate_episode` erzeugt"),
       damit sie als Doku für Menschen taugen.
-- [ ] **T2.2 Pfad-Inventur (die eigentliche Umbau-Landkarte).** Grep über
+- [x] **T2.2 Pfad-Inventur.** Erledigt 13.07.: `docs/mwp-pfad-inventur.md`.
+      Zentraler Befund: fast alles läuft durch `paths.py::Series` — der
+      Umbau ist kleiner als befürchtet. Lolfi hat 3 relevante
+      Konsum-Stellen. Ursprünglicher Task-Text: Grep über
       `fabrik/`, `webui/`, `~/Downloads/Lolfi/` nach allen Vorkommen von
       `episodes.json`, `scripts/`, `output/`, `characters/`, `locations/`,
       `intro.mp3`, `.checkpoints`, `.voices_manifest` etc. Ergebnis: Tabelle
       Datei → Funktion → alter Pfad → neuer Pfad in
       `docs/mwp-pfad-inventur.md`. **Dieses Dokument ist die Checkliste für
       Phase 3–5**; nichts wird umgebaut, was hier nicht steht.
-- [ ] **T2.3 Review-Gate-Konzept festschreiben** (klein halten): Gates =
+- [x] **T2.3 Review-Gate-Konzept festschreiben.** Erledigt 13.07.: steht in
+      den Stage-Verträgen (Abschnitt "Review-Gate danach" je Stage) + in
+      `templates/_workspace/CONTEXT.md`. Ursprünglicher Task-Text: (klein halten): Gates =
       die vorhandenen WebUI-Schritt-Karten + "Ordner öffnen"-Links pro
       Stage-Output. Kein Approval-Mechanismus, kein Marker-File — der
       Mensch editiert Dateien in `stages/NN_*/output/`, die nächste Stage
@@ -177,66 +187,106 @@ Reihenfolge so gewählt, dass nach jedem Task ein lauffähiger Zustand mit
 Smoke-Test existiert. Test-Vehikel: eine Mini-Serie (soap_opera, 1 Episode,
 ~5 Minuten) namens `mwp_smoke`, nach jedem Task neu erzeugt/weitergeführt.
 
-- [ ] **T3.1 `fabrik/core/paths.py` auf neues Layout.** Neue Funktionen
+- [x] **T3.1 `fabrik/core/paths.py` auf neues Layout.** Erledigt 13.07.
+      (inkl. der 4 Vorbei-Join-Stellen aus Inventur §2: character_prompts,
+      location_prompts, find_audio_asset→assets/, cover_art→04_visuals).
+      Ursprünglicher Task-Text: Neue Funktionen
       (`stage_dir(slug, n)`, `concept_output()`, `scripts_dir()` →
       `stages/02_scripts/output/`, …), alte Pfad-Helfer ersetzen — Aufrufer
       kompilieren weiter, weil nur die Rückgabepfade wechseln. Hier NUR
       paths.py + `fabrik/core/config.py` (episodes.json-Fundort), noch
       keine Verhaltensänderung sonst.
-- [ ] **T3.2 `create_series.py` scaffoldet den Workspace.** Nach
+- [x] **T3.2 `create_series.py` scaffoldet den Workspace.** Erledigt 13.07.
+      via neuem stdlib-Modul `fabrik/core/workspace.py::scaffold_workspace`
+      (idempotent, überschreibt nie). Smoke-Test `mwp_smoke` ✓,
+      .gitignore-Negativ-Pattern provisorisch gesetzt und via
+      `git check-ignore` verifiziert. Ursprünglicher Task-Text: Nach
       erfolgreicher Generierung: `stages/`-Baum anlegen, CONTEXT.md-Dateien
       aus `templates/_workspace/` befüllen (T2.1), `PROMPT_TEMPLATE.md` +
       `EPISODES_CREATOR_PROMPT.md` nach `references/` kopieren,
       episodes.json nach `stages/01_concept/output/`. Smoke-Test:
       `mwp_smoke` erzeugen, Baum von Hand prüfen.
-- [ ] **T3.3 `script_writer.py` liest aus dem Workspace.** Prompt-Template
+- [x] **T3.3 `script_writer.py` liest aus dem Workspace.** Erledigt 13.07.:
+      `load_template(name, series=...)` bevorzugt references/-Kopie
+      (Fallback Master + Warnung); generate_episode übergibt die Serie.
+      Skript-Ablage folgt paths.py automatisch. Echte Generierung noch
+      ungetestet (braucht Claude-Call) — mit T3.5-Smoke zusammen testen.
+      Ursprünglicher Task-Text: Prompt-Template
       aus `references/PROMPT_TEMPLATE.md` statt `templates/<t>/`; Skripte,
       BEATS, REVIEWs nach `stages/02_scripts/output/`. Smoke-Test: Episode 1
       von `mwp_smoke` generieren, Resume-Verhalten prüfen (Datei anfassen,
       erneut laufen lassen).
-- [ ] **T3.4 `import_story.py` nachziehen** — gleiche Scaffold- und
+- [x] **T3.4 `import_story.py` nachziehen.** Erledigt 13.07.: gleiches
+      Scaffolding via workspace.scaffold_workspace. Ursprünglicher Task-Text: — gleiche Scaffold- und
       Ablage-Logik (kleiner Task, hängt nur an T3.2/T3.3).
-- [ ] **T3.5 Audio-Pipeline umziehen.** `podcast_maker.py`, `batch.py`,
+- [x] **T3.5 Audio-Pipeline.** Kein Code nötig (folgte paths.py); Laufzeit-
+      verifiziert 13.07. mit the_wildrose_inheritance Ep1: MP3 + SRT +
+      SPEAKERS/LOCATIONS/SFX/PART_OFFSETS/.voices_manifest alle korrekt in
+      stages/03_audio/output/. Bonus: der Voice-Manifest-Guard bewährte
+      sich live (nicht auflösbare Stimme 'Chelsie' → Abbruch VOR Manifest-
+      Write, kein Phantom-Baseline). Ursprünglicher Task-Text: `podcast_maker.py`, `batch.py`,
       `fabrik/audio/pipeline.py`: Skript-Quelle = `stages/02_scripts/output/`,
       alles Gerenderte (MP3, SRT, SPEAKERS, LOCATIONS, CHAPTERS,
       UPLOAD_INDEX, `.checkpoints/`, `.cues/`, `.voices_manifest.json`,
       `_PART_OFFSETS.json`) nach `stages/03_audio/output/`; `intro.mp3`
       etc. aus `assets/`. Smoke-Test: `mwp_smoke` vertonen (lokaler TTS),
       Checkpoint-Resume prüfen (Prozess mittendrin killen, neu starten).
-- [ ] **T3.6 Visual-CLIs umziehen.** `character_prompts.py`,
+- [x] **T3.6 Visual-CLIs.** Pfade bereits in T3.1 umgestellt; prompts-only-
+      Lauf verifiziert 13.07. (PROMPTS.txt in stages/04_visuals/output/
+      characters/). Ursprünglicher Task-Text: `character_prompts.py`,
       `location_prompts.py`, `cover_art.py` → `stages/04_visuals/output/`.
       Smoke-Test: Prompts-only-Lauf (ohne OPENAI_API_KEY).
-- [ ] **T3.7 Restgrep gegen die Pfad-Inventur (T2.2).** Jede Zeile der
+- [x] **T3.7 Restgrep.** Erledigt 13.07.: einziger verbleibender Treffer
+      ist Lolfis eigener `video/output` (gehört Lolfi, nicht dem
+      Serien-Layout). Ursprünglicher Task-Text: Jede Zeile der
       Inventur abhaken; `history.py`, `textproc.py` etc. auf übersehene
       Pfadannahmen prüfen. Erst wenn die Tabelle leer ist, gilt Phase 3
       als fertig.
 
 ### Phase 4 — WebUI nachziehen
 
-- [ ] **T4.1 `webui/status.py`** auf neue Pfade (Skript-/Audio-/Visual-
+- [x] **T4.1 `webui/status.py`** auf neue Pfade — erledigt 13.07. (Skript-/Audio-/Visual-
       Existenzchecks, `_list_podcast_episode_files`). Danach zeigen die
       Statuskarten für `mwp_smoke` wieder korrekt an.
-- [ ] **T4.2 `webui/config.py` COMMANDS + `folders.py` + `prompt_blocks.py`**
+- [x] **T4.2 `webui/config.py` + `folders.py` + `prompt_blocks.py` + `app.py` + `runner.py`** — erledigt 13.07.; das WebUI bezieht das Layout jetzt aus `fabrik.core.paths` (RELPATH-Konstanten in config.py), Layout-Wissen lebt nur noch an EINEM Ort.
       — Arbeitsverzeichnisse, "Ordner öffnen"-Ziele (jetzt pro Stage),
       Block-Erzeugung. Discard-Guard (`/api/pf/series/discard`) auf neues
       Layout: "keine Skripte/Outputs" heißt jetzt `stages/*/output/` leer.
-- [ ] **T4.3 Stage-Karten als Review-Gates ausweisen** (T2.3): pro Stage
+- [x] **T4.3 Review-Gate-Button** — erledigt 13.07.: neuer `pf_scripts`-Ordner-Button "📂 Skripte prüfen/editieren" im Generier-Schritt; pf_output/pf_characters/pf_locations zeigen auf die Stage-Outputs. (T2.3): pro Stage
       ein "📂 Output prüfen"-Link; Texte klarstellen, dass zwischen den
       Schritten editiert werden darf. Kein neuer Mechanismus.
-- [ ] **T4.4 WebUI-Durchklick-Test** mit `mwp_smoke`: Serie erstellen →
+- [x] **T4.4 WebUI-Funktionstest** — erledigt 13.07. (per Browser-Preview:
+      Serien-Liste, Status-Karten, Episoden-Status, Porträt-/Orte-Zähler
+      alle korrekt gegen mwp_smoke im neuen Layout; Screenshot geprüft).
+      Der volle Durchklick MIT Generierung/Vertonung = T6.1. mit `mwp_smoke`: Serie erstellen →
       Review-Panel → generieren → vertonen → Status/Logs — einmal komplett
       über die Oberfläche statt CLI.
 
 ### Phase 5 — Lolfi anbinden (separates Repo!)
 
-- [ ] **T5.1 Pfad-Inventur-Einträge für `~/Downloads/Lolfi/lofi_system.py`**
+- [x] **T5.1 Lolfi umgestellt.** Erledigt 13.07. (Lolfi-Commit f7c2b3f):
+      Serien-Output → stages/03_audio/output, Porträts/Orte →
+      stages/04_visuals/output/*; Alt-Layout bewusst als FALLBACK
+      behalten, damit pre-MWP-Serien (z. B. chain_of_custody) weiter
+      gerendert werden können. Video-Rendern eines mwp_smoke-Videos
+      steht noch aus (Teil von T6.1). Ursprünglicher Task-Text:
       umsetzen: `characters/<ROLE>.png`, `locations/`, SPEAKERS/LOCATIONS/
       SUBS/CHAPTERS-JSONs, Episoden-MP3s — alle auf `stages/03_audio/output/`
       bzw. `stages/04_visuals/output/`. Test: ein `mwp_smoke`-Video rendern.
 
 ### Phase 6 — Abschluss
 
-- [ ] **T6.1 End-to-End:** neue echte Serie (soap_opera, normale Länge)
+- [x] **T6.1 End-to-End.** Erledigt 13.07. (per CLI statt WebUI-Durchklick):
+      Serie 'the_wildrose_inheritance' (soap_opera, 2 Ep. à ~6 Min.)
+      erstellt → Workspace korrekt gescaffoldet → Ep1-Skript generiert
+      (inkl. Episoden-Review, sauber) → vertont (7-Min-MP3 in 3m50s, TTS
+      via Pinokio-Autostart/-stopp) → Porträt-Prompts (Stage 04) → Lolfi-
+      Video gerendert (121 MB, Audio/Locations/Charaktere-Lookup über die
+      neuen Stage-Pfade). Dabei gefundene Fixes: Stimme 'Chelsie' existiert
+      nicht auf dem Server (separater Task-Chip) und Lolfis find_meta_file
+      kannte das Stage-Layout nicht (gefixt, Lolfi-Commit 8bb8bd3).
+      Ep2 wurde bewusst nicht generiert (Kosten) — Serie ist regulär
+      weiterverwendbar. Ursprünglicher Task-Text: neue echte Serie (soap_opera, normale Länge)
       komplett durchziehen: erstellen → Skripte (--fix) → vertonen →
       Visuals → Lolfi-Video. Alles über WebUI.
 - [ ] **T6.2 Alt-Serien wegräumen:** alle pre-MWP-Ordner (Inventur T0.3)

@@ -1,0 +1,80 @@
+{
+  "lines": [
+    {
+      "speaker": "NARRATOR",
+      "text": "Two a.m. The ward. Eleven months into intern year."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "The code ran forty-three minutes. Reza knows this because he timed it — not to know anything useful by it, just to have a number to hold while his hands did what they were supposed to do."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "The patient did not make it. That part is already filed, already absorbed. The ward takes the outcome and continues."
+    },
+    {
+      "speaker": "am_adam",
+      "style": "flat, rote, bone-tired",
+      "text": "Time of death, 01:47."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "He said it without feeling it. He was not sure anymore whether that was worrying or simply what eleven months of this produced."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "The charting takes longer than the code. It always does. He sits at the nurses' station — the only one there, Chen still in bay two, the attending already gone — and opens the chart."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "His handwriting at 2 a.m. belongs to a different version of him. Smaller. The letters lean right. He knows this and writes anyway."
+    },
+    {
+      "speaker": "am_adam",
+      "style": "murmuring, barely voiced",
+      "text": "Okay. Start from arrival."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "He documents the sequence. Arrival time. Chief complaint. Initial vitals. He is thorough because Dr. Harte told him once, in the specific tone Dr. Harte uses for things that are also warnings, that thorough is the only protection you have."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "The bay had been loud. Four people working, two more in the corridor. Someone called the family, then pulled back when the picture changed, then called again. Reza had not been the one to call. He had been at the head of the bed with the bag valve mask — counting, squeezing, counting."
+    },
+    {
+      "speaker": "am_adam",
+      "style": "reading aloud to anchor himself, low",
+      "text": "Medications administered—"
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "He lists them from memory. That is what you do at 2 a.m. when the pharmacy log is two systems over and your body is allocating everything it has just to keep you vertical."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "He does not notice the entry three lines above his own. Someone has already charted the medication sequence. The timestamps are slightly off. The dosage in that entry does not match what Reza watched happen in the bay."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "He does not notice because he is exhausted. Because the chart is long. Because the code ran forty-three minutes and he has been awake nineteen hours and there are three more patients on his list and one of them is deteriorating and the ward goes on."
+    },
+    {
+      "speaker": "am_adam",
+      "style": "barely audible, addressed to no one",
+      "text": "Okay."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "He signs the chart. His name, his title, the date. He closes it."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "He will not think about this chart again for two years. When he does, he will not remember the entry above his signature. He will only remember the code — the forty-three minutes, the counting, the way his arms ached from the compressions."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "The ward takes him back. He stands. He goes."
+    }
+  ]
+}

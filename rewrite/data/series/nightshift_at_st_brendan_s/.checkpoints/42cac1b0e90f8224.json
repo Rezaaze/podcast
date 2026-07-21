@@ -1,0 +1,95 @@
+{
+  "sections": [
+    {
+      "location": "er_floor",
+      "thread": "Maeve's Relapse Arc",
+      "title": "The Same Lights",
+      "what": "Morning shift begins. Maeve arrives looking steady. The ER runs as always — same lights, same noise, different weight underneath.",
+      "who": [
+        "Maeve",
+        "Theo",
+        "Dana"
+      ],
+      "word_budget": 450
+    },
+    {
+      "location": "break_room",
+      "thread": "Theo's Whistleblower Dilemma",
+      "title": "What the Break Room Knows",
+      "what": "Staff have heard fragments: a complaint, an investigation. No one says Harte's name aloud. Theo makes coffee and says nothing.",
+      "who": [
+        "Theo",
+        "Reza",
+        "Sister Agnes"
+      ],
+      "word_budget": 500
+    },
+    {
+      "location": "er_floor",
+      "thread": "Maeve's Relapse Arc",
+      "title": "Resuscitation",
+      "turning_point": "tp_07",
+      "what": "Cardiac resus. Maeve nearly gives a lethal drug combination. She catches it, adjusts, says nothing. Only she knows why her hands shook.",
+      "who": [
+        "Maeve",
+        "Reza",
+        "Theo"
+      ],
+      "word_budget": 700
+    },
+    {
+      "location": "admin_corridor",
+      "thread": "Reza's Second Chance",
+      "title": "A Quiet Resolution",
+      "turning_point": "tp_07",
+      "what": "The board-member attending finds Reza privately and offers to close probation quietly. Reza refuses — he wants it on the record.",
+      "who": [
+        "Reza"
+      ],
+      "word_budget": 600
+    },
+    {
+      "location": "break_room",
+      "thread": "Theo's Whistleblower Dilemma",
+      "title": "Theo's Vindication, Which Feels Like Nothing",
+      "what": "HR confirms formal investigation. Theo expected relief. Instead he feels the weight of what comes next and who gets caught in it.",
+      "who": [
+        "Theo",
+        "Sister Agnes"
+      ],
+      "word_budget": 500
+    },
+    {
+      "location": "chapel",
+      "thread": "Maeve's Relapse Arc",
+      "title": "The Chapel, After",
+      "what": "Sister Agnes finds Maeve sitting alone. No confession — two women with what they know. Agnes says one sentence. Maeve doesn't answer.",
+      "who": [
+        "Maeve",
+        "Sister Agnes"
+      ],
+      "word_budget": 500
+    },
+    {
+      "location": "admin_corridor",
+      "thread": "Harte's Bed-Cut Conspiracy",
+      "title": "What Collapses Quietly",
+      "what": "Word filters through: the acquisition is off. Harte takes a call. The corridor outside his office goes quiet. No announcement, no drama.",
+      "who": [
+        "Clive Harte"
+      ],
+      "word_budget": 450
+    },
+    {
+      "location": "ambulance_bay",
+      "thread": "Maeve–Dana History",
+      "title": "Two Coffees",
+      "what": "Dana brings two coffees to the ambulance bay. Maeve is already there. They sit in the cold. Neither explains why.",
+      "who": [
+        "Dana",
+        "Maeve"
+      ],
+      "word_budget": 500
+    }
+  ]
+}

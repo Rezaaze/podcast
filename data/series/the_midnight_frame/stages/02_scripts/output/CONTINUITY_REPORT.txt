@@ -1,0 +1,14 @@
+Kontinuitäts-Report (deterministisch, fabrik/writing/continuity.py)
+Episoden ausgewertet: 1, 2, 3, 4, 5, 6, 7, 8
+
+1. Ortsnamen, die der Kanon nicht kennt
+   Kanon-Orte: Feng's Photo & Curio Shop, Hae's House, Noah's Apartment, The City Morgue, The Herald Newsroom, The Precinct Bullpen, The Tidewater Diner, The Wu Family Restaurant
+   !! "Harbor City Precinct" — Episode 3, 6
+   !! "Harbor City Herald" — Episode 6
+
+2. Ortstyp weicht vom Kanon ab (gleicher Besitzer)
+   !! Hae: Kanon "house", Prosa "apartment" — Episode 3, 4
+
+3. Zeitangaben, die dem Kanon widersprechen
+   !! Episode 8, "panopticon": Prosa "Six weeks" (6 Wochen), Kanon "fifteen years" / "six years" / "four months" / "24 hours" / "ten years" / "six months"
+      …he server rack fills the silence between them, the only sound left once the shouting stops. The basement door hangs open behind them, the server rack still humming. Zhao has stopped reaching for the p…

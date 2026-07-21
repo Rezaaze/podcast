@@ -1,0 +1,11 @@
+Kontinuitäts-Report (deterministisch, fabrik/writing/continuity.py)
+Episoden ausgewertet: 1, 2
+
+1. Ortsnamen, die der Kanon nicht kennt
+   Keine.
+
+2. Ortstyp weicht vom Kanon ab (gleicher Besitzer)
+   Keine.
+
+3. Zeitangaben, die dem Kanon widersprechen
+   Keine.

@@ -1,0 +1,34 @@
+{
+  "episodes": [
+    {
+      "figure": "Viktor Seyn",
+      "theme": "Das Gewicht eines Schweigens, das drei Jahrzehnte lang als Schutz getarnt war"
+    },
+    {
+      "figure": "Mara Voss",
+      "theme": "Wer die Wahrheit aufdeckt, trägt danach mit, was darunter lag"
+    }
+  ],
+  "turning_points": [
+    {
+      "description": "Mara entdeckt beim Ausmessen der Kellerwand nicht nur Risse, sondern einen gemauerten Durchgang — und bemerkt, dass Viktor bei ihrem Bericht auffällig bleich wird und das Thema abwürgt.",
+      "episode": 1,
+      "id": "tp1"
+    },
+    {
+      "description": "Jonas konfrontiert Elise direkt im Leuchtturm: Er hat ihren Sendebetrieb dokumentiert und gibt ihr 24 Stunden, bevor er veröffentlicht — sofern sie ihn nicht weiter mit Informationen versorgt.",
+      "episode": 1,
+      "id": "tp2"
+    },
+    {
+      "description": "Mara bricht beim Freilegen einer Rohrleitung versehentlich die vermauerte Wand auf und findet die Überreste des Leuchtturmwärters. Viktor, der zufällig anwesend ist, bricht zusammen und gesteht.",
+      "episode": 2,
+      "id": "tp3"
+    },
+    {
+      "description": "Elises Panikaktion — sie versucht den Sender abzubauen, bevor Mara weiter vordringt — bringt Jonas dazu, seine Druckmittel zu nutzen; dabei werden beide Geheimnisse gleichzeitig vor dem versammelten Dorf sichtbar.",
+      "episode": 2,
+      "id": "tp4"
+    }
+  ]
+}

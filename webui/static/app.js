@@ -80,19 +80,30 @@
     }
   }
 
-  // ---------- Tabs ----------
-  document.querySelectorAll(".tab-btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-      document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
-      document.querySelectorAll(".tab-panel").forEach(p => p.classList.remove("active"));
-      btn.classList.add("active");
-      document.getElementById("tab-" + btn.dataset.tab).classList.add("active");
-    });
-  });
-
   // ---------- Status polling ----------
   function stateLabel(state) {
-    return { ready: "fertig", partial: "teilweise", running: "läuft", missing: "offen" }[state] || state;
+    return { ready: "fertig", partial: "teilweise", running: "läuft", missing: "offen", none: "–" }[state] || state;
+  }
+
+  // ---------- Pro-Episode-Übersicht: alle Dimensionen an einem Ort ----------
+  // Vorher standen Skript/Audio in der Episode-Karte, Thumbnails/Highlights/SFX
+  // (falls überhaupt sichtbar) verstreut in eigenen Serien-weiten Aggregat-
+  // Karten — "was fehlt noch zu Folge N" ließ sich nicht auf einen Blick
+  // beantworten. Jetzt: EINE Karte pro Episode mit allen Dimensionen, deren
+  // Randfarbe den schlechtesten Einzelzustand zeigt.
+  const EP_STATE_RANK = { missing: 0, partial: 1, running: 2, ready: 3, none: 3 };
+  function worstEpState(states) {
+    const relevant = states.filter(s => s && s !== "none");
+    if (relevant.some(s => s === "running")) return "running";
+    if (!relevant.length) return "missing";
+    return relevant.reduce((worst, s) => EP_STATE_RANK[s] < EP_STATE_RANK[worst] ? s : worst);
+  }
+  function episodeDetailLine(ep, isDrama) {
+    const parts = [`Skript ${stateLabel(ep.script_state)}`, `Audio ${stateLabel(ep.audio_state)}`,
+                   `Thumb ${stateLabel(ep.thumbnail_state)}`];
+    if (ep.highlights_state !== "none") parts.push(`Highlights ${stateLabel(ep.highlights_state)}`);
+    if (isDrama && ep.sfx_state && ep.sfx_state !== "none") parts.push(`SFX ${stateLabel(ep.sfx_state)}`);
+    return parts.join(" · ");
   }
 
   function card(label, value, state) {
@@ -134,19 +145,6 @@
     ];
   }
 
-  function lolfiStepStates(s) {
-    const sceneDone = !!s.current_scene_title;
-    const promptsDone = s.latest_prompt_state === "ready";
-    const assetsDone = s.video_baseline_ready && s.music_ready;
-    const renderDone = s.render_state === "ready";
-    return [
-      sceneDone ? "done" : "current",
-      !sceneDone ? "upcoming" : (promptsDone ? "done" : "current"),
-      !sceneDone || !promptsDone ? "upcoming" : (assetsDone ? "done" : "current"),
-      !sceneDone || !promptsDone || !assetsDone ? "upcoming" : (renderDone ? "done" : "current"),
-    ];
-  }
-
   // ---------- Serien-Umschalter ----------
   // Die Auswahl ist die einzige Quelle der Wahrheit für "welche Serie"
   // während dieser Session: sie wird an /api/status/pf (?series=) UND an
@@ -156,7 +154,14 @@
   const seriesSelect = document.getElementById("pf-series-select");
   const mergeAnthologyCheckbox = document.getElementById("pf-merge-anthology");
   const useBeatsCheckbox = document.getElementById("pf-use-beats");
+  const introFileInput = document.getElementById("pf-intro-file");
+  const introCurrentLabel = document.getElementById("pf-intro-current");
+  const introUploadBtn = document.getElementById("pf-intro-upload-btn");
+  const introRemoveBtn = document.getElementById("pf-intro-remove-btn");
   let seriesList = [];
+  // WEBUI_SERIES: ist diese Instanz an eine Serie genagelt, ist der Umschalter
+  // fix auf sie gesetzt und gesperrt (jedes Cockpit = ein stabiles Fenster).
+  let pinnedSeries = null;
 
   function currentSeriesSlug() {
     return seriesSelect.value || null;
@@ -167,14 +172,21 @@
     const data = await res.json();
     const list = data.series || [];
     seriesList = list;
-    const want = preferSlug || seriesSelect.value || data.active || (list[0] && list[0].slug);
+    pinnedSeries = (data.pinned && list.some(s => s.slug === data.pinned)) ? data.pinned : null;
+    const want = pinnedSeries || preferSlug || seriesSelect.value || data.active || (list[0] && list[0].slug);
     seriesSelect.innerHTML = list.length
       ? list.map(s => `<option value="${s.slug}">${s.title} (${s.slug}) — ${s.template}</option>`).join("")
       : `<option value="">(keine Serie vorhanden)</option>`;
     if (want && list.some(s => s.slug === want)) seriesSelect.value = want;
+    if (pinnedSeries) {
+      seriesSelect.value = pinnedSeries;
+      seriesSelect.disabled = true;
+      seriesSelect.title = `Auf ${pinnedSeries} genagelt (WEBUI_SERIES)`;
+    }
     updateSeriesSelectTitle();
     updateMergeAnthologyCheckbox();
     updateUseBeatsCheckbox();
+    updateIntroAsset();
   }
 
   function updateMergeAnthologyCheckbox() {
@@ -187,6 +199,50 @@
     if (!useBeatsCheckbox) return;
     const s = seriesList.find(s => s.slug === seriesSelect.value);
     useBeatsCheckbox.checked = s ? !!s.use_beats : false;
+  }
+
+  async function updateIntroAsset() {
+    if (!introCurrentLabel) return;
+    const slug = currentSeriesSlug();
+    if (!slug) {
+      introCurrentLabel.textContent = "";
+      if (introRemoveBtn) introRemoveBtn.disabled = true;
+      return;
+    }
+    const res = await fetch(`/api/pf/series/assets?series=${encodeURIComponent(slug)}`);
+    const data = await res.json().catch(() => ({}));
+    const name = data.assets && data.assets.intro;
+    introCurrentLabel.textContent = name ? `aktuell: ${name}` : "kein Intro gesetzt";
+    if (introRemoveBtn) introRemoveBtn.disabled = !name;
+  }
+
+  if (introUploadBtn) {
+    introUploadBtn.addEventListener("click", async () => {
+      const slug = currentSeriesSlug();
+      const file = introFileInput.files[0];
+      if (!slug || !file) return;
+      const form = new FormData();
+      form.append("slug", slug);
+      form.append("stem", "intro");
+      form.append("file", file);
+      const res = await fetch("/api/pf/series/asset", { method: "POST", body: form });
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({}));
+        alert(err.error || "Upload fehlgeschlagen");
+        return;
+      }
+      introFileInput.value = "";
+      await updateIntroAsset();
+    });
+  }
+
+  if (introRemoveBtn) {
+    introRemoveBtn.addEventListener("click", async () => {
+      const slug = currentSeriesSlug();
+      if (!slug) return;
+      await fetch(`/api/pf/series/asset?slug=${encodeURIComponent(slug)}&stem=intro`, { method: "DELETE" });
+      await updateIntroAsset();
+    });
   }
 
   function updateSeriesSelectTitle() {
@@ -210,10 +266,28 @@
   const reviewPanel = document.getElementById("pf-series-review");
   const reviewContent = document.getElementById("pf-series-review-content");
   let reviewSlug = null;
+  // Aktive Serie VOR dem "Serie erstellen"-Lauf — "Verwerfen" stellt sie
+  // wieder her, statt LATEST der mtime-Heuristik des Servers zu überlassen.
+  let preCreateSlug = null;
 
-  async function showSeriesReview() {
-    const data = await (await fetch("/api/pf/series")).json();
-    const slug = data.active;
+  // Das Orte-Feld wirkt nur bei Templates, deren Creator-Prompt
+  // {{LOCATION_COUNT}} kennt (data-locations aus config.list_templates())
+  // — bei allen anderen ausblenden.
+  const templateSelect = document.getElementById("pf-template");
+  const locationsLabel = document.getElementById("pf-locations-label");
+  function syncLocationsVisibility() {
+    const opt = templateSelect && templateSelect.options[templateSelect.selectedIndex];
+    if (locationsLabel) locationsLabel.hidden = !(opt && opt.dataset.locations === "1");
+  }
+  if (templateSelect) {
+    templateSelect.addEventListener("change", syncLocationsVisibility);
+    syncLocationsVisibility();
+  }
+
+  async function showSeriesReview(preferSlug) {
+    // preferSlug = der von create_series.py durchgereichte Slug DIESES Laufs;
+    // Fallback auf active (Ein-Cockpit-Betrieb, wo LATEST verlässlich ist).
+    const slug = preferSlug || (await (await fetch("/api/pf/series")).json()).active;
     if (!slug) return;
     reviewSlug = slug;
     // Dropdown auf die frische Serie stellen, damit Status/Folgeschritte sie zeigen.
@@ -222,6 +296,7 @@
       updateSeriesSelectTitle();
       updateMergeAnthologyCheckbox();
       updateUseBeatsCheckbox();
+      updateIntroAsset();
     }
     const s = await (await fetch(`/api/status/pf?series=${encodeURIComponent(slug)}`)).json();
     const lines = [
@@ -255,7 +330,14 @@
     reviewPanel.hidden = true;
     reviewSlug = null;
     seriesSelect.value = "";
-    await loadSeriesList();
+    // Zur vorher aktiven Serie zurück (falls sie noch existiert) und das
+    // auch nach series/LATEST durchschreiben — der Server hat LATEST beim
+    // Discard nur heuristisch (mtime) repointet.
+    await loadSeriesList(preCreateSlug || undefined);
+    if (preCreateSlug && seriesSelect.value === preCreateSlug) {
+      await setActiveSeries(preCreateSlug);
+    }
+    preCreateSlug = null;
     refreshStatus();
   });
 
@@ -263,10 +345,15 @@
     updateSeriesSelectTitle();
     updateMergeAnthologyCheckbox();
     updateUseBeatsCheckbox();
+    updateIntroAsset();
     // Geladene Porträt-Prompts gehören zur vorherigen Serie — leeren.
     document.getElementById("pf-character-blocks").innerHTML = "";
     await setActiveSeries(seriesSelect.value);
     refreshPfStatus().catch(console.error);
+    // Button-Sperren sind serienabhängig (siehe syncRunningJobs) — beim
+    // Serienwechsel sofort neu bewerten, statt bis zu 4s auf den nächsten
+    // Poll-Tick zu warten.
+    syncRunningJobs().catch(console.error);
   });
 
   if (mergeAnthologyCheckbox) {
@@ -305,10 +392,17 @@
     let html = "";
     html += card("Serie", s.series_title ? `${s.series_title} · ${s.template || s.mode}` : "—", s.series_title ? "ready" : "missing");
     html += card("Episoden", s.episode_count, s.episode_count ? "ready" : "missing");
+    const isDramaSeries = s.mode === "drama";
     (s.episodes || []).forEach(ep => {
-      html += card(`Ep. ${ep.index}: ${ep.figure}`, `Skript ${stateLabel(ep.script_state)} · Audio ${stateLabel(ep.audio_state)}`,
-        ep.audio_state === "running" ? "running" : (ep.script_state === "ready" && ep.audio_state === "ready" ? "ready" : "partial"));
+      const states = [ep.script_state, ep.audio_state, ep.thumbnail_state, ep.highlights_state];
+      if (isDramaSeries) states.push(ep.sfx_state);
+      html += card(`Ep. ${ep.index}: ${ep.figure}`, episodeDetailLine(ep, isDramaSeries), worstEpState(states));
     });
+    const failedEps = s.failed_episodes || [];
+    if (failedEps.length) {
+      html += card("⚠ Vertonung endgültig fehlgeschlagen",
+        `${failedEps.join(", ")} — TTS-Server/Log prüfen, dann Vertonung neu starten`, "error");
+    }
     html += card("Anthologie", stateLabel(s.anthology_state), s.anthology_state);
     html += card("Cover", s.cover_exists ? "vorhanden" : "offen", s.cover_exists ? "ready" : "missing");
     const chars = s.characters || {};
@@ -320,6 +414,17 @@
     if (locs.keys) {
       html += card("Szenen-Orte", `${locs.images}/${locs.keys} Bilder`,
         locs.images >= locs.keys ? "ready" : (locs.images || locs.prompts_ready ? "partial" : "missing"));
+    }
+    // Thumbnails/Highlights stehen jetzt im Detail jeder Episode-Karte oben
+    // (siehe episodeDetailLine) — keine eigene Aggregat-Karte mehr nötig, das
+    // war vorher die einzige Stelle, an der man Thumbnail-Fortschritt sah,
+    // ohne zu wissen, WELCHE Episode konkret fehlt.
+    const sfx = s.sfx;
+    if (sfx && sfx.plan_exists) {
+      html += card("Sounddesign", `${sfx.episodes_ready}/${sfx.episodes_with_cues} Episode(n) mit SFX fertig`,
+        sfx.episodes_ready >= sfx.episodes_with_cues ? "ready" : (sfx.episodes_ready ? "partial" : "missing"));
+    } else if (isDramaSeries) {
+      html += card("Sounddesign", "kein SFX-Plan — 'sfx_plan' ausführen", "missing");
     }
     html += card("Archiv", `${s.archive_count} Serie(n)`, s.archive_count ? "ready" : "missing");
     container.innerHTML = html;
@@ -415,43 +520,6 @@
     loadLocationPrompts().catch(console.error);
   });
 
-  async function refreshLolfiStatus() {
-    const res = await fetch("/api/status/lolfi");
-    const s = await res.json();
-    const container = document.getElementById("lolfi-status-cards");
-    let html = "";
-    html += card("Szenen", s.scene_count, s.scene_count ? "ready" : "missing");
-    html += card("Aktuelle Szene", s.current_scene_title || "—", s.current_scene_title ? "ready" : "missing");
-    html += card("Prompt-Set", s.latest_prompt_file ? stateLabel(s.latest_prompt_state) : "offen", s.latest_prompt_state);
-    html += card("Loop-Clip", s.video_baseline_ready ? "vorhanden" : "fehlt", s.video_baseline_ready ? "ready" : "missing");
-    html += card("Musik", s.music_ready ? "vorhanden" : "fehlt", s.music_ready ? "ready" : "missing");
-    html += card("SFX", (s.sfx_baseline_ready || s.sfx_variations_ready) ? "vorhanden" : "fehlt", (s.sfx_baseline_ready || s.sfx_variations_ready) ? "ready" : "missing");
-    html += card("Renders", (s.renders || []).length, s.render_state);
-    container.innerHTML = html;
-
-    document.getElementById("lolfi-scene-text").textContent = s.current_scene_text || "(keine Szene vorhanden)";
-
-    const list = document.getElementById("lolfi-renders-list");
-    list.innerHTML = (s.renders || []).map(r =>
-      `<li>${r.name} — ${r.size_mb} MB</li>`
-    ).join("") || "<li>(noch keine Renders)</li>";
-
-    const episodeSelect = document.getElementById("lolfi-episode-select");
-    if (episodeSelect) {
-      const files = s.podcast_episode_files || [];
-      const previous = episodeSelect.value;
-      const optionsHtml = ['<option value="">Automatisch (Anthologie bevorzugt)</option>']
-        .concat(files.map(f => `<option value="${f}">${f}</option>`))
-        .join("");
-      if (optionsHtml !== episodeSelect.dataset.rendered) {
-        episodeSelect.innerHTML = optionsHtml;
-        episodeSelect.dataset.rendered = optionsHtml;
-        if (files.includes(previous)) episodeSelect.value = previous;
-      }
-    }
-    applyStepStates("lolfi", lolfiStepStates(s));
-  }
-
   async function refreshTtsStatus() {
     const res = await fetch("/api/status/tts");
     const s = await res.json();
@@ -464,7 +532,6 @@
 
   function refreshStatus() {
     refreshPfStatus().catch(console.error);
-    refreshLolfiStatus().catch(console.error);
     refreshTtsStatus().catch(console.error);
   }
   loadSeriesList().then(refreshStatus).catch(() => refreshStatus());
@@ -474,7 +541,7 @@
   // pf_create_series legt eine NEUE Serie an und braucht daher keine
   // Serien-Auswahl; jedes andere pf_*-Kommando wirkt auf die gerade
   // ausgewählte Serie und bekommt sie automatisch als 'series'-Param mit.
-  const PF_SERIES_SCOPED_EXCLUDE = new Set(["pf_create_series", "pf_import_story"]);
+  const PF_SERIES_SCOPED_EXCLUDE = new Set(["pf_create_series", "pf_import_story", "pf_cloud_rent"]);
 
   function collectParams(btn) {
     const params = {};
@@ -508,6 +575,12 @@
     // "Episode 2/5" aus batch.py-Zeilen — wird mit dem Chunk-Fortschritt
     // des Checkpoint-Pollings zu einer Anzeige kombiniert.
     let episodePhase = "";
+    // Von create_series.py durchgereichter Slug DIESES Laufs (Marker-Zeile) —
+    // bei parallelen Cockpits die einzige verlässliche Quelle, welche Serie
+    // gerade angelegt wurde (der globale LATEST wäre von einer Schwester-
+    // Instanz überschrieben). Bei SSE-Reconnect wird der Puffer neu gestreamt,
+    // die Marker-Zeile also erneut gesehen — reine Zuweisung, idempotent.
+    let createdSlug = null;
 
     const es = new EventSource(`/api/stream/${jobId}`);
     currentEventSource = es;
@@ -519,6 +592,8 @@
     };
     es.addEventListener("log", (ev) => {
       const payload = JSON.parse(ev.data);
+      const m = /^PF_CREATED_SERIES=(\S+)$/.exec(payload.line.trim());
+      if (m) createdSlug = m[1];
       logOutput.textContent += payload.line + "\n";
       logOutput.scrollTop = logOutput.scrollHeight;
     });
@@ -546,20 +621,26 @@
       if (btn) btn.disabled = false;
       playChime(payload.returncode === 0);
       if (payload.returncode === 0 && (commandId === "pf_create_series" || commandId === "pf_import_story")) {
-        // Beide legen series/<slug>/ neu an und setzen series/LATEST selbst
-        // — Dropdown neu laden und die frische Serie übernehmen.
-        loadSeriesList().then(() => {
+        // Beide legen series/<slug>/ neu an. Statt den globalen LATEST
+        // zurückzulesen (bei parallelen Cockpits von einer Schwester-Instanz
+        // überschrieben) die frische Serie am durchgereichten Slug festmachen
+        // und als aktive Serie DIESER Instanz übernehmen (setActiveSeries
+        // schreibt im isolierten Betrieb nur den Prozess-Speicher).
+        loadSeriesList(createdSlug || undefined).then(async () => {
+          if (createdSlug) await setActiveSeries(createdSlug);
           refreshStatus();
-          if (commandId === "pf_create_series") showSeriesReview().catch(console.error);
+          if (commandId === "pf_create_series") showSeriesReview(createdSlug).catch(console.error);
         }).catch(console.error);
       } else {
         refreshStatus();
       }
-      if (payload.returncode === 0 && commandId === "lolfi_generate_prompts") {
-        loadLolfiPromptSet().catch(console.error);
-      }
       if (payload.returncode === 0 && commandId === "pf_character_prompts") {
         loadCharacterPrompts().catch(console.error);
+      }
+      if (commandId === "pf_cloud_rent") {
+        // Auch bei Fehlschlag neu laden — eine halb eingerichtete Instanz
+        // taucht trotzdem in der vastai-Liste auf und soll sichtbar sein.
+        loadCloudPool().catch(console.error);
       }
     });
     es.onerror = () => {
@@ -617,27 +698,176 @@
     } catch {
       return;
     }
-    const running = Object.entries(snap)
-      .filter(([, job]) => job.state === "running")
-      .sort((a, b) => b[1].started_at - a[1].started_at);
-    const runningIds = new Set(running.map(([cid]) => cid));
+    // snap ist nach runner.py::_lock_key() geschlüsselt: TTS-gebundene
+    // Kommandos (globaler Lock, geteilter lokaler TTS-Prozess) haben den
+    // Schlüssel == command_id; alle anderen pf_*-Kommandos "<command_id>::
+    // <series>" — mehrere Serien können also gleichzeitig unter demselben
+    // command_id laufen. Ein Button wird nur dann gesperrt, wenn der Job
+    // global ist (kein "::" im Schlüssel) ODER seine Serie mit der gerade
+    // ausgewählten übereinstimmt.
+    const currentSeries = currentSeriesSlug();
+    const running = Object.entries(snap).filter(([, job]) => job.state === "running");
     document.querySelectorAll(".run-btn").forEach(b => {
-      b.disabled = runningIds.has(b.dataset.command);
+      const cid = b.dataset.command;
+      b.disabled = running.some(([key, job]) =>
+        job.command_id === cid && (!key.includes("::") || job.series === currentSeries));
     });
-    if (reattach && running.length && !currentJobId) {
-      const [cid, job] = running[0];
-      const btn = document.querySelector(`.run-btn[data-command="${cid}"]`);
-      attachStream(job.job_id, cid, btn);
+    const sorted = running.slice().sort((a, b) => b[1].started_at - a[1].started_at);
+    if (reattach && sorted.length && !currentJobId) {
+      const [, job] = sorted[0];
+      const btn = document.querySelector(`.run-btn[data-command="${job.command_id}"]`);
+      attachStream(job.job_id, job.command_id, btn);
       setLogOpen(true);
     }
   }
   syncRunningJobs({ reattach: true }).catch(console.error);
   setInterval(() => syncRunningJobs().catch(console.error), 4000);
 
+  // ---------- Vertonungs-Ziel Lokal/Cloud ----------
+  // Bei "cloud" werden die beiden Vertonen-Buttons auf pf_render_remote
+  // (cloud/render_remote.sh) umgeschrieben: pf_batch -> ganze Serie remote,
+  // pf_podcast_maker -> --only <datei>. Alles andere bleibt unberührt;
+  // pf_render_remote startet KEIN lokales TTS (nicht in AUTO_TTS_COMMANDS).
+  const renderTarget = document.getElementById("pf-render-target");
+  const cloudStopAfterLabel = document.getElementById("pf-cloud-stop-after-label");
+  const cloudLocalMasterLabel = document.getElementById("pf-cloud-local-master-label");
+  const cloudHint = document.getElementById("pf-cloud-hint");
+
+  function syncRenderTargetUI() {
+    const cloud = renderTarget && renderTarget.value === "cloud";
+    if (cloudStopAfterLabel) cloudStopAfterLabel.hidden = !cloud;
+    if (cloudLocalMasterLabel) cloudLocalMasterLabel.hidden = !cloud;
+    if (cloudHint) cloudHint.hidden = !cloud;
+  }
+  if (renderTarget) {
+    renderTarget.value = localStorage.getItem("pfRenderTarget") || "local";
+    renderTarget.addEventListener("change", () => {
+      localStorage.setItem("pfRenderTarget", renderTarget.value);
+      syncRenderTargetUI();
+    });
+    syncRenderTargetUI();
+  }
+
+  // ---------- Cloud-Server-Pool (Scouting) ----------
+  // Liste = Live-Instanzen (vastai) + gelerntes Maschinen-Urteil aus
+  // cloud/.machine_stats.json. ★/✗ posten nach /api/cloud/machine; die
+  // Urteile fließen über machine_stats.py in jede künftige Offer-Suche ein.
+  const cloudPool = document.getElementById("pf-cloud-pool");
+
+  async function cloudMachineAction(machineId, action, instanceId) {
+    const body = { machine_id: machineId, action };
+    if (instanceId) body.instance_id = instanceId;
+    const res = await fetch("/api/cloud/machine", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+    });
+    const data = await res.json();
+    if (!res.ok) alert(data.error || "Aktion fehlgeschlagen");
+    else if (data.destroy_error) alert("Maschine vermerkt, aber Instanz-Löschen schlug fehl: " + data.destroy_error);
+    await loadCloudPool();
+  }
+
+  function cloudJudgement(m) {
+    if (!m) return "–";
+    if (m.favorite) return "★ Favorit" + (m.manual ? "" : " (auto)");
+    if (m.avoid) return "✗ verworfen";
+    if (m.blacklisted) return "✗ blacklisted (temporär)";
+    return "–";
+  }
+
+  async function loadCloudPool() {
+    if (!cloudPool) return;
+    let data;
+    try {
+      data = await (await fetch("/api/cloud/instances")).json();
+    } catch {
+      cloudPool.innerHTML = '<p class="hint">Server-Liste nicht erreichbar.</p>';
+      return;
+    }
+    const machines = data.machines || {};
+    const rows = [];
+    const liveMachineIds = new Set();
+    for (const inst of data.instances || []) {
+      liveMachineIds.add(String(inst.machine_id));
+      const m = machines[String(inst.machine_id)];
+      const fav = m && m.favorite;
+      rows.push(`<tr>
+        <td>Instanz ${inst.instance_id}</td>
+        <td>Maschine ${inst.machine_id}</td>
+        <td>${inst.gpu_name || "?"} · ${inst.geolocation || "?"} · $${(inst.dph_total || 0).toFixed(3)}/h</td>
+        <td>${inst.status || "?"}</td>
+        <td>${cloudJudgement(m)}</td>
+        <td>
+          <button class="cloud-fav-btn" data-machine="${inst.machine_id}" data-fav="${fav ? 1 : 0}">${fav ? "☆ Favorit entfernen" : "★ Favorit"}</button>
+          <button class="cloud-reject-btn" data-machine="${inst.machine_id}" data-instance="${inst.instance_id}">✗ Verwerfen</button>
+        </td>
+      </tr>`);
+    }
+    // Gelernte Maschinen ohne Live-Instanz (der eigentliche "Pool"):
+    for (const [mid, m] of Object.entries(machines)) {
+      if (liveMachineIds.has(mid)) continue;
+      // Manuell beurteilte bleiben immer sichtbar — sonst verschwindet eine
+      // Maschine nach "Favorit entfernen" aus der Liste und das Urteil wäre
+      // im WebUI nicht mehr umkehrbar.
+      if (!m.favorite && !m.avoid && !m.blacklisted && !m.manual) continue;
+      rows.push(`<tr>
+        <td>–</td>
+        <td>Maschine ${mid}</td>
+        <td></td>
+        <td></td>
+        <td>${cloudJudgement(m)}</td>
+        <td>${m.favorite
+          ? `<button class="cloud-fav-btn" data-machine="${mid}" data-fav="1">☆ Favorit entfernen</button>`
+          : `<button class="cloud-fav-btn" data-machine="${mid}" data-fav="0">★ Favorit</button>`}</td>
+      </tr>`);
+    }
+    const errorLine = data.error ? `<p class="hint">⚠ ${data.error}</p>` : "";
+    cloudPool.innerHTML = errorLine + (rows.length
+      ? `<table class="cloud-pool-table"><tbody>${rows.join("")}</tbody></table>`
+      : '<p class="hint">Keine Instanzen und noch keine beurteilten Maschinen.</p>');
+
+    cloudPool.querySelectorAll(".cloud-fav-btn").forEach(b => {
+      b.addEventListener("click", () =>
+        cloudMachineAction(Number(b.dataset.machine), b.dataset.fav === "1" ? "unfavorite" : "favorite"));
+    });
+    cloudPool.querySelectorAll(".cloud-reject-btn").forEach(b => {
+      b.addEventListener("click", () => {
+        if (!confirm(`Maschine ${b.dataset.machine} dauerhaft meiden und Instanz ${b.dataset.instance} LÖSCHEN?`)) return;
+        cloudMachineAction(Number(b.dataset.machine), "reject", Number(b.dataset.instance));
+      });
+    });
+  }
+
+  const cloudPoolRefresh = document.getElementById("pf-cloud-pool-refresh");
+  if (cloudPoolRefresh) cloudPoolRefresh.addEventListener("click", () => loadCloudPool());
+  loadCloudPool().catch(console.error);
+
+  function maybeCloudRewrite(commandId, params) {
+    if (!renderTarget || renderTarget.value !== "cloud") return [commandId, params];
+    if (commandId !== "pf_batch" && commandId !== "pf_podcast_maker") return [commandId, params];
+    const mapped = { series: params.series };
+    if (commandId === "pf_podcast_maker") {
+      if (!params.input_file) {
+        alert("Bitte zuerst die Skript-Datei (z.B. ep1.txt) eintragen.");
+        return [null, null];
+      }
+      mapped.only = params.input_file;
+    }
+    const stopAfter = document.getElementById("pf-cloud-stop-after");
+    if (stopAfter && stopAfter.checked) mapped.stop_after = true;
+    const localMaster = document.getElementById("pf-cloud-local-master");
+    if (localMaster && localMaster.checked) mapped.local_master = true;
+    return ["pf_render_remote", mapped];
+  }
+
   document.querySelectorAll(".run-btn").forEach(btn => {
     btn.addEventListener("click", () => {
       ensureAudioContext();
-      runCommand(btn.dataset.command, collectParams(btn), btn);
+      const [commandId, params] = maybeCloudRewrite(btn.dataset.command, collectParams(btn));
+      if (!commandId) return;
+      if (commandId === "pf_create_series") preCreateSlug = currentSeriesSlug();
+      runCommand(commandId, params, btn);
     });
   });
 
@@ -666,8 +896,9 @@
     const episodes = document.getElementById("pf-episodes").value || 3;
     const template = document.getElementById("pf-template").value;
     const minutes = document.getElementById("pf-minutes").value || 35;
+    const locations = document.getElementById("pf-locations").value;
     if (!topic.trim()) { alert("Bitte zuerst ein Thema eintragen."); return; }
-    const res = await fetch(`/api/blocks/pf/series-prompt?topic=${encodeURIComponent(topic)}&episodes=${episodes}&template=${encodeURIComponent(template)}&minutes=${minutes}`);
+    const res = await fetch(`/api/blocks/pf/series-prompt?topic=${encodeURIComponent(topic)}&episodes=${episodes}&template=${encodeURIComponent(template)}&minutes=${minutes}&locations=${encodeURIComponent(locations)}`);
     const data = await res.json();
     document.getElementById("pf-series-block").textContent = data.block || data.error || "";
   });
@@ -679,15 +910,4 @@
     document.getElementById("pf-upload-index-block").textContent = data.upload_index || "(noch nicht vorhanden)";
   });
 
-  async function loadLolfiPromptSet() {
-    const res = await fetch("/api/blocks/lolfi/prompt-set");
-    const data = await res.json();
-    document.getElementById("lolfi-prompt-source").textContent = data.source_file
-      ? `Quelle: ${data.source_file}` : "(noch kein Prompt-Set vorhanden)";
-    document.getElementById("lolfi-image-prompt").textContent = data.image_prompt || "";
-    document.getElementById("lolfi-image-negative").textContent = data.image_negative_prompt || "";
-    document.getElementById("lolfi-suno-prompt").textContent = data.suno_prompt || "";
-  }
-
-  document.getElementById("lolfi-prompt-load-btn").addEventListener("click", loadLolfiPromptSet);
 })();

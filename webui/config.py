@@ -1,4 +1,4 @@
-"""Pfade beider Projekte + feste Kommando-Whitelist für runner.py.
+"""Pfade + feste Kommando-Whitelist für runner.py.
 
 Der Browser sendet nur einen command_id-String + Parameter — nie Pfade,
 Interpreter oder Rohbefehle. Diese Datei ist die einzige Quelle dafür, was
@@ -10,7 +10,23 @@ import sys
 
 WEBUI_DIR = os.path.dirname(os.path.abspath(__file__))
 PF_DIR = os.path.dirname(WEBUI_DIR)
-LOLFI_DIR = os.path.join(os.path.expanduser("~"), "Downloads", "Lolfi")
+
+# Das Serien-Layout (MWP-Workspace: stages/NN_*/output/) lebt in
+# fabrik/core/paths.py — stdlib-only, daher auch aus dem WebUI-venv
+# importierbar. Die Relativpfade hier sind die EINZIGE Layout-Kenntnis
+# des WebUI; nie wieder Ordnernamen hart verdrahten.
+sys.path.insert(0, PF_DIR)
+from fabrik.core import paths as pf_paths  # noqa: E402
+
+EPISODES_RELPATH = pf_paths.EPISODES_RELPATH
+SCRIPTS_RELPATH = os.path.join(pf_paths.STAGE_SCRIPTS, "output")
+OUTPUT_RELPATH = os.path.join(pf_paths.STAGE_AUDIO, "output")
+VISUALS_RELPATH = os.path.join(pf_paths.STAGE_VISUALS, "output")
+CHARACTERS_RELPATH = os.path.join(VISUALS_RELPATH, "characters")
+LOCATIONS_RELPATH = os.path.join(VISUALS_RELPATH, "locations")
+THUMBNAILS_RELPATH = os.path.join(VISUALS_RELPATH, "thumbnails")
+SFX_PLAN_RELPATH = os.path.join(SCRIPTS_RELPATH, "SFX_PLAN.json")
+SFX_ONESHOTS_RELPATH = os.path.join(OUTPUT_RELPATH, "sfx", "oneshots")
 
 
 def series_root_dir():
@@ -24,7 +40,7 @@ def list_series_slugs() -> list:
         return []
     return sorted(
         d for d in os.listdir(root)
-        if os.path.exists(os.path.join(root, d, "episodes.json"))
+        if os.path.exists(os.path.join(root, d, EPISODES_RELPATH))
     )
 
 
@@ -67,7 +83,51 @@ def current_series_dir():
 
 def current_episodes_json():
     d = current_series_dir()
-    return os.path.join(d, "episodes.json") if d else None
+    return os.path.join(d, EPISODES_RELPATH) if d else None
+
+
+# Kurzbeschreibungen fürs Template-Dropdown. Die Liste der Templates selbst
+# kommt aus templates/ (jeder Ordner mit EPISODES_CREATOR_PROMPT.md ODER —
+# seit dem Stage-01-Umbau, die zwei CASE_BASED_TEMPLATES — CANON_PROMPT.md) —
+# neue Templates erscheinen automatisch, nur eben ohne Beschreibung, bis sie
+# hier eingetragen sind.
+TEMPLATE_DESCRIPTIONS = {
+    "narration": "Ein-Sprecher-Anthologie",
+    "language_course": "Sprachkurs-Hörspiel",
+    "crime_drama": "Multi-Voice-Krimi mit Fallakten",
+    "soap_opera": "Ensemble-Seifenoper mit parallelen Strängen",
+    "shorts": "Hook-first-Kurzform für TikTok/Reels (1–3 Min, 9:16)",
+    "media_analysis": "Film-/Medien-Analyse durch die Struktur-Psychologie-Linse",
+}
+
+
+def list_templates() -> list:
+    """Alle nutzbaren Templates (Ordner unter templates/ mit
+    EPISODES_CREATOR_PROMPT.md — Ein-Schuss-Templates — oder CANON_PROMPT.md
+    — die zwei CASE_BASED_TEMPLATES seit dem Stage-01-Umbau) + ob der
+    jeweilige Entry-Point-Prompt {{LOCATION_COUNT}} kennt — daran hängt, ob
+    das Orte-Feld im UI sichtbar ist."""
+    result = []
+    if not os.path.isdir(pf_paths.TEMPLATES_DIR):
+        return result
+    for name in sorted(os.listdir(pf_paths.TEMPLATES_DIR)):
+        template_dir = os.path.join(pf_paths.TEMPLATES_DIR, name)
+        prompt_file = os.path.join(template_dir, "EPISODES_CREATOR_PROMPT.md")
+        if not os.path.isfile(prompt_file):
+            prompt_file = os.path.join(template_dir, "CANON_PROMPT.md")
+        if not os.path.isfile(prompt_file):
+            continue
+        try:
+            with open(prompt_file, "r", encoding="utf-8") as f:
+                supports_locations = "{{LOCATION_COUNT}}" in f.read()
+        except OSError:
+            supports_locations = False
+        result.append({
+            "slug": name,
+            "description": TEMPLATE_DESCRIPTIONS.get(name, ""),
+            "supports_locations": supports_locations,
+        })
+    return result
 
 
 def venv_python(project_dir: str) -> str:
@@ -98,6 +158,9 @@ COMMANDS = {
             ("flag", "template", "--template"),
             ("flag", "minutes", "--minutes"),
             ("flag", "locations", "--locations"),
+            # --fix: Review-Befunde UND Kanon-Drift (check_case_drift) automatisch
+            # reparieren lassen — CLI-Default ist aus, Checkbox sendet das Flag.
+            ("boolflag", "fix", "--fix"),
         ],
         "kind": "line",
     },
@@ -122,7 +185,7 @@ COMMANDS = {
         "args_schema": [
             ("positional_required", "episode"),
             ("boolflag", "force", "--force"),
-            ("boolflag", "fix", "--fix"),
+            ("boolflag_off", "fix", "--no-fix"),  # --fix ist CLI-Default; Checkbox abwaehlen haengt --no-fix an
             ("flag", "jobs", "--jobs"),
             ("flag", "series", "--series"),
         ],
@@ -136,12 +199,29 @@ COMMANDS = {
         "fixed_args": ["all"],
         "args_schema": [
             ("boolflag", "force", "--force"),
-            ("boolflag", "fix", "--fix"),
+            ("boolflag_off", "fix", "--no-fix"),  # --fix ist CLI-Default; Checkbox abwaehlen haengt --no-fix an
             ("flag", "jobs", "--jobs"),
             ("flag", "series", "--series"),
         ],
         "kind": "line",
         "poll_checkpoints": True,
+    },
+    "pf_generate_episode_all_scripts": {
+        "label": "Alle Skripte generieren (ohne Vertonen)",
+        "cwd": PF_DIR,
+        "interpreter": lambda: sys.executable,
+        "module": "fabrik.cli.generate_episode",
+        "fixed_args": ["all", "--no-audio"],
+        "args_schema": [
+            ("boolflag", "force", "--force"),
+            ("boolflag_off", "fix", "--no-fix"),  # --fix ist CLI-Default; Checkbox abwaehlen haengt --no-fix an
+            ("flag", "jobs", "--jobs"),
+            ("flag", "series", "--series"),
+        ],
+        "kind": "line",
+        # BEWUSST NICHT in AUTO_TTS_COMMANDS: --no-audio stoppt vor batch, es wird
+        # kein TTS-Server angefasst. So laufen mehrere Cockpits (je eine Serie)
+        # parallel, ohne sich um den einen lokalen Qwen3-Prozess zu prügeln.
     },
     "pf_generate_episode_check": {
         "label": "episodes.json validieren",
@@ -167,6 +247,58 @@ COMMANDS = {
         "kind": "progress_cr",
         "poll_checkpoints": True,
     },
+    # Cloud-Vertonung: wrappt cloud/render_remote.sh (Upload, Remote-batch.py
+    # gegen 127.0.0.1, Download der Ergebnisse). Bewusst NICHT in
+    # AUTO_TTS_COMMANDS -- die TTS läuft auf der vast.ai-Instanz, das lokale
+    # Pinokio/Qwen3 bleibt aus. "only" rendert eine einzelne Skript-Datei
+    # (podcast_maker statt batch), "stop_after" pausiert die Instanz danach.
+    "pf_render_remote": {
+        "label": "Cloud-Vertonung (vast.ai, render_remote.sh)",
+        "cwd": PF_DIR,
+        "interpreter": lambda: "/bin/bash",
+        "interpreter_args": [],
+        "script": os.path.join("cloud", "render_remote.sh"),
+        "args_schema": [
+            ("positional_required", "series"),
+            ("flag", "only", "--only"),
+            ("boolflag", "stop_after", "--stop-after"),
+            ("boolflag", "local_master", "--local-master"),
+        ],
+        "kind": "line",
+    },
+    # Vertont ALLE fehlenden Episoden einer Serie PARALLEL auf mehreren
+    # vast.ai-Instanzen (wellenweise zu je "max_parallel"): wrappt
+    # cloud/render_remote_parallel.sh. Bewusst NICHT in AUTO_TTS_COMMANDS
+    # (kein lokales TTS nötig). "episodes" optional -- ohne das erkennt das
+    # Script selbst, welche Episoden noch keine <Prefix>_FULL_EPISODE.mp3
+    # haben.
+    "pf_render_remote_parallel": {
+        "label": "Cloud-Vertonung parallel (mehrere Instanzen, render_remote_parallel.sh)",
+        "cwd": PF_DIR,
+        "interpreter": lambda: "/bin/bash",
+        "interpreter_args": [],
+        "script": os.path.join("cloud", "render_remote_parallel.sh"),
+        "args_schema": [
+            ("positional_required", "series"),
+            ("flag", "max_parallel", "--max"),
+            ("flag", "episodes", "--episodes"),
+        ],
+        "kind": "line",
+    },
+    # Server-Scouting: mietet die günstigste passende Instanz (rent.sh --
+    # Osteuropa/Baltikum-Filter, Blacklist/Favoriten via machine_stats.py)
+    # und richtet den TTS-Server ein. Der User testet sie und markiert sie
+    # dann in der Server-Pool-Liste als Favorit oder verwirft sie
+    # (/api/cloud/*-Routen in app.py). Kein series-Bezug.
+    "pf_cloud_rent": {
+        "label": "Cloud: Nächsten Server mieten (rent.sh)",
+        "cwd": PF_DIR,
+        "interpreter": lambda: "/bin/bash",
+        "interpreter_args": [],
+        "script": os.path.join("cloud", "rent.sh"),
+        "args_schema": [],
+        "kind": "line",
+    },
     "pf_batch": {
         "label": "Alle vertonen + Anthologie mergen",
         "cwd": PF_DIR,
@@ -178,35 +310,6 @@ COMMANDS = {
         ],
         "kind": "line",
         "poll_checkpoints": True,
-    },
-    "lolfi_generate_scene": {
-        "label": "Neue Szene generieren",
-        "cwd": LOLFI_DIR,
-        "interpreter": lambda: sys.executable,
-        "script": "generate_scene.py",
-        "fixed_args": [],
-        "args_schema": [],
-        "kind": "line",
-    },
-    "lolfi_generate_prompts": {
-        "label": "Prompts aus Szene generieren",
-        "cwd": LOLFI_DIR,
-        "interpreter": lambda: sys.executable,
-        "script": "generate_prompts.py",
-        "fixed_args": ["--scene-file", "szene.txt"],
-        "args_schema": [
-            ("flag", "style", "--style"),
-        ],
-        "kind": "line",
-    },
-    "lolfi_regenerate_facades": {
-        "label": "Facades-Hintergrundbilder neu erzeugen",
-        "cwd": LOLFI_DIR,
-        "interpreter": lambda: sys.executable,
-        "script": "regenerate_facades.py",
-        "fixed_args": [],
-        "args_schema": [],
-        "kind": "line",
     },
     "pf_character_prompts": {
         "label": "Charakter-Porträt-Prompts generieren",
@@ -241,6 +344,79 @@ COMMANDS = {
         ],
         "kind": "line",
     },
+    "pf_episode_thumbnails": {
+        "label": "Episoden-Thumbnails generieren (16:9 + 1:1)",
+        "cwd": PF_DIR,
+        "interpreter": lambda: sys.executable,
+        "module": "fabrik.cli.episode_thumbnails",
+        "args_schema": [
+            ("flag", "episode", "--episode"),
+            ("boolflag", "force", "--force"),
+            ("flag", "series", "--series"),
+        ],
+        "kind": "line",
+    },
+    "pf_highlight_clips": {
+        "label": "Teaser-Highlights auswählen (Claude)",
+        "cwd": PF_DIR,
+        "interpreter": lambda: sys.executable,
+        "module": "fabrik.cli.highlight_clips",
+        "args_schema": [
+            ("flag", "episode", "--episode"),
+            ("boolflag", "force", "--force"),
+            ("flag", "series", "--series"),
+        ],
+        "kind": "line",
+    },
+    # --- Sounddesign (SFX/Ambience) ---
+    # sfx_plan läuft AUTOMATISCH in `generate_episode all` (vor batch — er
+    # verändert die MP3 selbst). Der Knopf hier ist für Einzel-Episoden und
+    # zum Neu-Planen nach Skript-Änderungen (--force).
+    "pf_continuity_check": {
+        "label": "Kontinuität prüfen (Kanon-Abgleich, deterministisch)",
+        "cwd": PF_DIR,
+        "interpreter": lambda: sys.executable,
+        "module": "fabrik.cli.continuity_check",
+        "args_schema": [
+            ("flag", "series", "--series"),
+        ],
+        "kind": "line",
+    },
+    "pf_sfx_plan": {
+        "label": "SFX-Plan (Palette, Platzierung, Ambience — Claude)",
+        "cwd": PF_DIR,
+        "interpreter": lambda: sys.executable,
+        "module": "fabrik.cli.sfx_plan",
+        "args_schema": [
+            ("boolflag", "force", "--force"),
+            ("flag", "series", "--series"),
+        ],
+        "kind": "line",
+    },
+    # Die beiden ElevenLabs-Schritte kosten Guthaben pro Lauf — deshalb
+    # bewusst NICHT in einer Automatik-Kette, sondern nur als Knopf.
+    "pf_sfx_assets": {
+        "label": "One-Shot-SFX generieren (ElevenLabs)",
+        "cwd": PF_DIR,
+        "interpreter": lambda: sys.executable,
+        "module": "fabrik.cli.sfx_assets",
+        "args_schema": [
+            ("boolflag", "force", "--force"),
+            ("flag", "series", "--series"),
+        ],
+        "kind": "line",
+    },
+    "pf_location_ambience": {
+        "label": "Orts-Ambience generieren (ElevenLabs)",
+        "cwd": PF_DIR,
+        "interpreter": lambda: sys.executable,
+        "module": "fabrik.cli.location_ambience",
+        "args_schema": [
+            ("boolflag", "force", "--force"),
+            ("flag", "series", "--series"),
+        ],
+        "kind": "line",
+    },
     "pf_tts_start": {
         "label": "TTS starten (Pinokio/Qwen3)",
         "kind": "pyfunc",
@@ -252,26 +428,6 @@ COMMANDS = {
         "kind": "pyfunc",
         "pyfunc": "tts_control.stop_tts",
         "args_schema": [],
-    },
-    "lolfi_render": {
-        "label": "Video rendern (lofi_system.py)",
-        "cwd": LOLFI_DIR,
-        "interpreter": lambda: venv_python(LOLFI_DIR),
-        "script": "lofi_system.py",
-        "fixed_args": [],
-        "args_schema": [
-            ("flag", "episode", "--episode"),
-        ],
-        "kind": "cr_steps",
-    },
-    "lolfi_render_all": {
-        "label": "Alle Episoden einzeln rendern (lofi_system.py --all)",
-        "cwd": LOLFI_DIR,
-        "interpreter": lambda: venv_python(LOLFI_DIR),
-        "script": "lofi_system.py",
-        "fixed_args": ["--all"],
-        "args_schema": [],
-        "kind": "cr_steps",
     },
 }
 

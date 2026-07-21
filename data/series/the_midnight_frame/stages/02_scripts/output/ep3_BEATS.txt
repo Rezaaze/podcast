@@ -1,0 +1,127 @@
+--- SCENE 1 ---
+1. Roughly ten hours have passed since Zhao's quiet relief at the end of the previous night; it's now dawn on day forty-four of the unbroken photograph ritual.
+2. The morning's photograph has already arrived and gone up on the wall, extending the grid by one more day.
+3. This time Noah goes further than studying the face — he opens the image file itself and digs into its raw metadata.
+4. Buried in the data he finds a recurring server-ping timestamp, structured in a way that feels deliberate rather than random.
+5. He checks it against his own phone and camera logs and confirms it doesn't originate from either — it reads as external.
+6. Unnerved, he decides to bring it to Zhao before anyone else, assuming her institutional access can explain it.
+
+--- SCENE 2 ---
+1. At the coffee stand before shift, Kai clocks Noah's jittery, distracted energy and needles him about not sleeping.
+2. Noah deflects with the same worn excuse about case workload he's used before.
+3. As Kai turns to order, Noah quickly folds the metadata printout and tucks it into his jacket unseen.
+4. Kai catches the quick movement but not what's on the page, and doesn't push.
+5. The residual coolness since discovering the photo wall keeps Kai from digging further than he might have once.
+6. Noah walks off believing the discovery is still entirely his secret.
+
+--- SCENE 3 ---
+1. Noah brings the metadata printout to Zhao's office and shows her the recurring timestamp.
+2. Zhao studies it with practiced calm, instantly recognizing it as her own hidden Panopticon server's signature.
+3. She tells him it's likely an artifact of old case-archive backups running on a legacy schedule.
+4. Before he can push for more detail, she redirects the conversation to the active homicide case.
+5. Noah accepts the explanation on the surface but privately files away a flicker of doubt.
+6. The audience sees what he doesn't: her calm is a deliberate lie, and it has only partly worked.
+
+--- SCENE 4 ---
+1. Noah visits Feng and recounts the timestamp discovery along with Zhao's archive-backup explanation.
+2. Feng recognizes at once that the timestamp likely belongs to a system he designed himself.
+3. He deflects gently, offering a vague technical-sounding agreement with Zhao's story rather than a real answer.
+4. Noah notices a beat of hesitation before Feng speaks but can't name what feels off about it.
+5. Feng hides that he built the very system now stalking his friend, still unwilling to admit it.
+6. Noah leaves more unsettled than before, his doubt about Zhao's explanation deepening rather than easing.
+
+--- SCENE 5 ---
+1. Alone in the restaurant's back office, Danny takes a call from Sonny.
+2. Sonny arranges a new handoff method — a folder left at the diner counter instead of the usual garage meeting.
+3. Danny agrees smoothly, keeping his tone light and controlled for the length of the call.
+4. The moment the line goes dead, his easy charm cracks and he sits in visible tension.
+5. He tells himself this is still just protecting his family, even as the new method unsettles him.
+6. He hides the call and the new arrangement from everyone, including his mother and Hae.
+
+--- SCENE 6 ---
+1. Danny and Hae share a quiet dinner at the restaurant.
+2. He mentions he'll need to step out later that night, offering a thin, vague reason.
+3. Hae senses the evasion in how quickly he moves the conversation elsewhere afterward.
+4. She chooses not to press, partly from her own guardedness and partly from being used to things half-said.
+5. Neither mentions Noah aloud, though his unresolved presence sits quietly under the meal.
+6. Danny hides that the real reason is the diner drop-off arranged with Sonny.
+
+--- SCENE 7 ---
+1. Danny arrives at the diner and leaves a photocopied case folder at the counter as arranged.
+2. A stranger nods once, picks it up, and pockets it without a word exchanged.
+3. Kai walks in moments later and catches the tail end of the handoff.
+4. Kai doesn't understand what he's seeing, but the exchange registers as wrong.
+5. Danny spots Kai and quickly covers the moment with his usual easy demeanor.
+6. Kai's unease sharpens, though he says nothing to Danny in the moment.
+
+--- SCENE 8 ---
+1. Kai corners Danny privately afterward and asks directly about the folder and the stranger.
+2. Danny claims it was for an old confidential informant from a closed case, manufacturing the story on the spot.
+3. Kai has no evidence to contradict him and doesn't want to believe his partner's rival is lying to him.
+4. He reluctantly accepts the explanation, though it doesn't fully sit right.
+5. Danny reads Kai's hesitation and smooths it over with a joke.
+6. Kai lets it go outwardly, but the unease stays with him underneath.
+
+--- SCENE 9 ---
+1. Back at his desk, Kai brings up a vague unease about Danny without naming what he actually saw.
+2. Noah, still preoccupied with the timestamp and the reactions from Zhao and Feng, only half-listens.
+3. Kai himself downplays it, unsure if it's even worth mentioning, and lets the comment trail off.
+4. Noah offers a distracted, noncommittal response instead of following up.
+5. Neither realizes how much the other is currently sitting on secrets of his own.
+6. The moment passes without either connecting Danny's behavior to anything larger.
+
+--- SCENE 10 ---
+1. Aya receives a new encrypted tip from her anonymous source referencing the precinct's basement records room.
+2. She notes this detail is more specific than anything leaked before, edging closer to the operation's actual location.
+3. She cross-checks it quietly through a department contact, and it holds up.
+4. She grows further convinced her source is a disgruntled junior officer with real inside access.
+5. She has no idea the tip came from Zhao herself, deliberately steering her toward a controlled reveal.
+6. The audience recognizes Zhao is tightening a leash Aya believes she's following on her own.
+
+--- SCENE 11 ---
+1. Aya meets Noah for another interview, ostensibly to talk about the ongoing case.
+2. She gently probes his guarded, distracted mood, sensing something is off.
+3. Noah deflects on specifics but lets more warmth show through than he intends.
+4. Neither names what's really bothering them — the timestamp for him, the deadline and her source for her.
+5. Something between them softens further, complicating both their professional instincts.
+6. Aya notices herself pulling back from pressing him the way the story would normally demand.
+
+--- SCENE 12 ---
+1. Alone at night, Noah takes out the metadata printout again and rereads the timestamp.
+2. He remains unconvinced by Zhao's archive-backup explanation, the numbers still nagging at him.
+3. Rather than raising it again or investigating further, he hides the printout behind one of the wall's photographs.
+4. He tells himself he's tabling the question, not abandoning it, though he takes no next step tonight.
+5. He still has no suspicion that Zhao or Feng is connected to the timestamp's true source.
+6. The printout stays concealed, a loose thread he isn't ready to pull yet.
+
+--- SCENE 13 ---
+1. Danny calls Sonny to confirm the diner drop-off went unnoticed.
+2. Sonny confirms it did and mentions another incremental reduction to the family debt.
+3. Danny's relief at the confirmation quickly curdles into guilt once the call ends.
+4. He briefly recalls Kai's earlier suspicion and pushes the thought away.
+5. He steps back out to the dinner rush and forces his usual easy smile over the tension.
+6. He hides the full weight of what just happened from everyone around him, including his mother working the floor.
+
+--- SCENE 14 ---
+1. Alone at home, Hae opens a text draft to Noah about their still-unfinalized divorce paperwork.
+2. She types and deletes several versions, unable to settle on the right tone.
+3. She ultimately deletes the message entirely rather than send it.
+4. She turns instead to old drawings taped to her fridge, a quieter, safer place to put her attention.
+5. She still has no idea about the investigator, the wire transfer, or what her father may have done.
+6. The unfinished text underscores how unresolved her feelings for Noah remain beneath her life with Danny.
+
+--- SCENE 15 ---
+1. Aya's editor calls her in and warns that the story's window is closing faster than she thinks.
+2. He reminds her a rival reporter is circling and could break the story first.
+3. He pushes her to chase her source harder and land a namable suspect within days, not weeks.
+4. Aya feels the pressure sharpen against her still-unfinished draft naming Noah.
+5. She leaves more determined to follow the basement-records lead than to protect her growing feelings for him.
+6. The audience senses this pressure is about to accelerate her collision course with Zhao's operation.
+
+--- SCENE 16 ---
+1. After Noah leaves her office, Zhao waits until she's alone before checking the hidden Panopticon feed on her phone.
+2. She reviews the system's logs, confirming her archive-backup explanation appears to have held for now.
+3. She notes the timestamp discovery came closer than she'd like and weighs whether to adjust the server's exposure.
+4. She also registers, distantly, the tightening pressure of Aya's editor deadline as another variable in her timeline.
+5. She exhales once, allowing herself a brief moment of relief before returning to her by-the-book composure.
+6. The scene reaffirms her complete awareness and control, even as the walls around her operation begin narrowing.

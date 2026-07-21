@@ -1,0 +1,180 @@
+{
+  "capabilities": [],
+  "cast": [
+    {
+      "role": "NARRATOR",
+      "voice": "neutral"
+    },
+    {
+      "role": "Hypatia",
+      "voice": "en_female_scholarly"
+    },
+    {
+      "role": "Ibn al-Nadim",
+      "voice": "en_male_measured"
+    },
+    {
+      "role": "Sor Juana",
+      "voice": "en_female_warm"
+    },
+    {
+      "role": "Gottfried",
+      "voice": "en_male_precise"
+    },
+    {
+      "role": "Mele",
+      "voice": "en_female_curious"
+    }
+  ],
+  "episodes": [
+    {
+      "figure": "Hypatia",
+      "intro": "",
+      "outro": "",
+      "sections": [
+        {
+          "location": "alexandria",
+          "thread": "The paradox of preservation",
+          "title": "The Harbour and the Copies",
+          "what": "Alexandria's library grew by seizing scrolls from arriving ships — accumulation by imperial greed, not by any deliberate plan to preserve.",
+          "who": [
+            "NARRATOR",
+            "Hypatia"
+          ],
+          "word_budget": 140
+        },
+        {
+          "location": "bayt_al_hikma",
+          "thread": "Knowledge as political object",
+          "title": "Patrons and Their Motives",
+          "what": "Ibn al-Nadim shows al-Mamun's translation drive was astrology-funded statecraft; the texts outlived every political motive that paid for them.",
+          "who": [
+            "Hypatia",
+            "Ibn al-Nadim"
+          ],
+          "word_budget": 140
+        },
+        {
+          "location": "bodleian",
+          "thread": "Who is allowed inside",
+          "title": "The Door and Who Holds the Key",
+          "what": "Mele asks who was ever admitted; the others list exclusions and exceptions, naming access as the oldest hidden argument in every library.",
+          "who": [
+            "Mele",
+            "Sor Juana",
+            "Gottfried",
+            "NARRATOR"
+          ],
+          "word_budget": 140
+        }
+      ],
+      "theme": "Preservation by accident — how the great collections of Alexandria and Baghdad survived not through intention but through dispersal, copying, and the selfishness of patrons who wanted credit for what they could not destroy"
+    },
+    {
+      "figure": "Mele",
+      "intro": "",
+      "outro": "",
+      "sections": [
+        {
+          "location": "alexandria",
+          "thread": "The paradox of preservation",
+          "title": "The Budget Behind the Scrolls",
+          "turning_point": "tp1",
+          "what": "Hypatia shows Mele the Mouseion's real end: Roman fiscal strangulation, not fire. Scholars carried texts outward; exodus became the first preservation strategy.",
+          "who": [
+            "NARRATOR",
+            "Hypatia",
+            "Mele"
+          ],
+          "word_budget": 150
+        },
+        {
+          "location": "bayt_al_hikma",
+          "thread": "Knowledge as political object",
+          "title": "The Horoscope and the Translation",
+          "turning_point": "tp2",
+          "what": "Ibn al-Nadim tells Mele that al-Mamun's translation drive began with an astrological warning about a Greek rival — statecraft that outlived its own political motives.",
+          "who": [
+            "NARRATOR",
+            "Ibn al-Nadim",
+            "Mele"
+          ],
+          "word_budget": 150
+        },
+        {
+          "thread": "Who is allowed inside",
+          "title": "What the Patrons Leave Behind",
+          "what": "Mele connects both stops: patron ambition funds knowledge and endangers it equally — the entanglement that will shadow every library ahead.",
+          "who": [
+            "NARRATOR",
+            "Mele"
+          ],
+          "word_budget": 120
+        }
+      ],
+      "theme": "The hidden argument of access — tracing who was kept outside the Bodleian, the Escorial, and the Congressional Library, and why the open-access movement is the latest unresolved chapter of a dispute as old as the first locked scroll-room"
+    }
+  ],
+  "identity": {
+    "format": "narration",
+    "language": "en",
+    "mode": "narration",
+    "title": "A quiet history of the world's great libraries"
+  },
+  "locations": [
+    {
+      "description": "The great harbour city of ancient Egypt, seat of the Mouseion and its daughter library — a cosmopolitan crossroads where scrolls arrived with every merchant ship",
+      "key": "alexandria"
+    },
+    {
+      "description": "The House of Wisdom in ninth-century Baghdad, a palace annex of translation halls, observatories, and map rooms humming with the scratch of reed pens",
+      "key": "bayt_al_hikma"
+    },
+    {
+      "description": "The monastic university complex in Bihar, its red-brick towers visible for miles, home to nine million volumes before the fires came",
+      "key": "nalanda"
+    },
+    {
+      "description": "Philip II's austere granite monastery-palace outside Madrid, whose library vaults held forbidden manuscripts alongside royal correspondence",
+      "key": "escorial"
+    },
+    {
+      "description": "The refounded Oxford library of 1602, its Jacobean reading rooms kept deliberately unheated so readers would not linger too long",
+      "key": "bodleian"
+    },
+    {
+      "description": "The Capitol building's north wing in early-nineteenth-century Washington, whose small but symbolically charged collection was ash by 1814 and rebuilt from Jefferson's personal shelves",
+      "key": "congressional"
+    }
+  ],
+  "schema_version": 1,
+  "threads": [
+    {
+      "hard_facts": [
+        "The Library of Alexandria likely declined gradually through budget cuts and neglect rather than a single fire",
+        "The Bayt al-Hikma translation movement outlasted the Mongol sack through scholars who had already dispersed",
+        "Nalanda's destruction in 1193 is documented by Tibetan sources; some monks carried texts to Tibet"
+      ],
+      "label": "The paradox of preservation",
+      "resolution": "Every library that survived did so by accident, compromise, or migration — the deliberate act of preservation alone has never been enough; the series closes on a digital-archive librarian who grasps this fully"
+    },
+    {
+      "hard_facts": [
+        "Ptolemy III allegedly detained travellers to copy their scrolls",
+        "Al-Mamun's translation programme was partly motivated by astrological statecraft",
+        "Jefferson sold his library to Congress at a personal profit while the nation was in debt"
+      ],
+      "label": "Knowledge as political object",
+      "resolution": "Each institution reflects the ambitions of its patron — imperial, caliphal, royal, republican — and the series traces how that entanglement both funds and endangers the books"
+    },
+    {
+      "hard_facts": [
+        "Women were formally excluded from the Bodleian until 1877",
+        "Nalanda accepted students from across Asia regardless of caste, an unusual policy for its era",
+        "The Library of Congress reading room opened to the public in 1800 but was destroyed before most could use it"
+      ],
+      "label": "Who is allowed inside",
+      "resolution": "Access has always been the hidden argument — the series ends with open-access movements as the latest chapter in a very old dispute, unresolved"
+    }
+  ]
+}

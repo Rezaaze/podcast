@@ -5,8 +5,15 @@ __pycache__/
 .DS_Store
 
 # data/ = alles, was die Pipeline erzeugt bzw. an großen Assets braucht.
-# Getrackt bleiben nur die kleinen Serien-Definitionen/Skripte — Audio,
-# Checkpoints, Archiv und Referenzaufnahmen nicht.
+# Getrackt bleiben nur die kleinen Serien-Definitionen/Skripte/Verträge —
+# Audio, Checkpoints, Bilder, Archiv und Referenzaufnahmen nicht.
+# MWP-Layout: Stage-Outputs sind ignoriert, AUSSER episodes.json (die
+# Serien-Definition, Output von Stage 01) und den Skript-Textdateien
+# (Output von Stage 02) — Negativ-Patterns, Reihenfolge zählt.
+data/series/*/stages/*/output/*
+!data/series/*/stages/01_concept/output/episodes.json
+!data/series/*/stages/02_scripts/output/*.txt
+# Alt-Layout (pre-MWP-Serien, bis sie nach data/archive/pre_mwp/ wandern)
 data/series/*/output/
 data/voices/*.wav
 data/voices/*.mp3
@@ -14,3 +21,29 @@ data/archive/
 
 .claude/settings.local.json
 cloud/.last_instance_id
+
+# Laufzeit-Zustand der Cloud-Automation (maschinenlokal, wie .last_instance_id):
+# der Pool gestoppter, fertig eingerichteter vast.ai-Instanzen.
+cloud/.instance_pool
+# Blacklist/Favoriten-Statistik + getrackte/gerace-te Instanzen (machine_stats.py, race.sh)
+cloud/.machine_stats.json
+cloud/.tracked_instances.json
+cloud/.race_instance_ids
+# Lock-Datei des nebenläufigen figure_history-Zugriffs.
+data/*.lock
+# Index-Locks der Libraries (character/location/sfx) — reiner Laufzeit-Zustand.
+**/.index.lock
+
+# Laufzeit-Zustand der Cockpit-Steuerung (webui/launcher.py, maschinenlokal):
+# gemerkte PIDs der gestarteten Cockpits + deren Logs.
+webui/.launcher_state.json
+webui/.launcher_logs/
+
+# Slot-Lock-Dateien der systemweiten Claude-Aufruf-Zählsemaphore
+# (fabrik/core/claude_cli.py) — rein flüchtiger Laufzeit-Zustand.
+data/.claude_slots/
+
+# Batch-Checkpoints von create_series.py (fabrik/cli/create_series.py) — flüchtiger
+# Zwischenspeicher für Skeleton/Batches während der Serien-Erzeugung, wird bei
+# vollem Erfolg automatisch gelöscht.
+data/.create_series_staging/

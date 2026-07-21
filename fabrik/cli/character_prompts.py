@@ -9,45 +9,43 @@ Verwendung:
   python3 character_prompts.py --no-images         # nur Prompts, keine Bilder erzeugen
 
 Für jede Rolle aus dem voices-Mapping (außer NARRATOR) baut Claude ein
-neutrales Porträt PLUS ein Porträt je Emotion (siehe EMOTIONS unten, spiegelt
-Lolfis Emotionserkennung) — alle mit einem für die Rolle IDENTISCHEN
-Charakter und einem für alle Charaktere IDENTISCHEN Stil-Block, damit die
-Bilder wie ein Ensemble aussehen und nur der Gesichtsausdruck variiert.
+neutrales Porträt PLUS ein Porträt je Emotion (siehe EMOTIONS unten) — alle
+mit einem für die Rolle IDENTISCHEN Charakter und einem für alle Charaktere
+IDENTISCHEN Stil-Block, damit die Bilder wie ein Ensemble aussehen und nur
+der Gesichtsausdruck variiert.
 
 Ist OPENAI_API_KEY gesetzt (und --no-images nicht angegeben), wird für jede
 Rolle+Emotion sofort ein PNG über gpt-image-1-mini erzeugt und als
 series/<slug>/characters/<ROLLE>.png (neutral) bzw.
 series/<slug>/characters/<ROLLE>_<emotion>.png abgelegt — ohne Key bleibt es
 wie bisher bei den Text-Prompts zum manuellen Einfügen bei einem Bildmodell
-deiner Wahl. Dort findet sie das Lolfi-Video-Rendering und blendet je
-Sprech-Abschnitt automatisch das zur erkannten Emotion passende Bild ein
-(Fallback: neutrales Bild), basierend auf der Sprecher-Timeline aus
-podcast_maker.py/batch.py.
+deiner Wahl. Nützlich für Cover-Kunst, Social-Media-Assets oder einen
+eigenen Video-Export, der Sprech-Abschnitte anhand der Sprecher-Timeline aus
+podcast_maker.py/batch.py mit dem zur Emotion passenden Bild illustriert.
 
 Braucht kein .venv — nur die Claude CLI (wie generate_episode.py); die
 Bildgenerierung selbst nutzt nur stdlib (urllib), kein zusätzliches Paket.
 """
 
 import argparse
+import collections
 import os
 import re
 import sys
 import time
 
 from fabrik.core import config, paths
-from fabrik.writing import image_backends
+from fabrik.writing import character_library, image_backends
 from fabrik.writing.script_parser import ScriptFormatError, parse_drama_part
 from fabrik.writing.script_writer import call_claude, MAX_RETRIES, RETRY_DELAY
 
 PROMPTS_FILENAME = "PROMPTS.txt"
 
-# Spiegelt EXAKT die Emotion-Keys aus Lolfis EMOTIONS-Dict
-# (~/Downloads/Lolfi/lofi_system.py) — das ist eine separate Codebase ohne
-# gemeinsamen Import, die Keys müssen also manuell synchron gehalten werden.
-# Lolfi klassifiziert pro Sprech-Spanne aus dem Style-Regieanweisungstext eine
-# dieser Emotionen und blendet dann, wenn eine Datei
-# characters/<ROLLE>_<emotion>.png existiert, genau die statt des neutralen
-# Porträts ein (Fallback: neutrales Bild, wenn die Variante fehlt).
+# Eigene Emotions-Taxonomie dieses Projekts (sieben Keys) — jede Rolle
+# bekommt ein Porträt pro Emotion, benannt als characters/<ROLLE>_<emotion>.png
+# (Fallback: das neutrale Porträt, wenn eine Variante fehlt). Ein optionaler
+# Video-Export würde pro Sprech-Spanne aus dem Style-Regieanweisungstext
+# (classify_emotion() unten) genau diese Datei nachladen.
 EMOTIONS = {
     "anger": "angry, furious — glaring eyes, tense jaw, aggressive forward posture",
     "fear": "afraid, scared — wide eyes, tense shoulders, defensive/recoiling posture",
@@ -59,11 +57,8 @@ EMOTIONS = {
 }
 
 
-# Spiegelt EXAKT die Keywords aus Lolfis classify_emotion() (lofi_system.py)
-# — gleiche dict-Reihenfolge (= gleiche Match-Priorität, "vulnerability" zuerst
-# aus demselben Grund wie dort: Fassade-bricht-Regieanweisungen dürfen nicht
-# fälschlich als "joy" durchgehen). Manuell synchron halten, wie EMOTIONS oben
-# — kein gemeinsamer Import zwischen den beiden Codebases.
+# dict-Reihenfolge = Match-Priorität: "vulnerability" zuerst, damit eine
+# Fassade-bricht-Regieanweisung nicht fälschlich als "joy" durchgeht.
 EMOTION_KEYWORDS = {
     "vulnerability": ["crack", "raw", "unguarded", "breaking through",
                        "catching himself", "catching herself", "for one line",
@@ -89,11 +84,10 @@ assert set(EMOTION_KEYWORDS) == set(EMOTIONS), "EMOTION_KEYWORDS muss exakt zu E
 
 
 def classify_emotion(style_text):
-    """Exakt Lolfis classify_emotion() gespiegelt — ordnet eine Style-Regie-
-    anweisung ("whispering, afraid to be heard") der ersten passenden Emotion
-    zu, None wenn nichts matcht. Nur wenn dieselbe Klassifikation hier auch
-    tatsächlich matcht, würde Lolfi die entsprechende Emotionsvariante beim
-    Video-Rendern je abrufen."""
+    """Ordnet eine Style-Regieanweisung ("whispering, afraid to be heard")
+    der ersten passenden Emotion zu, None wenn nichts matcht — bestimmt,
+    welche Porträt-Emotionsvariante für einen Sprech-Abschnitt gebraucht
+    würde (z.B. für einen optionalen Video-Export)."""
     if not style_text:
         return None
     lowered = style_text.lower()
@@ -103,16 +97,26 @@ def classify_emotion(style_text):
     return None
 
 
+# Kostenbremse: jede Rolle bekommt höchstens so viele Emotionsbilder, egal wie
+# viele der 7 EMOTIONS in ihren Skripten tatsächlich vorkommen — jedes Bild ist
+# ein eigener OpenAI-Call (Zeit + Geld). Gedeckelt wird PRO ROLLE auf die
+# HÄUFIGSTEN Emotionen in DEREN EIGENEN Zeilen, nicht projektweit dieselben 4
+# für alle — eine Rolle mit Liebes-Subplot behält "love", auch wenn eine
+# andere Rolle im Ensemble es nie braucht.
+MAX_EMOTIONS_PER_ROLE = 4
+
+
 def find_used_emotions(series, roles):
     """Scannt alle vorhandenen Episoden-Skripte nach style-Regieanweisungen
     pro Rolle und klassifiziert sie über classify_emotion() — liefert pro
-    Rolle nur die Emotionen, die Lolfi beim Video-Rendern für diese Rolle
-    überhaupt einmal abrufen würde. Rollen ohne (noch) generierte Skripte
+    Rolle höchstens MAX_EMOTIONS_PER_ROLE Emotionen, und zwar die am
+    häufigsten vorkommenden (spart Bild-Generierung für seltene Varianten,
+    siehe MAX_EMOTIONS_PER_ROLE). Rollen ohne (noch) generierte Skripte
     bekommen eine leere Menge zurück (→ nur das Neutral-Porträt nötig)."""
-    used = {role: set() for role in roles}
+    counts = {role: collections.Counter() for role in roles}
     scripts_dir = series.scripts_dir
     if not os.path.isdir(scripts_dir):
-        return used
+        return {role: set() for role in roles}
 
     script_files = [
         f for f in os.listdir(scripts_dir)
@@ -132,16 +136,20 @@ def find_used_emotions(series, roles):
                 # hart geprüft — hier defensiv nur überspringen, nicht abbrechen.
                 continue
             for item in items:
-                if item.kind != "speech" or item.speaker not in used:
+                if item.kind != "speech" or item.speaker not in counts:
                     continue
                 emotion = classify_emotion(item.style)
                 if emotion:
-                    used[item.speaker].add(emotion)
-    return used
+                    counts[item.speaker][emotion] += 1
+
+    return {
+        role: {emotion for emotion, _ in c.most_common(MAX_EMOTIONS_PER_ROLE)}
+        for role, c in counts.items()
+    }
 
 
 def characters_dir(series):
-    return os.path.join(series.root, "characters")
+    return series.characters_dir
 
 
 def prompts_file(series):
@@ -327,7 +335,9 @@ def main():
             blocks = {}
 
     if not blocks:
-        model = data.get("generation", {}).get("model", config.DEFAULTS["model"])
+        # light_model: reine Bild-Prompt-Texte, keine kreative Skript-Arbeit — braucht
+        # nicht das teure Schreibmodell.
+        model = data.get("generation", {}).get("light_model", config.DEFAULTS["light_model"])
         n_blocks = len(expected_ids)
         print(f"Generiere Porträt-Prompts ({n_blocks} Blöcke, nur tatsächlich "
               f"gebrauchte Emotionen, Modell: {model}) ...")
@@ -355,7 +365,7 @@ def main():
             f.write(f"# Charakter-Porträt-Prompts — {data.get('series_title', series.slug)}\n")
             f.write("# Jedes Bild extern generieren und hier im Ordner ablegen unter dem genannten\n")
             f.write("# Dateinamen (neutral: <ROLLE>.png, je Emotion: <ROLLE>_<emotion>.png) —\n")
-            f.write("# Lolfi blendet dann automatisch das zur Szene passende Bild ein.\n\n")
+            f.write("# für Cover-Kunst, Social-Media-Assets oder einen eigenen Video-Export.\n\n")
             for block_id, _role, fname, _emotion in targets:
                 f.write(f"=== {block_id} === (→ characters/{fname})\n{blocks[block_id]}\n\n")
 
@@ -373,9 +383,17 @@ def main():
         return
 
     print(f"\nErzeuge Porträts (gpt-image-1-mini, {len(targets)} Bilder) — Emotionsvarianten "
-          f"per Bild-Edit auf dem Neutral-Porträt derselben Rolle, für konsistentes Aussehen ...")
+          f"per Bild-Edit auf dem Neutral-Porträt derselben Rolle, für konsistentes Aussehen. "
+          f"Vor jeder Anfrage wird zuerst die serienübergreifende Porträt-Bibliothek geprüft "
+          f"(data/character_library/) ...")
     failed = []
+    reused = 0
     neutral_bytes_by_role = {}
+    # Rolle -> Bibliotheks-Hash, NUR gesetzt wenn das Neutral-Bild dieser
+    # Rolle aus der Bibliothek wiederverwendet wurde — steuert, unter
+    # welchem Hash eine später fehlende Emotion nachgeliefert wird (in den
+    # wiederverwendeten Charakter hinein, nicht als komplett neuer Eintrag).
+    reused_hash_by_role = {}
     for block_id, role, fname, emotion in targets:
         img_path = os.path.join(characters_dir(series), fname)
         if os.path.exists(img_path):
@@ -384,7 +402,27 @@ def main():
                 with open(img_path, "rb") as f:
                     neutral_bytes_by_role[role] = f.read()
             continue
+
+        description = roles[role].get("description", "")
+        lib_hash = reused_hash_by_role.get(role)
+        lib_entry = None
+        if lib_hash is None and description:
+            lib_hash, lib_entry = character_library.find_match(description)
+
         try:
+            if lib_hash and os.path.exists(character_library.portrait_path(lib_hash, emotion)):
+                character_library.copy_from_library(lib_hash, emotion, img_path)
+                with open(img_path, "rb") as f:
+                    png_bytes = f.read()
+                match_desc = (lib_entry or {}).get("description", "")
+                print(f"  {fname}: aus Bibliothek wiederverwendet"
+                      f"{f' (≈ \"{match_desc[:60]}\")' if match_desc else ''} → characters/{fname}")
+                reused += 1
+                if emotion is None:
+                    neutral_bytes_by_role[role] = png_bytes
+                    reused_hash_by_role[role] = lib_hash
+                continue
+
             if emotion is None:
                 png_bytes = image_backends.generate_image(blocks[block_id])
                 neutral_bytes_by_role[role] = png_bytes
@@ -398,11 +436,19 @@ def main():
                     png_bytes = image_backends.edit_image(reference, blocks[block_id])
             with open(img_path, "wb") as f:
                 f.write(png_bytes)
+            if description:
+                # lib_hash gesetzt heißt: Neutral kam aus der Bibliothek, aber
+                # DIESE Emotion fehlte dort noch -- unter demselben Eintrag
+                # nachtragen statt einen neuen anzulegen.
+                target_hash = lib_hash or character_library.character_hash(description)
+                character_library.register(target_hash, description, png_bytes, emotion)
             print(f"  {fname}: gespeichert → characters/{fname}")
         except RuntimeError as exc:
             print(f"  {fname}: FEHLER — {exc}")
             failed.append(fname)
 
+    if reused:
+        print(f"\n{reused} Porträt(s) aus der Bibliothek wiederverwendet (kein API-Call nötig).")
     if failed:
         print(f"\n{len(failed)} Porträt(s) fehlgeschlagen ({', '.join(failed)}) — "
               f"Skript erneut starten (fertige Porträts werden übersprungen).")

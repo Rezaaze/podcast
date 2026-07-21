@@ -1,0 +1,107 @@
+{
+  "lines": [
+    {
+      "speaker": "NARRATOR",
+      "text": "The bay runs at capacity. Two nurses borrowed from the floor above, one attending four hours without sitting, and a board moved twice tonight because the east wing is closed — efficiency, the policy memo called it. The same word appeared in each of the three incident reports Theo assembled over the past six weeks: the woman with unstable angina diverted to Mercy General who coded before she arrived; the diabetic who spent three hours in the corridor because his assigned bay was officially closed; the GI bleed who signed herself out and was found at home two days later. Three cases. Three names. What has kept Theo from filing them is not conscience alone. His visa is tied to the hospital. Retaliation does not mean a reprimand. It means the right to remain. He has weighed every name against that fact. So far, the weight came down on silence."
+    },
+    {
+      "speaker": "MAEVE",
+      "style": "directive",
+      "text": "Four of bicarb, push it now. Where's the 12-lead?"
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "The patient in Bay Three is sixty-one, septic, brought in by Dana forty minutes ago with a pressure of eighty-two over palp. He should have arrived an hour sooner. The diversion from Mercy added the delay."
+    },
+    {
+      "speaker": "REZA",
+      "style": "flat",
+      "text": "12-lead's on. Sinus tach, no ST changes."
+    },
+    {
+      "speaker": "MAEVE",
+      "style": "quiet",
+      "text": "How much atropine did you push?"
+    },
+    {
+      "speaker": "REZA",
+      "style": "flat",
+      "text": "Point five, then we —"
+    },
+    {
+      "speaker": "MAEVE",
+      "style": "directive",
+      "text": "Stop."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "She sees it before he finishes the sentence. The drawn-up syringe on the tray. Label correct. Dose doubled. She doesn't know yet if it was pharmacy, chart, or hour. What she knows is that her hands moved toward it before her eyes confirmed the number. What she knows is that she almost didn't check."
+    },
+    {
+      "speaker": "REZA",
+      "style": "flat",
+      "text": "I drew that one. I didn't —"
+    },
+    {
+      "speaker": "MAEVE",
+      "style": "directive",
+      "text": "I know. Set it aside. Give me the one percent lido. We manage the rate first."
+    },
+    {
+      "speaker": "DANA",
+      "style": "quiet",
+      "text": "His sat's dropping."
+    },
+    {
+      "speaker": "MAEVE",
+      "style": "directive",
+      "text": "I see it. Reza, suction. Dana, stand clear of the crash cart or step out. Choose now."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "Dana stays. Maeve does not ask why Dana is still in the building at four forty-seven in the morning, Dana's shift having ended at midnight, and she will not ask. Some things about this building run on their own inertia. People do not leave when they are supposed to."
+    },
+    {
+      "speaker": "MAEVE",
+      "style": "flat",
+      "text": "Rate's coming down. Pressure?"
+    },
+    {
+      "speaker": "REZA",
+      "style": "flat",
+      "text": "Ninety over sixty."
+    },
+    {
+      "speaker": "MAEVE",
+      "style": "flat",
+      "text": "Better."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "The word she uses for things that have not yet gone wrong. The patient is breathing. The doubled dose sits capped in the syringe on the tray, waiting for the incident log. She will file it. She always files everything. She is the kind of attending who does not let errors dissolve into a busy shift — who writes the thing down, who names the gap, who makes the record legible. She is also the attending who stood in a parking lot three nights ago and made a decision four years of sobriety had been constructed against. Her hands know this. The tremor had been small, barely readable, small enough that only she could find it. She has been finding it ever since."
+    },
+    {
+      "speaker": "DANA",
+      "style": "low",
+      "text": "Is she alright?"
+    },
+    {
+      "speaker": "REZA",
+      "style": "low",
+      "text": "She ran the whole bay last Tuesday without breaking a sweat."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "Not an answer. Reza knows it isn't. Dana knows it too. The ventilator cycles."
+    },
+    {
+      "speaker": "MAEVE",
+      "style": "flat",
+      "text": "Chart needs updating. Reza. Now, while it's fresh."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "She does not look at Dana. She listens to the ventilator and counts the rhythm and recites the sequence in order: she caught it, the patient is stable, no harm was done. She has been reciting it since four forty-one. In twelve minutes the next chart will be due. She uses all twelve."
+    }
+  ]
+}

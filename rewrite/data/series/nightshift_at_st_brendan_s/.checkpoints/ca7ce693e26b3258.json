@@ -1,0 +1,97 @@
+{
+  "cast": [
+    {
+      "role": "Dr. Maeve Callahan — Senior ER attending, 40s, carries the night shift on her back and a secret drinking problem in her locker",
+      "voice": "af_sarah"
+    },
+    {
+      "role": "Nurse Theo Okafor — Charge nurse, 30s, the emotional spine of the unit, hiding a whistleblower complaint he hasn't filed yet",
+      "voice": "am_michael"
+    },
+    {
+      "role": "Dr. Reza Shirazi — Second-year resident, brilliant and brittle, on academic probation after a near-miss",
+      "voice": "am_adam"
+    },
+    {
+      "role": "Sister Agnes — Retired nun turned night-shift chaplain, 70s, knows every secret in the building",
+      "voice": "af_bella"
+    },
+    {
+      "role": "Paramedic Dana Voss — Freelance contractor, brings in the complicated cases and complicated history with Maeve",
+      "voice": "af_nicole"
+    },
+    {
+      "role": "Administrator Clive Harte — Night-shift operations manager, cutting beds to hit quarterly targets",
+      "voice": "am_echo"
+    }
+  ],
+  "locations": [
+    {
+      "description": "St. Brendan's Emergency Room — fluorescent-lit chaos, curtained bays, the permanent smell of antiseptic and anxiety",
+      "key": "er_floor"
+    },
+    {
+      "description": "Staff break room behind the nurses' station — burnt coffee, a dying microwave, the real decisions get made here",
+      "key": "break_room"
+    },
+    {
+      "description": "Ground-floor chapel, rarely used for prayer, often used for conversations no one wants overheard",
+      "key": "chapel"
+    },
+    {
+      "description": "Exterior loading dock — cold air, cigarette breaks, the threshold between outside world and hospital reality",
+      "key": "ambulance_bay"
+    },
+    {
+      "description": "Third-floor corridor outside Harte's office — where policies that kill people are written on whiteboards",
+      "key": "admin_corridor"
+    }
+  ],
+  "threads": [
+    {
+      "hard_facts": [
+        "Maeve has been sober for four years before the series begins",
+        "Her ex-husband filed the original complaint that ended her hospital privileges in Cork",
+        "Dana knows and has been enabling her silence"
+      ],
+      "label": "Maeve's Relapse Arc",
+      "resolution": "Maeve's drinking escalates through the season until a critical decision under impairment forces her to choose between covering it up and coming clean — she chooses truth, enters a monitored programme, loses her attending status temporarily"
+    },
+    {
+      "hard_facts": [
+        "The complaint names Harte by name",
+        "Theo's immigration status makes retaliation existentially threatening to him",
+        "Sister Agnes is the only person he has told"
+      ],
+      "label": "Theo's Whistleblower Dilemma",
+      "resolution": "Theo's complaint about Harte's bed-cuts causing a preventable death sits unsigned for six episodes; a second death forces him to file it, triggering an investigation that reshapes the hospital's power structure"
+    },
+    {
+      "hard_facts": [
+        "The original near-miss involved a falsified chart, not Reza's clinical error",
+        "The attending who falsified it is now on the hospital board",
+        "Maeve suspects but has never confronted him"
+      ],
+      "label": "Reza's Second Chance",
+      "resolution": "Reza's probation is secretly tied to a cover-up from his intern year; across the season he reconstructs what really happened and accepts responsibility publicly, clearing his record honestly rather than politically"
+    },
+    {
+      "hard_facts": [
+        "The acquisition target is a private US chain",
+        "Harte genuinely believes fewer beds means faster throughput — he has convinced himself it is clinical, not financial",
+        "Three patients have been harmed by the policy before the season begins"
+      ],
+      "label": "Harte's Bed-Cut Conspiracy",
+      "resolution": "Harte is executing a board directive to make the ER financially unattractive ahead of a private-equity acquisition; when this becomes public via Theo's complaint, the acquisition collapses and Harte resigns"
+    },
+    {
+      "hard_facts": [
+        "Dana left Cork without explanation — Maeve never knew the real reason",
+        "Dana's contractor status is her deliberate choice: she refuses to be institutionally trapped again",
+        "Their first scene together in the ER is a reunion neither acknowledges aloud"
+      ],
+      "label": "Maeve–Dana History",
+      "resolution": "It emerges that Maeve and Dana were together during Maeve's Cork posting; Dana transferred to St. Brendan's partially to keep an eye on her; by the finale they acknowledge the relationship ended because Maeve chose the bottle over Dana, and begin cautiously rebuilding"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+2 Hinweis(e):
+
+- Scene 2: Beat 6 states 'The audience sees plainly what Aya doesn't yet suspect: Zhao is steering the story herself,' prematurely revealing that Zhao is the anonymous orchestrator of Aya's investigation, a core solution of The Front Page thread.
+- Scene 12: Beat 3 states Zhao 'already knows exactly what tonight's photograph contains, having watched it generate herself,' which prematurely reveals that Zhao is actively monitoring and controlling the photo-generation system (Panopticon).

@@ -37,7 +37,7 @@ REQUIRED SCHEMA (follow exactly):
       "description": "string — who this role is in the show (for the scriptwriter)"
     },
     "ROLE_NAME": {
-      "voice": "string — a DIFFERENT Qwen3-TTS built-in speaker. The local server has EXACTLY these nine (never invent others): Ryan (m, native English), Aiden (m, native English), Ethan (m, Chinese-native), Dylan (m, Chinese-native), Eric (m, Chinese-native), Uncle_Fu (m, elderly Chinese), Chelsie (f, Chinese-native), Serena (f, Chinese-native), Vivian (f, Chinese-native). Use Chinese-native voices for Chinese characters (their accent is a feature here); Ryan/Aiden fit the HOST or non-Chinese learner characters.",
+      "voice": "string — a DIFFERENT Qwen3-TTS built-in speaker. The local server has EXACTLY these (never invent others): {{VOICE_ROSTER_COMPACT}}. Use Chinese-native voices for Chinese characters (their accent is a feature here — prefer them over Japanese/Korean-native voices for Mandarin dialogue); Ryan/Aiden fit the HOST or non-Chinese learner characters.",
       "default_style": "string — the character's baseline acting instruction",
       "description": "string — character sketch: age, personality, function in the plot"
     }
@@ -49,7 +49,7 @@ REQUIRED SCHEMA (follow exactly):
     "words_per_part_max": 500
   },
   "generation": {
-    "model": "claude-sonnet-5"
+    "model": "{{DEFAULT_MODEL}}"
   },
   "audio": {
     "api_url": "http://127.0.0.1:42003",

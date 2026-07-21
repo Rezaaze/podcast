@@ -1,0 +1,47 @@
+{
+  "lines": [
+    {
+      "speaker": "NARRATOR",
+      "style": "calm",
+      "text": "Der Wind kommt von See her. Jonas Falk steht am äußersten Rand des Kliffweges, wo das Geländer längst verrostet und weggefallen ist. Unter ihm: Felsen. Vor ihm: der Turm."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "Er öffnet das Notizbuch. Seite vierzig. Die ersten neununddreißig hat er zu Hause, in einer Schachtel unter dem Bett. Er schreibt nicht mit dem Stift — er drückt. Als ob die Zahlen sich ins Papier graben müssten, um wahr zu sein."
+    },
+    {
+      "speaker": "Jonas Falk",
+      "speed": 0.88,
+      "style": "murmur",
+      "text": "Vierzehn Uhr sieben. Erdgeschoss, zweites Fenster von links. Vorhang bewegt."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "Er wartet. Der Turm gibt nichts preis. Das ist es, was ihn alarmiert hat — nicht das, was er sieht, sondern der Rhythmus dessen, was er nicht sieht."
+    },
+    {
+      "speaker": "Jonas Falk",
+      "speed": 0.85,
+      "style": "murmur",
+      "text": "Zu regelmäßig für Zufall. Zu unregelmäßig für eine Maschine."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "Eine Möwe schießt tief über ihn hinweg. Er zuckt nicht. Er hat gelernt, ruhig zu bleiben, wenn etwas nahe kommt."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "Vierzehn Uhr neun. Das Fenster dunkel. Jonas streicht die letzte Eintragung nicht durch. Er umkreist sie."
+    },
+    {
+      "speaker": "Jonas Falk",
+      "speed": 0.9,
+      "style": "murmur",
+      "text": "Noch zwei Tage. Dann hab ich das Muster."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "Er klappt das Notizbuch zu. Der Wind dreht sich. Irgendwo im Turm bewegt sich ein Schatten."
+    }
+  ]
+}

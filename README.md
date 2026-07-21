@@ -4,7 +4,7 @@ Automatisierte Pipeline für Podcast-Serien: Claude schreibt die Skripte,
 eine lokale Qwen3-TTS-API vertont sie, am Ende steht eine gemasterte MP3 pro
 Episode plus eine Gesamt-Anthologie.
 
-Zwei Modi (`episodes.json` → `mode`), fünf Templates (`episodes.json` →
+Zwei Modi (`episodes.json` → `mode`), sechs Templates (`episodes.json` →
 `template`, wählt Creator-Prompt + Schreib-Prompt):
 
 - **narration** (`mode: narration`, Template `narration`) — Ein Erzähler für
@@ -42,16 +42,21 @@ Zwei Modi (`episodes.json` → `mode`), fünf Templates (`episodes.json` →
     Wissens-Trennung wie crime_drama), und die Anzahl der Sections pro
     Episode ist NICHT fest (4–7, je nachdem wie viele Stränge in der
     Episode Raum brauchen). Siehe `templates/soap_opera/EPISODES_CREATOR_PROMPT.md`.
+  - **shorts** — Hook-first-Kurzform für vertikale Videos (TikTok/Reels):
+    1–3-Minuten-Episoden (Hook → Turn → Sting), kleine Besetzung (2–3
+    Rollen + NARRATOR), `case` als Liste mit meist einem Micro-Thread,
+    `locations` als Video-Hintergründe für einen eigenen 9:16-Video-Export.
+    Siehe `templates/shorts/EPISODES_CREATOR_PROMPT.md`.
 
-  Beide (`crime_drama`, `soap_opera`) verlangen zusätzlich eine feste
+  Beide langen Fall-Formate (`crime_drama`, `soap_opera`) verlangen zusätzlich eine feste
   `NARRATOR`-Rolle (built-in Stimme, kein Voice-Clone): pure Audio-Formate
   ohne Bildspur brauchen 1–2 gesprochene Orientierungszeilen pro Part (wo,
   wann, wer ist da), sonst wirkt reiner Ensemble-Dialog schnell
   orientierungslos — `NARRATOR` ist keine Figur und bekommt kein
   `character_knowledge`-Slice.
 
-Vier der fünf Templates (narration, language_course, crime_drama,
-soap_opera) sind in der WebUI beim "Serie erstellen"-Schritt als Dropdown
+Fünf der sechs Templates (narration, language_course, crime_drama,
+soap_opera, shorts) sind in der WebUI beim "Serie erstellen"-Schritt als Dropdown
 wählbar; `media_analysis` aktuell nur per CLI-Flag `--template
 media_analysis` (noch nicht im WebUI-Dropdown ergänzt). Das
 Status-Dashboard zeigt Titel + aktives Template pro Serie unabhängig davon
@@ -92,19 +97,25 @@ templates/
   language_course/       Prompts für Sprachkurs-Hörspiele (HSK-Niveaus)
   crime_drama/           Prompts für Multi-Voice-Krimi mit Fallakten
   soap_opera/            Prompts für Ensemble-Seifenoper mit parallelen Strängen
-data/series/<slug>/           eine Serie = ein Ordner (beliebig viele parallel)
-  episodes.json          Single Source of Truth der Serie
-  scripts/               generierte Skripte (ep1.txt, ep1_META.txt, ...)
-  output/                MP3s, Checkpoints, SFX-Cue-Sheets, Sprecher-Timelines
-                         (*_SPEAKERS.json/.txt), Orte-Timeline (*_LOCATIONS.json),
-                         Untertitel (*.srt), Kapitel
-                         (ANTHOLOGY_COMPLETE_CHAPTERS.json), UPLOAD_INDEX.md
-  characters/            Charakter-Porträts (ROLLE.png, + ROLLE_<emotion>.png) + PROMPTS.txt
-  locations/             Orts-Hintergrundbilder (ORT_KEY.png) + PROMPTS.txt
-                         (nur bei Serien mit `locations`-Mapping, z.B. soap_opera)
-  intro.mp3 (optional)   Jingle am Episodenanfang, automatisch eingesetzt
-  outro.mp3 (optional)   Jingle am Episodenende
-  transition.mp3 (opt.)  Szenenwechsel-Sting statt purer Stille zwischen Parts
+data/series/<slug>/           eine Serie = ein MWP-Workspace (beliebig viele parallel;
+                         Ordnerstruktur = Pipeline, siehe docs/mwp-umbau-plan.md)
+  CLAUDE.md / CONTEXT.md Workspace-Identität + Stage-Routing
+  stages/01_concept/     CONTEXT.md (Vertrag) + output/episodes.json
+                         (Single Source of Truth der Serie)
+  stages/02_scripts/     CONTEXT.md + output/: generierte Skripte
+                         (ep1.txt, ep1_META.txt, BEATS/REVIEWs)
+  stages/03_audio/       CONTEXT.md + output/: MP3s, Checkpoints, SFX-Cue-Sheets,
+                         Sprecher-Timelines (*_SPEAKERS.json/.txt), Orte-Timeline
+                         (*_LOCATIONS.json), Untertitel (*.srt), Kapitel,
+                         UPLOAD_INDEX.md
+  stages/04_visuals/     CONTEXT.md + output/characters/ (ROLLE.png +
+                         ROLLE_<emotion>.png + PROMPTS.txt), output/locations/
+                         (ORT_KEY.png; nur bei Serien mit `locations`-Mapping)
+  references/            PROMPT_TEMPLATE.md — die pro Serie editierbare Kopie
+                         des Skript-Prompts (Master unter templates/ bleibt
+                         unberührt) + EPISODES_CREATOR_PROMPT.md (Doku)
+  assets/                intro.mp3 / outro.mp3 / transition.mp3 (optional:
+                         Jingles + Szenenwechsel-Sting, automatisch eingesetzt)
 data/series/LATEST            Slug der zuletzt angelegten Serie (Standard für alle CLIs)
 webui/                   lokale Steuer-Oberfläche
 cloud/                   vast.ai-GPU-Automation (siehe cloud/README.md)
@@ -116,9 +127,9 @@ Alle CLIs akzeptieren `--series <slug>`; ohne Flag gilt `data/series/LATEST`
 ## Workflow
 
 ```
-fabrik.cli.create_series "Thema" [--template language_course]  ──▶ data/series/<slug>/episodes.json
-fabrik.cli.generate_episode all        ──(Claude)──▶ scripts/ep1.txt, ep2.txt, ...
-fabrik.cli.podcast_maker ep1.txt       ──(Qwen3-TTS)──▶ output/Ep1_FULL_EPISODE.mp3 (+ Ep1_SFX_CUES.txt)
+fabrik.cli.create_series "Thema" [--template language_course]  ──▶ stages/01_concept/output/episodes.json
+fabrik.cli.generate_episode all        ──(Claude)──▶ stages/02_scripts/output/ep1.txt, ...
+fabrik.cli.podcast_maker ep1.txt       ──(Qwen3-TTS)──▶ stages/03_audio/output/Ep1_FULL_EPISODE.mp3
 fabrik.cli.batch                       ──▶ alle Episoden + ANTHOLOGY_COMPLETE.mp3
 ```
 
@@ -161,7 +172,7 @@ fabrik.cli.batch                       ──▶ alle Episoden + ANTHOLOGY_COMPL
 
    ```bash
    python3 -m fabrik.cli.generate_episode check    # nur episodes.json validieren
-   python3 -m fabrik.cli.generate_episode 1        # Episode 1 → scripts/<prefix>1.txt
+   python3 -m fabrik.cli.generate_episode 1        # Episode 1 → stages/02_scripts/output/<prefix>1.txt
    python3 -m fabrik.cli.generate_episode all      # alle Episoden (parallel, --jobs N),
                                         # startet danach automatisch batch.py
    ```
@@ -307,12 +318,11 @@ Welcome back to the tea house...
 
 Referenz-Beispiel: `data/series/tea_house_mysteries/` (HSK 3–4 Pilot-Serie).
 
-## Video-Podcast (Lolfi-Integration)
+## Visuelle Assets (Porträts, Orte, Cover, Thumbnails)
 
-Das Schwester-Projekt `../Lolfi` (`lofi_system.py`) rendert aus der fertigen
-Anthologie ein Video: geloopter Ambient-Clip als Bild, die Episode(n) als
-Tonspur. Die Podcast-Fabrik liefert dafür automatisch alle Metadaten — Lolfi
-findet sie neben der Tonspur im `output/`-Ordner der aktiven Serie:
+Für Cover-Kunst, Social-Media-Assets oder einen eigenen Video-Export liefert
+die Pipeline zusätzlich zu Audio/Skript optionale Bild-Assets, alle im
+`output/`-Ordner der aktiven Serie:
 
 - **Charakter-Porträts:** `python3 -m fabrik.cli.character_prompts` (oder der
   WebUI-Schritt "Charakter-Porträts") erzeugt pro Drama-Rolle einen
@@ -322,36 +332,30 @@ findet sie neben der Tonspur im `output/`-Ordner der aktiven Serie:
   generiert und als `data/series/<slug>/characters/<ROLLE>.png` bzw.
   `<ROLLE>_<emotion>.png` abgelegt (`--no-images` erzwingt Prompts-only auch
   mit gesetztem Key); ohne Key bleibt es bei `characters/PROMPTS.txt` zum
-  Einfügen in ein beliebiges Bildmodell. Lolfi blendet das Porträt unten
-  links ein, solange die Figur spricht (Quelle: `*_SPEAKERS.json`), inkl.
-  Namens-Label ("Mara Voss"), und wechselt automatisch zur passenden
-  `_<emotion>.png`-Variante, sobald für die Zeile eine erkannt wird.
+  Einfügen in ein beliebiges Bildmodell. Ein eigener Video-Export könnte
+  die Sprecher-Timeline (`*_SPEAKERS.json`) nutzen, um pro Sprech-Abschnitt
+  das passende Porträt (inkl. erkannter Emotion) einzublenden.
 - **Szenen-Orte:** bei Serien mit `locations`-Mapping (`episodes.json`, z.B.
   `soap_opera`) erzeugt `python3 -m fabrik.cli.location_prompts` (oder der
   WebUI-Schritt "Szenen-Orte") dieselbe Prompt(+Bild)-Pipeline für
   Hintergrundbilder statt Porträts — `data/series/<slug>/locations/<ORT_KEY>.png`
-  (Landscape, für den Video-Hintergrund), gleiches `OPENAI_API_KEY`/
-  `--no-images`-Verhalten wie bei den Porträts. Lolfi tauscht den
-  Video-Hintergrund passend zur gerade aktiven Szene, ohne manuelles
-  Timestamping (Quelle: `*_LOCATIONS.json`, aus den Section-Grenzen
-  abgeleitet); ohne Match läuft der normale Loop-Clip weiter.
-- **Emotionen:** der Zeilen-Style wird per Keyword-Listen einer Emotion
-  zugeordnet (Wut/Angst/Trauer/Freude/Überraschung/Zärtlichkeit) — farbiges
-  Panel hinter dem Porträt + Emoji-Badge, nur für die Dauer der Spanne.
-  Konfiguration: `EMOTIONS`-Tabelle in `lofi_system.py`.
-- **Episodentitel-Karten:** beim Start jeder Episode wird ihr Titel oben
-  mittig eingeblendet (weich gefadet; Quelle: `*_CHAPTERS.json` bzw. die
-  META-Datei der Einzelepisode).
-- **Untertitel & Kapitel:** `.srt` und YouTube-Kapitelliste (siehe oben)
-  werden nicht ins Video gebrannt, sondern beim Upload mitgegeben.
+  (Landscape, für einen Video-Hintergrund), gleiches `OPENAI_API_KEY`/
+  `--no-images`-Verhalten wie bei den Porträts. Die Location-Timeline
+  (`*_LOCATIONS.json`, aus den Section-Grenzen abgeleitet) markiert, wann
+  die Handlung an welchem Ort spielt.
+- **Episoden-Thumbnails:** `python3 -m fabrik.cli.episode_thumbnails` (läuft
+  automatisch am Ende jeder Episoden-Generierung) erzeugt pro Episode ein
+  dramatisches, spoilerfreies Poster-Motiv mit kurzer Hook-Zeile, im
+  Querformat (16:9) und quadratisch (1:1) — `data/series/<slug>/.../
+  thumbnails/<prefix>N_wide.png` bzw. `_square.png`.
 - **Cover-Art:** `python3 -m fabrik.cli.cover_art` erzeugt einmalig ein
   1024×1024-Serien-Cover via `gpt-image-1-mini` (braucht `OPENAI_API_KEY`,
-  kein Prompts-only-Fallback) und kopiert es standardmäßig zusätzlich auf
-  eine externe Backup-Platte (`--no-copy` zum Abschalten).
-
-Text-Einblendungen laufen über Pillow-gerenderte PNGs + ffmpeg `overlay`
-(das Homebrew-ffmpeg hat keinen drawtext-Filter) — `pip install pillow`
-genügt, ein Systemfont wird automatisch gefunden.
+  kein Prompts-only-Fallback) und kopiert es standardmäßig zusätzlich in den
+  Serien-Ordner der externen Backup-Platte
+  (`/Volumes/NO NAME/Podcasts/<Serientitel>/`, wird bei Bedarf angelegt;
+  `--no-copy` zum Abschalten).
+- **Untertitel & Kapitel:** `.srt` und YouTube-Kapitelliste (siehe oben)
+  werden beim Upload mitgegeben.
 
 ## Story-Import: bestehenden Text statt Claude erfinden lassen
 

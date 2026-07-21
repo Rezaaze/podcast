@@ -1,0 +1,903 @@
+--- PART 1 ---
+
+[NARRATOR]
+Previously on The Midnight Frame: Hae found the torn receipt for a private investigator tucked into Noah's coat, and still believes the lie he told to cover it — that it was only ever about an old break-in. Aya, the Herald reporter who broke the Midnight Photographer story wide open, came away from the archive room with one photograph she can't yet explain: a server room humming somewhere she has no name for. And Noah, staring down another stranger's face pinned to his wall, chose to wait one more night before pressing Feng for answers.
+
+[NARRATOR]
+It's well past midnight in the Herald newsroom, the floor emptied out except for one lit desk. Aya sits alone with the final draft of her story, the cursor blinking over the line that names Noah.
+
+[AYA_MORITA | style: hushed but electric]
+Detective Noah Kestrel. Forty-eight days. Forty-eight photographs. And a department program nobody outside four walls was ever supposed to hear about.
+
+[AYA_MORITA | style: second-guessing]
+He doesn't know I'm running with this tonight. He thinks I'm still waiting on one more source.
+
+[AYA_MORITA | style: aching, brief]
+Eleven interviews. Eleven times I sat across from him and told myself it was only research.
+
+[AYA_MORITA | style: torn]
+If this were about anyone else, I'd have filed it two weeks ago.
+
+[AYA_MORITA | style: clipped, arguing with herself]
+There's no more waiting. Reyes gave me until Friday or he hands the whole thing to Castillo. Friday isn't a deadline anymore. It's tonight.
+
+[AYA_MORITA | style: softer, uncertain]
+Maybe I call him first. Tell him it's coming. Give him that much.
+
+[SFX: a keyboard clatter, then silence]
+
+[AYA_MORITA | style: hardening]
+No. I call him, he talks me out of it, or worse, he doesn't — and then I've handed him a warning nobody else in this story gets. A source who tips off page one before it runs isn't a reporter. She's a girlfriend with a byline.
+
+[AYA_MORITA | style: resolute]
+This is the story. It's bigger than what I feel about one detective who happens to be standing in the middle of it.
+
+[AYA_MORITA | style: steady, final]
+Whoever's been handing me pieces of this for six months trusted me to run it when it mattered. It matters now.
+
+[SFX: a soft chime, an email departing]
+
+[AYA_MORITA | style: exhaling, hollow]
+Sent.
+
+[NARRATOR]
+The newsroom stays silent around her. Somewhere across the city, a printing press is already warming up for the morning run.
+
+--- PART 2 ---
+
+[NARRATOR]
+Dawn, day forty-eight. Noah's apartment, hours after Aya's story left her hands. He hasn't slept.
+
+[SFX: a phone buzzing once against a wooden table]
+
+[NOAH_KESTREL | style: flat, rehearsed]
+Right on time.
+
+[NOAH_KESTREL | style: clinical]
+New face. Never seen him before in my life.
+
+[NOAH_KESTREL | style: dry, self-mocking]
+Forty-something days and I still say that like it means something.
+
+[SFX: a printer whirring and feeding paper]
+
+[NOAH_KESTREL | style: distant, calculating]
+Same server ping. Same four-minute window it's used since the start. Whoever built this doesn't improvise.
+
+[NOAH_KESTREL | style: quietly certain]
+One name keeps not showing up in that basement's paperwork. An old man who sells cameras nobody buys anymore.
+
+[SFX: a pushpin pressed into corkboard]
+
+[NOAH_KESTREL | style: hardened, matter-of-fact]
+Forty-one. Right next to yesterday's stranger.
+
+[NOAH_KESTREL | style: bitter, low-burn]
+Funny. I used to lose sleep over these faces. Now I lose sleep over the one face that's never on the wall.
+
+[NOAH_KESTREL | style: resolved]
+Today I ask Feng what he actually knows. No more coffee-shop patience.
+
+[NARRATOR]
+He has no way of knowing that across the city, a truck is already loading bundles of the morning's Herald — his own name printed above the fold.
+
+--- PART 3 ---
+
+[NARRATOR]
+Dawn has fully broken over Harbor City, day forty-eight of the photograph ritual, and the bullpen fills for shift change — the same detective who pinned a stranger's face to his corkboard an hour ago now back among his colleagues.
+[NARRATOR]
+Someone drops a folded copy of the Herald onto Noah's desk without a word.
+
+[SFX: a folded newspaper slapping onto a desk]
+
+[NOAH_KESTREL | style: flat, reading the headline]
+"Inside the Department's Secret Eye." Christ.
+
+[NARRATOR]
+Around him the ordinary churn of shift change dies out — phones set down mid-dial, conversations trailing off unfinished, every head in the room bent toward the same front page.
+
+[NOAH_KESTREL | style: reading under his breath, clipped]
+"...a covert surveillance apparatus, operating without oversight, tracking a member of the department's own homicide unit..." They're not guessing. Somebody handed them this.
+
+[NOAH_KESTREL | style: hollowed out, disbelieving]
+Aya Morita.
+
+[NARRATOR]
+He says the byline aloud, like testing whether it still means what it did yesterday.
+
+[NOAH_KESTREL | style: stung, fighting to keep it level]
+Eleven sit-downs. Eleven times across a table from her, and she couldn't pick up a phone first.
+
+[NOAH_KESTREL | style: sharpening, hard-edged]
+Server room, old records wing. Metadata pulled without a warrant, down to the hallway number. That's not something a stringer overhears in a bar. Someone inside drew her the floor plan.
+
+[NARRATOR]
+He scans the column a second time, then a third, marking off each detail that couldn't have crossed the building's front doors — a shift log, a case number, a phrase he's only ever heard said inside this precinct.
+
+[NOAH_KESTREL | style: grim, deciding]
+Somebody close is talking to her. And I'm going to know who before this paper prints again.
+
+[SFX: a chair shoved back hard against tile]
+
+[NARRATOR]
+He's on his feet before he's chosen where to go — and across the bullpen, behind a wall of glass, Captain Zhao has already unfolded the very same front page.
+
+--- PART 4 ---
+
+[NARRATOR]
+Before the bullpen fully wakes, Captain Lily Zhao sits alone behind the glass wall of her office — the precinct's commanding officer, and the only person in the building who knows what still runs in the records basement. The Herald lies open across her desk, dawn light cutting through the blinds.
+
+[LILY_ZHAO | style: flat, reading under her breath]
+"Sources describe a covert monitoring program operating without oversight."
+
+[LILY_ZHAO | style: controlled, private]
+That's the phrase I gave her in March. Word for word.
+
+[LILY_ZHAO | style: tight]
+And this — the timeline on the funding gap. I fed her that in April.
+
+[SFX: a newspaper page turned sharply]
+
+[LILY_ZHAO | style: clipped, calculating]
+Six sources cited. Four of them are me.
+
+[LILY_ZHAO | style: hollow]
+This wasn't supposed to run for another month. Not until the network had somewhere to fall.
+
+[LILY_ZHAO | style: brittle, quiet fury at herself]
+She moved early. Or her editor did. Doesn't matter which.
+
+She opens a drawer, lifts out a second phone — cheap, unregistered, its only saved contact a string of numbers with no name attached.
+
+[LILY_ZHAO | style: measured, thumb hovering]
+One call. Tell her to slow down, tell her what's coming—
+
+[LILY_ZHAO | style: catching herself, cold]
+And if this line's ever pulled apart in an inquiry, that call is the first thing that puts my name next to hers.
+
+[SFX: the burner phone set down hard on the desk]
+
+[LILY_ZHAO | style: steadying, forcing calm back into her voice]
+No. Not today.
+
+[NARRATOR]
+Through the glass, a junior officer passes with a copy of the same front page tucked under his arm, laughing at something with a colleague. Zhao straightens, smooths the paper flat, and folds it once — a gesture that looks, from the outside, entirely unbothered.
+
+[LILY_ZHAO | style: rehearsed, professional mask sliding into place]
+Leak investigation. Full press blackout. Standard procedure.
+
+[LILY_ZHAO | style: barely audible, alone again]
+Just — hold four months longer. That's all I needed.
+
+[NARRATOR]
+She rises, buttons her jacket, and reaches for the door handle — every line of her posture ready for the briefing she's about to call, none of it betraying how carefully she's counting the hours until someone asks the one question she has no safe answer for.
+
+--- PART 5 ---
+
+[NARRATOR]
+Behind the restaurant, in a cramped office stacked with invoices, Danny Wu — the young detective racing Noah for the same promotion — sits alone as his phone lights up with a name saved only as a single word.
+
+[DANNY_WU | style: clipped, professional]
+Sonny. Little early for you.
+
+[DANNY_WU | style: listening, jaw tightening]
+Wait. Slow down. The whole eighty, in three days? That's not what we—
+
+[DANNY_WU | style: bargaining, controlled]
+Or what. You said "or." Or what.
+
+[DANNY_WU | style: guarded, careful]
+One piece. Fine. What piece.
+
+[DANNY_WU | style: pressing, low urgency]
+You can't just leave that hanging, Sonny, I need to know what I'm—
+
+[SFX: a phone call disconnecting with a soft click]
+
+[DANNY_WU | style: stunned, breath catching]
+Sonny? Sonny.
+
+[NARRATOR]
+The line stays dead. Danny sets the phone face-down on the desk like it might still be listening.
+
+[DANNY_WU | style: shaken, quiet]
+Seventy-two hours.
+
+[NARRATOR]
+He straightens his collar in the mirror by the door, exhales once, and walks back toward the dining room wearing his usual face.
+
+--- PART 6 ---
+
+[NARRATOR]
+The Herald story pulls us back to the precinct bullpen, an hour after shift change. Kai Chen, Noah's partner since he transferred in from Beijing as a teenager, spreads the front page flat across two cold coffee cups.
+
+[KAI_CHEN | style: incredulous]
+Listen to this part again. "Sources within the department describe a surveillance apparatus operating without oversight, without a case number, without a judge ever signing off on it." Noah. Whoever wrote this down had a badge.
+
+[NOAH_KESTREL | style: flat, controlled]
+Or a very good imagination.
+
+[KAI_CHEN | style: reading, absorbed]
+No, listen — "cross-referencing phone metadata with movement patterns to generate predictive output." That's not imagination, that's a system description. Somebody sat in a briefing and took notes.
+
+[NARRATOR]
+Noah says nothing. He recognizes the phrase almost exactly from a memo he once glimpsed on Zhao's desk, face-down, months ago.
+
+[NOAH_KESTREL | style: guarded]
+Read the byline again.
+
+[KAI_CHEN]
+Aya Morita. Same one who's been on the Photographer story since day one.
+
+[NOAH_KESTREL | style: carefully neutral]
+Four stories in six months and now this.
+
+[KAI_CHEN | style: shaking his head]
+It reads like she's had this in a drawer for weeks. Somebody handed her the keys.
+
+[NARRATOR]
+Kai sets the paper down and taps a paragraph near the bottom.
+
+[KAI_CHEN | style: lower, more serious]
+This bit worries me more than the rest. "The subject of the surveillance remains unaware he is being monitored." That's not a department, Noah. That's a person. Somebody specific.
+
+[NOAH_KESTREL | style: quiet, thinking aloud]
+Yeah.
+
+[KAI_CHEN | style: irritated]
+Some clerk with a grudge, probably. Passed over for a promotion, decided to burn the whole building down on the way out.
+
+[NOAH_KESTREL]
+Maybe.
+
+[NARRATOR]
+He doesn't correct him. He doesn't mention the timestamp on his phone, or the folder Zhao keeps locked in a drawer only she opens, or the old man behind the camera counter three blocks from here.
+
+[KAI_CHEN | style: half-joking, half-serious]
+You're quiet. You're never this quiet about a leak.
+
+[NOAH_KESTREL | style: measured]
+Just reading.
+
+[NARRATOR]
+Kai studies him a beat, then lets it go, folding the paper under his arm as his own phone buzzes with a case update. He doesn't see the way Noah's eyes stay fixed on that one paragraph, or the way his suspicion has already stopped pointing outward — toward some stranger, some disgruntled clerk — and started pointing, quietly and precisely, toward someone standing much closer to him.
+
+--- PART 7 ---
+
+[NARRATOR]
+Morning light through a kitchen window, apartment above a corner of the city Noah no longer visits. Hae, at the small table, the woman Noah married and separated from eight months ago, scrolls her phone over a bowl gone soft with milk.
+
+[HAE_SONG | style: reading, flat]
+"Sources inside the department describe a covert monitoring apparatus operating without oversight for years." God. Written down like that, it sounds almost tame.
+
+[NARRATOR]
+She sets the spoon down. Reads the paragraph again, slower.
+
+[HAE_SONG | style: unsettled, trying to place something]
+Tracking one individual continuously. Without their knowledge, without a warrant, without anyone signing off on it.
+
+[NARRATOR]
+Her thumb stills over the screen.
+
+[HAE_SONG | style: quietly to herself, uneasy]
+Somebody watching somebody else. Every day. And calling it procedure.
+
+[NARRATOR]
+A drawer, three streets from here, holds a receipt she found and never fully let go of — money spent, unexplained, on a man Noah swore was only chasing a break-in.
+
+[HAE_SONG | style: recalling, guarded]
+An old break-in. That's what he said. Fourteen thousand dollars for somebody to run down a break-in report that never even made the file.
+
+[NARRATOR]
+She sets the phone face-down, picks it back up almost immediately.
+
+[HAE_SONG | style: turning it over, half to herself]
+He gets a program built to watch one person without them knowing. I got a story about a break-in that doesn't add up to fourteen grand no matter how you count it.
+
+[NARRATOR]
+She pushes the bowl away, appetite gone.
+
+[HAE_SONG | style: trying to talk herself down]
+It's not the same thing. A newspaper story and one receipt in a drawer. I'm reaching because it's early and I haven't slept.
+
+[NARRATOR]
+But her eyes go back to the phone, to the line about tracking one individual continuously.
+
+[HAE_SONG | style: unable to let it drop, low]
+He never once told me who. Just that it was handled, that it was closed, that I shouldn't worry about it.
+
+[NARRATOR]
+She thinks of Noah's face the night she found the receipt — the practiced calm, the answer that came a beat too fast.
+
+[HAE_SONG | style: newly doubting, quiet]
+People don't usually have an answer ready before you've finished asking the question.
+
+[NARRATOR]
+She scrolls further, past the fold, to a photograph of a hallway she doesn't recognize.
+
+[HAE_SONG | style: shaking it off, firmer]
+It's a coincidence. Departments hide things. Husbands hide things. Doesn't mean they're hiding the same thing.
+
+[NARRATOR]
+She says it like she believes it. She reads the last paragraph twice more before she leaves for work, and doesn't manage to believe it either time.
+
+--- PART 8 ---
+
+[NARRATOR]
+Midday at the Wu family restaurant, the lunch rush thinning. Danny works the kitchen line, still shaken from the call that came less than an hour ago.
+
+[DANNY_WU | style: clipped, sharp]
+That's the wrong ticket. I said no scallion on table six, we've been over this.
+
+[DANNY_WU | style: sharp, unraveling]
+Read it back to me. Read the ticket back to me right now.
+
+[NARRATOR]
+The line cook stammers an apology. Around them, the rest of the kitchen staff go quiet, trading glances.
+
+[SFX: a metal tray set down hard on a steel counter]
+
+[DANNY_WU | style: forcing calm, failing]
+Just— fix it. Fire a new plate. We don't have time for this today.
+
+[NARRATOR]
+The back door swings open. Hae steps in from the alley, unannounced, the tension in the room hitting her before anyone says a word.
+
+[HAE_SONG | style: careful, reading the room]
+Okay. What did that ticket ever do to you.
+
+[DANNY_WU | style: too bright, covering]
+Hae. Hey. Didn't know you were coming by.
+
+[HAE_SONG | style: gentle but direct]
+I wasn't planning to. I was in the neighborhood, and then I heard you from the sidewalk.
+
+[NARRATOR]
+She glances past him at the crew, who've all found something urgent to do with their hands.
+
+[HAE_SONG | style: steady, watching him]
+Danny. Something's wrong. You don't yell at Marcus. You've never yelled at Marcus.
+
+[DANNY_WU | style: light, deflecting]
+I yelled at a scallion. There's a difference.
+
+[HAE_SONG | style: not buying it, soft]
+That's not what that was.
+
+[NARRATOR]
+Danny wipes his hands on his apron, buying himself a beat, then turns the charm back on like flipping a switch.
+
+[DANNY_WU | style: warm, rehearsed]
+Supplier shorted us on the fish delivery, half the walk-in's a mess, and my mom's been calling about the dining room chairs since eight a.m. It's just one of those mornings.
+
+[HAE_SONG | style: skeptical, gentle]
+One of those mornings usually doesn't make your hands shake.
+
+[NARRATOR]
+He glances down, notices it too, and folds his arms to hide it.
+
+[DANNY_WU | style: easy, closing the subject]
+Low blood sugar. I haven't eaten. You want to fix that, come sit with me for ten minutes.
+
+[HAE_SONG | style: quiet, letting it go]
+I've got twenty, not ten.
+
+[NARRATOR]
+She lets herself be steered toward a back table, unconvinced but unwilling to push. Danny follows her, glancing once toward the office where his phone sits face-down, the seventy-two hours already ticking.
+
+--- PART 9 ---
+
+[NARRATOR]
+The Herald newsroom, mid-morning. Phones ring unanswered at empty desks while half the floor gathers near the city desk, where Aya's editor has produced a bottle he's clearly been saving.
+
+[SFX: champagne cork popping]
+
+[NARRATOR]
+He raises his glass toward her, calling out the exclusive by name before the room joins in.
+
+[AYA_MORITA | style: bright, performing gratitude]
+Okay, okay — it's one story. Save the toast for when the follow-up runs.
+
+[SFX: glasses clinking]
+
+[AYA_MORITA | style: laughing, a beat too fast]
+Six months, three dead ends, and one editor who wouldn't stop asking when it'd be done. There's your toast.
+
+[NARRATOR]
+Laughter rolls through the desks. Someone claps her on the shoulder, another reporter leans in to ask how she beat the competing paper to it.
+
+[AYA_MORITA | style: deflecting smoothly]
+Good sources. That's the whole secret. I'm not giving you more than that.
+
+[NARRATOR]
+Her editor lifts his glass again, calling her the best byline the paper's had all year, and the floor answers with a round of approval she waves off with both hands.
+
+[AYA_MORITA | style: gracious, brittle underneath]
+Stop. You're going to jinx the follow-up.
+
+[NARRATOR]
+The praise keeps coming — a producer wants her for a radio hit, someone else asks if she's got a second source lined up. She answers each one on reflex, easy and quick, while her attention keeps sliding somewhere else entirely.
+
+[AYA_MORITA | style: to herself, the smile dropping]
+He's read it by now.
+
+[NARRATOR]
+Her phone sits face-down on the desk, untouched since she filed. She doesn't turn it over.
+
+[AYA_MORITA | style: bracing, private]
+He'll think I used him.
+
+[NARRATOR]
+A colleague refills her glass without asking. She thanks him, drinks, and lets the noise of the room close back over her, still certain the tip that built this story came from nothing more than a junior officer with a grudge — no idea whose hand actually steered every page of it, or how far ahead of schedule she's just pushed it.
+
+[SFX: a chair scraping back as someone rises to propose another toast]
+
+[AYA_MORITA | style: quietly bracing herself as the noise rises around her]
+Tomorrow. I'll deal with tomorrow.
+
+--- PART 10 ---
+
+[NARRATOR]
+Morning light through Feng's shop window catches dust drifting over rows of old cameras. Noah Kestrel steps inside, the folded Herald under his arm, and finds the elderly shopkeeper — the man he's confided in for months — already behind the counter, sorting lenses into a felt-lined tray.
+
+[NOAH_KESTREL | style: measured, watching closely]
+Thought you'd want to see this before someone else brought it in.
+
+[NARRATOR]
+Noah sets the newspaper down, front page facing up.
+
+[MR_FENG | style: unhurried, reaching for the paper]
+The Herald doesn't usually make it this far east.
+
+[NARRATOR]
+Feng scans the headline. His hands, mid-motion over the lens tray, stop completely.
+
+[SFX: a small brass lens cap dropped onto a wooden counter]
+
+[NOAH_KESTREL | style: deliberately casual, testing]
+Department's got a program nobody's supposed to know about. Tracking somebody, apparently. Sound familiar?
+
+[NARRATOR]
+The stillness holds a beat too long before Feng answers.
+
+[MR_FENG | style: carefully even, recovering]
+Sounds like every newspaper story I've ever read. Somebody always knows something they shouldn't.
+
+[NARRATOR]
+He picks the lens cap back up, turns it over twice, sets it in the tray with exaggerated care.
+
+[MR_FENG | style: brightening too fast]
+I found something for you, actually. Come. Before I forget again.
+
+[NARRATOR]
+He moves toward the back shelf without waiting for a response.
+
+[NOAH_KESTREL | style: flat, unconvinced]
+Feng.
+
+[MR_FENG | style: over his shoulder, deflecting]
+A rangefinder. Nineteen sixty-something. The shutter's a little stiff, but the glass is clean.
+
+[NARRATOR]
+Noah doesn't move toward the shelf. He watches the old man's back instead.
+
+[NOAH_KESTREL | style: pressing gently, not letting it go]
+You changed the subject the day I brought up the metadata ping. You changed it again when I asked about the component I found in your drawer. Now this.
+
+[NARRATOR]
+Feng's hands, busy with the rangefinder, go still a second time — shorter now, but Noah catches it.
+
+[MR_FENG | style: quiet resolve masking strain]
+An old man repeats himself. It happens.
+
+[NARRATOR]
+He sets the camera on the counter between them, meeting Noah's eyes for the first time since the paper landed.
+
+[MR_FENG | style: gentle, closing the door]
+You didn't come here for a lecture on surveillance law. Take the camera. Go to work.
+
+[NARRATOR]
+Noah studies him a moment longer, then picks up the rangefinder without picking up the argument. Whatever Feng is protecting, it isn't ready to break yet — and neither of them says so out loud.
+
+--- PART 11 ---
+
+[NARRATOR]
+Back at the precinct, mid-morning. Captain Zhao has called every detective on the case into the briefing room, Noah and Danny among them, the folded Herald still sitting on more than one desk outside.
+
+[LILY_ZHAO | style: brisk, official]
+Effective immediately, nobody in this room talks to press. Not off the record, not background, not a confirmation of a single word in that article. If a reporter calls your desk phone, you transfer it to me.
+
+[KAI_CHEN | style: skeptical]
+Captain, with respect — half the bullpen already thinks somebody in this room is the leak. Silence is going to look like guilt.
+
+[LILY_ZHAO | style: controlled]
+Silence is procedure during an internal review. I'd rather look guilty for a week than hand a reporter a second story to run with our names attached.
+
+[NOAH_KESTREL | style: measured, watching her]
+Internal review. That's new. Yesterday you called it noise.
+
+[LILY_ZHAO | style: even, giving nothing away]
+Yesterday it was one detective's photographs on a corkboard. Today it's the department's name on the front page. The situation changed. My orders didn't — I still want this handled quietly, inside these walls.
+
+[NOAH_KESTREL | style: pressing gently]
+You keep landing on quiet. Every time.
+
+[LILY_ZHAO | style: flat, closing the subject]
+Because loud gets people hurt, Detective. Anything else?
+
+[NARRATOR]
+A beat of silence holds before Zhao moves on, scanning the room for questions that don't come. Danny sits near the back, his eyes on the table rather than on her.
+
+[LILY_ZHAO | style: pointed]
+Wu. Anything to add, or are you somewhere else this morning?
+
+[DANNY_WU | style: startled into focus]
+No — sorry, Captain. Just running short on sleep. Total silence, understood.
+
+[LILY_ZHAO | style: dry]
+Try running short somewhere that isn't my briefing.
+
+[SFX: a folder slapping shut on the table]
+
+[NARRATOR]
+The meeting breaks. Detectives file out in twos and threes, already trading theories under their breath. Noah lingers by the door.
+
+[NOAH_KESTREL | style: low, private, to Kai]
+She's rattled. I've worked under her three years, I've never seen her land on the same word twice like that.
+
+[KAI_CHEN | style: dismissive, still shaken from the article]
+She's rattled because her precinct's on the front page. That's not a mystery, that's Tuesday.
+
+[NOAH_KESTREL | style: unconvinced]
+Maybe.
+
+[NARRATOR]
+Noah doesn't push it further. Across the room, Danny is already gone, his phone in his hand before he's cleared the doorway, counting down a number none of them can see.
+
+--- PART 12 ---
+
+[NARRATOR]
+Later that morning, in the precinct's cold examination room, Noah and Kai stand over a body pulled from the harbor case still open on Noah's desk.
+
+[KAI_CHEN | style: focused, half to himself]
+Entry wound's cleaner than the initial report said. Somebody wrote this up sloppy.
+
+[NOAH_KESTREL | style: flat, procedural]
+Or somebody wrote it up exactly how it happened and the lab guessed wrong the first time.
+
+[SFX: a metal drawer sliding shut with a heavy clunk]
+
+[KAI_CHEN | style: still reading, distracted]
+Caliber matches what we logged. Angle doesn't. And that's odd — we never put the angle question in the file summary.
+
+[NOAH_KESTREL | style: sharpening, alert]
+Say that again.
+
+[KAI_CHEN | style: puzzled]
+The angle discrepancy. It's not in the summary, it's buried in my own handwritten notes. I never typed it up.
+
+[NOAH_KESTREL | style: measured, careful]
+Read me the line from the paper again.
+
+[KAI_CHEN | style: reading aloud, slower now]
+"Sources describe a pattern of entry wounds inconsistent with departmental ballistics reports." That's it. Word for word, practically.
+
+[NOAH_KESTREL | style: quiet, coiled]
+That's too close to be a coincidence.
+
+[KAI_CHEN | style: shaking it off]
+Or it's a reporter who knows how to make a vague line sound specific. They do that.
+
+[NOAH_KESTREL | style: guarded]
+Maybe.
+
+[KAI_CHEN | style: skeptical, scratching his jaw]
+It's a stretch to jump from one phrase to somebody in this building talking.
+
+[NOAH_KESTREL | style: low, private]
+I'm not saying it's this building. I'm saying it's somewhere close to me.
+
+[KAI_CHEN | style: turning it over, still unconvinced]
+Close to you how?
+
+[NOAH_KESTREL | style: guarded, closing the thought]
+I don't know yet.
+
+[SFX: latex gloves snapping off]
+
+[KAI_CHEN | style: shaking his head, refocusing on the body]
+Whatever it is, it's not going to change what's in front of us. Angle's still wrong for the official report.
+
+[NOAH_KESTREL | style: quiet, filing it away]
+No. It isn't.
+
+[NARRATOR]
+Kai returns to the body, the discrepancy noted and set aside — a loose thread neither of them yet knows how to pull.
+
+--- PART 13 ---
+
+[NARRATOR]
+Past midnight, the restaurant sits dark except for the back office lamp. Danny Wu, the detective quietly leaking case details to pay down his family's debt, is alone with his phone and a decision.
+
+[DANNY_WU | style: exhausted, guarded | speed: 0.95]
+Seventy-two hours. One last piece.
+
+[SFX: a phone screen tapping, repeated taps]
+
+[DANNY_WU | style: muttering to himself]
+So what counts as enough.
+
+[NARRATOR]
+He scrolls through Noah's open case file, thumb slowing over each entry.
+
+[DANNY_WU | style: low, calculating]
+Witness list. Evidence log. Chain of custody on the composite prints.
+
+[DANNY_WU | style: bitter]
+Any one of these and Sonny stops calling. For a while.
+
+[DANNY_WU | style: quieter, uneasy]
+Or forever, if I actually believed that.
+
+[NARRATOR]
+He pauses on a name in the witness column, then keeps scrolling past it.
+
+[DANNY_WU | style: flat, trying to convince himself]
+It's not like the last ones did any real damage. Nobody got hurt. Cases still closed.
+
+[DANNY_WU | style: sharper, arguing with himself]
+Cases still closed because somebody else did the work while I was busy handing pieces of it away.
+
+[SFX: a chair creaking as he shifts his weight]
+
+[NARRATOR]
+He sets the phone face-down on the desk, then almost immediately picks it back up.
+
+[DANNY_WU | style: measured, testing the words out loud]
+This one's different. This one's got his name on the header, not just a case number.
+
+[DANNY_WU | style: strained]
+Noah finds out I handed a stranger his own file, that's not a debt problem anymore. That's a badge problem. Maybe worse.
+
+[DANNY_WU | style: quiet, almost pleading with no one]
+There has to be something smaller. Something that still counts.
+
+[NARRATOR]
+He scrolls back up to the top of the file, searching for a version of the choice that costs less.
+
+[DANNY_WU | style: tight, controlled]
+Sonny doesn't want smaller. Sonny said one piece. Big enough to close it out.
+
+[DANNY_WU | style: bitter laugh, no humor in it]
+Eighty thousand dollars doesn't care what's fair.
+
+[SFX: a phone notification chime]
+
+[NARRATOR]
+A reminder flashes across the screen — the promotion review is scheduled for next week.
+
+[DANNY_WU | style: hollow]
+Funny. I used to think that was the biggest thing riding on this file.
+
+[NARRATOR]
+He stares at the screen a long moment, thumb hovering over the share icon without pressing it.
+
+[DANNY_WU | style: barely audible]
+Not tonight.
+
+[SFX: a phone screen locking with a soft click]
+
+[NARRATOR]
+He pockets the phone, the decision no closer than when he started, and switches off the lamp.
+
+--- PART 14 ---
+
+[NARRATOR]
+Past closing, the restaurant's dining room sits dim except for one lamp over the register. Danny counts the till while Hae waits at the counter, the woman he's been quietly seeing these past months.
+
+[DANNY_WU | style: distracted, counting under his breath]
+Forty, sixty, eighty... give me a second, I keep losing my place.
+
+[HAE_SONG | style: gentle, teasing]
+You've recounted that drawer three times. Something wrong with the math, or something wrong with you?
+
+[DANNY_WU | style: a beat too honest]
+There's a number stuck in my head today. Eighty thousand.
+
+[HAE_SONG | style: curious, careful]
+That's oddly specific for a Tuesday.
+
+[DANNY_WU | style: hesitating, the joke not ready yet]
+Just... something from my father's estate. Old paperwork that never really got closed out. Not worth getting into.
+
+[HAE_SONG | style: still, listening closely]
+Danny.
+
+[DANNY_WU | style: caught, backpedaling fast]
+Forget I said that. It's nothing, it's a—it's a restaurant thing. Every restaurant in this city owes somebody something, it's basically a zoning requirement.
+
+[HAE_SONG | style: half a laugh, not fully buying it]
+A zoning requirement.
+
+[DANNY_WU | style: leaning into the bit now]
+I'm serious. City ordinance. No noodles without debt. It's in the fine print of the lease.
+
+[HAE_SONG | style: laughing, watching him]
+You're ridiculous.
+
+[SFX: cash drawer sliding shut]
+
+[NARRATOR]
+He shuts the drawer harder than the moment calls for.
+
+[DANNY_WU | style: bright, overcorrected]
+Anyway. Books are fine. I'm fine. You want the last of the dumplings before I toss them?
+
+[HAE_SONG | style: quiet, watching him longer than the question deserves]
+Sure.
+
+[NARRATOR]
+She takes the plate he slides toward her, and neither of them says anything else about the number.
+
+[HAE_SONG | style: to herself, almost inaudible]
+Eighty thousand.
+
+[DANNY_WU | style: too casual, already turning away]
+What?
+
+[HAE_SONG | style: light, deflecting in kind]
+Nothing. Wondering if that's more or less than what I owe on my student loans. Comforting to know I'm not the only one drowning.
+
+[NARRATOR]
+He laughs, relieved, and the subject closes as easily as it opened. Hae watches him wipe down a counter that's already clean, filing away the shape of his retreat without naming it — a pattern she recognizes, and chooses, for tonight, not to chase.
+
+--- PART 15 ---
+
+[NARRATOR]
+Later that night, away from the precinct, Kai waits in a corner booth of a nearly empty diner near the Herald building. Aya slides in across from him, still wired from the day's headlines.
+
+[SFX: a diner bell above the door]
+
+[KAI_CHEN | style: direct, no small talk]
+You didn't return my calls.
+
+[AYA_MORITA | style: guarded]
+I've been a little busy. In case you missed it.
+
+[KAI_CHEN | style: pressing, controlled]
+I read every word twice. Whoever handed you that isn't some clerk with a grudge. That's case-file language. That's someone who sits in our building.
+
+[AYA_MORITA | style: careful]
+I'm not going to confirm or deny where a source works, Detective.
+
+[KAI_CHEN | style: leaning in, insistent]
+I'm not asking you to print a name. I'm asking you, one on one, is the leak inside the precinct.
+
+[SFX: a coffee cup set down hard on the table]
+
+[AYA_MORITA | style: firm]
+You know I can't answer that. Not because I'm being difficult. Because if I start confirming details off the record, I've handed you the source without saying it out loud.
+
+[KAI_CHEN | style: frustrated, quieter]
+Someone we work beside every day might've handed a reporter a blueprint of an illegal program. And you want me to respect your process.
+
+[AYA_MORITA | style: measured, defensive]
+My process is the only reason you even have that story to be angry about. Whoever's talking to me has been careful, consistent, accurate down to the smallest detail, for months. That's not someone venting. That's someone who's thought this through longer than either of us has been sitting here.
+
+[KAI_CHEN | style: studying her]
+That almost sounds like admiration.
+
+[AYA_MORITA | style: even]
+It's respect for good information. There's a difference.
+
+[NARRATOR]
+Kai sits back, turning his coffee cup slowly in place.
+
+[KAI_CHEN | style: resigned but still turning it over]
+Fine. Protect your source. But somebody in that building crossed a line, and eventually that's going to have a name attached to it.
+
+[AYA_MORITA | style: quiet conviction]
+Maybe. But it won't be mine to give you.
+
+[NARRATOR]
+Kai studies her a moment, certain he's looking at nothing more than a reporter's principle, no closer to guessing whose careful hand actually shaped every line of that story.
+
+--- PART 16 ---
+
+[NARRATOR]
+Late that same night, Noah's apartment. Alone at his corkboard, he sets the morning's Herald beside a printout he's kept hidden for weeks.
+
+[NOAH_KESTREL | style: low-burning focus, reading half to himself]
+"An internal tracking system, operating without oversight, cross-referencing a subject's movements and personal data." That's not a rumor. That's a spec sheet.
+
+[SFX: newspaper page smoothed flat against corkboard]
+
+[NOAH_KESTREL | style: methodical, building conviction]
+Cross-referencing movements. Personal data. Every morning, a face. Every morning, a timestamp that pings the same basement server.
+
+He lifts the metadata printout, holds it beside the newsprint.
+
+[NOAH_KESTREL | style: measured, testing the shape of it out loud]
+Zhao called it an archive backup. Said the old cold-case files still cycle through nightly, nothing to worry about. I believed her because I wanted a reason to stop asking.
+
+[NOAH_KESTREL | style: colder, the doubt hardening]
+Archive backups don't recalculate. They don't wake up every twenty-four hours with a new answer to the same question.
+
+[SFX: a pushpin pressed into corkboard]
+
+[NOAH_KESTREL | style: quietly relentless]
+She stood in that briefing today and told us all to keep our mouths shut. Standard procedure, she said. Leak investigation. But she never once asked how the story described the program. Like she already knew.
+
+He traces a length of red string from the printout to the newspaper's front page.
+
+[NOAH_KESTREL | style: barely holding it together, the pieces landing hard]
+Forty-eight mornings. Forty-eight faces. And she's the only person in that building who ever explained away the ping without me having to ask twice.
+
+[NOAH_KESTREL | style: flat, arriving somewhere he doesn't want to be]
+I trusted her with this because she outranks the question. That's it. That's the whole reason.
+
+He steps back from the board, the newspaper and the printout now joined by a single taut line.
+
+[NOAH_KESTREL | style: steady, resolved, dangerous]
+I'm not asking her again. Next time I bring it up, I bring proof.
+
+[NARRATOR]
+He stands there a long while, the string trembling faintly under the desk lamp, the shape of a system he still can't name pulling tighter around a captain he no longer fully trusts.
+
+--- PART 17 ---
+
+[NARRATOR]
+Evening now, day forty-eight, hours after the newsroom toast. Aya finds Noah waiting outside her building, not at the precinct — the detective at the center of her story, and the reporter who wrote it, face to face for the first time since it ran.
+
+[AYA_MORITA | style: bracing for impact]
+Say it. Whatever you came here to say, just say it.
+
+[NOAH_KESTREL | style: level, controlled]
+I'm not here to yell at you, Aya.
+
+[AYA_MORITA | style: thrown off balance]
+You should be. I named you. I ran your face through the whole thing without a call, without a warning, without—
+
+[NOAH_KESTREL | style: even, deliberate]
+I know what you did. I want to know what you didn't.
+
+[AYA_MORITA | style: wary]
+Meaning what.
+
+[NOAH_KESTREL | style: measured]
+Four stories in six months, and this one still reads like you're holding back. So I'm asking you straight. How much more is sitting in a folder somewhere that never made the page?
+
+[SFX: a car door shutting somewhere down the street]
+
+[AYA_MORITA | style: guarded]
+That's not how this works. You don't get to interview the reporter.
+
+[NOAH_KESTREL | style: flat, unmoving]
+I'm not interviewing you. I'm asking a person I've sat across from eleven times to be honest with me once.
+
+[AYA_MORITA | style: caught, uncertain]
+Is this about the story, Noah. Or is this about something else.
+
+[NOAH_KESTREL | style: quietly stubborn]
+Can't it be both.
+
+[NARRATOR]
+She doesn't answer right away. Somewhere behind her uncertainty sits a photograph of a server room she's never told him about, a detail she still hasn't connected to anyone with a name.
+
+[AYA_MORITA | style: retreating, careful]
+There's — there might be more. I'm not ready to say what.
+
+[NOAH_KESTREL | style: steady, not pushing]
+Okay.
+
+[AYA_MORITA | style: surprised by his restraint]
+Okay? That's it?
+
+[NOAH_KESTREL | style: taut, restrained]
+For tonight. Yeah. That's it.
+
+[NARRATOR]
+Neither of them names what's shifted between them, but neither moves to leave first either, and the silence stretches longer than either of them expected it to.
+
+By nightfall, the exposé is the only thing anyone in the precinct will talk about, and Captain Zhao's composure is fraying at the seams behind her office glass. Across town, Danny Wu has seventy-two hours to find Sonny's one last piece of information — or watch his family lose everything they have left. And somewhere in that pressure, tomorrow's photograph on Noah Kestrel's wall is already being decided.
+

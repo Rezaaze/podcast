@@ -42,11 +42,22 @@ DEFAULTS = {
     # Schreibmodell nicht brauchen — das kreative Schreiben (Sections, Beats,
     # Part-Reparatur) bleibt auf generation.model.
     "light_model": "claude-haiku-4-5",
+    # Modell für das EPISODEN-Skript-Review (review_episode_script + Bestätigungs-
+    # Review nach --fix). None = generation.model (das große Schreibmodell):
+    # die 12-Serien-Analyse vom 17.07.2026 zeigte, dass das light_model als
+    # Reviewer praktisch blind ist (z.B. 8/8 leere Reviews bei cured_by_design
+    # trotz 25 realer Fehler) — Beats-Review und Metadaten bleiben auf
+    # light_model (kurze Inputs, dort reicht es).
+    "review_model": None,
     "output_prefix": "figur",
-    "use_beats": False,
+    "use_beats": True,
+    # None = Claude-CLI-Default (aktuell "high") — nur überschreiben, wenn der
+    # Token-Verbrauch pro Section/Review gezielt gesenkt werden soll.
+    "effort": None,
 }
 
 VALID_MODES = {"narration", "drama"}
+VALID_EFFORT_LEVELS = {"low", "medium", "high", "xhigh", "max"}
 
 # Welche audio.backend-Werte "style"/"instruct"-Regieanweisungen überhaupt
 # rendern (siehe fabrik/tts_backends.py-Docstrings) — script_writer.py nutzt
@@ -69,10 +80,33 @@ BACKEND_SUPPORTS_STYLE = {"rest": True, "kokoro": False, "gradio": True}
 # fabrik/audio/tts_backends.py, dort nicht importierbar — dieses Modul darf
 # keine schweren Abhängigkeiten ziehen) — reine Vereinigungsmenge nur für
 # diese Tippfehler-Warnung, keine echte Auflösung (die passiert pro Backend).
-KNOWN_BUILTIN_SPEAKERS = {
-    "Ryan", "Aiden", "Ethan", "Dylan", "Eric", "Uncle_Fu",
-    "Chelsie", "Serena", "Vivian",
-    "Ono_anna", "Sohee", "Uncle_fu",
+# Das TATSÄCHLICHE Roster des lokalen Qwen3-Servers (/api/v1/custom-voice/
+# speakers). "Ethan" und "Chelsie" stehen zwar im offiziellen Qwen3-Roster,
+# existieren auf dem lokalen Server aber NICHT — zweimal live in Produktion
+# gescheitert (the_wildrose_inheritance T6.1, the_long_fare), jeweils erst
+# beim Vertonen statt beim check. Deshalb hier bewusst NICHT gelistet, damit
+# validate_data schon bei 'check' warnt. Kleingeschriebene Varianten sind
+# die Schreibweise des gradio-Backends (siehe tts_backends.py::SPEAKERS).
+# EINE Quelle für das Roster: create_series.py substituiert daraus
+# {{VOICE_ROSTER}} (Bullet-Liste, crime_drama/soap_opera) und
+# {{VOICE_ROSTER_COMPACT}} (Fließtext, language_course) in den
+# Creator-Templates — die Stimmenliste kann damit nie wieder zwischen
+# Code und Templates auseinanderlaufen (Chelsie-Lektion).
+BUILTIN_SPEAKER_ROSTER = [
+    ("Ryan", "male", "native English, accent-free"),
+    ("Aiden", "male", "native American English, accent-free"),
+    ("Dylan", "male", "Chinese-native (Beijing), audible accent"),
+    ("Eric", "male", "Chinese-native (Sichuan), audible accent"),
+    ("Uncle_Fu", "male", "elderly Chinese voice, strong accent; only fits old characters"),
+    ("Serena", "female", "Chinese-native, audible accent"),
+    ("Vivian", "female", "Chinese-native, audible accent"),
+    ("Ono_Anna", "female", "Japanese-native, audible accent"),
+    ("Sohee", "female", "Korean-native, audible accent"),
+]
+
+KNOWN_BUILTIN_SPEAKERS = {name for name, _, _ in BUILTIN_SPEAKER_ROSTER} | {
+    # Schreibweisen des gradio-Backends (anderes App-Roster, s. tts_backends.py)
+    "Ono_anna", "Uncle_fu",
 }
 
 
@@ -85,12 +119,13 @@ VALID_TOP_KEYS = {
     "format", "generation", "audio", "output_prefix",
     "series_intro", "series_outro", "episodes",
     "mode", "template", "voices", "course", "locations", "season",
+    "previous_season", "threads",
 }
 VALID_FORMAT_KEYS = {
     "parts_per_section", "words_per_part_target",
     "words_per_part_min", "words_per_part_max",
 }
-VALID_GENERATION_KEYS = {"model", "light_model", "use_beats"}
+VALID_GENERATION_KEYS = {"model", "light_model", "review_model", "use_beats", "effort"}
 VALID_AUDIO_BACKENDS = {"rest", "gradio", "kokoro"}
 VALID_AUDIO_KEYS = {
     "api_url", "voice", "default_style", "target_lufs",
@@ -99,9 +134,19 @@ VALID_AUDIO_KEYS = {
     "backend", "ref_audio", "ref_text", "model_size", "language", "chunk_gap", "chunk_max_chars",
     "model_path", "language_code", "sample_rate",  # Kokoro-spezifisch
     "merge_anthology",  # false: Episoden bleiben eigenständig, kein ANTHOLOGY_COMPLETE.mp3
+    "secondary_api_url",  # optionaler zweiter TTS-Server (gleiches Backend/gleiche Stimmen!) —
+                          # batch.py vertont dann zwei Episoden parallel (Worker 2 rendert via
+                          # podcast_maker --api-url auf diesem Server)
     "seed",  # Default-Seed für alle Rollen ohne eigenen voices.<ROLLE>.seed (nur backend "rest" + geklonte
              # Stimmen/Prompts — siehe fabrik/audio/tts_backends.py::RestBackend, Built-in-Speaker haben
              # in dieser API keinen seed-Parameter, wird dort ignoriert)
+    "chunk_concurrency",  # Batch-Größe für gleichzeitige Chunk-Generierung (Default 1 = bisheriges
+                          # sequenzielles Verhalten). Nur mit echtem Batch-Endpoint sinnvoll (siehe
+                          # GradioBackend.generate_chunk_batch / cloud/onstart_qwen3_tts.sh) — reine
+                          # Thread-Parallelität ohne Server-seitiges Batching brachte in Tests NULL
+                          # Speedup (CUDA serialisiert nebenläufige Threads auf einem GPU). Empfohlener
+                          # Produktions-Default für backend "gradio": 40 (siehe cloud/README.md für die
+                          # gemessene Speedup-Kurve und die OOM-Grenze bei größeren Werten).
 }
 VALID_EPISODE_KEYS = {
     "figure", "theme", "intro_note", "outro_note", "sections", "section_styles",
@@ -110,6 +155,11 @@ VALID_EPISODE_KEYS = {
 VALID_LOCATION_KEYS = {"name", "description"}
 VALID_SOURCE_VALUES = {"generated", "imported"}
 VALID_SECTION_WORDS_KEYS = {"min", "max", "target"}
+# Section-Objekt-Form (seit dem Stage-01-Umbau, docs/konzept-stage-umbau.md) —
+# ersetzt die alten Parallel-Arrays section_words/section_locations für NEU
+# generierte case-based Serien; Alt-Serien (sections = Liste von Strings)
+# bleiben unverändert lesbar, siehe is_object_section_list() unten.
+VALID_SECTION_OBJECT_KEYS = {"title", "what", "who", "thread", "location", "words"}
 VALID_CASE_KEYS = {"label", "solution", "objective_facts", "character_knowledge"}
 VALID_CHARACTER_KNOWLEDGE_KEYS = {"knows", "hides", "believes_falsely"}
 VALID_VOICE_KEYS = {"voice", "default_style", "description", "speed", "seed"}
@@ -142,6 +192,40 @@ def validate_data(data) -> tuple[list[str], list[str]]:
     def is_str_list(v):
         return isinstance(v, list) and all(isinstance(s, str) and s.strip() for s in v)
 
+    def is_object_section_list(v):
+        return isinstance(v, list) and bool(v) and all(isinstance(s, dict) for s in v)
+
+    def is_section_list(v):
+        """Sections sind entweder die Alt-Form (Liste von Titel-Strings) oder
+        die neue Objekt-Form (ein Objekt pro Szene mit erzähltem 'what',
+        siehe VALID_SECTION_OBJECT_KEYS) — nie gemischt innerhalb einer
+        Episode."""
+        if not isinstance(v, list) or not v:
+            return False
+        return is_str_list(v) or is_object_section_list(v)
+
+    def validate_words_value(w, path):
+        """Prüft einen 'words'-Wert: null, eine ganze Zahl, oder
+        {min, max, target} — geteilt zwischen der alten section_words[j]-
+        Parallel-Array-Form und dem neuen section['words']-Objektfeld."""
+        if w is None:
+            return
+        if isinstance(w, dict):
+            for key in w:
+                if key not in VALID_SECTION_WORDS_KEYS:
+                    warnings.append(f"Unbekannter Schlüssel '{path}.{key}' — wird ignoriert (Tippfehler?)")
+            sw_min, sw_max = w.get("min"), w.get("max")
+            if "min" in w and (not is_int(sw_min) or sw_min < 1):
+                errors.append(f"'{path}.min' muss eine ganze Zahl >= 1 sein")
+            if "max" in w and (not is_int(sw_max) or sw_max < 1):
+                errors.append(f"'{path}.max' muss eine ganze Zahl >= 1 sein")
+            if is_int(sw_min) and is_int(sw_max) and sw_min >= sw_max:
+                errors.append(f"'{path}.min' ({sw_min}) muss kleiner als '{path}.max' ({sw_max}) sein")
+            if "target" in w and (not isinstance(w["target"], str) or not w["target"].strip()):
+                errors.append(f"'{path}.target' muss ein nicht-leerer String sein (z.B. \"150 to 250\")")
+        elif not is_int(w):
+            errors.append(f"'{path}' muss 'null', eine ganze Zahl oder {{min, max, target}} sein")
+
     def validate_case_block(case, voices, path, require_label):
         """Prüft einen einzelnen case/thread-Block (solution/objective_facts/
         character_knowledge). Wird sowohl für ein einzelnes 'case'-Objekt
@@ -163,7 +247,7 @@ def validate_data(data) -> tuple[list[str], list[str]]:
         knowledge = case.get("character_knowledge")
         if knowledge is not None:
             if not isinstance(knowledge, dict):
-                errors.append(f"'{path}.character_knowledge' muss ein Objekt sein (Rolle -> Wissens-Slice)")
+                errors.append(f"'{path}.character_knowledge' muss ein Objekt sein (Rolle -> Wissensstand)")
             else:
                 known_roles = set(voices) if isinstance(voices, dict) else set()
                 for role, slice_ in knowledge.items():
@@ -172,21 +256,36 @@ def validate_data(data) -> tuple[list[str], list[str]]:
                             f"'{path}.character_knowledge.{role}' referenziert eine Rolle, "
                             f"die nicht in 'voices' definiert ist"
                         )
-                    if not isinstance(slice_, dict):
-                        errors.append(f"'{path}.character_knowledge.{role}' muss ein Objekt sein")
-                        continue
-                    for key in slice_:
-                        if key not in VALID_CHARACTER_KNOWLEDGE_KEYS:
-                            warnings.append(
-                                f"Unbekannter Schlüssel '{path}.character_knowledge.{role}.{key}' "
-                                f"— wird ignoriert (Tippfehler?)"
-                            )
-                    for key in VALID_CHARACTER_KNOWLEDGE_KEYS:
-                        if key in slice_ and not is_str_list(slice_[key]):
+                    if isinstance(slice_, str):
+                        # Format seit 17.07.2026: freier Fließtext statt drei Listen — einfacher
+                        # für das Modell zu schreiben, weniger Verschachtelungstiefe (siehe
+                        # fabrik/writing/CLAUDE.md). Nur "nicht leer" ist hier prüfbar.
+                        if not slice_.strip():
                             errors.append(
-                                f"'{path}.character_knowledge.{role}.{key}' muss eine Liste "
-                                f"nicht-leerer Strings sein"
+                                f"'{path}.character_knowledge.{role}' darf kein leerer String sein"
                             )
+                    elif isinstance(slice_, dict):
+                        # Alt-Format (vor 17.07.2026): {knows: [...], hides: [...],
+                        # believes_falsely: [...]} — weiter akzeptiert, damit vor dem Umbau
+                        # generierte Serien beim nächsten generate_episode-Lauf gültig bleiben.
+                        for key in slice_:
+                            if key not in VALID_CHARACTER_KNOWLEDGE_KEYS:
+                                warnings.append(
+                                    f"Unbekannter Schlüssel '{path}.character_knowledge.{role}.{key}' "
+                                    f"— wird ignoriert (Tippfehler?)"
+                                )
+                        for key in VALID_CHARACTER_KNOWLEDGE_KEYS:
+                            if key in slice_ and not is_str_list(slice_[key]):
+                                errors.append(
+                                    f"'{path}.character_knowledge.{role}.{key}' muss eine Liste "
+                                    f"nicht-leerer Strings sein"
+                                )
+                    else:
+                        errors.append(
+                            f"'{path}.character_knowledge.{role}' muss ein nicht-leerer String sein "
+                            f"(Wissensstand in Prosa) — oder, im Alt-Format, ein Objekt mit "
+                            f"knows/hides/believes_falsely"
+                        )
                 if known_roles:
                     # NARRATOR (siehe templates/crime_drama, templates/soap_opera) ist keine
                     # Figur mit eigenem Wissen — braucht bewusst kein character_knowledge-Slice.
@@ -223,6 +322,18 @@ def validate_data(data) -> tuple[list[str], list[str]]:
     # bleibt der Episodentitel unverändert wie bisher.
     if "season" in data and (not is_int(data["season"]) or data["season"] < 1):
         errors.append("'season' muss eine positive ganze Zahl sein (Staffelnummer für den Podcast-Kanal)")
+
+    # "previous_season": optionaler Slug der Vorstaffel — Kontinuitäts-Link für
+    # das Skript-Review-Gate (siehe stages/02_scripts/CONTEXT.md). Anders als
+    # "season" (reine Anzeige-Nummer) sagt es dem Review, wessen Canon
+    # (case-Block + META der genannten Serie) diese Staffel nicht widersprechen
+    # darf. Bewusst nur ein String-Check — validate_data bleibt dateisystem-rein;
+    # ob data/series/<slug>/ existiert, prüft nicht der Validator (fällt beim
+    # Lesen im Review-Gate auf).
+    if "previous_season" in data and (not isinstance(data["previous_season"], str)
+                                       or not data["previous_season"].strip()):
+        errors.append("'previous_season' muss der Slug einer vorhandenen Serie sein "
+                      "(Kontinuitäts-Link zur Vorstaffel für das Skript-Review)")
 
     if "style_guidelines" in data and not is_str_list(data["style_guidelines"]):
         errors.append("'style_guidelines' muss eine Liste nicht-leerer Strings sein")
@@ -320,6 +431,28 @@ def validate_data(data) -> tuple[list[str], list[str]]:
                 if not isinstance(lcfg.get(k), str) or not lcfg.get(k, "").strip():
                     errors.append(f"'locations.{key}.{k}' fehlt oder ist kein nicht-leerer String")
 
+    # --- threads (optional; case-based Templates seit dem Stage-01-Umbau, siehe
+    # docs/konzept-stage-umbau.md) — die EINE Stelle, an der Fakten eines
+    # Handlungsstrangs stehen (label/solution/objective_facts), von Sections per
+    # 'thread'-Feld referenziert statt pro Episode neu ausgegeben. Wie viele
+    # Threads ein Template erwartet (crime_drama genau 1, soap_opera 2-4) ist eine
+    # Generierungsentscheidung von create_series.py, kein Schema-Fehler hier —
+    # ansonsten würden Alt-Serien ohne 'threads' oder mit anderer Zahl beim
+    # nächsten generate_episode-Lauf grundlos ungültig.
+    thread_labels = set()
+    threads = data.get("threads")
+    if threads is not None:
+        if not isinstance(threads, list) or not threads:
+            errors.append("'threads' muss eine nicht-leere Liste von Handlungsstrang-Objekten sein")
+            threads = []
+        for j, thread in enumerate(threads):
+            validate_case_block(thread, voices, f"threads[{j}]", require_label=True)
+            if isinstance(thread, dict) and isinstance(thread.get("label"), str) and thread["label"].strip():
+                thread_labels.add(thread["label"])
+        dupes = {lbl for lbl in thread_labels if sum(1 for t in threads if isinstance(t, dict) and t.get("label") == lbl) > 1}
+        if dupes:
+            errors.append(f"'threads' enthält doppelte Labels: {sorted(dupes)} — jeder Handlungsstrang braucht ein eindeutiges Label")
+
     # --- format ---
     fmt = data.get("format", {})
     if not isinstance(fmt, dict):
@@ -354,8 +487,13 @@ def validate_data(data) -> tuple[list[str], list[str]]:
         errors.append("'generation.model' muss ein nicht-leerer String sein")
     if "light_model" in gen and (not isinstance(gen["light_model"], str) or not gen["light_model"].strip()):
         errors.append("'generation.light_model' muss ein nicht-leerer String sein")
+    if "review_model" in gen and (not isinstance(gen["review_model"], str) or not gen["review_model"].strip()):
+        errors.append("'generation.review_model' muss ein nicht-leerer String sein "
+                      "(Modell für das Episoden-Skript-Review; weglassen = generation.model)")
     if "use_beats" in gen and not isinstance(gen["use_beats"], bool):
         errors.append("'generation.use_beats' muss ein Bool sein")
+    if "effort" in gen and gen["effort"] is not None and gen["effort"] not in VALID_EFFORT_LEVELS:
+        errors.append(f"'generation.effort' muss None oder eines von {sorted(VALID_EFFORT_LEVELS)} sein")
 
     # --- audio ---
     audio = data.get("audio", {})
@@ -368,9 +506,10 @@ def validate_data(data) -> tuple[list[str], list[str]]:
     for key in ("voice", "default_style"):
         if key in audio and (not isinstance(audio[key], str) or not audio[key].strip()):
             errors.append(f"'audio.{key}' muss ein nicht-leerer String sein")
-    if "api_url" in audio and (not isinstance(audio["api_url"], str)
-                               or not re.match(r"https?://", audio["api_url"])):
-        errors.append("'audio.api_url' muss eine URL sein (z.B. \"http://127.0.0.1:42003\")")
+    for key in ("api_url", "secondary_api_url"):
+        if key in audio and (not isinstance(audio[key], str)
+                             or not re.match(r"https?://", audio[key])):
+            errors.append(f"'audio.{key}' muss eine URL sein (z.B. \"http://127.0.0.1:42003\")")
     if "target_lufs" in audio and not is_num(audio["target_lufs"]):
         errors.append("'audio.target_lufs' muss eine Zahl sein (z.B. -16.0)")
     for key in ("pause_between_chunks_ms", "pause_between_lines_ms",
@@ -379,6 +518,8 @@ def validate_data(data) -> tuple[list[str], list[str]]:
             errors.append(f"'audio.{key}' muss eine ganze Zahl >= 0 sein (Millisekunden)")
     if "chunk_max_chars" in audio and (not is_int(audio["chunk_max_chars"]) or audio["chunk_max_chars"] < 1):
         errors.append("'audio.chunk_max_chars' muss eine ganze Zahl >= 1 sein")
+    if "chunk_concurrency" in audio and (not is_int(audio["chunk_concurrency"]) or audio["chunk_concurrency"] < 1):
+        errors.append("'audio.chunk_concurrency' muss eine ganze Zahl >= 1 sein")
     if "seed" in audio:
         if not is_int(audio["seed"]) or audio["seed"] < 0:
             errors.append("'audio.seed' muss eine ganze Zahl >= 0 sein")
@@ -421,10 +562,12 @@ def validate_data(data) -> tuple[list[str], list[str]]:
                           f"bereits geschriebene Skripte, die generate_episode.py überspringen soll")
 
         secs = ep.get("sections")
-        if not is_str_list(secs) or not secs:
-            errors.append(f"'{path}.sections' fehlt oder ist keine nicht-leere Liste von Strings")
+        if not is_section_list(secs):
+            errors.append(f"'{path}.sections' fehlt oder ist keine nicht-leere Liste von Strings "
+                          f"ODER Section-Objekten (gemischt nicht erlaubt)")
             continue
         section_counts.add(len(secs))
+        object_sections = is_object_section_list(secs)
 
         styles = ep.get("section_styles")
         if styles is not None:
@@ -441,51 +584,80 @@ def validate_data(data) -> tuple[list[str], list[str]]:
         elif mode == "narration":
             warnings.append(f"'{path}.section_styles' fehlt — alle Parts bekommen den audio.default_style")
 
-        section_words = ep.get("section_words")
-        if section_words is not None:
-            if not isinstance(section_words, list) or len(section_words) != len(secs):
-                errors.append(
-                    f"'{path}.section_words' muss eine Liste mit {len(secs)} Einträgen sein "
-                    f"(einer pro Section, 'null' = format-Default verwenden)"
-                )
-            else:
-                for j, sw in enumerate(section_words):
-                    swpath = f"{path}.section_words[{j}]"
-                    if sw is None:
-                        continue
-                    if not isinstance(sw, dict):
-                        errors.append(f"'{swpath}' muss ein Objekt ({{min, max, target}}) oder 'null' sein")
-                        continue
-                    for key in sw:
-                        if key not in VALID_SECTION_WORDS_KEYS:
-                            warnings.append(f"Unbekannter Schlüssel '{swpath}.{key}' — wird ignoriert (Tippfehler?)")
-                    sw_min, sw_max = sw.get("min"), sw.get("max")
-                    if "min" in sw and (not is_int(sw_min) or sw_min < 1):
-                        errors.append(f"'{swpath}.min' muss eine ganze Zahl >= 1 sein")
-                    if "max" in sw and (not is_int(sw_max) or sw_max < 1):
-                        errors.append(f"'{swpath}.max' muss eine ganze Zahl >= 1 sein")
-                    if is_int(sw_min) and is_int(sw_max) and sw_min >= sw_max:
-                        errors.append(f"'{swpath}.min' ({sw_min}) muss kleiner als '{swpath}.max' ({sw_max}) sein")
-                    if "target" in sw and (not isinstance(sw["target"], str) or not sw["target"].strip()):
-                        errors.append(f"'{swpath}.target' muss ein nicht-leerer String sein (z.B. \"150 to 250\")")
+        if object_sections:
+            # Section-Objekt-Form: 'words'/'location' stehen JETZT im Objekt selbst
+            # (siehe VALID_SECTION_OBJECT_KEYS) — die alten Parallel-Arrays sind hier
+            # überflüssig und würden nur stillschweigend ignoriert, deshalb Warnung
+            # statt Schweigen.
+            if ep.get("section_words") is not None:
+                warnings.append(f"'{path}.section_words' wird bei Section-Objekten ignoriert — "
+                                f"'words' steht jetzt in jedem Section-Objekt selbst")
+            if ep.get("section_locations") is not None:
+                warnings.append(f"'{path}.section_locations' wird bei Section-Objekten ignoriert — "
+                                f"'location' steht jetzt in jedem Section-Objekt selbst")
+            for j, sec in enumerate(secs):
+                spath = f"{path}.sections[{j}]"
+                for key in sec:
+                    if key not in VALID_SECTION_OBJECT_KEYS:
+                        warnings.append(f"Unbekannter Schlüssel '{spath}.{key}' — wird ignoriert (Tippfehler?)")
+                if not isinstance(sec.get("title"), str) or not sec.get("title", "").strip():
+                    errors.append(f"'{spath}.title' fehlt oder ist kein nicht-leerer String")
+                if not isinstance(sec.get("what"), str) or not sec.get("what", "").strip():
+                    errors.append(f"'{spath}.what' fehlt oder ist kein nicht-leerer String — die eigentliche "
+                                  f"erzählte Szene (ein bloßer Titel reicht nicht, siehe konzept-stage-umbau.md)")
+                who = sec.get("who")
+                if who is not None:
+                    if not is_str_list(who):
+                        errors.append(f"'{spath}.who' muss eine Liste nicht-leerer Strings sein")
+                    elif isinstance(voices, dict) and voices:
+                        unknown = [r for r in who if r not in voices]
+                        if unknown:
+                            errors.append(f"'{spath}.who' referenziert {unknown} — keine Rolle(n) aus 'voices'")
+                thread = sec.get("thread")
+                if thread is not None:
+                    if not isinstance(thread, str) or not thread.strip():
+                        errors.append(f"'{spath}.thread' muss ein nicht-leerer String sein")
+                    elif thread_labels and thread not in thread_labels:
+                        errors.append(f"'{spath}.thread' = '{thread}' ist kein Label aus 'threads' "
+                                      f"({', '.join(sorted(thread_labels))})")
+                loc = sec.get("location")
+                if loc is not None:
+                    if not isinstance(loc, str):
+                        errors.append(f"'{spath}.location' muss ein String (Key aus 'locations') sein")
+                    elif locations and loc not in locations:
+                        errors.append(f"'{spath}.location' = '{loc}' ist kein Key aus 'locations' "
+                                      f"({', '.join(sorted(locations))})")
+                if "words" in sec:
+                    validate_words_value(sec["words"], f"{spath}.words")
+        else:
+            section_words = ep.get("section_words")
+            if section_words is not None:
+                if not isinstance(section_words, list) or len(section_words) != len(secs):
+                    errors.append(
+                        f"'{path}.section_words' muss eine Liste mit {len(secs)} Einträgen sein "
+                        f"(einer pro Section, 'null' = format-Default verwenden)"
+                    )
+                else:
+                    for j, sw in enumerate(section_words):
+                        validate_words_value(sw, f"{path}.section_words[{j}]")
 
-        section_locations = ep.get("section_locations")
-        if section_locations is not None:
-            if not isinstance(section_locations, list) or len(section_locations) != len(secs):
-                errors.append(
-                    f"'{path}.section_locations' muss eine Liste mit {len(secs)} Einträgen sein "
-                    f"(einer pro Section, 'null' = kein Orts-Wechsel/Hintergrund bleibt wie zuvor)"
-                )
-            elif not locations:
-                errors.append(f"'{path}.section_locations' ist gesetzt, aber es gibt keine 'locations' "
-                              f"auf oberster Ebene, aus denen die Keys stammen könnten")
-            else:
-                for j, loc_key in enumerate(section_locations):
-                    if loc_key is None:
-                        continue
-                    if not isinstance(loc_key, str) or loc_key not in locations:
-                        errors.append(f"'{path}.section_locations[{j}]' = '{loc_key}' ist kein Key aus "
-                                      f"'locations' ({', '.join(sorted(locations))})")
+            section_locations = ep.get("section_locations")
+            if section_locations is not None:
+                if not isinstance(section_locations, list) or len(section_locations) != len(secs):
+                    errors.append(
+                        f"'{path}.section_locations' muss eine Liste mit {len(secs)} Einträgen sein "
+                        f"(einer pro Section, 'null' = kein Orts-Wechsel/Hintergrund bleibt wie zuvor)"
+                    )
+                elif not locations:
+                    errors.append(f"'{path}.section_locations' ist gesetzt, aber es gibt keine 'locations' "
+                                  f"auf oberster Ebene, aus denen die Keys stammen könnten")
+                else:
+                    for j, loc_key in enumerate(section_locations):
+                        if loc_key is None:
+                            continue
+                        if not isinstance(loc_key, str) or loc_key not in locations:
+                            errors.append(f"'{path}.section_locations[{j}]' = '{loc_key}' ist kein Key aus "
+                                          f"'locations' ({', '.join(sorted(locations))})")
 
         case = ep.get("case")
         if case is not None:
@@ -496,7 +668,7 @@ def validate_data(data) -> tuple[list[str], list[str]]:
                     validate_case_block(thread, voices, f"{path}.case[{j}]", require_label=True)
             else:
                 validate_case_block(case, voices, f"{path}.case", require_label=False)
-        elif mode == "drama" and data.get("template") in ("crime_drama", "soap_opera"):
+        elif mode == "drama" and data.get("template") in ("crime_drama", "soap_opera", "shorts"):
             warnings.append(f"'{path}.case' fehlt — ohne Wissens-Trennung schreibt Claude alle "
                             f"Figuren ohne echte Wissensgrenzen (siehe templates/{data.get('template')})")
 
@@ -522,6 +694,26 @@ def validate_or_exit(data):
         sys.exit(1)
 
 
+def _style_reaches_audio(data) -> bool:
+    """Ob Style-Regieanweisungen das gerenderte Audio überhaupt erreichen.
+    Zwei Bedingungen: das Backend muss style/instruct rendern (BACKEND_
+    SUPPORTS_STYLE) UND — im narration-Mode — audio.voice muss ein
+    Built-in-Speaker sein: Clone-Stimmen (z.B. der Default "MyVoice")
+    reproduzieren nur die Prosodie ihrer Referenzaufnahme, der TTS gibt
+    'instruct' ausschließlich an Built-ins weiter (tts_backends.py).
+    Ohne diesen Check formte der Writer VOCAL-DELIVERY-Prosa und der
+    Creator wählte section_styles, die beim Vertonen kommentarlos
+    verworfen wurden. Drama-Mode bleibt beim reinen Backend-Check —
+    dort gilt die Style-Fähigkeit pro Rolle (Clone-Rollen sind eh
+    dokumentiert abgeraten)."""
+    audio = data.get("audio", {})
+    if not supports_style(audio.get("backend", "rest")):
+        return False
+    if data.get("mode", DEFAULTS["mode"]) == "narration":
+        return audio.get("voice", "") in KNOWN_BUILTIN_SPEAKERS
+    return True
+
+
 def build_config(data) -> dict:
     """Extrahiert die Format-/Generierungs-Konfiguration aus episodes.json."""
     fmt = data.get("format", {})
@@ -541,10 +733,17 @@ def build_config(data) -> dict:
         "words_target": fmt.get("words_per_part_target", DEFAULTS["words_per_part_target"]),
         "model": gen.get("model", DEFAULTS["model"]),
         "light_model": gen.get("light_model", DEFAULTS["light_model"]),
+        # Skript-Review-Modell: explizit gesetzt > DEFAULTS["review_model"] >
+        # generation.model — Default ist bewusst das große Schreibmodell
+        # (siehe DEFAULTS-Kommentar: light_model war als Reviewer blind).
+        "review_model": (gen.get("review_model") or DEFAULTS["review_model"]
+                         or gen.get("model", DEFAULTS["model"])),
         "use_beats": gen.get("use_beats", DEFAULTS["use_beats"]),
+        "effort": gen.get("effort", DEFAULTS["effort"]),
         "prefix": data.get("output_prefix", DEFAULTS["output_prefix"]),
-        # Ob das konfigurierte TTS-Backend style/instruct-Regieanweisungen
-        # überhaupt rendert — steuert, ob script_writer.py Style-Anweisungen
-        # in den Schreib-Prompt aufnimmt (spart Tokens, wenn nicht).
-        "supports_style": supports_style(data.get("audio", {}).get("backend", "rest")),
+        # Ob Style-Regieanweisungen das Audio erreichen (Backend UND — bei
+        # narration — Built-in-Voice) — steuert, ob script_writer.py
+        # Style-Anweisungen in den Schreib-Prompt aufnimmt (spart Tokens
+        # und formt keine Prosa für eine Delivery, die nie stattfindet).
+        "supports_style": _style_reaches_audio(data),
     }

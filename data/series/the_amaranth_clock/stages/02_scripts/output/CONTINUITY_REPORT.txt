@@ -1,0 +1,14 @@
+Kontinuitäts-Report (deterministisch, fabrik/writing/continuity.py)
+Episoden ausgewertet: 1, 2, 3, 4, 5, 6, 7, 9, 10
+
+1. Ortsnamen, die der Kanon nicht kennt
+   Keine.
+
+2. Ortstyp weicht vom Kanon ab (gleicher Besitzer)
+   Keine.
+
+3. Zeitangaben, die dem Kanon widersprechen
+   !! Episode 10, "reyes": Prosa "two years" (24 Monate), Kanon "six months"
+      …s Julian. He's the signatory. He's been buying this building out from under it for two years, and I signed my name beside his and never once asked why. The lobby of the Amaranth, moments after Iris's …
+   !! Episode 10, "reyes": Prosa "six weeks" (6 Wochen), Kanon "six months"
+      …s Julian. He's the signatory. He's been buying this building out from under it for two years, and I signed my name beside his and never once asked why. The lobby of the Amaranth, moments after Iris's …

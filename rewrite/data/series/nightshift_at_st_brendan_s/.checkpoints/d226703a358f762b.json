@@ -1,0 +1,82 @@
+{
+  "sections": [
+    {
+      "location": "break_room",
+      "thread": "Theo's Whistleblower Dilemma",
+      "title": "The Diverted Ward",
+      "what": "Theo confirms the second patient is deteriorating on the cut ward. He stands at his locker, complaint still unsigned.",
+      "who": [
+        "Theo",
+        "Sister Agnes"
+      ],
+      "word_budget": 550
+    },
+    {
+      "location": "er_floor",
+      "thread": "Maeve's Relapse Arc",
+      "title": "The Resuscitation",
+      "what": "Maeve runs the bay. She catches a near-error — barely. Only she knows why her hands weren't steady.",
+      "who": [
+        "Maeve",
+        "Reza",
+        "Dana"
+      ],
+      "word_budget": 750
+    },
+    {
+      "location": "admin_corridor",
+      "thread": "Reza's Second Chance",
+      "title": "The Long Walk",
+      "what": "Reza walks the admin corridor alone toward the board-member attending. One long, uninterrupted hallway.",
+      "who": [
+        "Reza"
+      ],
+      "word_budget": 650
+    },
+    {
+      "location": "er_floor",
+      "thread": "Reza's Second Chance",
+      "title": "Threshold",
+      "what": "Maeve stabilizes her patient. Reza refuses the board's quiet offer on the record. Same line, two crossings.",
+      "who": [
+        "Reza",
+        "Maeve",
+        "Dana"
+      ],
+      "word_budget": 700
+    },
+    {
+      "location": "break_room",
+      "thread": "Theo's Whistleblower Dilemma",
+      "title": "5:51 a.m.",
+      "what": "The second patient dies. Theo gets the call. The complaint is still in his locker.",
+      "who": [
+        "Theo",
+        "Sister Agnes"
+      ],
+      "word_budget": 600
+    },
+    {
+      "location": "break_room",
+      "thread": "Theo's Whistleblower Dilemma",
+      "title": "6:04 a.m.",
+      "turning_point": "tp_06",
+      "what": "Theo submits the complaint. No ceremony. He sends it and sits down.",
+      "who": [
+        "Theo"
+      ],
+      "word_budget": 500
+    },
+    {
+      "location": "admin_corridor",
+      "thread": "Harte's Bed-Cut Conspiracy",
+      "title": "The Machine",
+      "what": "Hospital legal and operations begin moving within the hour. Harte is informed before dawn.",
+      "who": [
+        "Harte",
+        "Theo"
+      ],
+      "word_budget": 450
+    }
+  ]
+}

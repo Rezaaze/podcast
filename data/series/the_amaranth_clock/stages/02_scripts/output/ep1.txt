@@ -1,0 +1,446 @@
+--- PART 1 ---
+
+[NARRATOR]
+In the lobby of the Amaranth, the wall clock has read 4:47 for ten years, and nobody has bothered to fix it — because in this building, nothing is ever really over. Six residents. Four countdowns already running when we arrive: thirty days until the building goes to auction, six months into a pregnancy nobody can quite explain, three days since a man came home from twelve years in prison for a fire he swears he didn't set, and a diagnosis one resident is keeping from everyone he loves. Each of them knows their own piece. None of them know the whole shape of what's coming. This season, we watch the clock.
+
+[NARRATOR]
+Three days out from prison, Tommy Lau stands on the sidewalk outside the Amaranth, looking up at the same lobby doors he hasn't crossed in twelve years — and inside, the building's longtime manager is about to be the first to see him.
+
+[SFX: a heavy glass door creaking open]
+
+[TOMMY_LAU | style: guarded, bracing himself | speed: 0.9]
+Okay. Okay.
+
+[DESMOND_HALE | style: warm, unguarded, genuinely pleased]
+Tommy. Tommy Lau.
+
+[TOMMY_LAU | style: cautious, half a step behind the warmth]
+Desmond.
+
+[DESMOND_HALE | style: warm]
+Look at you. Get over here.
+
+[TOMMY_LAU | style: quiet, still bracing]
+You don't have to do that.
+
+[DESMOND_HALE | style: firm but kind]
+I want to. Welcome home.
+
+[NARRATOR]
+Desmond crosses the lobby and takes his hand — a real handshake, unhurried, the kind a man gives when he means it. Nearby, two tenants with mail in their hands stop talking. Neither one moves closer.
+
+[TOMMY_LAU | style: even, controlled]
+Place looks the same.
+
+[DESMOND_HALE | style: easy, a little rueful]
+Clock's still broken. Some things you can count on.
+
+[TOMMY_LAU | style: dry, controlled]
+Yeah. Some things.
+
+[DESMOND_HALE | style: sincere]
+You need anything — key's not working, hot water's acting up, whatever it is — you come find me first. Not the office. Me.
+
+[TOMMY_LAU | style: quiet, genuinely thrown by the kindness]
+Twelve years, Desmond. Most people didn't wait around to say hello.
+
+[DESMOND_HALE | style: gentle, matter-of-fact]
+I'm not most people. And this is still your building. Was before, is now.
+
+[NARRATOR]
+Behind them, one of the tenants finally looks away, folding her newspaper down slow and deliberate, saying nothing at all.
+
+[SFX: a newspaper folding down flat]
+
+[TOMMY_LAU | style: carefully neutral, giving nothing away]
+Sure.
+
+[DESMOND_HALE | style: warm, oblivious]
+Go on, get settled. Door's always open.
+
+[NARRATOR]
+Tommy nods, thanks him, and moves toward the stairwell — his face steady, revealing nothing of the silence still hanging behind him in the lobby, or how loudly it rings in his ears.
+
+--- PART 2 ---
+
+[NARRATOR]
+Later that morning, Iris Tanaka crosses the same lobby beneath the clock stuck at 4:47. She's the late owner's elder daughter, back after twelve years to settle his estate. Desmond is still near the front desk, papers from the morning not yet put away.
+
+[IRIS_TANAKA | style: brisk, businesslike]
+Desmond. Good, you're still here.
+
+[DESMOND_HALE | style: warm but distracted]
+Ms. Tanaka. Long morning already?
+
+[IRIS_TANAKA | style: matter-of-fact]
+Just came from the lawyer's office. The contest window closed today. Nobody filed, so it's official — my father's will stands as written.
+
+[DESMOND_HALE | style: neutral, careful]
+I figured it would. Nobody was going to fight you and your sister over paperwork.
+
+[IRIS_TANAKA | style: even, procedural]
+There's no sister to fight, Desmond, it's just me and the trust. And now that it's closed, the clock starts. Thirty days, and the building goes to auction.
+
+[DESMOND_HALE | style: taken aback, trying to hide it]
+Thirty days. That's — that's fast.
+
+[IRIS_TANAKA | style: unbothered]
+That's what the estate attorney set. It's standard once the window closes. I didn't pick the number.
+
+[DESMOND_HALE | style: quiet, searching]
+No, I know. I just — eighteen years I've been keeping the lights on in this place. Thirty days feels like no time at all to say goodbye to it.
+
+[IRIS_TANAKA | style: softening slightly, sympathetic]
+I understand that. I do. And I know it means notices going out to everyone in the building, which isn't going to be easy for you to deliver.
+
+[DESMOND_HALE | style: measured, not quite meeting her eyes]
+It's not the notices I'm thinking about.
+
+[IRIS_TANAKA | style: gentle but firm]
+Then what?
+
+[DESMOND_HALE | style: backing off, deflecting]
+Nothing. Just an old building's an old building. Things add up over the years, that's all. You get used to worrying about it.
+
+[IRIS_TANAKA | style: reassuring, brisk again]
+Well, worrying about it won't be your job much longer. Once the report comes in and the auction's scheduled, it's out of both our hands.
+
+[DESMOND_HALE | style: careful, noncommittal]
+Right. Out of our hands.
+
+[NARRATOR]
+Iris gathers her papers and continues toward the stairwell, already thinking of the next call to make. Desmond stays a moment longer by the desk, his unease with the timeline still unspoken.
+
+--- PART 3 ---
+
+[NARRATOR]
+Still the lobby, moments after Iris has gone. Desmond stands by the front desk, papers in hand, when the street door opens on Nora Vance — a young resident of the building, visibly pregnant, six months along.
+
+[SFX: the lobby door swinging shut behind her]
+
+[DESMOND_HALE | style: warm, brightening]
+There she is. How's the ankles today?
+
+[NORA_VANCE | style: light, tired-but-pleasant]
+Swollen. Don't ask about the ankles.
+
+[DESMOND_HALE | style: chuckling, genuinely pleased]
+Wasn't going to. You look well, Nora. Really.
+
+[NORA_VANCE]
+I look like I swallowed a beach ball.
+
+[DESMOND_HALE | style: fond]
+A beach ball with excellent posture.
+
+[NORA_VANCE | style: a small laugh]
+Flattery. Noted.
+
+[NARRATOR]
+Desmond's smile settles into something quieter, more sincere.
+
+[DESMOND_HALE | style: gentle, sincere]
+I mean it, though. It's good, seeing this building get some good news for once. And Tommy — tell him I said congratulations too, would you? Man comes home after everything he's been through, and now this. That's the kind of thing that ought to happen to somebody like him.
+
+[NARRATOR]
+Nora's smile doesn't move, but something behind her eyes goes very still for exactly one beat.
+
+[NORA_VANCE | style: careful, a half-second too measured]
+I'll — yeah. I'll tell him.
+
+[DESMOND_HALE | style: oblivious, warm]
+Three days back and already a father-to-be. Some men land on their feet no matter what.
+
+[NORA_VANCE | style: light again, smoothing over]
+Something like that.
+
+[DESMOND_HALE]
+You need anything carried up? Groceries, boxes, anything?
+
+[NORA_VANCE]
+I'm fine, Desmond. Really.
+
+[DESMOND_HALE | style: already turning back to his papers, cheerful]
+Well. You know where I am.
+
+[NARRATOR]
+Nora starts toward the stairwell, one hand resting briefly, absently, on the curve of her stomach.
+
+[NORA_VANCE | style: to herself, barely audible, flat]
+Sure I do.
+
+[NARRATOR]
+She doesn't look back at Desmond. Behind her ease is a private arithmetic she's run a hundred times already — that correcting him means saying Julian's name out loud, in this lobby, to a man who repeats everything he hears to everyone he likes. She lets the door of the stairwell fall shut behind her instead.
+
+[SFX: a stairwell door clicking shut]
+
+[NARRATOR]
+Desmond goes back to his clipboard, satisfied, certain, and entirely unaware of what he's just agreed was true.
+
+--- PART 4 ---
+
+[NARRATOR]
+Later that afternoon, three days into Tommy's parole, the Corner Diner sits across the street from the Amaranth — Lila Chen's place, run alone since her husband Henry's death four years ago. Tommy has just stepped inside.
+
+[SFX: a bell chimes softly over a door]
+
+[LILA_CHEN | style: warm, immediately decided]
+Tommy Lau. Don't you dare sit at the counter.
+
+[TOMMY_LAU | style: caught off guard, guarded]
+Mrs. Chen. I wasn't going to stay long, I just—
+
+[LILA_CHEN | style: brooking no argument]
+You'll sit in the corner booth. The red one. And it's on the house, so don't reach for your wallet, I'll slap your hand.
+
+[SFX: a vinyl booth creaking as someone sits]
+
+[TOMMY_LAU | style: quiet, unsure what to do with kindness]
+This was Henry's booth.
+
+[LILA_CHEN | style: soft, a little far away]
+Every morning for twenty years. Coffee, then the books, right there where you're sitting. He'd have that ledger open before I even had the lights on.
+
+[TOMMY_LAU | style: careful, neutral]
+He kept good records.
+
+[LILA_CHEN | style: fond, grieving]
+The best. Careful man. Never missed a column, never let a number sit wrong overnight. People don't know how much of this building he understood — the old owner trusted him with things he didn't trust anyone else with.
+
+[SFX: a coffee cup set down firmly on a table]
+
+[TOMMY_LAU]
+I remember him. From before.
+
+[LILA_CHEN | style: gentle, not pressing]
+I know you do. I know what "before" means when you say it like that.
+
+[TOMMY_LAU | style: tightly controlled, almost nothing showing]
+It's fine, Mrs. Chen.
+
+[LILA_CHEN | style: quieter, watching him closely]
+It's not fine. But you don't have to say so at my table.
+
+[NARRATOR]
+She holds his gaze a moment, then busies her hands with the coffee pot, giving him somewhere else to look.
+
+[LILA_CHEN | style: brisk again, covering]
+Eat. I made too much stew for one afternoon and I refuse to throw it out.
+
+[TOMMY_LAU | style: low, sincere]
+Thank you.
+
+[LILA_CHEN | style: soft]
+Welcome home, Tommy.
+
+[NARRATOR]
+He nods, and says nothing more about the booth, or the man who used to sit in it.
+
+--- PART 5 ---
+
+[NARRATOR]
+Six weeks since a diagnosis he has told no one. Alone in the Amaranth's rooftop greenhouse, after hours, Augustine Kwok waters the plants he's tended for decades.
+
+[AUGUSTINE_KWOK | style: quiet, unhurried]
+That's it. Drink up.
+
+[SFX: water trickling steadily from a watering can]
+
+[AUGUSTINE_KWOK | style: calm, private]
+Henry always said I talked to these more than I talked to him.
+
+[SFX: watering can set down hard on a wooden bench]
+
+[AUGUSTINE_KWOK | style: pain breaking through, low]
+Not now. Not now, not now—
+
+[AUGUSTINE_KWOK | style: gritted, barely controlled | speed: 0.9]
+There. There it is.
+
+[NARRATOR]
+He grips the edge of the potting bench until the pain passes, alone with it, the way he has been every time since.
+
+[AUGUSTINE_KWOK | style: shaky exhale settling into control]
+Alright.
+
+[AUGUSTINE_KWOK | style: dry, rueful]
+Alright, old man.
+
+[NARRATOR]
+He straightens his back, smooths his collar, resets his face — a habit now, even with no one to see it.
+
+[AUGUSTINE_KWOK | style: measured, counting under his breath]
+Six weeks gone. Say seven, eight left, if the doctor wasn't being kind.
+
+[AUGUSTINE_KWOK | style: quieter, almost bargaining]
+Eight weeks to carry two things instead of one.
+
+[AUGUSTINE_KWOK | style: firm, closing the thought]
+Long enough. It has to be long enough.
+
+[NARRATOR]
+He picks the watering can back up and returns to the row of plants nearest the door, as if nothing happened at all.
+
+--- PART 6 ---
+
+[NARRATOR]
+Later that same afternoon, across the street from the Amaranth, the Corner Diner's red vinyl booths sit half full. Iris Tanaka, the building's late owner's daughter, has asked Lila Chen for coffee — the first time today the auction has left the lobby.
+
+[SFX: a bell over the door chimes]
+
+[LILA_CHEN | style: warm, welcoming]
+Sit, sit. I'll bring the pot. You look like you haven't eaten since Hangzhou.
+
+[IRIS_TANAKA | style: tired but trying for lightness]
+Just coffee, Lila. Please.
+
+[SFX: a ceramic cup set down on the table]
+
+[LILA_CHEN | style: settling in across from her]
+So. How's the paperwork? Desmond said you were at the desk half the morning.
+
+[IRIS_TANAKA | style: matter-of-fact, resigned]
+The contest window closed today. That's done now. Thirty days, and the building goes to auction.
+
+[LILA_CHEN | style: careful, gentle]
+Thirty days feels fast, for a building that's stood since before either of us.
+
+[IRIS_TANAKA | style: measured, a little defensive]
+It's not my choice, really — the engineer's report comes back next week, and once that's filed, the clock doesn't stop for anybody. Bad water pressure, cracks in the foundation wall, apparently worse than anyone thought.
+
+[LILA_CHEN | style: quiet, private doubt under a calm surface]
+Worse than anyone thought.
+
+[IRIS_TANAKA | style: apologetic, misreading her]
+I know. I know how it sounds. I'm sorry — I forget sometimes you knew my father's building better than I ever did.
+
+[LILA_CHEN | style: deflecting warmly, hiding what she's actually thinking]
+I knew his coffee order. That's about all.
+
+[IRIS_TANAKA | style: soft, grateful]
+Still. It helps, talking to someone who isn't asking me to sign something.
+
+[LILA_CHEN | style: gentle, closing the subject]
+Then don't sign anything today. Drink your coffee.
+
+[NARRATOR]
+Iris smiles, relieved, and lets the conversation drift to smaller things. Lila listens, nodding in the right places, saying nothing about the ledgers she once balanced late at night at Henry's kitchen table — books that never once looked like a building on the edge of collapse. She pours more coffee instead of a question she isn't ready to ask.
+
+--- PART 7 ---
+
+[NARRATOR]
+Six weeks since a diagnosis he has told no one. In the basement archive, one bulb hangs from a wire, swaying slightly when the door shuts. Augustine kneels at the far wall, alone.
+
+[AUGUSTINE_KWOK | style: quiet, methodical]
+Same brick. Same corner.
+
+[SFX: a brick scraping loose from mortar, set down on concrete]
+
+[AUGUSTINE_KWOK | style: low, to himself]
+Twelve years, and it still comes free like it was never really sealed.
+
+[SFX: a metal box latch clicking open]
+
+[AUGUSTINE_KWOK | style: barely above a whisper]
+There you are.
+
+[NARRATOR]
+He lifts the ledger free, holding it the way a man holds something that could burn down two lives at once.
+
+[AUGUSTINE_KWOK | style: measured, aching | speed: 0.9]
+Walter's hand on every column. Henry's initials next to his.
+
+[AUGUSTINE_KWOK | style: heavier, almost pleading]
+One boy's whole life on one side of the page. One woman's whole memory on the other.
+
+[AUGUSTINE_KWOK | style: quiet, resigned]
+I keep telling myself next week. I don't have as many next weeks as I used to.
+
+[NARRATOR]
+He closes the ledger, holds it a moment longer than necessary, then sets it back exactly where it was.
+
+[SFX: metal box latch clicking shut]
+
+[AUGUSTINE_KWOK | style: gentle, final]
+Not tonight, either.
+
+[SFX: a brick sliding back into place, settling with a soft scrape]
+
+[AUGUSTINE_KWOK | style: hollow, tired]
+Sleep well, Lila. Whatever that's worth from me.
+
+[NARRATOR]
+He rises slowly, one hand braced against the wall, and climbs back toward the stairs, leaving the wall exactly as it was.
+
+--- PART 8 ---
+
+[NARRATOR]
+Three days since Tommy came home, and past midnight, the Amaranth's roof sits quiet above Augustine's greenhouse rows, the irrigation line still ticking through its slow drip. Nora climbs up looking for a place to be alone, and finds she isn't.
+
+[SFX: a heavy roof access door creaking shut]
+
+[NORA_VANCE | style: startled, then careful]
+I didn't think anyone else knew about this door.
+
+[TOMMY_LAU | style: guarded, quiet]
+Augustine showed me. Years ago. Before.
+
+[NORA_VANCE | style: soft, testing the ground]
+I can go back down.
+
+[TOMMY_LAU | style: low, almost asking her to stay]
+You don't have to.
+
+[NARRATOR]
+She stays near the railing, keeping a distance she doesn't quite commit to.
+
+[NORA_VANCE | style: light, deflecting]
+Desmond means well. This morning, in the lobby.
+
+[TOMMY_LAU | style: flat, controlled]
+I heard him.
+
+[NORA_VANCE | style: careful]
+You didn't say anything.
+
+[TOMMY_LAU | style: quiet, wry]
+Neither did you.
+
+[NARRATOR]
+A silence sits between them, longer than either one seems willing to break first.
+
+[TOMMY_LAU | style: rougher, more honest than he intends]
+Two nights, Nora. That's all I've had of anything good since I got out. I'm not going to be the one who makes it small by asking what it was.
+
+[NORA_VANCE | style: gentle, guilty underneath]
+It wasn't small.
+
+[TOMMY_LAU | style: careful, hopeful despite himself]
+Then what was it.
+
+[NORA_VANCE | style: evasive, kind]
+Two people who needed one night to feel like themselves again. I don't think we have to make it more than that. Not tonight.
+
+[NARRATOR]
+He studies her for a moment, and something braced in him since the lobby loosens, just slightly.
+
+[TOMMY_LAU | style: gentler, guard dropping a fraction]
+Twelve years, I told myself I wasn't going to want anything this building had to offer. You weren't part of that plan.
+
+[NORA_VANCE | style: quiet, moved despite herself]
+I wasn't planning on you either.
+
+[NARRATOR]
+Below them, the diner's sign hums faintly against the dark. Neither one says the word father, or the word Julian, or the word auction, though all three sit somewhere in the space between their shoulders.
+
+[TOMMY_LAU | style: careful, watching her]
+Whatever this turns out to be. However it goes. I'm not going anywhere this time.
+
+[NORA_VANCE | style: soft, almost a confession she doesn't finish]
+I know.
+
+[NARRATOR]
+She doesn't correct what he's letting himself believe. She just lets the quiet hold it instead.
+
+In her mail, unopened, sits the structural engineer's report Iris hasn't yet seen — the clock is already running regardless, thirty days and counting since the contest window closed today. Two floors below, Augustine folds a hospital reminder into his pocket before anyone can ask what it says.
+

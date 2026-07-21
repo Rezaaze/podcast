@@ -1,6 +1,7 @@
 """Textverarbeitung für Skripte: Satz-Splitting (Englisch + CJK),
 Chunking für die TTS und sprachneutrale Längenmessung."""
 
+import hashlib
 import re
 
 _ABBREV = re.compile(
@@ -48,14 +49,34 @@ def count_cjk(text):
     return len(_CJK_CHAR.findall(text))
 
 
+def is_speakable(text):
+    """False bei reinen Interpunktions-Chunks ('—', '...') — Dramaturgie-
+    Pausen im Skripttext, für die kein TTS-Backend brauchbares Audio
+    liefert (Plausibilitätsprüfung schlägt IMMER an, auch nach MAX_RETRIES
+    Versuchen). Aufrufer rendern solche Chunks als Stille statt sie an das
+    Backend zu schicken."""
+    return any(ch.isalnum() for ch in text)
+
+
 def count_length_units(text):
     """Sprachneutrale Länge: 1 CJK-Zeichen = 1 Einheit, 1 lateinisches Wort =
     1 Einheit. len(text.split()) würde chinesischen Text absurd kurz zählen
     (kein Leerzeichen zwischen Wörtern) und damit jedes Wortbudget sprengen."""
-    cjk = len(_CJK_CHAR.findall(text))
+    cjk = count_cjk(text)
     latin_only = _CJK_CHAR.sub(' ', text)
     words = len(re.findall(r"[A-Za-z0-9À-ɏ]+(?:['’-][A-Za-z0-9À-ɏ]+)*", latin_only))
     return cjk + words
+
+
+def sfx_asset_hash(description):
+    """Deterministischer Dateiname-Baustein für generierte SFX-Assets
+    (<hash>.mp3) — Podcast-Fabrik (beim Schreiben) und Lolfi (beim Lesen,
+    eigene Kopie dieser Funktion in lolfi/discovery.py, siehe
+    Lolfi/CLAUDE.md Kopplungspunkte) berechnen unabhängig denselben Hash
+    aus demselben Cue-Text und finden so ohne Zuordnungsdatei dieselbe
+    Datei. Normalisiert (strip+lower) vor dem Hashen, damit Groß-/
+    Kleinschreibung oder Rand-Whitespace keinen neuen Dateinamen erzeugen."""
+    return hashlib.sha1(description.strip().lower().encode("utf-8")).hexdigest()[:16]
 
 
 def chunk_prose_by_words(text, max_words, mode="narration"):

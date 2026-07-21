@@ -1,0 +1,57 @@
+{
+  "intro": "Ein Leuchtturm, außer Betrieb seit Jahrzehnten. Ein Renovierungsauftrag, der nicht hätte angenommen werden dürfen.",
+  "outro": "Zwei Geheimnisse, dreißig Jahre alt. Einer hält sie mit einem Schlüssel. Eine andere mit Funkwellen. Und Mara beginnt, die falsche Wand zu messen.",
+  "sections": [
+    {
+      "location": "village",
+      "thread": "Das erste Geheimnis: Der vermauerte Keller",
+      "title": "Ankunft im toten Dorf",
+      "what": "Mara erreicht das halb verlassene Küstendorf und erfährt ihren Auftrag: Sanierung des alten Leuchtturms. Die Dorfbewohner sind wortkarg.",
+      "who": [
+        "Mara Voss"
+      ],
+      "word_budget": 250
+    },
+    {
+      "location": "lighthouse",
+      "thread": "Das erste Geheimnis: Der vermauerte Keller",
+      "title": "Der Mann mit dem Schlüssel",
+      "what": "Viktor empfängt Mara am Leuchtturm. Er führt sie durch das Erdgeschoss, weicht jedem Blick in Richtung Untergeschoss aus.",
+      "who": [
+        "Mara Voss",
+        "Viktor Seyn"
+      ],
+      "word_budget": 300
+    },
+    {
+      "location": "cliffside_path",
+      "thread": "Das zweite Geheimnis: Das gestohlene Signal",
+      "title": "Der Beobachter am Klippenweg",
+      "what": "Jonas notiert vom Klippenweg aus Uhrzeiten und Bewegungen am Turm. Er wartet auf ein Muster.",
+      "who": [
+        "Jonas Falk"
+      ],
+      "word_budget": 220
+    },
+    {
+      "location": "lighthouse",
+      "thread": "Das zweite Geheimnis: Das gestohlene Signal",
+      "title": "Das Summen im Mauerwerk",
+      "what": "Elise prüft heimlich ihren Sender im oberen Stockwerk. Schritte von unten lassen sie erstarren.",
+      "who": [
+        "Elise Dorn"
+      ],
+      "word_budget": 220
+    },
+    {
+      "location": "lighthouse",
+      "thread": "Das erste Geheimnis: Der vermauerte Keller",
+      "title": "Viktor allein vor der Wand",
+      "what": "Viktor kehrt nach Einbruch der Dunkelheit zurück. Er steht vor der vermauerten Wand, den Schlüssel seiner Mutter in der Hand.",
+      "who": [
+        "Viktor Seyn"
+      ],
+      "word_budget": 280
+    }
+  ]
+}

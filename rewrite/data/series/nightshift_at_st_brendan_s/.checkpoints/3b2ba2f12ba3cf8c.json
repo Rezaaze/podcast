@@ -1,0 +1,77 @@
+{
+  "intro": "St. Brendan's ER, February. A frozen night that will not stay quiet.",
+  "outro": "The rig pulls out. The bay doors close. The season's central wound is open before anyone has named it.",
+  "sections": [
+    {
+      "location": "ambulance_bay",
+      "thread": "Maeve–Dana History",
+      "title": "Frozen Ground",
+      "what": "Dana arrives at the ambulance bay on a bitter February night. Theo clocks her name on the manifest. Maeve is nowhere in sight yet.",
+      "who": [
+        "Dana Voss",
+        "Theo Okafor"
+      ],
+      "word_budget": 600
+    },
+    {
+      "location": "er_floor",
+      "thread": "Maeve–Dana History",
+      "title": "Bay One",
+      "what": "Multi-vehicle pile-up floods the bays. Dana's rig first through. She and Maeve take the critical together — one look, no words about Cork.",
+      "who": [
+        "Dana Voss",
+        "Maeve Callahan",
+        "Theo Okafor",
+        "Reza Shirazi"
+      ],
+      "word_budget": 800
+    },
+    {
+      "location": "er_floor",
+      "thread": "Maeve–Dana History",
+      "title": "The Choreography",
+      "what": "They work the trauma in clinical silence, moving with muscle memory of a shared past. Everyone in the bay feels the unspoken weight.",
+      "who": [
+        "Maeve Callahan",
+        "Dana Voss",
+        "Reza Shirazi",
+        "Theo Okafor"
+      ],
+      "word_budget": 900
+    },
+    {
+      "location": "er_floor",
+      "thread": "Reza's Second Chance",
+      "title": "The Spine Holds",
+      "what": "Reza struggles with a secondary patient; Theo steadies him. Sister Agnes crosses the bay and sees what no one else is naming.",
+      "who": [
+        "Reza Shirazi",
+        "Theo Okafor",
+        "Sister Agnes"
+      ],
+      "word_budget": 700
+    },
+    {
+      "location": "break_room",
+      "thread": "Maeve–Dana History",
+      "title": "Off the Clock",
+      "what": "Pile-up clears. Dana signs transfer paperwork at the nurses' station. Maeve passes without stopping. Nothing is said.",
+      "who": [
+        "Dana Voss",
+        "Maeve Callahan",
+        "Theo Okafor"
+      ],
+      "word_budget": 600
+    },
+    {
+      "location": "ambulance_bay",
+      "thread": "Maeve–Dana History",
+      "title": "Last Rig Out",
+      "what": "Dana walks back to her rig through the ambulance bay. Cold air. She pauses at the threshold but does not look back.",
+      "who": [
+        "Dana Voss"
+      ],
+      "word_budget": 600
+    }
+  ]
+}

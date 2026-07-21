@@ -41,7 +41,7 @@ The complete episode consists of exactly {{PARTS_TOTAL}} parts across {{SECTIONS
 ... and so on. Do not include any comments, stage directions, or descriptions around or inside these markers. Every part must end with a complete sentence.
 
 MATHEMATICAL TARGET FOR RUNTIME:
-Each of the {{PARTS_TOTAL}} PARTS must be between {{WORDS_TARGET}} words. This is a STRICT range: never write fewer than {{WORDS_MIN}} and never more than {{WORDS_MAX}} words per PART. Every episode in the series must have the same length, so treat this word budget as a hard constraint. Write dense prose — if you run over budget, cut ruthlessly instead of padding.
+Each of the {{PARTS_TOTAL}} PARTS must be {{WORDS_TARGET}} words long. This is a STRICT range: never write fewer than {{WORDS_MIN}} and never more than {{WORDS_MAX}} words per PART. Every episode in the series must have the same length, so treat this word budget as a hard constraint. Write dense prose — if you run over budget, cut ruthlessly instead of padding.
 
 INTRO, OUTRO & TRANSFER SPECIFICATIONS:
 {{INTRO_SPEC}}

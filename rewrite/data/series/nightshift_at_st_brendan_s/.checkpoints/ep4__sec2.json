@@ -1,0 +1,107 @@
+{
+  "lines": [
+    {
+      "speaker": "NARRATOR",
+      "text": "The admin corridor at two in the morning is a different country from the ER. Quieter. The fluorescents here are older, the flicker more deliberate. Theo is cutting through to the supply room when Harte steps out of the scheduling alcove."
+    },
+    {
+      "speaker": "HARTE",
+      "style": "warm, unhurried",
+      "text": "Theo. Glad I caught you."
+    },
+    {
+      "speaker": "THEO",
+      "style": "cautious",
+      "text": "Mr. Harte."
+    },
+    {
+      "speaker": "HARTE",
+      "text": "Walk with me a moment."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "It is not a question. Harte moves with the unhurried confidence of a man who has never been told no by anyone who needed his signature."
+    },
+    {
+      "speaker": "HARTE",
+      "text": "I've been meaning to check in. You've had a long few weeks. Everyone has. The volume numbers have been — well. You know the numbers."
+    },
+    {
+      "speaker": "THEO",
+      "text": "I know them."
+    },
+    {
+      "speaker": "HARTE",
+      "text": "Good man. I sometimes worry the nursing team carries operational stress in ways that never show on the metrics. Bay diversions, re-routing — these decisions get made at a level where the day-to-day isn't always legible from the floor."
+    },
+    {
+      "speaker": "THEO",
+      "style": "flat",
+      "text": "I understand the pressures."
+    },
+    {
+      "speaker": "HARTE",
+      "style": "gentler, careful",
+      "text": "I'm sure you do. And I'm sure you have questions. That's natural. When a ward gets restructured mid-cycle, people notice things they may not have full context for."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "Theo watches a porter push a linen cart past the far end of the passage. The sound fades. Nobody else."
+    },
+    {
+      "speaker": "THEO",
+      "text": "What kind of context are you offering?"
+    },
+    {
+      "speaker": "HARTE",
+      "text": "Just this: the decisions around Ward Seven had full board endorsement. Capital planning. Long-term. Nothing improvised about it, whatever it may have looked like from where you were standing."
+    },
+    {
+      "speaker": "THEO",
+      "style": "quiet, deliberate",
+      "text": "I wasn't asking about Ward Seven."
+    },
+    {
+      "speaker": "HARTE",
+      "style": "pause before speaking",
+      "text": "No. Of course you weren't."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "The pause is surgical. Harte lets it sit just long enough."
+    },
+    {
+      "speaker": "HARTE",
+      "style": "measured, almost paternal",
+      "text": "I've always thought of you as one of the more reliable people on this floor. The kind of nurse who understands that institutions are fragile things. Pressure applied in the wrong place, at the wrong time — it can crack something a lot of people depend on."
+    },
+    {
+      "speaker": "THEO",
+      "style": "carefully",
+      "text": "That sounds like a warning."
+    },
+    {
+      "speaker": "HARTE",
+      "style": "sincere surface, steel beneath",
+      "text": "It sounds like concern. I'm concerned about you. I'd hate to see someone I respect spend energy on channels that lead nowhere and cost more than they gain."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "Harte adjusts his badge lanyard. Once. A small, concluding gesture."
+    },
+    {
+      "speaker": "HARTE",
+      "style": "already moving off",
+      "text": "Get some rest between shifts if you can. You look tired."
+    },
+    {
+      "speaker": "HARTE",
+      "style": "over his shoulder, easy",
+      "text": "My door's always open."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "His footsteps are quiet for a large man. Theo stands in the passage after he has gone, the supply room forgotten. The fluorescent above him blinks once and holds."
+    }
+  ]
+}

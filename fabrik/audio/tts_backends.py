@@ -76,8 +76,12 @@ class RestBackend:
                     if p.get("name") == voice_name:
                         return "prompt", p["prompt_id"], seed
                     available.append(f"{p.get('name')} (geklont)")
-        except Exception:
-            pass
+        except requests.RequestException as exc:
+            # Unterschied zu "Stimme nicht in der Liste" bewusst sichtbar machen —
+            # sonst sieht ein Verbindungsfehler hier identisch aus wie eine
+            # tatsächlich leere/nicht vorhandene Stimme (available bleibt []).
+            print(f"  WARNUNG: {self.base_url}/api/v1/base/prompts nicht erreichbar ({exc}) "
+                  f"— geklonte Stimmen werden bei der Auflösung übersprungen.")
         try:
             resp = requests.get(f"{self.base_url}/api/v1/custom-voice/speakers", timeout=self.connect_timeout)
             if resp.ok:
@@ -85,8 +89,9 @@ class RestBackend:
                     if s.get("name") == voice_name:
                         return "speaker", voice_name, seed
                     available.append(f"{s.get('name')} (built-in)")
-        except Exception:
-            pass
+        except requests.RequestException as exc:
+            print(f"  WARNUNG: {self.base_url}/api/v1/custom-voice/speakers nicht erreichbar ({exc}) "
+                  f"— Built-in-Speaker werden bei der Auflösung übersprungen.")
         return None, available, None
 
     def generate_chunk(self, voice, text, style=None, speed=None):
@@ -319,6 +324,76 @@ class GradioBackend:
             return None, status
         except Exception as e:
             return None, str(e)
+
+    def supports_batch(self, jobs):
+        """True nur wenn ALLE Jobs im Batch DIESELBE Art sind (nur 'speaker'
+        oder nur 'clone') — beide haben einen gepatchten Batch-Endpoint
+        (siehe cloud/onstart_qwen3_tts.sh::PODCAST_FABRIK_BATCH_PATCH bzw.
+        PODCAST_FABRIK_CLONE_BATCH_PATCH), aber EIN Forward-Pass kann nicht
+        beide Modelle (CustomVoice vs. Base) gleichzeitig bedienen — gemischte
+        Batches (z.B. Built-in-Speaker-Rollen neben einer Voice-Clone-Rolle
+        im selben Fenster) fallen auf einzelne generate_chunk()-Aufrufe
+        zurück. Der Aufrufer (podcast_maker.py) bucketet deshalb VOR dem
+        Windowing nach Art, nicht nur nach chunk_concurrency-Fenstergröße."""
+        kinds = {voice[0] for voice, _text, _style, _speed in jobs}
+        return kinds <= {"speaker", "clone"} and len(kinds) == 1
+
+    def generate_chunk_batch(self, jobs):
+        """EIN Forward-Pass für mehrere Chunks gleichzeitig, über die von
+        cloud/onstart_qwen3_tts.sh in die App gepatchten Batch-Endpoints —
+        echte GPU-Parallelität (self.model.generate() einmal für den ganzen
+        Batch) statt N sequenzieller Calls, die serverseitig ohnehin
+        denselben CUDA-Default-Stream teilen und sich damit gegenseitig
+        blockieren (siehe cloud/README.md für die Messung: ~13x schneller
+        bei Batch=17 gegenüber Einzel-Calls). Built-in-Speaker-Jobs gehen an
+        /generate_custom_voice_batch, Voice-Clone-Jobs (EINE geteilte
+        Identität für alle Chunks im Batch) an /generate_voice_clone_batch.
+
+        jobs: Liste von (voice, text, style, speed) Tupeln, ALLE mit
+        demselben voice[0] (Aufrufer garantiert das via supports_batch()).
+        Gibt (Liste von AudioSegment|None in Job-Reihenfolge, Fehlermeldung
+        oder None) zurück — bei komplettem Fehlschlag lauter None-Einträge,
+        damit der Aufrufer pro Chunk denselben Fehlerpfad wie bei
+        generate_chunk() nehmen kann."""
+        kind = jobs[0][0][0]
+        if kind == "clone":
+            return self._generate_voice_clone_batch(jobs)
+        return self._generate_custom_voice_batch(jobs)
+
+    def _generate_custom_voice_batch(self, jobs):
+        import json
+        texts = [text for _voice, text, _style, _speed in jobs]
+        speakers = [voice[1] for voice, _text, _style, _speed in jobs]
+        instructs = [style or "" for _voice, _text, style, _speed in jobs]
+        try:
+            client = self._get_client()
+            paths, status = client.predict(
+                json.dumps(texts), self.language, json.dumps(speakers), json.dumps(instructs),
+                self.model_size, -1,
+                api_name="/generate_custom_voice_batch",
+            )
+            if not paths or len(paths) != len(jobs):
+                return [None] * len(jobs), status
+            return [AudioSegment.from_file(p) for p in paths], None
+        except Exception as e:
+            return [None] * len(jobs), str(e)
+
+    def _generate_voice_clone_batch(self, jobs):
+        import json
+        from gradio_client import handle_file
+        texts = [text for _voice, text, _style, _speed in jobs]
+        try:
+            client = self._get_client()
+            paths, status = client.predict(
+                json.dumps(texts), handle_file(self.ref_audio), self.ref_text,
+                self.language, False, self.model_size, -1,
+                api_name="/generate_voice_clone_batch",
+            )
+            if not paths or len(paths) != len(jobs):
+                return [None] * len(jobs), status
+            return [AudioSegment.from_file(p) for p in paths], None
+        except Exception as e:
+            return [None] * len(jobs), str(e)
 
 
 class KokoroBackend:

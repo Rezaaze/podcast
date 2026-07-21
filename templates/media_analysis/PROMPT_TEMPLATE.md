@@ -6,6 +6,12 @@
 #                   Quellmaterial) — kein character_knowledge, da Solo-Format.
 #
 # Alle anderen Platzhalter identisch zu narration/PROMPT_TEMPLATE.md.
+#
+# Stolperkante: weil dieses Template einen case-Block hat, greift
+# generation.use_beats auch hier (Beat-Layer gated auf episode.case, nicht
+# auf mode) — der Beat-Prompt ist aber szenen-/dialogorientiert und für
+# dieses Solo-Essay-Format nur bedingt sinnvoll. use_beats für
+# media_analysis-Serien im Zweifel auslassen.
 
 --- TEMPLATE START ---
 You are {{PERSONA}}. We are creating the script for a multi-part anthology podcast series titled "{{SERIES_TITLE}}", where each episode deconstructs one work or phenomenon through a fixed four-part analytical lens: source comparison, psychological deep-dive, core thesis, and the broader ur-pattern.
@@ -27,7 +33,7 @@ The complete episode consists of exactly {{PARTS_TOTAL}} parts across {{SECTIONS
 ... and so on. Do not include any comments, stage directions, or descriptions around or inside these markers. Every part must end with a complete sentence.
 
 MATHEMATICAL TARGET FOR RUNTIME:
-Each of the {{PARTS_TOTAL}} PARTS must be between {{WORDS_TARGET}} words. This is a STRICT range: never write fewer than {{WORDS_MIN}} and never more than {{WORDS_MAX}} words per PART. Write dense, precise prose — if you run over budget, cut ruthlessly instead of padding.
+Each of the {{PARTS_TOTAL}} PARTS must be {{WORDS_TARGET}} words long. This is a STRICT range: never write fewer than {{WORDS_MIN}} and never more than {{WORDS_MAX}} words per PART. Write dense, precise prose — if you run over budget, cut ruthlessly instead of padding.
 
 INTRO, OUTRO & TRANSFER SPECIFICATIONS:
 {{INTRO_SPEC}}

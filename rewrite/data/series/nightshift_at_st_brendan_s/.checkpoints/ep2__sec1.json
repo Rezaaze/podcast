@@ -1,0 +1,128 @@
+{
+  "lines": [
+    {
+      "speaker": "NARRATOR",
+      "text": "Bay four has been held since eleven. Cardiac monitoring equipment, a patient who never came, a bed that Harte flagged as unavailable in the system at nineteen-oh-three and has not released."
+    },
+    {
+      "speaker": "am_michael",
+      "text": "Dispatch is asking again. Chest pain, sixty-two-year-old male, four minutes out."
+    },
+    {
+      "speaker": "af_sarah",
+      "text": "Tell them we're receiving."
+    },
+    {
+      "speaker": "am_michael",
+      "text": "We can't. Bay four is flagged occupied. Protocol says I need a supervisor override before I can clear it, and Harte's the supervisor on record tonight."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "Maeve crosses to the board. The bay statuses are color-coded. Bay four is amber — held, not occupied, not cleared. The timestamp beside it is three hours old."
+    },
+    {
+      "speaker": "af_sarah",
+      "text": "Who entered the hold?"
+    },
+    {
+      "speaker": "am_michael",
+      "text": "System shows Dr. Harte, direct entry, no patient ID attached."
+    },
+    {
+      "speaker": "af_sarah",
+      "text": "Get him on the phone."
+    },
+    {
+      "speaker": "am_echo",
+      "text": "He's not answering. I've tried twice. Goes to voicemail after two rings."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "Dispatch crackles again. Three minutes. Maeve stares at the amber tile and runs the arithmetic she has run before in worse places — not what the policy says but what the policy does."
+    },
+    {
+      "speaker": "af_sarah",
+      "text": "Pull the divert log. All of them. Tonight."
+    },
+    {
+      "speaker": "am_michael",
+      "text": "Maeve—"
+    },
+    {
+      "speaker": "af_sarah",
+      "text": "Just pull it."
+    },
+    {
+      "speaker": "am_echo",
+      "text": "Three diverts since twenty-hundred. Mercy General, St. Agatha's, and one that went to County. All chest or respiratory. All while bay four sat amber."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "There it is. She can feel the shape of it the way you feel a tooth that has gone wrong — a pressure you could almost ignore until you pressed exactly there."
+    },
+    {
+      "speaker": "af_sarah",
+      "text": "What's Mercy General's average door-to-balloon time tonight?"
+    },
+    {
+      "speaker": "am_echo",
+      "text": "I don't have that."
+    },
+    {
+      "speaker": "af_sarah",
+      "text": "Find it."
+    },
+    {
+      "speaker": "am_michael",
+      "text": "We need an answer for dispatch."
+    },
+    {
+      "speaker": "af_sarah",
+      "text": "Divert. Tell them St. Agatha's."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "She says it cleanly, no pause that would give her away. The radio crackles and settles. The ambulance reroutes. The board stays amber."
+    },
+    {
+      "speaker": "am_michael",
+      "text": "You're going to file something."
+    },
+    {
+      "speaker": "af_sarah",
+      "text": "I'm going to understand it first."
+    },
+    {
+      "speaker": "am_michael",
+      "text": "What's there to understand? He's holding a bay with no patient in it. He's creating the divert condition on purpose."
+    },
+    {
+      "speaker": "af_sarah",
+      "text": "I want to know why bay four specifically. Cardiac monitoring. Three diverts, all cardiac or respiratory. The bed isn't held randomly — it's held to be unavailable for a particular class of patient."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "A silence opens between them that neither fills. Am_echo is very carefully not listening."
+    },
+    {
+      "speaker": "am_michael",
+      "text": "You think he's doing it on purpose."
+    },
+    {
+      "speaker": "af_sarah",
+      "text": "I think the log shows what it shows."
+    },
+    {
+      "speaker": "am_michael",
+      "text": "That's not an answer."
+    },
+    {
+      "speaker": "af_sarah",
+      "text": "It's the only one I have that I can prove."
+    },
+    {
+      "speaker": "NARRATOR",
+      "text": "At nineteen minutes past two, a call comes in from St. Agatha's. The sixty-two-year-old male has been triaged and is stable. Maeve notes the time and writes nothing down. The amber tile on the board continues to glow. Bay four. No patient. No clearance. No one answering his phone."
+    }
+  ]
+}

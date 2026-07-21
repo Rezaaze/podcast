@@ -73,8 +73,12 @@ Der Kern gegen "die KI vergisst, wer der Täter ist": Die Wahrheit steht
 ihre Wissens-Scheibe:
 
 ```
-character_knowledge: { ROLLE: { knows: [...], hides: [...], believes_falsely: [...] } }
+character_knowledge: { ROLLE: "Fließtext-Wissensstand (was sie weiß/verbirgt/fälschlich glaubt)" }
 ```
+
+(Bis 17.07.2026: `{ ROLLE: { knows: [...], hides: [...], believes_falsely: [...] } }` — auf
+Fließtext vereinfacht, weniger JSON-Verschachtelung bei gleicher Aussage; Alt-Format bleibt
+für ältere Serien gültig.)
 
 Widersprüche und Lügen entstehen dadurch *organisch* aus der
 Perspektivbeschränkung statt vom Modell behauptet. Validiert wird das heute

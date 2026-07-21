@@ -72,6 +72,21 @@ def episode_name_from_file(filepath):
     return stem.capitalize()
 
 
+def url_reachable(url, timeout=5):
+    """Reiner Erreichbarkeits-Check: jede HTTP-Antwort zählt, auch 404 — die
+    Backends haben unterschiedliche Health-Endpoints, hier geht es nur um
+    "Server an/aus", bevor ein zweiter Render-Worker daran gebunden wird."""
+    import urllib.error
+    import urllib.request
+    try:
+        urllib.request.urlopen(url, timeout=timeout)
+        return True
+    except urllib.error.HTTPError:
+        return True
+    except Exception:
+        return False
+
+
 def episode_offsets_ms(episode_paths, pause_ms):
     """Start-Offset jeder Episode in der gemergten Anthologie (MP3-Längen +
     Merge-Pause) — exakt wie merge_episodes() die Tonspur zusammensetzt."""
@@ -100,7 +115,7 @@ def write_chapters(episode_pairs, anthology_path, pause_ms):
     offsets = episode_offsets_ms(episode_paths, pause_ms)
     chapters = []
     for (script, episode_file), offset in zip(episode_pairs, offsets):
-        title, _ = audio.parse_meta_file(os.path.splitext(script)[0] + "_META.txt")
+        title, _desc, _question = audio.parse_meta_file(os.path.splitext(script)[0] + "_META.txt")
         chapters.append({"start_ms": offset,
                          "title": title or episode_name_from_file(episode_file)})
 
@@ -119,7 +134,7 @@ def merge_subtitles(episode_paths, anthology_path, pause_ms):
     Lolfi liest daraus die Sprechblasen-Einblendungen für die Anthologie,
     genau wie es *_SUBS.json einer Einzelepisode liest)."""
     import json as _json
-    from podcast_maker import format_srt_timestamp
+    from fabrik.cli.podcast_maker import format_srt_timestamp
 
     cues = []
     missing = []
@@ -255,7 +270,7 @@ def generate_upload_index(series, episode_pairs, anthology_path, data, chapters=
 
     for script, episode_file in episode_pairs:
         meta_path = os.path.splitext(script)[0] + "_META.txt"
-        title, desc = audio.parse_meta_file(meta_path)
+        title, desc, question = audio.parse_meta_file(meta_path)
         episode_num = audio.extract_episode_number(script, prefix)
         display_title = audio.format_season_title(series_title, season, episode_num, title)
         lines.append(f"## {os.path.basename(episode_file)}")
@@ -264,10 +279,15 @@ def generate_upload_index(series, episode_pairs, anthology_path, data, chapters=
             lines.append(f"**Spotify-Metadaten:** Staffel {season}, Folge {episode_num} "
                          f"(in die entsprechenden Felder bei Spotify for Podcasters eintragen)\n")
         lines.append(f"**Beschreibung:**\n{desc or '(keine Beschreibung generiert)'}\n")
+        # Comment-Bait-Frage fürs Ende der Videobeschreibung/einen Community-Post —
+        # bewusst spoilerfrei (siehe generate_episode_meta-Prompt), fehlt bei
+        # Episoden von vor diesem Feature (keine FRAGE: in der META.txt).
+        if question:
+            lines.append(f"**Frage an die Zuschauer:** {question}\n")
         lines.append("---\n")
 
     if os.path.exists(anthology_path):
-        title, desc = audio.parse_meta_file(series.anthology_meta_file)
+        title, desc, _question = audio.parse_meta_file(series.anthology_meta_file)
         lines.append(f"## {os.path.basename(anthology_path)}  (Gesamt-Anthologie)")
         lines.append(f"**Titel:** {title or '(kein Titel generiert)'}\n")
         lines.append(f"**Beschreibung:**\n{desc or '(keine Beschreibung generiert)'}\n")
@@ -290,7 +310,9 @@ def generate_anthology_meta(series, data, force=False) -> bool:
     persona = data.get("writer_persona", config.DEFAULTS["writer_persona"])
     language = data.get("language", config.DEFAULTS["language"])
     series_title = data.get("series_title", "")
-    model = data.get("generation", {}).get("model", config.DEFAULTS["model"])
+    # light_model: reine Metadaten-Extraktion (analog Episoden-Meta), keine kreative
+    # Skript-Arbeit — braucht nicht das teure Schreibmodell.
+    model = data.get("generation", {}).get("light_model", config.DEFAULTS["light_model"])
 
     figures_text = "\n".join(f"- {ep['figure']}: {ep['theme']}" for ep in episodes)
     prompt = (
@@ -336,8 +358,20 @@ def generate_anthology_meta(series, data, force=False) -> bool:
 
 def main():
     parser = argparse.ArgumentParser(description="Alle Skripte einer Serie vertonen + Anthologie mergen")
+    # Aufgeteilter Render (siehe podcast_maker.py --skip-merge/--merge-only):
+    # reine TTS-Vertonung von der teuren GPU-Instanz trennen, Mastering lokal.
+    parser.add_argument("--skip-merge", action="store_true",
+                        help="Jede Episode NUR vertonen (Parts erzeugen), KEIN Merge/Mastering und "
+                             "KEIN Anthology-Merge — für Remote-Rendern auf der GPU-Instanz.")
+    parser.add_argument("--merge-only", action="store_true",
+                        help="TTS überspringen; jede Episode nur aus vorhandenen Part-WAVs lokal "
+                             "mastern + Anthologie mergen (kein TTS-Server nötig). Gegenstück zu --skip-merge.")
     paths.add_series_arg(parser)
     args = parser.parse_args()
+
+    if args.skip_merge and args.merge_only:
+        print("FEHLER: --skip-merge und --merge-only schließen sich gegenseitig aus.")
+        sys.exit(1)
 
     series = paths.resolve_series(args.series)
     data = config.load_episodes(series.episodes_file)
@@ -367,8 +401,6 @@ def main():
     if os.path.exists(anthology_path):
         print(f"Anthology existiert bereits: {ANTHOLOGY_FILENAME} – lösche sie zum Neu-Generieren.")
 
-    episode_pairs = []  # (script_path, episode_file) — für den Upload-Index
-
     # Ein einzelner Chunk-Timeout/eine kurze Server-Unterbrechung mitten in
     # einem langen "alle Episoden"-Lauf lässt bisher NUR diese eine Episode
     # fehlschlagen (podcast_maker.py bricht die Episode ab, sobald ein Part
@@ -381,6 +413,72 @@ def main():
     BATCH_RETRY_ROUNDS = 2
     BATCH_RETRY_DELAY = 20
 
+    # Optionaler zweiter TTS-Server: mit audio.secondary_api_url vertonen zwei
+    # Worker parallel (Worker 2 rendert via podcast_maker --api-url). Der
+    # Server muss dieselben Stimmen/Clones anbieten — sonst hard-failt dort
+    # die Voice-Auflösung, die Episode landet in der Retry-Runde und damit
+    # ggf. wieder beim Primär-Server.
+    # merge-only läuft rein lokal (CPU), kein TTS-Server — der Zweit-Server-
+    # Pfad (TTS-Lastverteilung) ist dann bedeutungslos und bleibt aus.
+    secondary_url = None if args.merge_only else data.get("audio", {}).get("secondary_api_url")
+    if secondary_url and not url_reachable(secondary_url):
+        print(f"Hinweis: audio.secondary_api_url ({secondary_url}) nicht erreichbar — "
+              f"vertone sequentiell über den Primär-Server.")
+        secondary_url = None
+    if secondary_url:
+        print(f"Zweiter TTS-Server aktiv: {secondary_url} — vertone 2 Episoden parallel.")
+
+    completed = {}  # Episoden-Index -> (script, episode_file); hält die Merge-Reihenfolge stabil
+
+    def render_one(i, script, api_url=None) -> bool:
+        """True, sobald die Episoden-MP3 existiert (frisch gerendert oder von
+        einem früheren Lauf). list/dict-Zugriffe hier sind unter CPython atomar,
+        die Worker teilen sich sonst keinen Zustand."""
+        name = episode_name_from_file(script)
+        episode_file = os.path.join(series.output_dir, f"{name}_FULL_EPISODE.mp3")
+
+        # --skip-merge: die MP3 entsteht in diesem Modus NIE (nur Parts) — sie
+        # taugt weder als "schon fertig"-Kürzel noch als Erfolgs-Marker.
+        # podcast_maker überspringt bereits erzeugte Parts selbst (Checkpoints),
+        # ein Re-Run ist also billig.
+        if not args.skip_merge and os.path.exists(episode_file):
+            size_mb = os.path.getsize(episode_file) / (1024 * 1024)
+            print(f"[{i}/{len(scripts)}] Übersprungen (existiert): {name}_FULL_EPISODE.mp3 ({size_mb:.1f} MB)")
+            completed[i] = (script, episode_file)
+            return True
+
+        via = f" via {api_url}" if api_url else ""
+        ziel = "nur Parts (skip-merge)" if args.skip_merge else \
+               "lokales Mastering (merge-only)" if args.merge_only else \
+               f"{name}_FULL_EPISODE.mp3"
+        print(f"[{i}/{len(scripts)}] Starte{via}: {os.path.basename(script)} → {ziel}")
+        cmd = [sys.executable, "-m", "fabrik.cli.podcast_maker", script, "--name", name,
+               "--series", series.slug]
+        if api_url:
+            cmd += ["--api-url", api_url]
+        if args.skip_merge:
+            cmd.append("--skip-merge")
+        elif args.merge_only:
+            cmd.append("--merge-only")
+        result = subprocess.run(cmd, check=False, cwd=paths.BASE_DIR)
+
+        if args.skip_merge:
+            # Erfolg = Subprozess sauber beendet (keine MP3 als Marker).
+            if result.returncode != 0:
+                print(f"  FEHLER bei {script} – wird ggf. erneut versucht.")
+                return False
+            completed[i] = (script, None)
+            print(f"  Parts fertig: {name}\n")
+            return True
+
+        if result.returncode != 0 or not os.path.exists(episode_file):
+            print(f"  FEHLER bei {script} – wird ggf. erneut versucht.")
+            return False
+
+        completed[i] = (script, episode_file)
+        print(f"  Fertig: {name}_FULL_EPISODE.mp3\n")
+        return True
+
     pending = list(enumerate(scripts, 1))
     failed = []
     for round_num in range(BATCH_RETRY_ROUNDS + 1):
@@ -391,40 +489,71 @@ def main():
                   f"{len(pending)} fehlgeschlagene Episode(n) — warte {BATCH_RETRY_DELAY}s ──")
             time.sleep(BATCH_RETRY_DELAY)
         failed = []
-        for i, script in pending:
-            name = episode_name_from_file(script)
-            episode_file = os.path.join(series.output_dir, f"{name}_FULL_EPISODE.mp3")
+        if secondary_url and len(pending) > 1:
+            import queue
+            import threading
+            work = queue.Queue()
+            for item in pending:
+                work.put(item)
+            failed_lock = threading.Lock()
 
-            if os.path.exists(episode_file):
-                size_mb = os.path.getsize(episode_file) / (1024 * 1024)
-                print(f"[{i}/{len(scripts)}] Übersprungen (existiert): {name}_FULL_EPISODE.mp3 ({size_mb:.1f} MB)")
-                episode_pairs.append((script, episode_file))
-                continue
+            def worker(api_url):
+                while True:
+                    try:
+                        i, script = work.get_nowait()
+                    except queue.Empty:
+                        return
+                    if not render_one(i, script, api_url):
+                        with failed_lock:
+                            failed.append((i, script))
 
-            print(f"[{i}/{len(scripts)}] Starte: {os.path.basename(script)} → {name}_FULL_EPISODE.mp3")
-            result = subprocess.run(
-                [sys.executable, "-m", "fabrik.cli.podcast_maker", script, "--name", name,
-                 "--series", series.slug],
-                check=False, cwd=paths.BASE_DIR
-            )
-
-            if result.returncode != 0 or not os.path.exists(episode_file):
-                print(f"  FEHLER bei {script} – wird ggf. erneut versucht.")
-                failed.append((i, script))
-                continue
-
-            episode_pairs.append((script, episode_file))
-            print(f"  Fertig: {name}_FULL_EPISODE.mp3\n")
+            threads = [threading.Thread(target=worker, args=(url,))
+                       for url in (None, secondary_url)]
+            for t in threads:
+                t.start()
+            for t in threads:
+                t.join()
+            failed.sort()
+        else:
+            for i, script in pending:
+                if not render_one(i, script):
+                    failed.append((i, script))
 
         pending = failed
 
+    episode_pairs = [completed[i] for i in sorted(completed)]  # für den Upload-Index
     episode_paths = [ep for _, ep in episode_pairs]
 
     print(f"\nEpisoden fertig: {len(episode_paths)} | Fehlgeschlagen: {len(failed)}")
 
+    # Endgültige Fehlschläge als Datei persistieren, nicht nur als Log-Zeile:
+    # webui/status.py pollt eh das Dateisystem und macht daraus eine rote
+    # Statuskarte — sonst fällt eine liegengebliebene Episode erst auf, wenn
+    # jemand das SSE-Log bis zum Ende liest. Ein späterer erfolgreicher Lauf
+    # räumt die Datei wieder weg.
+    import json as _json
+    failed_marker = os.path.join(series.output_dir, "FAILED_EPISODES.json")
     if failed:
+        with open(failed_marker, "w", encoding="utf-8") as f:
+            _json.dump({
+                "failed": [os.path.basename(s) for _, s in failed],
+                "retry_rounds": BATCH_RETRY_ROUNDS,
+                "finished_at": time.strftime("%Y-%m-%dT%H:%M:%S"),
+            }, f, ensure_ascii=False, indent=1)
         print(f"Endgültig fehlgeschlagen nach {BATCH_RETRY_ROUNDS} Retry-Runde(n): {[s for _, s in failed]}")
+        print(f"Fehlschlag-Marker geschrieben: {os.path.basename(failed_marker)} (WebUI zeigt eine rote Karte).")
         print("Bitte TTS-Server/Log prüfen und Script danach neu starten – bereits fertige Episoden werden übersprungen.")
+    elif os.path.exists(failed_marker):
+        os.remove(failed_marker)
+
+    if args.skip_merge:
+        # Reine Vertonung fertig (nur Parts). Anthology-Merge + Upload-Index
+        # brauchen die Episoden-MP3s, die es hier noch nicht gibt — beides
+        # läuft lokal via 'batch.py --merge-only' (bzw. automatisch über
+        # render_remote.sh --local-master) nach dem Download.
+        print("\n--skip-merge: reine Vertonung fertig (nur Parts erzeugt), kein "
+              "Merge/Mastering/Index. Lokal fertigstellen mit 'batch.py --merge-only'.")
+        return
 
     if len(episode_paths) < 2:
         print("Weniger als 2 Episoden vorhanden – kein Anthology-Merge.")
@@ -451,7 +580,7 @@ def main():
     # Titel & Beschreibung sind nice-to-have — ein Fehlschlag hier lässt den
     # Merge nicht scheitern (Skript erneut starten generiert sie nach).
     generate_anthology_meta(series, data)
-    title, description = audio.parse_meta_file(series.anthology_meta_file)
+    title, description, _question = audio.parse_meta_file(series.anthology_meta_file)
     if title:
         if audio.tag_mp3(anthology_path, title=title, album=data.get("series_title", ""), comment=description):
             print(f"ID3-Tags geschrieben (Titel: \"{title}\")")

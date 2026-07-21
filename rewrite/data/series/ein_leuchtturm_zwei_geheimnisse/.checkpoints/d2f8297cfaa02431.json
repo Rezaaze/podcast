@@ -1,0 +1,41 @@
+{
+  "intro": "Mara Voss betritt den alten Leuchtturm als Handwerkerin — und setzt damit zwei Geheimnisse in Bewegung, die dreißig Jahre lang still lagen.",
+  "outro": "Mara packt ihr Werkzeug — sie ahnt nicht, dass beide Männer, die sie heute traf, längst wissen, was in diesem Turm steckt. Nur sie nicht.",
+  "sections": [
+    {
+      "location": "lighthouse",
+      "thread": "Das erste Geheimnis: Der vermauerte Keller",
+      "title": "Ankunft",
+      "what": "Mara nimmt den Renovierungsauftrag im Leuchtturm auf. Viktor führt sie durch das Gebäude, bleibt einsilbig und weicht dem Keller aus.",
+      "who": [
+        "Mara Voss",
+        "Viktor Seyn"
+      ],
+      "word_budget": 200
+    },
+    {
+      "location": "lighthouse",
+      "thread": "Das erste Geheimnis: Der vermauerte Keller",
+      "title": "Was die Wand verbirgt",
+      "turning_point": "tp1",
+      "what": "Mara misst den Keller aus, entdeckt Risse und einen gemauerten Durchgang. Viktor wird bleich bei ihrem Bericht und bricht das Gespräch ab.",
+      "who": [
+        "Mara Voss",
+        "Viktor Seyn"
+      ],
+      "word_budget": 280
+    },
+    {
+      "location": "lighthouse",
+      "thread": "Das zweite Geheimnis: Das gestohlene Signal",
+      "title": "Das Druckmittel",
+      "turning_point": "tp2",
+      "what": "Jonas stellt Elise im Turm zur Rede. Er hat ihren Sendebetrieb dokumentiert, gibt ihr 24 Stunden: Informationen liefern oder er veröffentlicht alles.",
+      "who": [
+        "Jonas Falk",
+        "Elise Dorn"
+      ],
+      "word_budget": 300
+    }
+  ]
+}

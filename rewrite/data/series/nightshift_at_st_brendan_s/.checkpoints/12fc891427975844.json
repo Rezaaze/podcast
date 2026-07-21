@@ -1,0 +1,78 @@
+{
+  "episodes": [
+    {
+      "figure": "Dana Voss arrives at St. Brendan's on a frozen February night, her first call a multi-vehicle pile-up that forces her and Maeve to work side by side without a single personal word exchanged.",
+      "theme": "Reunion as denial — two people fluent in trauma who have forgotten how to speak to each other about anything that matters."
+    },
+    {
+      "figure": "Harte implements a new bay-closure policy during a peak-demand night; Theo watches the gap between policy and patient safety widen in real time and begins assembling evidence he doesn't yet have the courage to use.",
+      "theme": "Institutional complicity — how a system absorbs individual harm and calls it efficiency."
+    },
+    {
+      "figure": "Maeve's sobriety breaks quietly, alone, without drama or witness — or so she believes. The episode follows her through a shift in which every small victory over herself is undercut by what she did in the parking lot.",
+      "theme": "The private architecture of relapse — how four years of discipline can dissolve in one moment of silence."
+    },
+    {
+      "figure": "Reza's probation hearing is postponed; he uses the breathing room to dig into his intern year and discovers the falsification. The episode splits between his past self on the ward and his present self reading the evidence.",
+      "theme": "Authorship of guilt — who owns a mistake when someone else wrote the record."
+    },
+    {
+      "figure": "Sister Agnes becomes the quiet axis of the episode, holding Theo's secret and watching Harte's pressure campaign from the chapel. Reza begins testing whether the board member will talk.",
+      "theme": "The weight of knowing — how institutional secrets concentrate in the people least protected by the institution."
+    },
+    {
+      "figure": "The second patient is a named character the audience has met — a regular night-shift presence, not a dramatic stranger. Theo's filing is bureaucratic and unheroic and entirely real.",
+      "theme": "The filing — small administrative acts as the only available form of courage."
+    },
+    {
+      "figure": "Maeve carries the resuscitation scene. Reza's confrontation with the board member is filmed as a single long corridor walk. Both characters reach the same threshold — the point where honesty costs something concrete — and each responds differently.",
+      "theme": "The moment before choice — how people behave in the last seconds they can still lie to themselves."
+    },
+    {
+      "figure": "Maeve, Theo, and Reza each face a different kind of morning: loss of status, institutional vindication, and cleared record. The acquisition collapses offscreen. Dana brings two coffees to the ambulance bay.",
+      "theme": "Accountability without catharsis — what remains after the reckoning, which is ordinary life with the same people in a slightly different configuration."
+    }
+  ],
+  "turning_points": [
+    {
+      "description": "Dana Voss rolls a critical trauma into St. Brendan's ER; she and Maeve work the bay in enforced silence — their shared Cork history visible to everyone except the one person who matters: themselves. The season's central wound is open before anyone names it.",
+      "episode": 1,
+      "id": "tp_01"
+    },
+    {
+      "description": "A bed-cut triage decision Harte mandated hours earlier is directly traceable to a patient death. Theo writes the first draft of his complaint at 3 a.m. in the break room — and then locks it in his locker instead of sending it.",
+      "episode": 2,
+      "id": "tp_02"
+    },
+    {
+      "description": "Maeve drinks alone in her car in the ambulance bay after a brutal shift. Four years end in a parking lot. Dana sees her walking back in and says nothing.",
+      "episode": 3,
+      "id": "tp_03"
+    },
+    {
+      "description": "Reza pulls a six-year-old chart to reconstruct his intern-year near-miss and finds an entry in handwriting that isn't his. The attending who falsified it now sits on the hospital board.",
+      "episode": 4,
+      "id": "tp_04"
+    },
+    {
+      "description": "Theo confesses the unfiled complaint to Sister Agnes in the chapel. She tells him she already knows about the first death and about a second patient currently deteriorating on a diverted ward. Harte summons Theo to the admin corridor for a 'performance review.'",
+      "episode": 5,
+      "id": "tp_05"
+    },
+    {
+      "description": "The second patient dies. Theo submits the complaint at 6:04 a.m. The hospital's legal and operations machine begins moving within the hour.",
+      "episode": 6,
+      "id": "tp_06"
+    },
+    {
+      "description": "Maeve misreads a drug interaction during a resuscitation — she catches it herself, but barely, and only she knows why her hands were not steady. Reza confronts the board-member attending privately and is offered a quiet resolution; he refuses it on the record.",
+      "episode": 7,
+      "id": "tp_07"
+    },
+    {
+      "description": "Maeve discloses her impairment to the on-call medical officer before the shift ends — losing her attending status on the spot. The Theo investigation surfaces the private-equity acquisition plan; Harte resigns before noon. Dana and Maeve sit together outside the ambulance bay in daylight for the first time.",
+      "episode": 8,
+      "id": "tp_08"
+    }
+  ]
+}

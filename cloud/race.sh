@@ -1,22 +1,29 @@
 #!/bin/bash
-# Mietet mehrere RTX-5090-Instanzen GLEICHZEITIG (Standard: 5), wartet bis
-# der Gradio-Server der ERSTEN tatsächlich antwortet, behält nur diese und
+# Mietet mehrere RTX-5090-Instanzen GLEICHZEITIG (Standard: 5, per
+# race_pick_offers.py aus einer Preisspanne + PCIe-Bandbreite + bekannt
+# zuverlässigem Host ausgewählt statt stur der billigsten), wartet bis der
+# Gradio-Server der ERSTEN tatsächlich antwortet, behält nur diese und
 # löscht den Rest sofort wieder. Löst das Problem einzelner Hosts, die beim
 # Docker-Pull/Setup hängen bleiben oder ewig brauchen -- kostet nur ein paar
 # Minuten Parallel-Miete auf den "Verlierern" (typisch < $0.50 insgesamt).
+# Für den normalen Vertonungs-Workflow get_ready_instance.sh nutzen -- das
+# probiert erst den Pool bereits fertig eingerichteter Instanzen und ruft
+# race.sh nur als Fallback auf, wenn der komplette Pool nicht bereit wird.
 #
 # Nutzung: ./race.sh [anzahl]   (Standard: 5)
 set -e
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-TEMPLATE_HASH="5e86232eb1812a3891eae5329cb2b25b"
+TEMPLATE_HASH="c2352e9ebc56ffd4b83b51c6d229363a"
 N="${1:-5}"
 MAX_WAIT_MINUTES=20
 
-echo "Suche die $N günstigsten verfügbaren RTX 5090 (verified Datacenter, >=1000 Mbit/s) ..."
+python3 "${SCRIPT_DIR}/machine_stats.py" reconcile
+
+echo "Suche die $N günstigsten verfügbaren RTX 5090 (verified Datacenter, >=1000 Mbit/s, nur Osteuropa/Baltikum) ..."
 OFFER_IDS=()
 while IFS= read -r line; do
   [ -n "$line" ] && OFFER_IDS+=("$line")
-done < <(vastai search offers 'gpu_name=RTX_5090 disk_space>=40 reliability>0.98 verified=true rentable=true inet_down>1000 inet_up>1000' -o 'dph_total' --raw \
+done < <(vastai search offers 'gpu_name=RTX_5090 disk_space>=40 reliability>0.98 verified=true rentable=true inet_down>1000 inet_up>1000 geolocation in [PL,CZ,SK,HU,RO,BG,EE,LV,LT,UA,MD]' -o 'dph_total' --raw \
   | python3 "${SCRIPT_DIR}/race_pick_offers.py" "$N")
 
 if [ "${#OFFER_IDS[@]}" -eq 0 ]; then
@@ -52,12 +59,24 @@ echo "Warte, bis die erste Instanz ihren Gradio-Server bereit hat (max. ${MAX_WA
 
 WINNER=""
 WINNER_URL=""
+# Datei statt Bash-Variable für die rohe JSON-Antwort: das große 'onstart'-
+# Feld (komplettes onstart_qwen3_tts.sh als JSON-String) übersteht einen
+# Bash-Variable/echo-Umweg nicht zuverlässig (kommt als kaputtes JSON an,
+# 'Invalid control character') -- macht die Bereitschaftsprüfung sonst
+# lautlos permanent blind, siehe get_ready_instance.sh. Eine echte Datei
+# ist stabil UND behält die Optimierung "ein API-Call pro Runde für alle
+# Kandidaten" (direktes Pipen pro IID würde das auf N Calls/Runde erhöhen).
+RAW_FILE="$(mktemp)"
+trap 'rm -f "$RAW_FILE"' EXIT
 ROUNDS=$((MAX_WAIT_MINUTES * 60 / 15))
 for round in $(seq 1 "$ROUNDS"); do
-  RAW=$(vastai show instances-v1 --raw 2>/dev/null)
+  vastai show instances-v1 --raw 2>/dev/null > "$RAW_FILE"
   for IID in "${INSTANCE_IDS[@]}"; do
-    URL=$(echo "$RAW" | python3 "${SCRIPT_DIR}/get_gradio_url.py" "$IID" 2>/dev/null) || continue
-    if [ -n "$URL" ] && curl -sf -o /dev/null -m 3 "$URL"; then
+    URL=$(python3 "${SCRIPT_DIR}/get_gradio_url.py" "$IID" < "$RAW_FILE" 2>/dev/null) || continue
+    # -m 10 statt frueher 3: die Gradio-Startseite braucht ueber die
+    # oeffentliche Adresse beobachtet ~5s zum Antworten -- ein 3s-Timeout
+    # meldete einen laengst fertigen Server faelschlich als "nicht bereit".
+    if [ -n "$URL" ] && curl -sf -o /dev/null -m 10 "$URL"; then
       WINNER="$IID"
       WINNER_URL="$URL"
       break 2
@@ -78,6 +97,11 @@ fi
 echo ""
 echo "🏆 Instanz $WINNER ist zuerst bereit: $WINNER_URL"
 echo "$WINNER" > "${SCRIPT_DIR}/.last_instance_id"
+# Nur der Sieger wird getrackt -- die Verlierer werden gleich gelöscht, WEIL
+# sie das Rennen verloren haben, nicht weil ihre Maschine sich als kaputt
+# erwiesen hätte (sonst würden schnelle, aber knapp zu spät fertige Hosts
+# fälschlich blacklisted).
+python3 "${SCRIPT_DIR}/machine_stats.py" record "$WINNER"
 
 echo "Lösche die restlichen Instanzen ..."
 for IID in "${INSTANCE_IDS[@]}"; do
