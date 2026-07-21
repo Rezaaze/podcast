@@ -1,0 +1,309 @@
+{
+  "series_title": "The Meridian Line",
+  "language": "English",
+  "mode": "drama",
+  "template": "soap_opera",
+  "writer_persona": "a showrunner for character-driven, relationship-first serial drama in the vein of prestige ensemble TV, specializing in blue-collar family sagas and workplace rivalries",
+  "style_guidelines": [
+    "Every scene should give the listener information at least one on-stage character doesn't have — let dramatic irony breathe instead of explaining it away.",
+    "Dialogue carries the plot; characters never narrate backstory to each other that they wouldn't actually say aloud.",
+    "Give each thread its own emotional register — legal dread, financial quiet panic, romantic secrecy — so scenes feel distinct even in short episodes.",
+    "End scenes on a held beat, a deflection, or an unanswered question rather than a tidy summary.",
+    "Ground every scene in working-harbor sensory detail — foghorns, engine grease, gulls, marine radio chatter — without slowing the pace.",
+    "Secrets surface through pressure and slips, never through a character volunteering the truth out of nowhere."
+  ],
+  "voices": {
+    "NARRATOR": {
+      "voice": "Ryan",
+      "default_style": "calm, measured, a step removed from the action",
+      "description": "the show's narrator — orients the listener at the start of every scene (who, where, when), never a character in the story"
+    },
+    "FRANK_CHEN": {
+      "voice": "Aiden",
+      "default_style": "gruff, weathered, guarded pride masking exhaustion",
+      "description": "owner-captain of Chen Towing & Salvage, born and raised at this harbor; carries his father's legacy and debts he won't admit to his own children"
+    },
+    "MEI_CHEN": {
+      "voice": "Vivian",
+      "default_style": "brisk and precise, speaks slow and deliberate, very clear English — softens only when she thinks no one's listening",
+      "description": "Frank's older sister and the company's bookkeeper; immigrated from Hong Kong in her twenties and has quietly kept the business afloat for years through means she's never disclosed"
+    },
+    "DANNY_CHEN": {
+      "voice": "Dylan",
+      "default_style": "eager, restless, speaks slow and deliberate, very clear English — trying too hard to sound certain",
+      "description": "Frank's son, a deckhand training to take the wheel; spent his early teens with relatives in Beijing before returning to the harbor, and is torn between family duty and a relationship he's hiding"
+    },
+    "HOK_CHEN": {
+      "voice": "Uncle_Fu",
+      "default_style": "slow, deliberate, given to long pauses, speaks as if every word costs something",
+      "description": "Frank's father and the founder of Chen Towing; now retired and quietly failing in health, he alone knows the full truth of how the family won its place at this harbor"
+    },
+    "KAI_PARK": {
+      "voice": "Sohee",
+      "default_style": "controlled and professional, speaks slow and deliberate, very clear English",
+      "description": "a project coordinator at Lo Marine Salvage, born in Busan and raised partly in the city's Koreatown; sharp and careful, she's kept her relationship with Danny hidden from everyone, including her own boss"
+    },
+    "VINCE_LO": {
+      "voice": "Eric",
+      "default_style": "smooth and patient, speaks slow and deliberate, very clear English — never raises his voice",
+      "description": "owner of Lo Marine Salvage, an immigrant entrepreneur who built his company from nothing and sees the Chen family's harbor legacy as an obstacle worth dismantling, not a rival worth respecting"
+    }
+  },
+  "locations": {
+    "CHEN_DOCK": {
+      "name": "The Chen Dock",
+      "description": "a working tugboat yard with three weathered boats moored at oil-stained pilings, coiled towlines, foghorns sounding somewhere out in the gray, and a sun-faded company sign that's been repainted one too many times"
+    },
+    "THE_COMPASS_DINER": {
+      "name": "The Compass",
+      "description": "a harborside diner-bar with a buzzing neon sign, cracked red vinyl booths, and the smell of fried food and burnt coffee, where rival crews sit two booths apart and pretend not to hear each other"
+    },
+    "CHEN_FAMILY_HOME": {
+      "name": "The Chen Family Home",
+      "description": "a modest house on the hill above the harbor, faded family photographs and old hand-drawn maritime charts on the walls, the kind of quiet, domestic space where the loudest arguments happen in whispers"
+    }
+  },
+  "format": {
+    "parts_per_section": 1,
+    "words_per_part_target": "300 to 500",
+    "words_per_part_min": 250,
+    "words_per_part_max": 550
+  },
+  "generation": {
+    "model": "claude-sonnet-5"
+  },
+  "audio": {
+    "api_url": "http://127.0.0.1:42003",
+    "default_style": "Speak clearly and with dramatic weight",
+    "target_lufs": -16.0,
+    "pause_between_chunks_ms": 250,
+    "pause_between_lines_ms": 700,
+    "pause_between_parts_ms": 3000,
+    "pause_between_episodes_ms": 6000,
+    "merge_anthology": false
+  },
+  "output_prefix": "ep",
+  "series_intro": "Somewhere past the fish markets and the container cranes, where the fog never quite lifts before noon, three tugboats named after three generations of women wait at anchor. This is a family business built on foghorns, favors, and debts nobody writes down. When a sunken cargo ship becomes the harbor's most contested prize, the trouble on the surface — money, rivalry — is only the trouble anyone's willing to say out loud.",
+  "series_outro": "The commission hearing ends not with a verdict but a postponement — the Meridian Star's salvage rights frozen for now, buying the Chens time they don't know how to use. Some doors are still shut by the season's end: the balloon payment is still coming, the 1974 minutes are still sitting in an envelope, and the truth about who Danny's been meeting after his shifts still hasn't left the dock. But the tide is turning, and everyone at the harbor can feel it.",
+  "threads": [
+    {
+      "label": "The Founding Favor",
+      "solution": "Decades ago, Hok Chen secured the harbor's exclusive salvage-rotation slot for his family not through outright fraud but by quietly covering for a fellow captain's negligence during a fatal towline accident, in exchange for that captain's public support before the harbor commission — support that gave the Chens de facto seniority on all salvage claims ever since. Vince Lo has obtained the original 1974 harbor commission minutes proving the swap, and intends to use them to have the Chens' salvage priority revoked just as the Meridian Star's cargo salvage rights are being decided.",
+      "objective_facts": [
+        "In 1974, a towline failure during a harbor rescue killed a deckhand; the negligent captain's error was omitted from the official accident report.",
+        "Hok Chen testified to the harbor commission that the accident was unavoidable, in exchange for the negligent captain's public backing of Hok's bid for the harbor's exclusive salvage rotation.",
+        "The Chen family has held first-priority salvage rights in the harbor ever since that 1974 commission ruling.",
+        "Vince Lo purchased the archived 1974 commission minutes, which contradict the official accident report, from a retiring city clerk three months ago.",
+        "If the 1974 favor becomes public, the harbor commission could revoke Chen Towing's salvage priority retroactively, including its claim to the Meridian Star wreck."
+      ]
+    },
+    {
+      "label": "The Balloon Payment",
+      "solution": "Mei Chen took out a private loan against the family dock five years ago to cover storm-damage repairs Frank refused to authorize; she has quietly paid the interest ever since, but the loan's balloon payment is due in six weeks, and only a successful Meridian Star salvage payout can cover it. She hid this from Frank because after the storm he blamed her for letting the yard's insurance lapse, and she has never told him she solved the problem herself — partly out of pride, partly to protect him from a truth that would confirm his mistrust of her judgment.",
+      "objective_facts": [
+        "Five years ago a storm damaged the dry-dock, and Frank had let the insurance lapse, blaming Mei's late paperwork for the gap.",
+        "Mei took out a private loan in her own name against the family dock's title to cover the repair, without telling Frank.",
+        "Mei has made every interest payment on that loan for five years without missing one.",
+        "The loan's balloon payment is due in six weeks and exceeds the company's current cash reserves.",
+        "The company's title deed lists Mei as a co-signer, a fact Frank has never noticed in the paperwork."
+      ]
+    },
+    {
+      "label": "Danny and Kai",
+      "solution": "Danny Chen and Kai Park, a project coordinator at Vince Lo's salvage firm, have been quietly dating for four months, having met at a harbor commission zoning hearing. Kai has passed Danny vague warnings about her firm's legal timeline — never company secrets, just enough that the Chens aren't blindsided — believing she's protecting someone she loves without crossing an ethical line. Danny has kept the relationship secret from his family, afraid his father will see it as a betrayal given the rivalry with Lo's company. Neither has told their own side who the other really is, and both underestimate how the coming public conflict between the two companies will force the secret into the open.",
+      "objective_facts": [
+        "Danny Chen and Kai Park met at a harbor commission zoning hearing four months ago and have been dating since.",
+        "Kai works as a project coordinator for Vince Lo's salvage firm and has access to the firm's legal filing timeline.",
+        "Kai has warned Danny of two upcoming filing deadlines without revealing the contents of the filings themselves.",
+        "No one in either the Chen family or Vince Lo's company knows about the relationship.",
+        "Lo Marine Salvage's company policy requires disclosure of personal relationships with competitors' families, a policy Kai has not complied with."
+      ]
+    }
+  ],
+  "episodes": [
+    {
+      "figure": "Slack Water",
+      "theme": "In the quiet before the tide turns, Vince Lo quietly arms his challenge to the Chens' salvage priority, Mei's hidden loan tightens its grip on her as the balloon payment deadline lands, and Danny and Kai settle deeper into their secret rather than risk it — three separate pressures building under the same calm harbor surface.",
+      "intro_note": "",
+      "outro_note": "The hearing date is set, the six-week clock is quietly running, and in a back booth two people who shouldn't know each other are already deciding which secret to protect a little longer — nothing has broken yet, but the slack water won't hold much longer.",
+      "sections": [
+        {
+          "title": "The Purchased Minutes",
+          "what": "At a corner booth, Vince Lo shows Kai the purchased 1974 commission minutes and orders her to lock in the Meridian Star hearing date.",
+          "who": [
+            "VINCE_LO",
+            "KAI_PARK"
+          ],
+          "thread": "The Founding Favor",
+          "location": "THE_COMPASS_DINER",
+          "words": null
+        },
+        {
+          "title": "The Six-Week Clock",
+          "what": "Mei takes a private call confirming her hidden loan's balloon payment is due in six weeks, then presses Frank to rush the Meridian Star bid.",
+          "who": [
+            "MEI_CHEN",
+            "FRANK_CHEN"
+          ],
+          "thread": "The Balloon Payment",
+          "location": "CHEN_DOCK",
+          "words": null
+        },
+        {
+          "title": "Borrowed Time",
+          "what": "Kai warns Danny that her firm's filing deadline is closing in without naming the reason, and rattled by the risk, they agree to find a new place to meet.",
+          "who": [
+            "DANNY_CHEN",
+            "KAI_PARK"
+          ],
+          "thread": "Danny and Kai",
+          "location": "THE_COMPASS_DINER",
+          "words": null
+        }
+      ],
+      "case": [
+        {
+          "label": "The Founding Favor",
+          "character_knowledge": {
+            "VINCE_LO": "Knows the full truth of the 1974 favor and has just shown Kai the purchased commission minutes, instructing her to fix the Meridian Star hearing date; he conceals his plan entirely from the Chens, letting the rivalry look like ordinary business.",
+            "KAI_PARK": "Has now seen the 1974 minutes and locked in the hearing date at Vince's direction; she registers the documents as damaging to Chen Towing but hasn't connected how personally they threaten Danny's family, and still hasn't disclosed her relationship with Danny as company policy requires.",
+            "FRANK_CHEN": "Has no idea the 1974 minutes exist or that Vince possesses them; he believes the family's salvage priority is settled fact and reads Vince's maneuvering as ordinary commercial rivalry, nothing existential.",
+            "HOK_CHEN": "The only one who knows the full truth of the 1974 favor, but he doesn't yet know Vince has obtained proof of it; he assumes that chapter died with the old accident report and has never told Frank what really happened."
+          },
+          "solution": "Decades ago, Hok Chen secured the harbor's exclusive salvage-rotation slot for his family not through outright fraud but by quietly covering for a fellow captain's negligence during a fatal towline accident, in exchange for that captain's public support before the harbor commission — support that gave the Chens de facto seniority on all salvage claims ever since. Vince Lo has obtained the original 1974 harbor commission minutes proving the swap, and intends to use them to have the Chens' salvage priority revoked just as the Meridian Star's cargo salvage rights are being decided.",
+          "objective_facts": [
+            "In 1974, a towline failure during a harbor rescue killed a deckhand; the negligent captain's error was omitted from the official accident report.",
+            "Hok Chen testified to the harbor commission that the accident was unavoidable, in exchange for the negligent captain's public backing of Hok's bid for the harbor's exclusive salvage rotation.",
+            "The Chen family has held first-priority salvage rights in the harbor ever since that 1974 commission ruling.",
+            "Vince Lo purchased the archived 1974 commission minutes, which contradict the official accident report, from a retiring city clerk three months ago.",
+            "If the 1974 favor becomes public, the harbor commission could revoke Chen Towing's salvage priority retroactively, including its claim to the Meridian Star wreck."
+          ]
+        },
+        {
+          "label": "The Balloon Payment",
+          "character_knowledge": {
+            "MEI_CHEN": "Now has confirmation from her lender that the balloon payment is due in six weeks and knows only a strong Meridian Star payout can cover it; she conceals from Frank that she took the loan herself after his insurance lapse, pressing him to speed up the bid instead without explaining why.",
+            "FRANK_CHEN": "Knows in a general way that the company needs the Meridian Star salvage to stay solvent, but has no idea a private loan or fixed balloon payment exists; he reads Mei's sudden urgency as her usual over-caution about cash flow, not a ticking deadline."
+          },
+          "solution": "Mei Chen took out a private loan against the family dock five years ago to cover storm-damage repairs Frank refused to authorize; she has quietly paid the interest ever since, but the loan's balloon payment is due in six weeks, and only a successful Meridian Star salvage payout can cover it. She hid this from Frank because after the storm he blamed her for letting the yard's insurance lapse, and she has never told him she solved the problem herself — partly out of pride, partly to protect him from a truth that would confirm his mistrust of her judgment.",
+          "objective_facts": [
+            "Five years ago a storm damaged the dry-dock, and Frank had let the insurance lapse, blaming Mei's late paperwork for the gap.",
+            "Mei took out a private loan in her own name against the family dock's title to cover the repair, without telling Frank.",
+            "Mei has made every interest payment on that loan for five years without missing one.",
+            "The loan's balloon payment is due in six weeks and exceeds the company's current cash reserves.",
+            "The company's title deed lists Mei as a co-signer, a fact Frank has never noticed in the paperwork."
+          ]
+        },
+        {
+          "label": "Danny and Kai",
+          "character_knowledge": {
+            "DANNY_CHEN": "Knows only that Kai has warned him of a coming deadline in her firm's Meridian Star case, with no idea what documents or plan sit behind it; he keeps the relationship hidden from his family, afraid his father would see it as betrayal, and doesn't yet know the deadline traces back to the 1974 minutes.",
+            "KAI_PARK": "Knows more than she's told Danny — she's seen the actual 1974 minutes and set the hearing date herself — but has passed along only the bare fact of a deadline, believing that's the ethical line she can hold without leaking her firm's case; she still hasn't disclosed the relationship to Vince despite policy requiring it."
+          },
+          "solution": "Danny Chen and Kai Park, a project coordinator at Vince Lo's salvage firm, have been quietly dating for four months, having met at a harbor commission zoning hearing. Kai has passed Danny vague warnings about her firm's legal timeline — never company secrets, just enough that the Chens aren't blindsided — believing she's protecting someone she loves without crossing an ethical line. Danny has kept the relationship secret from his family, afraid his father will see it as a betrayal given the rivalry with Lo's company. Neither has told their own side who the other really is, and both underestimate how the coming public conflict between the two companies will force the secret into the open.",
+          "objective_facts": [
+            "Danny Chen and Kai Park met at a harbor commission zoning hearing four months ago and have been dating since.",
+            "Kai works as a project coordinator for Vince Lo's salvage firm and has access to the firm's legal filing timeline.",
+            "Kai has warned Danny of two upcoming filing deadlines without revealing the contents of the filings themselves.",
+            "No one in either the Chen family or Vince Lo's company knows about the relationship.",
+            "Lo Marine Salvage's company policy requires disclosure of personal relationships with competitors' families, a policy Kai has not complied with."
+          ]
+        }
+      ]
+    },
+    {
+      "figure": "The Postponement",
+      "theme": "The Meridian Star hearing forces every hidden pressure toward the surface at once: Vince's 1974 minutes nearly upend the Chens' standing but win only a postponement, Frank's discovery of Mei's loan paperwork cracks her secrecy without breaking it, and Danny and Kai come within a breath of being seen together just as their companies are set publicly against each other.",
+      "intro_note": "Slack water is over. The Meridian Star hearing is set, Mei's six-week clock is already running, and Danny and Kai are still telling themselves no one at the harbor has noticed a thing.",
+      "outro_note": "",
+      "sections": [
+        {
+          "title": "The Chambers Fallout",
+          "what": "Frank and Mei return from the hearing rattled: Vince tried to enter the 1974 minutes against the Chens' priority, but the commission postponed its ruling instead of deciding, leaving Hok visibly shaken.",
+          "who": [
+            "FRANK_CHEN",
+            "MEI_CHEN",
+            "HOK_CHEN"
+          ],
+          "thread": "The Founding Favor",
+          "location": "CHEN_DOCK",
+          "words": null
+        },
+        {
+          "title": "The Signature",
+          "what": "Frank finds loan paperwork listing Mei as co-signer on the dock's title, confronts her outright, and she deflects with a half-truth instead of admitting the balloon payment or why she hid it.",
+          "who": [
+            "FRANK_CHEN",
+            "MEI_CHEN"
+          ],
+          "thread": "The Balloon Payment",
+          "location": "CHEN_FAMILY_HOME",
+          "words": null
+        },
+        {
+          "title": "Closing Time",
+          "what": "Leaving a late-night meeting at The Compass, Danny freezes at footsteps outside, and he and Kai barely avoid being seen by a Chen deckhand just as their companies go publicly to war.",
+          "who": [
+            "DANNY_CHEN",
+            "KAI_PARK"
+          ],
+          "thread": "Danny and Kai",
+          "location": "THE_COMPASS_DINER",
+          "words": {
+            "min": 150,
+            "max": 250,
+            "target": "150 to 250"
+          }
+        }
+      ],
+      "case": [
+        {
+          "label": "The Founding Favor",
+          "character_knowledge": {
+            "FRANK_CHEN": "Frank genuinely knows Vince tried to introduce old commission documents to strip the Chens' salvage priority and that the ruling was postponed rather than decided; he has no idea what the 1974 minutes actually contain and wrongly assumes it's just a rival's legal harassment with no real substance behind it.",
+            "MEI_CHEN": "Mei knows the postponement only buys time and notices how hard the 1974 date hit Hok, which makes her suspect there's real history she isn't privy to; she conceals that suspicion from Frank so he stays focused on closing the Meridian Star bid she desperately needs.",
+            "HOK_CHEN": "Hok alone knows the true story: he traded testimony for the negligent captain's silence in 1974, and he recognizes exactly what document Vince now holds and how completely it could unravel the family's standing; he says nothing, letting his visible shock pass for an old man's fatigue."
+          },
+          "solution": "Decades ago, Hok Chen secured the harbor's exclusive salvage-rotation slot for his family not through outright fraud but by quietly covering for a fellow captain's negligence during a fatal towline accident, in exchange for that captain's public support before the harbor commission — support that gave the Chens de facto seniority on all salvage claims ever since. Vince Lo has obtained the original 1974 harbor commission minutes proving the swap, and intends to use them to have the Chens' salvage priority revoked just as the Meridian Star's cargo salvage rights are being decided.",
+          "objective_facts": [
+            "In 1974, a towline failure during a harbor rescue killed a deckhand; the negligent captain's error was omitted from the official accident report.",
+            "Hok Chen testified to the harbor commission that the accident was unavoidable, in exchange for the negligent captain's public backing of Hok's bid for the harbor's exclusive salvage rotation.",
+            "The Chen family has held first-priority salvage rights in the harbor ever since that 1974 commission ruling.",
+            "Vince Lo purchased the archived 1974 commission minutes, which contradict the official accident report, from a retiring city clerk three months ago.",
+            "If the 1974 favor becomes public, the harbor commission could revoke Chen Towing's salvage priority retroactively, including its claim to the Meridian Star wreck."
+          ]
+        },
+        {
+          "label": "The Balloon Payment",
+          "character_knowledge": {
+            "FRANK_CHEN": "Frank has just found paperwork proving Mei co-signed a loan against the dock's title and confronts her, genuinely blindsided; he doesn't know it funded the storm repairs he refused to authorize or that a balloon payment is due in six weeks, and wrongly suspects she's hiding some deeper financial trouble of her own making.",
+            "MEI_CHEN": "Mei knows the full truth — the loan, the six-week deadline, and that she hid it because Frank once blamed her for the insurance lapse that caused the damage in the first place — and she deflects his confrontation with a partial explanation, still protecting both her pride and him from the whole picture."
+          },
+          "solution": "Mei Chen took out a private loan against the family dock five years ago to cover storm-damage repairs Frank refused to authorize; she has quietly paid the interest ever since, but the loan's balloon payment is due in six weeks, and only a successful Meridian Star salvage payout can cover it. She hid this from Frank because after the storm he blamed her for letting the yard's insurance lapse, and she has never told him she solved the problem herself — partly out of pride, partly to protect him from a truth that would confirm his mistrust of her judgment.",
+          "objective_facts": [
+            "Five years ago a storm damaged the dry-dock, and Frank had let the insurance lapse, blaming Mei's late paperwork for the gap.",
+            "Mei took out a private loan in her own name against the family dock's title to cover the repair, without telling Frank.",
+            "Mei has made every interest payment on that loan for five years without missing one.",
+            "The loan's balloon payment is due in six weeks and exceeds the company's current cash reserves.",
+            "The company's title deed lists Mei as a co-signer, a fact Frank has never noticed in the paperwork."
+          ]
+        },
+        {
+          "label": "Danny and Kai",
+          "character_knowledge": {
+            "DANNY_CHEN": "Danny knows he and Kai were nearly seen together tonight by someone from his father's crew, and with the hearing now setting Chen Towing and Lo Marine openly against each other, he understands exposure would be far more dangerous than before; he covers with a vague excuse about where he'd been, which is a lie by omission to whoever asks.",
+            "KAI_PARK": "Kai knows the same near-miss happened and that the hearing's postponement now puts her firm and Danny's family in direct public conflict; she pushes for more caution between them but doesn't know what, if anything, Frank or Vince actually suspect, and worries that any further warnings she gives Danny could eventually be traced back to her."
+          },
+          "solution": "Danny Chen and Kai Park, a project coordinator at Vince Lo's salvage firm, have been quietly dating for four months, having met at a harbor commission zoning hearing. Kai has passed Danny vague warnings about her firm's legal timeline — never company secrets, just enough that the Chens aren't blindsided — believing she's protecting someone she loves without crossing an ethical line. Danny has kept the relationship secret from his family, afraid his father will see it as a betrayal given the rivalry with Lo's company. Neither has told their own side who the other really is, and both underestimate how the coming public conflict between the two companies will force the secret into the open.",
+          "objective_facts": [
+            "Danny Chen and Kai Park met at a harbor commission zoning hearing four months ago and have been dating since.",
+            "Kai works as a project coordinator for Vince Lo's salvage firm and has access to the firm's legal filing timeline.",
+            "Kai has warned Danny of two upcoming filing deadlines without revealing the contents of the filings themselves.",
+            "No one in either the Chen family or Vince Lo's company knows about the relationship.",
+            "Lo Marine Salvage's company policy requires disclosure of personal relationships with competitors' families, a policy Kai has not complied with."
+          ]
+        }
+      ]
+    }
+  ]
+}

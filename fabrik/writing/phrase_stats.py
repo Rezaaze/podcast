@@ -25,7 +25,11 @@ from collections import Counter
 MIN_COUNT = 6
 MAX_PROMPT_ITEMS = 15          # Obergrenze für den Prompt-Block (Token-Budget)
 NGRAM_RANGE = (3, 4, 5)        # Wortfenster der gezählten Phrasen
-STYLE_MIN_COUNT = 25           # ab wann ein Style-Wort als Einheitston gilt
+STYLE_MIN_COUNT = 12           # ab wann ein Style-Wort als Einheitston gilt.
+# 25 war zu träge: "quiet" erreichte in Produktion 49x über 10 Episoden,
+# stand aber erst ab ~Episode 6 im avoid_block — die Monotonie war da längst
+# etabliert (Lektorat the_amaranth_clock, 19.07.2026). 12 greift ab Mitte
+# der Staffel-ersten-Hälfte, ohne normale Wiederholung zu bestrafen.
 
 _TAG_LINE_RE = re.compile(r'^\s*\[[^\]]*\]\s*$', re.MULTILINE)
 _PART_MARKER_RE = re.compile(r'^---\s*PART\s+\d+\s*---\s*$', re.MULTILINE)

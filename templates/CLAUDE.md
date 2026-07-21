@@ -149,6 +149,21 @@ shaky" waren echte Produktions-Cues, für die ElevenLabs Geld gekostet hat):
   ein wirklich kurzer Beat heißt ~100–200 Wörter, kein kosmetischer
   Rabatt. Deterministisch abgesichert durch `check_section_words_gaps()`
   (SECTION_WORDS_MIN_GAP=80, siehe fabrik/cli/CLAUDE.md).
+- **Lektorats-Regeln vom 19.07.2026 (crime_drama/soap_opera, aus dem
+  3-Lektoren-Befund an the_amaranth_clock):** (1) CLOSING NARRATION —
+  max. EINE faktische Schluss-NARRATOR-Zeile pro Part, nie Gefühle/Ironie/
+  "unaware"/"unsaid"-Kadenzen, im Zweifel auf der Dialogzeile enden;
+  (2) EVERY SCENE MUST MOVE (auch in EPISODE_PROMPT.md als `what`-Regel +
+  im Beats-Prompt in script_writer.py) — jede Szene braucht neue
+  Information/Entscheidung/irreversiblen Schritt, "Geheimnis wird weiter
+  gehütet" ist kein wiederholbarer Beat; (3) Style-Varianz — gedämpfte
+  Register nicht als Dauerton, Style-Tags ohne Meta-Kommentare (echter
+  Produktionsfund: Redaktionsnotiz im Style-Tag); (4) Sprechtext nie in
+  Anführungszeichen, nie beide Seiten eines Gesprächs von einer Figur
+  zitiert (ep4-Befund). Ergänzt: STYLE_MIN_COUNT 25→12 in phrase_stats.py.
+  A/B-Smoke (the_meridian_line, 2 Ep): deutende Kadenzen 13→0,
+  eingestandene Wiederholungen 6→0; Rest-Schwäche: Schluss-Zeilen bleiben
+  häufig (100% der Parts) und rutschen vereinzelt noch ins Gedankenlesen.
 - Episoden ≥2 in crime_drama/soap_opera öffnen mit gescriptetem
   "previously on"-Recap (build_intro_spec, template-gated;
   language_course behält seine HOST-Konvention).

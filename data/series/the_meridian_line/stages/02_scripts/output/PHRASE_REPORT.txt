@@ -1,0 +1,7 @@
+Phrasen-Frequenz-Report (deterministisch, fabrik/writing/phrase_stats.py)
+Episoden ausgewertet: 1, 2
+
+Keine auffällig wiederholten Phrasen.
+
+Style-Einheitston (>= 12x als style/tone/emotion-Wort):
+    16x  style "quiet"
